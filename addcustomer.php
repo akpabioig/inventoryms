@@ -14,28 +14,31 @@
 
 
     <script type="application/javascript">
-        $(document).ready(function() {
-            $("#addApi").click(function(){
-                $.ajax({
-                    url: 'ajax.php', //This is the current doc
-                    type: "POST",
-                    data: ({name: 145}),
-                    success: function(data){
-                        console.log(data);
-                    }
-                });
-                $.ajax({
-                    url:'ajax.php',
-                    data:"",
-                    dataType:'json',
-                    success:function(data1){
-                        var y1=data1;
-                        console.log(data1);
-                    }
-                });
+        function ps(){
+            $(document).ready(function() {
+                $("#addApi").click(function(){
+                    $.ajax({
+                        url: 'ajax.php', //This is the current doc
+                        type: "POST",
+                        data: ({name: 145}),
+                        success: function(data){
+                            console.log(data);
+                        }
+                    });
+                    $.ajax({
+                        url:'ajax.php',
+                        data:"",
+                        dataType:'json',
+                        success:function(data1){
+                            var y1=data1;
+                            console.log(data1);
+                        }
+                    });
 
+                });
             });
-        });
+        }
+
     </script>
 <body>
 <nav class="w3-sidenav w3-black" style="width:102px">
@@ -102,7 +105,7 @@
                     <tr>
                         <td label for="custadd1"></td>
                         <td><input type="text" id="addApi" name="addApi" value="" class = "formfield" rows = 1  placeholder="Type your Postcode"></td>
-                        <td><input type="submit" id="cu" name="cu" value="Find address" class = "formfield" rows = 1 onclick="function();"></td>
+                        <td><input type="submit" id="cu" name="cu" value="Find address" class = "formfield" rows = 1 onclick="ps();"></td>
                         <td label for ="custadd2"> <select class = "formfiel"><?php
                                 foreach($json2 as $data){
                                     echo '<option>'.$data.'</option>';
