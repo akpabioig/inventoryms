@@ -10,6 +10,28 @@
         <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
         <script type = "text/javascript" src="scripting.js"></script>
     </head>
+
+
+    <script type="application/javascript">
+        $.ajax({
+            type: "POST",
+            url: 'https://api.getaddress.io/v2/uk/ab115be?api-key=I8Gx__79p0W0NH8oxnp_xw3587',
+            data: {'categoryID': $("#cpostc").val(),'isAjax':true},
+            dataType:'json',
+            success: function(data) {
+
+                var select = $("#select"), options = '';
+                select.empty();
+
+                for(var i=0;i<data.length; i++)
+                {
+                    options += "<option value='"+data[i].id+"'>"+ data[i].name +"</option>";
+                }
+
+                select.append(options);
+            }
+        });
+    </script>
 <body>
 <nav class="w3-sidenav w3-black" style="width:102px">
     <a class="w3-padding-16" href="homepage.html"><i class="fa fa-home w3-xxlarge"></i> <br>HOME </a>
