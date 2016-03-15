@@ -47,11 +47,13 @@
                 <tr>
                     <td label for="date"> <a id = "hash">*</a> Date : </td>
                     <td><input type="date" id = "date" name= "date"  value = "" class = "formfield"></td>
+                    <td label for="purchaseid"> <a id = "hash">*</a> Purchase ID : </td>
+                    <td><input type="number" id = "date" name= "pid"  value = "" class = "formfield"></td>
                 </tr>
                 <tr>
                     <td label for="selsupp"> <a id = "hash">*</a> Select Supplier : </td>
                     <td>
-                        <select class = "formfiel">
+                        <select class = "formfiel" name = "selsupp">
                             <option selected disabled>SELECT</option>
                             <option value = "">To...tal</option>
                             <option value = "">Ex...xon</option>
@@ -72,30 +74,30 @@
                     <th>Total</th>
                 </tr>
                 <tr>
-                    <td><input type="ref" id = "ref1" name= "ref"  value = "" class = "tablefield"></td>
-                    <td><input type="ref" id = "ref1" name= "ref"  value = "" class = "tablefield"></td>
-                    <td><input type="ref" id = "ref1" name= "ref"  value = "" class = "tablefield"></td>
-                    <td><input type="ref" id = "ref1" name= "ref"  value = "" class = "tablefield"></td>
-                    <td><input type="ref" id = "ref1" name= "ref"  value = "" class = "tablefield"></td>
+                    <td><input type="text" id = "itemname" name= "itemname"  value = "" class = "tablefield"></td>
+                    <td><input type="number" id = "quantity" name= "quantity"  value = "" class = "tablefield"></td>
+                    <td><input type="number" id = "cost" name= "itemcost"  value = "" class = "tablefield"></td>
+                    <td><input type="number" id = "tax" name= "tax"  value = "" class = "tablefield"></td>
+                    <td><input type="number" id = "itemtotal" name= "itemtotal"  value = "" class = "tablefield"></td>
                 </tr>
 
             </table>
             <p align="center" ><a href = ""  id="addp"> + Add another item </a></p>
             <hr>
             <h6>Message to Supplier : </h6>
-            <textarea id = "synopsis" name="synopsis" value="" class = "formfield" rows = 5 cols = 40></textarea>
+            <textarea id = "messsupplier" name="messsupplier" value="" class = "formfield" rows = 5 cols = 40></textarea>
                 <table id = purtotal>
                     <tr>
                         <td>Total Units : </td>
-                        <td><input type="totunit" id = "total" value = "" class = "formfield"></td>
+                        <td><input type="number" name = "totalunits" value = "" class = "formfield"></td>
                     </tr>
                     <tr>
                         <td>Subtotal : </td>
-                        <td><input type="ref" id = "subt" value = "" class = "formfield"></td>
+                        <td><input type="number" name = "itemsubtotal" value = "" class = "formfield"></td>
                     </tr>
                     <tr>
                         <td> Total Cost : </td>
-                        <td><input type="tot" id = "tot" value = "" class = "formfield"></td>
+                        <td><input type="totalcost" id = "totalcost" value = "" class = "formfield"></td>
                     </tr>
                 </table>
             <p id = "purtotal"><input type = "submit" value = "SUBMIT"></p>
