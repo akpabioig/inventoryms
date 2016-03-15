@@ -1,4 +1,5 @@
- <!DOCTYPE html>
+<?php include('postcode.php');  ?>
+<!DOCTYPE html>
     <html lang="en">
     <head>
         <meta charset="UTF-8">
@@ -21,7 +22,7 @@
             success: function(data) {
 
                 var select = $("#select"), options = '';
-                select.empty();
+                select.emptys();
 
                 for(var i=0;i<data.length; i++)
                 {
@@ -37,7 +38,7 @@
     <a class="w3-padding-16" href="homepage.html"><i class="fa fa-home w3-xxlarge"></i> <br>HOME </a>
     <a class="w3-padding-16" href="#"><i class="fa fa-search w3-xlarge"></i> <br>SEARCH</a>
     <a class="w3-padding-16" href="addproduct.html"><i class="fa fa-plus-square w3-xlarge"></i> <br>ADD PRODUCT</a>
-    <a class="w3-padding-16" href="addcustomer.html"><i class="fa fa-users w3-xlarge"></i> <br>ADD CUSTOMER</a>
+    <a class="w3-padding-16" href="addcustomer.php"><i class="fa fa-users w3-xlarge"></i> <br>ADD CUSTOMER</a>
     <a class="w3-padding-16" href="newsales.html"><i class="fa fa-dollar w3-xlarge"></i><br>SALES ORDER</a>
     <a class="w3-padding-16" href="newpurchase.html"><i class="fa fa-shopping-cart w3-xlarge"></i>PURCHASE ORDER</a>
     <a class="w3-padding-16" href="addvendor.html"><i class="fa fa-truck w3-xlarge"></i><br>ADD SUPPLIER</a>
@@ -98,7 +99,13 @@
                         <td label for="custadd1"></td>
                         <td><input type="text" id="addApi" name="addApi" value="" class = "formfield" rows = 1  placeholder="Type your Postcode"></td>
                         <td><input type="submit" id="cu" name="cu" value="Find address" class = "formfield" rows = 1></td>
-                        <td label for ="custadd2"> <select class = "formfiel"><option>sdfasdf</option></select></td>
+                        <td label for ="custadd2"> <select class = "formfiel"><?php
+                                foreach($json2 as $data){
+                                    echo '<option>'.$data.'</option>';
+                                }
+
+                                ?>
+                            </select>/select></td>
                     </tr>
                     <tr>
                         <td label for="custadd1"> <a id = "hash">*</a> Address Line 1 : </td>
@@ -130,104 +137,5 @@
 </footer>
 </body>
 </html>
-
-
-
-
-
-
-
 <?php
-/**
- * Created by PhpStorm.
- * User: hackathon
- * Date: 15/03/2016
- * Time: 00:49
- */
-
-
-$jsondata =  get_remote_data('https://api.getaddress.io/v2/uk/ab115be?api-key=I8Gx__79p0W0NH8oxnp_xw3587');
-$json = json_decode($jsondata, true);
-$json2 = $json['Addresses'];
-
-
-//creating function to parse the data using curl
-function get_remote_data($url, $post_paramtrs=false)
-{
-    $c = curl_init();
-    curl_setopt($c, CURLOPT_URL, $url);
-    curl_setopt($c, CURLOPT_RETURNTRANSFER, 1);
-    if($post_paramtrs)
-    {
-        curl_setopt($c, CURLOPT_POST,TRUE);
-        curl_setopt($c, CURLOPT_POSTFIELDS, "var1=bla&".$post_paramtrs );
-    }
-    curl_setopt($c, CURLOPT_SSL_VERIFYHOST,false);
-    curl_setopt($c, CURLOPT_SSL_VERIFYPEER,false);
-    curl_setopt($c, CURLOPT_USERAGENT, "Mozilla/5.0 (Windows NT 6.1; rv:33.0) Gecko/20100101 Firefox/33.0");
-    curl_setopt($c, CURLOPT_COOKIE, 'CookieName1=Value;');
-    curl_setopt($c, CURLOPT_MAXREDIRS, 10);
-    $follow_allowed= ( ini_get('open_basedir') || ini_get('safe_mode')) ? false:true;
-    if ($follow_allowed)
-    {
-        curl_setopt($c, CURLOPT_FOLLOWLOCATION, 1);
-    }
-    curl_setopt($c, CURLOPT_CONNECTTIMEOUT, 9);
-    curl_setopt($c, CURLOPT_REFERER, $url);
-    curl_setopt($c, CURLOPT_TIMEOUT, 60);
-    curl_setopt($c, CURLOPT_AUTOREFERER, true);
-    curl_setopt($c, CURLOPT_ENCODING, 'gzip,deflate');
-    $data=curl_exec($c);
-    $status=curl_getinfo($c);
-    curl_close($c);
-    preg_match('/(http(|s)):\/\/(.*?)\/(.*\/|)/si',  $status['url'],$link); $data=preg_replace('/(src|href|action)=(\'|\")((?!(http|https|javascript:|\/\/|\/)).*?)(\'|\")/si','$1=$2'.$link[0].'$3$4$5', $data);   $data=preg_replace('/(src|href|action)=(\'|\")((?!(http|https|javascript:|\/\/)).*?)(\'|\")/si','$1=$2'.$link[1].'://'.$link[3].'$3$4$5', $data);
-    if($status['http_code']==200)
-    {
-        return $data;
-    }
-    elseif($status['http_code']==301 || $status['http_code']==302)
-    {
-        if (!$follow_allowed)
-        {
-            if (!empty($status['redirect_url']))
-            {
-                $redirURL=$status['redirect_url'];
-            }
-            else
-            {
-                preg_match('/href\=\"(.*?)\"/si',$data,$m);
-                if (!empty($m[1]))
-                {
-                    $redirURL=$m[1];
-                }
-            }
-            if(!empty($redirURL))
-            {
-                return  call_user_func( __FUNCTION__, $redirURL, $post_paramtrs);
-            }
-        }
-    }
-    return "ERRORCODE22 with $url!!<br/>Last status codes<b/>:".json_encode($status)."<br/><br/>Last data got<br/>:$data";
-}
-?>
-
-<!Doctype html>
-<html>
-    <head>
-
-    </head>
-    <body>
-        <form>
-            <select>
-                <?php
-                    foreach($json2 as $data){
-                        echo '<option>'.$data.'</option>';
-                    }
-
-                ?>
-            </select>
-        </form>
-    </body>
-
-</html>
 
