@@ -14,23 +14,27 @@
 
 
     <script type="application/javascript">
-        $.ajax({
-            type: "POST",
-            url: 'https://api.getaddress.io/v2/uk/ab115be?api-key=I8Gx__79p0W0NH8oxnp_xw3587',
-            data: {'categoryID': $("#cpostc").val(),'isAjax':true},
-            dataType:'json',
-            success: function(data) {
+        $(document).ready(function() {
+            $("#addApi").click(function(){
+                $.ajax({
+                    url: 'ajax.php', //This is the current doc
+                    type: "POST",
+                    data: ({name: 145}),
+                    success: function(data){
+                        console.log(data);
+                    }
+                });
+                $.ajax({
+                    url:'ajax.php',
+                    data:"",
+                    dataType:'json',
+                    success:function(data1){
+                        var y1=data1;
+                        console.log(data1);
+                    }
+                });
 
-                var select = $("#select"), options = '';
-                select.emptys();
-
-                for(var i=0;i<data.length; i++)
-                {
-                    options += "<option value='"+data[i].id+"'>"+ data[i].name +"</option>";
-                }
-
-                select.append(options);
-            }
+            });
         });
     </script>
 <body>
@@ -105,7 +109,7 @@
                                 }
 
                                 ?>
-                            </select>/select></td>
+                            </select></td>
                     </tr>
                     <tr>
                         <td label for="custadd1"> <a id = "hash">*</a> Address Line 1 : </td>
