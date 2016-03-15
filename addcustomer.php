@@ -102,7 +102,7 @@
                     <tr>
                         <td label for="custadd1"></td>
                         <td><input type="text" id="addApi" name="addApi" value="" class = "formfield" rows = 1  placeholder="Type your Postcode"></td>
-                        <td><input type="submit" id="cu" name="cu" value="Find address" class = "formfield" rows = 1></td>
+                        <td><input type="submit" id="cu" name="cu" value="Find address" class = "formfield" rows = 1 onclick="function();"></td>
                         <td label for ="custadd2"> <select class = "formfiel"><?php
                                 foreach($json2 as $data){
                                     echo '<option>'.$data.'</option>';
