@@ -1,3 +1,5 @@
+<?php include('connection.php');
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -89,7 +91,27 @@
                     <th>Total</th>
                 </tr>
                 <tr><td><input type="text" id = "itemcustl" name= "itemcustl"  value = "" class = "tablefield"></td>
-                    <td><input type="text" id = "itemcustn" name= "itemcustn"  value = "" class = "tablefield"></td>
+
+                    <td>
+                        <select>
+                        <option disabled>Select Product</option>
+                            <?php
+
+                        $sql= "SELECT productname FROM addproduct";
+                        $result = mysqli_query($db, $sql);
+                        if(mysqli_num_rows($result) == 1 || mysqli_num_rows($result) >1){
+
+                            while($row = $result -> fetch_array()){
+                            echo '<option value="'.$row[supplierid].'" >';
+                            echo $row['productname'];
+                            echo '</option>';
+                            }
+                            }else{
+                            echo '<option> No Result Found </option>';
+                            }
+                            ?>
+                        </select>
+                    </td>
                     <td><input type="number" id = "quancust" name= "quancust"  value = "" class = "tablefield"></td>
                     <td><input type="number" id = "costcust" name= "costcust"  value = "" class = "tablefield"></td>
                     <td><input type="number" id = "tax" name= "taxcust"  value = "" class = "tablefield"></td>
