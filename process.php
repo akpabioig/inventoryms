@@ -7,7 +7,6 @@
  *
  */
 
-/*
 $db = new PDO('mysql:host=us-cdbr-azure-southcentral-e.cloudapp.net;dbname=inventoryms;charset=utf8mb4', 'bee886bc8793e7', '362289e3',array(PDO::ATTR_EMULATE_PREPARES => false,
     PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
 
@@ -18,7 +17,7 @@ $desc = htmlspecialchars($_POST['desc']);
 $isp = htmlspecialchars($_POST['isp']);
 $wp = htmlspecialchars($_POST['wp']);
 $rp = htmlspecialchars($_POST['rp']); */
-echo $supplier = htmlspecialchars($_POST['supplier']);/*
+echo $supplier = htmlspecialchars($_POST['supplier']);
 $loccode = htmlspecialchars($_POST['loccode']);
 
     try {                    
@@ -28,5 +27,5 @@ $loccode = htmlspecialchars($_POST['loccode']);
     } catch(PDOException $e) {
         echo $e->getMessage();
     }
-*/
+
 ?>
