@@ -22,7 +22,7 @@ $supplier = htmlspecialchars($_POST['supplier']);
 $loccode = htmlspecialchars($_POST['loccode']);
 
     try {                    
-        $sql = "INSERT INTO addproduct (productserialnumber, productname, productdescription, locationcode, suppliercode, initialstockprice, wholesaleprice, retailprice)
+        $sql = "INSERT INTO addproduct (productserialnumber, productname, productdescription, locationid, supplierid, initialstockprice, wholesaleprice, retailprice)
                 VALUES ('$pnum', '$pname','$desc','$loccode', '$supplier', $isp,$wp, $rp)";
         $sth = $db->query($sql);
     } catch(PDOException $e) {
