@@ -51,7 +51,7 @@
                         if(mysqli_num_rows($result) == 1 || mysqli_num_rows($result) >1){
 
                             while($row = $result -> fetch_array()){
-                               echo '<option value='.$row['supplierid'].'>';
+                               echo '<option value="2">';
                                echo $row['suppliername'];
                                echo '</option>';
                             }
