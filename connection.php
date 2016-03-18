@@ -7,7 +7,7 @@
  */
 
 
-define('DBSERVER', 'us-cdbr-azure-southcentral-e.cloudapp.net;dbname=inventoryms');
+define('DBSERVER', 'us-cdbr-azure-southcentral-e.cloudapp.net');
 define('DBUSER', 'bee886bc8793e7');
 define('DBPASSWORD', '362289e3');
 define('DBNAME', 'inventoryms');
