@@ -16,7 +16,7 @@ $pname = htmlspecialchars($_POST['pname']);
 $desc = htmlspecialchars($_POST['desc']);
 $isp = htmlspecialchars($_POST['isp']);
 $wp = htmlspecialchars($_POST['wp']);
-$rp = htmlspecialchars($_POST['rp']); */
+$rp = htmlspecialchars($_POST['rp']); 
 echo $supplier = htmlspecialchars($_POST['supplier']);
 $loccode = htmlspecialchars($_POST['loccode']);
 
