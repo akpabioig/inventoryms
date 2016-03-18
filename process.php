@@ -18,7 +18,7 @@ $desc = htmlspecialchars($_POST['desc']);
 $isp = htmlspecialchars($_POST['isp']);
 $wp = htmlspecialchars($_POST['wp']);
 $rp = htmlspecialchars($_POST['rp']); */
-$supplier = htmlspecialchars($_POST['supplier']);/*
+echo $supplier = htmlspecialchars($_POST['supplier']);/*
 $loccode = htmlspecialchars($_POST['loccode']);
 
     try {                    
