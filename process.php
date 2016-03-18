@@ -16,15 +16,14 @@ $pnum = htmlspecialchars($_POST['pnum']);
 $pname = htmlspecialchars($_POST['pname']);
 $desc = htmlspecialchars($_POST['desc']);
 $isp = htmlspecialchars($_POST['isp']);
-$isl = htmlspecialchars($_POST['isl']);
 $wp = htmlspecialchars($_POST['wp']);
 $rp = htmlspecialchars($_POST['rp']);
 $supplier = htmlspecialchars($_POST['supplier']);
 $loccode = htmlspecialchars($_POST['loccode']);
 
     try {                    
-        $sql = "INSERT INTO addproduct (productserialnumber, productname, productdescription, locationcode, suppliercode, initialstocklevel, initialstockprice, wholesaleprice, retailprice)
-                VALUES ('$pnum', '$pname','$desc','$loccode', '$supplier', $isl, $isp,$wp, $rp)";
+        $sql = "INSERT INTO addproduct (productserialnumber, productname, productdescription, locationcode, suppliercode, initialstockprice, wholesaleprice, retailprice)
+                VALUES ('$pnum', '$pname','$desc','$loccode', '$supplier', $isp,$wp, $rp)";
         $sth = $db->query($sql);
     } catch(PDOException $e) {
         echo $e->getMessage();
