@@ -48,10 +48,14 @@
 
                         $sql= "SELECT supplierid, suppliername FROM addsupplier";
                         $result = mysqli_query($db, $sql);
+                        if(mysqli_num_rows($result) == 1 || mysqli_num_rows($result) >1){
+
                             while($row = $result -> fetch_array()){
                                 echo '<option value="<?php echo $row["supplierid"]?"> '.$row['suppliername'].'</option>';
                             }
-
+                        }else{
+                            echo '<option> No Result Found </option>';
+                        }
                         ?>
                     </select>
                 </td>
