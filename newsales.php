@@ -23,7 +23,7 @@
     </script>
     <script>
         $(document).ready(function(){
-            $("#sup").select(function(){
+            $("#sup").click(function(){
                 $("#costcust").val("3");
                 $("#itemcustl").val("8");
             });
