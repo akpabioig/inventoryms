@@ -3,7 +3,7 @@
 $db = new PDO('mysql:host=us-cdbr-azure-southcentral-e.cloudapp.net;dbname=inventoryms;charset=utf8mb4', 'bee886bc8793e7', '362289e3',array(PDO::ATTR_EMULATE_PREPARES => false,
     PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
 
-/*
+
 $purchasedate = htmlspecialchars($_POST['purchasedate']);
 $date = new DateTime($purchasedate);
 $date = $date->format('m-d-Y');
@@ -14,8 +14,9 @@ $totalunits = htmlspecialchars($_POST['totalunits']);
 $subtotal = htmlspecialchars($_POST['subtotal']);
 $totalcost = htmlspecialchars($_POST['totalcost']);
 
+$pid = htmlspecialchars($_POST['pid']);
 $productlocation = htmlspecialchars($_POST['productlocation']);
-echo $productname = htmlspecialchars($_POST['productname']);
+$productname = htmlspecialchars($_POST['productname']);
 $quantity = htmlspecialchars($_POST['quantity']);
 $itemcost = htmlspecialchars($_POST['itemcost']);
 $tax = htmlspecialchars($_POST['tax']);
@@ -30,13 +31,10 @@ VALUES ($supplier, $purchasedate,'$ref','$messsupplier', $totalunits, $subtotal,
 }
 
 try {
-    $sql = "INSERT INTO purchaseitem (productlocation,productid, quantity, itemcost, tax, total)
-VALUES ('$productlocation','$productname',$quantity, $itemcost, $tax, $itemtotal)";
+    $sql = "INSERT INTO purchaseitem (productlocation, purchaseid, productid, quantity, itemcost, tax, total)
+VALUES ('$productlocation','$pid','$productname',$quantity, $itemcost, $tax, $itemtotal)";
     $sth = $db->query($sql);
 } catch(PDOException $e) {
     echo $e->getMessage();
-}*/
-
-
-echo $_POST['pid'];
+}
 ?>
