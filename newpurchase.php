@@ -100,7 +100,7 @@
 
                                 while($row = $result -> fetch_array()){
                                     echo '<option value="'.$row[productid].'" >';
-                                    echo $row['productname'];
+                                    echo $row['productid'];
                                     echo '</option>';
                                 }
                             }else{
