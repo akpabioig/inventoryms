@@ -18,7 +18,6 @@ $db = new PDO('mysql:host=us-cdbr-azure-southcentral-e.cloudapp.net;dbname=inven
 
 $type = htmlspecialchars($_POST['type']);
 $custn = htmlspecialchars($_POST['custn']);
-$custc = htmlspecialchars($_POST['custc']);
 $custtel = htmlspecialchars($_POST['custtel']);
 $custfax = htmlspecialchars($_POST['custfax']);
 $custurl = htmlspecialchars($_POST['custurl']);
@@ -32,7 +31,7 @@ $cpostc = htmlspecialchars($_POST['cpostc']);
 $ccountry = htmlspecialchars($_POST['ccountry']);
 
     try {
-        $sql = "INSERT INTO addcustomer (customertype, customername, customercode, telnumber, fax, url, email, description, addressline1, addressline2, town, county, postcode, country)
+        $sql = "INSERT INTO addcustomer (customertype, customername, telnumber, fax, url, email, description, addressline1, addressline2, town, county, postcode, country)
                 VALUES ('$type', '$custn','$custc','$custtel', '$custfax', '$custurl', '$custemail','$desc', '$custadd1', '$custadd2', '$ctown', '$ccounty', '$cpostc', '$ccountry')";
         $sth = $db->query($sql);
     } catch(PDOException $e) {

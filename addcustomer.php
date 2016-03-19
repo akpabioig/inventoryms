@@ -78,8 +78,6 @@
                     <tr>
                         <td label for="custn"> <a id = "hash">*</a> Customer Name : </td>
                         <td><input type="text" id="custn" name="custn" value="" class = "formfield" rows = 1 required></td>
-                        <td label for ="custc"> Customer Code : </td>
-                        <td><input type="text" id = "custc" name= "custc"  value = "" class = "formfield" rows = 1></td>
                     </tr>
                     <tr>
                         <td label for ="custtel"> <a id = "hash">*</a> Tel Number : </td>
