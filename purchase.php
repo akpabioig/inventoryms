@@ -5,8 +5,10 @@ $db = new PDO('mysql:host=us-cdbr-azure-southcentral-e.cloudapp.net;dbname=inven
 
 
 $purchasedate = htmlspecialchars($_POST['purchasedate']);
-$purchasedate -> format('m-d-Y');
-echo $purchasedate;
+$date = new DateTime($purchasedate);
+echo $date->format('m-d-Y');
+
+
 /*$supplier = htmlspecialchars($_POST['supplier']);
 $ref = htmlspecialchars($_POST['ref']);
 $messsupplier = htmlspecialchars($_POST['messsupplier']);
