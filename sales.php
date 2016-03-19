@@ -6,7 +6,7 @@ $db = new PDO('mysql:host=us-cdbr-azure-southcentral-e.cloudapp.net;dbname=inven
 
 $datesales = htmlspecialchars($_POST['datesales']);
 $soid = htmlspecialchars($_POST['soid']);
-$selcust = htmlspecialchars($_POST['selcust']);
+$customer = htmlspecialchars($_POST['customer']);
 $refcust = htmlspecialchars($_POST['refcust']);
 $deladdcust = htmlspecialchars($_POST['deladdcust']);
 $paytcust = htmlspecialchars($_POST['paytcust']);
@@ -33,8 +33,8 @@ echo $e->getMessage();
 
 
 try {
-    $sql = "INSERT INTO salesorder (datesales, sid, customer, refnumber, message, delAddress, paymenttype, totalunits, subtotal, totalcost)
-VALUES ($datesales, $soid,'$selcust','$refcust', '$deladdcust', '$paytcust', '$messcust',$totunitcust, $subtotalcust, $totalcost)";
+    $sql = "INSERT INTO salesorder (datesales, sid, customerid, reference, message, delAddress, paymenttype, totalunits, subtotal, totalcost)
+VALUES ($datesales, $soid,$customer,'$refcust', '$deladdcust', '$paytcust', '$messcust',$totunitcust, $subtotalcust, $totalcost)";
     $sth = $db->query($sql);
 } catch(PDOException $e) {
     echo $e->getMessage();
