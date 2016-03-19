@@ -114,7 +114,7 @@
                     $purchaseidquery = "SELECT max(purchaseid) FROM purchaseorder";
                         $r = mysqli_query($db, $purchaseidquery);
                         while($row = $r ->fetch_array()){
-                            $pid = $row['purchaseid'];
+                            $pid = $row['0'];
                         }
                         $pid += 10;
                     ?>
