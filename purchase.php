@@ -12,9 +12,9 @@ echo $supplier = htmlspecialchars($_POST['supplier']); echo "<br>";
 $messsupplier = htmlspecialchars($_POST['messsupplier']);
 $totalunits = htmlspecialchars($_POST['totalunits']);
 $subtotal = htmlspecialchars($_POST['subtotal']);
-$totalcost = htmlspecialchars($_POST['totalcost']);
+$totalcost = htmlspecialchars($_POST['totalcost']);*/
 
-$pid = htmlspecialchars($_POST['pid']);
+echo $pid = htmlspecialchars($_POST['pid']);/*
 $productlocation = htmlspecialchars($_POST['productlocation']);*/
 echo $productname = htmlspecialchars($_POST['productname']);/*
 $quantity = htmlspecialchars($_POST['quantity']);
