@@ -88,7 +88,26 @@
                 </tr>
                 <tr>
                     <td><input type="text" id = "productlocation" name= "productlocation"  value = "" class = "tablefield"></td>
-                    <td><input type="text" id = "productname" name= "productname"  value = "" class = "tablefield"></td>
+                    <td>
+                        <select name = "productname">
+                            <option disabled>Select Product</option>
+                            <?php
+
+                            $sql= "SELECT productname FROM addproduct";
+                            $result = mysqli_query($db, $sql);
+                            if(mysqli_num_rows($result) == 1 || mysqli_num_rows($result) >1){
+
+                                while($row = $result -> fetch_array()){
+                                    echo '<option value="'.$row[supplierid].'" >';
+                                    echo $row['productname'];
+                                    echo '</option>';
+                                }
+                            }else{
+                                echo '<option> No Result Found </option>';
+                            }
+                            ?>
+                        </select>
+                    </td>
                     <td><input type="number" id = "quantity" name= "quantity"  value = "" class = "tablefield"></td>
                     <td><input type="number" id = "cost" name= "itemcost"  value = "" class = "tablefield"></td>
                     <td><input type="number" id = "tax" name= "tax"  value = "" class = "tablefield"></td>
