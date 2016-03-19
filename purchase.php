@@ -32,7 +32,7 @@ VALUES ($supplier, $purchasedate,'$ref','$messsupplier', $totalunits, $subtotal,
 
 try {
     $sql = "INSERT INTO purchaseitem (productlocation, purchaseid, productid, quantity, itemcost, tax, total)
-VALUES ('$productlocation','$pid','$productname',$quantity, $itemcost, $tax, $itemtotal)";
+VALUES ('$productlocation',$pid,'$productname',$quantity, $itemcost, $tax, $itemtotal)";
     $sth = $db->query($sql);
 } catch(PDOException $e) {
     echo $e->getMessage();
