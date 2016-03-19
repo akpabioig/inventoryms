@@ -21,14 +21,6 @@
             });
         });
     </script>
-    <script>
-        $(document).ready(function(){
-            $("#sup").click(function(){
-                $("#costcust").val("3");
-                $("#itemcustl").val("8");
-            });
-        });
-    </script>
 
 </head>
 <body>
@@ -72,9 +64,12 @@
                         $result = mysqli_query($db, $sql);
                         if(mysqli_num_rows($result) == 1 || mysqli_num_rows($result) >1){
                             while($row = $result -> fetch_array()){
-                               echo '<option value="'.$row[customerid].'" >';
+                               echo '<option value="'.$row['customerid'].'" >';
                                echo $row['customername'];
                                echo '</option>';
+                                echo '<script type="application/javascript">';
+                                echo 'var id = ' . json_encode($row[customerid]) . ';';
+                                echo '</script>';
                             }
                         }else{
                             echo '<option> No Result Found </option>';
@@ -166,4 +161,13 @@
         <p>&copy; Akpabio Ignatius, 2016</p>
     </footer>
 </body>
+
+<script>
+    $(document).ready(function(){
+        $("#sup").change(function(){
+            $("#costcust").val(this.id);
+            $("#itemcustl").val(this.id);
+        });
+    });
+</script>
 </html>
