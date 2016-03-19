@@ -56,7 +56,7 @@
                 <tr>
                     <td label for="selcust"> <a id = "hash">*</a> Select Customer : </td>
                     <td>
-                        <select name="supplier">
+                        <select name="customer">
                         <option selected disabled>SELECT</option>
                         <?php
                         $sql= "SELECT customerid, customername FROM addcustomer";
