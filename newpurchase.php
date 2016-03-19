@@ -94,7 +94,7 @@
                             <option disabled>Select Product</option>
                             <?php
 
-                            $sql= "SELECT productname FROM addproduct";
+                            $sql= "SELECT productname, productid FROM addproduct";
                             $result = mysqli_query($db, $sql);
                             if(mysqli_num_rows($result) == 1 || mysqli_num_rows($result) >1){
 
