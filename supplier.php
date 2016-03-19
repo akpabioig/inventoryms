@@ -18,7 +18,6 @@ $db = new PDO('mysql:host=us-cdbr-azure-southcentral-e.cloudapp.net;dbname=inven
     PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
 
 $suppn = htmlspecialchars($_POST['suppn']);
-$suppid = htmlspecialchars($_POST['suppid']);
 $contp = htmlspecialchars($_POST['contp']);
 $contppn = htmlspecialchars($_POST['contppn']);
 $supptel = htmlspecialchars($_POST['supptel']);
@@ -34,8 +33,8 @@ $postcode = htmlspecialchars($_POST['postcode']);
 $country = htmlspecialchars($_POST['country']);
 
     try {
-        $sql = "INSERT INTO addsupplier (suppliername, supplierid, contactperson, contactpersontel, telnumber, fax, url, email, description, addressline1, addressline2, town, county, postcode, country)
-                VALUES ('$suppn', '$suppid','$contp','$contppn', '$supptel', '$suppfax', '$suppurl','$suppemail', '$desc','$add1', '$add2', '$town', '$county', '$postcode', '$country')";
+        $sql = "INSERT INTO addsupplier (suppliername, contactperson, contactpersontel, telnumber, fax, url, email, description, addressline1, addressline2, town, county, postcode, country)
+                VALUES ('$suppn','$contp','$contppn', '$supptel', '$suppfax', '$suppurl','$suppemail', '$desc','$add1', '$add2', '$town', '$county', '$postcode', '$country')";
         $sth = $db->query($sql);
     } catch(PDOException $e) {
         echo $e->getMessage();
