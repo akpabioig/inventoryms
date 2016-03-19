@@ -114,12 +114,12 @@
                                 if(mysqli_num_rows($result) == 1 || mysqli_num_rows($result) >1){
 
                                     while($row = $result -> fetch_array()){
-                                    echo '<option value="'.$row[productid].'">';
+                                    echo '<option value="'.$row['productid'].'">';
                                     echo $row['productname'];
                                     echo '</option>';
 
                                         echo '<script type="application/javascript">';
-                                        echo 'var id = ' . json_encode($row[productid]) . ';';
+                                        echo 'var id = ' . json_encode($row['productid']) . ';';
                                         echo '</script>';}
                                     }else{
                                     echo '<option> No Result Found </option>';
