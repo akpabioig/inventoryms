@@ -23,8 +23,9 @@
     </script>
     <script>
         $(document).ready(function(){
-            $("#sup").click(function(){
+            $("#sup").select(function(){
                 $("#costcust").val("3");
+                $().val("8");
             });
         });
     </script>
