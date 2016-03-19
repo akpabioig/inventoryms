@@ -25,7 +25,7 @@
         $(document).ready(function(){
             $("#sup").select(function(){
                 $("#costcust").val("3");
-                $().val("8");
+                $("#itemcustl").val("8");
             });
         });
     </script>
