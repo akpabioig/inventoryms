@@ -22,7 +22,7 @@ $tax = htmlspecialchars($_POST['tax']);
 $itemtotal= htmlspecialchars($_POST['itemtotal']);
 
 try {
-    $sql = "INSERT INTO purchaseitem (productlocation, productname, quantity, itemcost, tax, total)
+    $sql = "INSERT INTO purchaseitem (productlocation, productid, quantity, itemcost, tax, total)
 VALUES ('$productlocation','$productname',$quantity, $itemcost, $tax, $itemtotal)";
     $sth = $db->query($sql);
 } catch(PDOException $e) {
