@@ -25,19 +25,18 @@ $discountcust = htmlspecialchars($_POST['discountcust']);
 $minitotal = htmlspecialchars($_POST['minitotal']);
 
 try {
-$sql = "INSERT INTO salesitem (sid, itemlocation, itemname, quantity, itemcost, tax, discount, total)
-VALUES ($soid, '$itemcustl','$itemcustn',$quancust, $costcust, $taxcust, $discountcust,$minitotal)";
-$sth = $db->query($sql);
-} catch(PDOException $e) {
-echo $e->getMessage();
-}
-
-
-try {
     $sql = "INSERT INTO salesorder (datesales, sid, customerid, reference, message, delAddress, paymenttype, totalunits, subtotal, totalcost)
 VALUES ($datesales, $soid,$customer,'$refcust', '$deladdcust', '$paytcust', '$messcust',$totunitcust, $subtotalcust, $totalcost)";
     $sth = $db->query($sql);
 } catch(PDOException $e) {
     echo $e->getMessage();
+}
+
+try {
+$sql = "INSERT INTO salesitem (sid, itemlocation, itemname, quantity, itemcost, tax, discount, total)
+VALUES ($soid, '$itemcustl','$itemcustn',$quancust, $costcust, $taxcust, $discountcust,$minitotal)";
+$sth = $db->query($sql);
+} catch(PDOException $e) {
+echo $e->getMessage();
 }
 ?>

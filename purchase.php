@@ -22,17 +22,16 @@ $tax = htmlspecialchars($_POST['tax']);
 $itemtotal= htmlspecialchars($_POST['itemtotal']);
 
 try {
-    $sql = "INSERT INTO purchaseitem (productlocation, productid, quantity, itemcost, tax, total)
-VALUES ('$productlocation','$productname',$quantity, $itemcost, $tax, $itemtotal)";
+    $sql = "INSERT INTO purchaseorder (supplierid, datepurchase, reference, messagesupplier, totalunits, subtotal, total)
+VALUES ($supplier, $purchasedate,'$ref','$messsupplier', $totalunits, $subtotal, $totalcost)";
     $sth = $db->query($sql);
 } catch(PDOException $e) {
     echo $e->getMessage();
 }
 
-
 try {
-    $sql = "INSERT INTO purchaseorder (supplierid, datepurchase, reference, messagesupplier, totalunits, subtotal, total)
-VALUES ($supplier, $purchasedate,'$ref','$messsupplier', $totalunits, $subtotal, $totalcost)";
+    $sql = "INSERT INTO purchaseitem (productlocation, productid, quantity, itemcost, tax, total)
+VALUES ('$productlocation','$productname',$quantity, $itemcost, $tax, $itemtotal)";
     $sth = $db->query($sql);
 } catch(PDOException $e) {
     echo $e->getMessage();
