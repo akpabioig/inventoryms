@@ -1,5 +1,6 @@
 <?php include('connection.php');
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -109,10 +110,19 @@
                             ?>
                         </select>
                     </td>
+                    <?php
+                    $purchaseidquery = "SELECT max(purchaseid) FROM purchaseorder";
+                        $r = mysqli_query($db, $purchaseidquery);
+                        while($row = $r ->fetch_array()){
+                            $pid = $row['purchaseid'];
+                        }
+                        $pid += 10;
+                    ?>
                     <td><input type="number" id = "quantity" name= "quantity"  value = "" class = "tablefield"></td>
                     <td><input type="number" id = "cost" name= "itemcost"  value = "" class = "tablefield"></td>
                     <td><input type="number" id = "tax" name= "tax"  value = "" class = "tablefield"></td>
                     <td><input type="number" id = "itemtotal" name= "itemtotal"  value = "" class = "tablefield"></td>
+                    <input type="hidden" value="<?php echo $pid; ?>" name="pid" id="pid" />
                 </tr>
 
             </table>

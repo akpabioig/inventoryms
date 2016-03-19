@@ -3,7 +3,7 @@
 $db = new PDO('mysql:host=us-cdbr-azure-southcentral-e.cloudapp.net;dbname=inventoryms;charset=utf8mb4', 'bee886bc8793e7', '362289e3',array(PDO::ATTR_EMULATE_PREPARES => false,
     PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
 
-
+/*
 $purchasedate = htmlspecialchars($_POST['purchasedate']);
 $date = new DateTime($purchasedate);
 $date = $date->format('m-d-Y');
@@ -30,10 +30,13 @@ VALUES ($supplier, $purchasedate,'$ref','$messsupplier', $totalunits, $subtotal,
 }
 
 try {
-    $sql = "INSERT INTO purchaseitem (productlocation, productid, quantity, itemcost, tax, total)
+    $sql = "INSERT INTO purchaseitem (productlocation,productid, quantity, itemcost, tax, total)
 VALUES ('$productlocation','$productname',$quantity, $itemcost, $tax, $itemtotal)";
     $sth = $db->query($sql);
 } catch(PDOException $e) {
     echo $e->getMessage();
-}
+}*/
+
+
+echo $_POST['pid'];
 ?>
