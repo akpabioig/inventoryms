@@ -21,6 +21,14 @@
             });
         });
     </script>
+    <script>
+        $(document).ready(function(){
+            $("#sup").click(function(){
+                $("#costcust").val("3");
+            });
+        });
+    </script>
+
 </head>
 <body>
 <nav class="w3-sidenav w3-black" style="width:102px">
@@ -103,22 +111,22 @@
                 <tr><td><input type="text" id = "itemcustl" name= "itemcustl"  value = "" class = "tablefield"></td>
 
                     <td>
-                        <select>
+                        <select id="sup" name="sup">
                         <option disabled>Select Product</option>
                             <?php
 
-                        $sql= "SELECT productname FROM addproduct";
-                        $result = mysqli_query($db, $sql);
-                        if(mysqli_num_rows($result) == 1 || mysqli_num_rows($result) >1){
+                                $sql= "SELECT productname FROM addproduct";
+                                $result = mysqli_query($db, $sql);
+                                if(mysqli_num_rows($result) == 1 || mysqli_num_rows($result) >1){
 
-                            while($row = $result -> fetch_array()){
-                            echo '<option value="'.$row[supplierid].'" >';
-                            echo $row['productname'];
-                            echo '</option>';
-                            }
-                            }else{
-                            echo '<option> No Result Found </option>';
-                            }
+                                    while($row = $result -> fetch_array()){
+                                    echo '<option value="'.$row[productid].'">';
+                                    echo $row['productname'];
+                                    echo '</option>';
+                                    }
+                                    }else{
+                                    echo '<option> No Result Found </option>';
+                                    }
                             ?>
                         </select>
                     </td>
