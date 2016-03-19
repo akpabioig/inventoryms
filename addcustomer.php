@@ -74,8 +74,6 @@
                                 <option value = "Individual">INDIVIDUAL</option>
                             </select>
                         </td>
-                    </tr>
-                    <tr>
                         <td label for="custn"> <a id = "hash">*</a> Customer Name : </td>
                         <td><input type="text" id="custn" name="custn" value="" class = "formfield" rows = 1 required></td>
                     </tr>
