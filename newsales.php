@@ -56,12 +56,22 @@
                 <tr>
                     <td label for="selcust"> <a id = "hash">*</a> Select Customer : </td>
                     <td>
-                        <select class = "formfiel" name = "selcust">
-                            <option selected disabled>SELECT</option>
-                            <option value = "TOTAL">To...tal</option>
-                            <option value = "EXXON">Ex...xon</option>
-                            <option value="MOBIL">Mo..il</option>>
-                        </select>
+                        <select name="supplier">
+                        <option selected disabled>SELECT</option>
+                        <?php
+                        $sql= "SELECT customerid, customername FROM addcustomer";
+                        $result = mysqli_query($db, $sql);
+                        if(mysqli_num_rows($result) == 1 || mysqli_num_rows($result) >1){
+                            while($row = $result -> fetch_array()){
+                               echo '<option value="'.$row[customerid].'" >';
+                               echo $row['customername'];
+                               echo '</option>';
+                            }
+                        }else{
+                            echo '<option> No Result Found </option>';
+                        }
+                        ?>
+                    </select>
                     </td>
                     <td label for="ref"> <a id = "hash">*</a> Reference Number : </td>
                     <td><input type="text" id = "ref1" name= "refcust"  value = "" class = "formfield"></td>
