@@ -51,7 +51,7 @@
                     <td><input type="date" id = "date" name= "purchasedate"  value = "" class = "formfield"></td>
                 </tr>
                 <tr>
-                    <td label for="selsupp"> <a id = "hash">*</a> Select Supplier : </td>
+                    <td label for="supplier"> <a id = "hash">*</a> Select Supplier : </td>
                     <td>
                         <select name="supplier">
                             <option selected disabled>SELECT</option>
@@ -79,14 +79,16 @@
             <br>
             <table id = "form5">
                 <tr>
-                    <th> Item Name</th>
+                    <th>Prodcut Location</th>
+                    <th>Product Name</th>
                     <th>Quantity</th>
                     <th>Item Cost</th>
                     <th>Tax</th>
                     <th>Total</th>
                 </tr>
                 <tr>
-                    <td><input type="text" id = "itemname" name= "itemname"  value = "" class = "tablefield"></td>
+                    <td><input type="text" id = "productlocation" name= "productlocation"  value = "" class = "tablefield"></td>
+                    <td><input type="text" id = "productname" name= "productname"  value = "" class = "tablefield"></td>
                     <td><input type="number" id = "quantity" name= "quantity"  value = "" class = "tablefield"></td>
                     <td><input type="number" id = "cost" name= "itemcost"  value = "" class = "tablefield"></td>
                     <td><input type="number" id = "tax" name= "tax"  value = "" class = "tablefield"></td>
