@@ -137,7 +137,7 @@
                 </tr>
                 <tr>
                     <td>Subtotal : </td>
-                    <td><input type="number" name = "itemsubtotal" value = "" class = "formfield"></td>
+                    <td><input type="number" name = "subtotal" value = "" class = "formfield"></td>
                 </tr>
                 <tr>
                     <td> Total Cost : </td>
