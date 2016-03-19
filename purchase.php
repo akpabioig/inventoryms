@@ -14,7 +14,7 @@ $totalunits = htmlspecialchars($_POST['totalunits']);
 $subtotal = htmlspecialchars($_POST['subtotal']);
 $totalcost = htmlspecialchars($_POST['totalcost']);*/
 
-echo $pid = htmlspecialchars($_POST['pid']);/*
+echo $pid = htmlspecialchars($_POST['pid']);  echo "<br>";/*
 $productlocation = htmlspecialchars($_POST['productlocation']);*/
 echo $productname = htmlspecialchars($_POST['productname']);/*
 $quantity = htmlspecialchars($_POST['quantity']);
