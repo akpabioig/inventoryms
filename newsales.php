@@ -67,9 +67,7 @@
                                echo '<option value="'.$row['customerid'].'" >';
                                echo $row['customername'];
                                echo '</option>';
-                                echo '<script type="application/javascript">';
-                                echo 'var id = ' . json_encode($row[customerid]) . ';';
-                                echo '</script>';
+
                             }
                         }else{
                             echo '<option> No Result Found </option>';
@@ -119,7 +117,10 @@
                                     echo '<option value="'.$row[productid].'">';
                                     echo $row['productname'];
                                     echo '</option>';
-                                    }
+
+                                        echo '<script type="application/javascript">';
+                                        echo 'var id = ' . json_encode($row[productid]) . ';';
+                                        echo '</script>';}
                                     }else{
                                     echo '<option> No Result Found </option>';
                                     }
