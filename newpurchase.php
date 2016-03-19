@@ -133,7 +133,8 @@
                     <td><input type="totalcost" id = "totalcost" value = "" class = "formfield"></td>
                 </tr>
             </table>
-            <p id = "purtotal"><input type = "submit" value = "SUBMIT"></p>
+            <p id = "purtotal"><input type = "reset" value = "CLEAR">
+                &nbsp; &nbsp; <input type = "submit" value = "SAVE"></p>
         </div>
     </section>
     <footer>
