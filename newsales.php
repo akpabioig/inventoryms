@@ -166,8 +166,8 @@
 <script>
     $(document).ready(function(){
         $("#sup").change(function(){
-            $("#costcust").val(this.id);
-            $("#itemcustl").val(this.id);
+            $("#costcust").val(id);
+            $("#itemcustl").val(id);
         });
     });
 </script>
