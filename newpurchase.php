@@ -1,3 +1,5 @@
+<?php include('connection.php');
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -46,24 +48,34 @@
             <table>
                 <tr>
                     <td label for="date"> <a id = "hash">*</a> Date : </td>
-                    <td><input type="date" id = "date" name= "date"  value = "" class = "formfield"></td>
-                    <td label for="purchaseid"> <a id = "hash">*</a> Purchase ID : </td>
-                    <td><input type="number" id = "date" name= "pid"  value = "" class = "formfield"></td>
+                    <td><input type="date" id = "date" name= "purchasedate"  value = "" class = "formfield"></td>
                 </tr>
                 <tr>
                     <td label for="selsupp"> <a id = "hash">*</a> Select Supplier : </td>
                     <td>
-                        <select class = "formfiel" name = "selsupp">
+                        <select name="supplier">
                             <option selected disabled>SELECT</option>
-                            <option value = "">To...tal</option>
-                            <option value = "">Ex...xon</option>
-                            <option value="">skbgsijlkghlkbjghj</option>>
+                            <?php
+
+                            $sql= "SELECT supplierid, suppliername FROM addsupplier";
+                            $result = mysqli_query($db, $sql);
+                            if(mysqli_num_rows($result) == 1 || mysqli_num_rows($result) >1){
+
+                                while($row = $result -> fetch_array()){
+                                    echo '<option value="'.$row[supplierid].'" >';
+                                    echo $row['suppliername'];
+                                    echo '</option>';
+                                }
+                            }else{
+                                echo '<option> No Result Found </option>';
+                            }
+                            ?>
                         </select>
                     </td>
                     <td label for="ref"> <a id = "hash">*</a> Reference : </td>
                     <td><input type="ref" id = "ref1" name= "ref"  value = "" class = "formfield"></td>
                 </tr>
-                </table>
+            </table>
             <br>
             <table id = "form5">
                 <tr>
@@ -86,25 +98,25 @@
             <hr>
             <h6>Message to Supplier : </h6>
             <textarea id = "messsupplier" name="messsupplier" value="" class = "formfield" rows = 5 cols = 40></textarea>
-                <table id = purtotal>
-                    <tr>
-                        <td>Total Units : </td>
-                        <td><input type="number" name = "totalunits" value = "" class = "formfield"></td>
-                    </tr>
-                    <tr>
-                        <td>Subtotal : </td>
-                        <td><input type="number" name = "itemsubtotal" value = "" class = "formfield"></td>
-                    </tr>
-                    <tr>
-                        <td> Total Cost : </td>
-                        <td><input type="totalcost" id = "totalcost" value = "" class = "formfield"></td>
-                    </tr>
-                </table>
+            <table id = purtotal>
+                <tr>
+                    <td>Total Units : </td>
+                    <td><input type="number" name = "totalunits" value = "" class = "formfield"></td>
+                </tr>
+                <tr>
+                    <td>Subtotal : </td>
+                    <td><input type="number" name = "itemsubtotal" value = "" class = "formfield"></td>
+                </tr>
+                <tr>
+                    <td> Total Cost : </td>
+                    <td><input type="totalcost" id = "totalcost" value = "" class = "formfield"></td>
+                </tr>
+            </table>
             <p id = "purtotal"><input type = "submit" value = "SUBMIT"></p>
         </div>
-        </section>
-<footer>
-    <p>&copy; Akpabio Ignatius, 2016</p>
-</footer>
+    </section>
+    <footer>
+        <p>&copy; Akpabio Ignatius, 2016</p>
+    </footer>
 </body>
 </html>
