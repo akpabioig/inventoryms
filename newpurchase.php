@@ -94,12 +94,12 @@
                             <option disabled>Select Product</option>
                             <?php
 
-                            $sql= "SELECT productname FROM addproduct";
+                            $sql= "SELECT productname, productid FROM addproduct";
                             $result = mysqli_query($db, $sql);
                             if(mysqli_num_rows($result) == 1 || mysqli_num_rows($result) >1){
 
                                 while($row = $result -> fetch_array()){
-                                    echo '<option value="'.$row[supplierid].'" >';
+                                    echo '<option value="'.$row[productid].'" >';
                                     echo $row['productname'];
                                     echo '</option>';
                                 }
