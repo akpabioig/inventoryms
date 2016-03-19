@@ -44,6 +44,7 @@
         <h2>New Purchase Order Details</h2>
         <p>Insert the details of the purchase to be made from a registered supplier </p>
         <p>Be careful to fill out compulsory fields indicated by the "*" key</p>
+        <form method="post" action="purchase.php">
         <div id = "form1">
             <table>
                 <tr>
@@ -136,6 +137,7 @@
             <p id = "purtotal"><input type = "reset" value = "CLEAR">
                 &nbsp; &nbsp; <input type = "submit" value = "SAVE"></p>
         </div>
+            </form>
     </section>
     <footer>
         <p>&copy; Akpabio Ignatius, 2016</p>
