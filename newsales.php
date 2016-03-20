@@ -105,7 +105,7 @@
                 <tr><td><input type="text" id = "itemcustl" name= "itemcustl"  value = "" class = "tablefield"></td>
 
                     <td>
-                        <select id="sup" name="sup">
+                        <select id="supl" name="supl">
                         <option disabled>Select Product</option>
                             <?php
 
@@ -165,7 +165,7 @@
 
 <script>
     $(document).ready(function(){
-        $("#sup").change(function(){
+        $("#supl").change(function(){
             $("#costcust").val(id);
             $("#itemcustl").val(id);
         });
