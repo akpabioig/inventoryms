@@ -105,7 +105,7 @@
                 <tr><td><input type="text" id = "itemcustl" name= "itemcustl"  value = "" class = "tablefield"></td>
 
                     <td>
-                        <select id="supl" name="supl" onchange="fetch_select(this.value)">
+                        <select id="supl" name="supl">
                         <option disabled>Select Product</option>
                             <?php
 
@@ -115,14 +115,13 @@
 
                                     while($row = $result -> fetch_array()) {
                                         echo '<option value="' . $row['productid'] . '">';
-                                        echo $row['retailprice'];
-                                        echo $row['locationid'];
+                                        echo $row['productname'];
                                         echo '</option>';
 
-                                        //echo '<script type="application/javascript">';
-                                        //echo 'var price = ' . json_encode($row['retailprice']) . ';';
-                                        //echo 'var locid = ' . json_encode($row['locationid']) . ';';
-                                        //echo '</script>';
+                                        echo '<script type="application/javascript">';
+                                        echo 'var price = ' . json_encode($row['retailprice']) . ';';
+                                        echo 'var locid = ' . json_encode($row['locationid']) . ';';
+                                        echo '</script>';
                                     }
                                 }else{
                                     echo '<option> No Result Found </option>';
@@ -166,7 +165,7 @@
         <p>&copy; Akpabio Ignatius, 2016</p>
     </footer>
 </body>
-<!--
+
 <script>
     $(document).ready(function(){
         $("#supl").change(function(){
@@ -175,7 +174,8 @@
         });
     });
 </script>
--->
+
+<!--
 <script type="text/javascript">
 
     function fetch_select(val)
@@ -193,5 +193,5 @@
         });
     }
 
-</script>
+</script>-->
 </html>
