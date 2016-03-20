@@ -138,7 +138,7 @@
                 </tr>
 
             </table>
-            <p align="center" ><a href = ""  id="addp"> + Add another item </a></p>
+            <p align="center" ><a href = ""  id="addp"> + Add another itemP </a></p>
             <hr>
             <h6>Message to Customer : </h6>
             <textarea id = "messcust" name="messcust" value="" class = "formfield" rows = 5 cols = 40></textarea>
