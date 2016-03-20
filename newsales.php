@@ -115,8 +115,8 @@
 
                                     while($row = $result -> fetch_array()) {
                                         echo '<option value="' . $row['productid'] . '">';
-                                        echo $row['productname'];
-                                        //echo $row['locationid'];
+                                        echo $row['retailprice'];
+                                        echo $row['locationid'];
                                         echo '</option>';
 
                                         //echo '<script type="application/javascript">';
