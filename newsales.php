@@ -168,8 +168,8 @@
 <script>
     $(document).ready(function(){
         $("#supl").change(function(){
-            $("#costcust").val('id');
-            $("#itemcustl").val('id');
+            $("#costcust").val(id);
+            $("#itemcustl").val(id);
         });
     });
 </script>
