@@ -8,7 +8,14 @@
 
 include('connection.php');
 
-$sql = "SELECT locationid, retailprice FROM addproduct WHERE productname = '$productname'";
+$sql = "SELECT locationid, retailprice FROM addproduct WHERE productname = 'fdsgdfgs'";
 $record = mysqli_query($db, $sql);
+
+    while($row = $record -> fetch_array()){
+        echo $row['retailprice'];
+    }
+
+
+
 
 ?>

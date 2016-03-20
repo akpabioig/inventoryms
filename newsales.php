@@ -105,7 +105,7 @@
                 <tr><td><input type="text" id = "itemcustl" name= "itemcustl"  value = "" class = "tablefield"></td>
 
                     <td>
-                        <select id="supl" name="supl">
+                        <select id="supl" name="supl" onchange="fetch_select(this.value)">
                         <option disabled>Select Product</option>
                             <?php
 
@@ -119,10 +119,10 @@
                                         echo $row['locationid'];
                                         echo '</option>';
 
-                                        echo '<script type="application/javascript">';
-                                        echo 'var price = ' . json_encode($row['retailprice']) . ';';
-                                        echo 'var locid = ' . json_encode($row['locationid']) . ';';
-                                        echo '</script>';
+                                        //echo '<script type="application/javascript">';
+                                        //echo 'var price = ' . json_encode($row['retailprice']) . ';';
+                                        //echo 'var locid = ' . json_encode($row['locationid']) . ';';
+                                        //echo '</script>';
                                     }
                                 }else{
                                     echo '<option> No Result Found </option>';
@@ -166,7 +166,7 @@
         <p>&copy; Akpabio Ignatius, 2016</p>
     </footer>
 </body>
-
+<!--
 <script>
     $(document).ready(function(){
         $("#supl").change(function(){
@@ -174,5 +174,23 @@
             $("#itemcustl").val(locid);
         });
     });
+</script>
+-->
+<script type="text/javascript">
+
+    function fetch_select(val)
+    {
+        $.ajax({
+            type: 'post',
+            url: 'get.php',
+            data: {
+                get_option:val
+            },
+            success: function (response) {
+                document.getElementById("costcust").innerHTML=response;
+            }
+        });
+    }
+
 </script>
 </html>
