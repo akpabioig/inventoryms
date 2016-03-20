@@ -114,7 +114,9 @@
                                 if(mysqli_num_rows($result) == 1 || mysqli_num_rows($result) >1){
 
                                     while($row = $result -> fetch_array()) {
-                                        echo '<option value="' . $row['productname'] . '">';
+                                        echo '<option value="' . $row['productid'] . '">';
+                                        echo $row['productname'];
+                                        //echo $row['locationid'];
                                         echo '</option>';
 
                                         //echo '<script type="application/javascript">';
