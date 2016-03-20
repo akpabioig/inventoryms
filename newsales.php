@@ -113,17 +113,16 @@
                                 $result = mysqli_query($db, $sql);
                                 if(mysqli_num_rows($result) == 1 || mysqli_num_rows($result) >1){
 
-                                    while($row = $result -> fetch_array()){
-                                    echo '<option value="'.$row['productid'].'">';
-                                    echo $row['productname'];
-                                    echo '</option>';
+                                    while($row = $result -> fetch_array()) {
+                                        echo '<option value="' . $row['productid'] . '">';
+                                        echo $row['productname'];
+                                        echo '</option>';
 
-                                        echo '<script type="application/javascript">';
-                                        echo 'var id = ' . json_encode($row['productid']) . ';';
-                                        echo '</script>';}
-                                    }else{
-                                    echo '<option> No Result Found </option>';
                                     }
+                                }else{
+                                    echo '<option> No Result Found </option>';
+                                }
+
                             ?>
                         </select>
                     </td>
@@ -166,8 +165,8 @@
 <script>
     $(document).ready(function(){
         $("#supl").change(function(){
-            $("#costcust").val(id);
-            $("#itemcustl").val(id);
+            $("#costcust").val('3');
+            $("#itemcustl").val('3');
         });
     });
 </script>
