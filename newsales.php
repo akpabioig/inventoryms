@@ -188,6 +188,7 @@
             },
             success: function (response) {
                 document.getElementById("costcust").innerHTML=response;
+                //get data
             }
         });
     }
