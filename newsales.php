@@ -109,7 +109,7 @@
                         <option disabled>Select Product</option>
                             <?php
 
-                                $sql= "SELECT productname, retailprice FROM addproduct";
+                                $sql= "SELECT productname, locationid, retailprice FROM addproduct";
                                 $result = mysqli_query($db, $sql);
                                 if(mysqli_num_rows($result) == 1 || mysqli_num_rows($result) >1){
 
