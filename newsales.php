@@ -116,10 +116,12 @@
                                     while($row = $result -> fetch_array()) {
                                         echo '<option value="' . $row['productid'] . '">';
                                         echo $row['retailprice'];
+                                        echo $row['locationid'];
                                         echo '</option>';
 
                                         echo '<script type="application/javascript">';
-                                        echo 'var id = ' . json_encode($row['retailprice']) . ';';
+                                        echo 'var price = ' . json_encode($row['retailprice']) . ';';
+                                        echo 'var locid = ' . json_encode($row['locationid']) . ';';
                                         echo '</script>';
                                     }
                                 }else{
