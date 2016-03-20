@@ -118,6 +118,9 @@
                                         echo $row['productname'];
                                         echo '</option>';
 
+                                        echo '<script type="application/javascript">';
+                                        echo 'var id = ' . json_encode($row['productid']) . ';';
+                                        echo '</script>';
                                     }
                                 }else{
                                     echo '<option> No Result Found </option>';
@@ -164,9 +167,9 @@
 
 <script>
     $(document).ready(function(){
-        $("#supl").select(function(){
-            $("#costcust").val('3');
-            $("#itemcustl").val('3');
+        $("#supl").change(function(){
+            $("#costcust").val('id');
+            $("#itemcustl").val('id');
         });
     });
 </script>
