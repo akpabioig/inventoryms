@@ -163,9 +163,9 @@
                     <td><input type="number" id = "tot" name = "totalcost" value = "" class = "formfield"></td>
                 </tr>
             </table>
-        </div>
             <p id = "purtotal"><input type = "reset" value = "CLEAR">
                 &nbsp; &nbsp; <input type = "submit" value = "SAVE"></p>
+        </div>
         </form>
     </section>
     <footer>
