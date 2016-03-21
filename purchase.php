@@ -3,10 +3,9 @@
 $db = new PDO('mysql:host=us-cdbr-azure-southcentral-e.cloudapp.net;dbname=inventoryms;charset=utf8mb4', 'bee886bc8793e7', '362289e3',array(PDO::ATTR_EMULATE_PREPARES => false,
     PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
 
-
+$date = new DateTime($purchasedate);
+$date = $date->format('Y-m-d');
 echo $purchasedate = htmlspecialchars($_POST['purchasedate']); echo "<br>";
-echo $date = new DateTime($purchasedate); echo "<br>";
-echo $date = $date->format('Y-m-d'); echo "<br>";
 echo $supplier = htmlspecialchars($_POST['supplier']); echo "<br>";
 echo $ref = htmlspecialchars($_POST['ref']); echo "<br>";
 echo $messsupplier = htmlspecialchars($_POST['messsupplier']); echo "<br>";
