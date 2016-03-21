@@ -24,15 +24,15 @@ $itemtotal= htmlspecialchars($_POST['itemtotal']);
 
 try {
     $sql = "INSERT INTO purchaseorder (supplierid, datepurchase, reference, messagesupplier, totalunits, subtotal, total)
-VALUES ($supplier, $purchasedate,'$ref','$messsupplier', $totalunits, $subtotal, $totalcost)";
+VALUES ($supplier, '$purchasedate','$ref','$messsupplier', $totalunits, $subtotal, $totalcost)";
     $sth = $db->query($sql);
 } catch(PDOException $e) {
     echo $e->getMessage();
 }
 
 try {
-    $sql = "INSERT INTO purchaseitem (productlocation, purchaseid, productid, quantity, itemcost, tax, total)
-VALUES ('$productlocation',$pid,'$productname',$quantity, $itemcost, $tax, $itemtotal)";
+    $sql = "INSERT INTO purchaseitem (productid, productlocation, purchaseid, itemcost, quantity, tax, total)
+VALUES ('$productname', '$productlocation',$pid, $itemcost, $quantity, $tax, $itemtotal)";
     $sth = $db->query($sql);
 } catch(PDOException $e) {
     echo $e->getMessage();
