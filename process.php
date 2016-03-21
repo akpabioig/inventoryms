@@ -27,5 +27,5 @@ $loccode = htmlspecialchars($_POST['loccode']);
     } catch(PDOException $e) {
         echo $e->getMessage();
     }
-
+header("Location: addproduct.php");
 ?>

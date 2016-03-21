@@ -1,5 +1,4 @@
 <?php include('connection.php');
-header("Location: addproduct.php");
 ?>
 <!DOCTYPE html>
 <html lang="en">
