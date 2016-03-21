@@ -175,7 +175,7 @@
 
 <script>
     $(document).ready(function(){
-        $("#supl").change(function(){
+        $("#product").change(function(){
             $("#costcust").val(price);
             $("#itemcustl").val(locid);
         });
