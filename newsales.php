@@ -73,7 +73,7 @@
                         ?>
                     </select>
                     </td>
-                    <td label for="ref"> <a id = "hash">*</a> Reference Number : </td>
+                    <td label for="ref"> <a id = "hash">*</a> Reference : </td>
                     <td><input type="text" id = "ref1" name= "refcust"  value = "" class = "formfield"></td>
                 </tr>
                 <tr>
