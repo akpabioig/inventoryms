@@ -5,7 +5,7 @@ $db = new PDO('mysql:host=us-cdbr-azure-southcentral-e.cloudapp.net;dbname=inven
 
 $date = new DateTime($datesales);
 $date = $date->format('Y-m-d');
-echo $datesales = htmlspecialchars($_POST['purchasedate']); echo "<br>";
+echo $datesales = htmlspecialchars($_POST['datesales']); echo "<br>";
 echo $customer = htmlspecialchars($_POST['customer']); echo "<br>";
 echo $refcust = htmlspecialchars($_POST['refcust']);echo "<br>";
 echo $deladdcust = htmlspecialchars($_POST['deladdcust']);echo "<br>";
