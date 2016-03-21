@@ -133,7 +133,7 @@
             <table id = purtotal>
                 <tr>
                     <td>Total Units : </td>
-                    <td><input type="number" name = "totalunits" value = "" class = "formfield"></td>
+                    <td><input type="number" name = "totalunit" value = "" class = "formfield"></td>
                 </tr>
                 <tr>
                     <td>Subtotal : </td>
@@ -141,7 +141,7 @@
                 </tr>
                 <tr>
                     <td> Total Cost : </td>
-                    <td><input type="totalcost" id = "totalcost" value = "" class = "formfield"></td>
+                    <td><input type="totalcost" id = "totalcost" name= "totalcost" value = "" class = "formfield"></td>
                 </tr>
             </table>
             <p id = "purtotal"><input type = "reset" value = "CLEAR">
