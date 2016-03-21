@@ -37,4 +37,5 @@ $ccountry = htmlspecialchars($_POST['ccountry']);
     } catch(PDOException $e) {
         echo $e->getMessage();
     }
+header("Location: addcustomer.php");
 ?>

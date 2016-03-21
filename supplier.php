@@ -39,4 +39,6 @@ $country = htmlspecialchars($_POST['country']);
     } catch(PDOException $e) {
         echo $e->getMessage();
     }
+
+header("Location: addvendor.html");
 ?>
