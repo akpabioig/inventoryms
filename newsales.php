@@ -132,7 +132,7 @@
                     $salesidquery = "SELECT max(sid) FROM salesorder";
                     $r = mysqli_query($db, $salesidquery);
                     while($row = $r ->fetch_array()){
-                        $salesid = $row['0'];
+                        $salesid = $row['10'];
                     }
                     $salesid += 1;
                     ?>
