@@ -5,22 +5,22 @@ $db = new PDO('mysql:host=us-cdbr-azure-southcentral-e.cloudapp.net;dbname=inven
 
 $date = new DateTime($purchasedate);
 $date = $date->format('Y-m-d');
-echo $purchasedate = htmlspecialchars($_POST['purchasedate']);
-echo $supplier = htmlspecialchars($_POST['supplier']); echo "<br>";
-echo $ref = htmlspecialchars($_POST['ref']); echo "<br>";
-echo $messsupplier = htmlspecialchars($_POST['messsupplier']); echo "<br>";
-echo $totalunit = htmlspecialchars($_POST['totalunit']); echo "<br>";
-echo $subtotal = htmlspecialchars($_POST['subtotal']); echo "<br>";
-echo $totalcost = htmlspecialchars($_POST['totalcost']); echo "<br>";
+$purchasedate = htmlspecialchars($_POST['purchasedate']);
+$supplier = htmlspecialchars($_POST['supplier']);
+$ref = htmlspecialchars($_POST['ref']);
+$messsupplier = htmlspecialchars($_POST['messsupplier']);
+$totalunit = htmlspecialchars($_POST['totalunit']);
+$subtotal = htmlspecialchars($_POST['subtotal']);
+$totalcost = htmlspecialchars($_POST['totalcost']);
 
-echo $pid = htmlspecialchars($_POST['pid']); echo "<br>";
-echo $productlocation = htmlspecialchars($_POST['productlocation']); echo "<br>";
-echo $productname = htmlspecialchars($_POST['productname']); echo "<br>";
-echo $itemcost = htmlspecialchars($_POST['itemcost']); echo "<br>";
-echo $quantity = htmlspecialchars($_POST['quantity']); echo "<br>";
-echo $tax = htmlspecialchars($_POST['tax']); echo "<br>";
-echo $itemtotal= htmlspecialchars($_POST['itemtotal']); echo "<br>";
-/*
+$pid = htmlspecialchars($_POST['pid']);
+$productlocation = htmlspecialchars($_POST['productlocation']);
+$productname = htmlspecialchars($_POST['productname']);
+$itemcost = htmlspecialchars($_POST['itemcost']);
+$quantity = htmlspecialchars($_POST['quantity']);
+$tax = htmlspecialchars($_POST['tax']);
+$itemtotal= htmlspecialchars($_POST['itemtotal']);
+
 try {
     $sql = "INSERT INTO purchaseorder (supplierid, datepurchase, reference, messagesupplier, totalunits, subtotal, total)
 VALUES ($supplier, '$purchasedate','$ref','$messsupplier', $totalunits, $subtotal, $totalcost)";
@@ -37,5 +37,5 @@ VALUES ($productname, '$productlocation',$pid, $itemcost, $quantity, $tax, $item
     echo $e->getMessage();
 }
 
-//header("Location: newpurchase.php");*/
+//header("Location: newpurchase.php");
 ?>
