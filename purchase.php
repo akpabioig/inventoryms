@@ -4,24 +4,24 @@ $db = new PDO('mysql:host=us-cdbr-azure-southcentral-e.cloudapp.net;dbname=inven
     PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
 
 
-echo $purchasedate = htmlspecialchars($_POST['purchasedate']);
-$date = new DateTime($purchasedate);
-$date = $date->format('Y-m-d');
-$supplier = htmlspecialchars($_POST['supplier']);
-$ref = htmlspecialchars($_POST['ref']);
-$messsupplier = htmlspecialchars($_POST['messsupplier']);
-$totalunits = htmlspecialchars($_POST['totalunits']);
-$subtotal = htmlspecialchars($_POST['subtotal']);
-$totalcost = htmlspecialchars($_POST['totalcost']);
+echo $purchasedate = htmlspecialchars($_POST['purchasedate']); echo "<br>";
+echo $date = new DateTime($purchasedate); echo "<br>";
+echo $date = $date->format('Y-m-d'); echo "<br>";
+echo $supplier = htmlspecialchars($_POST['supplier']); echo "<br>";
+echo $ref = htmlspecialchars($_POST['ref']); echo "<br>";
+echo $messsupplier = htmlspecialchars($_POST['messsupplier']); echo "<br>";
+echo $totalunits = htmlspecialchars($_POST['totalunits']); echo "<br>";
+echo $subtotal = htmlspecialchars($_POST['subtotal']); echo "<br>";
+echo $totalcost = htmlspecialchars($_POST['totalcost']); echo "<br>";
 
-$pid = htmlspecialchars($_POST['pid']);
-$productlocation = htmlspecialchars($_POST['productlocation']);
-$productname = htmlspecialchars($_POST['productname']);
-$quantity = htmlspecialchars($_POST['quantity']);
-$itemcost = htmlspecialchars($_POST['itemcost']);
-$tax = htmlspecialchars($_POST['tax']);
-$itemtotal= htmlspecialchars($_POST['itemtotal']);
-
+echo $pid = htmlspecialchars($_POST['pid']); echo "<br>";
+echo $productlocation = htmlspecialchars($_POST['productlocation']); echo "<br>";
+echo $productname = htmlspecialchars($_POST['productname']); echo "<br>";
+echo $quantity = htmlspecialchars($_POST['quantity']); echo "<br>";
+echo $itemcost = htmlspecialchars($_POST['itemcost']); echo "<br>";
+echo $tax = htmlspecialchars($_POST['tax']); echo "<br>";
+echo $itemtotal= htmlspecialchars($_POST['itemtotal']); echo "<br>";
+/*
 try {
     $sql = "INSERT INTO purchaseorder (supplierid, datepurchase, reference, messagesupplier, totalunits, subtotal, total)
 VALUES ($supplier, '$purchasedate','$ref','$messsupplier', $totalunits, $subtotal, $totalcost)";
@@ -38,5 +38,5 @@ VALUES ($productname, '$productlocation',$pid, $itemcost, $quantity, $tax, $item
     echo $e->getMessage();
 }
 
-//header("Location: newpurchase.php");
+//header("Location: newpurchase.php");*/
 ?>
