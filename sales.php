@@ -34,7 +34,7 @@ VALUES ('$datesales', $customer,'$refcust', '$deladdcust', '$paytcust', '$messcu
 
 try {
 $sql = "INSERT INTO salesitem (sid, itemlocation, productid, quantity, itemcost, tax, discount, total)
-VALUES ($salesid, '$itemcustl', $product, $quancust, $costcust, $taxcust, $discountcust, $minitotal)";
+VALUES ($salesid, '$itemcustl', '$product', $quancust, $costcust, $taxcust, $discountcust, $minitotal)";
 $sth = $db->query($sql);
 } catch(PDOException $e) {
 echo $e->getMessage();
