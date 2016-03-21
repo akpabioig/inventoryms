@@ -132,9 +132,9 @@
                     $salesidquery = "SELECT max(sid) FROM salesorder";
                     $r = mysqli_query($db, $salesidquery);
                     while($row = $r ->fetch_array()){
-                        $salesid = $row['10'];
+                        $salesid = $row['0'];
                     }
-                    $salesid += 1;
+                    $salesid += 10;
                     ?>
                     <td><input type="number" id = "quancust" name= "quancust"  value = "" class = "tablefield"></td>
                     <td><input type="number" id = "costcust" name= "costcust"  value = "" class = "tablefield"></td>
