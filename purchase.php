@@ -37,4 +37,6 @@ VALUES ($productname, '$productlocation',$pid, $itemcost, $quantity, $tax, $item
 } catch(PDOException $e) {
     echo $e->getMessage();
 }
+
+header("Location: newpurchase.php");
 ?>
