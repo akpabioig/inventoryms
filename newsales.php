@@ -103,7 +103,7 @@
                 <tr>
                     <td><input type="text" id = "itemcustl" name= "itemcustl"  value = "" class = "tablefield"></td>
                     <td>
-                        <select id="product" name="product">
+                        <select id="product" name="productid">
                         <option disabled>Select Product</option>
                             <?php
 
