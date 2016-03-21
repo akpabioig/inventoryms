@@ -34,7 +34,7 @@
     <h2>Product Details</h2>
     <p>Insert the details of the new product to be added to the inventory list</p>
     <p>Be careful to fill out compulsory fields indicated by the "*" key</p>
-    <form method="post" action="process.php" onsubmit="function validate()">
+    <form method="post" action="process.php" onsubmit="return validate(this);">
         <div id = "form1">
         <table>
             <tr>
