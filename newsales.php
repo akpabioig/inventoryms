@@ -82,6 +82,7 @@
                     <td label for="paytype"> <a id = "hash">*</a> Payment Type : </td>
                     <td>
                         <select class = "formfiel" name = "paytcust">
+                            <option selected disabled>SELECT</option>
                             <option value = "CASH"> CASH </option>
                             <option value = "CHEQUE"> CHEQUE </option>
                             <option value="CREDIT/DEBIT CARD"> CREDIT/DEBIT CARD </option>>
