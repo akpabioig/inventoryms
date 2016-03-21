@@ -51,8 +51,6 @@
                 <tr>
                     <td label for="date"> <a id = "hash">*</a> Date : </td>
                     <td><input type="date" id = "date" name= "datesales"  value = "" class = "formfield"></td>
-                    <td label for="soid"> <a id = "hash">*</a> Sale Order ID : </td>
-                    <td><input type="number" id = "date" name= "soid"  value = "" class = "formfield"></td>
                 </tr>
                 <tr>
                     <td label for="selcust"> <a id = "hash">*</a> Select Customer : </td>
@@ -105,7 +103,7 @@
                 <tr><td><input type="text" id = "itemcustl" name= "itemcustl"  value = "" class = "tablefield"></td>
 
                     <td>
-                        <select id="supl" name="supl">
+                        <select id="product" name="product">
                         <option disabled>Select Product</option>
                             <?php
 
@@ -130,11 +128,20 @@
                             ?>
                         </select>
                     </td>
+                    <?php
+                    $salesidquery = "SELECT max(sid) FROM salesorder";
+                    $r = mysqli_query($db, $salesidquery);
+                    while($row = $r ->fetch_array()){
+                        $salesid = $row['0'];
+                    }
+                    $salesid += 1;
+                    ?>
                     <td><input type="number" id = "quancust" name= "quancust"  value = "" class = "tablefield"></td>
                     <td><input type="number" id = "costcust" name= "costcust"  value = "" class = "tablefield"></td>
                     <td><input type="number" id = "tax" name= "taxcust"  value = "" class = "tablefield"></td>
                     <td><input type="number" id = "discountcust" name= "discountcust"  value = "" class = "tablefield"></td>
                     <td><input type="number" id = "minitotal" name= "minitotal"  value = "" class = "tablefield"></td>
+                    <input type="hidden" value="<?php echo $salesid; ?>" name="salesid" id="salesid" />
                 </tr>
 
             </table>
