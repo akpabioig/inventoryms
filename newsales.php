@@ -100,8 +100,8 @@
                     <th>Discount</th>
                     <th>Total</th>
                 </tr>
-                <tr><td><input type="text" id = "itemcustl" name= "itemcustl"  value = "" class = "tablefield"></td>
-
+                <tr>
+                    <td><input type="text" id = "itemcustl" name= "itemcustl"  value = "" class = "tablefield"></td>
                     <td>
                         <select id="product" name="product">
                         <option disabled>Select Product</option>
