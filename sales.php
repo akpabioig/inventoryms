@@ -15,7 +15,7 @@ $totunitcust = htmlspecialchars($_POST['totunitcust']);
 $subtotalcust = htmlspecialchars($_POST['subtotalcust']);
 $totalcost = htmlspecialchars($_POST['totalcost']);
 
-$salesid = htmlspecialchars($_POST['salesid']);
+$sid = htmlspecialchars($_POST['sid']);
 $itemcustl = htmlspecialchars($_POST['itemcustl']);
 $product = htmlspecialchars($_POST['product']);
 $quancust = htmlspecialchars($_POST['quancust']);
@@ -34,7 +34,7 @@ VALUES ('$datesales', $customer,'$refcust', '$deladdcust', '$paytcust', '$messcu
 
 try {
 $sql = "INSERT INTO salesitem (sid, itemlocation, productid, quantity, itemcost, tax, discount, total)
-VALUES ($salesid, '$itemcustl', $product, $quancust, $costcust, $taxcust, $discountcust, $minitotal)";
+VALUES ($sid, '$itemcustl', $product, $quancust, $costcust, $taxcust, $discountcust, $minitotal)";
 $sth = $db->query($sql);
 } catch(PDOException $e) {
 echo $e->getMessage();
