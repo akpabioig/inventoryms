@@ -4,7 +4,7 @@ $db = new PDO('mysql:host=us-cdbr-azure-southcentral-e.cloudapp.net;dbname=inven
     PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
 
 
-$purchasedate = htmlspecialchars($_POST['purchasedate']);
+echo $purchasedate = htmlspecialchars($_POST['purchasedate']);
 $date = new DateTime($purchasedate);
 $date = $date->format('Y-m-d');
 $supplier = htmlspecialchars($_POST['supplier']);
