@@ -105,7 +105,7 @@
                     <td><input type="text" id = "itemcustl" name= "itemcustl"  value = "" class = "tablefield"></td>
                     <td>
                         <select id="product" name="productid">
-                        <option disabled>Select Product</option>
+                        <option selected disabled>SELECT PRODUCT</option>
                             <?php
 
                                 $sql= "SELECT productname, locationid, retailprice FROM addproduct";
