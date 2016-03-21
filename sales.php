@@ -23,7 +23,7 @@ $costcust = htmlspecialchars($_POST['costcust']);
 $taxcust = htmlspecialchars($_POST['taxcust']);
 $discountcust = htmlspecialchars($_POST['discountcust']);
 $minitotal = htmlspecialchars($_POST['minitotal']);
-/*
+
 try {
     $sql = "INSERT INTO salesorder (datesales, customerid, reference, message, delAddress, paymenttype, totalunits, subtotal, totalcost)
 VALUES ('$datesales', $customer,'$refcust', '$deladdcust', '$paytcust', '$messcust',$totunitcust, $subtotalcust, $totalcost)";
@@ -39,5 +39,5 @@ $sth = $db->query($sql);
 } catch(PDOException $e) {
 echo $e->getMessage();
 }
-//header("Location: newsales.php");*/
+//header("Location: newsales.php");
 ?>
