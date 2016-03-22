@@ -3,15 +3,15 @@
 $db = new PDO('mysql:host=us-cdbr-azure-southcentral-e.cloudapp.net;dbname=inventoryms;charset=utf8mb4', 'bee886bc8793e7', '362289e3',array(PDO::ATTR_EMULATE_PREPARES => false,
     PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
 
-$username = $_POST['username'];
-$password = $_POST['password'];
+$user = $_POST['user'];
+$pass = $_POST['pass'];
 
 function SignIn()
 {
     session_start();
-    if (!empty($_POST['username']))
+    if (!empty($_POST['user']))
     {
-        $query = mysql_query("SELECT * FROM login where username = '$_POST[username]' AND password = '$_POST[password]'") or die(mysql_error());
+        $query = mysql_query("SELECT * FROM login where username = '$_POST[user]' AND password = '$_POST[pass]'") or die(mysql_error());
         $row = mysql_fetch_array($query) or die(mysql_error());
         if(!empty($row['username']) AND !empty($row['password']))
         {
