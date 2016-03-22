@@ -11,7 +11,7 @@ function SignIn()
     session_start();
     if (!empty($_POST['username']))
     {
-        $query = mysql_query("SELECT * FROM login where username = '$_POST[username]' AND pass = '$_POST[password]'") or die(mysql_error());
+        $query = mysql_query("SELECT * FROM login where username = '$_POST[username]' AND password = '$_POST[password]'") or die(mysql_error());
         $row = mysql_fetch_array($query) or die(mysql_error());
         if(!empty($row['username']) AND !empty($row['password']))
         {
