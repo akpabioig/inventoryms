@@ -34,7 +34,7 @@
                     <td label for="pass"> <a id = "hash">*</a> Password : </td>
                 </tr>
                 <tr>
-                    <td><input type="password" id="pass" name="mypassword" value="" class = "formfiel" rows = 1 cols = 40></td>
+                    <td><input type="text" id="pass" name="mypassword" value="" class = "formfiel" rows = 1 cols = 40></td>
                 </tr>
             </table>
             <h5><a href="#"> Forgot Password ? </a></h5>
