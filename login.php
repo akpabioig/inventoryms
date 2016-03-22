@@ -28,7 +28,7 @@
                     <td label for="username"> <a id = "hash">*</a> UserName : </td>
                 </tr>
                 <tr>
-                    <td><input type="username" id="usn" name="username" value="" class = "formfiel" rows = 1 cols = 40></td>
+                    <td><input type="text" id="usn" name="username" value="" class = "formfiel" rows = 1 cols = 40></td>
                 </tr>
                 <tr>
                     <td label for="pass"> <a id = "hash">*</a> Password : </td>
