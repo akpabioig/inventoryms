@@ -22,15 +22,16 @@
         <div id = "log">
             <h2> RGU Oil Services IMS Login</h2>
             <h4>Login with your Username and password</h4>
+            <form method="POST" action="login.php">
             <table>
                 <tr>
-                    <td label for="usn"> <a id = "hash">*</a> UserName : </td>
+                    <td label for="username"> <a id = "hash">*</a> UserName : </td>
                 </tr>
                 <tr>
-                    <td><input type="text" id="usn" name="username" value="" class = "formfiel" rows = 1 cols = 40></td>
+                    <td><input type="username" id="usn" name="username" value="" class = "formfiel" rows = 1 cols = 40></td>
                 </tr>
                 <tr>
-                    <td label for="pass"> <a id = "hash">*</a> Pashv sword : </td>
+                    <td label for="pass"> <a id = "hash">*</a> Password : </td>
                 </tr>
                 <tr>
                     <td><input type="password" id="pass" name="password" value="" class = "formfiel" rows = 1 cols = 40></td>
@@ -38,6 +39,7 @@
             </table>
             <h5><a href="#"> Forgot Password ? </a></h5>
             <p id = "signup"><input type = "submit" name = "submit" value = "Sign In"></p>
+            </form>
         </div>
     </section>
 </div>
