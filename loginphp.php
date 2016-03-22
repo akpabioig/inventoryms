@@ -16,7 +16,7 @@ function SignIn()
         $row = mysql_fetch_array($query) or die(mysql_error());
         if(!empty($row['username']) AND !empty($row['password']))
         {
-            $_SESSION['userName'] = $row['password']; echo "SUCCESSFULLY LOGIN TO USER PROFILE PAGE...";
+            $_SESSION['username'] = $row['password']; echo "SUCCESSFULLY LOGIN TO USER PROFILE PAGE...";
         }
         else { echo "PLEASE ENTER THE CORRECT ID AND PASSWORD";
         }
