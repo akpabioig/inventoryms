@@ -8,20 +8,16 @@ $mypassword=$_POST['mypassword'];
 
 $myusername = stripslashes($myusername);
 $mypassword = stripslashes($mypassword);
-$myusername = mysql_real_escape_string($myusername);
-$mypassword = mysql_real_escape_string($mypassword);
-$sql="SELECT * FROM login WHERE username='$myusername' and password='$mypassword'";
-$result=mysql_query($sql);
+//$myusername = mysql_real_escape_string($myusername);
+//$mypassword = mysql_real_escape_string($mypassword);
 
-$count=mysql_num_rows($result);
-
-if($count==1){
-
-    session_register("myusername");
-    session_register("mypassword");
-    header("location:login_success.php");
-}
-else {
-    echo "Wrong Username or Password";
+try {
+    $sql = "SELECT * FROM login WHERE username = '$myusername' AND password = '$mypassword' LIMIT 1";
+    $sth = $db->query($sql);
+    if($sth -> rowCount() == 1){
+        header("Location: login_success.php");
+    }
+} catch(PDOException $e) {
+    echo $e->getMessage();
 }
 ?>

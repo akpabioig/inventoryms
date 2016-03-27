@@ -21,7 +21,7 @@ $quantity = htmlspecialchars($_POST['quantity']);
 $tax = htmlspecialchars($_POST['tax']);
 $itemtotal= htmlspecialchars($_POST['itemtotal']);
 
-try {
+/*try {
     $sql = "INSERT INTO purchaseorder (supplierid, datepurchase, reference, messagesupplier, totalunits, subtotal, total)
 VALUES ($supplier, '$purchasedate','$ref','$messsupplier', $totalunit, $subtotal, $totalcost)";
     $sth = $db->query($sql);
@@ -37,5 +37,5 @@ VALUES ($productname, '$productlocation',$pid, $itemcost, $quantity, $tax, $item
     echo $e->getMessage();
 }
 
-header("Location: newpurchase.php");
+header("Location: newpurchase.php");*/
 ?>
