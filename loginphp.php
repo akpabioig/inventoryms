@@ -14,9 +14,7 @@ $mypassword = stripslashes($mypassword);
 try {
     $sql = "SELECT * FROM login WHERE username = '$myusername' AND password = '$mypassword' LIMIT 1";
     $sth = $db->query($sql);
-    if($sth -> rowCount() == 1){
-        header("Location: login_success.php");
-    }
+    header("Location: login_success.php");
 } catch(PDOException $e) {
     echo $e->getMessage();
 }
