@@ -22,12 +22,13 @@
         <div id = "log">
             <h2> RGU Oil Services IMS Login</h2>
             <h4> CREATE USER </h4>
-            <form method="POST" action="usercreation.php">
+            <form method="POST" action="usercreation.php" onsubmit="return myFunction()">
                 <table>
                     <tr>
-                        <td label for = title> <a id = "hash">*</a> TITLE</td>
-                        <select name = "title" required>
-                            <option selected disabled>SELECT</option>
+                        <td label for = title> <a id = "hash">*</a> TITLE : </td>
+                        <td>
+                            <select name = "title" required>
+                            <option selected disabled> SELECT </option>
                             <option value = "Mr."> Mr. </option>
                             <option value = "Mrs.">Mrs. </option>
                             <option value="Miss">Miss</option>
@@ -35,6 +36,7 @@
                             <option value = "Dr.">Dr.</option>
                             <option value="Eng.">Eng.</option>
                         </select>
+                        </td>
                     </tr>
                     <tr>
                         <td label for = firstname> <a id = "hash">*</a> FIRST NAME : </td>
@@ -72,8 +74,23 @@
                     <tr>
                         <td><input type="password" id="password" name="password" value="" class = "formfiel" rows = 1 cols = 40></td>
                     </tr>
-
+                    <tr>
+                        <td label for="password"> <a id = "hash">*</a> CONFIRM PASSWORD : </td>
+                    </tr>
+                    <tr>
+                        <td><input type="password" id="password2" name="password2" value="" class = "formfiel" rows = 1 cols = 40></td>
+                    </tr>
                 </table>
+                <?php
+                $useridquery = "SELECT max(userid) FROM login";
+                $r = mysqli_query($db, $useridquery);
+                while($row = $r ->fetch_array()){
+                    $uid = $row['0'];
+                }
+                $userid += 1;
+                ?>
+                <input type="hidden" value="<?php echo $uid; ?>" name="uid" id="uid" />
+
                 <h5><a href="#"> Forgot Password ? </a></h5>
                 <p id = "signup"><input type = "submit" name = "submit" value = "REGISTER USER"></p>
             </form>
