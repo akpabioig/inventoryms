@@ -26,17 +26,15 @@
                 <table>
                     <tr>
                         <td label for = title> <a id = "hash">*</a> TITLE</td>
-                        <td>
-                            <select name = "title" required>
-                                <option selected disabled>SELECT</option>
-                                <option value = "Mr."> Mr. </option>
-                                <option value = "Mrs.">Mrs. </option>
-                                <option value="Miss">Miss</option>
-                                <option value = "Master">Master</option>
-                                <option value = "Dr.">Dr.</option>
-                                <option value="Eng.">Eng.</option>
-                            </select>
-                        </td>
+                        <select name = "title" required>
+                            <option selected disabled>SELECT</option>
+                            <option value = "Mr."> Mr. </option>
+                            <option value = "Mrs.">Mrs. </option>
+                            <option value="Miss">Miss</option>
+                            <option value = "Master">Master</option>
+                            <option value = "Dr.">Dr.</option>
+                            <option value="Eng.">Eng.</option>
+                        </select>
                     </tr>
                     <tr>
                         <td label for = firstname> <a id = "hash">*</a> FIRST NAME : </td>
