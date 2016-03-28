@@ -23,6 +23,15 @@
             <h2> RGU Oil Services IMS Login</h2>
             <h4> ADMIN CREATE USER </h4>
             <form method="POST" action="usercreation.php" onsubmit="return myFunction()">
+                <?php
+                $useridquery = "SELECT max(userid) FROM login";
+                $r = mysqli_query($db, $useridquery);
+                while($row = $r ->fetch_array()){
+                    $uid = $row['0'];
+                }
+                $uid += 10;
+                ?>
+                <input type="hidden" value="<?php echo $uid; ?>" name="uid" id="uid" />
                 <table>
                     <tr>
                         <td label for ="title"> <a id = "hash">*</a> TITLE : </td>
@@ -54,7 +63,7 @@
                         <td label for = middlename> <a id = "hash">*</a> LAST NAME : </td>
                     </tr>
                     <tr>
-                        <td> <input type="text" id="middlename" name="middlename" value="" class = "formfiel" rows = 1 cols = 40></td>
+                        <td> <input type="text" id="lastname" name="lastname" value="" class = "formfiel" rows = 1 cols = 40></td>
                     </tr>
                     <tr>
                         <td label for = position> <a id = "hash">*</a> COMPANY POSITION : </td>
@@ -81,15 +90,6 @@
                         <td><input type="password" id="password2" name="password2" value="" class = "formfiel" rows = 1 cols = 40></td>
                     </tr>
                 </table>
-                <?php
-                $useridquery = "SELECT max(userid) FROM login";
-                $r = mysqli_query($db, $useridquery);
-                while($row = $r ->fetch_array()){
-                    $uid = $row['0'];
-                }
-                $uid += 10;
-                ?>
-                <input type="hidden" value="<?php echo $uid; ?>" name="uid" id="uid" />
                 <p id = "signup"><input type = "submit" name = "submit" value = "REGISTER USER"></p>
             </form>
         </div>
