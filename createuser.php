@@ -27,14 +27,14 @@
                     <tr>
                         <td label for = title> <a id = "hash">*</a> TITLE : </td>
                         <td>
-                            <select name = "title" required>
+                            <select name = "title">
                             <option selected disabled> SELECT </option>
                             <option value = "Mr."> Mr. </option>
-                            <option value = "Mrs.">Mrs. </option>
-                            <option value="Miss">Miss</option>
-                            <option value = "Master">Master</option>
-                            <option value = "Dr.">Dr.</option>
-                            <option value="Eng.">Eng.</option>
+                            <option value = "Mrs."> Mrs. </option>
+                            <option value="Miss"> Miss</option>
+                            <option value = "Master"> Master</option>
+                            <option value = "Dr."> Dr.</option>
+                            <option value="Eng."> Eng.</option>
                         </select>
                         </td>
                     </tr>
