@@ -22,7 +22,7 @@ VALUES ('$username', '$password')";
 }
 
 try {
-$sql = "INSERT INTO user (userid, title,firstname, lastname, middlename, lastname, staffposition)
+$sql = "INSERT INTO user (userid, title,firstname, middlename, lastname, staffposition)
 VALUES ($uid, '$title', '$firstname','$middlename', '$lastname', '$position')";
 $sth = $db->query($sql);
 } catch(PDOException $e) {
