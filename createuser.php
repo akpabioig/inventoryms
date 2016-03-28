@@ -87,7 +87,7 @@
                 while($row = $r ->fetch_array()){
                     $uid = $row['0'];
                 }
-                $userid += 10;
+                $uid += 10;
                 ?>
                 <input type="hidden" value="<?php echo $uid; ?>" name="uid" id="uid" />
                 <p id = "signup"><input type = "submit" name = "submit" value = "REGISTER USER"></p>
