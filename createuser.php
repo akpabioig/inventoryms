@@ -28,7 +28,7 @@
                         <td label for = title> <a id = "hash">*</a> TITLE : </td>
                         <td>
                             <select name = "title">
-                            <option selected disabled> SELECT </option>
+                                <option selected disabled>SELECT</option>
                             <option value = "Mr."> Mr. </option>
                             <option value = "Mrs."> Mrs. </option>
                             <option value="Miss"> Miss</option>
@@ -90,8 +90,6 @@
                 $userid += 1;
                 ?>
                 <input type="hidden" value="<?php echo $uid; ?>" name="uid" id="uid" />
-
-                <h5><a href="#"> Forgot Password ? </a></h5>
                 <p id = "signup"><input type = "submit" name = "submit" value = "REGISTER USER"></p>
             </form>
         </div>
