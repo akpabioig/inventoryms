@@ -36,6 +36,7 @@
                                 <option value = "Miss"> MISS </option>
                                 <option value="Eng"> ENG. </option>
                             </select>
+                        </td>
                     </tr>
                     <tr>
                         <td label for = firstname> <a id = "hash">*</a> FIRST NAME : </td>
