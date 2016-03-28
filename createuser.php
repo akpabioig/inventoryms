@@ -21,22 +21,33 @@
     <section id = "content">
         <div id = "log">
             <h2> RGU Oil Services IMS Login</h2>
-            <h4> CREATE USER </h4>
+            <h4> ADMIN CREATE USER </h4>
             <form method="POST" action="usercreation.php" onsubmit="return myFunction()">
                 <table>
                     <tr>
-                        <td label for = title> <a id = "hash">*</a> TITLE : </td>
+                        <td label for ="locn"> <a id = "hash">*</a> Location Code : </td>
                         <td>
-                            <select name = "title">
+                            <select name = "loccode" required>
                                 <option selected disabled>SELECT</option>
-                            <option value = "Mr."> Mr. </option>
-                            <option value = "Mrs."> Mrs. </option>
-                            <option value="Miss"> Miss</option>
-                            <option value = "Master"> Master</option>
-                            <option value = "Dr."> Dr.</option>
-                            <option value="Eng."> Eng.</option>
-                        </select>
-                        </td>
+                                <option value = "WH Location A1">WH Location A1</option>
+                                <option value = "WH Location A2">WH Location A2</option>
+                                <option value="WH Location A3">WH Location A3</option>
+                                <option value = "WH Location A4">WH Location A4</option>
+                                <option value = "WH Location B1">WH Location B1</option>
+                                <option value="WH Location B2">WH Location B2</option>
+                                <option value = "WH Location B3">WH Location B3</option>
+                                <option value = "WH Location B4">WH Location B4</option>
+                                <option value="WH Location C1">WH Location C1</option>
+                                <option value = "WH Location C2">WH Location C2</option>
+                                <option value = "WH Location C3">WH Location C3</option>
+                                <option value="WH Location C4">WH Location C4</option>
+                                <option value = "WH Location D1">WH Location D1</option>
+                                <option value = "WH Location D2">WH Location D2</option>
+                                <option value="WH Location D3">WH Location D3</option>
+                                <option value = "WH Location D4">WH Location D4</option>
+                                <option value = "Yard 1">Yard 1</option>
+                                <option value="Yard 2">Yard 2</option>
+                            </select>
                     </tr>
                     <tr>
                         <td label for = firstname> <a id = "hash">*</a> FIRST NAME : </td>
