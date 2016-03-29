@@ -51,43 +51,43 @@
                         <td label for = firstname> <a id = "hash">*</a> FIRST NAME : </td>
                     </tr>
                     <tr>
-                        <td> <input type="text" id="firstname" name="firstname" value="" class = "formfiel" rows = 1 cols = 40></td>
+                        <td> <input type="text" id="firstname" name="firstname" value="" class = "formfiel" required></td>
                     </tr>
                     <tr>
                         <td label for = middlename> <a id = "hash">*</a> MIDDLE NAME : </td>
                     </tr>
                     <tr>
-                        <td> <input type="text" id="middlename" name="middlename" value="" class = "formfiel" rows = 1 cols = 40></td>
+                        <td> <input type="text" id="middlename" name="middlename" value="" class = "formfiel" rows = 1 cols = 40 required></td>
                     </tr>
                     <tr>
                         <td label for = lastname> <a id = "hash">*</a> LAST NAME : </td>
                     </tr>
                     <tr>
-                        <td> <input type="text" id="lastname" name="lastname" value="" class = "formfiel" rows = 1 cols = 40></td>
+                        <td> <input type="text" id="lastname" name="lastname" value="" class = "formfiel" rows = 1 cols = 40 required></td>
                     </tr>
                     <tr>
                         <td label for = position> <a id = "hash">*</a> COMPANY POSITION : </td>
                     </tr>
                     <tr>
-                        <td> <input type="text" id="position" name="position" value="" class = "formfiel" rows = 1 cols = 40></td>
+                        <td> <input type="text" id="position" name="position" value="" class = "formfiel" rows = 1 cols = 40 required></td>
                     </tr>
                     <tr>
                         <td label for="username"> <a id = "hash">*</a> USER NAME : </td>
                     </tr>
                     <tr>
-                        <td><input type="text" id="username" name="username" value="" class = "formfiel" rows = 1 cols = 40></td>
+                        <td><input type="text" id="username" name="username" value="" class = "formfiel" rows = 1 cols = 40 required></td>
                     </tr>
                     <tr>
                         <td label for="password"> <a id = "hash">*</a> PASSWORD : </td>
                     </tr>
                     <tr>
-                        <td><input type="password" id="password" name="password" value="" class = "formfiel" rows = 1 cols = 40></td>
+                        <td><input type="password" id="password" name="password" value="" class = "formfiel" rows = 1 cols = 40 required></td>
                     </tr>
                     <tr>
                         <td label for="password"> <a id = "hash">*</a> CONFIRM PASSWORD : </td>
                     </tr>
                     <tr>
-                        <td><input type="password" id="password2" name="password2" value="" class = "formfiel" rows = 1 cols = 40></td>
+                        <td><input type="password" id="password2" name="password2" value="" class = "formfiel" rows = 1 cols = 40 required></td>
                     </tr>
                 </table>
                 <p id = "signup"><input type = "submit" name = "submit" value = "REGISTER USER"></p>
