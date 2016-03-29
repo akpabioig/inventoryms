@@ -28,13 +28,13 @@
                     <td label for="username"> <a id = "hash">*</a> UserName : </td>
                 </tr>
                 <tr>
-                    <td><input type="text" id="myusername" name="myusername" value="" class = "formfiel"></td>
+                    <td><input type="text" id="myusername" name="myusername" value="" class = "loginfield"></td>
                 </tr>
                 <tr>
                     <td label for="pass"> <a id = "hash">*</a> Password : </td>
                 </tr>
                 <tr>
-                    <td><input type="password" id="mypassword" name="mypassword" value="" class = "formfiel"></td>
+                    <td><input type="password" id="mypassword" name="mypassword" value="" class = "loginfield"></td>
                 </tr>
             </table>
             <h5><a href="#"> Forgot Password ? </a></h5>
