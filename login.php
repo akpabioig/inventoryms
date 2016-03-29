@@ -20,7 +20,7 @@
     </header>
     <section id = "content">
         <div id = "log">
-            <p id = "signup" href = "createuser.php"><input type = "button" value = "CREATE LOGIN"></p>
+            <a href = "createuser.php" id = "signup"><input type = "button" value = "CREATE LOGIN"></a>
             <h2> RGU Oil Services IMS Login</h2>
             <h4>Login with your Username and password</h4>
             <form method="POST" action="loginphp.php">
@@ -38,7 +38,6 @@
                     <td><input type="password" id="mypassword" name="mypassword" value="" class = "loginfield"></td>
                 </tr>
             </table>
-            <h5><a href="#"> Forgot Password ? </a></h5>
             <p id = "signup"><input type = "submit" name = "submit" value = "Sign In"></p>
             </form>
         </div>
