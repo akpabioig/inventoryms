@@ -147,6 +147,7 @@ include('connection.php');
                 <!-- Modal content -->
                 <div class="modal-content">
                     <span class="close">×</span>
+                    <table>
                     <tr>
                         <th> Product ID </th>
                         <th>Product Serial Number </th>
@@ -168,6 +169,7 @@ include('connection.php');
                         <td><input type="text" id = "rp" name= "rp"  value = "" class = "tablefield"></td>
 
                     </tr>
+                        </table>
                 </div>
 
             </div>
