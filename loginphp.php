@@ -12,7 +12,7 @@ $db = new PDO('mysql:host=us-cdbr-azure-southcentral-e.cloudapp.net;dbname=inven
         $sth = $db->query($sql);
 
         if($sth ->rowCount() == 1) {
-            header("Location: login_success.php");
+            header("Location: login_success.php?s=1");
         }else {
             header("Location: login.php?failed=1");
         }
