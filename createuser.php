@@ -36,7 +36,7 @@
                     <tr>
                         <td label for ="title"> <a id = "hash">*</a> TITLE : </td>
                         <td>
-                            <select name = "title" required>
+                            <select name = "title" required class = "formfiel">
                                 <option selected disabled>SELECT</option>
                                 <option value = "Mr"> MR.  </option>
                                 <option value = "Mrs"> MRS. </option>
