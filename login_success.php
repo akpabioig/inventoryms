@@ -3,6 +3,6 @@
 </script>
 <?php
 
-header("Location: homepage.php");
+header("Location: homepage.php"); //load the homepage
 
 ?>
