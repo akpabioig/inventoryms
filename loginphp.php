@@ -6,14 +6,10 @@ $db = new PDO('mysql:host=us-cdbr-azure-southcentral-e.cloudapp.net;dbname=inven
 
     $myusername = htmlspecialchars($_POST['myusername']);
     $mypassword = htmlspecialchars($_POST['mypassword']);
-//$myusername = mysql_real_escape_string($myusername);
-//$mypassword = mysql_real_escape_string($mypassword);
-
 
     try {
         $sql = "SELECT * FROM login WHERE username = '$myusername' AND password = '$mypassword' LIMIT 1";
         $sth = $db->query($sql);
-        //$sth -> execute(); //
 
         if($sth ->rowCount() == 1) {
             header("Location: login_success.php");

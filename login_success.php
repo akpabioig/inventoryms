@@ -1,13 +1,8 @@
-<html>
-<body>
-Login Successful
-</body>
-</html>
-
+<script>
+    document.write(alert("Login Successful"));
+</script>
 <?php
-//session_start();
-//if(!session_is_registered(myusername)){
-//
-//}
-//header("location:homepage.php");
+
+header("Location: homepage.php");
+
 ?>
