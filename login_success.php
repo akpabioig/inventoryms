@@ -9,5 +9,5 @@ Login Successful
 //if(!session_is_registered(myusername)){
 //
 //}
-header("location:homepage.php");
+//header("location:homepage.php");
 ?>
