@@ -60,7 +60,7 @@
                         <td> <input type="text" id="middlename" name="middlename" value="" class = "formfiel" rows = 1 cols = 40></td>
                     </tr>
                     <tr>
-                        <td label for = middlename> <a id = "hash">*</a> LAST NAME : </td>
+                        <td label for = lastname> <a id = "hash">*</a> LAST NAME : </td>
                     </tr>
                     <tr>
                         <td> <input type="text" id="lastname" name="lastname" value="" class = "formfiel" rows = 1 cols = 40></td>

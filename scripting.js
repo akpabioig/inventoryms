@@ -13,6 +13,7 @@ function myFunction() {
         document.getElementById("pass1").style.borderColor = "#E34234";
         document.getElementById("pass2").style.borderColor = "#E34234";
         ok = false;
+        alert("You Have Successfully created a New User");
     }
     else {
         alert("Passwords Match!!!");
