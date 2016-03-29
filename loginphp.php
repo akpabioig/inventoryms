@@ -4,15 +4,16 @@ $db = new PDO('mysql:host=us-cdbr-azure-southcentral-e.cloudapp.net;dbname=inven
     PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
 
 
-    $myusername = stripslashes($myusername);
-    $mypassword = stripslashes($mypassword);
+    echo $myusername = stripslashes($myusername);
+    echo $mypassword = stripslashes($mypassword);
 //$myusername = mysql_real_escape_string($myusername);
 //$mypassword = mysql_real_escape_string($mypassword);
+/*
 
     try {
         $sql = "SELECT * FROM login WHERE username = '$myusername' AND password = '$mypassword' LIMIT 1";
         $sth = $db->query($sql);
-        $sth -> execute(); //
+        //$sth -> execute(); //
 
         if($sth ->rowCount() == 1) {
             header("Location: login_success.php");
@@ -23,4 +24,5 @@ $db = new PDO('mysql:host=us-cdbr-azure-southcentral-e.cloudapp.net;dbname=inven
         echo $e->getMessage();
 
     }
+*/
 ?>
