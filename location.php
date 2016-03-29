@@ -190,7 +190,7 @@ include('connection.php');
 
     </section>
 </div>
-<!--
+
 <script>
     // Get the modal
     var modal = document.getElementById('myModal');
@@ -218,7 +218,6 @@ include('connection.php');
         }
     }
 </script>
--->
 <footer>
     <p>&copy; Akpabio Ignatius, 2016</p>
 </footer>
