@@ -24,6 +24,7 @@
             <h4>Login with your Username and password</h4>
             <form method="POST" action="loginphp.php">
             <table>
+                <p id = "signup" href = "createuser.php"><input type = "submit" value = "ADMIN CREATE ACCOUNT"></p>
                 <tr>
                     <td label for="username"> <a id = "hash">*</a> UserName : </td>
                 </tr>
