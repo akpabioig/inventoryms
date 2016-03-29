@@ -159,7 +159,7 @@ include('connection.php');
                     </tr>
                         <?php
 
-                        $sql= "SELECT productid, productserialnumber, productname, productdescription, initialstockprice, wholesaleprice, retailprice  FROM addproduct WHERE locationid = 'WH Location A1'";
+                        $sql= "SELECT productid, productserialnumber, productname, productdescription, initialstockprice, wholesaleprice, retailprice  FROM addproduct WHERE locationid = 'WH Location B4'";
                         $result = mysqli_query($db, $sql);
                         if(mysqli_num_rows($result) == 1 || mysqli_num_rows($result) >1){
 
