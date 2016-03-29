@@ -4,11 +4,11 @@ $db = new PDO('mysql:host=us-cdbr-azure-southcentral-e.cloudapp.net;dbname=inven
     PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
 
 
-    echo $myusername = htmlspecialchars($_POST['myusername']);
-    echo $mypassword = htmlspecialchars($_POST['mypassword']);
+    $myusername = htmlspecialchars($_POST['myusername']);
+    $mypassword = htmlspecialchars($_POST['mypassword']);
 //$myusername = mysql_real_escape_string($myusername);
 //$mypassword = mysql_real_escape_string($mypassword);
-/*
+
 
     try {
         $sql = "SELECT * FROM login WHERE username = '$myusername' AND password = '$mypassword' LIMIT 1";
@@ -24,5 +24,5 @@ $db = new PDO('mysql:host=us-cdbr-azure-southcentral-e.cloudapp.net;dbname=inven
         echo $e->getMessage();
 
     }
-*/
+
 ?>
