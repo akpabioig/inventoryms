@@ -190,7 +190,6 @@ include('connection.php');
 
     </section>
 </div>
-
 <script>
     // Get the modal
     var modal = document.getElementById('myModal');
