@@ -55,6 +55,27 @@ include('connection.php');
     </style>
 
     <!-- end modal -->
+
+    <script>
+        var a1 = 'WH Loc A1';
+        var a2 = 'WH Loc A2';
+        var a3 = 'WH Loc A3';
+        var a4 = 'WH Loc A4';
+        var b1 = 'WH Loc B1';
+        var b2 = 'WH Loc B2';
+        var b3 = 'WH Loc B3';
+        var b4 = 'WH Loc B4';
+        var c1 = 'WH Loc C1';
+        var c2 = 'WH Loc C2';
+        var c3 = 'WH Loc C3';
+        var c4 = 'WH Loc C4';
+        var d1 = 'WH Loc D1';
+        var d2 = 'WH Loc D2';
+        var d3 = 'WH Loc D3';
+        var d4 = 'WH Loc D4';
+        var y1 = 'Yard 1';
+        var y2 = 'Yard 2';
+    </script>
 </head>
 <body>
 <nav class="w3-sidenav w3-black" style="width:102px">
