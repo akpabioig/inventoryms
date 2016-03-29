@@ -1,3 +1,6 @@
+<?php
+include('connection.php');
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -13,9 +16,9 @@
     <style>
         /* The Modal (background) */
         .modal {
-            display: none; /* Hidden by default */
-            position: fixed; /* Stay in place */
-            z-index: 1; /* Sit on top */
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
             padding-top: 100px; /* Location of the box */
             left: 0;
             top: 0;
@@ -28,7 +31,7 @@
 
         /* Modal Content */
         .modal-content {
-            background-color: #fefefe;
+    background-color: #fefefe;
             margin: auto;
             padding: 20px;
             border: 1px solid #888;
@@ -37,16 +40,16 @@
 
         /* The Close Button */
         .close {
-            color: #aaaaaa;
-            float: right;
-            font-size: 28px;
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
             font-weight: bold;
         }
 
         .close:hover,
         .close:focus {
-            color: #000;
-            text-decoration: none;
+    color: #000;
+    text-decoration: none;
             cursor: pointer;
         }
     </style>
@@ -145,6 +148,24 @@
                 <div class="modal-content">
                     <span class="close">×</span>
                     <tr>
+                        <th> Product ID </th>
+                        <th>Product Serial Number </th>
+                        <th>Product Name</th>
+                        <th>Product Description </th>
+                        <th>Supplier Name</th>
+                        <th>Initial Stock Price</th>
+                        <th>Wholesale Price</th>
+                        <th>Retail Price</th>
+                    </tr>
+                    <tr>
+                        <td><input type="text" id = "productid" name= "productid"  value = "" class = "tablefield"></td>
+                        <td><input type="text" id = "productsn" name= "productsn"  value = "" class = "tablefield"></td>
+                        <td><input type="text" id = "productname" name= "productname"  value = "" class = "tablefield"></td>
+                        <td><input type="text" id = "productdesc" name= "productdesc"  value = "" class = "tablefield"></td>
+                        <td><input type="text" id = "suppname" name= "suppname"  value = "" class = "tablefield"></td>
+                        <td><input type="text" id = "isp" name= "isp"  value = "" class = "tablefield"></td>
+                        <td><input type="text" id = "wp" name= "wp"  value = "" class = "tablefield"></td>
+                        <td><input type="text" id = "rp" name= "rp"  value = "" class = "tablefield"></td>
 
                     </tr>
                 </div>
