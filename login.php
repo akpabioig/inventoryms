@@ -20,7 +20,7 @@
     </header>
     <section id = "content">
         <div id = "log">
-            <p id = "signup" href = "createuser.php"><input type = "button" value = "ADMIN CREATE ACCOUNT"></p>
+            <p id = "signup" href = "createuser.php"><input type = "button" value = "CREATE LOGIN"></p>
             <h2> RGU Oil Services IMS Login</h2>
             <h4>Login with your Username and password</h4>
             <form method="POST" action="loginphp.php">
