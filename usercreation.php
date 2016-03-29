@@ -29,5 +29,4 @@ $sth = $db->query($sql);
 echo $e->getMessage();
 }
 
-header("Location: login.php");
 ?>
