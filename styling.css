@@ -377,5 +377,6 @@ hr{
 
 #logout{
     margin-left: 100%;
-    color: red;
+    color: black;
+    background-color: red;
 }
