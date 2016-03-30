@@ -374,3 +374,9 @@ hr{
     text-decoration: none;
     cursor: pointer;
 }
+
+#logbutton{
+    position: relative;
+    margin-left: 100%;
+    color: red;
+}
