@@ -375,8 +375,7 @@ hr{
     cursor: pointer;
 }
 
-#logbutton{
-    position: relative;
+#logout{
     margin-left: 100%;
     color: red;
 }
