@@ -92,6 +92,7 @@ include('connection.php');
     <header>
         <h1> RGU Oil Services </h1>
         <h2> Inventory Management Made Easy </h2>
+        <a id="logout" href="logout.php"><input type = "button" value = "LOG OUT"/></a>
     </header>
     <section>
         <h3>PRODUCT LOCATION </h3>
