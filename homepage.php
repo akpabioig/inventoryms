@@ -27,7 +27,7 @@
     <header>
         <h1> RGU Oil Services </h1>
         <h2> Inventory Management Made Easy </h2>
-        <a><input type = "button" value = "LOGOUT"/></a>
+        <a id="logbutton"><input type = "button" value = "LOGOUT"/></a>
     </header>
     <section>
         <nav id = "nav2">
