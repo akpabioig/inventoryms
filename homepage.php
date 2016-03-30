@@ -20,7 +20,7 @@
     <a class="w3-padding-16" href="addcustomer.php"><i class="fa fa-users w3-xlarge"></i> <br>ADD CUSTOMER</a>
     <a class="w3-padding-16" href="newsales.php"><i class="fa fa-dollar w3-xlarge"></i><br>SALES ORDER</a>
     <a class="w3-padding-16" href="newpurchase.php"><i class="fa fa-shopping-cart w3-xlarge"></i>PURCHASE ORDER</a>
-    <a class="w3-padding-16" href="addvendor.php"><i class="fa fa-truck w3-xlarge"></i><br>ADD SUPPLIER</a>
+    <a class="w3-padding-16" href="addsupplier.php"><i class="fa fa-truck w3-xlarge"></i><br>ADD SUPPLIER</a>
     <a class="w3-padding-16" href="location.php"><i class="fa fa-map-marker w3-xlarge"></i><br>LOCATION</a>
 </nav>
 <div style="margin-left:70px">
@@ -63,11 +63,11 @@
                 <img src= "images/pur.png" style{height="250" width="200"}/>
                 <span id="porder">PURCHASE ORDER</span>
             </a>
-            <a id= "supp" href= "addvendor.html">
+            <a id= "supp" href= "addsupplier.php">
                 <img src= "images/supp.png" style{height="250" width="200"}/>
                 <span id="asupp">ADD SUPPLIER</span>
             </a>
-            <a id="loc" href= "location.html">
+            <a id="loc" href= "location.php">
                 <img src= "images/loc.png"style{height="250" width="200"}/>
                 <span id="floc">PRODUCT LOCATION</span>
             </a>
