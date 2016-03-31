@@ -282,8 +282,9 @@ font-family: "Apple Braille";
 
 
 .tablefield{
-text-align: left;
+text-align: center;
     width: 90%;
+    flex-wrap: nowrap;
 }
 
 #t2{
