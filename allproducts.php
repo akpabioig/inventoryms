@@ -36,7 +36,7 @@
         <p>FIND BELOW THE LIST OF ALL PRODUCTS ADDED TO THE WAREHOUSES </p>
         <form method="post" action="allproducts.php"">
             <div id = "form3">
-                <table cellpadding="0" cellspacing="0">
+                <table>
                     <tr>
                         <th> Product ID </th>
                         <th>Product Serial Number </th>
