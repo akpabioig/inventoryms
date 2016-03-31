@@ -282,7 +282,7 @@ font-family: "Apple Braille";
 
 
 .tablefield{
-    width: 100%;
+    width: auto;
 }
 
 #addp{
