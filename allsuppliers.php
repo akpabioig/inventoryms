@@ -30,10 +30,10 @@
         <a id="logout" href="logout.php"><input type = "button" value = "LOG OUT"/></a>
     </header>
     <section>
-        <h3>PRODUCTS</h3>
+        <h3>SUPPLIERS</h3>
         <img src= "images/supp.png" style{height="250" width="200"}/>
         <h2>LIST OF SUPPLIERS </h2>
-        <p>FIND BELOW THE LIST OF ALL COMPANY SUPPLIERS </p>
+        <p>FIND BELOW THE LIST OF ALL PRODUCT SUPPLIERS </p>
         <form method="post" action="allproducts.php"">
         <div id = "form3">
             <table id="t2">
