@@ -36,7 +36,7 @@
         <p>FIND BELOW THE LIST OF ALL COMPANY SUPPLIERS </p>
         <form method="post" action="allproducts.php"">
         <div id = "form3">
-            <table>
+            <table id="t2">
                 <tr>
                     <th> Supplier ID </th>
                     <th> Supplier Name </th>
