@@ -282,7 +282,7 @@ font-family: "Apple Braille";
 
 
 .tablefield{
-
+    width: 100%;
 }
 
 #addp{
@@ -336,7 +336,13 @@ hr{
     color: black;
 }
 
+#logout{
+    margin-left: 90%;
+    color: red;
+    border-radius: 5%;
+    border-color: red;
+}
+
 #form3{
 
 }
-
