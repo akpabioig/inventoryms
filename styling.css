@@ -346,6 +346,11 @@ hr{
 #form3{
 
 }
+table.td.shrink{
+    white-space: nowrap;
+}
 .exe1{
-
+    border: 1px solid green;
+    border-collapse: collapse;
+    width:100%;
 }
