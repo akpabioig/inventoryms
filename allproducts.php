@@ -83,11 +83,10 @@
 
                 </table>
             </div>
-        </form>
-    </section>
+        </section>
 </div>
+</body>
 <footer>
     <p>&copy; Akpabio Ignatius, 2016</p>
 </footer>
-</body>
 </html>
