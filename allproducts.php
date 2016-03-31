@@ -83,7 +83,8 @@
 
                 </table>
             </div>
-        </section>
+        </form>
+      </section>
 </div>
 </body>
 <footer>
