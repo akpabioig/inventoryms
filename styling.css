@@ -283,6 +283,7 @@ font-family: "Apple Braille";
 
 .tablefield{
 text-align: center;
+    table-layout: auto;
 }
 
 #addp{
