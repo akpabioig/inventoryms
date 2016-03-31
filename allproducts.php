@@ -38,10 +38,10 @@
             <div id = "form3">
                 <table class="exe1">
                     <tr>
-                        <th> Product ID </th>
-                        <th>Product Serial Number </th>
-                        <th>Product Name</th>
-                        <th>Product Description </th>
+                        <th> ID </th>
+                        <th>Serial Number </th>
+                        <th>Name</th>
+                        <th>Description </th>
                         <th>Supplier Name</th>
                         <th>Product Location</th>
                         <th>Initial Stock Price</th>
