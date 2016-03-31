@@ -282,7 +282,7 @@ font-family: "Apple Braille";
 
 
 .tablefield{
-    width: 120%;
+
 }
 
 #addp{
@@ -334,5 +334,9 @@ hr{
 .loginfield{
     width: 80%;
     color: black;
+}
+
+#form3{
+
 }
 
