@@ -61,7 +61,7 @@
                             echo "
 
                                 <tr>
-                        <td><input type=\"text\" id = \"productid\" name= \"productid\"  value = \"{$row['addproduct.productid']}\" class = \"tablefield\"></td>
+                        <td><input type=\"text\" id = \"productid\" name= \"productid\"  value = \"{$row['productid']}\" class = \"tablefield\"></td>
                         <td><input type=\"text\" id = \"productsn\" name= \"productsn\"  value = \"{$row['addproduct.productserialnumber']}\" class = \"tablefield\"></td>
                         <td><input type=\"text\" id = \"productname\" name= \"productname\"  value = \"{$row['addproduct.productname']}\" class = \"tablefield\"></td>
                         <td><input type=\"text\" id = \"productdesc\" name= \"productdesc\"  value = \"{$row['addproduct.productdescription']}\" class = \"tablefield\"></td>
