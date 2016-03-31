@@ -35,7 +35,7 @@
         <h2>LIST OF PRODUCTS </h2>
         <p>FIND BELOW THE LIST OF ALL PRODUCTS ADDED TO THE WAREHOUSES </p>
         <form method="post" action="allproducts.php"">
-            <div id = "form1">
+            <div id = "form2">
                 <table border ="10">
                     <tr>
                         <th> Product ID </th>
