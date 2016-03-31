@@ -282,8 +282,7 @@ font-family: "Apple Braille";
 
 
 .tablefield{
-text-align: center;
-    table-layout: auto;
+text-align: left;
 }
 
 #addp{
@@ -348,5 +347,5 @@ hr{
 
 }
 .exe1{
-    table-layout: auto;
+
 }
