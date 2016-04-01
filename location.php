@@ -214,7 +214,7 @@ include('connection.php');
 </div>
 <script>
 
-    var divClicked;
+    var divClicked ="";
 
     // Get the modal
     var modal = document.getElementById('myModal');
