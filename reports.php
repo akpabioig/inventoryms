@@ -35,6 +35,11 @@
         <h2>REPORTS</h2>
         <p>Click on Any of The Reports To Explore</p>
         <div id = "form1">
+            <li>
+                <ol><a href = "allproducts.php">List Of Products</a></ol>
+                <ol><a href = "allcustomers.php">List Of Customers</a></ol>
+                <ol><a href = "allsuppliers.php">List Of Suppliers</a></ol>
+            </li>
 
         </div>
     </section>

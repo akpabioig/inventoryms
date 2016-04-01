@@ -37,7 +37,7 @@
                     <a href=""><img src="images/dash.gif" style{height="50" width="50"}/>    Dashboard</a>
                 </li>
                 <li>
-                    <a href=""><img src="images/reports.jpg" style{height="50" width="50"}/>    Reports</a>
+                    <a href="reports.php"><img src="images/reports.jpg" style{height="50" width="50"}/>    Reports</a>
                 </li>
                 <li>
                     <a href=""><img src="images/help.png" style{height="50" width="50"}/>    Help</a>
