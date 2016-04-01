@@ -24,6 +24,11 @@
         }?>
             </span>
     <section id = "content">
+        <span text-align="center"><?php
+            if($_GET['failed']){
+                echo "Wrong Password Mate!";
+            }?>
+            </span>
         <div id = "log">
             <a href = "createuser.php" id = "signup"><input type = "button" value = "CREATE LOGIN"></a>
             <h2> RGU Oil Services IMS Login</h2>
