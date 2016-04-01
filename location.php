@@ -103,7 +103,7 @@ include('connection.php');
             <a id="myBtn">
                 <img src= "location/a1.jpeg" style{height="150" width="150"} class ="locicons"/>
             </a>
-            <a id="a2" href= "#">
+            <a id="myBtn" href= "#">
                 <img src= "location/a2.jpg" style{height="150" width="150"} class ="locicons"/>
             </a>
             <a id="a3" href= "#">
