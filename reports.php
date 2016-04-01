@@ -36,13 +36,13 @@
         <p>Click on Any of The Reports To Explore</p>
         <div id = "form1">
             <a href = "allsuppliers.php">
-                <img src= "images/b1.png" style{height="150" width="150"} class ="reporticons"/>
+                <img src= "images/b1.png" style{height="250" width="250"} class ="reporticons"/>
             </a>
             <a href = "allcustomers.php">
-                <img src= "images/b2.png" style{height="150" width="150"} class ="reporticons"/>
+                <img src= "images/b2.png" style{height="250" width="250"} class ="reporticons"/>
             </a>
             <a href = "allproducts.php">
-                <img src= "images/b3.png" style{height="150" width="150"} class ="reporticons"/>
+                <img src= "images/b3.png" style{height="250" width="250"} class ="reporticons"/>
             </a>
 
         </div>
