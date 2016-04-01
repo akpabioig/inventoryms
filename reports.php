@@ -36,9 +36,9 @@
         <p>Click on Any of The Reports To Explore</p>
         <div id = "form1">
             <li>
-                <ol><a href = "allproducts.php">List Of Products</a></ol>
-                <ol><a href = "allcustomers.php">List Of Customers</a></ol>
-                <ol><a href = "allsuppliers.php">List Of Suppliers</a></ol>
+                <ul><a href = "allproducts.php">List Of Products</a></ul>
+                <ul><a href = "allcustomers.php">List Of Customers</a></ul>
+                <ul><a href = "allsuppliers.php">List Of Suppliers</a></ul>
             </li>
 
         </div>
