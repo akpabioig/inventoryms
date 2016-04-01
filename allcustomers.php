@@ -58,7 +58,7 @@
 
                 $sql= "SELECT customerid, customertype, customername, telnumber, fax, email, url, description,
                       addressline1, addressline2, town, county, postcode, country
-                          FROM addsupplier";
+                          FROM addcustomer";
                 $result = mysqli_query($db, $sql);
                 if(mysqli_num_rows($result) == 1 || mysqli_num_rows($result) >1){
 
