@@ -224,6 +224,7 @@ include('connection.php');
     function getid(n){
         if(n === 'a'){
             btn = document.getElementById('a');
+            return btn;
         }
     }
 
