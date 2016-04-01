@@ -213,15 +213,15 @@ include('connection.php');
     </section>
 </div>
 <script>
-
-    var divClicked = "";
+    var divClicked
     function getId(n){
         if(n === "a") {
             divClicked = "a";
         }
+        return divClicked;
     }
     // Get the modal
-    divClicked = "a";
+    //divClicked = "a";
     var modal = document.getElementById('myModal');
 
     // Get the button that opens the modal
