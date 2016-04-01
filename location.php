@@ -221,6 +221,7 @@ include('connection.php');
         if(n === 'a'){
             divClicked = 'a';
         }
+        return divClicked;
     }
     var modal = document.getElementById('myModal');
 
