@@ -213,7 +213,7 @@ include('connection.php');
     </section>
 </div>
 <script>
-    var divClicked
+    var divClicked;
     function getId(n){
         if(n === "a") {
             divClicked = "a";
