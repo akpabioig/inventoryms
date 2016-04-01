@@ -20,11 +20,11 @@
     </header>
     <section id = "content">
         <div id = "log">
-            <span text-align="center"><?php
+            <span><a id="pass"><?php
                 if($_GET['failed']){
-                    echo "Wrong Password Mate!";
+                    echo "Wrong Username or Password !!!";
                 }?>
-            </span>
+            </a></span>
             <a href = "createuser.php" id = "signup"><input type = "button" value = "CREATE LOGIN"></a>
             <h2> RGU Oil Services IMS Login</h2>
             <h4>Login with your Username and password</h4>

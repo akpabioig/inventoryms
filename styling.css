@@ -354,3 +354,7 @@ hr{
     margin-right: 2%;
 
 }
+#pass{
+    text-align: center;
+    color: red;
+}
