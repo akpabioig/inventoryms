@@ -100,7 +100,7 @@ include('connection.php');
         <h2>WareHouse / Yards </h2>
         <p>Select The Location within the Warehouse or Yard you would like to explore its' contents</p>
         <div class = "locbutt">
-            <a id = "a" onclick="getId('a');">
+            <a id = "a" onclick="var divClicked = 'a';">
                 <img src= "location/a1.jpeg" style{height="150" width="150"} class ="locicons"/>
             </a>
             <a id="a2">
@@ -213,13 +213,7 @@ include('connection.php');
     </section>
 </div>
 <script>
-    var divClicked; //divClicked
-    function getId(n){
-        if(n === "a") {
-            divClicked = "a";
-        }
-        return divClicked;
-    }
+
     // Get the modal
     //divClicked = "a";
     var modal = document.getElementById('myModal');
