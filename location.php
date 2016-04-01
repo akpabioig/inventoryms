@@ -221,6 +221,7 @@ include('connection.php');
         }
     }
     // Get the modal
+    divClicked = "a";
     var modal = document.getElementById('myModal');
 
     // Get the button that opens the modal
