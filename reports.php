@@ -35,11 +35,15 @@
         <h2>REPORTS</h2>
         <p>Click on Any of The Reports To Explore</p>
         <div id = "form1">
-            <ul>
-                <li><a href = "allproducts.php">List Of Products</a></li>
-                <li><a href = "allcustomers.php">List Of Customers</a></li>
-                <li><a href = "allsuppliers.php">List Of Suppliers</a></li>
-            </ul>
+            <a href = "allsuppliers.php">
+                <img src= "location/b1.jpeg" style{height="150" width="150"} class ="reporticons"/>
+            </a>
+            <a href = "allcustomers.php">
+                <img src= "location/b2.jpeg" style{height="150" width="150"} class ="reporticons"/>
+            </a>
+            <a href = "allproducts.php">
+                <img src= "location/b3.jpeg" style{height="150" width="150"} class ="reporticons"/>
+            </a>
 
         </div>
     </section>

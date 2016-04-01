@@ -348,6 +348,10 @@ hr{
     border-color: red;
 }
 
-#form3{
-
+#reporticons{
+    border: 2px solid black;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    margin-right: 5%;
+    box-shadow: 5px 5px 5px orange;
 }
