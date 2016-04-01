@@ -38,14 +38,14 @@
         <div id = "form3">
             <table id="t2">
                 <tr>
-                    <th> Supplier ID </th>
-                    <th> Supplier Name </th>
+                    <th> ID </th>
+                    <th> Name </th>
                     <th>Contact Person</th>
                     <th>Contact Person Phone Number </th>
-                    <th>Company Telephone Number</th>
-                    <th>Company Fax</th>
-                    <th>Company Email </th>
-                    <th>Company Website</th>
+                    <th>Phone Number</th>
+                    <th>Fax</th>
+                    <th>Email </th>
+                    <th>Website</th>
                     <th>Description </th>
                     <th>Address Line 1 </th>
                     <th>Address Line 2</th>
