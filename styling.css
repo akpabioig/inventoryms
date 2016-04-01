@@ -350,8 +350,8 @@ hr{
 
 .reporticons{
     padding: 20%;
-    border: 2px solid black;
     border-radius: 10px;
     margin-bottom: 20px;
     margin-right: 10%;
+    box-shadow: 5px 5px 5px orange;
 }
