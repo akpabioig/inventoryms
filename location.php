@@ -215,7 +215,7 @@ include('connection.php');
 <script>
 
     var divClicked;
-    var iD;
+    var iD; //id
     function getId(iD){
         if(iD === "a") {
             divClicked = "a1";
