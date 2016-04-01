@@ -214,9 +214,11 @@ include('connection.php');
 </div>
 <script>
 
+    var divClicked;
+
     function getId(iD){
         if(iD === "a1") {
-            var divClicked = "a1";
+            divClicked = "a1";
         }
     }
     // Get the modal
