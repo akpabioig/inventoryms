@@ -18,18 +18,13 @@
         <h1> RGU Oil Services </h1>
         <h2> Inventory Management Made Easy </h2>
     </header>
-    <span><?php
-        if($_GET['failed']){
-            echo "Wrong Password Mate!";
-        }?>
-            </span>
     <section id = "content">
-        <span text-align="center"><?php
-            if($_GET['failed']){
-                echo "Wrong Password Mate!";
-            }?>
-            </span>
         <div id = "log">
+            <span text-align="center"><?php
+                if($_GET['failed']){
+                    echo "Wrong Password Mate!";
+                }?>
+            </span>
             <a href = "createuser.php" id = "signup"><input type = "button" value = "CREATE LOGIN"></a>
             <h2> RGU Oil Services IMS Login</h2>
             <h4>Login with your Username and password</h4>
