@@ -215,13 +215,8 @@ include('connection.php');
 <script>
 
     function getId(iD){
-        switch(iD){
-            case 'a1':
-                var divClicked = "a1";
-                break;
-            default
-
-
+        if(iD === "a1") {
+            var divClicked = "a1";
         }
     }
     // Get the modal
