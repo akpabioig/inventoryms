@@ -348,7 +348,7 @@ hr{
     border-color: red;
 }
 
-#reporticons{
+.reporticons{
     padding: 20%;
     border: 2px solid black;
     border-radius: 10px;
