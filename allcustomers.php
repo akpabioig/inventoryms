@@ -30,22 +30,22 @@
         <a id="logout" href="logout.php"><input type = "button" value = "LOG OUT"/></a>
     </header>
     <section>
-        <h3>SUPPLIERS</h3>
-        <img src= "images/supp.png" style{height="250" width="200"}/>
-        <h2>LIST OF SUPPLIERS </h2>
-        <p>FIND BELOW THE LIST OF ALL PRODUCT SUPPLIERS </p>
-        <form method="get" action="allsuppliers.php">
+        <h3>CUSTOMERS</h3>
+        <img src= "images/cust.png" style{height="250" width="200"}/>
+        <h2> LIST OF CUSTOMERS </h2>
+        <p> FIND BELOW THE LIST OF ALL CUSTOMERS </p>
+        <form method="get" action="allcustomers.php"">
         <div id = "form3">
             <table id="t2">
                 <tr>
-                    <th> Supplier ID </th>
-                    <th> Supplier Name </th>
-                    <th>Contact Person</th>
-                    <th>Contact Person Phone Number </th>
-                    <th>Company Telephone Number</th>
-                    <th>Company Fax</th>
-                    <th>Company Email </th>
-                    <th>Company Website</th>
+                    <th> ID </th>
+                    <th> Type </th>
+                    <th>Name</th>
+                    <th>Phone Number</th>
+                    <th>Fax</th>
+                    <th>Url</th>
+                    <th>Email </th>
+                    <th>Website</th>
                     <th>Description </th>
                     <th>Address Line 1 </th>
                     <th>Address Line 2</th>
@@ -56,7 +56,7 @@
                 </tr>
                 <?php
 
-                $sql= "SELECT supplierid, suppliername, contactperson, contactpersontel, telnumber, fax, email, url, description,
+                $sql= "SELECT customerid, customertype, customername, telnumber, fax, email, url, description,
                       addressline1, addressline2, town, county, postcode, country
                           FROM addsupplier";
                 $result = mysqli_query($db, $sql);
@@ -66,10 +66,9 @@
                         echo "
 
                                 <tr>
-                        <td><input type=\"text\" id = \"supplierid\" name= \"supplierid\"  value = \"{$row['supplierid']}\" class = \"tablefield\" disabled></td>
-                        <td><input type=\"text\" id = \"suppliername\" name= \"suppliername\"  value = \"{$row['suppliername']}\" class = \"tablefield\" disabled></td>
-                        <td><input type=\"text\" id = \"contactperson\" name= \"contactperson\"  value = \"{$row['contactperson']}\" class = \"tablefield\" disabled></td>
-                        <td><input type=\"text\" id = \"contactpersontel\" name= \"contactpersontel\"  value = \"{$row['contactpersontel']}\" class = \"tablefield\" disabled></td>
+                        <td><input type=\"text\" id = \"customerid\" name= \"customerid\"  value = \"{$row['customerid']}\" class = \"tablefield\" disabled></td>
+                        <td><input type=\"text\" id = \"customertype\" name= \"customertype\"  value = \"{$row['customertype']}\" class = \"tablefield\" disabled></td>
+                        <td><input type=\"text\" id = \"customername\" name= \"customername\"  value = \"{$row['customername']}\" class = \"tablefield\" disabled></td>
 
                         <td><input type=\"text\" id = \"telnumber\" name= \"telnumber\"  value = \"{$row['telnumber']}\" class = \"tablefield\" disabled></td>
                         <td><input type=\"text\" id = \"fax\" name= \"fax\"  value = \"{$row['fax']}\" class = \"tablefield\" disabled></td>
