@@ -43,9 +43,8 @@
                     <th>Name</th>
                     <th>Phone Number</th>
                     <th>Fax</th>
-                    <th>Url</th>
-                    <th>Email </th>
-                    <th>Website</th>
+                    <th>Email</th>
+                    <th>Website </th>
                     <th>Description </th>
                     <th>Address Line 1 </th>
                     <th>Address Line 2</th>
