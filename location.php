@@ -190,7 +190,7 @@ include('connection.php');
                          */
                         $sql= "SELECT productid, productserialnumber, productname, productdescription, initialstockprice, wholesaleprice, retailprice
                                 FROM addproduct
-                                WHERE locationid = {echo <script> document.write(a1) </script>}"; //get JS
+                                WHERE locationid = {$a1}"; //get JS
                         $result = mysqli_query($db, $sql);
                         if(mysqli_num_rows($result) == 1 || mysqli_num_rows($result) >1){
 
@@ -242,6 +242,7 @@ include('connection.php');
             span.onclick = function() {
                 modal.style.display = "none";
             }
+            <?php $a1 = 'WH Location B4';?>
 
             // When the user clicks anywhere outside of the modal, close it
             window.onclick = function(event) {
