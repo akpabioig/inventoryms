@@ -217,7 +217,8 @@ include('connection.php');
 
     var divClicked;
     $("#a").on('click', function() {
-        divClicked = 'a';
+        //divClicked = 'a';
+        alert('clicked');
     });
 
     // Get the modal
