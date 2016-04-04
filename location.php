@@ -11,7 +11,6 @@ include('connection.php');
     <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
     <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
     <script type = "text/javascript" src="scripting.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
 
     <!-- modal -->
     <style>
@@ -104,6 +103,7 @@ include('connection.php');
             <a id="a">
                 <img src= "location/a1.jpeg" style{height="150" width="150"} class ="locicons"/>
             </a>
+            <button id="clickme" onclick="return pass('a');">Click Me</button>
             <a id="a2">
                 <img src= "location/a2.jpg" style{height="150" width="150"} class ="locicons"/>
             </a>
@@ -215,37 +215,37 @@ include('connection.php');
 </div>
 <script>
 
-    //var divClicked;
-    $("#a").on('click', function() {
-        var divClicked = "a";
-        // Get the modal
-        var modal = document.getElementById('myModal');
-
-        // Get the button that opens the modal
-        var btn = document.getElementById(divClicked);
-
-        // Get the <span> element that closes the modal
-        var span = document.getElementsByClassName("close")[0];
-
-        // When the user clicks the button, open the modal
-        btn.onclick = function() {
-            modal.style.display = "block";
+    function(n){
+        if(n === 'a'){
+            alert('Clicked!');
         }
+    }
+    // Get the modal
+    var divClicked = "a";
+    var modal = document.getElementById('myModal');
 
-        // When the user clicks on <span> (x), close the modal
-        span.onclick = function() {
+    // Get the button that opens the modal
+    var btn = document.getElementById(divClicked);
+
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+
+    // When the user clicks the button, open the modal
+    btn.onclick = function() {
+        modal.style.display = "block";
+    }
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
+        modal.style.display = "none";
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+        if (event.target == modal) {
             modal.style.display = "none";
         }
-
-        // When the user clicks anywhere outside of the modal, close it
-        window.onclick = function(event) {
-            if (event.target == modal) {
-                modal.style.display = "none";
-            }
-        }
-    });
-
-
+    }
 </script>
 <footer>
     <p>&copy; Akpabio Ignatius, 2016</p>
