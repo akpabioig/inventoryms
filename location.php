@@ -100,10 +100,10 @@ include('connection.php');
         <h2>WareHouse / Yards </h2>
         <p>Select The Location within the Warehouse or Yard you would like to explore its' contents</p>
         <div class = "locbutt">
-            <a id="a">
+            <a id="aoo">
                 <img src= "location/a1.jpeg" style{height="150" width="150"} class ="locicons"/>
             </a>
-            <button id="clickme" onclick="return pass('a');">Click Me</button>
+            <button id="a" onclick="return pass('a');">Click Me</button>
             <a id="a2">
                 <img src= "location/a2.jpg" style{height="150" width="150"} class ="locicons"/>
             </a>
@@ -220,13 +220,13 @@ include('connection.php');
             var modal = document.getElementById('myModal');
 
             // Get the button that opens the modal
-            var btn = document.getElementById('a');
+            //var btn = document.getElementById('a');
 
             // Get the <span> element that closes the modal
             var span = document.getElementsByClassName("close")[0];
 
             // When the user clicks the button, open the modal
-            btn.onclick = function() {
+            a.onclick = function() {
                 modal.style.display = "block";
             }
 
