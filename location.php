@@ -217,11 +217,10 @@ include('connection.php');
     function pass(n){
         if(n === 'a'){
             // Get the modal
-            var divClicked = "a";
             var modal = document.getElementById('myModal');
 
             // Get the button that opens the modal
-            var btn = document.getElementById(divClicked);
+            var btn = document.getElementById('a');
 
             // Get the <span> element that closes the modal
             var span = document.getElementsByClassName("close")[0];
