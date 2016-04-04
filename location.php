@@ -125,7 +125,7 @@ include('connection.php');
                 // When the user clicks on <span> (x), close the modal
                 span.onclick = function() {
                     modal.style.display = "none";
-                    <?php $location = 'WH Location A2';?>
+                    <?php $a1 = 'WH Location A2';?>
                 }
 
                 // When the user clicks anywhere outside of the modal, close it
