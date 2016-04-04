@@ -217,11 +217,12 @@ include('connection.php');
 
     //var divClicked;
     $("#a").on('click', function() {
+        var divClicked = "a";
         // Get the modal
         var modal = document.getElementById('myModal');
 
         // Get the button that opens the modal
-        var btn = document.getElementById('a');
+        var btn = document.getElementById(divClicked);
 
         // Get the <span> element that closes the modal
         var span = document.getElementsByClassName("close")[0];
