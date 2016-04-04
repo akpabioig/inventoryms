@@ -214,7 +214,7 @@ include('connection.php');
     </section>
 </div>
 <script>
-
+    var divClicked;
     function pass(n){
         if(n === 'a'){
             divClicked = "a";
