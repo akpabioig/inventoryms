@@ -109,7 +109,7 @@ include('connection.php');
                         }
                     }
 
-                <?php $a1 = 'WH Location A1';?>
+                    <?php $a1 = 'WH Location A1';?>
                     break;
 
                 case 'b':
@@ -140,7 +140,7 @@ include('connection.php');
                         }
                     }
 
-                <?php $a1 = 'WH Location A2';?>
+                    <?php $a1 = 'WH Location A2';?>
                     break;
             }
             /*
