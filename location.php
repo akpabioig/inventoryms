@@ -99,6 +99,7 @@ include('connection.php');
                 span.onclick = function() {
                     modal.style.display = "none";
                     <?php $a1 = 'WH Location A1';?>
+                    return;
                 }
 
 
@@ -128,6 +129,7 @@ include('connection.php');
                 span.onclick = function() {
                     modal.style.display = "none";
                     <?php $a1 = 'WH Location B4';?>
+                    return;
                 }
 
                 // When the user clicks anywhere outside of the modal, close it
