@@ -140,6 +140,7 @@ include('connection.php');
                             modal.style.display = "none";
                         }
                     }
+                <?php $a1 = '';?>
                     break;
             }
             /*
