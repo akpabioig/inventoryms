@@ -99,7 +99,6 @@ include('connection.php');
                     // When the user clicks on <span> (x), close the modal
                     span.onclick = function() {
                         modal.style.display = "none";
-                        <?php $a1 = 'WH Location A1';?>
                     }
 
 
@@ -109,7 +108,8 @@ include('connection.php');
                             modal.style.display = "none";
                         }
                     }
-                <?php $a1 = '';?>
+
+                <?php $a1 = 'WH Location A1';?>
                     break;
 
                 case 'b':
@@ -130,7 +130,6 @@ include('connection.php');
                     // When the user clicks on <span> (x), close the modal
                     span.onclick = function() {
                         modal.style.display = "none";
-                        <?php $a1 = 'WH Location B4';?>
                     }
 
 
@@ -140,7 +139,8 @@ include('connection.php');
                             modal.style.display = "none";
                         }
                     }
-                <?php $a1 = '';?>
+
+                <?php $a1 = 'WH Location A1';?>
                     break;
             }
             /*
