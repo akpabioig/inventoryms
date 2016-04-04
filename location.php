@@ -79,6 +79,69 @@ include('connection.php');
 
     <script>
         function pass(n){
+
+            switch (n){
+                case 'a':
+                    // Get the modal
+                    var modal = document.getElementById('myModal');
+
+                    // Get the button that opens the modal
+                    //var btn = document.getElementById('a');
+
+                    // Get the <span> element that closes the modal
+                    var span = document.getElementsByClassName("close")[0];
+
+                    // When the user clicks the button, open the modal
+                    a.onclick = function() {
+                        modal.style.display = "block";
+                    }
+
+                    // When the user clicks on <span> (x), close the modal
+                    span.onclick = function() {
+                        modal.style.display = "none";
+                        <?php $a1 = 'WH Location A1';?>
+                    }
+
+
+                    // When the user clicks anywhere outside of the modal, close it
+                    window.onclick = function(event) {
+                        if (event.target == modal) {
+                            modal.style.display = "none";
+                        }
+                    }
+                    break;
+
+                case 'b':
+                    // Get the modal
+                    var modal = document.getElementById('myModal');
+
+                    // Get the button that opens the modal
+                    //var btn = document.getElementById('a');
+
+                    // Get the <span> element that closes the modal
+                    var span = document.getElementsByClassName("close")[0];
+
+                    // When the user clicks the button, open the modal
+                    b.onclick = function() {
+                        modal.style.display = "block";
+                    }
+
+                    // When the user clicks on <span> (x), close the modal
+                    span.onclick = function() {
+                        modal.style.display = "none";
+                        <?php $a1 = 'WH Location B4';?>
+                    }
+
+
+                    // When the user clicks anywhere outside of the modal, close it
+                    window.onclick = function(event) {
+                        if (event.target == modal) {
+                            modal.style.display = "none";
+                        }
+                    }
+                    break;
+            }
+            /*
             if(n === 'a'){
                 // Get the modal
                 var modal = document.getElementById('myModal');
@@ -97,7 +160,7 @@ include('connection.php');
                 // When the user clicks on <span> (x), close the modal
                 span.onclick = function() {
                     modal.style.display = "none";
-                    <?php $a1 = 'WH Location A1';?>
+                    <?php //$a1 = 'WH Location A1';?>
                 }
 
 
@@ -125,7 +188,7 @@ include('connection.php');
                 // When the user clicks on <span> (x), close the modal
                 span.onclick = function() {
                     modal.style.display = "none";
-                    <?php $a1 = 'WH Location B4';?>
+                    <?php //$a1 = 'WH Location B4';?>
                 }
 
                 // When the user clicks anywhere outside of the modal, close it
@@ -134,7 +197,7 @@ include('connection.php');
                         modal.style.display = "none";
                     }
                 }
-            }
+            }*/
         }
 
     </script>
