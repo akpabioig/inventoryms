@@ -56,7 +56,7 @@ include('connection.php');
 
     <!-- end modal -->
 
-    <script>
+    <!--<script>
         var a1 = 'WH Location A1';
         var a2 = 'WH Loc A2';
         var a3 = 'WH Loc A3';
@@ -75,7 +75,7 @@ include('connection.php');
         var d4 = 'WH Loc D4';
         var y1 = 'Yard 1';
         var y2 = 'Yard 2';
-    </script>
+    </script>-->
 
     <script>
         function pass(n){
