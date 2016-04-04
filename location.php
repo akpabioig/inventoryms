@@ -103,7 +103,7 @@ include('connection.php');
             <a id="a" onclick="return pass('a');">
                 <img src= "location/a1.jpeg" style{height="150" width="150"} class ="locicons"/>
             </a>
-            <a id="b">
+            <a id="b" onclick="return pass('b');">
                 <img src= "location/a2.jpg" style{height="150" width="150"} class ="locicons"/>
             </a>
             <a id="a3" href= "#">
