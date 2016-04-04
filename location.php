@@ -57,22 +57,22 @@ include('connection.php');
     <!-- end modal -->
 
     <script>
-        var a1 = 'WH Location B4';
-        var a2 = 'WH Loc A2';
-        var a3 = 'WH Loc A3';
-        var a4 = 'WH Loc A4';
-        var b1 = 'WH Loc B1';
-        var b2 = 'WH Loc B2';
-        var b3 = 'WH Loc B3';
-        var b4 = 'WH Loc B4';
-        var c1 = 'WH Loc C1';
-        var c2 = 'WH Loc C2';
-        var c3 = 'WH Loc C3';
-        var c4 = 'WH Loc C4';
-        var d1 = 'WH Loc D1';
-        var d2 = 'WH Loc D2';
-        var d3 = 'WH Loc D3';
-        var d4 = 'WH Loc D4';
+        var a1 = 'WH Location A1';
+        var a2 = 'WH Location A2';
+        var a3 = 'WH Location A3';
+        var a4 = 'WH Location A4';
+        var b1 = 'WH Location B1';
+        var b2 = 'WH Location B2';
+        var b3 = 'WH Location B3';
+        var b4 = 'WH Location B4';
+        var c1 = 'WH Location C1';
+        var c2 = 'WH Location C2';
+        var c3 = 'WH Location C3';
+        var c4 = 'WH Location C4';
+        var d1 = 'WH Location D1';
+        var d2 = 'WH Location D2';
+        var d3 = 'WH Location D3';
+        var d4 = 'WH Location D4';
         var y1 = 'Yard 1';
         var y2 = 'Yard 2';
     </script>
@@ -98,7 +98,7 @@ include('connection.php');
                 // When the user clicks on <span> (x), close the modal
                 span.onclick = function() {
                     modal.style.display = "none";
-                    <?php $a1 = 'WH Location B4';?>
+                    <?php $location = 'WH Location A1';?>
                 }
 
 
@@ -126,6 +126,7 @@ include('connection.php');
                 // When the user clicks on <span> (x), close the modal
                 span.onclick = function() {
                     modal.style.display = "none";
+                    <?php $location = 'WH Location A2';?>
                 }
 
                 // When the user clicks anywhere outside of the modal, close it
@@ -134,6 +135,168 @@ include('connection.php');
                         modal.style.display = "none";
                     }
                 }
+            else if(n === 'c'){
+                    // Get the modal
+                    var modal = document.getElementById('myModal');
+
+                    // Get the button that opens the modal
+                    //var btn = document.getElementById('a');
+
+                    // Get the <span> element that closes the modal
+                    var span = document.getElementsByClassName("close")[0];
+
+                    // When the user clicks the button, open the modal
+                    b.onclick = function() {
+                        modal.style.display = "block";
+                    }
+
+                    // When the user clicks on <span> (x), close the modal
+                    span.onclick = function() {
+                        modal.style.display = "none";
+                        <?php $location = 'WH Location A3';?>
+                    }
+
+                    // When the user clicks anywhere outside of the modal, close it
+                    window.onclick = function(event) {
+                        if (event.target == modal) {
+                            modal.style.display = "none";
+                        }
+                    }
+                else if(n === 'd'){
+                        // Get the modal
+                        var modal = document.getElementById('myModal');
+
+                        // Get the button that opens the modal
+                        //var btn = document.getElementById('a');
+
+                        // Get the <span> element that closes the modal
+                        var span = document.getElementsByClassName("close")[0];
+
+                        // When the user clicks the button, open the modal
+                        b.onclick = function() {
+                            modal.style.display = "block";
+                        }
+
+                        // When the user clicks on <span> (x), close the modal
+                        span.onclick = function() {
+                            modal.style.display = "none";
+                            <?php $location = 'WH Location A4';?>
+                        }
+
+                        // When the user clicks anywhere outside of the modal, close it
+                        window.onclick = function(event) {
+                            if (event.target == modal) {
+                                modal.style.display = "none";
+                            }
+                        }
+                    else if(n === 'e'){
+                            // Get the modal
+                            var modal = document.getElementById('myModal');
+
+                            // Get the button that opens the modal
+                            //var btn = document.getElementById('a');
+
+                            // Get the <span> element that closes the modal
+                            var span = document.getElementsByClassName("close")[0];
+
+                            // When the user clicks the button, open the modal
+                            b.onclick = function() {
+                                modal.style.display = "block";
+                            }
+
+                            // When the user clicks on <span> (x), close the modal
+                            span.onclick = function() {
+                                modal.style.display = "none";
+                                <?php $location = 'WH Location B1';?>
+                            }
+
+                            // When the user clicks anywhere outside of the modal, close it
+                            window.onclick = function(event) {
+                                if (event.target == modal) {
+                                    modal.style.display = "none";
+                                }
+                            }
+                        else if(n === 'f'){
+                                // Get the modal
+                                var modal = document.getElementById('myModal');
+
+                                // Get the button that opens the modal
+                                //var btn = document.getElementById('a');
+
+                                // Get the <span> element that closes the modal
+                                var span = document.getElementsByClassName("close")[0];
+
+                                // When the user clicks the button, open the modal
+                                b.onclick = function() {
+                                    modal.style.display = "block";
+                                }
+
+                                // When the user clicks on <span> (x), close the modal
+                                span.onclick = function() {
+                                    modal.style.display = "none";
+                                    <?php $location = 'WH Location B2';?>
+                                }
+
+                                // When the user clicks anywhere outside of the modal, close it
+                                window.onclick = function(event) {
+                                    if (event.target == modal) {
+                                        modal.style.display = "none";
+                                    }
+                                }
+                            else if(n === 'g'){
+                                    // Get the modal
+                                    var modal = document.getElementById('myModal');
+
+                                    // Get the button that opens the modal
+                                    //var btn = document.getElementById('a');
+
+                                    // Get the <span> element that closes the modal
+                                    var span = document.getElementsByClassName("close")[0];
+
+                                    // When the user clicks the button, open the modal
+                                    b.onclick = function() {
+                                        modal.style.display = "block";
+                                    }
+
+                                    // When the user clicks on <span> (x), close the modal
+                                    span.onclick = function() {
+                                        modal.style.display = "none";
+                                        <?php $location = 'WH Location B3';?>
+                                    }
+
+                                    // When the user clicks anywhere outside of the modal, close it
+                                    window.onclick = function(event) {
+                                        if (event.target == modal) {
+                                            modal.style.display = "none";
+                                        }
+                                    }
+                                else if(n === 'h'){
+                                        // Get the modal
+                                        var modal = document.getElementById('myModal');
+
+                                        // Get the button that opens the modal
+                                        //var btn = document.getElementById('a');
+
+                                        // Get the <span> element that closes the modal
+                                        var span = document.getElementsByClassName("close")[0];
+
+                                        // When the user clicks the button, open the modal
+                                        b.onclick = function() {
+                                            modal.style.display = "block";
+                                        }
+
+                                        // When the user clicks on <span> (x), close the modal
+                                        span.onclick = function() {
+                                            modal.style.display = "none";
+                                            <?php $location = 'WH Location B4';?>
+                                        }
+
+                                        // When the user clicks anywhere outside of the modal, close it
+                                        window.onclick = function(event) {
+                                            if (event.target == modal) {
+                                                modal.style.display = "none";
+                                            }
+                                        }
             }
         }
 
@@ -168,24 +331,24 @@ include('connection.php');
             <a id="b" onclick="return pass('b');">
                 <img src= "location/a2.jpg" style{height="150" width="150"} class ="locicons"/>
             </a>
-            <a id="a3" href= "#">
+            <a id="c" onclick="return pass('c');">
                 <img src= "location/a3.jpg" style{height="150" width="150"} class ="locicons"/>
             </a>
-            <a id="a4" href= "#">
+            <a id="d" onclick="return pass('d');">
                 <img src= "location/a4.jpg" style{height="150" width="150"} class ="locicons"/>
             </a>
         </div>
         <div class = "locbutt2">
-            <a id="b1" href= "#">
+            <a id="e" onclick="return pass('e');">
                 <img src= "location/b1.jpg" style{height="150" width="150"} class ="locicons"/>
             </a>
-            <a id="b2" href= "#">
+            <a id="f" onclick="return pass('f');">
                 <img src= "location/b2.jpg" style{height="150" width="150"} class ="locicons"/>
             </a>
-            <a id="b3" href= "#">
+            <a id="g" onclick="return pass('g');">
                 <img src= "location/b3.jpg" style{height="150" width="150"} class ="locicons"/>
             </a>
-            <a id="b4" href= "#">
+            <a id="h" onclick="return pass('h');">
                 <img src= "location/b4.jpg" style{height="150" width="150"} class ="locicons"/>
             </a>
         </div>
@@ -252,7 +415,7 @@ include('connection.php');
                          */
                         $sql= "SELECT productid, productserialnumber, productname, productdescription, initialstockprice, wholesaleprice, retailprice
                                 FROM addproduct
-                                WHERE locationid = '{$a1}'"; //get JS
+                                WHERE locationid = '{$location}'"; //get JS
                         $result = mysqli_query($db, $sql);
                         if(mysqli_num_rows($result) == 1 || mysqli_num_rows($result) >1){
 
