@@ -79,7 +79,7 @@ include('connection.php');
 
     <script>
         function pass(n){
-            if(n === 'a'){
+            if(typeof n === 'a'){
                 // Get the modal
                 var modal = document.getElementById('myModal');
 
@@ -107,7 +107,7 @@ include('connection.php');
                         modal.style.display = "none";
                     }
                 }
-            }else if(n === 'b'){
+            }else if(typeof n === 'b'){
                 // Get the modal
                 var modal = document.getElementById('myModal');
 
