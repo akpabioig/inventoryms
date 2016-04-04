@@ -79,8 +79,9 @@ include('connection.php');
 
     <script>
         function pass(n){
-            if(n == 'a'){
+            if(n === 'a'){
                 // Get the modal
+                <?php $a1 = "";?>
                 var modal = document.getElementById('myModal');
 
                 // Get the button that opens the modal
@@ -107,8 +108,9 @@ include('connection.php');
                         modal.style.display = "none";
                     }
                 }
-            }else if(n == 'b'){
+            }else if(n === 'b'){
                 // Get the modal
+                <?php $a1 = "";?>
                 var modal = document.getElementById('myModal');
 
                 // Get the button that opens the modal
