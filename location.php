@@ -215,10 +215,10 @@ include('connection.php');
 </div>
 <script>
 
-    var divClicked;
+    //var divClicked;
     $("#a").on('click', function() {
-        //divClicked = 'a';
-        alert('clicked');
+         divClicked = 'a';
+        //alert('clicked');
     });
 
     // Get the modal
