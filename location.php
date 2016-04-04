@@ -253,7 +253,7 @@ include('connection.php');
                          */
                         $sql= "SELECT productid, productserialnumber, productname, productdescription, initialstockprice, wholesaleprice, retailprice
                                 FROM addproduct
-                                WHERE locationid = '{$location}'"; //get JS
+                                WHERE locationid = '{$location}'"; //get Js
                         $result = mysqli_query($db, $sql);
                         if(mysqli_num_rows($result) == 1 || mysqli_num_rows($result) >1){
 
