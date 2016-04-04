@@ -184,7 +184,7 @@ include('connection.php');
                         $sql= "SELECT productid, productserialnumber, productname, productdescription, initialstockprice, wholesaleprice, retailprice
                                 FROM addproduct
                                 WHERE locationid =
-                                {<script type='application/javascript'> a1 </script>}";
+                                {<script type='application/javascript'> document.write(a1) </script>}";
                         $result = mysqli_query($db, $sql);
                         if(mysqli_num_rows($result) == 1 || mysqli_num_rows($result) >1){
 
