@@ -217,11 +217,11 @@ include('connection.php');
 
     function pass(n){
         if(n === 'a'){
-            alert('Clicked!');
+            divClicked = "a";
         }
     }
     // Get the modal
-    var divClicked = "a";
+    //var divClicked = "a";
     var modal = document.getElementById('myModal');
 
     // Get the button that opens the modal
