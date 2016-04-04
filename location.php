@@ -95,6 +95,8 @@ include('connection.php');
                     a.onclick = function() {
                         modal.style.display = "block";
                         var a1 = "WH Location A1";
+                        <?php $a1 = json_encode(a1); ?>
+
                     }
 
                     // When the user clicks on <span> (x), close the modal
@@ -109,8 +111,6 @@ include('connection.php');
                             modal.style.display = "none";
                         }
                     }
-
-                <?php $a1 = json_encode(a1); ?>
                     break;
 
                 case 'b':
@@ -127,6 +127,7 @@ include('connection.php');
                     b.onclick = function() {
                         modal.style.display = "block";
                         var a2 = "WH Location A2";
+                        <?php $a1 = json_encode(a2); ?>
                     }
 
                     // When the user clicks on <span> (x), close the modal
@@ -141,7 +142,6 @@ include('connection.php');
                             modal.style.display = "none";
                         }
                     }
-                    <?php $a1 = json_encode(a2); ?>
 
                     break;
             }
