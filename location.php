@@ -146,7 +146,7 @@ include('connection.php');
                     var span = document.getElementsByClassName("close")[0];
 
                     // When the user clicks the button, open the modal
-                    b.onclick = function() {
+                    c.onclick = function() {
                         modal.style.display = "block";
                     }
 
@@ -173,7 +173,7 @@ include('connection.php');
                         var span = document.getElementsByClassName("close")[0];
 
                         // When the user clicks the button, open the modal
-                        b.onclick = function() {
+                        d.onclick = function() {
                             modal.style.display = "block";
                         }
 
@@ -200,7 +200,7 @@ include('connection.php');
                             var span = document.getElementsByClassName("close")[0];
 
                             // When the user clicks the button, open the modal
-                            b.onclick = function() {
+                            e.onclick = function() {
                                 modal.style.display = "block";
                             }
 
@@ -227,7 +227,7 @@ include('connection.php');
                                 var span = document.getElementsByClassName("close")[0];
 
                                 // When the user clicks the button, open the modal
-                                b.onclick = function() {
+                                f.onclick = function() {
                                     modal.style.display = "block";
                                 }
 
@@ -254,7 +254,7 @@ include('connection.php');
                                     var span = document.getElementsByClassName("close")[0];
 
                                     // When the user clicks the button, open the modal
-                                    b.onclick = function() {
+                                    g.onclick = function() {
                                         modal.style.display = "block";
                                     }
 
@@ -281,7 +281,7 @@ include('connection.php');
                                         var span = document.getElementsByClassName("close")[0];
 
                                         // When the user clicks the button, open the modal
-                                        b.onclick = function() {
+                                        h.onclick = function() {
                                             modal.style.display = "block";
                                         }
 
