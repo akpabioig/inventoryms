@@ -11,6 +11,7 @@ include('connection.php');
     <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
     <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
     <script type = "text/javascript" src="scripting.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
 
     <!-- modal -->
     <style>
@@ -100,7 +101,7 @@ include('connection.php');
         <h2>WareHouse / Yards </h2>
         <p>Select The Location within the Warehouse or Yard you would like to explore its' contents</p>
         <div class = "locbutt">
-            <a id="a" onclick="return pass('id');">
+            <a id="a">
                 <img src= "location/a1.jpeg" style{height="150" width="150"} class ="locicons"/>
             </a>
             <a id="a2">
@@ -214,16 +215,12 @@ include('connection.php');
 </div>
 <script>
 
-    // Get the modal
     var divClicked;
+    $("#a").on('click', function() {
+        divClicked = 'a';
+    });
 
-    function pass(n){
-        if (typeof n === 'a'){
-            divClicked = 'a';
-        }else if(typeof n === 'a'){
-            divClicked = 'b';
-        }
-    }
+    // Get the modal
     var modal = document.getElementById('myModal');
 
     // Get the button that opens the modal
