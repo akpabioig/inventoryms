@@ -215,7 +215,7 @@ include('connection.php');
 </div>
 <script>
 
-    function(n){
+    function pass(n){
         if(n === 'a'){
             alert('Clicked!');
         }
