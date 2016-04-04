@@ -57,7 +57,7 @@ include('connection.php');
     <!-- end modal -->
 
     <script>
-        var a1 = 'WH Location A2';
+        var a1 = 'WH Location B4';
         var a2 = 'WH Loc A2';
         var a3 = 'WH Loc A3';
         var a4 = 'WH Loc A4';
