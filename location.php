@@ -55,7 +55,7 @@ include('connection.php');
     </style>
 
     <!-- end modal -->
-
+<!--
     <script>
         var a1 = 'WH Location A1';
         var a2 = 'WH Loc A2';
@@ -76,7 +76,7 @@ include('connection.php');
         var y1 = 'Yard 1';
         var y2 = 'Yard 2';
     </script>
-
+-->
 
     <script>
         function pass(n){
@@ -253,7 +253,7 @@ include('connection.php');
                          */
                         $sql= "SELECT productid, productserialnumber, productname, productdescription, initialstockprice, wholesaleprice, retailprice
                                 FROM addproduct
-                                WHERE locationid = 'WH Location A1'"; //get Js
+                                WHERE locationid = '{$location}'"; //get Js
                         $result = mysqli_query($db, $sql);
                         if(mysqli_num_rows($result) == 1 || mysqli_num_rows($result) >1){
 
