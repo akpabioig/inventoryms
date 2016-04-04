@@ -81,7 +81,6 @@ include('connection.php');
         function pass(n){
             if(n === 'a'){
                 // Get the modal
-                <?php $a1 = "";?>
                 var modal = document.getElementById('myModal');
 
                 // Get the button that opens the modal
@@ -99,7 +98,6 @@ include('connection.php');
                 span.onclick = function() {
                     modal.style.display = "none";
                     <?php $a1 = 'WH Location A1';?>
-                    return;
                 }
 
 
@@ -111,7 +109,6 @@ include('connection.php');
                 }
             }else if(n === 'b'){
                 // Get the modal
-                <?php $a1 = "";?>
                 var modal = document.getElementById('myModal');
 
                 // Get the button that opens the modal
@@ -129,7 +126,6 @@ include('connection.php');
                 span.onclick = function() {
                     modal.style.display = "none";
                     <?php $a1 = 'WH Location B4';?>
-                    return;
                 }
 
                 // When the user clicks anywhere outside of the modal, close it
