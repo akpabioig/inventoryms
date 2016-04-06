@@ -274,13 +274,13 @@ include('connection.php');
     var modal = document.getElementById('myModal1');
 
     // Get the button that opens the modal
-    var btn = document.getElementById("b");
+    var btn1 = document.getElementById("b");
 
     // Get the <span> element that closes the modal
     var span = document.getElementsByClassName("close")[0];
 
     // When the user clicks on the button, open the modal
-    btn.onclick = function() {
+    btn1.onclick = function() {
         modal.style.display = "block";
     }
 
