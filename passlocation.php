@@ -8,8 +8,8 @@
 
 
 /*
-                         * $sql= "SELECT productid, productserialnumber, productname, productdescription, initialstockprice, wholesaleprice, retailprice
-                                FROM addproduct
+* $sql= "SELECT productid, productserialnumber, productname, productdescription, initialstockprice, wholesaleprice, retailprice
+          FROM addproduct
                                 WHERE locationid = 'WH Location A1'";
                          *
                          *
