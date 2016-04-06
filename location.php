@@ -195,7 +195,7 @@ include('connection.php');
 
             <!-- Modal content -->
             <div class="modal-content">
-                <span class="close" onclick="this.style.display ='none';">×</span>
+                <span class="close" onclick="parent.style.display ='none';">×</span>
                 <table>
                     <tr>
                         <th> Product ID </th>
