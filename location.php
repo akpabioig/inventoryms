@@ -80,18 +80,6 @@ include('connection.php');
     </script>-->
 
     <script>
-        function pass(){
-            $.ajax({
-                url: 'your_script.php',
-                type: 'POST',
-                data: {var1: javascript_var_1, var2: javascript_var_2},
-                success: function(data) {
-                    console.log("success");
-                }
-            });
-        }
-    </script>
-    <script>
         function pass(n){
 
             switch (n){
@@ -243,7 +231,7 @@ include('connection.php');
         <h2>WareHouse / Yards </h2>
         <p>Select The Location within the Warehouse or Yard you would like to explore its' contents</p>
         <div class = "locbutt">
-            <a id="a" onclick="return pass();">
+            <a id="a" onclick="return pass('a');">
                 <img src= "location/a1.jpeg" style{height="150" width="150"} class ="locicons"/>
             </a>
             <a id="b" onclick="return pass('b');">
@@ -324,7 +312,7 @@ include('connection.php');
                     </tr>
                         <?php
 
-                        include("passlocation.php");
+                        include_once ("passlocation.php");
                         ?>
 
                     </table>
