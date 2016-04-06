@@ -144,7 +144,7 @@
                 <input type = "hidden" id="prodid" name="prodid" value = "<?php echo $prodId; ?>">
             </div>
             <p id = "subbutt"><input type = "reset" value = "CLEAR">
-                &nbsp; &nbsp; <input type = "submit" value = "SAVE"></p>
+                &nbsp; &nbsp; <input type = "submit" value = "UPDATE"></p>
         </form>
     </section>
 </div>
