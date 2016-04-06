@@ -279,7 +279,7 @@ include('connection.php');
     var btn1 = document.getElementById("b");
 
     // Get the <span> element that closes the modal
-    var span1 = document.getElementsByClassName("close")[0];
+    var span = document.getElementsByClassName("close")[0];
 
     // When the user clicks on the button, open the modal
     btn1.onclick = function() {
@@ -287,8 +287,8 @@ include('connection.php');
     }
 
     // When the user clicks on <span> (x), close the modal
-    span1.onclick = function() {
-        modal1.style.display = "none";
+    span.onclick = function() {
+        modal.style.display = "none";
     }
 
     // When the user clicks anywhere outside of the modal, close it
