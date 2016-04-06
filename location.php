@@ -97,7 +97,6 @@ include('connection.php');
                     a.onclick = function() {
                         modal.style.display = "block";
 
-
                     }
 
                     // When the user clicks on <span> (x), close the modal
@@ -309,11 +308,11 @@ include('connection.php');
                         <th>Retail Price</th>
                     </tr>
                        <?php
-                       echo "<script>";
-                            if(typeof (a) != undefined){
-                                $a = "WH Location B4";
-                            }
-                       echo "</script>";
+                           echo "<script>";
+                                if(typeof (a) != undefined){
+                                    $a = "WH Location B4";
+                                }
+                           echo "</script>";
                        if(isset($a)){
                            $sql= "SELECT productid, productserialnumber, productname, productdescription, initialstockprice, wholesaleprice, retailprice
                                 FROM addproduct
