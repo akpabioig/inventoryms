@@ -1,11 +1,9 @@
-<script type="application/javascript">
+<!--<script type="application/javascript">
 if(confirm('Are you sure you want to delete this record')){
-    <?php $continue = TRUE; ?>
-}else {
-    window.location="allproducts.php";
+    <?php //$continue = TRUE; ?>
 }
 </script>
-
+-->
 <?php
 if($continue){
     $db = new PDO('mysql:host=us-cdbr-azure-southcentral-e.cloudapp.net;dbname=inventoryms;charset=utf8mb4', 'bee886bc8793e7', '362289e3',array(PDO::ATTR_EMULATE_PREPARES => false,
