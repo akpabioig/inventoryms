@@ -283,7 +283,7 @@ include('connection.php');
 
     // When the user clicks on the button, open the modal
     btn1.onclick = function() {
-        modal.style.display = "block";
+        modal1.style.display = "block";
     }
 
     // When the user clicks on <span> (x), close the modal
