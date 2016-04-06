@@ -1,5 +1,6 @@
 <?php
 
+
                         /*
                          * $sql= "SELECT productid, productserialnumber, productname, productdescription, initialstockprice, wholesaleprice, retailprice
                                 FROM addproduct
@@ -11,7 +12,7 @@
                         if(isset($a)){
                             $sql= "SELECT productid, productserialnumber, productname, productdescription, initialstockprice, wholesaleprice, retailprice
                                 FROM addproduct
-                                WHERE locationid = '{$loc}'"; //get Js
+                                WHERE locationid = '{}'"; //get Js
                             $result = mysqli_query($db, $sql);
                             if(mysqli_num_rows($result) == 1 || mysqli_num_rows($result) >1){
 
