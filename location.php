@@ -75,8 +75,22 @@ include('connection.php');
         var d4 = 'WH Loc D4';
         var y1 = 'Yard 1';
         var y2 = 'Yard 2';
+
+
     </script>-->
 
+    <script>
+        function pass(){
+            $.ajax({
+                url: 'your_script.php',
+                type: 'POST',
+                data: {var1: javascript_var_1, var2: javascript_var_2},
+                success: function(data) {
+                    console.log("success");
+                }
+            });
+        }
+    </script>
     <script>
         function pass(n){
 
@@ -229,7 +243,7 @@ include('connection.php');
         <h2>WareHouse / Yards </h2>
         <p>Select The Location within the Warehouse or Yard you would like to explore its' contents</p>
         <div class = "locbutt">
-            <a id="a" onclick="return pass('a');">
+            <a id="a" onclick="return pass();">
                 <img src= "location/a1.jpeg" style{height="150" width="150"} class ="locicons"/>
             </a>
             <a id="b" onclick="return pass('b');">
@@ -310,37 +324,7 @@ include('connection.php');
                     </tr>
                         <?php
 
-                        /*
-                         * $sql= "SELECT productid, productserialnumber, productname, productdescription, initialstockprice, wholesaleprice, retailprice
-                                FROM addproduct
-                                WHERE locationid = 'WH Location A1'";
-                         *
-                         *
-                         */
-                        $sql= "SELECT productid, productserialnumber, productname, productdescription, initialstockprice, wholesaleprice, retailprice
-                                FROM addproduct
-                                WHERE locationid = '{$a1}'"; //get Js
-                        $result = mysqli_query($db, $sql);
-                        if(mysqli_num_rows($result) == 1 || mysqli_num_rows($result) >1){
-
-                            while($row = $result -> fetch_array()){
-                                echo "
-
-                                <tr>
-                        <td><input type=\"text\" id = \"productid\" name= \"productid\"  value = \"{$row['productid']}\" class = \"tablefield\"></td>
-                        <td><input type=\"text\" id = \"productsn\" name= \"productsn\"  value = \"{$row['productserialnumber']}\" class = \"tablefield\"></td>
-                        <td><input type=\"text\" id = \"productname\" name= \"productname\"  value = \"{$row['productname']}\" class = \"tablefield\"></td>
-                        <td><input type=\"text\" id = \"productdesc\" name= \"productdesc\"  value = \"{$row['productdescription']}\" class = \"tablefield\"></td>
-                        <td><input type=\"text\" id = \"isp\" name= \"isp\"  value = \"{$row['initialstockprice']}\" class = \"tablefield\"></td>
-                        <td><input type=\"text\" id = \"wp\" name= \"wp\"  value = \"{$row['wholesaleprice']}\" class = \"tablefield\"></td>
-                        <td><input type=\"text\" id = \"rp\" name= \"rp\"  value = \"{$row['retailprice']}\" class = \"tablefield\"></td>
-                    </tr>
-
-                                ";
-                            }
-                        }else{
-                            echo '<option> No Result Found </option>';
-                        }
+                        include_once ("passlocation.php");
                         ?>
 
                     </table>
