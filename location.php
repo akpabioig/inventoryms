@@ -202,6 +202,16 @@ include('connection.php');
         }
 
     </script>
+    <script type="application/javascript">
+        function p(){
+            $.ajax({
+                type: "POST",
+                url: "passlocation.php",
+                data: { a1: "WH Location A1"},
+                success: console.log("done");
+            });
+        }
+    </script>
 </head>
 <body>
 <nav class="w3-sidenav w3-black" style="width:102px">
@@ -226,7 +236,7 @@ include('connection.php');
         <h2>WareHouse / Yards </h2>
         <p>Select The Location within the Warehouse or Yard you would like to explore its' contents</p>
         <div class = "locbutt">
-            <a id="a" onclick="return pass('a'); <?php $a = 'WH Location A1';?>" >
+            <a id="a" onclick="return pass('a'); return p();" >
                 <img src= "location/a1.jpeg" style{height="150" width="150"} class ="locicons"/>
             </a>
             <a id="b" onclick="return pass('b'); <?php $b = 'WH Location B4';?>">
@@ -314,13 +324,8 @@ include('connection.php');
                          *
                          *
                          */
-                        if(isset($a)){
-                            $loc = "WH Location A1";
-                        }else if(isset($b)){
-                            $loc = "WH Location B4";
-                        }
-
-                        echo "location:" .$loc;
+                        include("passlocation.php");
+                        echo "Location:" . ' '. $a1;
                         /*
                         $sql= "SELECT productid, productserialnumber, productname, productdescription, initialstockprice, wholesaleprice, retailprice
                                 FROM addproduct
