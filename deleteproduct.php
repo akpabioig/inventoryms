@@ -16,7 +16,7 @@ $db = new PDO('mysql:host=us-cdbr-azure-southcentral-e.cloudapp.net;dbname=inven
         }catch(PDOException $e){
             echo $e->getMessage();
         }
-
+        header("Location: allproducts.php");
     }else{
         header("Location: allproducts.php");
     }
