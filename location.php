@@ -191,7 +191,7 @@ include('connection.php');
 
             </div>
 
-        <div id="myModal1" class="modal">
+        <div id="myModal" class="modal">
 
             <!-- Modal content -->
             <div class="modal-content">
