@@ -11,7 +11,7 @@ $db = new PDO('mysql:host=us-cdbr-azure-southcentral-e.cloudapp.net;dbname=inven
     $prodId = $_GET['prodid'];
         try {
             $sql = "DELETE FROM addproduct
-                    WHERE productid = {$prodid}";
+                    WHERE productid = {$prodId}";
             $sth = $db->query($sql);
         }catch(PDOException $e){
             echo $e->getMessage();
