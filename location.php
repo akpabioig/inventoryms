@@ -211,7 +211,7 @@ include('connection.php');
                 url: "passlocation.php",
                 data: {a1: "WH Location A1"},
                 success: console.log("done")
-            });
+            })
         }
 
     </script>
