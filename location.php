@@ -55,31 +55,6 @@ include('connection.php');
             cursor: pointer;
         }
     </style>
-
-    <!-- end modal -->
-
-    <!--<script>
-        var a1 = 'WH Location A1';
-        var a2 = 'WH Loc A2';
-        var a3 = 'WH Loc A3';
-        var a4 = 'WH Loc A4';
-        var b1 = 'WH Loc B1';
-        var b2 = 'WH Loc B2';
-        var b3 = 'WH Loc B3';
-        var b4 = 'WH Loc B4';
-        var c1 = 'WH Loc C1';
-        var c2 = 'WH Loc C2';
-        var c3 = 'WH Loc C3';
-        var c4 = 'WH Loc C4';
-        var d1 = 'WH Loc D1';
-        var d2 = 'WH Loc D2';
-        var d3 = 'WH Loc D3';
-        var d4 = 'WH Loc D4';
-        var y1 = 'Yard 1';
-        var y2 = 'Yard 2';
-    </script>-->
-
-
 </head>
 <body>
 <nav class="w3-sidenav w3-black" style="width:102px">
@@ -105,7 +80,7 @@ include('connection.php');
         <h2>WareHouse / Yards </h2>
         <p>Select The Location within the Warehouse or Yard you would like to explore its' contents</p>
         <div class = "locbutt">
-            <a id="myBtn">
+            <a id="a">
                 <img src= "location/a1.jpeg" style{height="150" width="150"} class ="locicons"/>
             </a>
             <a id="b">
@@ -217,6 +192,53 @@ include('connection.php');
 
             </div>
 
+        <div id="myModal1" class="modal">
+
+            <!-- Modal content -->
+            <div class="modal-content">
+                <span class="close">×</span>
+                <table>
+                    <tr>
+                        <th> Product ID </th>
+                        <th>Product Serial Number </th>
+                        <th>Product Name</th>
+                        <th>Product Description </th>
+                        <th>Initial Stock Price</th>
+                        <th>Wholesale Price</th>
+                        <th>Retail Price</th>
+                    </tr>
+                    <?php
+
+                    $sql= "SELECT productid, productserialnumber, productname, productdescription, initialstockprice, wholesaleprice, retailprice
+                                FROM addproduct
+                                WHERE locationid = 'WH Location B4'"; //get Js
+                    $result = mysqli_query($db, $sql);
+                    if(mysqli_num_rows($result) == 1 || mysqli_num_rows($result) >1){
+
+                        while($row = $result -> fetch_array()){
+                            echo "
+
+                        <tr>
+                        <td><input type=\"text\" id = \"productid\" name= \"productid\"  value = \"{$row['productid']}\" class = \"tablefield\"></td>
+                        <td><input type=\"text\" id = \"productsn\" name= \"productsn\"  value = \"{$row['productserialnumber']}\" class = \"tablefield\"></td>
+                        <td><input type=\"text\" id = \"productname\" name= \"productname\"  value = \"{$row['productname']}\" class = \"tablefield\"></td>
+                        <td><input type=\"text\" id = \"productdesc\" name= \"productdesc\"  value = \"{$row['productdescription']}\" class = \"tablefield\"></td>
+                        <td><input type=\"text\" id = \"isp\" name= \"isp\"  value = \"{$row['initialstockprice']}\" class = \"tablefield\"></td>
+                        <td><input type=\"text\" id = \"wp\" name= \"wp\"  value = \"{$row['wholesaleprice']}\" class = \"tablefield\"></td>
+                        <td><input type=\"text\" id = \"rp\" name= \"rp\"  value = \"{$row['retailprice']}\" class = \"tablefield\"></td>
+                        </tr>
+
+                                ";
+                        }
+                    }else{
+                        echo '<option> No Result Found </option>';
+                    }
+                    ?>
+
+                </table>
+            </div>
+
+        </div>
     </section>
 </div>
 <footer>
@@ -227,7 +249,32 @@ include('connection.php');
     var modal = document.getElementById('myModal');
 
     // Get the button that opens the modal
-    var btn = document.getElementById("myBtn");
+    var btn = document.getElementById("a");
+
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+
+    // When the user clicks on the button, open the modal
+    btn.onclick = function() {
+        modal.style.display = "block";
+    }
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
+        modal.style.display = "none";
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+
+    var modal = document.getElementById('myModal1');
+
+    // Get the button that opens the modal
+    var btn = document.getElementById("b");
 
     // Get the <span> element that closes the modal
     var span = document.getElementsByClassName("close")[0];
