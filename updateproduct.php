@@ -23,11 +23,11 @@ $prodid = htmlspecialchars($_POST['prodid']);
 
     try {
         $sql = "UPDATE addproduct
-                SET productserialnumber = {$pnum},
-                    productname = {$pname},
-                    productdescription = {$desc},
-                    locationid = {$loccode},
-                    supplierid = {$supplier},
+                SET productserialnumber = '{$pnum}',
+                    productname = '{$pname}',
+                    productdescription = '{$desc}',
+                    locationid = '{$loccode}',
+                    supplierid = '{$supplier}',
                     initialstockprice = {$isp},
                     wholesaleprice = {$wp},
                     retailprice = {$rp}
