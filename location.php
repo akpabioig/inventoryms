@@ -271,21 +271,21 @@ include('connection.php');
         }
     }
 
-    var modal = document.getElementById('myModal1');
+    var modal1 = document.getElementById('myModal1');
 
     // Get the button that opens the modal
     var btn1 = document.getElementById("b");
 
     // Get the <span> element that closes the modal
-    var span = document.getElementsByClassName("close")[0];
+    var span1 = document.getElementsByClassName("close")[0];
 
     // When the user clicks on the button, open the modal
     btn1.onclick = function() {
-        modal.style.display = "block";
+        modal1.style.display = "block";
     }
 
     // When the user clicks on <span> (x), close the modal
-    span.onclick = function() {
+    span1.onclick = function() {
         modal.style.display = "none";
     }
 
