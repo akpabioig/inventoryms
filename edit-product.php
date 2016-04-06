@@ -16,7 +16,7 @@
         $retailP = $selectRow['retailprice'];
     }
 }else{
-    header("Location: allproducts.php");
+    header("Location: allproducts.php?f=1");
 }
 ?>
 
