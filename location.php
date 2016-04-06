@@ -314,9 +314,14 @@ include('connection.php');
                          *
                          *
                          */
+                        if(isset($a)){
+                            $loc = "WH Location A1";
+                        }else if(isset($b)){
+                            $loc = "WH Location B4";
+                        }
                         $sql= "SELECT productid, productserialnumber, productname, productdescription, initialstockprice, wholesaleprice, retailprice
                                 FROM addproduct
-                                WHERE locationid = '{$a1}'"; //get Js
+                                WHERE locationid = '{$loc}'"; //get Js
                         $result = mysqli_query($db, $sql);
                         if(mysqli_num_rows($result) == 1 || mysqli_num_rows($result) >1){
 
