@@ -85,16 +85,16 @@
                     </tr>
                     <tr>
                         <td label for ="pname"> <a id = "hash">*</a> Product Name : </td>
-                        <td><input type="text" id = "pname" name= "pname" class = "formfield" required></td>
+                        <td><input type="text" id = "pname" name= "pname" class = "formfield" required value="<?php echo $prodName; ?>"></td>
                     </tr>
                     <tr>
                         <td label for ="desc"> Product Description : </td>
-                        <td><textarea id = "desc" name= "desc" class = "formfield" rows=5 cols=50></textarea></td>
+                        <td><textarea id = "desc" name= "desc" class = "formfield" rows=5 cols=50 value="<?php echo $prodDescription; ?>"></textarea></td>
                     </tr>
                     <tr>
                         <td label for ="locn"> <a id = "hash">*</a> Location Code : </td>
                         <td>
-                            <select name = "loccode" required>
+                            <select name = "loccode" required value="<?php echo $locId; ?>">
                                 <option selected disabled>SELECT</option>
                                 <option value = "WH Location A1">WH Location A1</option>
                                 <option value = "WH Location A2">WH Location A2</option>
@@ -125,13 +125,13 @@
                 <table>
                     <tr>
                         <td label for ="isp"> <a id = "hash">*</a> Initial Stock Price:</td>
-                        <td><input type="number" id="isp" name="isp" class = "formfield" required value="" /></td>
+                        <td><input type="number" id="isp" name="isp" class = "formfield" required value="<?php echo $initialSp; ?>" /></td>
                     </tr>
                     <tr>
                         <td label for="wp"> <a id = "hash">*</a> Wholesale Price : </td>
-                        <td><input type="number" id="wp" name="wp" class = "formfield" required value="" /></td>
+                        <td><input type="number" id="wp" name="wp" class = "formfield" required value="<?php echo $wholeSp; ?>" /></td>
                         <td label for ="isp"> <a id = "hash">*</a> Retail Price: </td>
-                        <td><input type="number" id="rp" name="rp" class = "formfield" required value="" /></td>
+                        <td><input type="number" id="rp" name="rp" class = "formfield" required value="<?php echo $retailP; ?>"/></td>
                     </tr>
                 </table>
             </div>
