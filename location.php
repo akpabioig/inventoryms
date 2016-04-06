@@ -191,7 +191,7 @@ include('connection.php');
 
             </div>
 
-        <div id="myModal" class="modal">
+        <div id="myModal1" class="modal">
 
             <!-- Modal content -->
             <div class="modal-content">
@@ -279,7 +279,7 @@ include('connection.php');
     var btn1 = document.getElementById("b");
 
     // Get the <span> element that closes the modal
-    var span1 = document.getElementsByClassName("close")[0];
+    var span = document.getElementsByClassName("close")[0];
 
     // When the user clicks on the button, open the modal
     btn1.onclick = function() {
