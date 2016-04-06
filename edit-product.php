@@ -141,7 +141,7 @@
                         <td><input type="number" id="rp" name="rp" class = "formfield" required value="<?php echo $retailP; ?>"/></td>
                     </tr>
                 </table>
-                <input type = "hidden" id="prodid" value = "<?php echo $prodId; ?>">
+                <input type = "hidden" id="prodid" name="prodid" value = "<?php echo $prodId; ?>">
             </div>
             <p id = "subbutt"><input type = "reset" value = "CLEAR">
                 &nbsp; &nbsp; <input type = "submit" value = "SAVE"></p>
