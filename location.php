@@ -42,10 +42,9 @@ include('connection.php');
 
         /* The Close Button */
         .close {
-    color: #aaaaaa;
-    float: right;
-    font-size: 28px;
-            font-weight: bold;
+        color: #aaaaaa;
+        float: right;
+        font-size: 28px;  font-weight: bold;
         }
 
         .close:hover,
@@ -271,7 +270,9 @@ include('connection.php');
         }
     }
 
-     // WH LOCATION A2
+
+
+     // WH LOCATIO A2
 
     var modal1 = document.getElementById('myModal1');
 
@@ -288,7 +289,7 @@ include('connection.php');
 
     // When the user clicks on <span> (x), close the modal
     span.onclick = function() {
-        modal1.style.display = "none";
+        m1dal1.style.display = "none";
     }
 
     // When the user clicks anywhere outside of the modal, close it
