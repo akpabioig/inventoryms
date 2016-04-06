@@ -17,7 +17,7 @@ include('connection.php');
     <!-- modal -->
     <style>
         /* The Modal (background) */
-        .modal.modal1 {
+        .modal .modal1 {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
     z-index: 1; /* Sit on top */
