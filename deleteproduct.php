@@ -1,6 +1,8 @@
 <script type="application/javascript">
 if(confirm('Are you sure you want to delete this record')){
     <?php $continue = TRUE; ?>
+}else {
+    window.location="allproducts.php";
 }
 </script>
 
