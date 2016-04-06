@@ -17,8 +17,7 @@ include('connection.php');
     <!-- modal -->
     <style>
         /* The Modal (background) */
-        .modal,
-        .modal1{
+        .modal {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
     z-index: 1; /* Sit on top */
@@ -192,7 +191,7 @@ include('connection.php');
 
             </div>
 
-        <div id="myModal1" class="modal1">
+        <div id="myModal1" class="modal">
 
             <!-- Modal content -->
             <div class="modal-content">
