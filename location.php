@@ -80,72 +80,6 @@ include('connection.php');
     </script>-->
 
     <script>
-        function pass(n){
-
-            switch (n){
-                case 'a':
-                    // Get the modal
-                    var modal = document.getElementById('myModal');
-
-                    // Get the button that opens the modal
-                    //var btn = document.getElementById('a');
-
-                    // Get the <span> element that closes the modal
-                    var span = document.getElementsByClassName("close")[0];
-
-                    // When the user clicks the button, open the modal
-                    a.onclick = function() {
-                        modal.style.display = "block";
-
-                    }
-
-                    // When the user clicks on <span> (x), close the modal
-                    span.onclick = function() {
-                        modal.style.display = "none";
-                    }
-
-
-                    // When the user clicks anywhere outside of the modal, close it
-                    window.onclick = function(event) {
-                        if (event.target == modal) {
-                            modal.style.display = "none";
-                        }
-                    }
-                    break;
-
-                case 'b':
-                    // Get the modal
-                    var modal = document.getElementById('myModal');
-
-                    // Get the button that opens the modal
-                    //var btn = document.getElementById('a');
-
-                    // Get the <span> element that closes the modal
-                    var span = document.getElementsByClassName("close")[0];
-
-                    // When the user clicks the button, open the modal
-                    b.onclick = function() {
-                        modal.style.display = "block";
-                        <?php $b = "WH Location B4"; ?>
-                    }
-
-                    // When the user clicks on <span> (x), close the modal
-                    span.onclick = function() {
-                        modal.style.display = "none";
-                    }
-
-
-                    // When the user clicks anywhere outside of the modal, close it
-                    window.onclick = function(event) {
-                        if (event.target == modal) {
-                            modal.style.display = "none";
-                        }
-                    }
-
-                    break;
-            }
-            /*
-            if(n === 'a'){
                 // Get the modal
                 var modal = document.getElementById('myModal');
 
@@ -163,7 +97,6 @@ include('connection.php');
                 // When the user clicks on <span> (x), close the modal
                 span.onclick = function() {
                     modal.style.display = "none";
-                    <?php //$a1 = 'WH Location A1';?>
                 }
 
 
@@ -173,35 +106,7 @@ include('connection.php');
                         modal.style.display = "none";
                     }
                 }
-            }else if(n === 'b'){
-                // Get the modal
-                var modal = document.getElementById('myModal');
 
-                // Get the button that opens the modal
-                //var btn = document.getElementById('a');
-
-                // Get the <span> element that closes the modal
-                var span = document.getElementsByClassName("close")[0];
-
-                // When the user clicks the button, open the modal
-                b.onclick = function() {
-                    modal.style.display = "block";
-                }
-
-                // When the user clicks on <span> (x), close the modal
-                span.onclick = function() {
-                    modal.style.display = "none";
-                    <?php //$a1 = 'WH Location B4';?>
-                }
-
-                // When the user clicks anywhere outside of the modal, close it
-                window.onclick = function(event) {
-                    if (event.target == modal) {
-                        modal.style.display = "none";
-                    }
-                }
-            }*/
-        }
 
     </script>
 </head>
@@ -308,15 +213,10 @@ include('connection.php');
                         <th>Retail Price</th>
                     </tr>
                        <?php
-                           echo "<script type='application/javascript'>";
-                                //if(typeof (a) != undefined){
-                                    $a = "WH Location B4";
-                                //}
-                           echo "</script>";
-                       if(isset($a)){
-                           $sql= "SELECT productid, productserialnumber, productname, productdescription, initialstockprice, wholesaleprice, retailprice
+
+                       $sql= "SELECT productid, productserialnumber, productname, productdescription, initialstockprice, wholesaleprice, retailprice
                                 FROM addproduct
-                                WHERE locationid = '{$a}'"; //get Js
+                                WHERE locationid = 'WH Location A1'"; //get Js
                            $result = mysqli_query($db, $sql);
                            if(mysqli_num_rows($result) == 1 || mysqli_num_rows($result) >1){
 
@@ -338,34 +238,6 @@ include('connection.php');
                            }else{
                                echo '<option> No Result Found </option>';
                            }
-                       }else if(isset($b)){
-                           $sql= "SELECT productid, productserialnumber, productname, productdescription, initialstockprice, wholesaleprice, retailprice
-                                FROM addproduct
-                                WHERE locationid = '{$b}'"; //get Js
-                           $result = mysqli_query($db, $sql);
-                           if(mysqli_num_rows($result) == 1 || mysqli_num_rows($result) >1){
-
-                               while($row = $result -> fetch_array()){
-                                   echo "
-
-                                <tr>
-                                <td><input type=\"text\" id = \"productid\" name= \"productid\"  value = \"{$row['productid']}\" class = \"tablefield\"></td>
-                                <td><input type=\"text\" id = \"productsn\" name= \"productsn\"  value = \"{$row['productserialnumber']}\" class = \"tablefield\"></td>
-                                <td><input type=\"text\" id = \"productname\" name= \"productname\"  value = \"{$row['productname']}\" class = \"tablefield\"></td>
-                                <td><input type=\"text\" id = \"productdesc\" name= \"productdesc\"  value = \"{$row['productdescription']}\" class = \"tablefield\"></td>
-                                <td><input type=\"text\" id = \"isp\" name= \"isp\"  value = \"{$row['initialstockprice']}\" class = \"tablefield\"></td>
-                                <td><input type=\"text\" id = \"wp\" name= \"wp\"  value = \"{$row['wholesaleprice']}\" class = \"tablefield\"></td>
-                                <td><input type=\"text\" id = \"rp\" name= \"rp\"  value = \"{$row['retailprice']}\" class = \"tablefield\"></td>
-                                </tr>
-
-                                ";
-                               }
-                           }else{
-                               echo '<option> No Result Found </option>';
-                           }
-                       }
-
-
                        ?>
 
                     </table>
