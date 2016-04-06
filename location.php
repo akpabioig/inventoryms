@@ -226,10 +226,10 @@ include('connection.php');
         <h2>WareHouse / Yards </h2>
         <p>Select The Location within the Warehouse or Yard you would like to explore its' contents</p>
         <div class = "locbutt">
-            <a id="a" onclick="return pass('a'); <?php $a1 = 'WH Location A1';?>" >
+            <a id="a" onclick="return pass('a'); <?php $a = 'WH Location A1';?>" >
                 <img src= "location/a1.jpeg" style{height="150" width="150"} class ="locicons"/>
             </a>
-            <a id="b" onclick="return pass('b'); <?php $a1 = 'WH Location B4';?>">
+            <a id="b" onclick="return pass('b'); <?php $b = 'WH Location B4';?>">
                 <img src= "location/a2.jpg" style{height="150" width="150"} class ="locicons"/>
             </a>
             <a id="a3" href= "#">
