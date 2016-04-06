@@ -319,6 +319,9 @@ include('connection.php');
                         }else if(isset($b)){
                             $loc = "WH Location B4";
                         }
+
+                        echo $loc;
+                        /*
                         $sql= "SELECT productid, productserialnumber, productname, productdescription, initialstockprice, wholesaleprice, retailprice
                                 FROM addproduct
                                 WHERE locationid = '{$loc}'"; //get Js
@@ -343,6 +346,7 @@ include('connection.php');
                         }else{
                             echo '<option> No Result Found </option>';
                         }
+                        */
                         ?>
 
                     </table>
