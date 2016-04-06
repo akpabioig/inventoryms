@@ -1,5 +1,4 @@
 <?php
-<?php
 /**
  * Created by PhpStorm.
  * User: akpabioignatius
@@ -20,12 +19,19 @@ $wp = htmlspecialchars($_POST['wp']);
 $rp = htmlspecialchars($_POST['rp']);
 $supplier = htmlspecialchars($_POST['supplier']);
 $loccode = htmlspecialchars($_POST['loccode']);
+$prodid = htmlspecialchars($_POST['prodid']);
 
     try {
         $sql = "UPDATE addproduct
-                SET
-                (productserialnumber, productname, productdescription, locationid, supplierid, initialstockprice, wholesaleprice, retailprice)
-                VALUES ('$pnum', '$pname','$desc','$loccode', '$supplier', $isp,$wp, $rp)";
+                SET productserialnumber = {$pnum},
+                    productname = {$pname},
+                    productdescription = {$desc},
+                    locationid = {$loccode},
+                    supplierid = {$supplier},
+                    initialstockprice = {$isp},
+                    wholesaleprice = {$wp},
+                    retailprice = {$rp}
+                    WHERE productid = {$prodid}";
         $sth = $db->query($sql);
     } catch(PDOException $e) {
         echo $e->getMessage();
