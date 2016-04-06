@@ -359,6 +359,6 @@ hr{
 }
 #form3{
     overflow: scroll;
-    overflow: visible;
+    overflow-x: visible;
    ;
 }
