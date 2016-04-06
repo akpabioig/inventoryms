@@ -324,7 +324,7 @@ include('connection.php');
                     </tr>
                         <?php
 
-                        include_once ("passlocation.php");
+                        include("passlocation.php");
                         ?>
 
                     </table>
