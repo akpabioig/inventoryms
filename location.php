@@ -18,9 +18,9 @@ include('connection.php');
     <style>
         /* The Modal (background) */
         .modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
+            display: none; /* Hidden by default */
+            position: fixed; /* Stay in place */
+            z-index: 1; /* Sit on top */
             padding-top: 100px; /* Location of the box */
             left: 0;
             top: 0;
@@ -33,7 +33,7 @@ include('connection.php');
 
         /* Modal Content */
         .modal-content {
-    background-color: #fefefe;
+            background-color: #fefefe;
             margin: auto;
             padding: 20px;
             border: 1px solid #888;
@@ -42,15 +42,15 @@ include('connection.php');
 
         /* The Close Button */
         .close {
-        color: #aaaaaa;
-        float: right;
-        font-size: 28px;  font-weight: bold;
+            color: #aaaaaa;
+            float: right;
+            font-size: 28px;  font-weight: bold;
         }
 
         .close:hover,
         .close:focus {
-    color: #000;
-    text-decoration: none;
+            color: #000;
+             text-decoration: none;
             cursor: pointer;
         }
     </style>
@@ -195,7 +195,7 @@ include('connection.php');
 
             <!-- Modal content -->
             <div class="modal-content">
-                <span class="close">×</span>
+                <span class="close" onclick="this.style.display ='none';">×</span>
                 <table>
                     <tr>
                         <th> Product ID </th>
