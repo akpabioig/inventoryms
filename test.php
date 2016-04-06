@@ -19,4 +19,4 @@
     }
 </script>
 
-<button onclick="pass();">Click to pass data</button>
+<button onclick="return pass();">Click to pass data</button>
