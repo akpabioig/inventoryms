@@ -5,12 +5,13 @@ $db = new PDO('mysql:host=us-cdbr-azure-southcentral-e.cloudapp.net;dbname=inven
 
     if(isset($_GET['prodid'])){
     $prodId = $_GET['prodid'];
-        echo "<script>";
-        echo "if(!confirm('Are you sure you want to delete this record')){";
-        echo "window.location = 'allproducts.php'";
-        echo "}";
-        echo "</script>";
+
         try {
+            echo "<script>";
+            echo "if(!confirm('Are you sure you want to delete this record')){";
+            echo "window.location = 'allproducts.php'";
+            echo "}";
+            echo "</script>";
             $sql = "DELETE FROM addproduct
                     WHERE productid = {$prodId}";
             $sth = $db->query($sql);
