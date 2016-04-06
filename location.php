@@ -79,36 +79,7 @@ include('connection.php');
         var y2 = 'Yard 2';
     </script>-->
 
-    <script>
-                // Get the modal
-                var modal = document.getElementById('myModal');
 
-                // Get the button that opens the modal
-                var btn = document.getElementById('a');
-
-                // Get the <span> element that closes the modal
-                var span = document.getElementsByClassName("close")[0];
-
-                // When the user clicks the button, open the modal
-                btn.onclick = function() {
-                    modal.style.display = "block";
-                }
-
-                // When the user clicks on <span> (x), close the modal
-                span.onclick = function() {
-                    modal.style.display = "none";
-                }
-
-
-                // When the user clicks anywhere outside of the modal, close it
-                window.onclick = function(event) {
-                    if (event.target == modal) {
-                        modal.style.display = "none";
-                    }
-                }
-
-
-    </script>
 </head>
 <body>
 <nav class="w3-sidenav w3-black" style="width:102px">
@@ -128,12 +99,13 @@ include('connection.php');
         <a id="logout" href="logout.php"><input type = "button" value = "LOG OUT"/></a>
     </header>
     <section>
+
         <h3>PRODUCT LOCATION </h3>
         <img src= "images/loc.png" style{height="250" width="200"}/>
         <h2>WareHouse / Yards </h2>
         <p>Select The Location within the Warehouse or Yard you would like to explore its' contents</p>
         <div class = "locbutt">
-            <a id="a">
+            <a id="myBtn">
                 <img src= "location/a1.jpeg" style{height="150" width="150"} class ="locicons"/>
             </a>
             <a id="b">
@@ -250,5 +222,32 @@ include('connection.php');
 <footer>
     <p>&copy; Akpabio Ignatius, 2016</p>
 </footer>
+<script>
+    // Get the modal
+    var modal = document.getElementById('myModal');
+
+    // Get the button that opens the modal
+    var btn = document.getElementById("myBtn");
+
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+
+    // When the user clicks on the button, open the modal
+    btn.onclick = function() {
+        modal.style.display = "block";
+    }
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
+        modal.style.display = "none";
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+</script>
 </body>
 </html>
