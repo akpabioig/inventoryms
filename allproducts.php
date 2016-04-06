@@ -72,7 +72,7 @@
                         <td><input type=\"text\" id = \"isp\" name= \"isp\"  value = \"{$row['initialstockprice']}\" class = \"tablefield\" disabled></td>
                         <td><input type=\"text\" id = \"wp\" name= \"wp\"  value = \"{$row['wholesaleprice']}\" class = \"tablefield\" disabled></td>
                         <td><input type=\"text\" id = \"rp\" name= \"rp\"  value = \"{$row['retailprice']}\" class = \"tablefield\" disabled></td>
-                        <td><a href='edit-product.php?edit=' {$row['productid']}'>Edit</a> </td> &nbsp;
+                        <td><a href='edit-product.php?edit={$row['productid']}>Edit</a> </td> &nbsp;
                         <td><a href=''>Delete</a> </td>
                     </tr>
 
