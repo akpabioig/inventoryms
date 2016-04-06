@@ -17,7 +17,8 @@ include('connection.php');
     <!-- modal -->
     <style>
         /* The Modal (background) */
-        .modal {
+        .modal,
+        .modal1{
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
     z-index: 1; /* Sit on top */
@@ -191,7 +192,7 @@ include('connection.php');
 
             </div>
 
-        <div id="myModal1" class="modal">
+        <div id="myModal1" class="modal1">
 
             <!-- Modal content -->
             <div class="modal-content">
@@ -279,16 +280,16 @@ include('connection.php');
     var btn1 = document.getElementById("b");
 
     // Get the <span> element that closes the modal
-    var span = document.getElementsByClassName("close")[0];
+    var span1 = document.getElementsByClassName("close")[0];
 
     // When the user clicks on the button, open the modal
     btn1.onclick = function() {
-        this.style.display = "block";
+        modal1.style.display = "block";
     }
 
     // When the user clicks on <span> (x), close the modal
-    span.onclick = function() {
-        this.style.display = "none";
+    span1.onclick = function() {
+        modal1.style.display = "none";
     }
 
     // When the user clicks anywhere outside of the modal, close it
