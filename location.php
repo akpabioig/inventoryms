@@ -94,7 +94,6 @@ include('connection.php');
                     // When the user clicks the button, open the modal
                     a.onclick = function() {
                         modal.style.display = "block";
-                        <?php $a1 = "WH Location A1"; ?>
 
 
                     }
@@ -229,7 +228,7 @@ include('connection.php');
         <h2>WareHouse / Yards </h2>
         <p>Select The Location within the Warehouse or Yard you would like to explore its' contents</p>
         <div class = "locbutt">
-            <a id="a" onclick="return pass('a');">
+            <a id="a" onclick="return pass('a'); <?php $a1 = 'WH Location A1';?>" >
                 <img src= "location/a1.jpeg" style{height="150" width="150"} class ="locicons"/>
             </a>
             <a id="b" onclick="return pass('b');">
@@ -319,7 +318,7 @@ include('connection.php');
                          */
                         $sql= "SELECT productid, productserialnumber, productname, productdescription, initialstockprice, wholesaleprice, retailprice
                                 FROM addproduct
-                                WHERE locationid = 'WH Location A1'"; //get Js
+                                WHERE locationid = '{$a1}'"; //get Js
                         $result = mysqli_query($db, $sql);
                         if(mysqli_num_rows($result) == 1 || mysqli_num_rows($result) >1){
 
