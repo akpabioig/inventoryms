@@ -96,7 +96,7 @@
                     </tr>
                     <tr>
                         <td label for ="desc"> Product Description : </td>
-                        <td><textarea id = "desc" name= "desc" class = "formfield" rows=5 cols=50 value="<?php echo $prodDescription; ?>"></textarea></td>
+                        <td><textarea id = "desc" name= "desc" class = "formfield" rows=5 cols=50><?php echo $prodDescription; ?></textarea></td>
                     </tr>
                     <tr>
                         <td label for ="locn"> <a id = "hash">*</a> Location Code : </td>
