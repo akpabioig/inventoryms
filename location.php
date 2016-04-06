@@ -94,8 +94,8 @@ include('connection.php');
                     // When the user clicks the button, open the modal
                     a.onclick = function() {
                         modal.style.display = "block";
-                        var a1 = "WH Location A1";
-                        <?php $a1 = (a1); ?>
+                        $a1 = "WH Location A1";
+
 
                     }
 
