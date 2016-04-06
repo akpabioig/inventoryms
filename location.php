@@ -17,7 +17,7 @@ include('connection.php');
     <!-- modal -->
     <style>
         /* The Modal (background) */
-        .modal {
+        .modal, .modal1 {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
     z-index: 1; /* Sit on top */
@@ -30,6 +30,8 @@ include('connection.php');
             background-color: rgb(0,0,0); /* Fallback color */
             background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
         }
+
+
 
         /* Modal Content */
         .modal-content {
@@ -283,12 +285,12 @@ include('connection.php');
 
     // When the user clicks on the button, open the modal
     btn1.onclick = function() {
-        modal.style.display = "block";
+        modal1.style.display = "block";
     }
 
     // When the user clicks on <span> (x), close the modal
     span1.onclick = function() {
-        modal.style.display = "none";
+        modal1.style.display = "none";
     }
 
     // When the user clicks anywhere outside of the modal, close it
