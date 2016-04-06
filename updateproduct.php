@@ -11,16 +11,16 @@ $db = new PDO('mysql:host=us-cdbr-azure-southcentral-e.cloudapp.net;dbname=inven
     PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
 
 
-$pnum = htmlspecialchars($_POST['pnum']);
-$pname = htmlspecialchars($_POST['pname']);
-$desc = htmlspecialchars($_POST['desc']);
-$isp = htmlspecialchars($_POST['isp']);
-$wp = htmlspecialchars($_POST['wp']);
-$rp = htmlspecialchars($_POST['rp']);
-$supplier = htmlspecialchars($_POST['supplier']);
-$loccode = htmlspecialchars($_POST['loccode']);
-$prodid = htmlspecialchars($_POST['prodid']);
-
+echo $pnum = htmlspecialchars($_POST['pnum']); echo "<br>";
+echo $pname = htmlspecialchars($_POST['pname']); echo "<br>";
+echo $desc = htmlspecialchars($_POST['desc']); echo "<br>";
+echo $isp = htmlspecialchars($_POST['isp']); echo "<br>";
+echo $wp = htmlspecialchars($_POST['wp']); echo "<br>";
+echo $rp = htmlspecialchars($_POST['rp']); echo "<br>";
+echo $supplier = htmlspecialchars($_POST['supplier']); echo "<br>";
+echo $loccode = htmlspecialchars($_POST['loccode']); echo "<br>";
+echo $prodid = htmlspecialchars($_POST['prodid']);
+/*
     try {
         $sql = "UPDATE addproduct
                 SET productserialnumber = {$pnum},
@@ -36,5 +36,5 @@ $prodid = htmlspecialchars($_POST['prodid']);
     } catch(PDOException $e) {
         echo $e->getMessage();
     }
-header("Location: addproduct.php");
+header("Location: addproduct.php");*/
 ?>
