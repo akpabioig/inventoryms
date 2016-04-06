@@ -72,9 +72,16 @@
                                 if(mysqli_num_rows($result) == 1 || mysqli_num_rows($result) >1){
 
                                     while($row = $result -> fetch_array()){
-                                        echo '<option value="'.$row[supplierid].'" >';
-                                        echo $row['suppliername'];
-                                        echo '</option>';
+                                        if($row[supplierid] == $supId){
+                                            echo '<option selected value="'.$row[supplierid].'" >';
+                                            echo $row['suppliername'];
+                                            echo '</option>';
+                                        }else {
+                                            echo '<option value="'.$row[supplierid].'" >';
+                                            echo $row['suppliername'];
+                                            echo '</option>';
+                                        }
+
                                     }
                                 }else{
                                     echo '<option> No Result Found </option>';
@@ -95,25 +102,25 @@
                         <td label for ="locn"> <a id = "hash">*</a> Location Code : </td>
                         <td>
                             <select name = "loccode" required value="<?php echo $locId; ?>">
-                                <option selected disabled>SELECT</option>
-                                <option value = "WH Location A1">WH Location A1</option>
-                                <option value = "WH Location A2">WH Location A2</option>
-                                <option value="WH Location A3">WH Location A3</option>
-                                <option value = "WH Location A4">WH Location A4</option>
-                                <option value = "WH Location B1">WH Location B1</option>
-                                <option value="WH Location B2">WH Location B2</option>
-                                <option value = "WH Location B3">WH Location B3</option>
-                                <option value = "WH Location B4">WH Location B4</option>
-                                <option value="WH Location C1">WH Location C1</option>
-                                <option value = "WH Location C2">WH Location C2</option>
-                                <option value = "WH Location C3">WH Location C3</option>
-                                <option value="WH Location C4">WH Location C4</option>
-                                <option value = "WH Location D1">WH Location D1</option>
-                                <option value = "WH Location D2">WH Location D2</option>
-                                <option value="WH Location D3">WH Location D3</option>
-                                <option value = "WH Location D4">WH Location D4</option>
-                                <option value = "Yard 1">Yard 1</option>
-                                <option value="Yard 2">Yard 2</option>
+                                <option disabled>SELECT</option>
+                                <option <?php if($locId == 'WH Location A1'){echo 'selected';} ?> value = "WH Location A1">WH Location A1</option>
+                                <option <?php if($locId == 'WH Location A2'){echo 'selected';} ?> value = "WH Location A2">WH Location A2</option>
+                                <option <?php if($locId == 'WH Location A3'){echo 'selected';} ?> value="WH Location A3">WH Location A3</option>
+                                <option <?php if($locId == 'WH Location A4'){echo 'selected';} ?> value = "WH Location A4">WH Location A4</option>
+                                <option <?php if($locId == 'WH Location B1'){echo 'selected';} ?> value = "WH Location B1">WH Location B1</option>
+                                <option <?php if($locId == 'WH Location B2'){echo 'selected';} ?> value="WH Location B2">WH Location B2</option>
+                                <option <?php if($locId == 'WH Location B3'){echo 'selected';} ?> value = "WH Location B3">WH Location B3</option>
+                                <option <?php if($locId == 'WH Location B4'){echo 'selected';} ?> value = "WH Location B4">WH Location B4</option>
+                                <option <?php if($locId == 'WH Location C1'){echo 'selected';} ?> value="WH Location C1">WH Location C1</option>
+                                <option <?php if($locId == 'WH Location C2'){echo 'selected';} ?> value = "WH Location C2">WH Location C2</option>
+                                <option <?php if($locId == 'WH Location C3'){echo 'selected';} ?> value = "WH Location C3">WH Location C3</option>
+                                <option <?php if($locId == 'WH Location C4'){echo 'selected';} ?> value="WH Location C4">WH Location C4</option>
+                                <option <?php if($locId == 'WH Location D1'){echo 'selected';} ?> value = "WH Location D1">WH Location D1</option>
+                                <option <?php if($locId == 'WH Location D2'){echo 'selected';} ?> value = "WH Location D2">WH Location D2</option>
+                                <option <?php if($locId == 'WH Location D3'){echo 'selected';} ?> value="WH Location D3">WH Location D3</option>
+                                <option <?php if($locId == 'WH Location D4'){echo 'selected';} ?> value = "WH Location D4">WH Location D4</option>
+                                <option <?php if($locId == 'Yard 1'){echo 'selected';} ?> value = "Yard 1">Yard 1</option>
+                                <option <?php if($locId == 'Yard 2'){echo 'selected';} ?> value="Yard 2">Yard 2</option>
                             </select>
                         </td>
                     </tr>
