@@ -206,14 +206,16 @@ include('connection.php');
     </script>
     <script type="application/javascript">
         $(function(){
-            $('#a').click(function(){
-            $.ajax({
-                type: "POST",
-                url: "passlocation.php",
-                data: { a1: "WH Location A1"},
-                success: console.log("done")
+            $('#a').click(function() {
+                $.ajax({
+                    type: "POST",
+                    url: "passlocation.php",
+                    data: {a1: "WH Location A1"},
+                    success: console.log("done")
+                });
             });
-        })
+
+        });
     </script>
 </head>
 <body>
