@@ -287,7 +287,7 @@ font-family: "Apple Braille";
 }
 
 #t2{
-    text-align: left;
+    text-align: center;
 }
 #addp{
     color: red;
@@ -359,5 +359,4 @@ hr{
 }
 #form3{
     overflow: scroll;
-   ;
 }
