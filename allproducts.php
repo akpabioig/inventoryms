@@ -73,9 +73,7 @@
                         <td><input type=\"text\" id = \"wp\" name= \"wp\"  value = \"{$row['wholesaleprice']}\" class = \"tablefield\" disabled></td>
                         <td><input type=\"text\" id = \"rp\" name= \"rp\"  value = \"{$row['retailprice']}\" class = \"tablefield\" disabled></td>
                         <td><a href='edit-product.php?prodid={$row['productid']}'>Edit</a> </td> &nbsp;
-                        <td><a href='deleteproduct.php?prodid={$row['productid']}' onclick='confirm('Are you sure you want to delete this product?')
-                                                    {this.href='deleteproduct.php?prodid={$row['productid']}''
-                                                    >Delete</a> </td>
+                        <td><a href='deleteproduct.php?prodid={$row['productid']}''>Delete</a> </td>
                     </tr>
 
                                 ";
