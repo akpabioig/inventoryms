@@ -11,6 +11,8 @@ include('connection.php');
     <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
     <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
     <script type = "text/javascript" src="scripting.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
 
     <!-- modal -->
     <style>
@@ -203,14 +205,15 @@ include('connection.php');
 
     </script>
     <script type="application/javascript">
-        function p(){
+        $(function(){
+            $('#a').click(function(){
             $.ajax({
                 type: "POST",
                 url: "passlocation.php",
                 data: { a1: "WH Location A1"},
                 success: console.log("done");
             });
-        }
+        })
     </script>
 </head>
 <body>
