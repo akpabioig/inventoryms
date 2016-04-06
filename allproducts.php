@@ -62,8 +62,6 @@
                             echo "
 
                                 <tr>
-                        <td><a href='edit-product.php?prodid={$row['productid']}'>Edit</a> </td> &nbsp; &nbsp;
-                        <td><a href='deleteproduct.php?prodid={$row['productid']}''>Delete</a> </td>
                         <td><input type=\"text\" id = \"productid\" name= \"productid\"  value = \"{$row['productid']}\" class = \"tablefield\" disabled></td>
                         <td><input type=\"text\" id = \"productsn\" name= \"productsn\"  value = \"{$row['productserialnumber']}\" class = \"tablefield\" disabled></td>
                         <td><input type=\"text\" id = \"productname\" name= \"productname\"  value = \"{$row['productname']}\" class = \"tablefield\" disabled></td>
@@ -74,7 +72,8 @@
                         <td><input type=\"text\" id = \"isp\" name= \"isp\"  value = \"{$row['initialstockprice']}\" class = \"tablefield\" disabled></td>
                         <td><input type=\"text\" id = \"wp\" name= \"wp\"  value = \"{$row['wholesaleprice']}\" class = \"tablefield\" disabled></td>
                         <td><input type=\"text\" id = \"rp\" name= \"rp\"  value = \"{$row['retailprice']}\" class = \"tablefield\" disabled></td>
-
+                        <td><a href='edit-product.php?prodid={$row['productid']}'>Edit</a> </td> &nbsp;
+                        <td><a href='deleteproduct.php?prodid={$row['productid']}''>Delete</a> </td>
                     </tr>
 
                                 ";
