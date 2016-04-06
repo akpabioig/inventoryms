@@ -125,8 +125,6 @@ include('connection.php');
                     // When the user clicks the button, open the modal
                     b.onclick = function() {
                         modal.style.display = "block";
-                        var a2 = "WH Location A2";
-                        <?php $a1 = (a2); ?>
                     }
 
                     // When the user clicks on <span> (x), close the modal
