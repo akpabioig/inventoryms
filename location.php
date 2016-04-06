@@ -211,7 +211,7 @@ include('connection.php');
                 type: "POST",
                 url: "passlocation.php",
                 data: { a1: "WH Location A1"},
-                success: console.log("done");
+                success: console.log("done")
             });
         })
     </script>
