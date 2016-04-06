@@ -320,7 +320,7 @@ include('connection.php');
                             $loc = "WH Location B4";
                         }
 
-                        echo $loc;
+                        echo "location:" .$loc;
                         /*
                         $sql= "SELECT productid, productserialnumber, productname, productdescription, initialstockprice, wholesaleprice, retailprice
                                 FROM addproduct
