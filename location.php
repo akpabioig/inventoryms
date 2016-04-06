@@ -90,7 +90,7 @@ include('connection.php');
                 var span = document.getElementsByClassName("close")[0];
 
                 // When the user clicks the button, open the modal
-                a.onclick = function() {
+                btn.onclick = function() {
                     modal.style.display = "block";
                 }
 
@@ -223,7 +223,7 @@ include('connection.php');
                                while($row = $result -> fetch_array()){
                                    echo "
 
-                                <tr>
+                        <tr>
                         <td><input type=\"text\" id = \"productid\" name= \"productid\"  value = \"{$row['productid']}\" class = \"tablefield\"></td>
                         <td><input type=\"text\" id = \"productsn\" name= \"productsn\"  value = \"{$row['productserialnumber']}\" class = \"tablefield\"></td>
                         <td><input type=\"text\" id = \"productname\" name= \"productname\"  value = \"{$row['productname']}\" class = \"tablefield\"></td>
@@ -231,7 +231,7 @@ include('connection.php');
                         <td><input type=\"text\" id = \"isp\" name= \"isp\"  value = \"{$row['initialstockprice']}\" class = \"tablefield\"></td>
                         <td><input type=\"text\" id = \"wp\" name= \"wp\"  value = \"{$row['wholesaleprice']}\" class = \"tablefield\"></td>
                         <td><input type=\"text\" id = \"rp\" name= \"rp\"  value = \"{$row['retailprice']}\" class = \"tablefield\"></td>
-                    </tr>
+                        </tr>
 
                                 ";
                                }
