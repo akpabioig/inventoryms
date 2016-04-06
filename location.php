@@ -329,7 +329,7 @@ include('connection.php');
                          *
                          *
                          */
-                        include("passlocation.php");
+                        require("passlocation.php");
                         echo "Location:" . ' '. $a1;
                         /*
                         $sql= "SELECT productid, productserialnumber, productname, productdescription, initialstockprice, wholesaleprice, retailprice
