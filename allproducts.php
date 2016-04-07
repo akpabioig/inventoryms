@@ -72,8 +72,8 @@
                         <td><input type=\"text\" id = \"isp\" name= \"isp\"  value = \"{$row['initialstockprice']}\" class = \"tablefield\" disabled></td>
                         <td><input type=\"text\" id = \"wp\" name= \"wp\"  value = \"{$row['wholesaleprice']}\" class = \"tablefield\" disabled></td>
                         <td><input type=\"text\" id = \"rp\" name= \"rp\"  value = \"{$row['retailprice']}\" class = \"tablefield\" disabled></td>
-                        <td><a href='edit-product.php?prodid={$row['productid']}'><img src = 'images/edit.png' style{height=\"15\" width=\"25\"}></a></td>
-                        <td><a href='deleteproduct.php?prodid={$row['productid']}'> <img src = 'images/delete.png' style{height=\"15\" width=\"25\"}></a> </td>
+                        <td><a href='edit-product.php?prodid={$row['productid']}'><img src = 'images/edit.png' style{height=\"20\" width=\"25\"}></a></td>
+                        <td><a href='deleteproduct.php?prodid={$row['productid']}'> <img src = 'images/delete.png' style{height=\"20\" width=\"25\"}></a> </td>
                     </tr>
 
                                 ";
