@@ -284,8 +284,6 @@ font-family: "Apple Braille";
 .tablefield{
     text-align: center;
     word-wrap: break-word;
-    width: auto;
-    height:auto;
 }
 
 #t2{
