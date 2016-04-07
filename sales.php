@@ -26,7 +26,7 @@ $minitotal = htmlspecialchars($_POST['minitotal']);
 
 try {
     $sql = "INSERT INTO salesorder (datesales, customerid, reference, message, delAddress, paymenttype, totalunits, subtotal, totalcost)
-VALUES ('$datesales', $customer,'$refcust', '$deladdcust', '$paytcust', '$messcust',$totunitcust, $subtotalcust, $totalcost)";
+VALUES ('$datesales', $customer,'$refcust', '$messcust', '$deladdcust', '$paytcust', ,$totunitcust, $subtotalcust, $totalcost)";
     $sth = $db->query($sql);
 } catch(PDOException $e) {
     echo $e->getMessage();
