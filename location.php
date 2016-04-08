@@ -281,7 +281,7 @@ include('connection.php');
         modal1.style.display = "block";
     }
 
-    // When the user clicks on <span> (x), close the modal
+    /*// When the user clicks on <span> (x), close the modal
     span1.onclick = function() {
         modal1.style.display = "none";
     }
