@@ -25,15 +25,15 @@ try {
                     contactpersontel = '{$contppn}',
                     telnumber = '{$supptel}',
                     fax = '{$suppfax}',
-                    email = {$suppurl},
+                    email = '{$suppurl}',
                     url = {$suppurl},
-                    description = {$desc}
+                    description = '{$desc}'
                     addressline1 = '{$add1}',
-                    addressline2 = {$add2},
+                    addressline2 = '{$add2}',
                     town = {$town},
                     county = {$county}
                     postcode = '{$postcode}',
-                    country = {$country},
+                    country = '{$country}',
                     WHERE supplierid = {$suppid}";
     $sth = $db->query($sql);
 } catch(PDOException $e) {
