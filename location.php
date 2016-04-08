@@ -41,13 +41,13 @@ include('connection.php');
         }
 
         /* The Close Button */
-        .close, .close1 {
+        .close, .close1, .close2 {
             color: #aaaaaa;
             float: right;
             font-size: 28px;  font-weight: bold;
         }
 
-        .close, .close1:hover,
+        .close, .close1, .close2:hover,
         .close, .close1:focus {
             color: #000;
              text-decoration: none;
@@ -354,7 +354,7 @@ include('connection.php');
     var btn2 = document.getElementById("a3");
 
     // Get the <span> element that closes the modal
-    var span2 = document.getElementsByClassName("close")[0];
+    var span2 = document.getElementsByClassName("close2")[0];
 
     // When the user clicks on the button, open the modal
     btn2.onclick = function() {
