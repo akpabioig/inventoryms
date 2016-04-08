@@ -290,7 +290,7 @@ include('connection.php');
         if (event1.target == modal1) {
             modal1.style.display = "none";
         }
-    }*/
+    }
 </script>
 </body>
 </html>
