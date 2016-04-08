@@ -35,11 +35,11 @@
         <h2> EDIT RECORDS </h2>
         <p> SCROLL TO THE END OF THE RECORD AND CLICK THE EDIT ICON </p>
         <div id = "form1">
-        <li>
-            <ul> <a href="allproducts.php"> EDIT PRODUCT RECORDS </a></ul>
-            <ul> <a href="allsuppliers.php"> EDIT SUPPLIER RECORDS </a></ul>
-            <ul> <a href="allcustomers.php"> EDIT CUSTOMER RECORDS </a></ul>
-        </li>
+        <ul>
+            <li> <a href="allproducts.php"> EDIT PRODUCT RECORDS </a></li>
+            <li> <a href="allsuppliers.php"> EDIT SUPPLIER RECORDS </a></li>
+            <li> <a href="allcustomers.php"> EDIT CUSTOMER RECORDS </a></li>
+        </ul>
         </div>
     </section>
 </div>
