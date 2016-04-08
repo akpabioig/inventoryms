@@ -72,6 +72,12 @@
                 <span id="floc">PRODUCT LOCATION</span>
             </a>
         </div>
+        <div class = "buttons">
+            <a id="edit" href= "newpurchase.php">
+                <img src= "images/edit.png" style{height="250" width="200"}/>
+                <span id="editorder">EDIT RECORDS</span>
+            </a>
+        </div>
     </section>
 </div>
 <footer>
