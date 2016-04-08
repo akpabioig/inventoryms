@@ -1,4 +1,4 @@
-<?php include('postcode.php');
+<?php include('connection.php');
 if(isset($_GET['custid'])){
     $customerId = $_GET['custid'];
     $sqlselect = "SELECT * FROM addcustomer WHERE customerid = $customerId";
@@ -27,7 +27,7 @@ if(isset($_GET['custid'])){
     <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <title>ADD CUSTOMER</title>
+        <title> EDIT CUSTOMER RECORDS </title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href = "styling.css"/>
         <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
