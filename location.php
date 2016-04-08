@@ -170,13 +170,13 @@ include('connection.php');
                                    echo "
 
                         <tr>
-                        <td><input type=\"text\" id = \"productid\" name= \"productid\"  value = \"{$row['productid']}\" class = \"tablefield\"></td>
-                        <td><input type=\"text\" id = \"productsn\" name= \"productsn\"  value = \"{$row['productserialnumber']}\" class = \"tablefield\"></td>
-                        <td><input type=\"text\" id = \"productname\" name= \"productname\"  value = \"{$row['productname']}\" class = \"tablefield\"></td>
-                        <td><input type=\"text\" id = \"productdesc\" name= \"productdesc\"  value = \"{$row['productdescription']}\" class = \"tablefield\"></td>
-                        <td><input type=\"text\" id = \"isp\" name= \"isp\"  value = \"{$row['initialstockprice']}\" class = \"tablefield\"></td>
-                        <td><input type=\"text\" id = \"wp\" name= \"wp\"  value = \"{$row['wholesaleprice']}\" class = \"tablefield\"></td>
-                        <td><input type=\"text\" id = \"rp\" name= \"rp\"  value = \"{$row['retailprice']}\" class = \"tablefield\"></td>
+                        <td><input type=\"text\" id = \"productid\" name= \"productid\"  value = \"{$row['productid']}\" class = \"tablefield1\"></td>
+                        <td><input type=\"text\" id = \"productsn\" name= \"productsn\"  value = \"{$row['productserialnumber']}\" class = \"tablefield1\"></td>
+                        <td><input type=\"text\" id = \"productname\" name= \"productname\"  value = \"{$row['productname']}\" class = \"tablefield1\"></td>
+                        <td><input type=\"text\" id = \"productdesc\" name= \"productdesc\"  value = \"{$row['productdescription']}\" class = \"tablefield1\"></td>
+                        <td><input type=\"text\" id = \"isp\" name= \"isp\"  value = \"{$row['initialstockprice']}\" class = \"tablefield1\"></td>
+                        <td><input type=\"text\" id = \"wp\" name= \"wp\"  value = \"{$row['wholesaleprice']}\" class = \"tablefield1\"></td>
+                        <td><input type=\"text\" id = \"rp\" name= \"rp\"  value = \"{$row['retailprice']}\" class = \"tablefield1\"></td>
                         </tr>
 
                                 ";
@@ -192,10 +192,8 @@ include('connection.php');
             </div>
 
         <div id="myModal1" class="modal">
-
-            <!-- Modal content -->
-            <div id ="m" class="modal-content">
-                <span class="close" onclick="m.style.display ='none';">×</span>
+            <div class="modal-content">
+                <span class="close">×</span>
                 <table>
                     <tr>
                         <th> Product ID </th>
@@ -269,7 +267,7 @@ include('connection.php');
             modal.style.display = "none";
         }
     }
-
+/*
 
 
      // WH LOCATION A2
@@ -296,7 +294,7 @@ include('connection.php');
         if (event.target == modal1) {
             modal1.style.display = "none";
         }
-    }
+    }*/
 </script>
 </body>
 </html>
