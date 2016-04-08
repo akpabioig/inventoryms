@@ -60,21 +60,21 @@
         </div>
         <div class = "buttons2">
             <a id="pur" href= "newpurchase.php">
-                <img src= "images/pur.png" style{height="250" width="200"}/>
+                <img src= "images/pur.png" style{height="250" width="185"}/>
                 <span id="porder">PURCHASE ORDER</span>
             </a>
             <a id= "supp" href= "addsupplier.php">
-                <img src= "images/supp.png" style{height="250" width="200"}/>
+                <img src= "images/supp.png" style{height="250" width="185"}/>
                 <span id="asupp">ADD SUPPLIER</span>
             </a>
             <a id="loc" href= "location.php">
-                <img src= "images/loc.png"style{height="250" width="200"}/>
+                <img src= "images/loc.png"style{height="250" width="185"}/>
                 <span id="floc">PRODUCT LOCATION</span>
             </a>
         </div>
         <div class = "buttons">
             <a id="edit" href= "newpurchase.php">
-                <img src= "images/edit.png" style{height="250" width="200"}/>
+                <img src= "images/edit.png" style{height="250" width="185"}/>
                 <span id="editorder">EDIT RECORDS</span>
             </a>
         </div>

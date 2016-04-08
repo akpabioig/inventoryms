@@ -172,6 +172,19 @@ section{
     display: inline;
 }
 
+#editorder{
+    position: relative;
+    left: -200px;
+    bottom: -40px;
+    display: none;
+    text-decoration: none;
+    font-style: oblique;
+
+}
+
+#edit:hover #editorder {
+    display: inline;
+}
 
 footer{
     margin-left: 20px;
