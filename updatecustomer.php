@@ -37,5 +37,5 @@ try {
 } catch(PDOException $e) {
     echo $e->getMessage();
 }
-header("Location: customereditor.php");
+header("Location: customerseditor.php");
 ?>
