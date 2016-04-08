@@ -26,12 +26,12 @@ try {
                     telnumber = '{$supptel}',
                     fax = '{$suppfax}',
                     email = '{$suppurl}',
-                    url = {$suppurl},
+                    url = '{$suppurl}',
                     description = '{$desc}',
                     addressline1 = '{$add1}',
                     addressline2 = '{$add2}',
-                    town = {$town},
-                    county = {$county},
+                    town = '{$town}',
+                    county = '{$county}',
                     postcode = '{$postcode}',
                     country = '{$country}'
                     WHERE supplierid = {$suppid}";
