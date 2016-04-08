@@ -286,11 +286,11 @@ include('connection.php');
         modal1.style.display = "none";
     }
     // When the user clicks anywhere outside of the modal, close it
-    window.onclick = function(event1) {
+    /*window.onclick = function(event1) {
         if (event1.target == modal1) {
-            modal1.style.display1 = "none";
+            modal1.style.display = "none";
         }
-    }
+    }*/
 </script>
 </body>
 </html>
