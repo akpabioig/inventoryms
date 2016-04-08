@@ -27,11 +27,11 @@ try {
                     fax = '{$suppfax}',
                     email = '{$suppurl}',
                     url = {$suppurl},
-                    description = '{$desc}'
+                    description = '{$desc}',
                     addressline1 = '{$add1}',
                     addressline2 = '{$add2}',
                     town = {$town},
-                    county = {$county}
+                    county = {$county},
                     postcode = '{$postcode}',
                     country = '{$country}',
                     WHERE supplierid = {$suppid}";
