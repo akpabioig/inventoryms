@@ -39,5 +39,5 @@ try {
 } catch(PDOException $e) {
     echo $e->getMessage();
 }
-header("Location: allsupplier.php");
+header("Location: allsuppliers.php");
 ?>
