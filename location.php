@@ -271,7 +271,7 @@ include('connection.php');
 
 
      // WH LOCATION A2
-    var modal1 = document.getElementById('myModal1');
+    var modal = document.getElementById('myModal1');
 
     // Get the button that opens the modal
     var btn = document.getElementById("b");
@@ -281,7 +281,7 @@ include('connection.php');
 
     // When the user clicks on the button, open the modal
     btn.onclick = function() {
-        modal1.style.display = "block";
+        modal.style.display = "block";
     }
 
     // When the user clicks on <span> (x), close the modal
