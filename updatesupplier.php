@@ -3,21 +3,22 @@ $db = new PDO('mysql:host=us-cdbr-azure-southcentral-e.cloudapp.net;dbname=inven
     PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
 
 
-$suppn = htmlspecialchars($_POST['suppn']);
-$contp = htmlspecialchars($_POST['contp']);
-$contppn = htmlspecialchars($_POST['contppn']);
-$supptel = htmlspecialchars($_POST['supptel']);
-$suppfax = htmlspecialchars($_POST['suppfax']);
-$suppurl = htmlspecialchars($_POST['suppurl']);
-$suppemail = htmlspecialchars($_POST['suppemail']);
-$desc = htmlspecialchars($_POST['desc']);
-$add1 = htmlspecialchars($_POST['add1']);
-$add2 = htmlspecialchars($_POST['add2']);
-$town = htmlspecialchars($_POST['town']);
-$county = htmlspecialchars($_POST['county']);
-$postcode = htmlspecialchars($_POST['postcode']);
-$country = htmlspecialchars($_POST['country']);
-$suppid = htmlspecialchars($_POST['suppid']);
+echo $suppn = htmlspecialchars($_POST['suppn']); echo "<br>";
+echo $contp = htmlspecialchars($_POST['contp']); echo "<br>";
+echo $contppn = htmlspecialchars($_POST['contppn']); echo "<br>";
+echo $supptel = htmlspecialchars($_POST['supptel']); echo "<br>";
+echo $suppfax = htmlspecialchars($_POST['suppfax']); echo "<br>";
+echo $suppurl = htmlspecialchars($_POST['suppurl']); echo "<br>";
+echo $suppemail = htmlspecialchars($_POST['suppemail']); echo "<br>";
+echo $desc = htmlspecialchars($_POST['desc']); echo "<br>";
+echo $add1 = htmlspecialchars($_POST['add1']); echo "<br>";
+echo $add2 = htmlspecialchars($_POST['add2']); echo "<br>";
+echo $town = htmlspecialchars($_POST['town']); echo "<br>";
+echo $county = htmlspecialchars($_POST['county']); echo "<br>";
+echo $postcode = htmlspecialchars($_POST['postcode']); echo "<br>";
+echo $country = htmlspecialchars($_POST['country']); echo "<br>";
+echo $suppid = htmlspecialchars($_POST['suppid']); echo "<br>";
+/*
 try {
     $sql = "UPDATE addsupplier
                 SET suppliername = '{$suppn}',
@@ -39,5 +40,5 @@ try {
 } catch(PDOException $e) {
     echo $e->getMessage();
 }
-header("Location: allsupplier.php");
+header("Location: allsupplier.php");*/
 ?>

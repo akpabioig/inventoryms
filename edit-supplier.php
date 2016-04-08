@@ -60,7 +60,7 @@
         <h2>Supplier Details</h2>
         <p>Insert the details of the new supplier to be added to the inventory list</p>
         <p>Be careful to fill out compulsory fields indicated by the <a id = "hash">*</a> key</p>
-        <form method="post" action="supplier.php">
+        <form method="post" action="updatesupplier.php">
             <div id = "form1">
                 <table>
                     <tr>
