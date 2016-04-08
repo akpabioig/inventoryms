@@ -1,7 +1,7 @@
 <?php include('connection.php');
-    if(isset($_GET['supplierid'])){
-        $supplierId = $_GET['supplierid'];
-        $sqlselect = "SELECT * FROM addsupplier WHERE supplierid = supplierId";
+    if(isset($_GET['suppid'])){
+        $supplierId = $_GET['suppid'];
+        $sqlselect = "SELECT * FROM addsupplier WHERE supplierid = $supplierId";
         $getResult = mysqli_query($db, $sqlselect);
 
         while($selectRow = $getResult -> fetch_array()){
