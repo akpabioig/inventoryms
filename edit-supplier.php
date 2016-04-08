@@ -1,7 +1,7 @@
 <?php include('connection.php');
     if(isset($_GET['supplierid'])){
-        $suppid = $_GET['supplierid'];
-        $sqlselect = "SELECT * FROM addsupplier WHERE supplierid = $suppid";
+        $supplierId = $_GET['supplierid'];
+        $sqlselect = "SELECT * FROM addsupplier WHERE supplierid = supplierId";
         $getResult = mysqli_query($db, $sqlselect);
 
         while($selectRow = $getResult -> fetch_array()){
@@ -102,24 +102,24 @@
                     </tr>
                     <tr>
                         <td label for="add1"> <a id = "hash">*</a> Address Line 1 : </td>
-                        <td><input type="text" id="add1" name="add1" value="" class = "formfield" rows = 1 value="<?php echo $addressline1; ?>"></td>
+                        <td><input type="text" id="add1" name="add1" class = "formfield" rows = 1 value="<?php echo $addressline1; ?>"></td>
                         <td label for ="add2"> Address Line 2 : </td>
-                        <td><input type="text" id="add2" name="add2" value="" class = "formfield" rows = 1 value="<?php echo $addressline2; ?>"></td>
+                        <td><input type="text" id="add2" name="add2" class = "formfield" rows = 1 value="<?php echo $addressline2; ?>"></td>
                     </tr>
                     <tr>
                         <td label for="town"> <a id = "hash">*</a> Town/City : </td>
-                        <td><input type="text" id="town" name="town" value="" class = "formfield" rows = 1 value="<?php echo $town; ?>"></td>
+                        <td><input type="text" id="town" name="town" class = "formfield" rows = 1 value="<?php echo $town; ?>"></td>
                         <td label for ="county"> County : </td>
-                        <td><input type="text" id="county" name="county" value="" class = "formfield" rows = 1 value="<?php echo $county; ?>"></td>
+                        <td><input type="text" id="county" name="county" class = "formfield" rows = 1 value="<?php echo $county; ?>"></td>
                     </tr>
                     <tr>
                         <td label for="postc"> <a id = "hash">*</a> Postcode : </td>
-                        <td><input type="text" id="postc" name="postcode" value="" class = "formfield" rows = 1 cols = 5 value="<?php echo $postcode; ?>"></td>
+                        <td><input type="text" id="postc" name="postcode" class = "formfield" rows = 1 cols = 5 value="<?php echo $postcode; ?>"></td>
                         <td label for ="country"> <a id = "hash">*</a> Country : </td>
-                        <td><input type="text" id="country" name="country" value="" class = "formfield" rows = 1 value="<?php echo $country; ?>"></td>
+                        <td><input type="text" id="country" name="country" class = "formfield" rows = 1 value="<?php echo $country; ?>"></td>
                     </tr>
                 </table>
-                <input type = "hidden" id="supplierid" name="supplierid" value = "<?php echo $suppid; ?>"/>
+                <input type = "hidden" id="suppid" name="suppid" value = "<?php echo $supplierId; ?>"/>
             </div>
             <p id = "subbutt"><input type = "reset" value = "CLEAR">
                 &nbsp; &nbsp; <input type = "submit" value = "SAVE"></p>
