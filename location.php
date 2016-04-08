@@ -243,7 +243,7 @@ include('connection.php');
 
             <div id="myModal2" class="modal">
                 <div class="modal-content">
-                    <span class="close1">×</span>
+                    <span class="close1">x</span>
                     <header>
                         <h1> Location : WareHouse Location A3</h1>
                     </header>
