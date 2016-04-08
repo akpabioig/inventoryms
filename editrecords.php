@@ -30,7 +30,7 @@
         <a id="logout" href="logout.php"><input type = "button" value = "LOG OUT"/></a>
     </header>
     <section>
-        <h3>Inventory Management Reports</h3>
+        <h3> Edit Inventory Management Records </h3>
         <img src= "images/records.jpeg" style{height="250" width="200"}/>
         <h2> EDIT RECORDS </h2>
         <p> SCROLL TO THE END OF THE RECORD AND CLICK THE EDIT ICON </p>
