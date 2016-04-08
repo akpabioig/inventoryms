@@ -208,7 +208,7 @@ include('connection.php');
 
                     $sql1= "SELECT productid, productserialnumber, productname, productdescription, initialstockprice, wholesaleprice, retailprice
                                 FROM addproduct
-                                WHERE locationid = 'WH Location B4'"; //get Js
+                                WHERE locationid = 'WH Location A2'"; //get Js
                     $result1 = mysqli_query($db, $sql1);
                     if(mysqli_num_rows($result1) == 1 || mysqli_num_rows($result1) >1){
 
@@ -294,7 +294,7 @@ include('connection.php');
         if (event.target == modal1) {
             modal1.style.display = "none";
         }
-    }*/
+    }
 </script>
 </body>
 </html>
