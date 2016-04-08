@@ -179,10 +179,9 @@ section{
     display: none;
     text-decoration: none;
     font-style: oblique;
-
 }
 
-#edit:hover #editorder {
+#edit:hover #editorder{
     display: inline;
 }
 

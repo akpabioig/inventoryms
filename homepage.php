@@ -73,7 +73,7 @@
             </a>
         </div>
         <div class = "buttons">
-            <a id="edit" href= "newpurchase.php">
+            <a id="edit" href= "editrecords.php">
                 <img src= "images/edit.png" style{height="250" width="185"}/>
                 <span id="editorder">EDIT RECORDS</span>
             </a>
