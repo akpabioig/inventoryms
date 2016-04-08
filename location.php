@@ -146,6 +146,9 @@ include('connection.php');
                 <!-- Modal content -->
                 <div class="modal-content">
                     <span class="close">×</span>
+                    <header>
+                        <h1> Location : WareHouse Location A1</h1>
+                    </header>
                     <table>
                     <tr>
                         <th> Product ID </th>
@@ -191,6 +194,9 @@ include('connection.php');
         <div id="myModal1" class="modal">
             <div class="modal-content">
                 <span class="close1">×</span>
+                <header>
+                <h1> Location : WareHouse Location A2</h1>
+                </header>
                 <table>
                     <tr>
                         <th> Product ID </th>
