@@ -82,6 +82,8 @@
 
                         <td><input type=\"text\" id = \"postcode\" name= \"postcode\"  value = \"{$row['postcode']}\" class = \"tablefield\" disabled></td>
                         <td><input type=\"text\" id = \"country\" name= \"country\"  value = \"{$row['country']}\" class = \"tablefield\" disabled></td>
+                        <td><a href='edit-customer.php?custid={$row['customerid']}'><img src = 'images/edit.png' style{height=\"25\" width=\"25\"}></a></td>
+                        <td><a href='deletecustomer.php?custid={$row['customerid']}'> <img src = 'images/delete.png' style{height=\"25\" width=\"25\"}></a> </td>
                     </tr>
 
                                 ";
@@ -90,7 +92,6 @@
                     echo '<option> No Result Found </option>';
                 }
                 ?>
-
             </table>
         </div>
         </form>
