@@ -42,14 +42,14 @@ include('connection.php');
 
         /* The Close Button */
         .close, .close1, .close2 {
-            color: #aaaaaa;
+            color: red;
             float: right;
-            font-size: 28px;  font-weight: bold;
+            font-size: 30px;  font-weight: bold;
         }
 
         .close, .close1, :hover,
         .close, .close1, .close2:focus {
-            color: #000;
+            color: white;
              text-decoration: none;
             cursor: pointer;
         }
