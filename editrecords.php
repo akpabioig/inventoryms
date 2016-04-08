@@ -36,9 +36,9 @@
         <p> SCROLL TO THE END OF THE RECORD AND CLICK THE EDIT ICON </p>
         <div id = "form1">
         <ul>
-            <li> <a href="allproducts.php"> EDIT PRODUCT RECORDS </a></li>
-            <li> <a href="allsuppliers.php"> EDIT SUPPLIER RECORDS </a></li>
-            <li> <a href="allcustomers.php"> EDIT CUSTOMER RECORDS </a></li>
+            <li> <a href="productseditor.php"> EDIT PRODUCT RECORDS </a></li>
+            <li> <a href="supplierseditor.php"> EDIT SUPPLIER RECORDS </a></li>
+            <li> <a href="customerseditor.php"> EDIT CUSTOMER RECORDS </a></li>
         </ul>
         </div>
     </section>

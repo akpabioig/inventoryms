@@ -35,13 +35,13 @@
         <h2>REPORTS</h2>
         <p>Click on Any of The Reports To Explore</p>
         <div id = "form1">
-            <a href = "allcustomers.php">
+            <a href = "customerseditor.php">
                 <img src= "images/b1.png" style{height="300" width="300"} class ="reporticons"/>
             </a>
-            <a href = "allsuppliers.php">
+            <a href = "supplierseditor.php">
                 <img src= "images/b2.png" style{height="300" width="300"} class ="reporticons"/>
             </a>
-            <a href = "allproducts.php">
+            <a href = "productseditor.php">
                 <img src= "images/b3.png" style{height="300" width="300"} class ="reporticons"/>
             </a>
 

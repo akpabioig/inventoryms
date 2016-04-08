@@ -14,11 +14,11 @@
         }catch(PDOException $e){
             echo $e->getMessage();
         }
-        header("Location: allproducts.php");
+        header("Location: productseditor.php");
 
 
     }else{
-        header("Location: allproducts.php");
+        header("Location: productseditor.php");
     }
 
 ?>

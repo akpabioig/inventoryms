@@ -4,7 +4,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>SUPPLIERS</title>
+    <title>CUSTOMERS</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href = "styling.css"/>
     <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
@@ -30,22 +30,21 @@
         <a id="logout" href="logout.php"><input type = "button" value = "LOG OUT"/></a>
     </header>
     <section>
-        <h3>SUPPLIERS</h3>
-        <img src= "images/supp.png" style{height="250" width="200"}/>
-        <h2>LIST OF SUPPLIERS </h2>
-        <p>FIND BELOW THE LIST OF ALL PRODUCT SUPPLIERS </p>
-        <form method="get" action="allsuppliers.php">
+        <h3>CUSTOMERS</h3>
+        <img src= "images/cust.png" style{height="250" width="200"}/>
+        <h2> LIST OF CUSTOMERS </h2>
+        <p> FIND BELOW THE LIST OF ALL CUSTOMERS </p>
+        <form method="get" action="customerseditor.php"">
         <div id = "form3">
-            <table>
+            <table id="t2">
                 <tr>
                     <th> ID </th>
-                    <th> Name </th>
-                    <th>Contact Person</th>
-                    <th>Contact Person Phone Number </th>
+                    <th> Type </th>
+                    <th>Name</th>
                     <th>Phone Number</th>
                     <th>Fax</th>
-                    <th>Email </th>
-                    <th>Website</th>
+                    <th>Email</th>
+                    <th>Website </th>
                     <th>Description </th>
                     <th>Address Line 1 </th>
                     <th>Address Line 2</th>
@@ -56,9 +55,9 @@
                 </tr>
                 <?php
 
-                $sql= "SELECT supplierid, suppliername, contactperson, contactpersontel, telnumber, fax, email, url, description,
+                $sql= "SELECT customerid, customertype, customername, telnumber, fax, email, url, description,
                       addressline1, addressline2, town, county, postcode, country
-                          FROM addsupplier";
+                          FROM addcustomer";
                 $result = mysqli_query($db, $sql);
                 if(mysqli_num_rows($result) == 1 || mysqli_num_rows($result) >1){
 
@@ -66,10 +65,9 @@
                         echo "
 
                                 <tr>
-                        <td><input type=\"text\" id = \"supplierid\" name= \"supplierid\"  value = \"{$row['supplierid']}\" class = \"tablefield\" disabled></td>
-                        <td><input type=\"text\" id = \"suppliername\" name= \"suppliername\"  value = \"{$row['suppliername']}\" class = \"tablefield\" disabled></td>
-                        <td><input type=\"text\" id = \"contactperson\" name= \"contactperson\"  value = \"{$row['contactperson']}\" class = \"tablefield\" disabled></td>
-                        <td><input type=\"text\" id = \"contactpersontel\" name= \"contactpersontel\"  value = \"{$row['contactpersontel']}\" class = \"tablefield\" disabled></td>
+                        <td><input type=\"text\" id = \"customerid\" name= \"customerid\"  value = \"{$row['customerid']}\" class = \"tablefield\" disabled></td>
+                        <td><input type=\"text\" id = \"customertype\" name= \"customertype\"  value = \"{$row['customertype']}\" class = \"tablefield\" disabled></td>
+                        <td><input type=\"text\" id = \"customername\" name= \"customername\"  value = \"{$row['customername']}\" class = \"tablefield\" disabled></td>
 
                         <td><input type=\"text\" id = \"telnumber\" name= \"telnumber\"  value = \"{$row['telnumber']}\" class = \"tablefield\" disabled></td>
                         <td><input type=\"text\" id = \"fax\" name= \"fax\"  value = \"{$row['fax']}\" class = \"tablefield\" disabled></td>
@@ -84,8 +82,6 @@
 
                         <td><input type=\"text\" id = \"postcode\" name= \"postcode\"  value = \"{$row['postcode']}\" class = \"tablefield\" disabled></td>
                         <td><input type=\"text\" id = \"country\" name= \"country\"  value = \"{$row['country']}\" class = \"tablefield\" disabled></td>
-                        <td><a href='edit-supplier.php?suppid={$row['supplierid']}'><img src = 'images/edit.png' style{height=\"25\" width=\"25\"}></a></td>
-                        <td><a href='deletesupplier.php?suppid={$row['supplierid']}'> <img src = 'images/delete.png' style{height=\"25\" width=\"25\"}></a> </td>
                     </tr>
 
                                 ";

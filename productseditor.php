@@ -34,7 +34,7 @@
         <img src= "images/product.png" style{height="250" width="200"}/>
         <h2>LIST OF PRODUCTS </h2>
         <p>FIND BELOW THE LIST OF ALL PRODUCTS ADDED TO THE WAREHOUSES </p>
-        <form method="get" action="allproducts.php"">
+        <form method="get" action="productseditor.php"">
             <div id = "form3">
                 <table id="t2">
                     <tr>
