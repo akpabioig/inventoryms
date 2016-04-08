@@ -33,7 +33,7 @@ try {
                     town = {$town},
                     county = {$county},
                     postcode = '{$postcode}',
-                    country = '{$country}',
+                    country = '{$country}'
                     WHERE supplierid = {$suppid}";
     $sth = $db->query($sql);
 } catch(PDOException $e) {
