@@ -237,7 +237,56 @@ include('connection.php');
 
                 </table>
             </div>
+            </div>
 
+            /* WH Location A3 */
+
+            <div id="myModal2" class="modal">
+                <div class="modal-content">
+                    <span class="close1">×</span>
+                    <header>
+                        <h1> Location : WareHouse Location A2</h1>
+                    </header>
+                    <table>
+                        <tr>
+                            <th> Product ID </th>
+                            <th>Product Serial Number </th>
+                            <th>Product Name</th>
+                            <th>Product Description </th>
+                            <th>Initial Stock Price</th>
+                            <th>Wholesale Price</th>
+                            <th>Retail Price</th>
+                        </tr>
+                        <?php
+
+                        $sql1= "SELECT productid, productserialnumber, productname, productdescription, initialstockprice, wholesaleprice, retailprice
+                                FROM addproduct
+                                WHERE locationid = 'WH Location A3'"; //get Js
+                        $result1 = mysqli_query($db, $sql1);
+                        if(mysqli_num_rows($result1) == 1 || mysqli_num_rows($result1) >1){
+
+                            while($row1 = $result1 -> fetch_array()){
+                                echo "
+
+                        <tr>
+                        <td><input type=\"text\" id = \"productid\" name= \"productid\"  value = \"{$row1['productid']}\" class = \"tablefield1\"></td>
+                        <td><input type=\"text\" id = \"productsn\" name= \"productsn\"  value = \"{$row1['productserialnumber']}\" class = \"tablefield1\"></td>
+                        <td><input type=\"text\" id = \"productname\" name= \"productname\"  value = \"{$row1['productname']}\" class = \"tablefield1\"></td>
+                        <td><input type=\"text\" id = \"productdesc\" name= \"productdesc\"  value = \"{$row1['productdescription']}\" class = \"tablefield1\"></td>
+                        <td><input type=\"text\" id = \"isp\" name= \"isp\"  value = \"{$row1['initialstockprice']}\" class = \"tablefield1\"></td>
+                        <td><input type=\"text\" id = \"wp\" name= \"wp\"  value = \"{$row1['wholesaleprice']}\" class = \"tablefield1\"></td>
+                        <td><input type=\"text\" id = \"rp\" name= \"rp\"  value = \"{$row1['retailprice']}\" class = \"tablefield1\"></td>
+                        </tr>
+
+                                ";
+                            }
+                        }else{
+                            echo '<option> No Result Found </option>';
+                        }
+                        ?>
+
+                    </table>
+                </div>
         </div>
     </section>
 </div>
@@ -295,6 +344,31 @@ include('connection.php');
     modal1.onclick = function(event1) {
         if (event1.target == modal1) {
             modal1.style.display = "none";
+        }
+    }
+
+    // WH LOCATION A3
+    var modal2 = document.getElementById('myModal2');
+
+    // Get the button that opens the modal
+    var btn2 = document.getElementById("a3");
+
+    // Get the <span> element that closes the modal
+    var span2 = document.getElementsByClassName("close")[0];
+
+    // When the user clicks on the button, open the modal
+    btn2.onclick = function() {
+        modal2.style.display = "block";
+    }
+
+    // When the user clicks on <span> (x), close the modal
+    span2.onclick = function() {
+        modal2.style.display = "none";
+    }
+    // When the user clicks anywhere outside of the modal, close it
+    modal2.onclick = function(event2) {
+        if (event2.target == modal2) {
+            modal2.style.display = "none";
         }
     }
 </script>
