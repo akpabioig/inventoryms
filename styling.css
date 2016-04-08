@@ -372,6 +372,6 @@ hr{
 #form3{
     overflow: scroll;
 }
-#tablefield1{
+.tablefield1{
     width: 10%;
 }
