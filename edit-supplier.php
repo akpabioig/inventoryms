@@ -21,9 +21,8 @@
             $country = $selectRow['country'];
         }
     }else{
-        header("Location: allsupplier.php?f=1");
+        header("Location: suppliereditor.php?f=1");
     }
-?>
 ?>
 <!DOCTYPE html>
 <html lang="en">

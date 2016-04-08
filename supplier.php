@@ -40,5 +40,5 @@ $country = htmlspecialchars($_POST['country']);
         echo $e->getMessage();
     }
 
-header("Location: addvendor.html");
+header("Location: addsupplier.php");
 ?>
