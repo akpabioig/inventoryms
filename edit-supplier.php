@@ -29,7 +29,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>ADD SUPPLIER</title>
+    <title>EDIT SUPPLIER RECORD </title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href = "styling.css"/>
     <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
@@ -55,10 +55,10 @@
         <a id="logout" href="logout.php"><input type = "button" value = "LOG OUT"/></a>
     </header>
     <section>
-        <h3>ADD SUPPLIER</h3>
+        <h3>EDIT SUPPLIER RECORD </h3>
         <img src= "images/supp.png" style{height="250" width="200"}/>
         <h2>Supplier Details</h2>
-        <p>Insert the details of the new supplier to be added to the inventory list</p>
+        <p>Edit Record of Supplier already added to system </p>
         <p>Be careful to fill out compulsory fields indicated by the <a id = "hash">*</a> key</p>
         <form method="post" action="updatesupplier.php">
             <div id = "form1">
@@ -122,7 +122,7 @@
                 <input type = "hidden" id="suppid" name="suppid" value = "<?php echo $supplierId; ?>"/>
             </div>
             <p id = "subbutt"><input type = "reset" value = "CLEAR">
-                &nbsp; &nbsp; <input type = "submit" value = "SAVE"></p>
+                &nbsp; &nbsp; <input type = "submit" value = "UPDATE"></p>
         </form>
     </section>
 </div>
