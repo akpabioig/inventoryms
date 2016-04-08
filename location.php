@@ -142,9 +142,7 @@ include('connection.php');
                 <img src= "location/y2.jpg" style{height="150" width="370"} class ="locicons"/>
             </a>
             </div>
-
             <div id="myModal" class="modal">
-
                 <!-- Modal content -->
                 <div class="modal-content">
                     <span class="close">×</span>
@@ -190,7 +188,6 @@ include('connection.php');
                 </div>
 
             </div>
-
         <div id="myModal1" class="modal">
             <div class="modal-content">
                 <span class="close">×</span>
@@ -271,13 +268,13 @@ include('connection.php');
 
 
      // WH LOCATION A2
-    var modal = document.getElementById('myModal1');
+    var modal1 = document.getElementById('myModal1');
 
     // Get the button that opens the modal
-    var btn = document.getElementById("b");
+    var btn1 = document.getElementById("b");
 
     // Get the <span> element that closes the modal
-    var span = document.getElementsByClassName("close")[0];
+    var span1 = document.getElementsByClassName("close")[0];
 
     // When the user clicks on the button, open the modal
     btn.onclick = function() {
@@ -285,7 +282,7 @@ include('connection.php');
     }
 
     // When the user clicks on <span> (x), close the modal
-    /*span.onclick = function() {
+    span1.onclick = function() {
         modal1.style.display = "none";
     }
 
