@@ -79,10 +79,10 @@ include('connection.php');
         <h2>WareHouse / Yards </h2>
         <p>Select The Location within the Warehouse or Yard you would like to explore its' contents</p>
         <div class = "locbutt">
-            <a id="a">
+            <a id="a1">
                 <img src= "location/a1.jpeg" style{height="150" width="150"} class ="locicons"/>
             </a>
-            <a id="b">
+            <a id="a2">
                 <img src= "location/a2.jpg" style{height="150" width="150"} class ="locicons"/>
             </a>
             <a id="a3" href= "#">
@@ -243,7 +243,7 @@ include('connection.php');
     var modal = document.getElementById('myModal');
 
     // Get the button that opens the modal
-    var btn = document.getElementById("a");
+    var btn = document.getElementById("a1");
 
     // Get the <span> element that closes the modal
     var span = document.getElementsByClassName("close")[0];
@@ -271,7 +271,7 @@ include('connection.php');
     var modal1 = document.getElementById('myModal1');
 
     // Get the button that opens the modal
-    var btn1 = document.getElementById("b");
+    var btn1 = document.getElementById("a2");
 
     // Get the <span> element that closes the modal
     var span1 = document.getElementsByClassName("close1")[0];
@@ -286,8 +286,8 @@ include('connection.php');
         modal1.style.display = "none";
     }
     // When the user clicks anywhere outside of the modal, close it
-    window.onclick = function(event) {
-        if (event.target == modal1) {
+    window.onclick = function(event1) {
+        if (event1.target == modal1) {
             modal1.style.display = "none";
         }
     }
