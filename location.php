@@ -245,7 +245,7 @@ include('connection.php');
                 <div class="modal-content">
                     <span class="close1">×</span>
                     <header>
-                        <h1> Location : WareHouse Location A2</h1>
+                        <h1> Location : WareHouse Location A3</h1>
                     </header>
                     <table>
                         <tr>
