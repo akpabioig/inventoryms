@@ -267,7 +267,7 @@ include('connection.php');
             modal.style.display = "none";
         }
     }
-/*
+
 
 
      // WH LOCATION A2
@@ -280,7 +280,7 @@ include('connection.php');
     var span = document.getElementsByClassName("close")[0];
 
     // When the user clicks on the button, open the modal
-    btn1.onclick = function() {
+    btn.onclick = function() {
         modal1.style.display = "block";
     }
 
