@@ -41,14 +41,14 @@ include('connection.php');
         }
 
         /* The Close Button */
-        .close {
+        .close, .close1 {
             color: #aaaaaa;
             float: right;
             font-size: 28px;  font-weight: bold;
         }
 
-        .close:hover,
-        .close:focus {
+        .close, .close1:hover,
+        .close, .close1:focus {
             color: #000;
              text-decoration: none;
             cursor: pointer;
@@ -190,7 +190,7 @@ include('connection.php');
             </div>
         <div id="myModal1" class="modal">
             <div class="modal-content">
-                <span class="close">×</span>
+                <span class="close1">×</span>
                 <table>
                     <tr>
                         <th> Product ID </th>
@@ -274,7 +274,7 @@ include('connection.php');
     var btn1 = document.getElementById("b");
 
     // Get the <span> element that closes the modal
-    /*var span = document.getElementsByClassName("close")[0];*/
+    var span1 = document.getElementsByClassName("close1")[0];
 
     // When the user clicks on the button, open the modal
     btn1.onclick = function() {
@@ -282,7 +282,7 @@ include('connection.php');
     }
 
     // When the user clicks on <span> (x), close the modal
-    span.onclick = function() {
+    span1.onclick = function() {
         modal1.style.display = "none";
     }
     /*
