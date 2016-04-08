@@ -36,5 +36,5 @@ $prodid = htmlspecialchars($_POST['prodid']);
     } catch(PDOException $e) {
         echo $e->getMessage();
     }
-header("Location: allproducts.php");
+//header("Location: allproducts.php");
 ?>
