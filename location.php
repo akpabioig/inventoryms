@@ -47,9 +47,9 @@ include('connection.php');
             font-size: 30px;  font-weight: bold;
         }
 
-        .close, .close1, :hover,
+        .close, .close1, .close2:hover,
         .close, .close1, .close2:focus {
-            color: white;
+            color: #000;
              text-decoration: none;
             cursor: pointer;
         }
