@@ -41,14 +41,15 @@ include('connection.php');
         }
 
         /* The Close Button */
-        .close, .close1, .close2, .close3 {
-            color: red;
+        .close, .close1, .close2, .close3, .close4 {
             float: right;
-            font-size: 30px;  font-weight: bold;
+            font-size: 30px;
+            font-weight: bold;
+            color: red;
         }
 
-        .close, .close1, .close2, .close3:hover,
-        .close, .close1, .close2, .close3:focus {
+        .close, .close1, .close2, .close3, .close4:hover,
+        .close, .close1, .close2, .close3, .close4:focus {
             color: #000;
              text-decoration: none;
             cursor: pointer;
@@ -85,15 +86,15 @@ include('connection.php');
             <a id="a2">
                 <img src= "location/a2.jpg" style{height="150" width="150"} class ="locicons"/>
             </a>
-            <a id="a3" href= "#">
+            <a id="a3">
                 <img src= "location/a3.jpg" style{height="150" width="150"} class ="locicons"/>
             </a>
-            <a id="a4" href= "#">
+            <a id="a4">
                 <img src= "location/a4.jpg" style{height="150" width="150"} class ="locicons"/>
             </a>
         </div>
         <div class = "locbutt2">
-            <a id="b1" href= "#">
+            <a id="b1">
                 <img src= "location/b1.jpg" style{height="150" width="150"} class ="locicons"/>
             </a>
             <a id="b2" href= "#">
@@ -339,6 +340,56 @@ include('connection.php');
             </div>
         </div>
 
+        /* WH Location B1 */
+
+        <div id="myModal4" class="modal">
+            <div class="modal-content">
+                <span class="close4">x</span>
+                <header>
+                    <h1> Location : WareHouse Location A4</h1>
+                </header>
+                <table>
+                    <tr>
+                        <th> Product ID </th>
+                        <th>Product Serial Number </th>
+                        <th>Product Name</th>
+                        <th>Product Description </th>
+                        <th>Initial Stock Price</th>
+                        <th>Wholesale Price</th>
+                        <th>Retail Price</th>
+                    </tr>
+                    <?php
+
+                    $sql1= "SELECT productid, productserialnumber, productname, productdescription, initialstockprice, wholesaleprice, retailprice
+                                FROM addproduct
+                                WHERE locationid = 'WH Location B1'"; //get Js
+                    $result1 = mysqli_query($db, $sql1);
+                    if(mysqli_num_rows($result1) == 1 || mysqli_num_rows($result1) >1){
+
+                        while($row1 = $result1 -> fetch_array()){
+                            echo "
+
+                        <tr>
+                        <td><input type=\"text\" id = \"productid\" name= \"productid\"  value = \"{$row1['productid']}\" class = \"tablefield1\" disabled></td>
+                        <td><input type=\"text\" id = \"productsn\" name= \"productsn\"  value = \"{$row1['productserialnumber']}\" class = \"tablefield1\" disabled></td>
+                        <td><input type=\"text\" id = \"productname\" name= \"productname\"  value = \"{$row1['productname']}\" class = \"tablefield1\" disabled></td>
+                        <td><input type=\"text\" id = \"productdesc\" name= \"productdesc\"  value = \"{$row1['productdescription']}\" class = \"tablefield1\" disabled></td>
+                        <td><input type=\"text\" id = \"isp\" name= \"isp\"  value = \"{$row1['initialstockprice']}\" class = \"tablefield1\" disabled></td>
+                        <td><input type=\"text\" id = \"wp\" name= \"wp\"  value = \"{$row1['wholesaleprice']}\" class = \"tablefield1\" disabled></td>
+                        <td><input type=\"text\" id = \"rp\" name= \"rp\"  value = \"{$row1['retailprice']}\" class = \"tablefield1\" disabled></td>
+                        </tr>
+
+                                ";
+                        }
+                    }else{
+                        echo '<option> No Result Found </option>';
+                    }
+                    ?>
+
+                </table>
+            </div>
+        </div>
+
 
     </section>
 </div>
@@ -446,6 +497,31 @@ include('connection.php');
     modal3.onclick = function(event3) {
         if (event3.target == modal3) {
             modal3.style.display = "none";
+        }
+    }
+
+    // WH LOCATION B1
+    var modal4 = document.getElementById('myModal4');
+
+    // Get the button that opens the modal
+    var btn4 = document.getElementById("b1");
+
+    // Get the <span> element that closes the modal
+    var span4 = document.getElementsByClassName("close4")[0];
+
+    // When the user clicks on the button, open the modal
+    btn4.onclick = function() {
+        modal4.style.display = "block";
+    }
+
+    // When the user clicks on <span> (x), close the modal
+    span4.onclick = function() {
+        modal4.style.display = "none";
+    }
+    // When the user clicks anywhere outside of the modal, close it
+    modal4.onclick = function(event3) {
+        if (event4.target == modal4) {
+            modal4.style.display = "none";
         }
     }
 </script>
