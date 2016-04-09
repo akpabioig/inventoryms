@@ -153,7 +153,6 @@ include('connection.php');
             </a>
             </div>
 
-                // WH Location A1
                  <div id="myModal" class="modal">
                 <!-- Modal content -->
                 <div class="modal-content">
@@ -204,7 +203,6 @@ include('connection.php');
 
             </div>
 
-        // WH Location A2
         <div id="myModal1" class="modal">
             <div class="modal-content">
                 <span class="close1">x</span>
@@ -252,8 +250,6 @@ include('connection.php');
                 </table>
             </div>
             </div>
-
-            // WH Location A3
 
             <div id="myModal2" class="modal">
                 <div class="modal-content">
@@ -303,7 +299,6 @@ include('connection.php');
                 </div>
         </div>
 
-        // WH Location A4
 
         <div id="myModal3" class="modal">
             <div class="modal-content">
@@ -353,8 +348,6 @@ include('connection.php');
             </div>
         </div>
 
-        // WH Location B1
-
         <div id="myModal4" class="modal">
             <div class="modal-content">
                 <span class="close4">x</span>
@@ -403,7 +396,6 @@ include('connection.php');
             </div>
         </div>
 
-        // WH Location B2
 
         <div id="myModal5" class="modal">
             <div class="modal-content">
@@ -453,7 +445,6 @@ include('connection.php');
             </div>
         </div>
 
-        // WH Location B3
 
         <div id="myModal6" class="modal">
             <div class="modal-content">
@@ -503,7 +494,6 @@ include('connection.php');
             </div>
         </div>
 
-        // WH Location B4
 
         <div id="myModal7" class="modal">
             <div class="modal-content">
@@ -553,7 +543,6 @@ include('connection.php');
             </div>
         </div>
 
-        // WH Location C1
 
         <div id="myModal8" class="modal">
             <div class="modal-content">
@@ -603,7 +592,6 @@ include('connection.php');
             </div>
         </div>
 
-        // WH Location C2
 
         <div id="myModal9" class="modal">
             <div class="modal-content">
@@ -652,8 +640,6 @@ include('connection.php');
                 </table>
             </div>
         </div>
-
-        // WH Location C3
 
         <div id="myModal10" class="modal">
             <div class="modal-content">
