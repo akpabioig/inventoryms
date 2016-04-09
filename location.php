@@ -42,7 +42,8 @@ include('connection.php');
 
         /* The Close Button */
         .close, .close1, .close2, .close3, .close4,
-        .close5, .close6, .close7, .close8 {
+        .close5, .close6, .close7, .close8, .close9,
+        .close10, .close11 {
             float: right;
             font-size: 30px;
             font-weight: bold;
