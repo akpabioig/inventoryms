@@ -149,7 +149,9 @@ include('connection.php');
                 <img src= "location/y2.jpg" style{height="150" width="370"} class ="locicons"/>
             </a>
             </div>
-            <div id="myModal" class="modal">
+
+                // WH Location A1
+                 <div id="myModal" class="modal">
                 <!-- Modal content -->
                 <div class="modal-content">
                     <span class="close">x</span>
@@ -198,6 +200,8 @@ include('connection.php');
                 </div>
 
             </div>
+
+        // WH Location A2
         <div id="myModal1" class="modal">
             <div class="modal-content">
                 <span class="close1">x</span>
@@ -246,7 +250,7 @@ include('connection.php');
             </div>
             </div>
 
-            /* WH Location A3 */
+            // WH Location A3
 
             <div id="myModal2" class="modal">
                 <div class="modal-content">
@@ -296,7 +300,7 @@ include('connection.php');
                 </div>
         </div>
 
-        /* WH Location A4 */
+        // WH Location A4
 
         <div id="myModal3" class="modal">
             <div class="modal-content">
@@ -346,7 +350,7 @@ include('connection.php');
             </div>
         </div>
 
-        /* WH Location B1 */
+        // WH Location B1
 
         <div id="myModal4" class="modal">
             <div class="modal-content">
@@ -396,7 +400,7 @@ include('connection.php');
             </div>
         </div>
 
-        /* WH Location B2 */
+        // WH Location B2
 
         <div id="myModal5" class="modal">
             <div class="modal-content">
@@ -446,7 +450,7 @@ include('connection.php');
             </div>
         </div>
 
-        /* WH Location B3 */
+        // WH Location B3
 
         <div id="myModal6" class="modal">
             <div class="modal-content">
@@ -496,7 +500,7 @@ include('connection.php');
             </div>
         </div>
 
-        /* WH Location B4 */
+        // WH Location B4
 
         <div id="myModal7" class="modal">
             <div class="modal-content">
@@ -546,7 +550,7 @@ include('connection.php');
             </div>
         </div>
 
-        /* WH Location C1 */
+        // WH Location C1
 
         <div id="myModal8" class="modal">
             <div class="modal-content">
@@ -596,7 +600,7 @@ include('connection.php');
             </div>
         </div>
 
-        /* WH Location C2 */
+        // WH Location C2
 
         <div id="myModal9" class="modal">
             <div class="modal-content">
@@ -646,7 +650,7 @@ include('connection.php');
             </div>
         </div>
 
-        /* WH Location C3 */
+        // WH Location C3
 
         <div id="myModal10" class="modal">
             <div class="modal-content">
@@ -696,7 +700,7 @@ include('connection.php');
             </div>
         </div>
 
-        /* WH Location C4 */
+        // WH Location C4
 
         <div id="myModal11" class="modal">
             <div class="modal-content">
