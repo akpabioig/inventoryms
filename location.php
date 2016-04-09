@@ -606,7 +606,7 @@ include('connection.php');
             <div class="modal-content">
                 <span class="close9">x</span>
                 <header>
-                    <h1> Location : WareHouse Location B4</h1>
+                    <h1> Location : WareHouse Location C2</h1>
                 </header>
                 <table>
                     <tr>
@@ -656,7 +656,7 @@ include('connection.php');
             <div class="modal-content">
                 <span class="close10">x</span>
                 <header>
-                    <h1> Location : WareHouse Location B4</h1>
+                    <h1> Location : WareHouse Location C3</h1>
                 </header>
                 <table>
                     <tr>
