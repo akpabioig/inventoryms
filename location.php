@@ -41,15 +41,18 @@ include('connection.php');
         }
 
         /* The Close Button */
-        .close, .close1, .close2, .close3, .close4, .close5 {
+        .close, .close1, .close2, .close3, .close4,
+        .close5, .close6, .close7, .close8 {
             float: right;
             font-size: 30px;
             font-weight: bold;
             color: red;
         }
 
-        .close, .close1, .close2, .close3, .close4, .close5:hover,
-        .close, .close1, .close2, .close3, .close4, .close5:focus {
+        .close, .close1, .close2, .close3, .close4,
+        .close5, .close6, .close7, .close8:hover,
+        .close, .close1, .close2, .close3, .close4,
+        .close5, .close6, .close7, .close8:focus {
             color: #000;
              text-decoration: none;
             cursor: pointer;
@@ -346,7 +349,7 @@ include('connection.php');
             <div class="modal-content">
                 <span class="close4">x</span>
                 <header>
-                    <h1> Location : WareHouse Location A4</h1>
+                    <h1> Location : WareHouse Location B1</h1>
                 </header>
                 <table>
                     <tr>
@@ -396,7 +399,7 @@ include('connection.php');
             <div class="modal-content">
                 <span class="close5">x</span>
                 <header>
-                    <h1> Location : WareHouse Location A4</h1>
+                    <h1> Location : WareHouse Location B2</h1>
                 </header>
                 <table>
                     <tr>
@@ -446,7 +449,7 @@ include('connection.php');
             <div class="modal-content">
                 <span class="close6">x</span>
                 <header>
-                    <h1> Location : WareHouse Location A4</h1>
+                    <h1> Location : WareHouse Location B3</h1>
                 </header>
                 <table>
                     <tr>
@@ -496,7 +499,7 @@ include('connection.php');
             <div class="modal-content">
                 <span class="close7">x</span>
                 <header>
-                    <h1> Location : WareHouse Location A4</h1>
+                    <h1> Location : WareHouse Location B4</h1>
                 </header>
                 <table>
                     <tr>
