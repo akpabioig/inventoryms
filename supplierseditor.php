@@ -32,8 +32,8 @@
     <section>
         <h3>SUPPLIERS</h3>
         <img src= "images/supp.png" style{height="250" width="200"}/>
-        <h2>LIST OF SUPPLIERS </h2>
-        <p>FIND BELOW THE LIST OF ALL PRODUCT SUPPLIERS </p>
+        <h2>EDIT SUPPLIER RECORDS</h2>
+        <p>SCROLL TO THE END OF THE RECORD AND CLICK THE EDIT ICON </p>
         <form method="get" action="supplierseditor.php">
         <div id = "form3">
             <table>

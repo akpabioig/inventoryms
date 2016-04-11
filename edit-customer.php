@@ -84,7 +84,7 @@ if(isset($_GET['custid'])){
             <h3>EDIT CUSTOMER RECORDS</h3>
             <img src= "images/cust.png" style{height="250" width="200"}/>
             <h2>Customer Details</h2>
-            <p> Edit Record of Customer already added to the Inventory list </p>
+            <p> Edit Record of Customers already added to the Inventory list </p>
             <p>Be careful to fill out compulsory fields indicated by the "*" key</p>
             <form method="post" action="updatecustomer.php">
                 <div id = "form1">

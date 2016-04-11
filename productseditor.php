@@ -32,8 +32,8 @@
     <section>
         <h3>PRODUCTS</h3>
         <img src= "images/product.png" style{height="250" width="200"}/>
-        <h2>LIST OF PRODUCTS </h2>
-        <p>FIND BELOW THE LIST OF ALL PRODUCTS ADDED TO THE WAREHOUSES </p>
+        <h2>EDIT PRODUCT ENTRIES </h2>
+        <p>SCROLL TO THE END OF THE RECORD AND CLICK THE EDIT ICON </p>
         <form method="get" action="productseditor.php"">
             <div id = "form3">
                 <table id="t2">

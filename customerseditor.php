@@ -32,8 +32,8 @@
     <section>
         <h3>CUSTOMERS</h3>
         <img src= "images/cust.png" style{height="250" width="200"}/>
-        <h2> LIST OF CUSTOMERS </h2>
-        <p> FIND BELOW THE LIST OF ALL CUSTOMERS </p>
+        <h2> EDIT CUSTOMER ENTRIES </h2>
+        <p> SCROLL TO THE END OF THE RECORD AND CLICK THE EDIT ICON </p>
         <form method="get" action="customerseditor.php"">
         <div id = "form3">
             <table id="t2">
