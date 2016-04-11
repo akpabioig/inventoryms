@@ -47,7 +47,7 @@
         <p>Insert the details of the sale to be made to a registered customer </p>
         <p>Be careful to fill out compulsory fields indicated by the "*" key</p>
         <form method="post" action="sales.php">
-        <div id = "">
+        <div id = "form1">
             <table>
                 <tr>
                     <td label for="date"> <a id = "hash">*</a> Date : </td>
