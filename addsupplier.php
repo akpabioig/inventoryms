@@ -50,9 +50,9 @@
                     </tr>
                     <tr>
                         <td label for ="supptel"> <a id = "hash">*</a> Tel Number : </td>
-                        <td><input type="text" id = "suppte" name= "supptel"  placeholder="E.g. Company Phone No." class = "formfield" rows = 1 required></td>
+                        <td><input type="text" id = "suppte" name= "supptel"  placeholder="Company Phone No." class = "formfield" rows = 1 required></td>
                         <td label for ="suppfax"> Fax: </td>
-                        <td><input type="text" id = "suppfa" name= "suppfax"  placeholder="E.g. Company Fax" class = "formfield" rows = 1 ></td>
+                        <td><input type="text" id = "suppfa" name= "suppfax"  placeholder="Company Fax" class = "formfield" rows = 1 ></td>
                     </tr>
                     <tr>
                         <td label for ="suppurl"> Website URL : </td>

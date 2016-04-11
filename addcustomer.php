@@ -79,9 +79,9 @@
                     </tr>
                     <tr>
                         <td label for ="custtel"> <a id = "hash">*</a> Tel Number : </td>
-                        <td><input type="text" id = "custtel" name= "custtel"  value = "" class = "formfield" rows = 1 required></td>
+                        <td><input type="text" id = "custtel" name= "custtel"  placeholder="Customer Phone No."  class = "formfield" rows = 1 required></td>
                         <td label for ="custfax"> Fax: </td>
-                        <td><input type="text" id = "custfax" name= "custfax"  value = "" class = "formfield" rows = 1 ></td>
+                        <td><input type="text" id = "custfax" name= "custfax"  placeholder="Customer Fax"  class = "formfield" rows = 1 ></td>
                     </tr>
                     <tr>
                         <td label for ="custurl"> Website URL : </td>
