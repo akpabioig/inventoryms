@@ -85,7 +85,7 @@
                     </tr>
                     <tr>
                         <td label for ="custurl"> Website URL : </td>
-                        <td><input type="url" id = "custurl" name= "custurl"  value = "" class = "formfield" rows = 1 value = "http://"></td>
+                        <td><input type="url" id = "custurl" name= "custurl"  placeholder="E.g. www.google.com" class = "formfield" rows = 1 value = "http://"></td>
                         <td label for ="custemail"> <a id = "hash">*</a> Customer Email Address : </td>
                         <td><input type="email" id = "custemail" name= "custemail"  value = "" class = "formfield" rows = 1 required></td>
                     </tr>
