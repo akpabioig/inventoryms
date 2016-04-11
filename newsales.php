@@ -82,7 +82,7 @@
                     <td><textarea id = "deladdcust" name= "deladdcust"  value = "" class = "formfield" rows = 5 cols = 28></textarea></td>
                     <td label for="paytype"> <a id = "hash">*</a> Payment Type : </td>
                     <td>
-                        <select class = "formfiel" name = "paytcust">
+                        <select class = "formfield" name = "paytcust">
                             <option selected disabled>SELECT</option>
                             <option value = "CASH"> CASH </option>
                             <option value = "CHEQUE"> CHEQUE </option>
