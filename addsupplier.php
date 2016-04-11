@@ -73,7 +73,7 @@
                         <td label for="custadd1"></td>
                         <td><input type="text" id="addApi" name="su" value="" class = "formfield" rows = 1  placeholder="Type your Postcode"></td>
                         <td><input type="submit" id="custadd2" name="cu" value="Find address" class = "formfield" rows = 1></td>
-                        <td label for ="custadd2"> <select class = "formfiel"><option>sdfasdf</option></select></td>
+                        <td label for ="custadd2"> <select class = "formfield"><option>sdfasdf</option></select></td>
                     </tr>
                     <tr>
                         <td label for="add1"> <a id = "hash">*</a> Address Line 1 : </td>
