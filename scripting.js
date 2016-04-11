@@ -1,6 +1,16 @@
-function validateForm(form)
+function validateproductForm(form)
 {
     alert("You have successfully added new Product");
+}
+
+function validatesupplierForm(form)
+{
+    alert("You have successfully added new Supplier");
+}
+
+function validatecustomerForm(form)
+{
+    alert("You have successfully added new Supplier");
 }
 
 

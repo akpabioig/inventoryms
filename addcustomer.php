@@ -62,7 +62,7 @@
         <h2>Customer Details</h2>
         <p>Insert the details of the new customer to be added to the inventory list</p>
         <p>Be careful to fill out compulsory fields indicated by the "*" key</p>
-        <form method="post" action="customer.php">
+        <form method="post" action="customer.php" onsubmit="return validatecustomerForm()">
             <div id = "form1">
                 <table>
                     <tr>
