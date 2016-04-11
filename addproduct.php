@@ -40,7 +40,7 @@
         <table>
             <tr>
                 <td label for="pnum"> <a id = "hash">*</a> Product Serial Number : </td>
-                <td><input type="text" id="pnum" name="pnum" class = "formfield" required></td>
+                <td><input type="text" id="pnum" name="pnum" class = "formfield" placeholder="E.g. BNG9084786" required></td>
                 <td label for ="supplier"> Supplier : </td>
                 <td>
                     <select name="supplier">
@@ -65,11 +65,11 @@
             </tr>
             <tr>
                 <td label for ="pname"> <a id = "hash">*</a> Product Name : </td>
-                <td><input type="text" id = "pname" name= "pname" class = "formfield" required></td>
+                <td><input type="text" id = "pname" name= "pname" class = "formfield" placeholder="E.g. Marine Riser" required></td>
             </tr>
             <tr>
                 <td label for ="desc"> Product Description : </td>
-                <td><textarea id = "desc" name= "desc" class = "formfield" rows=5 cols=50></textarea></td>
+                <td><textarea id = "desc" name= "desc" class = "formfield" rows=5 cols=50 placeholder="E.g. Offshore"></textarea></td>
             </tr>
             <tr>
                 <td label for ="locn"> <a id = "hash">*</a> Location Code : </td>
@@ -105,13 +105,13 @@
         <table>
             <tr>
                 <td label for ="isp"> <a id = "hash">*</a> Initial Stock Price:</td>
-                <td><input type="number" id="isp" name="isp" class = "formfield" required value="" /></td>
+                <td><input type="number" id="isp" name="isp" class = "formfield" required placeholder="Pounds" /></td>
             </tr>
            <tr>
                <td label for="wp"> <a id = "hash">*</a> Wholesale Price : </td>
-               <td><input type="number" id="wp" name="wp" class = "formfield" required value="" /></td>
+               <td><input type="number" id="wp" name="wp" class = "formfield" required placeholder="Pounds" /></td>
                <td label for ="isp"> <a id = "hash">*</a> Retail Price: </td>
-               <td><input type="number" id="rp" name="rp" class = "formfield" required value="" /></td>
+               <td><input type="number" id="rp" name="rp" class = "formfield" required placeholder="Pounds" /></td>
             </tr>
         </table>
             </div>
