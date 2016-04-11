@@ -119,10 +119,10 @@
                         }
                         $pid += 10;
                     ?>
-                    <td><input type="number" id = "quantity" name= "quantity"  value = "" class = "tablefield"></td>
-                    <td><input type="number" id = "cost" name= "itemcost"  value = "" class = "tablefield"></td>
-                    <td><input type="number" id = "tax" name= "tax"  value = "" class = "tablefield"></td>
-                    <td><input type="number" id = "itemtotal" name= "itemtotal"  value = "" class = "tablefield"></td>
+                    <td><input type="number" id = "quantity" name= "quantity"  value = "" class = "tablefield1"></td>
+                    <td><input type="number" id = "cost" name= "itemcost"  value = "" class = "tablefield1"></td>
+                    <td><input type="number" id = "tax" name= "tax"  value = "" class = "tablefield1"></td>
+                    <td><input type="number" id = "itemtotal" name= "itemtotal"  value = "" class = "tablefield1"></td>
                     <input type="hidden" value="<?php echo $pid; ?>" name="pid" id="pid" />
                 </tr>
 

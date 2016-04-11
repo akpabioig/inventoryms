@@ -138,11 +138,11 @@
                     }
                     $salesid += 10;
                     ?>
-                    <td><input type="number" id = "quancust" name= "quancust"  value = "" class = "tablefield"></td>
-                    <td><input type="number" id = "costcust" name= "costcust"  value = "" class = "tablefield"></td>
-                    <td><input type="number" id = "taxcust" name= "taxcust"  value = "" class = "tablefield"></td>
-                    <td><input type="number" id = "discountcust" name= "discountcust"  value = "" class = "tablefield"></td>
-                    <td><input type="number" id = "minitotal" name= "minitotal"  value = "" class = "tablefield"></td>
+                    <td><input type="number" id = "quancust" name= "quancust"  value = "" class = "tablefield1"></td>
+                    <td><input type="number" id = "costcust" name= "costcust"  value = "" class = "tablefield1"></td>
+                    <td><input type="number" id = "taxcust" name= "taxcust"  value = "" class = "tablefield1"></td>
+                    <td><input type="number" id = "discountcust" name= "discountcust"  value = "" class = "tablefield1"></td>
+                    <td><input type="number" id = "minitotal" name= "minitotal"  value = "" class = "tablefield1"></td>
                     <input type="hidden" value="<?php echo $salesid; ?>" name="salesid" id="salesid" />
                 </tr>
 
