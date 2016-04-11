@@ -40,7 +40,7 @@
                 <table>
                     <tr>
                         <td label for="suppn"> <a id = "hash">*</a> Supplier Name : </td>
-                        <td><input type="text" id="suppn" name="suppn" value="" class = "formfield" rows = 1 required></td>
+                        <td><input type="text" id="suppn" name="suppn" placeholder="E.g. Ionic Metal Fabrications"class = "formfield" rows = 1 required></td>
                     </tr>
                     <tr>
                         <td label for ="contp"> Contact Person : </td>
@@ -50,15 +50,15 @@
                     </tr>
                     <tr>
                         <td label for ="supptel"> <a id = "hash">*</a> Tel Number : </td>
-                        <td><input type="text" id = "suppte" name= "supptel"  value = "" class = "formfield" rows = 1 required></td>
+                        <td><input type="text" id = "suppte" name= "supptel"  placeholder="E.g. Company Phone No." class = "formfield" rows = 1 required></td>
                         <td label for ="suppfax"> Fax: </td>
-                        <td><input type="text" id = "suppfa" name= "suppfax"  value = "" class = "formfield" rows = 1 ></td>
+                        <td><input type="text" id = "suppfa" name= "suppfax"  placeholder="E.g. Company Fax" class = "formfield" rows = 1 ></td>
                     </tr>
                     <tr>
                         <td label for ="suppurl"> Website URL : </td>
-                        <td><input type="url" id = "suppurl" name= "suppurl"  value = "" class = "formfield" rows = 1 ></td>
+                        <td><input type="url" id = "suppurl" name= "suppurl"  value = "http://" class = "formfield" rows = 1 ></td>
                         <td label for ="suppemail"> <a id = "hash">*</a> Supplier Email Address : </td>
-                        <td><input type="email" id = "suppemail" name= "suppemail"  value = "" class = "formfield" rows = 1 required></td>
+                        <td><input type="email" id = "suppemail" name= "suppemail"  placeholder="E.g. ionic@gmail.com" class = "formfield" rows = 1 required></td>
                     </tr>
                     <tr>
                         <td label for ="desc"> Description : </td>
@@ -77,21 +77,21 @@
                     </tr>
                     <tr>
                         <td label for="add1"> <a id = "hash">*</a> Address Line 1 : </td>
-                        <td><input type="text" id="add1" name="add1" value="" class = "formfield" rows = 1></td>
+                        <td><input type="text" id="add1" name="add1" placeholder="E.g. 10 Pittodrie Place" class = "formfield" rows = 1></td>
                         <td label for ="add2"> Address Line 2 : </td>
                         <td><input type="text" id="add2" name="add2" value="" class = "formfield" rows = 1></td>
                     </tr>
                     <tr>
                         <td label for="town"> <a id = "hash">*</a> Town/City : </td>
-                        <td><input type="text" id="town" name="town" value="" class = "formfield" rows = 1></td>
+                        <td><input type="text" id="town" name="town" placeholder="E.g. Aberdeen" class = "formfield" rows = 1></td>
                         <td label for ="county"> County : </td>
-                        <td><input type="text" id="county" name="county" value="" class = "formfield" rows = 1></td>
+                        <td><input type="text" id="county" name="county" placeholder="E.g. Aberdeenshire" class = "formfield" rows = 1></td>
                     </tr>
                     <tr>
                         <td label for="postc"> <a id = "hash">*</a> Postcode : </td>
-                        <td><input type="text" id="postc" name="postcode" value="" class = "formfield" rows = 1 cols = 5></td>
+                        <td><input type="text" id="postc" name="postcode" placeholder="E.g. AB458JH"  class = "formfield" rows = 1 cols = 5></td>
                         <td label for ="country"> <a id = "hash">*</a> Country : </td>
-                        <td><input type="text" id="country" name="country" value="" class = "formfield" rows = 1></td>
+                        <td><input type="text" id="country" name="country" placeholder="E.g. United Kingdom"  class = "formfield" rows = 1></td>
                     </tr>
                 </table>
             </div>
