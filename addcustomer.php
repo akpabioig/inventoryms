@@ -75,7 +75,7 @@
                             </select>
                         </td>
                         <td label for="custn"> <a id = "hash">*</a> Customer Name : </td>
-                        <td><input type="text" id="custn" name="custn" value="" class = "formfield" rows = 1 required></td>
+                        <td><input type="text" id="custn" name="custn" placeholder="E.g. Robert Young" class = "formfield" rows = 1 required></td>
                     </tr>
                     <tr>
                         <td label for ="custtel"> <a id = "hash">*</a> Tel Number : </td>
@@ -87,7 +87,7 @@
                         <td label for ="custurl"> Website URL : </td>
                         <td><input type="url" id = "custurl" name= "custurl"  placeholder="E.g. www.google.com" class = "formfield" rows = 1 value = "http://"></td>
                         <td label for ="custemail"> <a id = "hash">*</a> Customer Email Address : </td>
-                        <td><input type="email" id = "custemail" name= "custemail"  value = "" class = "formfield" rows = 1 required></td>
+                        <td><input type="email" id = "custemail" name= "custemail"  value = "" class = "formfield" rows = 1 placeholder="E.g. rguoilservices@rgu.ac.uk" required></td>
                     </tr>
                     <tr>
                         <td label for ="desc"> Description : </td>
@@ -112,21 +112,21 @@
                     </tr>
                     <tr>
                         <td label for="custadd1"> <a id = "hash">*</a> Address Line 1 : </td>
-                        <td><input type="text" id="custadd1" name="custadd1" value="" class = "formfield" rows = 1></td>
+                        <td><input type="text" id="custadd1" name="custadd1" placeholder="E.g. 10 Pittodrie Place" class = "formfield" rows = 1></td>
                         <td label for ="custadd2"> Address Line 2 : </td>
                         <td><input type="text" id="custadd2" name="custadd2" value="" class = "formfield" rows = 1></td>
                     </tr>
                     <tr>
                         <td label for="ctown"> <a id = "hash">*</a> Town/City : </td>
-                        <td><input type="text" id="ctown" name="ctown" value="" class = "formfield" rows = 1></td>
+                        <td><input type="text" id="ctown" name="ctown" placeholder="E.g. Aberdeen" class = "formfield" rows = 1></td>
                         <td label for ="ccounty"> County : </td>
-                        <td><input type="text" id="ccounty" name="ccounty" value="" class = "formfield" rows = 1></td>
+                        <td><input type="text" id="ccounty" name="ccounty" placeholder="E.g. Aberdeenshire" class = "formfield" rows = 1></td>
                     </tr>
                     <tr>
                         <td label for="cpostc"> <a id = "hash">*</a> Postcode : </td>
-                        <td><input type="text" id="cpostc" name="cpostc" value="" class = "formfield" rows = 1 cols = 5></td>
+                        <td><input type="text" id="cpostc" name="cpostc" placeholder="E.g. AB207FR" class = "formfield" rows = 1 cols = 5></td>
                         <td label for ="ccountry"> <a id = "hash">*</a> Country : </td>
-                        <td><input type="text" id="ccountry" name="ccountry" value="" class = "formfield" rows = 1></td>
+                        <td><input type="text" id="ccountry" name="ccountry" placeholder="E.g. United Kingdom" class = "formfield" rows = 1></td>
                     </tr>
                     </table>
             </div>
