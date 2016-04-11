@@ -47,7 +47,7 @@
         <p>Insert the details of the purchase to be made from a registered supplier </p>
         <p>Be careful to fill out compulsory fields indicated by the "*" key</p>
         <form method="post" action="purchase.php">
-        <div id = "form1">
+        <div id = "">
             <table>
                 <tr>
                     <td label for="date"> <a id = "hash">*</a> Date : </td>
