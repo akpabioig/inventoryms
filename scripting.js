@@ -10,7 +10,7 @@ function validatesupplierForm(form)
 
 function validatecustomerForm(form)
 {
-    alert("You have successfully added new Supplier");
+    alert("You have successfully added new Customer");
 }
 
 
