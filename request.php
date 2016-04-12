@@ -26,6 +26,11 @@ if(isset($_POST['sortby'])) {
                           WHERE addsupplier.supplierid = addproduct.supplierid
                           ORDER BY suppliername";
     }
+} else {
+    $sql= "SELECT addproduct.productid, addproduct.productserialnumber, addproduct.productname, addproduct.productdescription,
+                          addsupplier.suppliername, addproduct.locationid, addproduct.initialstockprice, addproduct.wholesaleprice, addproduct.retailprice
+                          FROM addproduct, addsupplier
+                          WHERE addsupplier.supplierid = addproduct.supplierid";
 }
 $result = mysqli_query($db, $sql);
 if(mysqli_num_rows($result) == 1 || mysqli_num_rows($result) >1){
