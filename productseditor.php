@@ -36,6 +36,13 @@
         <p>SCROLL TO THE END OF THE RECORD AND CLICK THE EDIT ICON </p>
         <form method="get" action="productseditor.php"">
             <div id = "form3">
+                <select name = "sortby" id="sortby" class ="form-control">
+                    <option selected disabled> ORDER BY </option>
+                    <option value = "productid"> PRODUCT ID </option>
+                    <option value = "productname"> PRODUCT NAME </option>
+                    <option value = "locationid"> PRODUCT LOCATION </option>
+                    <option value = "suppliername"> SUPPLIER NAME  </option>
+                </select>
                 <table id="t2">
                     <tr>
                         <th> ID </th>
@@ -53,8 +60,8 @@
                     $sql= "SELECT addproduct.productid, addproduct.productserialnumber, addproduct.productname, addproduct.productdescription,
                           addsupplier.suppliername, addproduct.locationid, addproduct.initialstockprice, addproduct.wholesaleprice, addproduct.retailprice
                           FROM addproduct, addsupplier
-                          WHERE addsupplier.supplierid = addproduct.supplierid
-                          ORDER BY productid";
+                          WHERE addsupplier.supplierid = addproduct.supplierid";
+                          /*ORDER BY productid";*/
                     $result = mysqli_query($db, $sql);
                     if(mysqli_num_rows($result) == 1 || mysqli_num_rows($result) >1){
 
@@ -87,6 +94,22 @@
             </div>
         </form>
       </section>
+    <script>
+        $(document).ready(function(){
+            // Each time you change your sort list, send AJAX request
+            $("#sortby").change(function(){
+                $.ajax({
+                        method: "POST",
+                        url: "request.php",
+                        data: { sortby:$("#sortby").val() }
+                    })
+                    // Copy the AJAX response in the table
+                    .done(function( msg ) {
+                        $("#t2").html(msg);
+                    });
+            });
+        });
+    </script>
 </div>
 <footer>
     <p>&copy; Akpabio Ignatius, 2016</p>
