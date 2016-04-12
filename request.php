@@ -36,8 +36,7 @@ $result = mysqli_query($db, $sql);
 if(mysqli_num_rows($result) == 1 || mysqli_num_rows($result) >1){
 while($row = $result -> fetch_array()) {
     echo "
-
-                                <tr>
+                    <tr>
                         <td><input type=\"text\" id = \"productid\" name= \"productid\"  value = \"{$row['productid']}\" class = \"tablefield\" disabled></td>
                         <td><input type=\"text\" id = \"productsn\" name= \"productsn\"  value = \"{$row['productserialnumber']}\" class = \"tablefield\" disabled></td>
                         <td><input type=\"text\" id = \"productname\" name= \"productname\"  value = \"{$row['productname']}\" class = \"tablefield\" disabled></td>
