@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
     <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
     <script src="scripting.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 </head>
 <body>
 <nav class="w3-sidenav w3-black" style="width:102px">
@@ -36,7 +38,12 @@
         <p>FIND BELOW THE LIST OF ALL PRODUCT SUPPLIERS </p>
         <form method="get" action="supplierseditor.php">
             <div id = "form3">
-                <table>
+                <select name="sortsupplier" id="sortsupplier">
+                    <option selected disabled> ORDER BY</option>
+                    <option value="supplierid"> SUPPLIER ID</option>
+                    <option value="suppliername"> SUPPLIER NAME</option>
+                </select>
+                <table id="t2">
                     <tr>
                         <th> ID </th>
                         <th> Name </th>
@@ -54,6 +61,7 @@
                         <th>Postcode</th>
                         <th>Country</th>
                     </tr>
+                    <tbody id="suppliertd">
                     <?php
 
                     $sql= "SELECT supplierid, suppliername, contactperson, contactpersontel, telnumber, fax, email, url, description,
@@ -92,11 +100,27 @@
                         echo '<option> No Result Found </option>';
                     }
                     ?>
-
+                    </tbody>
                 </table>
             </div>
         </form>
     </section>
+    <script>
+        $(document).ready(function () {
+            // Each time you change your sort list, send AJAX request
+            $("#sortsupplier").change(function () {
+                $.ajax({
+                        method: "POST",
+                        url: "requestsupplier.php",
+                        data: {sortsupplier: $("#sortsupplier").val()}
+                    })
+                    // Copy the AJAX response in the table
+                    .done(function (msg) {
+                        $("#suppliertd").html(msg);
+                    });
+            });
+        });
+    </script>
 </div>
 <footer>
     <p>&copy; Akpabio Ignatius, 2016</p>
