@@ -36,7 +36,7 @@ $result = mysqli_query($db, $sql);
         <a id="logout" href="logout.php"><input type = "button" value = "LOG OUT"/></a>
     </header>
     <section>
-        <h3>CUSTOMERS 5</h3>
+        <h3>CUSTOMERS</h3>
         <img src= "images/cust.png" style{height="250" width="200"}/>
         <h2> EDIT CUSTOMER ENTRIES </h2>
         <p> SCROLL TO THE END OF THE RECORD AND CLICK THE EDIT ICON </p>
@@ -99,6 +99,7 @@ $result = mysqli_query($db, $sql);
                     echo '<option> No Result Found </option>';
                 }
                 ?>
+                </tbody>
             </table>
         </div>
         </form>
