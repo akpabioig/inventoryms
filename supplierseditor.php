@@ -113,7 +113,7 @@
             $("#sortbysupp").change(function(){
                 $.ajax({
                         method: "POST",
-                        url: "request.php",
+                        url: "requestsupplier.php",
                         data: { sortbysupp:$("#sortbysupp").val() }
                     })
                     // Copy the AJAX response in the table
