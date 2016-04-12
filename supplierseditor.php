@@ -111,7 +111,7 @@ $result = mysqli_query($db, $sql);
                 $.ajax({
                         method: "POST",
                         url: "requestsupplier.php",
-                        data: {sortby: $("#sortsupplier").val()}
+                        data: {sortsupplier: $("#sortsupplier").val()}
                     })
                     // Copy the AJAX response in the table
                     .done(function (msg) {
