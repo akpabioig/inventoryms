@@ -51,7 +51,7 @@ $result = mysqli_query($db, $sql);
                 <option value="locationid"> PRODUCT LOCATION</option>
                 <option value="suppliername"> SUPPLIER NAME</option>
             </select>
-            <table id="t2">
+            <table>
                 <tr>
                     <th> ID </th>
                     <th>Serial Number </th>
