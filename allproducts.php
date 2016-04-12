@@ -1,4 +1,10 @@
 <?php include('connection.php');
+$sql = "SELECT addproduct.productid, addproduct.productserialnumber, addproduct.productname, addproduct.productdescription,
+                          addsupplier.suppliername, addproduct.locationid, addproduct.initialstockprice, addproduct.wholesaleprice, addproduct.retailprice
+                          FROM addproduct, addsupplier
+                          WHERE addsupplier.supplierid = addproduct.supplierid
+                          ORDER BY productid";
+$result = mysqli_query($db, $sql);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -30,12 +36,19 @@
         <a id="logout" href="logout.php"><input type = "button" value = "LOG OUT"/></a>
     </header>
     <section>
-        <h3>PRODUCTS</h3>
+        <h3>PRODUCTS 5</h3>
         <img src= "images/product.png" style{height="250" width="200"}/>
         <h2>LIST OF PRODUCTS </h2>
         <p>FIND BELOW THE LIST OF ALL PRODUCTS ADDED TO THE WAREHOUSES </p>
         <form method="get" action="productseditor.php"">
         <div id = "form3">
+            <select name="sortby" id="sortby">
+                <option selected disabled> ORDER BY</option>
+                <option value="productid"> PRODUCT ID</option>
+                <option value="productname"> PRODUCT NAME</option>
+                <option value="locationid"> PRODUCT LOCATION</option>
+                <option value="suppliername"> SUPPLIER NAME</option>
+            </select>
             <table id="t2">
                 <tr>
                     <th> ID </th>
@@ -48,14 +61,8 @@
                     <th>Wholesale Price</th>
                     <th>Retail Price</th>
                 </tr>
+                <tbody id="t2">
                 <?php
-
-                $sql= "SELECT addproduct.productid, addproduct.productserialnumber, addproduct.productname, addproduct.productdescription,
-                          addsupplier.suppliername, addproduct.locationid, addproduct.initialstockprice, addproduct.wholesaleprice, addproduct.retailprice
-                          FROM addproduct, addsupplier
-                          WHERE addsupplier.supplierid = addproduct.supplierid
-                          ORDER BY productid";
-                $result = mysqli_query($db, $sql);
                 if(mysqli_num_rows($result) == 1 || mysqli_num_rows($result) >1){
 
                     while($row = $result -> fetch_array()){
@@ -80,11 +87,27 @@
                     echo '<option> No Result Found </option>';
                 }
                 ?>
-
+                </tbody>
             </table>
         </div>
         </form>
     </section>
+    <script>
+        $(document).ready(function () {
+            // Each time you change your sort list, send AJAX request
+            $("#sortby").change(function () {
+                $.ajax({
+                        method: "POST",
+                        url: "request.php",
+                        data: {sortby: $("#sortby").val()}
+                    })
+                    // Copy the AJAX response in the table
+                    .done(function (msg) {
+                        $("#t2").html(msg);
+                    });
+            });
+        });
+    </script>
 </div>
 <footer>
     <p>&copy; Akpabio Ignatius, 2016</p>
