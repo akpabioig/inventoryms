@@ -8,13 +8,13 @@
 * Time: 00:49
 */
 
-$userAnswer = $_POST['name'];
+//$userAnswer = $_POST['name'];
 
-echo json_encode($userAnswer);
+//echo json_encode($userAnswer);
 
-/*
 
-$post;
+
+$post= "AB10 1PF" ;
 $jsondata =  get_remote_data('https://api.getaddress.io/v2/uk/'.$post.'?api-key=I8Gx__79p0W0NH8oxnp_xw3587');
 $json = json_decode($jsondata, true);
 $json2 = $json['Addresses'];
@@ -80,5 +80,5 @@ return "ERRORCODE22 with $url!!<br/>Last status codes<b/>:".json_encode($status)
 }
 
 
-*/
+
 ?>
