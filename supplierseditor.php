@@ -42,7 +42,7 @@ $result = mysqli_query($db, $sql);
         <p>SCROLL TO THE END OF THE RECORD AND CLICK THE EDIT ICON </p>
         <form method="get" action="supplierseditor.php">
         <div id = "form3">
-            <select name = "sortbysupp" id="sortbysupp" class ="form-control">
+            <select name="sortbysupp" id="sortbysupp">
                 <option selected disabled> ORDER BY </option>
                 <option value = "supplierid"> SUPPLIER ID </option>
                 <option value = "suppliername"> SUPPLIER NAME </option>
