@@ -5,7 +5,6 @@ $sql= "SELECT addproduct.productid, addproduct.productserialnumber, addproduct.p
                           FROM addproduct, addsupplier
                           WHERE addsupplier.supplierid = addproduct.supplierid";
 $result = mysqli_query($db, $sql);
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -40,13 +39,13 @@ $result = mysqli_query($db, $sql);
         <a id="logout" href="logout.php"><input type = "button" value = "LOG OUT"/></a>
     </header>
     <section>
-        <h3>PRODUCTS 1</h3>
+        <h3>PRODUCTS</h3>
         <img src= "images/product.png" style{height="250" width="200"}/>
         <h2>EDIT PRODUCT ENTRIES </h2>
         <p>SCROLL TO THE END OF THE RECORD AND CLICK THE EDIT ICON </p>
         <form method="get" action="productseditor.php"">
             <div id = "form3">
-                <select name = "sortby" id="sortby" class ="form-control">
+                <select name="sortby" id="sortby">
                     <option selected disabled> ORDER BY </option>
                     <option value = "productid"> PRODUCT ID </option>
                     <option value = "productname"> PRODUCT NAME </option>

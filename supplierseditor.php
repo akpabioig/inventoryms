@@ -65,12 +65,13 @@ $result = mysqli_query($db, $sql);
                     <th>Postcode</th>
                     <th>Country</th>
                 </tr>
+                <tbody
+                = "t3">
                 <?php
                 if(mysqli_num_rows($result) == 1 || mysqli_num_rows($result) >1){
                     while($row = $result -> fetch_array()){
                         echo "
-               <tbody id = \"t3\">
-                                <tr>
+                                          <tr>
                         <td><input type=\"text\" id = \"supplierid\" name= \"supplierid\"  value = \"{$row['supplierid']}\" class = \"tablefield\" disabled></td>
                         <td><input type=\"text\" id = \"suppliername\" name= \"suppliername\"  value = \"{$row['suppliername']}\" class = \"tablefield\" disabled></td>
                         <td><input type=\"text\" id = \"contactperson\" name= \"contactperson\"  value = \"{$row['contactperson']}\" class = \"tablefield\" disabled></td>
