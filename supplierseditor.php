@@ -38,7 +38,7 @@
         <p>SCROLL TO THE END OF THE RECORD AND CLICK THE EDIT ICON </p>
         <form method="get" action="supplierseditor.php">
         <div id = "form3">
-            <p>Work 6</p>
+            <p>Fly 6</p>
             <select name = "sortbysupp" id="sortbysupp" class ="form-control">
                 <option selected disabled> ORDER BY </option>
                 <option value = "supplierid"> SUPPLIER ID </option>
