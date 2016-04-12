@@ -64,7 +64,7 @@ $result = mysqli_query($db, $sql);
                         <th>Wholesale Price</th>
                         <th>Retail Price</th>
                     </tr>
-                    <tbody id="sortproduct">
+                    <tbody id="customertd">
                     <?php
                     if(mysqli_num_rows($result) == 1 || mysqli_num_rows($result) >1){
                         while($row = $result -> fetch_array()){
@@ -106,7 +106,7 @@ $result = mysqli_query($db, $sql);
                     })
                     // Copy the AJAX response in the table
                     .done(function( msg ) {
-                        $("#sortproduct").html(msg);
+                        $("#customertd").html(msg);
                     });
             });
         });
