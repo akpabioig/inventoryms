@@ -10,6 +10,11 @@ if (isset($_POST['sortsupplier'])) {
                       addressline1, addressline2, town, county, postcode, country
                           FROM addsupplier
                           ORDER BY suppliername";
+    } else if ($_POST['sortsupplier'] == "country") {
+        $sql = "SELECT supplierid, suppliername, contactperson, contactpersontel, telnumber, fax, email, url, description,
+                      addressline1, addressline2, town, county, postcode, country
+                          FROM addsupplier
+                          ORDER BY country";
     }
 } else {
     $sql = "SELECT supplierid, suppliername, contactperson, contactpersontel, telnumber, fax, email, url, description,

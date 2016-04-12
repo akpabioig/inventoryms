@@ -46,6 +46,7 @@ $result = mysqli_query($db, $sql);
                 <option selected disabled> ORDER BY </option>
                 <option value = "supplierid"> SUPPLIER ID </option>
                 <option value = "suppliername"> SUPPLIER NAME </option>
+                <option value="country"> SUPPLIER COUNTRY</option>
             </select>
             <table>
                 <tr>

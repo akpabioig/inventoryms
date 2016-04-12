@@ -10,6 +10,11 @@ if (isset($_POST['sortsupplier'])) {
                       addressline1, addressline2, town, county, postcode, country
                           FROM addsupplier
                           ORDER BY suppliername";
+    } else if ($_POST['sortsupplier'] == "country") {
+        $sql = "SELECT supplierid, suppliername, contactperson, contactpersontel, telnumber, fax, email, url, description,
+                      addressline1, addressline2, town, county, postcode, country
+                          FROM addsupplier
+                          ORDER BY country";
     }
 } else {
     $sql = "SELECT supplierid, suppliername, contactperson, contactpersontel, telnumber, fax, email, url, description,
@@ -40,8 +45,6 @@ if (mysqli_num_rows($result) == 1 || mysqli_num_rows($result) > 1) {
 
                         <td><input type=\"text\" id = \"postcode\" name= \"postcode\"  value = \"{$row['postcode']}\" class = \"tablefield\" disabled></td>
                         <td><input type=\"text\" id = \"country\" name= \"country\"  value = \"{$row['country']}\" class = \"tablefield\" disabled></td>
-                        <td><a href='edit-supplier.php?suppid={$row['supplierid']}'><img src = 'images/edit.png' style{height=\"25\" width=\"25\"}></a></td>
-                        <td><a href='deletesupplier.php?suppid={$row['supplierid']}'> <img src = 'images/delete.png' style{height=\"25\" width=\"25\"}></a> </td>
                     </tr>
 
                                 ";
