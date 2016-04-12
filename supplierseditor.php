@@ -38,7 +38,7 @@
         <p>SCROLL TO THE END OF THE RECORD AND CLICK THE EDIT ICON </p>
         <form method="get" action="supplierseditor.php">
         <div id = "form3">
-            <p>Work</p>
+            <p>Work2</p>
             <select name = "sortbysupp" id="sortbysupp" class ="form-control">
                 <option selected disabled> ORDER BY </option>
                 <option value = "supplierid"> SUPPLIER ID </option>
@@ -69,11 +69,9 @@
                           FROM addsupplier";
                 $result = mysqli_query($db, $sql);
                 if(mysqli_num_rows($result) == 1 || mysqli_num_rows($result) >1){
-
                     while($row = $result -> fetch_array()){
                         echo "
                <tbody id = \"t3\">
-
                                 <tr>
                         <td><input type=\"text\" id = \"supplierid\" name= \"supplierid\"  value = \"{$row['supplierid']}\" class = \"tablefield\" disabled></td>
                         <td><input type=\"text\" id = \"suppliername\" name= \"suppliername\"  value = \"{$row['suppliername']}\" class = \"tablefield\" disabled></td>
