@@ -1,12 +1,12 @@
 <?php include('connection.php');
 // Working software
-if(isset($_POST['sortbysupp'])) {
-    if($_POST['sortbysupp'] == "supplierid") {
+if (isset($_POST['sortsupplier'])) {
+    if ($_POST['sortsupplier'] == "supplierid") {
         $sql = "SELECT supplierid, suppliername, contactperson, contactpersontel, telnumber, fax, email, url, description,
                       addressline1, addressline2, town, county, postcode, country
                           FROM addsupplier
                           ORDER BY supplierid";
-    } else if ($_POST['sortbysupp'] == "suppliername") {
+    } else if ($_POST['sortsupplier'] == "suppliername") {
         $sql = "SELECT supplierid, suppliername, contactperson, contactpersontel, telnumber, fax, email, url, description,
                       addressline1, addressline2, town, county, postcode, country
                           FROM addsupplier

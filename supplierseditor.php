@@ -36,13 +36,13 @@ $result = mysqli_query($db, $sql);
         <a id="logout" href="logout.php"><input type = "button" value = "LOG OUT"/></a>
     </header>
     <section>
-        <h3>SUPPLIERS</h3>
+        <h3>SUPPLIERS 34</h3>
         <img src= "images/supp.png" style{height="250" width="200"}/>
         <h2>EDIT SUPPLIER RECORDS</h2>
         <p>SCROLL TO THE END OF THE RECORD AND CLICK THE EDIT ICON </p>
         <form method="get" action="supplierseditor.php">
         <div id = "form3">
-            <select name="sortbysupp" id="sortbysupp">
+            <select name="sortsupplier" id="sortsupplier">
                 <option selected disabled> ORDER BY </option>
                 <option value = "supplierid"> SUPPLIER ID </option>
                 <option value = "suppliername"> SUPPLIER NAME </option>
@@ -65,7 +65,7 @@ $result = mysqli_query($db, $sql);
                     <th>Postcode</th>
                     <th>Country</th>
                 </tr>
-                <tbody id="t3">
+                <tbody id="suppliertd">
                 <?php
                 if(mysqli_num_rows($result) == 1 || mysqli_num_rows($result) >1){
                     while($row = $result -> fetch_array()){
@@ -104,23 +104,23 @@ $result = mysqli_query($db, $sql);
         </div>
         </form>
     </section>
-</div>
-<script>
-    $(document).ready(function () {
-        // Each time you change your sort list, send AJAX request
-        $("#sortbysupp").change(function () {
-            $.ajax({
-                    method: "POST",
-                    url: "request.php",
-                    data: {sortbysupp: $("#sortbysupp").val()}
-                })
-                // Copy the AJAX response in the table
-                .done(function (msg) {
-                    $("#t3").html(msg);
-                });
+    <script>
+        $(document).ready(function () {
+            // Each time you change your sort list, send AJAX request
+            $("#sortsupplier").change(function () {
+                $.ajax({
+                        method: "POST",
+                        url: "requestsupplier.php",
+                        data: {sortby: $("#sortsupplier").val()}
+                    })
+                    // Copy the AJAX response in the table
+                    .done(function (msg) {
+                        $("#suppliertd").html(msg);
+                    });
+            });
         });
-    });
-</script>
+    </script>
+</div>
 <footer>
     <p>&copy; Akpabio Ignatius, 2016</p>
 </footer>
