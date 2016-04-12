@@ -46,6 +46,7 @@
                     <option value = "locationid"> PRODUCT LOCATION </option>
                     <option value = "suppliername"> SUPPLIER NAME  </option>
                 </select>
+                <p>Work </p>
                 <table>
                     <tr>
                         <th> ID </th>
