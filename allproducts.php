@@ -38,7 +38,7 @@ $result = mysqli_query($db, $sql);
         <a id="logout" href="logout.php"><input type = "button" value = "LOG OUT"/></a>
     </header>
     <section>
-        <h3>PRODUCTS 5</h3>
+        <h3>PRODUCTS</h3>
         <img src= "images/product.png" style{height="250" width="200"}/>
         <h2>LIST OF PRODUCTS </h2>
         <p>FIND BELOW THE LIST OF ALL PRODUCTS ADDED TO THE WAREHOUSES </p>
