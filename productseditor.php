@@ -39,7 +39,7 @@
         <p>SCROLL TO THE END OF THE RECORD AND CLICK THE EDIT ICON </p>
         <form method="get" action="productseditor.php"">
             <div id = "form3">
-                <p>Work 2</p>
+                <p>Work 3</p>
                 <select name = "sortby" id="sortby" class ="form-control">
                     <option selected disabled> ORDER BY </option>
                     <option value = "productid"> PRODUCT ID </option>
