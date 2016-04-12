@@ -1,5 +1,5 @@
 <?php include('connection.php');
-
+//
 $sql= "SELECT addproduct.productid, addproduct.productserialnumber, addproduct.productname, addproduct.productdescription,
                           addsupplier.suppliername, addproduct.locationid, addproduct.initialstockprice, addproduct.wholesaleprice, addproduct.retailprice
                           FROM addproduct, addsupplier
