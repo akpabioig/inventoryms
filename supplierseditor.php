@@ -1,4 +1,8 @@
 <?php include('connection.php');
+$sql = "SELECT supplierid, suppliername, contactperson, contactpersontel, telnumber, fax, email, url, description,
+                      addressline1, addressline2, town, county, postcode, country
+                          FROM addsupplier";
+$result = mysqli_query($db, $sql);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -62,11 +66,6 @@
                     <th>Country</th>
                 </tr>
                 <?php
-
-                $sql= "SELECT supplierid, suppliername, contactperson, contactpersontel, telnumber, fax, email, url, description,
-                      addressline1, addressline2, town, county, postcode, country
-                          FROM addsupplier";
-                $result = mysqli_query($db, $sql);
                 if(mysqli_num_rows($result) == 1 || mysqli_num_rows($result) >1){
                     while($row = $result -> fetch_array()){
                         echo "

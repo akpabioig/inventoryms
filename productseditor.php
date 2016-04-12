@@ -4,7 +4,6 @@ $sql= "SELECT addproduct.productid, addproduct.productserialnumber, addproduct.p
                           addsupplier.suppliername, addproduct.locationid, addproduct.initialstockprice, addproduct.wholesaleprice, addproduct.retailprice
                           FROM addproduct, addsupplier
                           WHERE addsupplier.supplierid = addproduct.supplierid";
-/*ORDER BY productid";*/
 $result = mysqli_query($db, $sql);
 
 ?>
@@ -41,7 +40,7 @@ $result = mysqli_query($db, $sql);
         <a id="logout" href="logout.php"><input type = "button" value = "LOG OUT"/></a>
     </header>
     <section>
-        <h3>PRODUCTS</h3>
+        <h3>PRODUCTS 1</h3>
         <img src= "images/product.png" style{height="250" width="200"}/>
         <h2>EDIT PRODUCT ENTRIES </h2>
         <p>SCROLL TO THE END OF THE RECORD AND CLICK THE EDIT ICON </p>
