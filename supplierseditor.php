@@ -65,8 +65,7 @@ $result = mysqli_query($db, $sql);
                     <th>Postcode</th>
                     <th>Country</th>
                 </tr>
-                <tbody
-                = "t3">
+                <tbody id="t3">
                 <?php
                 if(mysqli_num_rows($result) == 1 || mysqli_num_rows($result) >1){
                     while($row = $result -> fetch_array()){
