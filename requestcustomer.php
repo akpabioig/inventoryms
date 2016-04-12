@@ -1,31 +1,40 @@
 <?php include('connection.php');
-if (isset($_POST['sortsupplier'])) {
-    if ($_POST['sortsupplier'] == "supplierid") {
-        $sql = "SELECT supplierid, suppliername, contactperson, contactpersontel, telnumber, fax, email, url, description,
+
+if (isset($_POST['sortcustomer'])) {
+    if ($_POST['sortcustomer'] == "customerid") {
+        $sql = "SELECT customerid, customertype, customername, telnumber, fax, email, url, description,
                       addressline1, addressline2, town, county, postcode, country
-                          FROM addsupplier
-                          ORDER BY supplierid";
-    } else if ($_POST['sortsupplier'] == "suppliername") {
-        $sql = "SELECT supplierid, suppliername, contactperson, contactpersontel, telnumber, fax, email, url, description,
+                          FROM addcustomer
+                          ORDER BY customerid";
+    } else if ($_POST['sortcustomer'] == "customertype") {
+        $sql = "SELECT customerid, customertype, customername, telnumber, fax, email, url, description,
                       addressline1, addressline2, town, county, postcode, country
-                          FROM addsupplier
-                          ORDER BY suppliername";
+                          FROM addcustomer
+                          ORDER BY customertype";
+    } else if ($_POST['sortcustomer'] == "customername") {
+        $sql = "SELECT customerid, customertype, customername, telnumber, fax, email, url, description,
+                      addressline1, addressline2, town, county, postcode, country
+                          FROM addcustomer
+                          ORDER BY customername";
+    } else if ($_POST['sortcustomer'] == "country") {
+        $sql = "SELECT customerid, customertype, customername, telnumber, fax, email, url, description,
+                      addressline1, addressline2, town, county, postcode, country
+                          FROM addcustomer
+                          ORDER BY country";
     }
 } else {
-    $sql = "SELECT supplierid, suppliername, contactperson, contactpersontel, telnumber, fax, email, url, description,
+    $sql = "SELECT customerid, customertype, customername, telnumber, fax, email, url, description,
                       addressline1, addressline2, town, county, postcode, country
-                          FROM addsupplier";
+                          FROM addcustomer";
 }
-//Work bitch
 $result = mysqli_query($db, $sql);
 if (mysqli_num_rows($result) == 1 || mysqli_num_rows($result) > 1) {
     while ($row = $result->fetch_array()) {
         echo "
-                                          <tr>
-                        <td><input type=\"text\" id = \"supplierid\" name= \"supplierid\"  value = \"{$row['supplierid']}\" class = \"tablefield\" disabled></td>
-                        <td><input type=\"text\" id = \"suppliername\" name= \"suppliername\"  value = \"{$row['suppliername']}\" class = \"tablefield\" disabled></td>
-                        <td><input type=\"text\" id = \"contactperson\" name= \"contactperson\"  value = \"{$row['contactperson']}\" class = \"tablefield\" disabled></td>
-                        <td><input type=\"text\" id = \"contactpersontel\" name= \"contactpersontel\"  value = \"{$row['contactpersontel']}\" class = \"tablefield\" disabled></td>
+                                <tr>
+                        <td><input type=\"text\" id = \"customerid\" name= \"customerid\"  value = \"{$row['customerid']}\" class = \"tablefield\" disabled></td>
+                        <td><input type=\"text\" id = \"customertype\" name= \"customertype\"  value = \"{$row['customertype']}\" class = \"tablefield\" disabled></td>
+                        <td><input type=\"text\" id = \"customername\" name= \"customername\"  value = \"{$row['customername']}\" class = \"tablefield\" disabled></td>
 
                         <td><input type=\"text\" id = \"telnumber\" name= \"telnumber\"  value = \"{$row['telnumber']}\" class = \"tablefield\" disabled></td>
                         <td><input type=\"text\" id = \"fax\" name= \"fax\"  value = \"{$row['fax']}\" class = \"tablefield\" disabled></td>
@@ -40,8 +49,8 @@ if (mysqli_num_rows($result) == 1 || mysqli_num_rows($result) > 1) {
 
                         <td><input type=\"text\" id = \"postcode\" name= \"postcode\"  value = \"{$row['postcode']}\" class = \"tablefield\" disabled></td>
                         <td><input type=\"text\" id = \"country\" name= \"country\"  value = \"{$row['country']}\" class = \"tablefield\" disabled></td>
-                        <td><a href='edit-supplier.php?suppid={$row['supplierid']}'><img src = 'images/edit.png' style{height=\"25\" width=\"25\"}></a></td>
-                        <td><a href='deletesupplier.php?suppid={$row['supplierid']}'> <img src = 'images/delete.png' style{height=\"25\" width=\"25\"}></a> </td>
+                        <td><a href='edit-customer.php?custid={$row['customerid']}'><img src = 'images/edit.png' style{height=\"25\" width=\"25\"}></a></td>
+                        <td><a href='deletecustomer.php?custid={$row['customerid']}'> <img src = 'images/delete.png' style{height=\"25\" width=\"25\"}></a> </td>
                     </tr>
 
                                 ";

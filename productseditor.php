@@ -52,7 +52,7 @@ $result = mysqli_query($db, $sql);
                     <option value = "locationid"> PRODUCT LOCATION </option>
                     <option value = "suppliername"> SUPPLIER NAME  </option>
                 </select>
-                <table>
+                <table id="t2">
                     <tr>
                         <th> ID </th>
                         <th>Serial Number </th>
@@ -64,7 +64,7 @@ $result = mysqli_query($db, $sql);
                         <th>Wholesale Price</th>
                         <th>Retail Price</th>
                     </tr>
-                    <tbody id = "t2">
+                    <tbody id="sortproduct">
                     <?php
                     if(mysqli_num_rows($result) == 1 || mysqli_num_rows($result) >1){
                         while($row = $result -> fetch_array()){
@@ -106,7 +106,7 @@ $result = mysqli_query($db, $sql);
                     })
                     // Copy the AJAX response in the table
                     .done(function( msg ) {
-                        $("#t2").html(msg);
+                        $("#sortproduct").html(msg);
                     });
             });
         });

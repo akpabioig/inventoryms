@@ -36,7 +36,7 @@ $result = mysqli_query($db, $sql);
         <a id="logout" href="logout.php"><input type = "button" value = "LOG OUT"/></a>
     </header>
     <section>
-        <h3>SUPPLIERS 34</h3>
+        <h3>SUPPLIERS</h3>
         <img src= "images/supp.png" style{height="250" width="200"}/>
         <h2>EDIT SUPPLIER RECORDS</h2>
         <p>SCROLL TO THE END OF THE RECORD AND CLICK THE EDIT ICON </p>

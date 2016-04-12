@@ -1,4 +1,8 @@
 <?php include('connection.php');
+$sql = "SELECT customerid, customertype, customername, telnumber, fax, email, url, description,
+                      addressline1, addressline2, town, county, postcode, country
+                          FROM addcustomer";
+$result = mysqli_query($db, $sql);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -11,6 +15,8 @@
     <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
     <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
     <script src="scripting.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 </head>
 <body>
 <nav class="w3-sidenav w3-black" style="width:102px">
@@ -30,12 +36,19 @@
         <a id="logout" href="logout.php"><input type = "button" value = "LOG OUT"/></a>
     </header>
     <section>
-        <h3>CUSTOMERS</h3>
+        <h3>CUSTOMERS 56665</h3>
         <img src= "images/cust.png" style{height="250" width="200"}/>
         <h2> EDIT CUSTOMER ENTRIES </h2>
         <p> SCROLL TO THE END OF THE RECORD AND CLICK THE EDIT ICON </p>
         <form method="get" action="customerseditor.php"">
         <div id = "form3">
+            <select name="sortcustomer" id="sortcustomer">
+                <option selected disabled> ORDER BY</option>
+                <option value="customerid"> CUSTOMER ID</option>
+                <option value="customertype"> CUSTOMER TYPE</option>
+                <option value="customername"> CUSTOMER NAME</option>
+                <option value="country"> CUSTOMER COUNTRY</option>
+            </select>
             <table id="t2">
                 <tr>
                     <th> ID </th>
@@ -53,17 +66,11 @@
                     <th>Postcode</th>
                     <th>Country</th>
                 </tr>
+                <tbody id="customertd">
                 <?php
-
-                $sql= "SELECT customerid, customertype, customername, telnumber, fax, email, url, description,
-                      addressline1, addressline2, town, county, postcode, country
-                          FROM addcustomer";
-                $result = mysqli_query($db, $sql);
                 if(mysqli_num_rows($result) == 1 || mysqli_num_rows($result) >1){
-
                     while($row = $result -> fetch_array()){
                         echo "
-
                                 <tr>
                         <td><input type=\"text\" id = \"customerid\" name= \"customerid\"  value = \"{$row['customerid']}\" class = \"tablefield\" disabled></td>
                         <td><input type=\"text\" id = \"customertype\" name= \"customertype\"  value = \"{$row['customertype']}\" class = \"tablefield\" disabled></td>
@@ -96,6 +103,22 @@
         </div>
         </form>
     </section>
+    <script>
+        $(document).ready(function () {
+            // Each time you change your sort list, send AJAX request
+            $("#sortcustomer").change(function () {
+                $.ajax({
+                        method: "POST",
+                        url: "request.php",
+                        data: {sortcustomer: $("#sortcustomer").val()}
+                    })
+                    // Copy the AJAX response in the table
+                    .done(function (msg) {
+                        $("#customertd").html(msg);
+                    });
+            });
+        });
+    </script>
 </div>
 <footer>
     <p>&copy; Akpabio Ignatius, 2016</p>
