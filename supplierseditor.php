@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
     <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
     <script src="scripting.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 </head>
 <body>
 <nav class="w3-sidenav w3-black" style="width:102px">
@@ -36,6 +38,11 @@
         <p>SCROLL TO THE END OF THE RECORD AND CLICK THE EDIT ICON </p>
         <form method="get" action="supplierseditor.php">
         <div id = "form3">
+            <select name = "sortbysupp" id="sortbysupp" class ="form-control">
+                <option selected disabled> ORDER BY </option>
+                <option value = "supplierid"> SUPPLIER ID </option>
+                <option value = "suppliername"> SUPPLIER NAME </option>
+            </select>
             <table>
                 <tr>
                     <th> ID </th>
@@ -64,6 +71,7 @@
 
                     while($row = $result -> fetch_array()){
                         echo "
+               <tbody id = \"t3\">
 
                                 <tr>
                         <td><input type=\"text\" id = \"supplierid\" name= \"supplierid\"  value = \"{$row['supplierid']}\" class = \"tablefield\" disabled></td>
@@ -94,11 +102,27 @@
                     echo '<option> No Result Found </option>';
                 }
                 ?>
-
+                </tbody>
             </table>
         </div>
         </form>
     </section>
+    <script>
+        $(document).ready(function(){
+            // Each time you change your sort list, send AJAX request
+            $("#sortbysupp").change(function(){
+                $.ajax({
+                        method: "POST",
+                        url: "request.php",
+                        data: { sortbysupp:$("#sortbysupp").val() }
+                    })
+                    // Copy the AJAX response in the table
+                    .done(function( msg ) {
+                        $("#t3").html(msg);
+                    });
+            });
+        });
+    </script>
 </div>
 <footer>
     <p>&copy; Akpabio Ignatius, 2016</p>
