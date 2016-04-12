@@ -31,7 +31,7 @@ if(isset($_POST['sortby'])) {
                           addsupplier.suppliername, addproduct.locationid, addproduct.initialstockprice, addproduct.wholesaleprice, addproduct.retailprice
                           FROM addproduct, addsupplier
                           WHERE addsupplier.supplierid = addproduct.supplierid";
-}
+}/*
 $result = mysqli_query($db, $sql);
 if(mysqli_num_rows($result) == 1 || mysqli_num_rows($result) >1){
 while($row = $result -> fetch_array()) {
@@ -56,5 +56,5 @@ while($row = $result -> fetch_array()) {
 }
 }else{
     echo '<option> No Result Found </option>';
-}
+}*/
 ?>
