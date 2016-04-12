@@ -17,6 +17,7 @@ if (isset($_POST['sortsupplier'])) {
                       addressline1, addressline2, town, county, postcode, country
                           FROM addsupplier";
 }
+//Work bitch
 $result = mysqli_query($db, $sql);
 if (mysqli_num_rows($result) == 1 || mysqli_num_rows($result) > 1) {
     while ($row = $result->fetch_array()) {
