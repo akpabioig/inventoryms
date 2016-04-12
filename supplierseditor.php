@@ -105,23 +105,23 @@ $result = mysqli_query($db, $sql);
         </div>
         </form>
     </section>
-    <script>
-        $(document).ready(function(){
-            // Each time you change your sort list, send AJAX request
-            $("#sortbysupp").change(function(){
-                $.ajax({
-                        method: "POST",
-                        url: "requestsupplier.php",
-                        data: {sortby: $("#sortbysupp").val()}
-                    })
-                    // Copy the AJAX response in the table
-                    .done(function( msg ) {
-                        $("#t3").html(msg);
-                    });
-            });
-        });
-    </script>
 </div>
+<script>
+    $(document).ready(function () {
+        // Each time you change your sort list, send AJAX request
+        $("#sortbysupp").change(function () {
+            $.ajax({
+                    method: "POST",
+                    url: "requestsupplier.php",
+                    data: {sortbysupp: $("#sortbysupp").val()}
+                })
+                // Copy the AJAX response in the table
+                .done(function (msg) {
+                    $("#t3").html(msg);
+                });
+        });
+    });
+</script>
 <footer>
     <p>&copy; Akpabio Ignatius, 2016</p>
 </footer>
