@@ -110,7 +110,7 @@ $result = mysqli_query($db, $sql);
             $("#sortcustomer").change(function () {
                 $.ajax({
                         method: "POST",
-                        url: "requestcustomer.php",
+                        url: "requestcustomer1.php",
                         data: {sortcustomer: $("#sortcustomer").val()}
                     })
                     // Copy the AJAX response in the table
