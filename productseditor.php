@@ -1,4 +1,12 @@
 <?php include('connection.php');
+
+$sql= "SELECT addproduct.productid, addproduct.productserialnumber, addproduct.productname, addproduct.productdescription,
+                          addsupplier.suppliername, addproduct.locationid, addproduct.initialstockprice, addproduct.wholesaleprice, addproduct.retailprice
+                          FROM addproduct, addsupplier
+                          WHERE addsupplier.supplierid = addproduct.supplierid";
+/*ORDER BY productid";*/
+$result = mysqli_query($db, $sql);
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -39,7 +47,7 @@
         <p>SCROLL TO THE END OF THE RECORD AND CLICK THE EDIT ICON </p>
         <form method="get" action="productseditor.php"">
             <div id = "form3">
-                <p>Work 3</p>
+                <p>Work 4</p>
                 <select name = "sortby" id="sortby" class ="form-control">
                     <option selected disabled> ORDER BY </option>
                     <option value = "productid"> PRODUCT ID </option>
@@ -59,19 +67,11 @@
                         <th>Wholesale Price</th>
                         <th>Retail Price</th>
                     </tr>
+                    <tbody id = "t2">
                     <?php
-
-                    $sql= "SELECT addproduct.productid, addproduct.productserialnumber, addproduct.productname, addproduct.productdescription,
-                          addsupplier.suppliername, addproduct.locationid, addproduct.initialstockprice, addproduct.wholesaleprice, addproduct.retailprice
-                          FROM addproduct, addsupplier
-                          WHERE addsupplier.supplierid = addproduct.supplierid";
-                          /*ORDER BY productid";*/
-                    $result = mysqli_query($db, $sql);
-
                     if(mysqli_num_rows($result) == 1 || mysqli_num_rows($result) >1){
                         while($row = $result -> fetch_array()){
                             echo "
-                    <tbody id = \"t2\">
                                 <tr>
                         <td><input type=\"text\" id = \"productid\" name= \"productid\"  value = \"{$row['productid']}\" class = \"tablefield\" disabled></td>
                         <td><input type=\"text\" id = \"productsn\" name= \"productsn\"  value = \"{$row['productserialnumber']}\" class = \"tablefield\" disabled></td>
