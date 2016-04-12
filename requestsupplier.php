@@ -1,4 +1,5 @@
 <?php include('connection.php');
+// Working software
 if(isset($_POST['sortbysupp'])) {
     if($_POST['sortbysupp'] == "supplierid") {
         $sql = "SELECT supplierid, suppliername, contactperson, contactpersontel, telnumber, fax, email, url, description,
