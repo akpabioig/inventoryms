@@ -41,8 +41,8 @@ $result = mysqli_query($db, $sql);
     <section>
         <h3>PRODUCTS</h3>
         <img src= "images/product.png" style{height="250" width="200"}/>
-        <h2>EDIT PRODUCT ENTRIES </h2>
-        <p>SCROLL TO THE END OF THE RECORD AND CLICK THE EDIT ICON-- </p>
+        <h2>EDIT PRODUCT ENTRIES 5</h2>
+        <p>SCROLL TO THE END OF THE RECORD AND CLICK THE EDIT ICON</p>
         <form method="get" action="productseditor.php"">
             <div id = "form3">
                 <select name="sortby" id="sortby">
