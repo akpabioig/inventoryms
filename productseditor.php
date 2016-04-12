@@ -43,7 +43,7 @@
                     <option value = "locationid"> PRODUCT LOCATION </option>
                     <option value = "suppliername"> SUPPLIER NAME  </option>
                 </select>
-                <table id="t2">
+                <table>
                     <tr>
                         <th> ID </th>
                         <th>Serial Number </th>
@@ -63,11 +63,11 @@
                           WHERE addsupplier.supplierid = addproduct.supplierid";
                           /*ORDER BY productid";*/
                     $result = mysqli_query($db, $sql);
-                    if(mysqli_num_rows($result) == 1 || mysqli_num_rows($result) >1){
 
+                    if(mysqli_num_rows($result) == 1 || mysqli_num_rows($result) >1){
                         while($row = $result -> fetch_array()){
                             echo "
-
+                    <tbody id = \"t2\">
                                 <tr>
                         <td><input type=\"text\" id = \"productid\" name= \"productid\"  value = \"{$row['productid']}\" class = \"tablefield\" disabled></td>
                         <td><input type=\"text\" id = \"productsn\" name= \"productsn\"  value = \"{$row['productserialnumber']}\" class = \"tablefield\" disabled></td>
@@ -89,7 +89,7 @@
                         echo '<option> No Result Found </option>';
                     }
                     ?>
-
+                    </tbody>
                 </table>
             </div>
         </form>
