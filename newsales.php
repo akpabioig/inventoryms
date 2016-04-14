@@ -179,8 +179,7 @@
 <script>
     $(document).ready(function(){
         $("#product").change(function () {
-            <?php $me = rand(1, 12); ?>
-            $("#costcust").val(<?php echo $me; ?>);
+            $("#costcust").val(<?php echo rand(1, 9); ?>);
             $("#itemcustl").val(locid);
         });
     });
