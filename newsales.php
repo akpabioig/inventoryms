@@ -119,7 +119,7 @@
                                         echo '</option>';
 
                                         echo '<script type="application/javascript">';
-                                        echo 'var price[] = ' . json_encode($row['retailprice']) . ';';
+                                        echo 'var price = ' . json_encode($row['retailprice']) . ';';
                                         echo 'var locid = ' . json_encode($row['locationid']) . ';';
                                         echo '</script>';
                                     }
@@ -179,7 +179,7 @@
 <script>
     $(document).ready(function(){
         $("#product").change(function () {
-            $("#costcust").val(price[1]);
+            $("#costcust").val(price);
             $("#itemcustl").val(locid);
         });
     });
