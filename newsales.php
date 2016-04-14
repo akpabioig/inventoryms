@@ -119,8 +119,8 @@
                                         echo '</option>';
 
                                         echo '<script type="application/javascript">';
-                                        echo 'var price = ' . json_encode($row['retailprice']) . ';';
-                                        echo 'var locid = ' . json_encode($row['locationid']) . ';';
+                                        echo 'var price[] = ' . json_encode($row['retailprice']) . ';';
+                                        echo 'var locid[] = ' . json_encode($row['locationid']) . ';';
                                         echo '</script>';
                                     }
                                 }else{
@@ -128,6 +128,7 @@
                                 }
 
                             ?>
+
                         </select>
                     </td>
                     <?php
