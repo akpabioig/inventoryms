@@ -1,4 +1,9 @@
 <?php
+session_start();
+if (!isset($_SESSION['user'])) {
+    header("Location: login.php");
+}
+
     include('connection.php');
     if(isset($_GET['prodid'])){
     $prodId = $_GET['prodid'];

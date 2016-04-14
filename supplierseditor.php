@@ -1,4 +1,10 @@
-<?php include('connection.php');
+<?php
+session_start();
+if (!isset($_SESSION['user'])) {
+    header("Location: login.php");
+}
+
+include('connection.php');
 $sql = "SELECT supplierid, suppliername, contactperson, contactpersontel, telnumber, fax, email, url, description,
                       addressline1, addressline2, town, county, postcode, country
                           FROM addsupplier";

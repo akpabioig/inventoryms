@@ -1,4 +1,10 @@
-<?php include('connection.php');
+<?php
+session_start();
+if (!isset($_SESSION['user'])) {
+    header("Location: login.php");
+}
+
+include('connection.php');
     if(isset($_GET['suppid'])){
         $supplierId = $_GET['suppid'];
         $sqlselect = "SELECT * FROM addsupplier WHERE supplierid = $supplierId";
