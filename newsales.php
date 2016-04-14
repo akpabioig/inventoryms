@@ -179,8 +179,8 @@
 <script>
     $(document).ready(function(){
         $("#product").change(function () {
-            $("#costcust").val(<?php echo rand(1, 9); ?>);
-            $("#itemcustl").val(locid);
+            //$("#costcust").val(<?php //echo rand(1, 9); ?>);
+            //$("#itemcustl").val(locid);
 
             var dataString = 'myvariant=' + $(this).val();
             $.ajax({
@@ -189,7 +189,7 @@
                 data: dataString,
                 cache: false,
                 success: function (html) {
-                    $("#itemcustl").val(locid);
+                    $("#itemcustl").html(html);
                 }
         });
     });
