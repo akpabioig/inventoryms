@@ -128,7 +128,6 @@
                                 }
 
                             ?>
-
                         </select>
                     </td>
                     <?php
@@ -179,8 +178,8 @@
 <script>
     $(document).ready(function(){
         $("#product").change(function () {
-            $("#costcust").val(<?php echo rand(1, 15);?>
-                $("#itemcustl").val(locid);
+            $("#costcust").val(price);
+            $("#itemcustl").val(locid);
         });
     });
 </script>
