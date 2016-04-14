@@ -179,7 +179,8 @@
 <script>
     $(document).ready(function(){
         $("#product").change(function () {
-            $("#costcust").val(price);
+            <?php $me = "122"; ?>
+            $("#costcust").val(<?php echo $me; ?>);
             $("#itemcustl").val(locid);
         });
     });
