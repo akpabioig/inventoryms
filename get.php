@@ -8,13 +8,8 @@
 
 include('connection.php');
 
-$id = $_POST['myvariant'];
-
-$sql = "SELECT productid, productname, locationid, retailprice FROM addproduct WHERE productname = '$id'";
+$sql = "SELECT productid, productname, locationid, retailprice FROM addproduct";
 $result = mysqli_query($db, $sql);
-echo $result['productname'];
-
-/*
 if(mysqli_num_rows($result) == 1 || mysqli_num_rows($result) >1){
 
     while($row = $result -> fetch_array()) {
@@ -30,6 +25,5 @@ if(mysqli_num_rows($result) == 1 || mysqli_num_rows($result) >1){
 }else{
     echo '<option> No Result Found </option>';
 }
-*/
 
 ?>
