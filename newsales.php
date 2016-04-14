@@ -121,6 +121,7 @@
                                         echo '<script type="application/javascript">';
                                         echo 'var price[] = ' . json_encode($row['retailprice']) . ';';
                                         echo 'var locid[] = ' . json_encode($row['locationid']) . ';';
+                                        echo 'alert(price[1]);';
                                         echo '</script>';
                                     }
                                 }else{
