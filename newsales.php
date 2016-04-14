@@ -187,7 +187,7 @@
                 data: dataString,
                 cache: false,
                 success: function (response) {
-                    document.getElementById("costcust").innerHTML = "me";
+                    $("#costcust").val(response);
                 }
 
                 //$("#costcust").val(price);
