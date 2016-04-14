@@ -189,7 +189,7 @@
                 data: dataString,
                 cache: false,
                 success: function (html) {
-                    $("#itemcustl").html(html);
+                    $("#itemcustl").val(html);
                 }
         });
     });
