@@ -8,8 +8,12 @@
 
 include('connection.php');
 
-$rq = $_POST['myvariant'];
-$sql = "SELECT * FROM addproduct WHERE productname ='$rq'";
-$result = mysqli_query($db, $sql);
-echo $result['productid'];
+$sql = "SELECT locationid, retailprice FROM addproduct WHERE productname = 'fdsgdfgs'";
+$record = mysqli_query($db, $sql);
+
+while ($row = $record->fetch_array()) {
+    echo $row['retailprice'];
+}
+
+
 ?>

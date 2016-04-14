@@ -179,19 +179,8 @@
     $(document).ready(function(){
         $("#product").change(function () {
 
-            var dataString = 'myvariant=' + $(this).val();
-
-            $.ajax({
-                type: "POST",
-                url: "myquery.php",
-                data: dataString,
-                cache: false,
-                success: function (response) {
-                    $("#costcust").val(response);
-                }
-
-                //$("#costcust").val(price);
-                //$("#itemcustl").val(locid);
+            $("#costcust").val(price);
+            $("#itemcustl").val(locid);
         });
     });
 </script>
