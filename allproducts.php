@@ -25,6 +25,13 @@ $result = mysqli_query($db, $sql);
     <script src="scripting.js"></script>
     <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
     <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="../script/jquery.js"></script>
+    <script type="text/javascript" src="../script/jquery.callback.js"></script>
+    <script type="text/javascript" src="../script/ExportHTMLTable.js"></script>
+
+    <script type="text/javascript">
+        var exportTable1 = new ExportHTMLTable('producttable');
+    </script>
 </head>
 <body>
 <nav class="w3-sidenav w3-black" style="width:102px">
@@ -57,7 +64,8 @@ $result = mysqli_query($db, $sql);
                 <option value="locationid"> PRODUCT LOCATION</option>
                 <option value="suppliername"> SUPPLIER NAME</option>
             </select>
-                <table>
+            <input type="button" onclick="exportTable1.exportToCSV()" value="Export to CSV"/>
+            <table id=producttable>
                 <tr>
                     <th> ID </th>
                     <th>Serial Number </th>
