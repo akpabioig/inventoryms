@@ -66,7 +66,6 @@ $result = mysqli_query($db, $sql);
                 $("#export").click(function () {
                     $("producttable").tableToCSV();
                 });
-
             </script>
             <table id=producttable>
                 <tr>
