@@ -65,7 +65,7 @@ $result = mysqli_query($db, $sql);
                 <option value="locationid"> PRODUCT LOCATION</option>
                 <option value="suppliername"> SUPPLIER NAME</option>
             </select>
-            <input type="button" id="btnExport" value=" Export Table data into Excel "/>
+            <input type="button" id="btnExport" value=" Export To Excel "/>
             <div id="producttable">
                 <table>
                 <tr>
