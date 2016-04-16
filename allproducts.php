@@ -60,7 +60,7 @@ $result = mysqli_query($db, $sql);
             </select>
             <button id="export"> Export 2</button>
             <div id="producttable">
-                <table cellspacing="10" cellpadding="10">
+                <table>
                 <tr>
                     <th> ID</th>
                     <th>Serial Number </th>
