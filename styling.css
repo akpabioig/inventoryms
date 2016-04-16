@@ -292,6 +292,11 @@ font-family: "Apple Braille";
     border: 2px solid black;
 }
 
+#form3 th {
+    background-color: gray;
+    color: black;
+    border: 2px solid black;
+}
 #tablefield th td {
     text-align: center;
     word-wrap: break-word;
