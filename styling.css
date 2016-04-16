@@ -296,6 +296,7 @@ font-family: "Apple Braille";
 .tablefield{
     text-align: center;
     word-wrap: break-word;
+    border: 2px solid black;
 }
 
 #t2{
@@ -374,5 +375,4 @@ hr{
 }
 .tablefield1{
     width: 100%;
-    border: 2px solid black;
 }
