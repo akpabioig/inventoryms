@@ -86,7 +86,7 @@ $result = mysqli_query($db, $sql);
                         <td id = \"locationid\" name= \"locationid\" class = \"tablefield\" disabled>{$row['locationid']}</td>
                         <td id = \"isp\" name= \"isp\" class = \"tablefield\" disabled>{$row['initialstockprice']}</td>
                         <td id = \"wp\" name= \"wp\"   class = \"tablefield\" disabled>{$row['wholesaleprice']}</td>
-                        <td id = \"rp\" name= \"rp\"   class = \"tablefield\" disabled>{$row['retailprice']}</td>
+                        <td id = \"rp\" name= \"rp\"   class = \"tablefiel\" disabled>{$row['retailprice']}</td>
                     </tr>
 
                                 ";
