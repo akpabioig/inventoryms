@@ -297,7 +297,8 @@ font-family: "Apple Braille";
     color: black;
     border: 2px solid black;
 }
-#tablefield th td {
+
+.tablefield {
     text-align: center;
     word-wrap: break-word;
     border: 1px solid black;
