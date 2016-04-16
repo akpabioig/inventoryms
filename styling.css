@@ -384,8 +384,9 @@ hr{
 
 #export {
     border-radius: 5px;
-    margin-left: 40%;
-    colour: green;
+    margin-left: 60%;
+    colour: white;
+    navbutton_background_color: green;
 }
 
 #suppliertable, #producttable {
