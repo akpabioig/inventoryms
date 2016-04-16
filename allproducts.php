@@ -61,7 +61,8 @@ $result = mysqli_query($db, $sql);
                 <option value="suppliername"> SUPPLIER NAME</option>
             </select>
 
-            <a href="#" onClick="$('#producttable').tableExport({type:'excel',escape:'false'});">Export Table to
+            <a href="allproducts.php" onClick="$('#producttable').tableExport({type:'excel',escape:'false'});">Export
+                Table to
                 Excel</a>
             <table id="producttable">
                 <tr>
