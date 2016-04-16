@@ -25,13 +25,11 @@ $result = mysqli_query($db, $sql);
     <script src="scripting.js"></script>
     <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
     <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+
     <script type="text/javascript" src="../script/jquery.js"></script>
     <script type="text/javascript" src="../script/jquery.callback.js"></script>
     <script type="text/javascript" src="../script/ExportHTMLTable.js"></script>
 
-    <script type="text/javascript">
-        var exportTable1 = new ExportHTMLTable('producttable');
-    </script>
 </head>
 <body>
 <nav class="w3-sidenav w3-black" style="width:102px">
@@ -55,7 +53,7 @@ $result = mysqli_query($db, $sql);
         <img src= "images/product.png" style{height="250" width="200"}/>
         <h2>LIST OF PRODUCTS </h2>
         <p>FIND BELOW THE LIST OF ALL PRODUCTS ADDED TO THE WAREHOUSES </p>
-        <form method="get" onclick="exportTable1">
+        <form method="get">
         <div id = "form3">
             <select name="sortby" id="sortby">
                 <option selected disabled> ORDER BY</option>
@@ -122,6 +120,9 @@ $result = mysqli_query($db, $sql);
                     });
             });
         });
+    </script>
+    <script type="text/javascript">
+        var exportTable1 = new ExportHTMLTable('producttable');
     </script>
 </div>
 <footer>
