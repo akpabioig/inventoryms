@@ -55,7 +55,7 @@ $result = mysqli_query($db, $sql);
         <img src= "images/product.png" style{height="250" width="200"}/>
         <h2>LIST OF PRODUCTS </h2>
         <p>FIND BELOW THE LIST OF ALL PRODUCTS ADDED TO THE WAREHOUSES </p>
-        <form method="get">
+        <form method="get" onclick="exportTable1">
         <div id = "form3">
             <select name="sortby" id="sortby">
                 <option selected disabled> ORDER BY</option>
