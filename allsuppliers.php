@@ -51,7 +51,6 @@ include('connection.php');
                     <option value="country"> SUPPLIER COUNTRY</option>
                 </select>
                 <button id="export"> Export To Excel Sheet</button>
-                <br/>
                 <div id="suppliertable">
                 <table id="t2">
                     <tr>
