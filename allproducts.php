@@ -57,6 +57,7 @@ $result = mysqli_query($db, $sql);
                 <option value="locationid"> PRODUCT LOCATION</option>
                 <option value="suppliername"> SUPPLIER NAME</option>
             </select>
+            <button id="btnExport">Export to excel</button>
             <table id="producttable">
                 <tr>
                     <th> ID </th>
@@ -113,6 +114,16 @@ $result = mysqli_query($db, $sql);
                     .done(function (msg) {
                         $("#t2").html(msg);
                     });
+            });
+        });
+    </script>
+    <script>
+        $(document).ready(function () {
+            $("#btnExport").click(function () {
+                $("#producttable").btechco_excelexport({
+                    containerid: "producttable"
+                    , datatype: $datatype.Table
+                });
             });
         });
     </script>
