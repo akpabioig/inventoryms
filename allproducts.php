@@ -58,7 +58,7 @@ $result = mysqli_query($db, $sql);
                 <option value="locationid"> PRODUCT LOCATION</option>
                 <option value="suppliername"> SUPPLIER NAME</option>
             </select>
-
+            <input type="button" id="btnExport" value=" Export Table data into Excel "/>
             <table id="producttable">
                 <tr>
                     <th> ID </th>
@@ -117,6 +117,15 @@ $result = mysqli_query($db, $sql);
                     });
             });
         });
+    </script>
+    <script>
+        $("#btnExport").click(function (e) {
+            window.open('data:application/vnd.ms-excel,' + encodeURIComponent
+                ($('#producttable').html()));
+            e.preventDefault();
+            Response.AddHeader("Content-Disposition", "attachment;filename=download.xls");
+        });
+        ​
     </script>
 </div>
 <footer>
