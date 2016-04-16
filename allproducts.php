@@ -118,12 +118,6 @@ $result = mysqli_query($db, $sql);
         });
     </script>
     <script>
-        $("#export").click(function () {
-            var producttable = $('#producttable').html();
-            window.open('data:application/vnd.ms-excel,' + encodeURIComponent(
-                    $('#producttable').html()
-                ))
-        });
         $(document).ready(function () {
             $("#export").click(function (e) {
                 //getting values of current time for generating the file name
