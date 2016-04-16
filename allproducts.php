@@ -58,8 +58,9 @@ $result = mysqli_query($db, $sql);
                 <option value="locationid"> PRODUCT LOCATION</option>
                 <option value="suppliername"> SUPPLIER NAME</option>
             </select>
-            <button id="export"> Export</button>
-            <table id="producttable">
+            <button id="export"> Export 2</button>
+            <div id="producttable">
+                <table>
                 <tr>
                     <th> ID</th>
                     <th>Serial Number </th>
@@ -96,6 +97,7 @@ $result = mysqli_query($db, $sql);
                 ?>
                 </tbody>
             </table>
+            </div>
         </div>
         </form>
     </section>
