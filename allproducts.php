@@ -25,7 +25,6 @@ $result = mysqli_query($db, $sql);
     <script src="scripting.js"></script>
     <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
     <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-
     <script src="jquery.tabletoCSV.js"></script>
 
 
@@ -61,12 +60,7 @@ $result = mysqli_query($db, $sql);
                 <option value="locationid"> PRODUCT LOCATION</option>
                 <option value="suppliername"> SUPPLIER NAME</option>
             </select>
-            <button id="export" data-export="export">Export</button>
-            <script>
-                $("#export").click(function () {
-                    $("producttable").tableToCSV();
-                });
-            </script>
+            <button id="btnExport">Export</button>
             <table id=producttable>
                 <tr>
                     <th> ID </th>
@@ -122,6 +116,33 @@ $result = mysqli_query($db, $sql);
                     .done(function (msg) {
                         $("#t2").html(msg);
                     });
+            });
+        });
+    </script>
+    <script>
+        $(document).ready(function () {
+            $("#btnExport").click(function (e) {
+                //getting values of current time for generating the file name
+                var dt = new Date();
+                var day = dt.getDate();
+                var month = dt.getMonth() + 1;
+                var year = dt.getFullYear();
+                var hour = dt.getHours();
+                var mins = dt.getMinutes();
+                var postfix = day + "." + month + "." + year + "_" + hour + "." + mins;
+                //creating a temporary HTML link element (they support setting file names)
+                var a = document.createElement('a');
+                //getting data from our div that contains the HTML table
+                var data_type = 'data:application/vnd.ms-excel';
+                var table_div = document.getElementById('producttable');
+                var table_html = table_div.outerHTML.replace(/ /g, '%20');
+                a.href = data_type + ', ' + table_html;
+                //setting the file name
+                a.download = 'exported_table_' + postfix + '.xls';
+                //triggering the function
+                a.click();
+                //just in case, prevent default behaviour
+                e.preventDefault();
             });
         });
     </script>
