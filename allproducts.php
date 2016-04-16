@@ -123,50 +123,7 @@ $result = mysqli_query($db, $sql);
     </script>
     <script>
         $(document).ready(function () {
-            Html2CSV('producttable', 'myfilename', 'export');
-        });
-        function Html2CSV(tableId, filename, alinkButtonId) {
-            var array = [];
-            var headers = [];
-            var arrayItem = [];
-            var csvData = new Array();
-            $('#' + tableId + ' th').each(function (index, item) {
-                headers[index] = '"' + $(item).html() + '"';
-            });
-            csvData.push(headers);
-            $('#' + tableId + ' tr').has('td').each(function () {
-                $('td', $(this)).each(function (index, item) {
-                    arrayItem[index] = '"' + $(item).html() + '"';
-                });
-                array.push(arrayItem);
-                csvData.push(arrayItem);
-            });
-            var fileName = filename + '.csv';
-            var buffer = csvData.join("\n");
-            var blob = new Blob([buffer], {
-                "type": "text/csv;charset=utf8;"
-            });
-            var link = document.getElementById(alinkButton);
-
-            if (link.download !== undefined) { // feature detection
-                // Browsers that support HTML5 download attribute
-                link.setAttribute("href", window.URL.createObjectURL(blob));
-                link.setAttribute("download", fileName);
-            }
-            else if (navigator.msSaveBlob) { // IE 10+
-                link.setAttribute("href", "#");
-                link.addEventListener("click", function (event) {
-                    navigator.msSaveBlob(blob, fileName);
-                }, false);
-            }
-            else {
-                // it needs to implement server side export
-                link.setAttribute("href", "http://www.example.com/export");
-            }
-        }
-
-        /*$(document).ready(function () {
-            $("#btnExport").click(function (e) {
+            $("#export").click(function (e) {
                 //getting values of current time for generating the file name
                 var dt = new Date();
                 var day = dt.getDate();
@@ -189,7 +146,7 @@ $result = mysqli_query($db, $sql);
                 //just in case, prevent default behaviour
                 e.preventDefault();
             });
-         });*/
+        });
     </script>
 </div>
 <footer>
