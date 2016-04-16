@@ -58,9 +58,10 @@ $result = mysqli_query($db, $sql);
                 <option value="locationid"> PRODUCT LOCATION</option>
                 <option value="suppliername"> SUPPLIER NAME</option>
             </select>
-            <button id="export"> Export 2</button>
+            <button id="export"> Export To Excel Sheet</button>
+            <br>
             <div id="producttable">
-                <table id=pt>
+                <table>
                 <tr>
                     <th> ID</th>
                     <th>Serial Number </th>
@@ -136,7 +137,7 @@ $result = mysqli_query($db, $sql);
                 var table_html = table_div.outerHTML.replace(/ /g, '%20');
                 a.href = data_type + ', ' + table_html;
                 //setting the file name
-                a.download = 'exported_table_' + postfix + '.xls';
+                a.download = 'Product_Inventory_' + postfix + '.xls';
                 //triggering the function
                 a.click();
                 //just in case, prevent default behaviour

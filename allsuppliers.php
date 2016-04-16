@@ -50,6 +50,9 @@ include('connection.php');
                     <option value="suppliername"> SUPPLIER NAME</option>
                     <option value="country"> SUPPLIER COUNTRY</option>
                 </select>
+                <button id="export"> Export To Excel Sheet</button>
+                <br>
+                <div id="suppliertable">
                 <table id="t2">
                     <tr>
                         <th> ID </th>
@@ -81,24 +84,21 @@ include('connection.php');
                             echo "
 
                                 <tr>
-                        <td><input type=\"text\" id = \"supplierid\" name= \"supplierid\"  value = \"{$row['supplierid']}\" class = \"tablefield\" disabled></td>
-                        <td><input type=\"text\" id = \"suppliername\" name= \"suppliername\"  value = \"{$row['suppliername']}\" class = \"tablefield\" disabled></td>
-                        <td><input type=\"text\" id = \"contactperson\" name= \"contactperson\"  value = \"{$row['contactperson']}\" class = \"tablefield\" disabled></td>
-                        <td><input type=\"text\" id = \"contactpersontel\" name= \"contactpersontel\"  value = \"{$row['contactpersontel']}\" class = \"tablefield\" disabled></td>
-
-                        <td><input type=\"text\" id = \"telnumber\" name= \"telnumber\"  value = \"{$row['telnumber']}\" class = \"tablefield\" disabled></td>
-                        <td><input type=\"text\" id = \"fax\" name= \"fax\"  value = \"{$row['fax']}\" class = \"tablefield\" disabled></td>
-                        <td><input type=\"text\" id = \"email\" name= \"email\"  value = \"{$row['email']}\" class = \"tablefield\" disabled></td>
-                        <td><input type=\"text\" id = \"url\" name= \"url\"  value = \"{$row['url']}\" class = \"tablefield\" disabled></td>
-                        <td><input type=\"text\" id = \"description\" name= \"description\"  value = \"{$row['description']}\" class = \"tablefield\" disabled></td>
-
-                        <td><input type=\"text\" id = \"addressline1\" name= \"addressline1\"  value = \"{$row['addressline1']}\" class = \"tablefield\" disabled></td>
-                        <td><input type=\"text\" id = \"addressline2\" name= \"addressline2\"  value = \"{$row['addressline2']}\" class = \"tablefield\" disabled></td>
-                        <td><input type=\"text\" id = \"town\" name= \"town\"  value = \"{$row['town']}\" class = \"tablefield\" disabled></td>
-                        <td><input type=\"text\" id = \"county\" name= \"county\"  value = \"{$row['county']}\" class = \"tablefield\" disabled></td>
-
-                        <td><input type=\"text\" id = \"postcode\" name= \"postcode\"  value = \"{$row['postcode']}\" class = \"tablefield\" disabled></td>
-                        <td><input type=\"text\" id = \"country\" name= \"country\"  value = \"{$row['country']}\" class = \"tablefield\" disabled></td>
+                        <td id = \"supplierid\" name= \"supplierid\" class = \"tablefield\" disabled>{$row['supplierid']}</td>
+                        <td id = \"suppliername\" name= \"suppliername\" class = \"tablefield\" disabled>{$row['suppliername']}</td>
+                        <td id = \"contactperson\" name= \"contactperson\" class = \"tablefield\" disabled>{$row['contactperson']}</td>
+                        <td id = \"contactpersontel\" name= \"contactpersontel\" class = \"tablefield\" disabled>{$row['contactpersontel']}</td>
+                        <td id = \"telnumber\" name= \"telnumber\" class = \"tablefield\" disabled> {$row['telnumber']} </td>
+                        <td id = \"fax\" name= \"fax\" class = \"tablefield\" disabled>{$row['fax']}</td>
+                        <td id = \"email\" name= \"email\" class = \"tablefield\" disabled> {$row['email']} </td>
+                        <td id = \"url\" name= \"url\" class = \"tablefield\" disabled>{$row['url']}</td>
+                        <td id = \"description\" name= \"description\"  class = \"tablefield\" disabled> {$row['description']}</td>
+                        <td id = \"addressline1\" name= \"addressline1\" class = \"tablefield\" disabled> {$row['addressline1']} </td>
+                        <td id = \"addressline2\" name= \"addressline2\" class = \"tablefield\" disabled> {$row['addressline2']} </td>
+                        <td id = \"town\" name= \"town\" class = \"tablefield\" disabled> {$row['town']} </td>
+                        <td id = \"county\" name= \"county\" class = \"tablefield\" disabled> {$row['county']} </td>
+                        <td id = \"postcode\" name= \"postcode\" class = \"tablefield\" disabled> {$row['postcode']} </td>
+                        <td id = \"country\" name= \"country\" class = \"tablefield\" disabled> {$row['country']} </td>
                     </tr>
 
                                 ";
@@ -109,6 +109,7 @@ include('connection.php');
                     ?>
                     </tbody>
                 </table>
+                </div>
             </div>
         </form>
     </section>
@@ -125,6 +126,33 @@ include('connection.php');
                     .done(function (msg) {
                         $("#suppliertd").html(msg);
                     });
+            });
+        });
+    </script>
+    <script>
+        $(document).ready(function () {
+            $("#export").click(function (e) {
+                //getting values of current time for generating the file name
+                var dt = new Date();
+                var day = dt.getDate();
+                var month = dt.getMonth() + 1;
+                var year = dt.getFullYear();
+                var hour = dt.getHours();
+                var mins = dt.getMinutes();
+                var postfix = day + "." + month + "." + year + "_" + hour + "." + mins;
+                //creating a temporary HTML link element (they support setting file names)
+                var a = document.createElement('a');
+                //getting data from our div that contains the HTML table
+                var data_type = 'data:application/vnd.ms-excel';
+                var table_div = document.getElementById('suppliertable');
+                var table_html = table_div.outerHTML.replace(/ /g, '%20');
+                a.href = data_type + ', ' + table_html;
+                //setting the file name
+                a.download = 'Supplier_Inventory_' + postfix + '.xls';
+                //triggering the function
+                a.click();
+                //just in case, prevent default behaviour
+                e.preventDefault();
             });
         });
     </script>

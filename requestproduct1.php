@@ -47,7 +47,6 @@ if (mysqli_num_rows($result) == 1 || mysqli_num_rows($result) > 1) {
                         <td id = \"wp\" name= \"wp\"   class = \"tablefield\" disabled>{$row['wholesaleprice']}</td>
                         <td id = \"rp\" name= \"rp\"   class = \"tablefield\" disabled>{$row['retailprice']}</td>
                     </tr>
-
                                 ";
     }
 } else {
