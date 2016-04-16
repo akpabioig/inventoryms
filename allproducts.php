@@ -60,7 +60,7 @@ $result = mysqli_query($db, $sql);
             </select>
             <table id="producttable">
                 <tr>
-                    <th> ID </th>
+                    <th> ID q</th>
                     <th>Serial Number </th>
                     <th>Name</th>
                     <th>Description </th>
@@ -76,7 +76,7 @@ $result = mysqli_query($db, $sql);
                     while($row = $result -> fetch_array()){
                         echo "
                     <tr>
-                        <td><input type=\"text\" id = \"productid\" name= \"productid\"  value = \"{$row['productid']}\" class = \"tablefield\" disabled></td>
+                        <td><input type=\"text\" id = \"productid\" name= \"productid\"  value = \"\" class = \"tablefield\" disabled>{$row['productid']}</td>
                         <td><input type=\"text\" id = \"productsn\" name= \"productsn\"  value = \"{$row['productserialnumber']}\" class = \"tablefield\" disabled></td>
                         <td><input type=\"text\" id = \"productname\" name= \"productname\"  value = \"{$row['productname']}\" class = \"tablefield\" disabled></td>
                         <td><input type=\"text\" id = \"productdesc\" name= \"productdesc\"  value = \"{$row['productdescription']}\" class = \"tablefield\" disabled></td>
