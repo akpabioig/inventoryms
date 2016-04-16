@@ -59,7 +59,8 @@ $result = mysqli_query($db, $sql);
                 <option value="suppliername"> SUPPLIER NAME</option>
             </select>
             <input type="button" id="btnExport" value=" Export Table data into Excel "/>
-            <table id="producttable">
+            <div id="producttable">
+                <table>
                 <tr>
                     <th> ID </th>
                     <th>Serial Number </th>
@@ -99,6 +100,7 @@ $result = mysqli_query($db, $sql);
                 ?>
                 </tbody>
             </table>
+            </div>
         </div>
         </form>
     </section>
