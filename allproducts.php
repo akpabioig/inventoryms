@@ -58,7 +58,7 @@ $result = mysqli_query($db, $sql);
                 <option value="locationid"> PRODUCT LOCATION</option>
                 <option value="suppliername"> SUPPLIER NAME</option>
             </select>
-            <a id="export"> Export1</a>
+            <a id="export"> Export</a>
             <div id="producttable"></div>
             <table>
                 <tr>
@@ -119,7 +119,7 @@ $result = mysqli_query($db, $sql);
     </script>
     <script>
         $("#export").click(function () {
-            var dtltbl = $('#producttable').html();
+            var producttable = $('#producttable').html();
             window.open('data:application/vnd.ms-excel,' + encodeURIComponent(
                     $('#producttable').html()
                 ))
