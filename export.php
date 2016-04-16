@@ -5,17 +5,13 @@ $SQL = "SELECT addproduct.productid, addproduct.productserialnumber, addproduct.
                           FROM addproduct, addsupplier
                           WHERE addsupplier.supplierid = addproduct.supplierid
                           ORDER BY productid";
-$result = mysqli_query($db, $sql);
 $header = '';
-//$result = '';
+$result = '';
 $exportData = mysql_query($SQL) or die ("Sql error : " . mysql_error());
-
 $fields = mysql_num_fields($exportData);
-
 for ($i = 0; $i < $fields; $i++) {
     $header .= mysql_field_name($exportData, $i) . "\t";
 }
-
 while ($row = mysql_fetch_row($exportData)) {
     $line = '';
     foreach ($row as $value) {
