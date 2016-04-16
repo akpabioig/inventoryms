@@ -57,6 +57,7 @@ $result = mysqli_query($db, $sql);
                 <option value="locationid"> PRODUCT LOCATION</option>
                 <option value="suppliername"> SUPPLIER NAME</option>
             </select>
+            <button href="export.php"></button>
                 <table>
                 <tr>
                     <th> ID </th>
@@ -72,7 +73,6 @@ $result = mysqli_query($db, $sql);
                 <tbody id="t2">
                 <?php
                 if(mysqli_num_rows($result) == 1 || mysqli_num_rows($result) >1){
-
                     while($row = $result -> fetch_array()){
                         echo "
 
