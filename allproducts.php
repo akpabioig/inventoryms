@@ -26,6 +26,9 @@ $result = mysqli_query($db, $sql);
     <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
     <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 
+    <script src="jquery.tabletoCSV.js"></script>
+
+
 </head>
 <body>
 <nav class="w3-sidenav w3-black" style="width:102px">
@@ -58,6 +61,13 @@ $result = mysqli_query($db, $sql);
                 <option value="locationid"> PRODUCT LOCATION</option>
                 <option value="suppliername"> SUPPLIER NAME</option>
             </select>
+            <button id="export" data-export="export">Export</button>
+            <script>
+                $("#export").click(function () {
+                    $("producttable").tableToCSV();
+                });
+
+            </script>
             <table id=producttable>
                 <tr>
                     <th> ID </th>
