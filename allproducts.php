@@ -50,7 +50,7 @@ $result = mysqli_query($db, $sql);
         <img src= "images/product.png" style{height="250" width="200"}/>
         <h2>LIST OF PRODUCTS </h2>
         <p>FIND BELOW THE LIST OF ALL PRODUCTS ADDED TO THE WAREHOUSES </p>
-        <form method="get" action="productseditor.php"">
+        <form method="get">
         <div id = "form3">
             <select name="sortby" id="sortby">
                 <option selected disabled> ORDER BY</option>
@@ -60,16 +60,6 @@ $result = mysqli_query($db, $sql);
                 <option value="suppliername"> SUPPLIER NAME</option>
             </select>
             <button>Export</button>
-            <script>
-                $("button").click(function () {
-                    $("#table2excel").table2excel({
-                        // exclude CSS class
-                        exclude: ".noExl",
-                        name: "Worksheet Name",
-                        filename: "Product Table" //do not include extension
-                    });
-                });
-            </script>
             <table id="producttable">
                 <tr>
                     <th> ID </th>
@@ -126,6 +116,16 @@ $result = mysqli_query($db, $sql);
                     .done(function (msg) {
                         $("#t2").html(msg);
                     });
+            });
+        });
+    </script>
+    <script>
+        $("button").click(function () {
+            $("#table2excel").table2excel({
+                // exclude CSS class
+                exclude: ".noExl",
+                name: "Worksheet Name",
+                filename: "Product Table" //do not include extension
             });
         });
     </script>
