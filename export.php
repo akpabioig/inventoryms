@@ -7,7 +7,7 @@ $SQL = "SELECT addproduct.productid, addproduct.productserialnumber, addproduct.
                           ORDER BY productid";
 $result = mysqli_query($db, $sql);
 $header = '';
-$result = '';
+//$result = '';
 $exportData = mysql_query($SQL) or die ("Sql error : " . mysql_error());
 
 $fields = mysql_num_fields($exportData);
