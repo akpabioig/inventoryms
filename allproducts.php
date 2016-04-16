@@ -26,16 +26,6 @@ $result = mysqli_query($db, $sql);
     <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
     <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css"/>
-    <script type="text/javascript" src="tableExport.js"></script>
-    <script type="text/javascript" src="jquery.base64.js"></script>
-    <script type="text/javascript" src="html2canvas.js"></script>
-    <script type="text/javascript" src="jspdf/libs/sprintf.js"></script>
-    <script type="text/javascript" src="jspdf/jspdf.js"></script>
-    <script type="text/javascript" src="jspdf/libs/base64.js"></script>
-    <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-
 </head>
 <body>
 <nav class="w3-sidenav w3-black" style="width:102px">
@@ -68,9 +58,6 @@ $result = mysqli_query($db, $sql);
                 <option value="locationid"> PRODUCT LOCATION</option>
                 <option value="suppliername"> SUPPLIER NAME</option>
             </select>
-
-            <li><a href="#" onclick="$('#producttable').tableExport({type:'excel',escape:'false'});"> <img
-                        src="images/json.jpg" width="24px"> JSON</a></li>
 
             <table id="producttable">
                 <tr>
@@ -128,16 +115,6 @@ $result = mysqli_query($db, $sql);
                     .done(function (msg) {
                         $("#t2").html(msg);
                     });
-            });
-        });
-    </script>
-    <script>
-        $(document).ready(function () {
-            $("#btnExport").click(function () {
-                $("#producttable").btechco_excelexport({
-                    containerid: "producttable"
-                    , datatype: $datatype.Table
-                });
             });
         });
     </script>
