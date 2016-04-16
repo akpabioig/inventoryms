@@ -58,11 +58,6 @@ $result = mysqli_query($db, $sql);
                 <option value="locationid"> PRODUCT LOCATION</option>
                 <option value="suppliername"> SUPPLIER NAME</option>
             </select>
-            <?php
-            header("Content-type: application/vnd-ms-excel");
-            header("Content-Disposition: attachment; filename=codelution-export.xls");
-            include 'allproducts.php';
-            ?>
 
             <table id="producttable">
                 <tr>
