@@ -25,7 +25,14 @@ $result = mysqli_query($db, $sql);
     <script src="scripting.js"></script>
     <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
     <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-
+    <script>
+        $("#btnExport").click(function (e) {
+            window.open('data:application/vnd.ms-excel,' + encodeURIComponent
+                ($('#producttable').html()));
+            e.preventDefault();
+            Response.AddHeader("Content-Disposition", "attachment;filename=download.xls");
+        });
+    </script>
 </head>
 <body>
 <nav class="w3-sidenav w3-black" style="width:102px">
@@ -119,15 +126,6 @@ $result = mysqli_query($db, $sql);
                     });
             });
         });
-    </script>
-    <script>
-        $("#btnExport").click(function (e) {
-            window.open('data:application/vnd.ms-excel,' + encodeURIComponent
-                ($('#producttable').html()));
-            e.preventDefault();
-            Response.AddHeader("Content-Disposition", "attachment;filename=download.xls");
-        });
-        ​
     </script>
 </div>
 <footer>
