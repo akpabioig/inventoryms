@@ -25,9 +25,8 @@ $result = mysqli_query($db, $sql);
     <script src="scripting.js"></script>
     <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
     <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-    <script type="text/javascript" src="tableExport.js"></script>
-    <script type="text/javascript" src="jquery.base64.js"></script>
-
+    <script src="src/jquery.table2excel.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 </head>
 <body>
 <nav class="w3-sidenav w3-black" style="width:102px">
@@ -60,10 +59,17 @@ $result = mysqli_query($db, $sql);
                 <option value="locationid"> PRODUCT LOCATION</option>
                 <option value="suppliername"> SUPPLIER NAME</option>
             </select>
-
-            <a href="allproducts.php" onClick="$('#producttable').tableExport({type:'excel',escape:'false'});">Export
-                Table to
-                Excel</a>
+            <button>Export</button>
+            <script>
+                $("button").click(function () {
+                    $("#table2excel").table2excel({
+                        // exclude CSS class
+                        exclude: ".noExl",
+                        name: "Worksheet Name",
+                        filename: "Product Table" //do not include extension
+                    });
+                });
+            </script>
             <table id="producttable">
                 <tr>
                     <th> ID </th>
