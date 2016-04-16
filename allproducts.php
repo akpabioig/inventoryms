@@ -58,9 +58,10 @@ $result = mysqli_query($db, $sql);
                 <option value="locationid"> PRODUCT LOCATION</option>
                 <option value="suppliername"> SUPPLIER NAME</option>
             </select>
+            <a id="export"> Export</a>
             <table id="producttable">
                 <tr>
-                    <th> ID q</th>
+                    <th> ID</th>
                     <th>Serial Number </th>
                     <th>Name</th>
                     <th>Description </th>
@@ -76,7 +77,7 @@ $result = mysqli_query($db, $sql);
                     while($row = $result -> fetch_array()){
                         echo "
                     <tr>
-                        <td><input type=\"text\" id = \"productid\" name= \"productid\"  value = \"\" class = \"tablefield\" disabled>{$row['productid']}</td>
+                        <td><input type=\"text\" id = \"productid\" name= \"productid\"  value = \"{$row['productid']}\" class = \"tablefield\" disabled></td>
                         <td><input type=\"text\" id = \"productsn\" name= \"productsn\"  value = \"{$row['productserialnumber']}\" class = \"tablefield\" disabled></td>
                         <td><input type=\"text\" id = \"productname\" name= \"productname\"  value = \"{$row['productname']}\" class = \"tablefield\" disabled></td>
                         <td><input type=\"text\" id = \"productdesc\" name= \"productdesc\"  value = \"{$row['productdescription']}\" class = \"tablefield\" disabled></td>
@@ -115,7 +116,13 @@ $result = mysqli_query($db, $sql);
         });
     </script>
     <script>
-        /*$(document).ready(function () {
+        $("#export").click(function () {
+            var producttable = $('#producttable').html();
+            window.open('data:application/vnd.ms-excel,' + encodeURIComponent(
+                    $('#producttable').html()
+                ))
+        });
+        $(document).ready(function () {
             $("#export").click(function (e) {
                 //getting values of current time for generating the file name
                 var dt = new Date();
@@ -139,7 +146,7 @@ $result = mysqli_query($db, $sql);
                 //just in case, prevent default behaviour
                 e.preventDefault();
             });
-         });*/
+        });
     </script>
 </div>
 <footer>
