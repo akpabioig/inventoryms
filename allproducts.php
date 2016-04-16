@@ -25,13 +25,6 @@ $result = mysqli_query($db, $sql);
     <script src="scripting.js"></script>
     <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
     <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-    <script>
-        $("#btnExport").click(function (e) {
-            window.open('data:application/vnd.ms-excel,' + $('#producttable').html());
-            e.preventDefault();
-            Response.AddHeader("Content-Disposition", "attachment;filename=download.xls");
-        });
-    </script>
 </head>
 <body>
 <nav class="w3-sidenav w3-black" style="width:102px">
@@ -64,8 +57,6 @@ $result = mysqli_query($db, $sql);
                 <option value="locationid"> PRODUCT LOCATION</option>
                 <option value="suppliername"> SUPPLIER NAME</option>
             </select>
-            <input type="button" id="btnExport" value=" Export t Excel "/>
-            <div id="producttable">
                 <table>
                 <tr>
                     <th> ID </th>
@@ -106,7 +97,6 @@ $result = mysqli_query($db, $sql);
                 ?>
                 </tbody>
             </table>
-            </div>
         </div>
         </form>
     </section>
