@@ -25,8 +25,6 @@ $result = mysqli_query($db, $sql);
     <script src="scripting.js"></script>
     <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
     <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-    <script src="jquery.tabletoCSV.js"></script>
-
 
 </head>
 <body>
@@ -61,7 +59,8 @@ $result = mysqli_query($db, $sql);
                 <option value="suppliername"> SUPPLIER NAME</option>
             </select>
             <a id="export"> Export1</a>
-            <table id="producttable">
+            <div id="producttable"></div>
+            <table>
                 <tr>
                     <th> ID </th>
                     <th>Serial Number </th>
@@ -99,6 +98,7 @@ $result = mysqli_query($db, $sql);
                 </tbody>
             </table>
         </div>
+        </div>
         </form>
     </section>
     <script>
@@ -118,7 +118,13 @@ $result = mysqli_query($db, $sql);
         });
     </script>
     <script>
-        $(document).ready(function () {
+        $("#export").click(function () {
+            var dtltbl = $('#producttable').html();
+            window.open('data:application/vnd.ms-excel,' + encodeURIComponent(
+                    $('#producttable').html()
+                ))
+        });
+        /*$(document).ready(function () {
             $("#export").click(function (e) {
                 //getting values of current time for generating the file name
                 var dt = new Date();
@@ -142,7 +148,7 @@ $result = mysqli_query($db, $sql);
                 //just in case, prevent default behaviour
                 e.preventDefault();
             });
-        });
+         });*/
     </script>
 </div>
 <footer>
