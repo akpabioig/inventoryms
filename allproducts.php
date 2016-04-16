@@ -68,7 +68,6 @@ $result = mysqli_query($db, $sql);
                 <option value="locationid"> PRODUCT LOCATION</option>
                 <option value="suppliername"> SUPPLIER NAME</option>
             </select>
-            <button id="btnExport">Export to excel</button>
 
             <li><a href="#" onclick="$('#producttable').tableExport({type:'excel',escape:'false'});"> <img
                         src="images/json.jpg" width="24px"> JSON</a></li>
