@@ -292,8 +292,7 @@ font-family: "Apple Braille";
     border: 2px solid black;
 }
 
-
-.tablefield{
+#tablefield th td {
     text-align: center;
     word-wrap: break-word;
     border: 1px solid black;
