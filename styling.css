@@ -298,7 +298,7 @@ font-family: "Apple Braille";
     border: 2px solid black;
 }
 
-#form3 table td {
+#form3 table tr td {
     border: 1px solid black;
 }
 
