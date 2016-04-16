@@ -292,7 +292,7 @@ font-family: "Apple Braille";
     border: 2px solid black;
 }
 
-#form3 th {
+#form3 table th {
     background-color: gray;
     color: black;
     border: 2px solid black;
