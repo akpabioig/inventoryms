@@ -58,8 +58,8 @@ $result = mysqli_query($db, $sql);
                 <option value="locationid"> PRODUCT LOCATION</option>
                 <option value="suppliername"> SUPPLIER NAME</option>
             </select>
-            <a id="export"> Export</a>
-            <div id="producttable"></div>
+            <a id="export"> Export5</a>
+            <div id="producttable">
             <table>
                 <tr>
                     <th> ID </th>
