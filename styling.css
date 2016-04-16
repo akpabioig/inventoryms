@@ -298,13 +298,10 @@ font-family: "Apple Braille";
     border: 2px solid black;
 }
 
-#form3 table tr td {
-    border: 1px solid black;
-}
-
 .tablefield {
     text-align: center;
     word-wrap: break-word;
+    border: 1px solid black;
 }
 
 #t2{
