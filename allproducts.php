@@ -61,7 +61,7 @@ $result = mysqli_query($db, $sql);
                 <option value="suppliername"> SUPPLIER NAME</option>
             </select>
             <button class="export">Export</button>
-            <div id="dvData">
+            <div id="producttable">
                 <table>
                 <tr>
                     <th> ID </th>
@@ -123,35 +123,48 @@ $result = mysqli_query($db, $sql);
     </script>
     <script>
         $(document).ready(function () {
-            function exportTableToCSV($table, filename) {
-                var $rows = $table.find('tr:has(td)'),
-                    tmpColDelim = String.fromCharCode(11),
-                    tmpRowDelim = String.fromCharCode(0),
-                    colDelim = '","',
-                    rowDelim = '"\r\n"',
-                    csv = '"' + $rows.map(function (i, row) {
-                            var $row = $(row),
-                                $cols = $row.find('td');
-                            return $cols.map(function (j, col) {
-                                var $col = $(col),
-                                    text = $col.text();
-                                return text.replace(/"/g, '""');
-                            }).get().join(tmpColDelim);
-                        }).get().join(tmpRowDelim)
-                            .split(tmpRowDelim).join(rowDelim)
-                            .split(tmpColDelim).join(colDelim) + '"',
-                    csvData = 'data:application/csv;charset=utf-8,' + encodeURIComponent(csv);
-                $(this)
-                    .attr({
-                        'download': filename,
-                        'href': csvData,
-                        'target': '_blank'
-                    });
-            }
-            $(".export").on('click', function (event) {
-                exportTableToCSV.apply(this, [$('#dvData>table'), 'export.csv']);
-            });
+            Html2CSV('producttable', 'myfilename', 'export');
         });
+        function Html2CSV(tableId, filename, alinkButtonId) {
+            var array = [];
+            var headers = [];
+            var arrayItem = [];
+            var csvData = new Array();
+            $('#' + tableId + ' th').each(function (index, item) {
+                headers[index] = '"' + $(item).html() + '"';
+            });
+            csvData.push(headers);
+            $('#' + tableId + ' tr').has('td').each(function () {
+                $('td', $(this)).each(function (index, item) {
+                    arrayItem[index] = '"' + $(item).html() + '"';
+                });
+                array.push(arrayItem);
+                csvData.push(arrayItem);
+            });
+            var fileName = filename + '.csv';
+            var buffer = csvData.join("\n");
+            var blob = new Blob([buffer], {
+                "type": "text/csv;charset=utf8;"
+            });
+            var link = document.getElementById(alinkButton);
+
+            if (link.download !== undefined) { // feature detection
+                // Browsers that support HTML5 download attribute
+                link.setAttribute("href", window.URL.createObjectURL(blob));
+                link.setAttribute("download", fileName);
+            }
+            else if (navigator.msSaveBlob) { // IE 10+
+                link.setAttribute("href", "#");
+                link.addEventListener("click", function (event) {
+                    navigator.msSaveBlob(blob, fileName);
+                }, false);
+            }
+            else {
+                // it needs to implement server side export
+                link.setAttribute("href", "http://www.example.com/export");
+            }
+        }
+
         /*$(document).ready(function () {
             $("#btnExport").click(function (e) {
                 //getting values of current time for generating the file name
