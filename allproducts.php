@@ -60,8 +60,9 @@ $result = mysqli_query($db, $sql);
                 <option value="locationid"> PRODUCT LOCATION</option>
                 <option value="suppliername"> SUPPLIER NAME</option>
             </select>
-            <button id="btnExport">Export</button>
-            <table id=producttable>
+            <button class="export">Export</button>
+            <div id="dvData">
+                <table>
                 <tr>
                     <th> ID </th>
                     <th>Serial Number </th>
@@ -100,6 +101,7 @@ $result = mysqli_query($db, $sql);
                 ?>
                 </tbody>
             </table>
+            </div>
         </div>
         </form>
     </section>
@@ -121,6 +123,52 @@ $result = mysqli_query($db, $sql);
     </script>
     <script>
         $(document).ready(function () {
+
+            function exportTableToCSV($table, filename) {
+
+                var $rows = $table.find('tr:has(td)'),
+                    tmpColDelim = String.fromCharCode(11), // vertical tab character
+                    tmpRowDelim = String.fromCharCode(0), // null character
+
+                // actual delimiter characters for CSV format
+                    colDelim = '","',
+                    rowDelim = '"\r\n"',
+
+                // Grab text from table into CSV formatted string
+                    csv = '"' + $rows.map(function (i, row) {
+                            var $row = $(row),
+                                $cols = $row.find('td');
+
+                            return $cols.map(function (j, col) {
+                                var $col = $(col),
+                                    text = $col.text();
+
+                                return text.replace(/"/g, '""'); // escape double quotes
+
+                            }).get().join(tmpColDelim);
+
+                        }).get().join(tmpRowDelim)
+                            .split(tmpRowDelim).join(rowDelim)
+                            .split(tmpColDelim).join(colDelim) + '"',
+
+                // Data URI
+                    csvData = 'data:application/csv;charset=utf-8,' + encodeURIComponent(csv);
+
+                $(this)
+                    .attr({
+                        'download': filename,
+                        'href': csvData,
+                        'target': '_blank'
+                    });
+            }
+
+            // This must be a hyperlink
+            $(".export").on('click', function (event) {
+                // CSV
+                exportTableToCSV.apply(this, [$('#dvData>table'), 'export.csv']);
+            });
+        });
+        /*$(document).ready(function () {
             $("#btnExport").click(function (e) {
                 //getting values of current time for generating the file name
                 var dt = new Date();
@@ -144,7 +192,7 @@ $result = mysqli_query($db, $sql);
                 //just in case, prevent default behaviour
                 e.preventDefault();
             });
-        });
+         });*/
     </script>
 </div>
 <footer>
