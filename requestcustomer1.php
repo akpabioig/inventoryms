@@ -32,23 +32,22 @@ if (mysqli_num_rows($result) == 1 || mysqli_num_rows($result) > 1) {
     while ($row = $result->fetch_array()) {
         echo "
                                 <tr>
-                        <td><input type=\"text\" id = \"customerid\" name= \"customerid\"  value = \"{$row['customerid']}\" class = \"tablefield\" disabled></td>
-                        <td><input type=\"text\" id = \"customertype\" name= \"customertype\"  value = \"{$row['customertype']}\" class = \"tablefield\" disabled></td>
-                        <td><input type=\"text\" id = \"customername\" name= \"customername\"  value = \"{$row['customername']}\" class = \"tablefield\" disabled></td>
+                        <td id = \"customerid\" name= \"customerid\" class = \"tablefield\" disabled>{$row['customerid']}</td>
+                        <td id = \"customertype\" name= \"customertype\" class = \"tablefield\" disabled>{$row['customertype']}</td>
+                        <td id = \"customername\" name= \"customername\" class = \"tablefield\" disabled>{$row['customername']}</td>
+                        <td id = \"telnumber\" name= \"telnumber\" class = \"tablefield\" disabled>{$row['telnumber']}</td>
+                        <td id = \"fax\" name= \"fax\" class = \"tablefield\" disabled>{$row['fax']}</td>
+                        <td id = \"email\" name= \"email\" class = \"tablefield\" disabled>{$row['email']}</td>
+                        <td id = \"url\" name= \"url\" class = \"tablefield\" disabled>{$row['url']}</td>
+                        <td id = \"description\" name= \"description\" class = \"tablefield\" disabled>{$row['description']}</td>
 
-                        <td><input type=\"text\" id = \"telnumber\" name= \"telnumber\"  value = \"{$row['telnumber']}\" class = \"tablefield\" disabled></td>
-                        <td><input type=\"text\" id = \"fax\" name= \"fax\"  value = \"{$row['fax']}\" class = \"tablefield\" disabled></td>
-                        <td><input type=\"text\" id = \"email\" name= \"email\"  value = \"{$row['email']}\" class = \"tablefield\" disabled></td>
-                        <td><input type=\"text\" id = \"url\" name= \"url\"  value = \"{$row['url']}\" class = \"tablefield\" disabled></td>
-                        <td><input type=\"text\" id = \"description\" name= \"description\"  value = \"{$row['description']}\" class = \"tablefield\" disabled></td>
+                        <td id = \"addressline1\" name= \"addressline1\" class = \"tablefield\" disabled>{$row['addressline1']}</td>
+                        <td id = \"addressline2\" name= \"addressline2\" class = \"tablefield\" disabled>{$row['addressline2']}</td>
+                        <td id = \"town\" name= \"town\"  class = \"tablefield\" disabled>{$row['town']}</td>
+                        <td id = \"county\" name= \"county\" class = \"tablefield\" disabled>{$row['county']}</td>
 
-                        <td><input type=\"text\" id = \"addressline1\" name= \"addressline1\"  value = \"{$row['addressline1']}\" class = \"tablefield\" disabled></td>
-                        <td><input type=\"text\" id = \"addressline2\" name= \"addressline2\"  value = \"{$row['addressline2']}\" class = \"tablefield\" disabled></td>
-                        <td><input type=\"text\" id = \"town\" name= \"town\"  value = \"{$row['town']}\" class = \"tablefield\" disabled></td>
-                        <td><input type=\"text\" id = \"county\" name= \"county\"  value = \"{$row['county']}\" class = \"tablefield\" disabled></td>
-
-                        <td><input type=\"text\" id = \"postcode\" name= \"postcode\"  value = \"{$row['postcode']}\" class = \"tablefield\" disabled></td>
-                        <td><input type=\"text\" id = \"country\" name= \"country\"  value = \"{$row['country']}\" class = \"tablefield\" disabled></td>
+                        <td id = \"postcode\" name= \"postcode\" class = \"tablefield\" disabled>{$row['postcode']}</td>
+                        <td id = \"country\" name= \"country\" class = \"tablefield\" disabled>{$row['country']}</td>
                     </tr>
                                 ";
     }

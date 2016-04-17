@@ -55,6 +55,8 @@ $result = mysqli_query($db, $sql);
                 <option value="customername"> CUSTOMER NAME</option>
                 <option value="country"> CUSTOMER COUNTRY</option>
             </select>
+            <button id="export"> Export To Excel Sheet</button>
+            <div id="customertable">
             <table id="t2">
                 <tr>
                     <th> ID </th>
@@ -80,23 +82,22 @@ $result = mysqli_query($db, $sql);
                         echo "
 
                                 <tr>
-                        <td><input type=\"text\" id = \"customerid\" name= \"customerid\"  value = \"{$row['customerid']}\" class = \"tablefield\" disabled></td>
-                        <td><input type=\"text\" id = \"customertype\" name= \"customertype\"  value = \"{$row['customertype']}\" class = \"tablefield\" disabled></td>
-                        <td><input type=\"text\" id = \"customername\" name= \"customername\"  value = \"{$row['customername']}\" class = \"tablefield\" disabled></td>
+                        <td id = \"customerid\" name= \"customerid\" class = \"tablefield\" disabled>{$row['customerid']}</td>
+                        <td id = \"customertype\" name= \"customertype\" class = \"tablefield\" disabled>{$row['customertype']}</td>
+                        <td id = \"customername\" name= \"customername\" class = \"tablefield\" disabled>{$row['customername']}</td>
+                        <td id = \"telnumber\" name= \"telnumber\" class = \"tablefield\" disabled>{$row['telnumber']}</td>
+                        <td id = \"fax\" name= \"fax\" class = \"tablefield\" disabled>{$row['fax']}</td>
+                        <td id = \"email\" name= \"email\" class = \"tablefield\" disabled>{$row['email']}</td>
+                        <td id = \"url\" name= \"url\" class = \"tablefield\" disabled>{$row['url']}</td>
+                        <td id = \"description\" name= \"description\" class = \"tablefield\" disabled>{$row['description']}</td>
 
-                        <td><input type=\"text\" id = \"telnumber\" name= \"telnumber\"  value = \"{$row['telnumber']}\" class = \"tablefield\" disabled></td>
-                        <td><input type=\"text\" id = \"fax\" name= \"fax\"  value = \"{$row['fax']}\" class = \"tablefield\" disabled></td>
-                        <td><input type=\"text\" id = \"email\" name= \"email\"  value = \"{$row['email']}\" class = \"tablefield\" disabled></td>
-                        <td><input type=\"text\" id = \"url\" name= \"url\"  value = \"{$row['url']}\" class = \"tablefield\" disabled></td>
-                        <td><input type=\"text\" id = \"description\" name= \"description\"  value = \"{$row['description']}\" class = \"tablefield\" disabled></td>
+                        <td id = \"addressline1\" name= \"addressline1\" class = \"tablefield\" disabled>{$row['addressline1']}</td>
+                        <td id = \"addressline2\" name= \"addressline2\" class = \"tablefield\" disabled>{$row['addressline2']}</td>
+                        <td id = \"town\" name= \"town\"  class = \"tablefield\" disabled>{$row['town']}</td>
+                        <td id = \"county\" name= \"county\" class = \"tablefield\" disabled>{$row['county']}</td>
 
-                        <td><input type=\"text\" id = \"addressline1\" name= \"addressline1\"  value = \"{$row['addressline1']}\" class = \"tablefield\" disabled></td>
-                        <td><input type=\"text\" id = \"addressline2\" name= \"addressline2\"  value = \"{$row['addressline2']}\" class = \"tablefield\" disabled></td>
-                        <td><input type=\"text\" id = \"town\" name= \"town\"  value = \"{$row['town']}\" class = \"tablefield\" disabled></td>
-                        <td><input type=\"text\" id = \"county\" name= \"county\"  value = \"{$row['county']}\" class = \"tablefield\" disabled></td>
-
-                        <td><input type=\"text\" id = \"postcode\" name= \"postcode\"  value = \"{$row['postcode']}\" class = \"tablefield\" disabled></td>
-                        <td><input type=\"text\" id = \"country\" name= \"country\"  value = \"{$row['country']}\" class = \"tablefield\" disabled></td>
+                        <td id = \"postcode\" name= \"postcode\" class = \"tablefield\" disabled>{$row['postcode']}</td>
+                        <td id = \"country\" name= \"country\" class = \"tablefield\" disabled>{$row['country']}</td>
                     </tr>
 
                                 ";
@@ -107,6 +108,7 @@ $result = mysqli_query($db, $sql);
                 ?>
                 </tbody>
             </table>
+            </div>
         </div>
         </form>
     </section>
@@ -123,6 +125,33 @@ $result = mysqli_query($db, $sql);
                     .done(function (msg) {
                         $("#customertd").html(msg);
                     });
+            });
+        });
+    </script>
+    <script>
+        $(document).ready(function () {
+            $("#export").click(function (e) {
+                //getting values of current time for generating the file name
+                var dt = new Date();
+                var day = dt.getDate();
+                var month = dt.getMonth() + 1;
+                var year = dt.getFullYear();
+                var hour = dt.getHours();
+                var mins = dt.getMinutes();
+                var postfix = day + "." + month + "." + year + "_" + hour + "." + mins;
+                //creating a temporary HTML link element (they support setting file names)
+                var a = document.createElement('a');
+                //getting data from our div that contains the HTML table
+                var data_type = 'data:application/vnd.ms-excel';
+                var table_div = document.getElementById('customertable');
+                var table_html = table_div.outerHTML.replace(/ /g, '%20');
+                a.href = data_type + ', ' + table_html;
+                //setting the file name
+                a.download = 'Customer_Inventory_' + postfix + '.xls';
+                //triggering the function
+                a.click();
+                //just in case, prevent default behaviour
+                e.preventDefault();
             });
         });
     </script>
