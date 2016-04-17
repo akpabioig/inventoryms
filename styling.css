@@ -390,6 +390,6 @@ hr{
     cursor: pointer;
 }
 
-#suppliertable, #producttable {
+#suppliertable, #producttable, #customertable {
     margin-top: 1%;
 }
