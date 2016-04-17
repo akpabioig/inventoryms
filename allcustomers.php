@@ -57,7 +57,7 @@ $result = mysqli_query($db, $sql);
             </select>
             <button id="export"> Export To Excel Sheet</button>
             <div id="customertable">
-            <table id="t2">
+                <table>
                 <tr>
                     <th> ID </th>
                     <th> Type </th>
