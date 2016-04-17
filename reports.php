@@ -35,11 +35,11 @@
         <h2>REPORTS</h2>
         <p>Click on Any of The Reports To Explore</p>
         <div id = "form1">
-            <li>
-                <ul><a href="allcustomers.php"> CUSTOMER REPORT </a></ul>
-                <ul><a href="allsuppliers.php"> SUPPLIER REPORT </a></ul>
-                <ul><a href="allproducts.php"> PRODUCT REPORT </a></ul>
-            </li>
+            <ul>
+                <li><a href="allcustomers.php"> CUSTOMER REPORT </a></li>
+                <li><a href="allsuppliers.php"> SUPPLIER REPORT </a></li>
+                <li><a href="allproducts.php"> PRODUCT REPORT </a></li>
+            </ul>
         </div>
     </section>
 </div>
