@@ -387,6 +387,7 @@ hr{
     margin-left: 73%;
     color: white;
     background-color: green;
+    cursor: pointer;
 }
 
 #suppliertable, #producttable {
