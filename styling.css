@@ -214,6 +214,7 @@ footer{
 
 #form1 ul li:hover {
     background-color: red;
+    margin-right: 30%;
 }
 #form2{
     margin-left: 50px;
