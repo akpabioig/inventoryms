@@ -203,6 +203,10 @@ footer{
     border:solid black;
     padding: 15px;
 }
+
+#form1 ul {
+    text-decoration: none;
+}
 #form2{
     margin-left: 50px;
     margin-right: 10%;
