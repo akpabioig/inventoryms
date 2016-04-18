@@ -85,7 +85,7 @@ include('connection.php');
     <header>
         <h1> RGU Oil Services </h1>
         <h2> Inventory Management Made Easy </h2>
-        <a id="logout" href="logout.php"><input type = "button" value = "LOG OUT"/></a>
+        <button id="logout" href="logout.php">LOG OUT</button>
     </header>
     <section>
 
@@ -154,7 +154,7 @@ include('connection.php');
                 <img src="location/y1.jpg" style{height="150" width="355" } class="locicons"/>
             </a>
             <a id="y2">
-                <img src="location/y2.jpg" style{height="150" width="355" } class="locicons"/>
+                <img src="location/y2.jpg" style{height="150" width="3554" } class="locicons"/>
             </a>
             </div>
 

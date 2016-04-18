@@ -42,7 +42,7 @@ $result = mysqli_query($db, $sql);
     <header>
         <h1> RGU Oil Services </h1>
         <h2> Inventory Management Made Easy </h2>
-        <a id="logout" href="logout.php"><input type = "button" value = "LOG OUT"/></a>
+        <button id="logout" href="logout.php">LOG OUT</button>
     </header>
     <section>
         <h3>PRODUCTS</h3>

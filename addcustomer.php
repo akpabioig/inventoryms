@@ -55,6 +55,7 @@
     <header>
         <h1> RGU Oil Services </h1>
         <h2> Inventory Management Made Easy </h2>
+        <button id="logout" href="logout.php">LOG OUT</button>
     </header>
     <section>
         <h3>ADD CUSTOMER</h3>
