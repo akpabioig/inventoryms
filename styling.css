@@ -206,8 +206,8 @@ footer{
 
 #form1 ul li {
     list-style: none;
-    font-weight: 300;
-    font-size: 50%;
+    font-weight: bold;
+    font-size: 300%;
     font-family: "Cambria", Arial, sans-serif;
     text-shadow: 5px 5px 5px orange;
 }
