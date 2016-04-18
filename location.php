@@ -151,10 +151,10 @@ include('connection.php');
         </div>
         <div class = "locbutt3">
             <a id="y1">
-                <img src="location/y1.jpg" style{height="150" width="350" } class="locicons"/>
+                <img src="location/y1.jpg" style{height="150" width="355" } class="locicons"/>
             </a>
             <a id="y2">
-                <img src="location/y2.jpg" style{height="150" width="350" } class="locicons"/>
+                <img src="location/y2.jpg" style{height="150" width="355" } class="locicons"/>
             </a>
             </div>
 
