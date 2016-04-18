@@ -205,8 +205,9 @@ footer{
 }
 
 #form1 ul li {
-    text-decoration: none;
-    color: red;
+    list-style: none;
+    font-weight: 200;
+    text-shadow: #ff9800;
 }
 #form2{
     margin-left: 50px;
