@@ -211,6 +211,10 @@ footer{
     font-family: "Cambria", Arial, sans-serif;
     text-shadow: 5px 5px 5px orange;
 }
+
+#form1 ul li:hover {
+    background-color: red;
+}
 #form2{
     margin-left: 50px;
     margin-right: 10%;
