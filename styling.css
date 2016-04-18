@@ -204,8 +204,9 @@ footer{
     padding: 15px;
 }
 
-#form1 ul {
+#form1 ul li {
     text-decoration: none;
+    color: red;
 }
 #form2{
     margin-left: 50px;
