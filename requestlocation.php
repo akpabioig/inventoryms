@@ -41,5 +41,5 @@ if (isset($_POST['sortlocation'])) {
         echo '<option> No Result Found </option>';
     }
 
-
-    ?>
+}
+?>
