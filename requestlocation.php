@@ -30,9 +30,9 @@ if (isset($_POST['sortlocation'])) {
         while ($row = $result->fetch_array()) {
             echo "
                     <tr>
-                        <td><input type=\"text\" id = \"productid\" name= \"productid\" class = \"tablefield\" disabled>{$row['productid']}</td>
-                        <td><input type=\"text\" id = \"productname\" name= \"productname\" class = \"tablefield\" disabled>{$row['productname']}</td>
-                        <td><input type=\"text\" id = \"locationid\" name= \"locationid\" class = \"tablefield\" disabled>{$row['locationid']}</td>
+                        <td id = \"productid\" name= \"productid\" class = \"tablefield\" disabled>{$row['productid']}</td>
+                        <td id = \"productname\" name= \"productname\" class = \"tablefield\" disabled>{$row['productname']}</td>
+                        <td id = \"locationid\" name= \"locationid\" class = \"tablefield\" disabled>{$row['locationid']}</td>
                     </tr>
 
                                 ";

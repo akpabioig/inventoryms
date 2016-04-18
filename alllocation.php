@@ -43,8 +43,8 @@ $result = mysqli_query($db, $sql);
     <section>
         <h3>CUSTOMERS</h3>
         <img src="images/loc.png" style{height="250" width="200" }/>
-        <h2> LIST OF CUSTOMERS </h2>
-        <p> FIND BELOW THE LIST OF ALL CUSTOMERS </p>
+        <h2> PRODUCT LOCATION REPORT </h2>
+        <p> FIND BELOW LOCATION OF ALL PRODUCTS IN STOCK </p>
         <form method="get">
             <div id="form3">
                 <select name="sortlocation" id="sortlocation">
