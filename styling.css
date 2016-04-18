@@ -206,8 +206,8 @@ footer{
 
 #form1 ul li {
     list-style: none;
-    font-weight: 200;
-    text-shadow: #ff9800;
+    font-weight: 300;
+    text-shadow: 5px 5px 5px orange;
 }
 #form2{
     margin-left: 50px;
