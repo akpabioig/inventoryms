@@ -13,7 +13,7 @@ $result = mysqli_query($db, $sql);
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>CUSTOMERS</title>
+    <title>PRODUCT LOCATION</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styling.css"/>
     <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
@@ -41,7 +41,7 @@ $result = mysqli_query($db, $sql);
         <a id="logout" href="logout.php"><input type="button" value="LOG OUT"/></a>
     </header>
     <section>
-        <h3>CUSTOMERS</h3>
+        <h3>PRODUCT LOCATION </h3>
         <img src="images/loc.png" style{height="250" width="200" }/>
         <h2> PRODUCT LOCATION REPORT </h2>
         <p> FIND BELOW LOCATION OF ALL PRODUCTS IN STOCK </p>
