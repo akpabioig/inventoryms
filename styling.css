@@ -373,9 +373,10 @@ hr{
 
 #logout{
     margin-left: 90%;
-    color: red;
-    border-radius: 5%;
-    border-color: red;
+    background-color: red;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
 }
 
 .reporticons{
