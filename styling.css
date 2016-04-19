@@ -215,8 +215,8 @@ section{
 
 #pending {
     position: relative;
-    left: -200px;
-    bottom: -40px;
+    left: 0px;
+    bottom: 0px;
     display: none;
     text-decoration: none;
     font-style: oblique;
