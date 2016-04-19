@@ -17,5 +17,20 @@ if (isset($_GET['salesid'])) {
         echo $e->getMessage();
     }
 }
+
+if (isset($_GET['purid'])) {
+    $poId = $_GET['purid'];
+    $sqlselect1 = "SELECT * FROM purchaseorder WHERE purchaseid = $poId";
+    $getResult1 = mysqli_query($db, $sqlselect1);
+
+    try {
+        $sql1 = "UPDATE purchaseorder
+                SET status = 'fulfilled'
+                    WHERE purchaseid = {$poId}";
+        $sth1 = $db->query($sql1);
+    } catch (PDOException $e) {
+        echo $e->getMessage();
+    }
+}
 header("Location: pendingorder.php");
 ?>
