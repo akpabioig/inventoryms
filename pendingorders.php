@@ -11,6 +11,12 @@ $sql = "SELECT salesorder.datesales, salesorder.sid, addcustomer.customername, s
                           WHERE addcustomer.customerid = salesorder.customerid
                           AND status = 'pending'";
 $result = mysqli_query($db, $sql);
+
+$sql1 = "SELECT purchase.datepurchase, purchaseorder.purchaseid, addsupplier.suppliername, purchaseorder.totalunits, purchaseorder.total, purchase.status
+         FROM purchaseorder, addsupplier
+         WHERE addsupplier.supplirid = purchaseorder.supplierid
+         AND STATUS = 'pending'";
+$result1 = mysqli_query($db, $sql1);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -57,7 +63,6 @@ $result = mysqli_query($db, $sql);
                     <th> DATE</th>
                     <th> SALES ID</th>
                     <th> CUSTOMER NAME</th>
-                    <th> SUPPLIER NAME</th>
                     <th> DELIVERY ADDRESS</th>
                     <th> PAYMENT TYPE</th>
                     <th> TOTAL UNITS</th>
@@ -69,14 +74,14 @@ $result = mysqli_query($db, $sql);
                     while ($row = $result->fetch_array()) {
                         echo "
                                 <tr>
-                        <td><input type=\"text\" id = \"datesales\" name= \"datesales\"  value = \"{$row['datesales']}\" class = \"tablefield\" disabled></td>
-                        <td><input type=\"text\" id = \"sid\" name= \"sid\"  value = \"{$row['sid']}\" class = \"tablefield\" disabled></td>
-                        <td><input type=\"text\" id = \"customername\" name= \"customername\"  value = \"{$row['customername']}\" class = \"tablefield\" disabled></td>
-                        <td><input type=\"text\" id = \"deladdress\" name= \"deladdress\"  value = \"{$row['deladdress']}\" class = \"tablefield\" disabled></td>
-                        <td><input type=\"text\" id = \"paymenttype\" name= \"paymenttype\"  value = \"{$row['paymenttype']}\" class = \"tablefield\" disabled></td>
-                        <td><input type=\"text\" id = \"totalunits\" name= \"totalunits\"  value = \"{$row['totalunits']}\" class = \"tablefield\" disabled></td>
-                        <td><input type=\"text\" id = \"totalcost\" name= \"totalcost\"  value = \"{$row['totalcost']}\" class = \"tablefield\" disabled></td>
-                        <td><input type=\"text\" id = \"status\" name= \"status\"  value = \"{$row['status']}\" class = \"tablefield\" disabled></td>
+                        <td><input type=\"text\" id = \"datesales\" name= \"datesales\"  value = \"{$row['salesorder.datesales']}\" class = \"tablefield\" disabled></td>
+                        <td><input type=\"text\" id = \"sid\" name= \"sid\"  value = \"{$row['salesorder.sid']}\" class = \"tablefield\" disabled></td>
+                        <td><input type=\"text\" id = \"customername\" name= \"customername\"  value = \"{$row['addcustomer.customername']}\" class = \"tablefield\" disabled></td>
+                        <td><input type=\"text\" id = \"deladdress\" name= \"deladdress\"  value = \"{$row['salesorder.deladdress']}\" class = \"tablefield\" disabled></td>
+                        <td><input type=\"text\" id = \"paymenttype\" name= \"paymenttype\"  value = \"{$row['salesorder.paymenttype']}\" class = \"tablefield\" disabled></td>
+                        <td><input type=\"text\" id = \"totalunits\" name= \"totalunits\"  value = \"{$row['salesorder.totalunits']}\" class = \"tablefield\" disabled></td>
+                        <td><input type=\"text\" id = \"totalcost\" name= \"totalcost\"  value = \"{$row['salesorder.totalcost']}\" class = \"tablefield\" disabled></td>
+                        <td><input type=\"text\" id = \"status\" name= \"status\"  value = \"{$row['salesorder.status']}\" class = \"tablefield\" disabled></td>
                         <td><a href='updatefulfilorder.php?salesid={$row['sid']}'><img src = 'images/tick.png' style{height=\"25\" width=\"25\"}></a></td>
                         <td><a href='deleteproduct.php?prodid={$row['productid']}'> <img src = 'images/delete.png' style{height=\"25\" width=\"25\"}></a> </td>
                     </tr>
@@ -87,6 +92,38 @@ $result = mysqli_query($db, $sql);
                     echo '<option> No Result Found </option>';
                 }
                 ?>
+            </table>
+            <tr>
+                <th> DATE</th>
+                <th> PURCHASE ID</th>
+                <th> SUPPLIER NAME</th>
+                <th> TOTAL UNITS</th>
+                <th> TOTAL COST</th>
+                <th> STATUS</th>
+            </tr>
+            <?php
+            if (mysqli_num_rows($result1) == 1 || mysqli_num_rows($result1) > 1) {
+                while ($row1 = $result1->fetch_array()) {
+                    echo "
+                                <tr>
+                        <td><input type=\"text\" id = \"datesales\" name= \"datesales\"  value = \"{$row['purchaseorder.datesales']}\" class = \"tablefield\" disabled></td>
+                        <td><input type=\"text\" id = \"purchaseid\" name= \"purchaseid\"  value = \"{$row['purchaseorder.purchaseid']}\" class = \"tablefield\" disabled></td>
+                        <td><input type=\"text\" id = \"suppliername\" name= \"suppliername\"  value = \"{$row['addsupplier.suppliername']}\" class = \"tablefield\" disabled></td>
+                        <td><input type=\"text\" id = \"totalunits\" name= \"totalunits\"  value = \"{$row['purchaseorder.totalunits']}\" class = \"tablefield\" disabled></td>                        <td><input type=\"text\" id = \"totalunits\" name= \"totalunits\"  value = \"{$row['totalunits']}\" class = \"tablefield\" disabled></td>
+                        <td><input type=\"text\" id = \"total\" name= \"total\"  value = \"{$row['purchaseorder.total']}\" class = \"tablefield\" disabled></td>
+                        <td><input type=\"text\" id = \"status\" name= \"status\"  value = \"{$row['purchaseorder.status']}\" class = \"tablefield\" disabled></td>
+                        <td><a href='updatefulfilorder.php?purid={$row['purchaseid']}'><img src = 'images/tick.png' style{height=\"25\" width=\"25\"}></a></td>
+                        <td><a href='deleteproduct.php?prodid={$row['productid']}'> <img src = 'images/delete.png' style{height=\"25\" width=\"25\"}></a> </td>
+                    </tr>
+
+                                ";
+                }
+            } else {
+                echo '<option> No Result Found </option>';
+            }
+            ?>
+            <table>
+
             </table>
         </div>
         </form>
