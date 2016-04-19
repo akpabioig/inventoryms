@@ -109,7 +109,7 @@ $result1 = mysqli_query($db, $sql1);
                     while ($row = $result1->fetch_array()) {
                         echo "
                                 <tr>
-                        <td><input type=\"text\" id = \"datesales\" name= \"datesales\"  value = \"{$row['datesales']}\" class = \"tablefield\" disabled></td>
+                        <td><input type=\"text\" id = \"datesales\" name= \"datesales\"  value = \"{$row['datepurchase']}\" class = \"tablefield\" disabled></td>
                         <td><input type=\"text\" id = \"purchaseid\" name= \"purchaseid\"  value = \"{$row['purchaseid']}\" class = \"tablefield\" disabled></td>
                         <td><input type=\"text\" id = \"suppliername\" name= \"suppliername\"  value = \"{$row['suppliername']}\" class = \"tablefield\" disabled></td>
                         <td><input type=\"text\" id = \"totalunits\" name= \"totalunits\"  value = \"{$row['totalunits']}\" class = \"tablefield\" disabled></td>                        <td><input type=\"text\" id = \"totalunits\" name= \"totalunits\"  value = \"{$row['totalunits']}\" class = \"tablefield\" disabled></td>
