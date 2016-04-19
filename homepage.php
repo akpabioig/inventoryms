@@ -84,7 +84,7 @@ include('connection.php');
                 <span id="editorder">EDIT RECORDS</span>
             </a>
             <a id="orderfulfil" href=".php">
-                <img src="images/fulfil.jpg" style{height="250" width="185" }/>
+                <img src="images/fulfil.png" style{height="250" width="185" }/>
                 <span id="fulfil">ORDER FULFILMENT</span>
             </a>
         </div>
