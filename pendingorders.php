@@ -75,14 +75,14 @@ $result1 = mysqli_query($db, $sql1);
                     while ($row = $result->fetch_array()) {
                         echo "
                                 <tr>
-                        <td><input type=\"text\" id = \"datesales\" name= \"datesales\"  value = \"{$row['salesorder.datesales']}\" class = \"tablefield\" disabled></td>
-                        <td><input type=\"text\" id = \"sid\" name= \"sid\"  value = \"{$row['salesorder.sid']}\" class = \"tablefield\" disabled></td>
-                        <td><input type=\"text\" id = \"customername\" name= \"customername\"  value = \"{$row['addcustomer.customername']}\" class = \"tablefield\" disabled></td>
-                        <td><input type=\"text\" id = \"deladdress\" name= \"deladdress\"  value = \"{$row['salesorder.deladdress']}\" class = \"tablefield\" disabled></td>
-                        <td><input type=\"text\" id = \"paymenttype\" name= \"paymenttype\"  value = \"{$row['salesorder.paymenttype']}\" class = \"tablefield\" disabled></td>
-                        <td><input type=\"text\" id = \"totalunits\" name= \"totalunits\"  value = \"{$row['salesorder.totalunits']}\" class = \"tablefield\" disabled></td>
-                        <td><input type=\"text\" id = \"totalcost\" name= \"totalcost\"  value = \"{$row['salesorder.totalcost']}\" class = \"tablefield\" disabled></td>
-                        <td><input type=\"text\" id = \"status\" name= \"status\"  value = \"{$row['salesorder.status']}\" class = \"tablefield\" disabled></td>
+                        <td><input type=\"text\" id = \"datesales\" name= \"datesales\"  value = \"{$row['datesales']}\" class = \"tablefield\" disabled></td>
+                        <td><input type=\"text\" id = \"sid\" name= \"sid\"  value = \"{$row['sid']}\" class = \"tablefield\" disabled></td>
+                        <td><input type=\"text\" id = \"customername\" name= \"customername\"  value = \"{$row['customername']}\" class = \"tablefield\" disabled></td>
+                        <td><input type=\"text\" id = \"deladdress\" name= \"deladdress\"  value = \"{$row['deladdress']}\" class = \"tablefield\" disabled></td>
+                        <td><input type=\"text\" id = \"paymenttype\" name= \"paymenttype\"  value = \"{$row['paymenttype']}\" class = \"tablefield\" disabled></td>
+                        <td><input type=\"text\" id = \"totalunits\" name= \"totalunits\"  value = \"{$row['totalunits']}\" class = \"tablefield\" disabled></td>
+                        <td><input type=\"text\" id = \"totalcost\" name= \"totalcost\"  value = \"{$row['totalcost']}\" class = \"tablefield\" disabled></td>
+                        <td><input type=\"text\" id = \"status\" name= \"status\"  value = \"{$row['status']}\" class = \"tablefield\" disabled></td>
                         <td><a href='updatefulfilorder.php?salesid={$row['sid']}'><img src = 'images/tick.png' style{height=\"25\" width=\"25\"}></a></td>
                         <td><a href='deleteproduct.php?prodid={$row['productid']}'> <img src = 'images/delete.png' style{height=\"25\" width=\"25\"}></a> </td>
                     </tr>
@@ -109,12 +109,12 @@ $result1 = mysqli_query($db, $sql1);
                     while ($row = $result1->fetch_array()) {
                         echo "
                                 <tr>
-                        <td><input type=\"text\" id = \"datesales\" name= \"datesales\"  value = \"{$row['purchaseorder.datesales']}\" class = \"tablefield\" disabled></td>
-                        <td><input type=\"text\" id = \"purchaseid\" name= \"purchaseid\"  value = \"{$row['purchaseorder.purchaseid']}\" class = \"tablefield\" disabled></td>
-                        <td><input type=\"text\" id = \"suppliername\" name= \"suppliername\"  value = \"{$row['addsupplier.suppliername']}\" class = \"tablefield\" disabled></td>
-                        <td><input type=\"text\" id = \"totalunits\" name= \"totalunits\"  value = \"{$row['purchaseorder.totalunits']}\" class = \"tablefield\" disabled></td>                        <td><input type=\"text\" id = \"totalunits\" name= \"totalunits\"  value = \"{$row['totalunits']}\" class = \"tablefield\" disabled></td>
-                        <td><input type=\"text\" id = \"total\" name= \"total\"  value = \"{$row['purchaseorder.total']}\" class = \"tablefield\" disabled></td>
-                        <td><input type=\"text\" id = \"status\" name= \"status\"  value = \"{$row['purchaseorder.status']}\" class = \"tablefield\" disabled></td>
+                        <td><input type=\"text\" id = \"datesales\" name= \"datesales\"  value = \"{$row['datesales']}\" class = \"tablefield\" disabled></td>
+                        <td><input type=\"text\" id = \"purchaseid\" name= \"purchaseid\"  value = \"{$row['purchaseid']}\" class = \"tablefield\" disabled></td>
+                        <td><input type=\"text\" id = \"suppliername\" name= \"suppliername\"  value = \"{$row['suppliername']}\" class = \"tablefield\" disabled></td>
+                        <td><input type=\"text\" id = \"totalunits\" name= \"totalunits\"  value = \"{$row['totalunits']}\" class = \"tablefield\" disabled></td>                        <td><input type=\"text\" id = \"totalunits\" name= \"totalunits\"  value = \"{$row['totalunits']}\" class = \"tablefield\" disabled></td>
+                        <td><input type=\"text\" id = \"total\" name= \"total\"  value = \"{$row['total']}\" class = \"tablefield\" disabled></td>
+                        <td><input type=\"text\" id = \"status\" name= \"status\"  value = \"{$row['status']}\" class = \"tablefield\" disabled></td>
                         <td><a href='updatefulfilorder.php?purid={$row['purchaseid']}'><img src = 'images/tick.png' style{height=\"25\" width=\"25\"}></a></td>
                         <td><a href='deleteproduct.php?prodid={$row['productid']}'> <img src = 'images/delete.png' style{height=\"25\" width=\"25\"}></a> </td>
                     </tr>
