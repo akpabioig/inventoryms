@@ -91,7 +91,7 @@ section{
 
 #aprod{
     position: relative;
-    left: -200px;
+    left: -250px;
     bottom: -40px;
     display: none;
     text-decoration: none;
@@ -104,7 +104,7 @@ section{
 }
 #customer{
      position: relative;
-     left: -250px;
+    left: -280px;
      bottom: -40px;
      display: none;
      text-decoration: none;
