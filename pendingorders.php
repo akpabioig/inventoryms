@@ -16,7 +16,7 @@ $sql1 = "SELECT purchaseorder.datepurchase, purchaseorder.purchaseid, addsupplie
          FROM purchaseorder, addsupplier
          WHERE addsupplier.supplierid = purchaseorder.supplierid
          AND STATUS = 'pending'";
-$result1 = mysqli_query($db1, $sql1);
+$result1 = mysqli_query($db, $sql1);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -106,7 +106,7 @@ $result1 = mysqli_query($db1, $sql1);
                 </tr>
                 <?php
                 if (mysqli_num_rows($result1) == 1 || mysqli_num_rows($result1) > 1) {
-                    while ($row1 = $result1->fetch_array()) {
+                    while ($row = $result1->fetch_array()) {
                         echo "
                                 <tr>
                         <td><input type=\"text\" id = \"datesales\" name= \"datesales\"  value = \"{$row['purchaseorder.datesales']}\" class = \"tablefield\" disabled></td>
