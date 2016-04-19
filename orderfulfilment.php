@@ -39,6 +39,10 @@ include('connection.php');
         <h3> ORDER FULFILMENT </h3>
         <img src="images/fulfil.png" style{height="250" width="200" }/>
         <h3> SELECT PENDING ORDERS / FULFILLED ORDERS </h3>
+        <ul>
+            <li> PENDING ORDERS :- To See the List of Orders still pending or To Fulfill an Order</li>
+            <li> FULFILL ORDERS :- To See the List of Orders that have been fulfilled</li>
+        </ul>
         <div id="form1">
             <div class="buttons2">
                 <a id="orderpend" href="ne.php">
