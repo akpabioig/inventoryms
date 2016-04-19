@@ -58,6 +58,7 @@ $result = mysqli_query($db, $sql);
                     <th> SALES ID</th>
                     <th> CUSTOMER NAME</th>
                     <th> DELIVERY ADDRESS</th>
+                    <th> PAYMENT TYPE</th>
                     <th> TOTAL UNITS</th>
                     <th> TOTAL COST</th>
                 </tr>
@@ -70,6 +71,7 @@ $result = mysqli_query($db, $sql);
                         <td><input type=\"text\" id = \"sid\" name= \"sid\"  value = \"{$row['sid']}\" class = \"tablefield\" disabled></td>
                         <td><input type=\"text\" id = \"customername\" name= \"customername\"  value = \"{$row['customername']}\" class = \"tablefield\" disabled></td>
                         <td><input type=\"text\" id = \"deladdress\" name= \"deladdress\"  value = \"{$row['deladdress']}\" class = \"tablefield\" disabled></td>
+                        <td><input type=\"text\" id = \"paymenttype\" name= \"paymenttype\"  value = \"{$row['paymenttype']}\" class = \"tablefield\" disabled></td>
                         <td><input type=\"text\" id = \"totalunits\" name= \"totalunits\"  value = \"{$row['totalunits']}\" class = \"tablefield\" disabled></td>
                         <td><input type=\"text\" id = \"totalcost\" name= \"totalcost\"  value = \"{$row['totalcost']}\" class = \"tablefield\" disabled></td>
                         <td><a href='edit-product.php?prodid={$row['productid']}'><img src = 'images/edit.png' style{height=\"25\" width=\"25\"}></a></td>
