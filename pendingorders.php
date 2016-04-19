@@ -58,6 +58,7 @@ $result1 = mysqli_query($db, $sql1);
         <form method="get" action="pendingorders.php"
         ">
         <div id="form3">
+            <h2>SALES ORDERS</h2>
             <table id="t2">
                 <tr>
                     <th> DATE</th>
@@ -92,6 +93,7 @@ $result1 = mysqli_query($db, $sql1);
                     echo '<option> No Result Found </option>';
                 }
                 ?>
+                <h2>PURCHASE ORDERS</h2>
             </table>
             <tr>
                 <th> DATE</th>
