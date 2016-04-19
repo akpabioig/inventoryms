@@ -201,13 +201,13 @@ section{
 
 #fulfiled {
     position: relative;
-    left: -180px;
+    left: -90px;
     top: -100px;
     display: none;
     text-decoration: none;
     font-style: oblique;
     font-weight: bold;
-    font-size: 60%;
+    font-size: 150%;
 }
 
 #orderful:hover #fulfiled {
@@ -216,13 +216,13 @@ section{
 
 #pending {
     position: relative;
-    left: -180px;
+    left: -90px;
     top: -100px;
     display: none;
     text-decoration: none;
     font-style: oblique;
     font-weight: bold;
-    font-size: 60%;
+    font-size: 150%;
 }
 
 #orderpend:hover #pending {
