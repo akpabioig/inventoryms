@@ -106,19 +106,18 @@ $result1 = mysqli_query($db, $sql1);
                 </tr>
                 <?php
                 if (mysqli_num_rows($result1) == 1 || mysqli_num_rows($result1) > 1) {
-                    while ($row = $result1->fetch_array()) {
+                    while ($row1 = $result1->fetch_array()) {
                         echo "
                                 <tr>
-                        <td><input type=\"text\" id = \"datesales\" name= \"datesales\"  value = \"{$row['datepurchase']}\" class = \"tablefield\" disabled></td>
-                        <td><input type=\"text\" id = \"purchaseid\" name= \"purchaseid\"  value = \"{$row['purchaseid']}\" class = \"tablefield\" disabled></td>
-                        <td><input type=\"text\" id = \"suppliername\" name= \"suppliername\"  value = \"{$row['suppliername']}\" class = \"tablefield\" disabled></td>
-                        <td><input type=\"text\" id = \"totalunits\" name= \"totalunits\"  value = \"{$row['totalunits']}\" class = \"tablefield\" disabled></td>                        <td><input type=\"text\" id = \"totalunits\" name= \"totalunits\"  value = \"{$row['totalunits']}\" class = \"tablefield\" disabled></td>
-                        <td><input type=\"text\" id = \"total\" name= \"total\"  value = \"{$row['total']}\" class = \"tablefield\" disabled></td>
-                        <td><input type=\"text\" id = \"status\" name= \"status\"  value = \"{$row['status']}\" class = \"tablefield\" disabled></td>
-                        <td><a href='updatefulfilorder.php?purid={$row['purchaseid']}'><img src = 'images/tick.png' style{height=\"25\" width=\"25\"}></a></td>
-                        <td><a href='deleteproduct.php?prodid={$row['productid']}'> <img src = 'images/delete.png' style{height=\"25\" width=\"25\"}></a> </td>
+                        <td><input type=\"text\" id = \"datesales\" name= \"datesales\"  value = \"{$row1['datepurchase']}\" class = \"tablefield\" disabled></td>
+                        <td><input type=\"text\" id = \"purchaseid\" name= \"purchaseid\"  value = \"{$row1['purchaseid']}\" class = \"tablefield\" disabled></td>
+                        <td><input type=\"text\" id = \"suppliername\" name= \"suppliername\"  value = \"{$row1['suppliername']}\" class = \"tablefield\" disabled></td>
+                        <td><input type=\"text\" id = \"totalunits\" name= \"totalunits\"  value = \"{$row1['totalunits']}\" class = \"tablefield\" disabled></td>                        <td><input type=\"text\" id = \"totalunits\" name= \"totalunits\"  value = \"{$row['totalunits']}\" class = \"tablefield\" disabled></td>
+                        <td><input type=\"text\" id = \"total\" name= \"total\"  value = \"{$row1['total']}\" class = \"tablefield\" disabled></td>
+                        <td><input type=\"text\" id = \"status\" name= \"status\"  value = \"{$row1['status']}\" class = \"tablefield\" disabled></td>
+                        <td><a href='updatefulfilorder.php?purid={$row1['purchaseid']}'><img src = 'images/tick.png' style{height=\"25\" width=\"25\"}></a></td>
+                        <td><a href='deleteproduct.php?prodid={$row1['productid']}'> <img src = 'images/delete.png' style{height=\"25\" width=\"25\"}></a> </td>
                     </tr>
-
                                 ";
                     }
                 } else {
