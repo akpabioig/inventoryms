@@ -6,17 +6,17 @@ if (!isset($_SESSION['user'])) {
 
 include('connection.php');
 //
-$sql = "SELECT addproduct.productid, addproduct.productserialnumber, addproduct.productname, addproduct.productdescription,
-                          addsupplier.suppliername, addproduct.locationid, addproduct.initialstockprice, addproduct.wholesaleprice, addproduct.retailprice
-                          FROM addproduct, addsupplier
-                          WHERE addsupplier.supplierid = addproduct.supplierid";
+$sql = "SELECT (salesorder.datesales, salesorder.sid, addcustomer.customername, salesorder.deladdress, salesorder.totalunits, salesorder.totalcost)
+                          FROM addcustomer, salesorder
+                          WHERE addcustomer.customerid = salesorder.customerid
+                          AND status = pending";
 $result = mysqli_query($db, $sql);
 ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>PRODUCTS</title>
+    <title>PENDING ORDERS</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styling.css"/>
     <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
@@ -45,48 +45,34 @@ $result = mysqli_query($db, $sql);
         <button id="logout" href="logout.php">LOG OUT</button>
     </header>
     <section>
-        <h3>PRODUCTS</h3>
-        <img src="images/product.png" style{height="250" width="200" }/>
-        <h2>EDIT PRODUCT ENTRIES</h2>
-        <p>SCROLL TO THE END OF THE RECORD AND CLICK THE EDIT ICON</p>
-        <form method="get" action="productseditor.php"
+        <h3> PENDING ORDERS </h3>
+        <img src="images/pending.png" style{height="250" width="200" }/>
+        <h2>FULFILL/ DELETE ORDERS</h2>
+        <p>SCROLL TO THE END OF THE RECORD TO FULFIL? DELETE ORDERS</p>
+        <form method="get" action="pendingorders.php"
         ">
         <div id="form3">
-            <select name="sortby" id="sortby">
-                <option selected disabled> ORDER BY</option>
-                <option value="productid"> PRODUCT ID</option>
-                <option value="productname"> PRODUCT NAME</option>
-                <option value="locationid"> PRODUCT LOCATION</option>
-                <option value="suppliername"> SUPPLIER NAME</option>
-            </select>
             <table id="t2">
                 <tr>
-                    <th> ID</th>
-                    <th>Serial Number</th>
-                    <th>Name</th>
-                    <th>Description</th>
-                    <th>Supplier Name</th>
-                    <th>Product Location</th>
-                    <th>Initial Stock Price</th>
-                    <th>Wholesale Price</th>
-                    <th>Retail Price</th>
+                    <th> DATE</th>
+                    <th> SALES ID</th>
+                    <th> CUSTOMER NAME</th>
+                    <th> DELIVERY ADDRESS</th>
+                    <th> TOTAL UNITS</th>
+                    <th> TOTAL COST</th>
                 </tr>
-                <tbody id="customertd">
+                <tbody id="pendingordertd">
                 <?php
                 if (mysqli_num_rows($result) == 1 || mysqli_num_rows($result) > 1) {
                     while ($row = $result->fetch_array()) {
                         echo "
                                 <tr>
-                        <td><input type=\"text\" id = \"productid\" name= \"productid\"  value = \"{$row['productid']}\" class = \"tablefield\" disabled></td>
-                        <td><input type=\"text\" id = \"productsn\" name= \"productsn\"  value = \"{$row['productserialnumber']}\" class = \"tablefield\" disabled></td>
-                        <td><input type=\"text\" id = \"productname\" name= \"productname\"  value = \"{$row['productname']}\" class = \"tablefield\" disabled></td>
-                        <td><input type=\"text\" id = \"productdesc\" name= \"productdesc\"  value = \"{$row['productdescription']}\" class = \"tablefield\" disabled></td>
-
-                        <td><input type=\"text\" id = \"suppliername\" name= \"suppliername\"  value = \"{$row['suppliername']}\" class = \"tablefield\" disabled></td>
-                        <td><input type=\"text\" id = \"locationid\" name= \"locationid\"  value = \"{$row['locationid']}\" class = \"tablefield\" disabled></td>
-                        <td><input type=\"text\" id = \"isp\" name= \"isp\"  value = \"{$row['initialstockprice']}\" class = \"tablefield\" disabled></td>
-                        <td><input type=\"text\" id = \"wp\" name= \"wp\"  value = \"{$row['wholesaleprice']}\" class = \"tablefield\" disabled></td>
-                        <td><input type=\"text\" id = \"rp\" name= \"rp\"  value = \"{$row['retailprice']}\" class = \"tablefield\" disabled></td>
+                        <td><input type=\"text\" id = \"datesales\" name= \"datesales\"  value = \"{$row['datesales']}\" class = \"tablefield\" disabled></td>
+                        <td><input type=\"text\" id = \"sid\" name= \"sid\"  value = \"{$row['sid']}\" class = \"tablefield\" disabled></td>
+                        <td><input type=\"text\" id = \"customername\" name= \"customername\"  value = \"{$row['customername']}\" class = \"tablefield\" disabled></td>
+                        <td><input type=\"text\" id = \"deladdress\" name= \"deladdress\"  value = \"{$row['deladdress']}\" class = \"tablefield\" disabled></td>
+                        <td><input type=\"text\" id = \"totalunits\" name= \"totalunits\"  value = \"{$row['totalunits']}\" class = \"tablefield\" disabled></td>
+                        <td><input type=\"text\" id = \"totalcost\" name= \"totalcost\"  value = \"{$row['totalcost']}\" class = \"tablefield\" disabled></td>
                         <td><a href='edit-product.php?prodid={$row['productid']}'><img src = 'images/edit.png' style{height=\"25\" width=\"25\"}></a></td>
                         <td><a href='deleteproduct.php?prodid={$row['productid']}'> <img src = 'images/delete.png' style{height=\"25\" width=\"25\"}></a> </td>
                     </tr>
