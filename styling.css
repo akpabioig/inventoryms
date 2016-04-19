@@ -96,7 +96,8 @@ section{
     display: none;
     text-decoration: none;
     font-style: oblique;
-
+    font-weight: bold;
+    font-size: 150%;
 }
 
 #prod:hover #aprod{
@@ -109,7 +110,8 @@ section{
      display: none;
      text-decoration: none;
     font-style: oblique;
-
+    font-weight: bold;
+    font-size: 150%;
  }
 
 #cust:hover #customer{
@@ -123,7 +125,8 @@ section{
     display: none;
     text-decoration: none;
     font-style: oblique;
-
+    font-weight: bold;
+    font-size: 150%;
 }
 
 #sord:hover #sorder{
@@ -137,7 +140,8 @@ section{
     display: none;
     text-decoration: none;
     font-style: oblique;
-
+    font-weight: bold;
+    font-size: 150%;
 }
 
 #pur:hover #porder{
@@ -151,7 +155,8 @@ section{
     display: none;
     text-decoration: none;
     font-style: oblique;
-
+    font-weight: bold;
+    font-size: 150%;
 }
 
 #supp:hover #asupp{
@@ -165,7 +170,8 @@ section{
     display: none;
     text-decoration: none;
     font-style: oblique;
-
+    font-weight: bold;
+    font-size: 150%;
 }
 
 #loc:hover #floc{
@@ -179,6 +185,8 @@ section{
     display: none;
     text-decoration: none;
     font-style: oblique;
+    font-weight: bold;
+    font-size: 150%;
 }
 
 #edit:hover #editorder{
@@ -192,6 +200,8 @@ section{
     display: none;
     text-decoration: none;
     font-style: oblique;
+    font-weight: bold;
+    font-size: 150%;
 
 }
 
