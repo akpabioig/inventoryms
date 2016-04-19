@@ -198,6 +198,35 @@ section{
 #orderfulfil:hover #fulfil {
     display: inline;
 }
+
+#fulfiled {
+    position: relative;
+    left: -200px;
+    bottom: -40px;
+    display: none;
+    text-decoration: none;
+    font-style: oblique;
+
+}
+
+#orderful:hover #fulfiled {
+    display: inline;
+}
+
+#pending {
+    position: relative;
+    left: -200px;
+    bottom: -40px;
+    display: none;
+    text-decoration: none;
+    font-style: oblique;
+
+}
+
+#orderpend:hover #pending {
+    display: inline;
+}
+
 footer{
     margin-left: 20px;
     clear: both;
@@ -206,6 +235,7 @@ footer{
     background-image: url("images/foot.jpg");
     color: whitesmoke;
 }
+
 #form1{
     margin-left: 50px;
     margin-right: 10%;

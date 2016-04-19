@@ -83,7 +83,7 @@ include('connection.php');
                 <img src= "images/edit.png" style{height="250" width="185"}/>
                 <span id="editorder">EDIT RECORDS</span>
             </a>
-            <a id="orderfulfil" href=".php">
+            <a id="orderfulfil" href="orderfulfilment.php">
                 <img src="images/fulfil.png" style{height="250" width="185" }/>
                 <span id="fulfil">ORDER FULFILMENT</span>
             </a>
