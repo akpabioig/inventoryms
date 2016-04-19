@@ -1,15 +1,15 @@
 <?php
-session_start();
+/*session_start();
 if (!isset($_SESSION['user'])) {
     header("Location: login.php");
-}
+}*/
 
 include('connection.php');
 //
-$sql = "SELECT (salesorder.datesales, salesorder.sid, addcustomer.customername, salesorder.deladdress, salesorder.totalunits, salesorder.totalcost)
+$sql = "SELECT salesorder.datesales, salesorder.sid, addcustomer.customername, salesorder.deladdress, salesorder.totalunits, salesorder.totalcost
                           FROM addcustomer, salesorder
                           WHERE addcustomer.customerid = salesorder.customerid
-                          AND status = pending";
+                          AND status = 'pending'";
 $result = mysqli_query($db, $sql);
 ?>
 <!DOCTYPE html>
