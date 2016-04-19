@@ -38,8 +38,7 @@ include('connection.php');
     <section>
         <h3> ORDER FULFILMENT </h3>
         <img src="images/fulfil.png" style{height="250" width="200" }/>
-        <h2> SELECT PENDING ORDERS TO FULFIL AN ORDER </h2>
-        <h2> SELECT FULFILLED ORDERS TO SEE A LIST OF ORDERS THAT HAVE BEEN FULFILLED </h2>
+        <h3> SELECT PENDING ORDERS / FULFILLED ORDERS </h3>
         <div id="form1">
             <div class="buttons2">
                 <a id="orderpend" href="ne.php">
