@@ -112,7 +112,7 @@ $result1 = mysqli_query($db, $sql1);
                         <td><input type=\"text\" id = \"datesales\" name= \"datesales\"  value = \"{$row1['datepurchase']}\" class = \"tablefield\" disabled></td>
                         <td><input type=\"text\" id = \"purchaseid\" name= \"purchaseid\"  value = \"{$row1['purchaseid']}\" class = \"tablefield\" disabled></td>
                         <td><input type=\"text\" id = \"suppliername\" name= \"suppliername\"  value = \"{$row1['suppliername']}\" class = \"tablefield\" disabled></td>
-                        <td><input type=\"text\" id = \"totalunits\" name= \"totalunits\"  value = \"{$row1['totalunits']}\" class = \"tablefield\" disabled></td>                        <td><input type=\"text\" id = \"totalunits\" name= \"totalunits\"  value = \"{$row['totalunits']}\" class = \"tablefield\" disabled></td>
+                        <td><input type=\"text\" id = \"totalunits\" name= \"totalunits\"  value = \"{$row1['totalunits']}\" class = \"tablefield\" disabled></td>
                         <td><input type=\"text\" id = \"total\" name= \"total\"  value = \"{$row1['total']}\" class = \"tablefield\" disabled></td>
                         <td><input type=\"text\" id = \"status\" name= \"status\"  value = \"{$row1['status']}\" class = \"tablefield\" disabled></td>
                         <td><a href='updatefulfilorder.php?purid={$row1['purchaseid']}'><img src = 'images/tick.png' style{height=\"25\" width=\"25\"}></a></td>
