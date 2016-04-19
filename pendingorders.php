@@ -6,8 +6,8 @@ if (!isset($_SESSION['user'])) {
 
 include('connection.php');
 //
-$sql = "SELECT salesorder.datesales, salesorder.sid, addcustomer.customername, salesorder.deladdress, salesorder.totalunits, salesorder.totalcost
-                          FROM addcustomer, salesorder
+$sql = "SELECT salesorder.datesales, salesorder.sid, addcustomer.customername, salesorder.deladdress, sales.paymenttype, salesorder.totalunits, salesorder.totalcost
+                          FROM addcustomer, salesorder, addproduct, salesitem
                           WHERE addcustomer.customerid = salesorder.customerid
                           AND status = 'pending'";
 $result = mysqli_query($db, $sql);
@@ -61,7 +61,6 @@ $result = mysqli_query($db, $sql);
                     <th> TOTAL UNITS</th>
                     <th> TOTAL COST</th>
                 </tr>
-                <tbody id="pendingordertd">
                 <?php
                 if (mysqli_num_rows($result) == 1 || mysqli_num_rows($result) > 1) {
                     while ($row = $result->fetch_array()) {
@@ -83,7 +82,6 @@ $result = mysqli_query($db, $sql);
                     echo '<option> No Result Found </option>';
                 }
                 ?>
-                </tbody>
             </table>
         </div>
         </form>
