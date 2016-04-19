@@ -12,11 +12,11 @@ $sql = "SELECT salesorder.datesales, salesorder.sid, addcustomer.customername, s
                           AND status = 'pending'";
 $result = mysqli_query($db, $sql);
 
-$sql1 = "SELECT purchase.datepurchase, purchaseorder.purchaseid, addsupplier.suppliername, purchaseorder.totalunits, purchaseorder.total, purchase.status
+$sql1 = "SELECT purchaseorder.datepurchase, purchaseorder.purchaseid, addsupplier.suppliername, purchaseorder.totalunits, purchaseorder.total, purchase.status
          FROM purchaseorder, addsupplier
          WHERE addsupplier.supplirid = purchaseorder.supplierid
          AND STATUS = 'pending'";
-$result1 = mysqli_query($db, $sql1);
+$result1 = mysqli_query($db1, $sql1);
 ?>
 <!DOCTYPE html>
 <html lang="en">
