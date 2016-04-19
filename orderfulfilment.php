@@ -45,11 +45,11 @@ include('connection.php');
         </ul>
         <div id="form1">
             <div class="buttons2">
-                <a id="orderpend" href="ne.php">
+                <a id="orderpend" href="pendingorders.php">
                     <img src="images/pending.png" style{height="300" width="250" }/>
                     <span id="pending">PENDING ORDERS</span>
                 </a>
-                <a id="orderful" href="ad.php">
+                <a id="orderful" href="fulfilled.php">
                     <img src="images/fulfilled.png" style{height="300" width="250" }/>
                     <span id="fulfiled">FULFILLED ORDERS</span>
                 </a>
