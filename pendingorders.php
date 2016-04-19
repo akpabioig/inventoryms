@@ -93,20 +93,21 @@ $result1 = mysqli_query($db, $sql1);
                     echo '<option> No Result Found </option>';
                 }
                 ?>
-                <h2>PURCHASE ORDERS</h2>
             </table>
-            <tr>
-                <th> DATE</th>
-                <th> PURCHASE ID</th>
-                <th> SUPPLIER NAME</th>
-                <th> TOTAL UNITS</th>
-                <th> TOTAL COST</th>
-                <th> STATUS</th>
-            </tr>
-            <?php
-            if (mysqli_num_rows($result1) == 1 || mysqli_num_rows($result1) > 1) {
-                while ($row1 = $result1->fetch_array()) {
-                    echo "
+            <h2>PURCHASE ORDERS</h2>
+            <table>
+                <tr>
+                    <th> DATE</th>
+                    <th> PURCHASE ID</th>
+                    <th> SUPPLIER NAME</th>
+                    <th> TOTAL UNITS</th>
+                    <th> TOTAL COST</th>
+                    <th> STATUS</th>
+                </tr>
+                <?php
+                if (mysqli_num_rows($result1) == 1 || mysqli_num_rows($result1) > 1) {
+                    while ($row1 = $result1->fetch_array()) {
+                        echo "
                                 <tr>
                         <td><input type=\"text\" id = \"datesales\" name= \"datesales\"  value = \"{$row['purchaseorder.datesales']}\" class = \"tablefield\" disabled></td>
                         <td><input type=\"text\" id = \"purchaseid\" name= \"purchaseid\"  value = \"{$row['purchaseorder.purchaseid']}\" class = \"tablefield\" disabled></td>
@@ -119,13 +120,11 @@ $result1 = mysqli_query($db, $sql1);
                     </tr>
 
                                 ";
+                    }
+                } else {
+                    echo '<option> No Result Found </option>';
                 }
-            } else {
-                echo '<option> No Result Found </option>';
-            }
-            ?>
-            <table>
-
+                ?>
             </table>
         </div>
         </form>
