@@ -12,7 +12,7 @@ $sql = "SELECT salesorder.datesales, salesorder.sid, addcustomer.customername, s
                           AND status = 'pending'";
 $result = mysqli_query($db, $sql);
 
-$sql1 = "SELECT purchaseorder.datepurchase, purchaseorder.purchaseid, addsupplier.suppliername, purchaseorder.totalunits, purchaseorder.total, purchaseorder.status
+$sql1 = "SELECT purchaseorder.datepurchase, purchaseorder.purchaseid, addsupplier.suppliername, purchaseorder.messagesupplier, purchaseorder.totalunits, purchaseorder.total, purchaseorder.status
          FROM purchaseorder, addsupplier
          WHERE addsupplier.supplierid = purchaseorder.supplierid
          AND STATUS = 'pending'";
@@ -100,6 +100,7 @@ $result1 = mysqli_query($db, $sql1);
                     <th> DATE</th>
                     <th> PURCHASE ID</th>
                     <th> SUPPLIER NAME</th>
+                    <th> MESSAGE TO SUPPLIER</th>
                     <th> TOTAL UNITS</th>
                     <th> TOTAL COST</th>
                     <th> STATUS</th>
@@ -112,6 +113,7 @@ $result1 = mysqli_query($db, $sql1);
                         <td><input type=\"text\" id = \"datesales\" name= \"datesales\"  value = \"{$row1['datepurchase']}\" class = \"tablefield\" disabled></td>
                         <td><input type=\"text\" id = \"purchaseid\" name= \"purchaseid\"  value = \"{$row1['purchaseid']}\" class = \"tablefield\" disabled></td>
                         <td><input type=\"text\" id = \"suppliername\" name= \"suppliername\"  value = \"{$row1['suppliername']}\" class = \"tablefield\" disabled></td>
+                        <td><input type=\"text\" id = \"messagesupplier\" name= \"messagesupplier\"  value = \"{$row1['messagesupplier']}\" class = \"tablefield\" disabled></td>
                         <td><input type=\"text\" id = \"totalunits\" name= \"totalunits\"  value = \"{$row1['totalunits']}\" class = \"tablefield\" disabled></td>
                         <td><input type=\"text\" id = \"total\" name= \"total\"  value = \"{$row1['total']}\" class = \"tablefield\" disabled></td>
                         <td><input type=\"text\" id = \"status\" name= \"status\"  value = \"{$row1['status']}\" class = \"tablefield\" disabled></td>
