@@ -54,7 +54,7 @@ $result1 = mysqli_query($db, $sql1);
         <h3> PENDING ORDERS </h3>
         <img src="images/pending.png" style{height="250" width="200" }/>
         <h2>FULFILL/ DELETE ORDERS</h2>
-        <p>SCROLL TO THE END OF EITHER THE SALES ORDER OR PURCHASE ORDER RECORDS TO FULFIL/DELETE ORDERS</p>
+        <h3>SCROLL TO THE END OF EITHER OF THE RECORDS TO FULFIL/DELETE ORDERS</h3>
         <form method="get" action="pendingorders.php"
         ">
         <div id="form3">
