@@ -60,7 +60,7 @@ include('connection.php');
                 <span id="customer">ADD CUSTOMER</span>
             </a>
             <a id="sord" href= "newsales.php">
-                <img src= "images/sales.jpg" style{height="250" width="185"}/>
+                <img src="images/sales.jpg" style{height="250" width="170" }/>
                 <span id="sorder">SALES ORDER</span>
             </a>
         </div>
