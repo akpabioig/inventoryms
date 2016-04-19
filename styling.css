@@ -97,7 +97,7 @@ section{
     text-decoration: none;
     font-style: oblique;
     font-weight: bold;
-    font-size: 120%;
+    font-size: 150%;
 }
 
 #prod:hover #aprod{
@@ -111,7 +111,7 @@ section{
      text-decoration: none;
     font-style: oblique;
     font-weight: bold;
-    font-size: 120%;
+    font-size: 150%;
  }
 
 #cust:hover #customer{
@@ -120,13 +120,13 @@ section{
 
 #sorder{
     position: relative;
-    left: -250px;
+    left: -240px;
     bottom: -40px;
     display: none;
     text-decoration: none;
     font-style: oblique;
     font-weight: bold;
-    font-size: 120%;
+    font-size: 150%;
 }
 
 #sord:hover #sorder{
