@@ -7,7 +7,7 @@ if (!isset($_SESSION['user'])) {
 include('connection.php');
 //
 $sql = "SELECT salesorder.datesales, salesorder.sid, addcustomer.customername, salesorder.deladdress, salesorder.paymenttype, salesorder.totalunits, salesorder.totalcost, salesorder.status
-                          FROM addcustomer, salesorder,
+                          FROM addcustomer, salesorder
                           WHERE addcustomer.customerid = salesorder.customerid
                           AND status = 'pending'";
 $result = mysqli_query($db, $sql);
