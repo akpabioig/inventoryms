@@ -32,5 +32,5 @@ if (isset($_GET['purid'])) {
         echo $e->getMessage();
     }
 }
-header("Location: pendingorder.php");
+header("Location: pendingorders.php");
 ?>
