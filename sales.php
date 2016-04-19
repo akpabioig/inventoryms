@@ -38,6 +38,6 @@ VALUES ($salesid, '$itemcustl', '$selproduct', $quancust, $costcust, $taxcust, $
 $sth = $db->query($sql);
 } catch(PDOException $e) {
 echo $e->getMessage();
-    header("Location: newsales.php");
 }
+header("Location: newsales.php");
 ?>
