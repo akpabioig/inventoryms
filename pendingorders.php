@@ -6,7 +6,7 @@ if (!isset($_SESSION['user'])) {
 
 include('connection.php');
 //
-$sql = "SELECT salesorder.datesales, salesorder.sid, addcustomer.customername, salesorder.deladdress, salesorder.paymenttype, salesorder.totalunits, salesorder.totalcost
+$sql = "SELECT salesorder.datesales, salesorder.sid, addcustomer.customername, salesorder.deladdress, salesorder.paymenttype, salesorder.totalunits, salesorder.totalcost, salesorder.status
                           FROM addcustomer, salesorder
                           WHERE addcustomer.customerid = salesorder.customerid
                           AND status = 'pending'";
@@ -61,6 +61,7 @@ $result = mysqli_query($db, $sql);
                     <th> PAYMENT TYPE</th>
                     <th> TOTAL UNITS</th>
                     <th> TOTAL COST</th>
+                    <th> STATUS</th>
                 </tr>
                 <?php
                 if (mysqli_num_rows($result) == 1 || mysqli_num_rows($result) > 1) {
@@ -74,6 +75,7 @@ $result = mysqli_query($db, $sql);
                         <td><input type=\"text\" id = \"paymenttype\" name= \"paymenttype\"  value = \"{$row['paymenttype']}\" class = \"tablefield\" disabled></td>
                         <td><input type=\"text\" id = \"totalunits\" name= \"totalunits\"  value = \"{$row['totalunits']}\" class = \"tablefield\" disabled></td>
                         <td><input type=\"text\" id = \"totalcost\" name= \"totalcost\"  value = \"{$row['totalcost']}\" class = \"tablefield\" disabled></td>
+                        <td><input type=\"text\" id = \"status\" name= \"status\"  value = \"{$row['status']}\" class = \"tablefield\" disabled></td>
                         <td><a href='edit-product.php?prodid={$row['productid']}'><img src = 'images/edit.png' style{height=\"25\" width=\"25\"}></a></td>
                         <td><a href='deleteproduct.php?prodid={$row['productid']}'> <img src = 'images/delete.png' style{height=\"25\" width=\"25\"}></a> </td>
                     </tr>
