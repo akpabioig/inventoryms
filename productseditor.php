@@ -16,7 +16,7 @@ $result = mysqli_query($db, $sql);
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>PRODUCTS</title>
+    <title>PRODUCTS 1</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href = "styling.css"/>
     <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
@@ -129,7 +129,7 @@ $result = mysqli_query($db, $sql);
         function editconfig() {
             var edit = confirm("Are you sure you want to edit this record ?");
             if (edit == true) {
-                alert("record editing")
+                alert("Tranferring you to the edit product page")
             }
             return edit;
         }
