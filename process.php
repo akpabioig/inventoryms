@@ -19,6 +19,7 @@ $wp = htmlspecialchars($_POST['wp']);
 $rp = htmlspecialchars($_POST['rp']); 
 $supplier = htmlspecialchars($_POST['supplier']);
 $loccode = htmlspecialchars($_POST['loccode']);
+$prodid = htmlspecialchars($_POST['prodid']);
 
     try {                    
         $sql = "INSERT INTO addproduct (productserialnumber, productname, productdescription, locationid, supplierid, initialstockprice, wholesaleprice, retailprice)
@@ -27,5 +28,11 @@ $loccode = htmlspecialchars($_POST['loccode']);
     } catch(PDOException $e) {
         echo $e->getMessage();
     }
+try {
+    $sql1 = "INSERT INTO stocklevel(productid, quantity)
+            VALUES ($prodid, 0)";
+} catch (PDOException $e) {
+    echo $e->getMessage();
+}
 header("Location: addproduct.php");
 ?>

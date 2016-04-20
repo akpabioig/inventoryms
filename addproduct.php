@@ -115,6 +115,15 @@
             </tr>
         </table>
             </div>
+        <?php
+        $productidquery = "SELECT max(productid) FROM addproduct";
+        $r = mysqli_query($db, $productidquery);
+        while ($row = $r->fetch_array()) {
+            $prodid = $row['0'];
+        }
+        $prodid += 10;
+        ?>
+        <input type="hidden" value="<?php echo $prodid; ?>" name="prodid" id="prodid"/>
          <p id = "subbutt"><input type = "reset" value = "CLEAR">
              &nbsp; &nbsp; <input type = "submit" value = "SAVE"></p>
     </form>
