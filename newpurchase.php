@@ -52,17 +52,17 @@ include('connection.php');
         <h2>New Purchase Order Details</h2>
         <p>Insert the details of the purchase to be made from a registered supplier </p>
         <p>Be careful to fill out compulsory fields indicated by the "*" key</p>
-        <form method="post" action="purchase.php">
+        <form method="post" action="purchase.php" onsubmit="return validatepurchaseForm()">
         <div id = "form1">
             <table>
                 <tr>
                     <td label for="date"> <a id = "hash">*</a> Date : </td>
-                    <td><input type="date" id = "date" name= "purchasedate"  value = "" class = "formfield"></td>
+                    <td><input type="date" id="date" name="purchasedate" required class="formfield"></td>
                 </tr>
                 <tr>
                     <td label for="supplier"> <a id = "hash">*</a> Select Supplier : </td>
                     <td>
-                        <select name="supplier">
+                        <select name="supplier" required>
                             <option selected disabled>SELECT</option>
                             <?php
 
@@ -125,10 +125,10 @@ include('connection.php');
                         }
                         $pid += 10;
                     ?>
-                    <td><input type="number" id = "quantity" name= "quantity"  value = "" class = "tablefield1"></td>
+                    <td><input type="number" id="quantity" name="quantity" required class="tablefield1"></td>
                     <td><input type="number" id = "cost" name= "itemcost"  value = "" class = "tablefield1"></td>
                     <td><input type="number" id = "tax" name= "tax"  value = "" class = "tablefield1"></td>
-                    <td><input type="number" id = "itemtotal" name= "itemtotal"  value = "" class = "tablefield1"></td>
+                    <td><input type="number" id="itemtotal" name="itemtotal" required class="tablefield1"></td>
                     <input type="hidden" value="<?php echo $pid; ?>" name="pid" id="pid" />
                 </tr>
 
@@ -152,7 +152,7 @@ include('connection.php');
                 </tr>
             </table>
             <p id = "purtotal"><input type = "reset" value = "CLEAR">
-                &nbsp; &nbsp; <input type = "submit" value = "SAVE"></p>
+                &nbsp; &nbsp; <input type="submit" value="CREATE ORDER"></p>
         </div>
             </form>
     </section>

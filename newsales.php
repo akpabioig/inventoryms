@@ -52,17 +52,17 @@ include('connection.php');
         <h2>New Sales Order Details</h2>
         <p>Insert the details of the sale to be made to a registered customer </p>
         <p>Be careful to fill out compulsory fields indicated by the "*" key</p>
-        <form method="post" action="sales.php">
+        <form method="post" action="sales.php" onsubmit="return validatesalesForm()">
         <div id = "form1">
             <table>
                 <tr>
                     <td label for="date"> <a id = "hash">*</a> Date : </td>
-                    <td><input type="date" id = "date" name= "datesales"  value = "" class = "formfield"></td>
+                    <td><input type="date" id="date" name="datesales" required class="formfield"></td>
                 </tr>
                 <tr>
                     <td label for="selcust"> <a id = "hash">*</a> Select Customer : </td>
                     <td>
-                        <select name="customer">
+                        <select name="customer" required>
                         <option selected disabled>SELECT</option>
                         <?php
                         $sql= "SELECT customerid, customername FROM addcustomer";
@@ -85,10 +85,11 @@ include('connection.php');
                 </tr>
                 <tr>
                     <td label for="date"> <a id = "hash">*</a> Delivery Address : </td>
-                    <td><textarea id = "deladdcust" name= "deladdcust"  value = "" class = "formfield" rows = 5 cols = 28></textarea></td>
+                    <td><textarea id="deladdcust" name="deladdcust" required class="formfield" rows=5
+                                  cols=28></textarea></td>
                     <td label for="paytype"> <a id = "hash">*</a> Payment Type : </td>
                     <td>
-                        <select class = "formfield" name = "paytcust">
+                        <select class="formfield" name="paytcust" required>
                             <option selected disabled>SELECT</option>
                             <option value = "CASH"> CASH </option>
                             <option value = "CHEQUE"> CHEQUE </option>
@@ -109,7 +110,7 @@ include('connection.php');
                     <th>Total</th>
                 </tr>
                 <tr>
-                    <td><input type="text" id = "itemcustl" name= "itemcustl"  value = "" class = "tablefield"></td>
+                    <td><input type="text" id="itemcustl" name="itemcustl" class="tablefield"></td>
                     <td>
                         <select id="product" name="selproduct">
                         <option selected disabled>SELECT PRODUCT</option>
@@ -172,7 +173,7 @@ include('connection.php');
                 </tr>
             </table>
             <p id = "purtotal"><input type = "reset" value = "CLEAR">
-                &nbsp; &nbsp; <input type = "submit" value = "SAVE"></p>
+                &nbsp; &nbsp; <input type="submit" value="CREATE ORDER"></p>
         </div>
         </form>
     </section>
