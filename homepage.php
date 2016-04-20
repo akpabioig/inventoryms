@@ -38,7 +38,7 @@ include('connection.php');
     <section>
         <nav id = "nav2">
             <ul>
-                <li><h3>SHORTCUTS 1</h3></li>
+                <li><h3>SHORTCUTS</h3></li>
                 <li>
                     <a href=""><img src="images/dash.gif" style{height="50" width="50"}/>    Dashboard</a>
                 </li>
