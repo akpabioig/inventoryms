@@ -41,9 +41,9 @@ include('connection.php');
         <p>Click on Any of The Reports To Explore</p>
         <div id = "form1">
             <ul>
-                <li><a href="allcustomers.php"> CUSTOMER REPORT </a></li>
-                <li><a href="allsuppliers.php"> SUPPLIER REPORT </a></li>
-                <li><a href="allproducts.php"> PRODUCT REPORT </a></li>
+                <li><a href="allcustomers.php"> CUSTOMERS REPORT </a></li>
+                <li><a href="allsuppliers.php"> SUPPLIERS REPORT </a></li>
+                <li><a href="allproducts.php"> PRODUCTS REPORT </a></li>
                 <li><a href="alllocation.php"> PRODUCT LOCATION REPORT </a></li>
                 <li><a href="stocklevel.php"> STOCK LEVEL REPORT </a></li>
             </ul>
