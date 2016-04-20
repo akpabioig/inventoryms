@@ -49,7 +49,7 @@ include('connection.php');
                     <img src="images/pending.png" style{height="300" width="250" }/>
                     <span id="pending">PENDING ORDERS</span>
                 </a>
-                <a id="orderful" href="fulfilled.php">
+                <a id="orderful" href="fulfilledorders.php">
                     <img src="images/fulfilled.png" style{height="300" width="250" }/>
                     <span id="fulfiled">FULFILLED ORDERS</span>
                 </a>
