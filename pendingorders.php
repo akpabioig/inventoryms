@@ -6,7 +6,7 @@ if (!isset($_SESSION['user'])) {
 
 include('connection.php');
 //
-$sql = "SELECT salesorder.datesales, salesorder.sid, addcustomer.customername, salesorder.deladdress, salesorder.paymenttype, salesorder.totalunits, salesorder.totalcost, salesorder.status
+$sql = "SELECT salesorder.datesales, salesorder.sid, addcustomer.customername, salesorder.deladdress, salesorder.totalunits, salesorder.totalcost, salesorder.status
                           FROM addcustomer, salesorder
                           WHERE addcustomer.customerid = salesorder.customerid
                           AND status = 'pending'";
@@ -65,7 +65,6 @@ $result1 = mysqli_query($db, $sql1);
                     <th> SALES ID</th>
                     <th> CUSTOMER NAME</th>
                     <th> DELIVERY ADDRESS</th>
-                    <th> PAYMENT TYPE</th>
                     <th> TOTAL UNITS</th>
                     <th> TOTAL COST</th>
                     <th> STATUS</th>
@@ -79,7 +78,6 @@ $result1 = mysqli_query($db, $sql1);
                         <td id = \"sid\" name= \"sid\" class = \"tablefield\" disabled>{$row['sid']}</td>
                         <td id = \"customername\" name= \"customername\"  class = \"tablefield\" disabled>{$row['customername']}</td>
                         <td id = \"deladdress\" name= \"deladdress\" class = \"tablefield\" disabled>{$row['deladdress']}</td>
-                        <td id = \"paymenttype\" name= \"paymenttype\" class = \"tablefield\" disabled>{$row['paymenttype']}</td>
                         <td id = \"totalunits\" name= \"totalunits\" class = \"tablefield\" disabled>{$row['totalunits']}</td>
                         <td id = \"totalcost\" name= \"totalcost\"  class = \"tablefield\" disabled>{$row['totalcost']}</td>
                         <td id = \"status\" name= \"status\"  class = \"tablefield\" disabled>{$row['status']}</td>
