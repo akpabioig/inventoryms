@@ -1,8 +1,8 @@
 <?php
-/*session_start();
+session_start();
 if (!isset($_SESSION['user'])) {
     header("Location: login.php");
-}*/
+}
 
 include('connection.php');
 //
@@ -48,7 +48,7 @@ $result1 = mysqli_query($db, $sql1);
     <header>
         <h1> RGU Oil Services </h1>
         <h2> Inventory Management Made Easy </h2>
-        <button id="logout" href="logout.php">LOG OUT</button>
+        <button id="logout"><a href="logout.php">LOG-OUT</a></button>
     </header>
     <section>
         <h3> PENDING ORDERS </h3>

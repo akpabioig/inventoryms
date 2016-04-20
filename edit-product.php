@@ -52,7 +52,7 @@ if (!isset($_SESSION['user'])) {
     <header>
         <h1> RGU Oil Services </h1>
         <h2> Inventory Management Made Easy </h2>
-        <button id="logout" href="logout.php">LOG OUT</button>
+        <button id="logout"><a href="logout.php">LOG-OUT</a></button>
     </header>
     <section>
         <h3>EDIT PRODUCT RECORDS</h3>

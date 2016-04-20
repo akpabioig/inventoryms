@@ -1,4 +1,9 @@
-<?php include('connection.php');
+<?php
+session_start();
+if (!isset($_SESSION['user'])) {
+    header("Location: login.php");
+}
+include('connection.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -27,7 +32,7 @@
     <header>
         <h1> RGU Oil Services </h1>
         <h2> Inventory Management Made Easy </h2>
-        <button id="logout" href="logout.php">LOG OUT</button>
+        <button id="logout"><a href="logout.php">LOG-OUT</a></button>
     </header>
     <section>
         <h3>Inventory Management Reports</h3>
