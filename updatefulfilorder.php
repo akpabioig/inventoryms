@@ -16,15 +16,7 @@ if (isset($_GET['salesid'])) {
     } catch (PDOException $e) {
         echo $e->getMessage();
     }
-    try {
-        $sql1 = "UPDATE stocklevel, salesorder, salesitem
-        SET stocklevel.stockbalance = stocklevel.stockbalance + salesitem.quantity
-        AND stocklevel.productid = salesitem.productid
-        WHERE salesorder.status = 'fulfilled'
-        AND salesorder.sid = {$soId}";
-    } catch (PDOException $e) {
-        echo $e->getMessage();
-    }
+}
 
     if (isset($_GET['purid'])) {
         $poId = $_GET['purid'];
@@ -40,5 +32,6 @@ if (isset($_GET['salesid'])) {
             echo $e->getMessage();
         }
     }
+
 header("Location: pendingorders.php");
 ?>
