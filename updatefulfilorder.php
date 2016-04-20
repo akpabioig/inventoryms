@@ -56,6 +56,5 @@ if (isset($_GET['salesid'])) {
             echo $h->getMessage();
         }
     }
-
 header("Location: pendingorders.php");
 ?>
