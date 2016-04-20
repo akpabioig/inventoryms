@@ -96,8 +96,8 @@ $result = mysqli_query($db, $sql);
 
                         <td><input type=\"text\" id = \"postcode\" name= \"postcode\"  value = \"{$row['postcode']}\" class = \"tablefield\" disabled></td>
                         <td><input type=\"text\" id = \"country\" name= \"country\"  value = \"{$row['country']}\" class = \"tablefield\" disabled></td>
-                        <td><a href='edit-supplier.php?suppid={$row['supplierid']}'><img src = 'images/edit.png' style{height=\"25\" width=\"25\"}></a></td>
-                        <td><a href='deletesupplier.php?suppid={$row['supplierid']}'> <img src = 'images/delete.png' style{height=\"25\" width=\"25\"}></a> </td>
+                        <td><a href='edit-supplier.php?suppid={$row['supplierid']}'  onclick='return editconfig()'><img src = 'images/edit.png' style{height=\"25\" width=\"25\"}></a></td>
+                        <td><a href='deletesupplier.php?suppid={$row['supplierid']}'  onclick='return deleteconfig()'> <img src = 'images/delete.png' style{height=\"25\" width=\"25\"}></a> </td>
                     </tr>
 
                                 ";
@@ -126,6 +126,23 @@ $result = mysqli_query($db, $sql);
                     });
             });
         });
+    </script>
+    <script>
+        function deleteconfig() {
+
+            var del = confirm("ARE YOU SURE YOU WANT TO DELETE THIS SUPPLIER RECORD ?");
+            if (del == true) {
+                alert("SUPPLIER RECORD DELETED !!!")
+            }
+            return del;
+        }
+        function editconfig() {
+            var edit = confirm("ARE YOU SURE YOU WANT TO EDIT THIS SUPPLIER RECORD ?");
+            if (edit == true) {
+                alert("TRANSFERRING YOU TO THE EDIT SUPPLIER PAGE !!!")
+            }
+            return edit;
+        }
     </script>
 </div>
 <footer>

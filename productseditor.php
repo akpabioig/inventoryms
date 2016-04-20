@@ -120,16 +120,16 @@ $result = mysqli_query($db, $sql);
     <script>
         function deleteconfig() {
 
-            var del = confirm("Are you sure you want to delete this record ?");
+            var del = confirm("ARE YOU SURE YOU WANT TO DELETE THIS PRODUCT RECORD ?");
             if (del == true) {
-                alert("record deleted")
+                alert("PRODUCT RECORD DELETED !!!")
             }
             return del;
         }
         function editconfig() {
-            var edit = confirm("Are you sure you want to edit this record ?");
+            var edit = confirm("ARE YOU SURE YOU WANT TO EDIT THIS PRODUCT RECORD ?");
             if (edit == true) {
-                alert("Tranferring you to the edit product page")
+                alert("TRANSFERRING YOU TO THE EDIT PRODUCT PAGE !!!")
             }
             return edit;
         }
