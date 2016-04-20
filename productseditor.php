@@ -86,7 +86,7 @@ $result = mysqli_query($db, $sql);
                         <td><input type=\"text\" id = \"isp\" name= \"isp\"  value = \"{$row['initialstockprice']}\" class = \"tablefield\" disabled></td>
                         <td><input type=\"text\" id = \"wp\" name= \"wp\"  value = \"{$row['wholesaleprice']}\" class = \"tablefield\" disabled></td>
                         <td><input type=\"text\" id = \"rp\" name= \"rp\"  value = \"{$row['retailprice']}\" class = \"tablefield\" disabled></td>
-                        <td><a href='edit-product.php?prodid={$row['productid']}'><img src = 'images/edit.png' style{height=\"25\" width=\"25\"}></a></td>
+                        <td><a href='edit-product.php?prodid={$row['productid']}' onclick='return editconfig()'><img src = 'images/edit.png' style{height=\"25\" width=\"25\"}></a></td>
                         <td><a href='deleteproduct.php?prodid={$row['productid']}' onclick='return deleteconfig()'> <img src = 'images/delete.png' style{height=\"25\" width=\"25\"}></a> </td>
                     </tr>
 
@@ -120,11 +120,18 @@ $result = mysqli_query($db, $sql);
     <script>
         function deleteconfig() {
 
-            var del = confirm("Are you sure you want to delete this record?");
+            var del = confirm("Are you sure you want to delete this record ?");
             if (del == true) {
                 alert("record deleted")
             }
             return del;
+        }
+        function editconfig() {
+            var edit = confirm("Are you sure you want to edit this record ?");
+            if (edit == true) {
+                alert("record editing")
+            }
+            return edit;
         }
     </script>
 </div>
