@@ -18,7 +18,7 @@ if (isset($_GET['salesid'])) {
     }
     try {
         $sql1 = "UPDATE stocklevel, salesorder, salesitem
-                SET stocklevel.stockbalance = stocklevel.stockbalance + salesitem.quantity
+                SET stocklevel.stockbalance = stocklevel.stockbalance - salesitem.quantity
                 WHERE stocklevel.productid = salesitem.productid
                 AND salesitem.sid = salesorder.sid
                 AND salesorder.status = 'fulfilled'
@@ -40,8 +40,20 @@ if (isset($_GET['salesid'])) {
                 SET status = 'fulfilled'
                     WHERE purchaseid = {$poId}";
             $sth2 = $db->query($sql2);
-        } catch (PDOException $e) {
-            echo $e->getMessage();
+        } catch (PDOException $g) {
+            echo $g->getMessage();
+        }
+
+        try {
+            $sql3 = "UPDATE stocklevel, purchaseorder, purchaseitem
+                SET stocklevel.stockbalance = stocklevel.stockbalance + purchaseitem.quantity
+                WHERE stocklevel.productid = purchaseitem.productid
+                AND purchaseitem.purchaseid = purchaseorder.purchaseid
+                AND purchaseorder.status = 'fulfilled'
+                AND purchaseorder.purchaseid = {$poId}";
+            $sth3 = $db->query($sql3);
+        } catch (PDOException $h) {
+            echo $h->getMessage();
         }
     }
 
