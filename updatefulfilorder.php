@@ -22,10 +22,10 @@ if (isset($_GET['salesid'])) {
                 WHERE stocklevel.productid = salesitem.productid
                 AND salesitem.sid = salesorder.sid
                 AND salesorder.status = 'fulfilled'
-                AND sid = {$soId}";
+                AND salesorder.sid = {$soId}";
         $sth1 = $db->query($sql1);
-    } catch (PDOException $e) {
-        echo $e->getMessage();
+    } catch (PDOException $f) {
+        echo $f->getMessage();
     }
 
 }
