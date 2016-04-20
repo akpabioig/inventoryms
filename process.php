@@ -29,7 +29,7 @@ $prodid = htmlspecialchars($_POST['prodid']);
         echo $e->getMessage();
     }
 try {
-    $sql1 = "INSERT INTO stocklevel(productid, quantity)
+    $sql1 = "INSERT INTO stocklevel(productid, stockbalance)
             VALUES ($prodid, 0)";
     $sth1 = $db->query($sql1);
 } catch (PDOException $e) {
