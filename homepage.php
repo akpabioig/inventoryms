@@ -33,7 +33,7 @@ include('connection.php');
     <header>
         <h1> RGU Oil Services </h1>
         <h2> Inventory Management Made Easy </h2>
-        <button id="logout"><a href="logout.php"></a>LOG OUT</button>
+        <button id="logout"><a href="logout.php">LOG-OUT</a></button>
     </header>
     <section>
         <nav id = "nav2">
