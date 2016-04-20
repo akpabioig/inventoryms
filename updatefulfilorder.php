@@ -16,6 +16,18 @@ if (isset($_GET['salesid'])) {
     } catch (PDOException $e) {
         echo $e->getMessage();
     }
+    try {
+        $sql1 = "UPDATE stocklevel, salesorder, salesitem
+                SET stocklevel.stockbalance = stocklevel.stockbalance + salesitem.quantity
+                WHERE stocklevel.productid = salesitem.productid
+                AND salesitem.sid = salesorder.sid
+                AND salesorder.status = 'fulfilled'
+                AND sid = {$soId}";
+        $sth1 = $db->query($sql1);
+    } catch (PDOException $e) {
+        echo $e->getMessage();
+    }
+
 }
 
     if (isset($_GET['purid'])) {
