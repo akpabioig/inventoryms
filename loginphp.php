@@ -5,24 +5,23 @@ $db = new PDO('mysql:host=us-cdbr-azure-southcentral-e.cloudapp.net;dbname=inven
     PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
 
 
-    $myusername = htmlspecialchars($_POST['myusername']);
-    $mypassword = htmlspecialchars($_POST['mypassword']);
+$myusername = htmlspecialchars($_POST['myusername']);
+$mypassword = htmlspecialchars($_POST['mypassword']);
 
-    try {
-        $sql = "SELECT * FROM login
+try {
+    $sql = "SELECT * FROM login
                 WHERE username = '$myusername'
                 AND password = '$mypassword' LIMIT 1";
-        $sth = $db->query($sql);
+    $sth = $db->query($sql);
 
-        if($sth ->rowCount() == 1) {
-            $_SESSION['user'] = $myusername;
-            header("Location: login_success.php?s=1");
-        }else {
-            header("Location: login.php?failed=1");
-        }
-    } catch (PDOException $e) {
-        echo $e->getMessage();
-
+    if ($sth->rowCount() == 1) {
+        $_SESSION['user'] = $myusername;
+        header("Location: login_success.php?s=1");
+    } else {
+        header("Location: login.php?failed=1");
     }
+} catch (PDOException $e) {
+    echo $e->getMessage();
 
+}
 ?>

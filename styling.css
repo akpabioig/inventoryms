@@ -102,7 +102,7 @@ section{
 
 #prod:hover #aprod{
     display: inline;
-    margin-right: auto;
+    margin-right: 230px;
 }
 #customer{
      position: relative;
@@ -237,6 +237,36 @@ section{
 }
 
 #orderpend:hover #pending {
+    display: inline;
+}
+
+#app {
+    position: relative;
+    left: -85px;
+    top: -100px;
+    display: none;
+    text-decoration: none;
+    font-style: oblique;
+    font-weight: bold;
+    font-size: 150%;
+}
+
+#application:hover #app {
+    display: inline;
+}
+
+#newuser {
+    position: relative;
+    left: -85px;
+    top: -100px;
+    display: none;
+    text-decoration: none;
+    font-style: oblique;
+    font-weight: bold;
+    font-size: 150%;
+}
+
+#createuser:hover #newuser {
     display: inline;
 }
 
