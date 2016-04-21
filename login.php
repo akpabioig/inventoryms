@@ -25,7 +25,7 @@
                     echo "Wrong Username or Password !!!";
                 }?>
             </p></span>
-            <button id="logout"><a href="adminlogin.php">ADMIN LOGIN</a>
+            <button id="signup"><a href="adminlogin.php">ADMIN LOGIN</a>
             </button>
             <h2> RGU Oil Services IMS Login</h2>
             <h4>Login with your Username and password</h4>
@@ -44,7 +44,7 @@
                     <td><input type="password" id="mypassword" name="mypassword" value="" class = "loginfield"></td>
                 </tr>
             </table>
-            <p id = "signup"><input type = "submit" name = "submit" value = "Sign In"></p>
+                <p id="signup"><input type="submit" name="submit" value="SIGN IN"></p>
             </form>
         </div>
     </section>
