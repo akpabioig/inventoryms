@@ -76,7 +76,7 @@ $result1 = mysqli_query($db, $sql1);
                         echo "
                     <tr>
                         <td id = \"datesales\" name= \"datesales\" class = \"tablefield\" disabled>{$row['datesales']}</td>
-                        <td id = \"sid\" name= \"sid\" class = \"tablefield\" disabled>{$row1['sid']}</td>
+                        <td id = \"sid\" name= \"sid\" class = \"tablefield\" disabled>{$row['sid']}</td>
                         <td id = \"customername\" name= \"customername\" class = \"tablefield\" disabled>{$row['customername']}</td>
                         <td id = \"deladdress\" name= \"deladdress\" class = \"tablefield\" disabled>{$row['deladdress']}</td>
                         <td id = \"totalunits\" name= \"totalunits\" class = \"tablefield\" disabled>{$row['totalunits']}</td>
