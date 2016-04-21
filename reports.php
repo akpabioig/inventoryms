@@ -47,6 +47,7 @@ include('connection.php');
                 <li><a href="alllocation.php"> PRODUCT LOCATION REPORT </a></li>
                 <li><a href="stocklevel.php"> STOCK LEVEL REPORT </a></li>
                 <li><a href="allpurchase.php"> PURCHASE ORDER REPORT </a></li>
+                <li><a href="allsales.php"> SALES ORDER REPORT </a></li>
             </ul>
         </div>
     </section>
