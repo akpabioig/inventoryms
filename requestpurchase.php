@@ -19,6 +19,7 @@ if (isset($_POST['sortpurchase'])) {
                 WHERE purchaseitem.productid = addproduct.productid
                 AND purchaseorder.supplierid = addsupplier.supplierid
                 AND purchaseorder.purchaseid = purchaseitem.purchaseid
+                AND purchaseorder.status = 'fulfilled'
                 ORDER BY addsupplier.suppliername";
     } else if ($_POST['sortpurchase'] == "productname") {
         $sql = "SELECT  purchaseitem.purchaseid, purchaseorder.datepurchase, addsupplier.suppliername,
@@ -61,8 +62,8 @@ if (mysqli_num_rows($result) == 1 || mysqli_num_rows($result) > 1) {
                         <td id = \"itemcost\" name= \"itemcost\" class = \"tablefield\" disabled> {$row['itemcost']} </td>
                         <td id = \"quantity\" name= \"quantity\" class = \"tablefield\" disabled>{$row['quantity']}</td>
                         <td id = \"tax\" name= \"tax\" class = \"tablefield\" disabled> {$row['tax']} </td>
-                        <td id = \"pitotal\" name= \"pitotal\" class = \"tablefield\" disabled>{$row['purchaseitem.total']}</td>
-                        <td id = \"pototal\" name= \"pototal\"  class = \"tablefield\" disabled> {$row['purchaseorder.total']}</td>
+                        <td id = \"itemtotal\" name= \"itemtotal\" class = \"tablefield\" disabled>{$row['itemtotal']}</td>
+                        <td id = \"ordertotal\" name= \"ordertotal\"  class = \"tablefield\" disabled> {$row['ordertotal']}</td>
                     </tr>
                                 ";
     }
