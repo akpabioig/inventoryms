@@ -52,39 +52,39 @@ include('connection.php');
         </nav>
         <div class = "buttons">
             <a id="prod" href= "addproduct.php">
-                <img src= "images/product.png" style{height="250" width="185"}/>
+                <img src="images/product.png" style{height="270" width="200" }/>
                 <span id="aprod">ADD PRODUCT</span>
             </a>
             <a id="cust" href= "addcustomer.php">
-                <img src= "images/cust.png" style{height="250" width="185"}/>
+                <img src="images/cust.png" style{height="270" width="200" }/>
                 <span id="customer">ADD CUSTOMER</span>
             </a>
             <a id="sord" href= "newsales.php">
-                <img src="images/sales.jpg" style{height="250" width="170" }/>
+                <img src="images/sales.jpg" style{height="270" width="200" }/>
                 <span id="sorder">SALES ORDER</span>
             </a>
         </div>
         <div class = "buttons2">
             <a id="pur" href= "newpurchase.php">
-                <img src= "images/pur.png" style{height="250" width="185"}/>
+                <img src="images/pur.png" style{height="270" width="200" }/>
                 <span id="porder">PURCHASE ORDER</span>
             </a>
             <a id= "supp" href= "addsupplier.php">
-                <img src= "images/supp.png" style{height="250" width="185"}/>
+                <img src="images/supp.png" style{height="270" width="200" }/>
                 <span id="asupp">ADD SUPPLIER</span>
             </a>
             <a id="loc" href= "location.php">
-                <img src= "images/loc.png"style{height="250" width="185"}/>
+                <img src="images/loc.png" style{height="270" width="200" }/>
                 <span id="floc">PRODUCT LOCATION</span>
             </a>
         </div>
         <div class = "buttons">
             <a id="edit" href= "editrecords.php">
-                <img src= "images/edit.png" style{height="250" width="185"}/>
+                <img src="images/edit.png" style{height="270" width="200" }/>
                 <span id="editorder">EDIT RECORDS</span>
             </a>
             <a id="orderfulfil" href="orderfulfilment.php">
-                <img src="images/fulfil.png" style{height="250" width="185" }/>
+                <img src="images/fulfil.png" style{height="270" width="200" }/>
                 <span id="fulfil">ORDER FULFILMENT</span>
             </a>
         </div>
