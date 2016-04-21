@@ -459,6 +459,6 @@ hr{
     cursor: pointer;
 }
 
-#suppliertable, #producttable, #customertable, #locationtable, #purchasetable {
+#suppliertable, #producttable, #customertable, #locationtable, #purchasetable, #salestable {
     margin-top: 1.5%;
 }
