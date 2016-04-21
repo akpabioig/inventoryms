@@ -113,7 +113,7 @@ section{
 
 #prod:hover #aprod{
     display: inline;
-    margin-right: -200px;
+    margin-right: -190px;
 }
 #customer{
      position: relative;
@@ -128,7 +128,7 @@ section{
 
 #cust:hover #customer{
     display: inline;
-    margin-right: -200px;
+    margin-right: -190px;
 }
 
 #sorder{
@@ -144,7 +144,7 @@ section{
 
 #sord:hover #sorder{
     display: inline;
-    margin-right: -200px;
+    margin-right: -190px;
 }
 
 #porder{
@@ -160,6 +160,7 @@ section{
 
 #pur:hover #porder{
     display: inline;
+    margin-right: -190px;
 }
 
 #asupp{
@@ -175,6 +176,7 @@ section{
 
 #supp:hover #asupp{
     display: inline;
+    margin-right: -190px;
 }
 
 #floc{
@@ -190,6 +192,7 @@ section{
 
 #loc:hover #floc{
     display: inline;
+    margin-right: -190px;
 }
 
 #editorder{
@@ -205,6 +208,7 @@ section{
 
 #edit:hover #editorder{
     display: inline;
+    margin-right: -190px;
 }
 
 #fulfil {
@@ -216,11 +220,11 @@ section{
     font-style: oblique;
     font-weight: bold;
     font-size: 150%;
-
 }
 
 #orderfulfil:hover #fulfil {
     display: inline;
+    margin-right: -190px;
 }
 
 #fulfiled {
@@ -236,6 +240,7 @@ section{
 
 #orderful:hover #fulfiled {
     display: inline;
+    margin-right: -190px;
 }
 
 #pending {
@@ -251,6 +256,7 @@ section{
 
 #orderpend:hover #pending {
     display: inline;
+    margin-right: -190px;
 }
 
 #application {
@@ -266,6 +272,7 @@ section{
 
 #app:hover #application {
     display: inline;
+    margin-right: -190px;
 }
 
 #createuser {
@@ -281,6 +288,7 @@ section{
 
 #newuser:hover #createuser {
     display: inline;
+    margin-right: -190px;
 }
 
 footer{
