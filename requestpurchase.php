@@ -16,7 +16,7 @@ if (isset($_POST['sortpurchase'])) {
                     AND purchaseorder.supplierid = addsupplier.supplierid
                     AND purchaseorder.purchaseid = purchaseitem.purchaseid
                     AND purchaseorder.status = 'fulfilled'
-                    ORDER BY purchaseorder.suppliername";
+                    ORDER BY addsupplier.suppliername";
     } else if ($_POST['sortpurchase'] == "productname") {
         $sql = "SELECT  purchaseitem.purchaseid, purchaseorder.datepurchase, addsupplier.suppliername, addproduct.productname, purchaseitem.itemcost, purchaseitem.quantity, purchaseitem.tax, purchaseitem.total, purchaseorder.total
                     FROM addproduct, purchaseorder, purchaseitem, addsupplier
@@ -24,7 +24,7 @@ if (isset($_POST['sortpurchase'])) {
                     AND purchaseorder.supplierid = addsupplier.supplierid
                     AND purchaseorder.purchaseid = purchaseitem.purchaseid
                     AND purchaseorder.status = 'fulfilled'
-                    ORDER BY purchaseorder.productname";
+                    ORDER BY addproduct.productname";
     } else if ($_POST['sortpurchase'] == "pototal") {
         $sql = "SELECT  purchaseitem.purchaseid, purchaseorder.datepurchase, addsupplier.suppliername, addproduct.productname, purchaseitem.itemcost, purchaseitem.quantity, purchaseitem.tax, purchaseitem.total, purchaseorder.total
                     FROM addproduct, purchaseorder, purchaseitem, addsupplier

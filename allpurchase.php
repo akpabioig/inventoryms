@@ -5,13 +5,14 @@ if (!isset($_SESSION['user'])) {
 }
 
 include('connection.php');
-$sql = "SELECT  purchaseitem.purchaseid, purchaseorder.datepurchase, addsupplier.suppliername, addproduct.productname, purchaseitem.itemcost, purchaseitem.quantity, purchaseitem.tax, purchaseitem.total, purchaseorder.total
-                    FROM addproduct, purchaseorder, purchaseitem, addsupplier
-                    WHERE purchaseitem.productid = addproduct.productid
-                    AND purchaseorder.supplierid = addsupplier.supplierid
-                    AND purchaseorder.purchaseid = purchaseitem.purchaseid
-                    AND purchaseorder.status = 'fulfilled'
-                    ORDER BY purchaseorder.datepurchase";
+$sql = "SELECT  purchaseitem.purchaseid, purchaseorder.datepurchase, addsupplier.suppliername,
+        addproduct.productname, purchaseitem.itemcost, purchaseitem.quantity, purchaseitem.tax, purchaseitem.total, purchaseorder.total
+        FROM addproduct, purchaseorder, purchaseitem, addsupplier
+        WHERE purchaseitem.productid = addproduct.productid
+        AND purchaseorder.supplierid = addsupplier.supplierid
+        AND purchaseorder.purchaseid = purchaseitem.purchaseid
+        AND purchaseorder.status = 'fulfilled'";
+
 $result = mysqli_query($db, $sql);
 ?>
 <!DOCTYPE html>
@@ -87,8 +88,8 @@ $result = mysqli_query($db, $sql);
                         <td id = \"itemcost\" name= \"itemcost\" class = \"tablefield\" disabled> {$row['itemcost']} </td>
                         <td id = \"quantity\" name= \"quantity\" class = \"tablefield\" disabled>{$row['quantity']}</td>
                         <td id = \"tax\" name= \"tax\" class = \"tablefield\" disabled> {$row['tax']} </td>
-                        <td id = \"pitotal\" name= \"pitotal\" class = \"tablefield\" disabled>{$row['purchaseitem.total']}</td>
-                        <td id = \"pototal\" name= \"pototal\"  class = \"tablefield\" disabled> {$row['purchaseorder.total']}</td>
+                        <td id = \"pitotal\" name= \"pitotal\" class = \"tablefield\" disabled>{$row['total']}</td>
+                        <td id = \"pototal\" name= \"pototal\"  class = \"tablefield\" disabled> {$row['total']}</td>
                     </tr>
                                 ";
                             }
