@@ -145,19 +145,20 @@ $result1 = mysqli_query($db, $sql1);
         return del;
     }
 
-    function deleteconfig1() {
-        var del1 = confirm("ARE YOU SURE YOU WANT TO DELETE THIS PURCHASE ORDER ?");
-        if (del1 == true) {
-            alert("PURCHASE ORDER DELETED !!!")
-        }
-        return del1;
-    }
     function editconfig1() {
         var edit1 = confirm("ARE YOU SURE YOU WANT TO FULFILL THIS PURCHASE ORDER ?");
         if (edit1 == true) {
             alert("PURCHASE ORDER FULFILLED !!!")
         }
         return edit1;
+    }
+
+    function deleteconfig1() {
+        var del1 = confirm("ARE YOU SURE YOU WANT TO DELETE THIS PURCHASE ORDER ?");
+        if (del1 == true) {
+            alert("PURCHASE ORDER DELETED !!!")
+        }
+        return del1;
     }
 </script>
 <footer>
