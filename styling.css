@@ -213,7 +213,7 @@ section{
 
 #fulfil {
     position: relative;
-    left: -200px;
+    left: -250px;
     bottom: -40px;
     display: none;
     text-decoration: none;
@@ -240,7 +240,6 @@ section{
 
 #orderful:hover #fulfiled {
     display: inline;
-    margin-right: -190px;
 }
 
 #pending {
@@ -256,7 +255,6 @@ section{
 
 #orderpend:hover #pending {
     display: inline;
-    margin-right: -190px;
 }
 
 #application {
