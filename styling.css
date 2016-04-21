@@ -45,6 +45,13 @@ section{
     margin-left: 100px;
 }
 
+.buttons3 {
+    margin-top: 5%;
+    padding: 10px;
+    width: auto;
+    margin-left: 100px;
+    margin-bottom: 30%;
+}
 .buttons2{
     margin-top: -20px;
     clear: both;
@@ -246,8 +253,8 @@ section{
 
 #application {
     position: relative;
-    left: -90px;
-    top: -100px;
+    left: -200px;
+    bottom: -40px;
     display: none;
     text-decoration: none;
     font-style: oblique;
@@ -261,8 +268,8 @@ section{
 
 #createuser {
     position: relative;
-    left: -90px;
-    top: -100px;
+    left: -200px;
+    bottom: -40px;
     display: none;
     text-decoration: none;
     font-style: oblique;

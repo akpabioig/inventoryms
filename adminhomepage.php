@@ -31,7 +31,7 @@ include('connection.php');
         <h3>CLICK ON CREATE USER TO CREATE NEW USER</h3>
         <h3>CLICK ON APPLICATION TO GO TO THE APPLICATION HOMEPAGE</h3>
         <div id="form1">
-            <div class="buttons">
+            <div class="buttons3">
                 <a id="newuser" href="createuser.php">
                     <img src="images/createuser.png" style{height="400" width="350" }/>
                     <span id="createuser">CREATE USER </span>
