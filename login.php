@@ -26,7 +26,7 @@
                 }?>
             </p></span>
             <button id="signup"><a href="adminlogin.php">ADMIN-LOGIN</a>
-                <button>
+            </button>
             <h2> RGU Oil Services IMS Login</h2>
             <h4>Login with your Username and password</h4>
             <form method="POST" action="loginphp.php">
