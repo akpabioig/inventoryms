@@ -82,8 +82,8 @@ $result1 = mysqli_query($db, $sql1);
                         <td id = \"totalunits\" name= \"totalunits\" class = \"tablefield\" disabled>{$row['totalunits']}</td>
                         <td id = \"totalcost\" name= \"totalcost\" class = \"tablefield\" disabled>{$row['totalcost']}</td>
                         <td id = \"status\" name= \"status\"  class = \"tablefield\" disabled>{$row['status']}</td>
-                        <td><a href='updatefulfilorder.php?salesid={$row['sid']}' onclick='return editconfig1()'><img src = 'images/tick.png' style{height=\"25\" width=\"25\"}></a></td>
-                        <td><a href='deletesalesorder.php?salesid={$row['sid']}' onclick='return deleteconfig1()'> <img src = 'images/delete.png' style{height=\"25\" width=\"25\"}></a> </td>
+                        <td><a href='updatefulfilorder.php?salesid={$row['sid']}' onclick='return editconfig()'><img src = 'images/tick.png' style{height=\"25\" width=\"25\"}></a></td>
+                        <td><a href='deletesalesorder.php?salesid={$row['sid']}' onclick='return deleteconfig()'> <img src = 'images/delete.png' style{height=\"25\" width=\"25\"}></a> </td>
                     </tr>
                                 ";
                     }
@@ -113,8 +113,8 @@ $result1 = mysqli_query($db, $sql1);
                         <td id = \"totalunits\" name= \"totalunits\" class = \"tablefield\" disabled>{$row1['totalunits']}</td>
                         <td id = \"total\" name= \"total\" class = \"tablefield\" disabled>{$row1['total']}</td>
                         <td id = \"status\" name= \"status\"  class = \"tablefield\" disabled>{$row1['status']}</td>
-                        <td><a href='updatefulfilorder.php?purid={$row1['purchaseid']}' onclick='return editconfig()'><img src = 'images/tick.png' style{height=\"25\" width=\"25\"}></a></td>
-                        <td><a href='deletepurchaseorder.php?purid={$row1['purchaseid']}' onclick='return deleteconfig()'> <img src = 'images/delete.png' style{height=\"25\" width=\"25\"}></a> </td>
+                        <td><a href='updatefulfilorder.php?purid={$row1['purchaseid']}' onclick='return editconfig1()'><img src = 'images/tick.png' style{height=\"25\" width=\"25\"}></a></td>
+                        <td><a href='deletepurchaseorder.php?purid={$row1['purchaseid']}' onclick='return deleteconfig1()'> <img src = 'images/delete.png' style{height=\"25\" width=\"25\"}></a> </td>
                     </tr>
                                 ";
                     }
@@ -128,33 +128,34 @@ $result1 = mysqli_query($db, $sql1);
     </section>
 </div>
 <script>
-    function deleteconfig() {
-
-        var del = confirm("ARE YOU SURE YOU WANT TO DELETE THIS PURCHASE ORDER ?");
-        if (del == true) {
-            alert("PURCHASE ORDER DELETED !!!")
-        }
-        return del;
-    }
     function editconfig() {
-        var edit = confirm("ARE YOU SURE YOU WANT TO FULFILL THIS PURCHASE ORDER ?");
+        var edit = confirm("ARE YOU SURE YOU WANT TO FULFILL THIS  SALES ORDER ?");
         if (edit == true) {
-            alert("PURCHASE ORDER FULFILLED !!!")
+            alert(" SALES ORDER FULFILLED !!!")
         }
         return edit;
     }
 
+    function deleteconfig() {
+
+        var del = confirm("ARE YOU SURE YOU WANT TO DELETE THIS SALES ORDER ?");
+        if (del == true) {
+            alert(" SALES ORDER DELETED !!!")
+        }
+        return del;
+    }
+
     function deleteconfig1() {
-        var del1 = confirm("ARE YOU SURE YOU WANT TO DELETE THIS SALES ORDER ?");
+        var del1 = confirm("ARE YOU SURE YOU WANT TO DELETE THIS PURCHASE ORDER ?");
         if (del1 == true) {
-            alert("SALES ORDER DELETED !!!")
+            alert("PURCHASE ORDER DELETED !!!")
         }
         return del1;
     }
     function editconfig1() {
-        var edit1 = confirm("ARE YOU SURE YOU WANT TO FULFILL THIS SALES ORDER ?");
+        var edit1 = confirm("ARE YOU SURE YOU WANT TO FULFILL THIS PURCHASE ORDER ?");
         if (edit1 == true) {
-            alert("SALES ORDER FULFILLED !!!")
+            alert("PURCHASE ORDER FULFILLED !!!")
         }
         return edit1;
     }
