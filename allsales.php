@@ -66,7 +66,7 @@ $result = mysqli_query($db, $sql);
                         <tr>
                             <th> PURCHASE ID</th>
                             <th> DATE OF PURCHASE</th>
-                            <th> SUPPLIER NAME</th>
+                            <th> CUSTOMER NAME</th>
                             <th> PRODUCT NAME</th>
                             <th> PRODUCT UNIT COST</th>
                             <th> PRODUCT QUANTITY</th>
