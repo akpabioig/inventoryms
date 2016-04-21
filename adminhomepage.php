@@ -25,7 +25,7 @@ include('connection.php');
         <h2> Inventory Management Made Easy </h2>
     </header>
     <section id="admincontent">
-        <h3> ADMIN LOGIN PAGE </h3>
+        <h3> ADMIN HOMEPAGE </h3>
         <img src="images/adminuser.png" style{height="250" width="200" }/>
         <h2>REPORTS</h2>
         <h3>CLICK ON CREATE USER TO CREATE NEW USER</h3>
@@ -33,11 +33,11 @@ include('connection.php');
         <div id="form1">
             <div class="buttons3">
                 <a id="newuser" href="createuser.php">
-                    <img src="images/createuser.png" style{height="350" width="350" }/>
+                    <img src="images/createuser.png" style{height="330" width="350" }/>
                     <span id="createuser">CREATE USER </span>
                 </a>
                 <a id="app" href="addcustomer.php">
-                    <img src="images/application.png" style{height="350" width="350" }/>
+                    <img src="images/application.png" style{height="330" width="350" }/>
                     <span id="application">ENTER APPLICATION </span>
                 </a>
             </div>
