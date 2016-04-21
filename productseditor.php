@@ -87,7 +87,7 @@ $result = mysqli_query($db, $sql);
                         <td><input type=\"text\" id = \"wp\" name= \"wp\"  value = \"{$row['wholesaleprice']}\" class = \"tablefield\" disabled></td>
                         <td><input type=\"text\" id = \"rp\" name= \"rp\"  value = \"{$row['retailprice']}\" class = \"tablefield\" disabled></td>
                         <td><a href='edit-product.php?prodid={$row['productid']}' onclick='return editconfig()'><img src = 'images/edit.png' style{height=\"25\" width=\"25\"}></a></td>
-                        <td><a href='deletefunctions.php?prodid={$row['productid']}' onclick='return deleteconfig()'> <img src = 'images/delete.png' style{height=\"25\" width=\"25\"}></a> </td>
+                        <td><a href='deleteproduct.php?prodid={$row['productid']}' onclick='return deleteconfig()'> <img src = 'images/delete.png' style{height=\"25\" width=\"25\"}></a> </td>
                     </tr>
 
                                 ";
