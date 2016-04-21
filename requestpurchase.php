@@ -29,6 +29,7 @@ if (isset($_POST['sortpurchase'])) {
                 WHERE purchaseitem.productid = addproduct.productid
                 AND purchaseorder.supplierid = addsupplier.supplierid
                 AND purchaseorder.purchaseid = purchaseitem.purchaseid
+                AND purchaseorder.status = 'fulfilled'
                 ORDER BY addproduct.productname";
     } else if ($_POST['sortpurchase'] == "ordertotal") {
         $sql = "SELECT  purchaseitem.purchaseid, purchaseorder.datepurchase, addsupplier.suppliername,
@@ -38,6 +39,7 @@ if (isset($_POST['sortpurchase'])) {
                 WHERE purchaseitem.productid = addproduct.productid
                 AND purchaseorder.supplierid = addsupplier.supplierid
                 AND purchaseorder.purchaseid = purchaseitem.purchaseid
+                AND purchaseorder.status = 'fulfilled'
                 ORDER BY ordertotal";
     }
 } else {
