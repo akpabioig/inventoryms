@@ -113,7 +113,7 @@ section{
 
 #prod:hover #aprod{
     display: inline;
-    margin-right: 230px;
+    margin-right: -230px;
 }
 #customer{
      position: relative;
