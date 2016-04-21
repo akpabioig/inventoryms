@@ -36,7 +36,7 @@ include('connection.php');
                     <img src="images/createuser.png" style{height="330" width="350" }/>
                     <span id="createuser">CREATE USER </span>
                 </a>
-                <a id="app" href="addcustomer.php">
+                <a id="app" href="homepage.php">
                     <img src="images/application.png" style{height="330" width="350" }/>
                     <span id="application">ENTER APPLICATION </span>
                 </a>
