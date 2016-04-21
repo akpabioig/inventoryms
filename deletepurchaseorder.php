@@ -4,7 +4,6 @@ $db = new PDO('mysql:host=us-cdbr-azure-southcentral-e.cloudapp.net;dbname=inven
 
 if (isset($_GET['purid'])) {
     $purchaseId = $_GET['purid'];
-
     try {
         $sql = "DELETE FROM purchaseorder
                     WHERE purchaseid = {$purchaseId}";
