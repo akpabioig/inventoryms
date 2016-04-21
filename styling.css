@@ -242,8 +242,8 @@ section{
 
 #application {
     position: relative;
-    left: -85px;
-    top: -100px;
+    left: -250px;
+    bottom: -40px;
     display: none;
     text-decoration: none;
     font-style: oblique;
@@ -257,8 +257,8 @@ section{
 
 #createuser {
     position: relative;
-    left: -85px;
-    top: -100px;
+    left: -250px;
+    bottom: -40px;
     display: none;
     text-decoration: none;
     font-style: oblique;
