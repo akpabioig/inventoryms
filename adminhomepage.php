@@ -23,6 +23,7 @@ include('connection.php');
     <header id="headlogin">
         <h1> RGU Oil Services </h1>
         <h2> Inventory Management Made Easy </h2>
+        <button id="logout"><a href="logout.php">LOG-OUT</a></button>
     </header>
     <section id="admincontent">
         <h3> ADMIN HOMEPAGE </h3>
