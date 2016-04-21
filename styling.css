@@ -28,12 +28,16 @@ header{
 
 section{
     padding: 5px;
-    margin-left: 5px;
     display: block;
     margin-bottom: 122px;
     margin-left: 50px;
 }
 
+#admincontent {
+    padding: 5px;
+    display: block;
+    margin-left: 10px;
+}
 .buttons{
     margin-top: 5%;
     padding: 10px;
