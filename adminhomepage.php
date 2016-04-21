@@ -28,7 +28,6 @@ include('connection.php');
     <section id="admincontent">
         <h3> ADMIN HOMEPAGE </h3>
         <img src="images/adminuser.png" style{height="250" width="200" }/>
-        <h2>REPORTS</h2>
         <h3>CLICK ON CREATE USER TO CREATE NEW USER</h3>
         <h3>CLICK ON APPLICATION TO GO TO THE APPLICATION HOMEPAGE</h3>
         <div id="form1">
