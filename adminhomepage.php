@@ -33,11 +33,11 @@ include('connection.php');
         <div id="form1">
             <div class="buttons">
                 <a id="newuser" href="createuser.php">
-                    <img src="images/createuser.png" style{height="270" width="220" }/>
+                    <img src="images/createuser.png" style{height="350" width="300" }/>
                     <span id="createuser">CREATE USER </span>
                 </a>
                 <a id="app" href="addcustomer.php">
-                    <img src="images/application.png" style{height="270" width="220" }/>
+                    <img src="images/application.png" style{height="350" width="300" }/>
                     <span id="application">ENTER APPLICATION </span>
                 </a>
             </div>
