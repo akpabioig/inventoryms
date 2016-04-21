@@ -27,7 +27,7 @@
                     } ?>
                 </p></span>
             <h2> RGU Oil Services IMS Login</h2>
-            <h4> Admin Login with your Username and password</h4>
+            <h3> Login with Admin Username and Password </h3>
             <form method="POST" action="adminloginphp.php">
                 <table>
                     <tr>
