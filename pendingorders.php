@@ -72,17 +72,7 @@ $result1 = mysqli_query($db, $sql1);
                 <?php
                 if (mysqli_num_rows($result) == 1 || mysqli_num_rows($result) > 1) {
                     while ($row = $result->fetch_array()) {
-                        echo "
-                                <tr>
-                        <td id = \"datesales\" name= \"datesales\" class = \"tablefield\" disabled>{$row['datesales']}</td>
-                        <td id = \"sid\" name= \"sid\" class = \"tablefield\" disabled>{$row['sid']}</td>
-                        <td id = \"customername\" name= \"customername\"  class = \"tablefield\" disabled>{$row['customername']}</td>
-                        <td id = \"deladdress\" name= \"deladdress\" class = \"tablefield\" disabled>{$row['deladdress']}</td>
-                        <td id = \"totalunits\" name= \"totalunits\" class = \"tablefield\" disabled>{$row['totalunits']}</td>
-                        <td id = \"totalcost\" name= \"totalcost\"  class = \"tablefield\" disabled>{$row['totalcost']}</td>
-                        <td id = \"status\" name= \"status\"  class = \"tablefield\" disabled>{$row['status']}</td>
-                        <td><a href='updatefulfilorder.php?salesid={$row['sid']}'><img src = 'images/tick.png' style{height=\"25\" width=\"25\"}></a></td>
-                        <td><a href='deleteproduct.php?prodid={$row['productid']}'> <img src = 'images/delete.png' style{height=\"25\" width=\"25\"}></a> </td>
+                        echo "}></a> </td>
                     </tr>
 
                                 ";

@@ -16,7 +16,7 @@ $result = mysqli_query($db, $sql);
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>PRODUCTS 1</title>
+    <title>PRODUCTS</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href = "styling.css"/>
     <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
@@ -45,7 +45,7 @@ $result = mysqli_query($db, $sql);
         <button id="logout"><a href="logout.php">LOG-OUT</a></button>
     </header>
     <section>
-        <h3>PRODUCTS</h3>
+        <h3>PRODUCTS 1</h3>
         <img src= "images/product.png" style{height="250" width="200"}/>
         <h2>EDIT PRODUCT ENTRIES</h2>
         <p>SCROLL TO THE END OF THE RECORD AND CLICK THE EDIT ICON</p>
@@ -87,7 +87,7 @@ $result = mysqli_query($db, $sql);
                         <td><input type=\"text\" id = \"wp\" name= \"wp\"  value = \"{$row['wholesaleprice']}\" class = \"tablefield\" disabled></td>
                         <td><input type=\"text\" id = \"rp\" name= \"rp\"  value = \"{$row['retailprice']}\" class = \"tablefield\" disabled></td>
                         <td><a href='edit-product.php?prodid={$row['productid']}' onclick='return editconfig()'><img src = 'images/edit.png' style{height=\"25\" width=\"25\"}></a></td>
-                        <td><a href='deleteproduct.php?prodid={$row['productid']}' onclick='return deleteconfig()'> <img src = 'images/delete.png' style{height=\"25\" width=\"25\"}></a> </td>
+                        <td><a href='deletefunctions.php?prodid={$row['productid']}' onclick='return deleteconfig()'> <img src = 'images/delete.png' style{height=\"25\" width=\"25\"}></a> </td>
                     </tr>
 
                                 ";
