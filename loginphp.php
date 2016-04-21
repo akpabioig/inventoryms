@@ -9,7 +9,9 @@ $db = new PDO('mysql:host=us-cdbr-azure-southcentral-e.cloudapp.net;dbname=inven
     $mypassword = htmlspecialchars($_POST['mypassword']);
 
     try {
-        $sql = "SELECT * FROM login WHERE username = '$myusername' AND password = '$mypassword' LIMIT 1";
+        $sql = "SELECT * FROM login
+                WHERE username = '$myusername'
+                AND password = '$mypassword' LIMIT 1";
         $sth = $db->query($sql);
 
         if($sth ->rowCount() == 1) {
