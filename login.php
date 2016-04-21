@@ -25,7 +25,7 @@
                     echo "Wrong Username or Password !!!";
                 }?>
             </p></span>
-            <a href="adminlogin.php" id="signup"><input type="button" value="ADMIN LOGIN"></a>
+            <a href="adminlogin.php" id="signup"><input type="button" value="ADMIN - LOGIN"></a>
             <h2> RGU Oil Services IMS Login</h2>
             <h4>Login with your Username and password</h4>
             <form method="POST" action="loginphp.php">
