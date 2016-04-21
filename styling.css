@@ -240,7 +240,7 @@ section{
     display: inline;
 }
 
-#app {
+#application {
     position: relative;
     left: -85px;
     top: -100px;
@@ -251,11 +251,11 @@ section{
     font-size: 150%;
 }
 
-#application:hover #app {
+#app:hover #application {
     display: inline;
 }
 
-#newuser {
+#createuser {
     position: relative;
     left: -85px;
     top: -100px;
@@ -266,7 +266,7 @@ section{
     font-size: 150%;
 }
 
-#createuser:hover #newuser {
+#newuser:hover #createuser {
     display: inline;
 }
 

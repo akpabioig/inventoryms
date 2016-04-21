@@ -25,7 +25,7 @@ include('connection.php');
         <h2> Inventory Management Made Easy </h2>
     </header>
     <section id="content">
-        <h3> ADMIN LOGIN PAGE 1</h3>
+        <h3> ADMIN LOGIN PAGE </h3>
         <img src="images/adminuser.png" style{height="250" width="200" }/>
         <h2>REPORTS</h2>
         <h3>CLICK ON CREATE USER TO CREATE NEW USER</h3>
