@@ -2,45 +2,52 @@
 
 if (isset($_POST['sortpurchase'])) {
     if ($_POST['sortpurchase'] == "datepurchase") {
-        $sql = "SELECT  purchaseitem.purchaseid, purchaseorder.datepurchase, addsupplier.suppliername, addproduct.productname, purchaseitem.itemcost, purchaseitem.quantity, purchaseitem.tax, purchaseitem.total, purchaseorder.total
-                    FROM addproduct, purchaseorder, purchaseitem, addsupplier
-                    WHERE purchaseitem.productid = addproduct.productid
-                    AND purchaseorder.supplierid = addsupplier.supplierid
-                    AND purchaseorder.purchaseid = purchaseitem.purchaseid
-                    AND purchaseorder.status = 'fulfilled'
-                    ORDER BY purchaseorder.datepurchase";
+        $sql = "SELECT  purchaseitem.purchaseid, purchaseorder.datepurchase, addsupplier.suppliername,
+                addproduct.productname, purchaseitem.itemcost, purchaseitem.quantity,
+                purchaseitem.tax, purchaseitem.total AS itemtotal, purchaseorder.total AS ordertotal
+                FROM addproduct, purchaseorder, purchaseitem, addsupplier
+                WHERE purchaseitem.productid = addproduct.productid
+                AND purchaseorder.supplierid = addsupplier.supplierid
+                AND purchaseorder.purchaseid = purchaseitem.purchaseid
+                AND purchaseorder.status = 'fulfilled'
+                ORDER BY purchaseorder.datepurchase";
     } else if ($_POST['sortpurchase'] == "suppliername") {
-        $sql = "SELECT  purchaseitem.purchaseid, purchaseorder.datepurchase, addsupplier.suppliername, addproduct.productname, purchaseitem.itemcost, purchaseitem.quantity, purchaseitem.tax, purchaseitem.total, purchaseorder.total
-                    FROM addproduct, purchaseorder, purchaseitem, addsupplier
-                    WHERE purchaseitem.productid = addproduct.productid
-                    AND purchaseorder.supplierid = addsupplier.supplierid
-                    AND purchaseorder.purchaseid = purchaseitem.purchaseid
-                    AND purchaseorder.status = 'fulfilled'
-                    ORDER BY addsupplier.suppliername";
+        $sql = "SELECT  purchaseitem.purchaseid, purchaseorder.datepurchase, addsupplier.suppliername,
+                addproduct.productname, purchaseitem.itemcost, purchaseitem.quantity,
+                purchaseitem.tax, purchaseitem.total AS itemtotal, purchaseorder.total AS ordertotal
+                FROM addproduct, purchaseorder, purchaseitem, addsupplier
+                WHERE purchaseitem.productid = addproduct.productid
+                AND purchaseorder.supplierid = addsupplier.supplierid
+                AND purchaseorder.purchaseid = purchaseitem.purchaseid
+                ORDER BY addsupplier.suppliername";
     } else if ($_POST['sortpurchase'] == "productname") {
-        $sql = "SELECT  purchaseitem.purchaseid, purchaseorder.datepurchase, addsupplier.suppliername, addproduct.productname, purchaseitem.itemcost, purchaseitem.quantity, purchaseitem.tax, purchaseitem.total, purchaseorder.total
-                    FROM addproduct, purchaseorder, purchaseitem, addsupplier
-                    WHERE purchaseitem.productid = addproduct.productid
-                    AND purchaseorder.supplierid = addsupplier.supplierid
-                    AND purchaseorder.purchaseid = purchaseitem.purchaseid
-                    AND purchaseorder.status = 'fulfilled'
-                    ORDER BY addproduct.productname";
-    } else if ($_POST['sortpurchase'] == "pototal") {
-        $sql = "SELECT  purchaseitem.purchaseid, purchaseorder.datepurchase, addsupplier.suppliername, addproduct.productname, purchaseitem.itemcost, purchaseitem.quantity, purchaseitem.tax, purchaseitem.total, purchaseorder.total
-                    FROM addproduct, purchaseorder, purchaseitem, addsupplier
-                    WHERE purchaseitem.productid = addproduct.productid
-                    AND purchaseorder.supplierid = addsupplier.supplierid
-                    AND purchaseorder.purchaseid = purchaseitem.purchaseid
-                    AND purchaseorder.status = 'fulfilled'
-                    ORDER BY purchaseorder.total";
+        $sql = "SELECT  purchaseitem.purchaseid, purchaseorder.datepurchase, addsupplier.suppliername,
+                addproduct.productname, purchaseitem.itemcost, purchaseitem.quantity,
+                purchaseitem.tax, purchaseitem.total AS itemtotal, purchaseorder.total AS ordertotal
+                FROM addproduct, purchaseorder, purchaseitem, addsupplier
+                WHERE purchaseitem.productid = addproduct.productid
+                AND purchaseorder.supplierid = addsupplier.supplierid
+                AND purchaseorder.purchaseid = purchaseitem.purchaseid
+                ORDER BY itemtotal";
+    } else if ($_POST['sortpurchase'] == "ordertotal") {
+        $sql = "SELECT  purchaseitem.purchaseid, purchaseorder.datepurchase, addsupplier.suppliername,
+                addproduct.productname, purchaseitem.itemcost, purchaseitem.quantity,
+                purchaseitem.tax, purchaseitem.total AS itemtotal, purchaseorder.total AS ordertotal
+                FROM addproduct, purchaseorder, purchaseitem, addsupplier
+                WHERE purchaseitem.productid = addproduct.productid
+                AND purchaseorder.supplierid = addsupplier.supplierid
+                AND purchaseorder.purchaseid = purchaseitem.purchaseid
+                ORDER BY ordertotal";
     }
 } else {
-    $sql = "SELECT  purchaseitem.purchaseid, purchaseorder.datepurchase, addsupplier.suppliername, addproduct.productname, purchaseitem.itemcost, purchaseitem.quantity, purchaseitem.tax, purchaseitem.total, purchaseorder.total
-                    FROM addproduct, purchaseorder, purchaseitem, addsupplier
-                    WHERE purchaseitem.productid = addproduct.productid
-                    AND purchaseorder.supplierid = addsupplier.supplierid
-                    AND purchaseorder.purchaseid = purchaseitem.purchaseid
-                    AND purchaseorder.status = 'fulfilled'";
+    $sql = "SELECT  purchaseitem.purchaseid, purchaseorder.datepurchase, addsupplier.suppliername,
+            addproduct.productname, purchaseitem.itemcost, purchaseitem.quantity,
+            purchaseitem.tax, purchaseitem.total AS itemtotal, purchaseorder.total AS ordertotal
+            FROM addproduct, purchaseorder, purchaseitem, addsupplier
+            WHERE purchaseitem.productid = addproduct.productid
+            AND purchaseorder.supplierid = addsupplier.supplierid
+            AND purchaseorder.purchaseid = purchaseitem.purchaseid
+            AND purchaseorder.status = 'fulfilled'";
 }
 $result = mysqli_query($db, $sql);
 if (mysqli_num_rows($result) == 1 || mysqli_num_rows($result) > 1) {

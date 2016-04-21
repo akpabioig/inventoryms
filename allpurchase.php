@@ -6,7 +6,8 @@ if (!isset($_SESSION['user'])) {
 
 include('connection.php');
 $sql = "SELECT  purchaseitem.purchaseid, purchaseorder.datepurchase, addsupplier.suppliername,
-        addproduct.productname, purchaseitem.itemcost, purchaseitem.quantity, purchaseitem.tax, purchaseitem.total, purchaseorder.total
+        addproduct.productname, purchaseitem.itemcost, purchaseitem.quantity,
+        purchaseitem.tax, purchaseitem.total AS itemtotal, purchaseorder.total AS ordertotal
         FROM addproduct, purchaseorder, purchaseitem, addsupplier
         WHERE purchaseitem.productid = addproduct.productid
         AND purchaseorder.supplierid = addsupplier.supplierid
@@ -48,7 +49,7 @@ $result = mysqli_query($db, $sql);
     </header>
     <section>
         <h3> PURCHASE ORDERS </h3>
-        <img src="images/supp.png" style{height="250" width="200" }/>
+        <img src="images/pur.png" style{height="250" width="200" }/>
         <h2> COMPLETED PURCHASE ORDERS </h2>
         <p>FIND BELOW THE LIST OF ALL THE ORDERS THAT HAVE BEEN PURCHASE FROM SUPPLIER </p>
         <form method="get" action="allpurchase.php">
@@ -58,7 +59,7 @@ $result = mysqli_query($db, $sql);
                     <option value="datepurchase"> DATE OF PURCHASE</option>
                     <option value="suppliername"> SUPPLIER NAME</option>
                     <option value="productname"> PRODUCT NAME</option>
-                    <option value="pototal"> ORDER TOTAL</option>
+                    <option value="ordertotal"> ORDER TOTAL</option>
                 </select>
                 <button id="export"> Export To Excel Sheet</button>
                 <div id="purchasetable">
@@ -88,8 +89,8 @@ $result = mysqli_query($db, $sql);
                         <td id = \"itemcost\" name= \"itemcost\" class = \"tablefield\" disabled> {$row['itemcost']} </td>
                         <td id = \"quantity\" name= \"quantity\" class = \"tablefield\" disabled>{$row['quantity']}</td>
                         <td id = \"tax\" name= \"tax\" class = \"tablefield\" disabled> {$row['tax']} </td>
-                        <td id = \"pitotal\" name= \"pitotal\" class = \"tablefield\" disabled>{$row['total']}</td>
-                        <td id = \"pototal\" name= \"pototal\"  class = \"tablefield\" disabled> {$row['total']}</td>
+                        <td id = \"itemtotal\" name= \"itemtotal\" class = \"tablefield\" disabled>{$row['itemtotal']}</td>
+                        <td id = \"ordertotal\" name= \"ordertotal\"  class = \"tablefield\" disabled> {$row['ordertotal']}</td>
                     </tr>
                                 ";
                             }
