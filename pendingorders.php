@@ -72,9 +72,18 @@ $result1 = mysqli_query($db, $sql1);
                 <?php
                 if (mysqli_num_rows($result) == 1 || mysqli_num_rows($result) > 1) {
                     while ($row = $result->fetch_array()) {
-                        echo "}></a> </td>
+                        echo "
+                    <tr>
+                        <td id = \"datesales\" name= \"datesales\" class = \"tablefield\" disabled>{$row1['datesales']}</td>
+                        <td id = \"sid\" name= \"sid\" class = \"tablefield\" disabled>{$row1['sid']}</td>
+                        <td id = \"customername\" name= \"customername\" class = \"tablefield\" disabled>{$row1['customername']}</td>
+                        <td id = \"deladdress\" name= \"deladdress\" class = \"tablefield\" disabled>{$row1['deladdress']}</td>
+                        <td id = \"totalunits\" name= \"totalunits\" class = \"tablefield\" disabled>{$row1['totalunits']}</td>
+                        <td id = \"totalcost\" name= \"totalcost\" class = \"tablefield\" disabled>{$row1['totalcost']}</td>
+                        <td id = \"status\" name= \"status\"  class = \"tablefield\" disabled>{$row1['status']}</td>
+                        <td><a href='updatefulfilorder.php?salesid={$row1['sid']}' onclick='return editconfig1()'><img src = 'images/tick.png' style{height=\"25\" width=\"25\"}></a></td>
+                        <td><a href='deletesalesorder.php?salesid={$row1['sid']}' onclick='return deleteconfig1()'> <img src = 'images/delete.png' style{height=\"25\" width=\"25\"}></a> </td>
                     </tr>
-
                                 ";
                     }
                 } else {
@@ -97,14 +106,14 @@ $result1 = mysqli_query($db, $sql1);
                     while ($row1 = $result1->fetch_array()) {
                         echo "
                                 <tr>
-                        <td id = \"datesales\" name= \"datesales\" class = \"tablefield\" disabled>{$row1['datepurchase']}</td>
+                        <td id = \"datepurchase\" name= \"datepurchase\" class = \"tablefield\" disabled>{$row1['datepurchase']}</td>
                         <td id = \"purchaseid\" name= \"purchaseid\" class = \"tablefield\" disabled>{$row1['purchaseid']}</td>
                         <td id = \"suppliername\" name= \"suppliername\" class = \"tablefield\" disabled>{$row1['suppliername']}</td>
                         <td id = \"totalunits\" name= \"totalunits\" class = \"tablefield\" disabled>{$row1['totalunits']}</td>
                         <td id = \"total\" name= \"total\" class = \"tablefield\" disabled>{$row1['total']}</td>
                         <td id = \"status\" name= \"status\"  class = \"tablefield\" disabled>{$row1['status']}</td>
-                        <td><a href='updatefulfilorder.php?purid={$row1['purchaseid']}'><img src = 'images/tick.png' style{height=\"25\" width=\"25\"}></a></td>
-                        <td><a href='deleteproduct.php?prodid={$row1['productid']}'> <img src = 'images/delete.png' style{height=\"25\" width=\"25\"}></a> </td>
+                        <td><a href='updatefulfilorder.php?purid={$row1['purchaseid']}' onclick='return editconfig()'><img src = 'images/tick.png' style{height=\"25\" width=\"25\"}></a></td>
+                        <td><a href='deletepurchaseorder.php?purid={$row1['purchaseid']}' onclick='return deleteconfig()'> <img src = 'images/delete.png' style{height=\"25\" width=\"25\"}></a> </td>
                     </tr>
                                 ";
                     }
@@ -117,6 +126,38 @@ $result1 = mysqli_query($db, $sql1);
         </form>
     </section>
 </div>
+<script>
+    function deleteconfig() {
+
+        var del = confirm("ARE YOU SURE YOU WANT TO DELETE THIS PURCHASE ORDER ?");
+        if (del == true) {
+            alert("PURCHASE ORDER DELETED !!!")
+        }
+        return del;
+    }
+    function editconfig() {
+        var edit = confirm("ARE YOU SURE YOU WANT TO FULFILL THIS PURCHASE ORDER ?");
+        if (edit == true) {
+            alert("PURCHASE ORDER FULFILLED !!!")
+        }
+        return edit;
+    }
+
+    function deleteconfig1() {
+        var del1 = confirm("ARE YOU SURE YOU WANT TO DELETE THIS SALES ORDER ?");
+        if (del1 == true) {
+            alert("SALES ORDER DELETED !!!")
+        }
+        return del1;
+    }
+    function editconfig1() {
+        var edit1 = confirm("ARE YOU SURE YOU WANT TO FULFILL THIS SALES ORDER ?");
+        if (edit1 == true) {
+            alert("SALES ORDER FULFILLED !!!")
+        }
+        return edit1;
+    }
+</script>
 <footer>
     <p>&copy; Akpabio Ignatius, 2016</p>
 </footer>
