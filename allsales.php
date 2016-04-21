@@ -7,7 +7,7 @@ if (!isset($_SESSION['user'])) {
 include('connection.php');
 $sql = "SELECT  salesitem.sid, salesorder.datesales, addcustomer.customername,
         addproduct.productname, salesitem.itemcost, salesitem.quantity,
-        salesitem.tax, salesitem.discount, salesitem.total AS itemtotal, salesorder.totalcost
+        salesitem.tax, salesitem.discount, salesitem.total AS itemtotal, salesorder.totalcost AS ordertotal
         FROM addproduct, salesorder, salesitem, addcustomer
         WHERE salesitem.productid = addproduct.productid
         AND salesorder.customerid = addcustomer.customerid
@@ -58,7 +58,7 @@ $result = mysqli_query($db, $sql);
                     <option value="datesales"> DATE OF SALES</option>
                     <option value="customername"> CUSTOMER NAME</option>
                     <option value="productname"> PRODUCT NAME</option>
-                    <option value="totalcost"> ORDER TOTAL</option>
+                    <option value="ordertotal"> ORDER TOTAL</option>
                 </select>
                 <button id="export"> Export To Excel Sheet</button>
                 <div id="salestable">
@@ -71,6 +71,7 @@ $result = mysqli_query($db, $sql);
                             <th> PRODUCT UNIT COST</th>
                             <th> PRODUCT QUANTITY</th>
                             <th> TAX ON PRODUCT</th>
+                            <th> DISCOUNT</th>
                             <th> ITEM TOTAL</th>
                             <th> ORDER TOTAL</th>
                         </tr>
@@ -90,7 +91,7 @@ $result = mysqli_query($db, $sql);
                         <td id = \"tax\" name= \"tax\" class = \"tablefield\" disabled> {$row['tax']} </td>
                         <td id = \"discount\" name= \"discount\" class = \"tablefield\" disabled> {$row['discount']} </td>
                         <td id = \"itemtotal\" name= \"itemtotal\" class = \"tablefield\" disabled>{$row['itemtotal']}</td>
-                        <td id = \"totalcost\" name= \"totalcost\"  class = \"tablefield\" disabled> {$row['totalcost']}</td>
+                        <td id = \"ordertotal\" name= \"ordertotal\"  class = \"tablefield\" disabled> {$row['ordertotal']}</td>
                     </tr>
                                 ";
                             }
