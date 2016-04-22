@@ -18,7 +18,7 @@ echo $username = htmlspecialchars($_POST['username']);
 echo "<br>";
 echo $password = htmlspecialchars($_POST['password']);
 echo "<br>";
-echo $userId = htmlspecialchars($_POST['uid']);
+echo $uid = htmlspecialchars($_POST['uid']);
 echo "<br>";
 /*try {
     $sql = "UPDATE user
