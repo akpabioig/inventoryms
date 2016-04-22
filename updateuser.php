@@ -13,14 +13,13 @@ echo $lastname = htmlspecialchars($_POST['lastname']);
 echo "<br>";
 echo $position = htmlspecialchars($_POST['position']);
 echo "<br>";
-echo $userId = htmlspecialchars($_POST['userid']);
-echo "<br>";
 
 echo $username = htmlspecialchars($_POST['username']);
 echo "<br>";
 echo $password = htmlspecialchars($_POST['password']);
 echo "<br>";
-
+echo $userId = htmlspecialchars($_POST['userid']);
+echo "<br>";
 /*try {
     $sql = "UPDATE user
                 SET title = '{$title}',
