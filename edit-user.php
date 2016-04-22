@@ -7,8 +7,8 @@ include('connection.php');
 
 if (isset($_GET['userid'])) {
     $userId = $_GET['userid'];
-    $sqlselect = "SELECT user.userid, user.title, user.firstname, user.middlename, user.lastname, user.staffposition, login.username, login.password
-                  FROM user, login
+    $sqlselect = "SELECT *
+                  FROM login, user
                   WHERE userid = $userId";
     $getResult = mysqli_query($db, $sqlselect);
 
