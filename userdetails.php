@@ -59,8 +59,8 @@ $result = mysqli_query($db, $sql);
                         <td><input type=\"text\" id = \"staffposition\" name= \"staffposition\"  value = \"{$row['staffposition']}\" class = \"tablefield\" disabled></td>
                         <td><input type=\"text\" id = \"username\" name= \"username\"  value = \"{$row['username']}\" class = \"tablefield\" disabled></td>
                         <td><input type=\"text\" id = \"password\" name= \"password\"  value = \"{$row['password']}\" class = \"tablefield\" disabled></td>
-                        <td><a href='edit-user.php?prodid={$row['userid']}' onclick='return editconfig()'><img src = 'images/edit.png' style{height=\"25\" width=\"25\"}></a></td>
-                        <td><a href='deleteuser.php?prodid={$row['userid']}' onclick='return deleteconfig()'> <img src = 'images/delete.png' style{height=\"25\" width=\"25\"}></a> </td>
+                        <td><a href='edit-user.php?userid={$row['userid']}' onclick='return editconfig()'><img src = 'images/edit.png' style{height=\"25\" width=\"25\"}></a></td>
+                        <td><a href='deleteuser.php?userid={$row['userid']}' onclick='return deleteconfig()'> <img src = 'images/delete.png' style{height=\"25\" width=\"25\"}></a> </td>
                     </tr>
 
                                 ";
