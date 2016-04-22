@@ -31,9 +31,8 @@ $result = mysqli_query($db, $sql);
     <section id="admincontent">
         <h3> ADMIN HOMEPAGE </h3>
         <img src="images/usersdetails.jpg" style{height="250" width="200" }/>
-        <div id="">
-            <div id="">
-                <table id="">
+        <div id="form3">
+            <table id="t2">
                 <tr>
                     <th> USER ID</th>
                     <th> TITLE</th>
@@ -71,7 +70,6 @@ $result = mysqli_query($db, $sql);
                 ?>
                 </tbody>
             </table>
-            </div>
         </div>
 </div>
 </section>
