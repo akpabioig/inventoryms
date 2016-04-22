@@ -8,6 +8,7 @@ $firstname = htmlspecialchars($_POST['firstname']);
 $middlename = htmlspecialchars($_POST['middlename']);
 $lastname = htmlspecialchars($_POST['lastname']);
 $position = htmlspecialchars($_POST['position']);
+
 $username = htmlspecialchars($_POST['username']);
 $password = htmlspecialchars($_POST['password']);
 $uid = htmlspecialchars($_POST['uid']);
@@ -23,7 +24,6 @@ try {
 } catch (PDOException $e) {
     echo $e->getMessage();
 }
-
 try {
     $sql = "UPDATE login
                 SET username = '{$username}',
@@ -33,5 +33,5 @@ try {
 } catch (PDOException $e) {
     echo $e->getMessage();
 }
-header("Location: edit-user.php");
+//header("Location: edit-user.php");
 ?>
