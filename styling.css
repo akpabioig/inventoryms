@@ -259,7 +259,7 @@ section{
 
 #application {
     position: relative;
-    left: -200px;
+    left: -20px;
     bottom: -40px;
     display: none;
     text-decoration: none;
@@ -275,7 +275,7 @@ section{
 
 #createuser {
     position: relative;
-    left: -200px;
+    left: -250px;
     bottom: -40px;
     display: none;
     text-decoration: none;
