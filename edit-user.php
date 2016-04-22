@@ -134,7 +134,7 @@ include('connection.php');
                                    cols=40 required></td>
                     </tr>
                 </table>
-                <input type="hidden" id="userid" name="userid" value="<?php echo $userId; ?>"/>
+                <input type="hidden" id="uid" name="uid" value="<?php echo $userId; ?>"/>
                 <p id="signup"><input type="submit" onclick="return myFunction()" name="submit"
                                       value="UPDATE USER DETAILS"></p>
             </form>
