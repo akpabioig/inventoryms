@@ -6,7 +6,7 @@ if (isset($_GET['userid'])) {
     $userId = $_GET['userid'];
 
     try {
-        $sql = "DELETE FROM login
+        $sql = "DELETE FROM login, user
                         WHERE userid = {$userId}";
         $sth = $db->query($sql);
 
