@@ -32,8 +32,8 @@ $result = mysqli_query($db, $sql);
         <h3> ADMIN HOMEPAGE </h3>
         <img src="images/usersdetails.jpg" style{height="250" width="200" }/>
         <div id="form1">
-            <div id="purchasetable">
-            <table id="t2">
+            <div id="">
+                <table id="">
                 <tr>
                     <th> USER ID</th>
                     <th> TITLE</th>
