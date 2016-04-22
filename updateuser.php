@@ -33,5 +33,5 @@ try {
 } catch (PDOException $e) {
     echo $e->getMessage();
 }
-//header("Location: edit-user.php");
+header("Location: edit-user.php");
 ?>
