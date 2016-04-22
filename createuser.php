@@ -15,7 +15,7 @@
 <body>
 <div style="margin-left:70px">
     <header id = "headlogin">
-        <h1> RGU Oil Services 1</h1>
+        <h1> RGU Oil Services </h1>
         <h2> Inventory Management Made Easy </h2>
     </header>
     <section id = "content">
