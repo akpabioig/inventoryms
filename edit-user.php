@@ -47,7 +47,7 @@ include('connection.php');
     <section id="content">
         <div id="log">
             <h2> RGU Oil Services IMS Login</h2>
-            <h4> EDIT 78 USER DETAILS </h4>
+            <h4> EDIT USER DETAILS </h4>
             <form method="post" action="updateuser.php">
                 <table>
                     <tr>
