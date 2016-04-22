@@ -32,12 +32,16 @@ include('connection.php');
         <div id="form1">
             <div class="buttons3">
                 <a id="newuser" href="createuser.php">
-                    <img src="images/createuser.png" style{height="300" width="320" }/>
+                    <img src="images/createuser.png" style{height="270" width="250" }/>
                     <span id="createuser">CREATE USER </span>
                 </a>
                 <a id="app" href="homepage.php">
-                    <img src="images/application.png" style{height="300" width="320" }/>
+                    <img src="images/application.png" style{height="270" width="250" }/>
                     <span id="application">ENTER APPLICATION </span>
+                </a>
+                <a id="app" href="userdetails.php">
+                    <img src="images/usersdetails.jpg" style{height="270" width="250" }/>
+                    <span id="application">USERS LOGIN DETAILS </span>
                 </a>
             </div>
         </div>
