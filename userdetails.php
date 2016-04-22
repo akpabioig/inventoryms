@@ -30,11 +30,9 @@ $result = mysqli_query($db, $sql);
     </header>
     <section id="admincontent">
         <h3> ADMIN HOMEPAGE </h3>
-        <img src="images/userdetails.png" style{height="250" width="200" }/>
-        <h3>CLICK ON <a id="highlight">CREATE USER</a> TO CREATE NEW USER</h3>
-        <h3>CLICK ON <a id="highlight">APP HOMEPAGE</a> TO GO TO THE APPLICATION HOMEPAGE</h3>
-        <h3>CLICK ON <a id="highlight">APP USER DETAILS</a> TO VIEW ALL REGISTERED USER DETAILS </h3>
+        <img src="images/userdetails.jpg" style{height="250" width="200" }/>
         <div id="form1">
+            <div id="purchasetable">
             <table id="t2">
                 <tr>
                     <th> USER ID</th>
@@ -73,6 +71,7 @@ $result = mysqli_query($db, $sql);
                 ?>
                 </tbody>
             </table>
+            </div>
         </div>
 </div>
 </section>
