@@ -29,7 +29,9 @@ $result = mysqli_query($db, $sql);
         <button id="logout"><a href="logout.php">LOG-OUT</a></button>
     </header>
     <section id="admincontent">
-        <h2> USER DETAILS </h2>
+        <h2> USER LOGIN DETAILS </h2>
+        <h3> Below is a List of User Login Details </h3>
+        <h3> Scroll to The End of The Record to edit Login details </h3>
         <img src="images/usersdetails.jpg" style{height="250" width="200" }/>
         <h3></h3>
         <div id="form3">
