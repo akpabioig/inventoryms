@@ -41,7 +41,7 @@ include('connection.php');
                 </a>
                 <a id="users" href="userdetails.php">
                     <img src="images/usersdetails.jpg" style{height="270" width="250" }/>
-                    <span id="userslog">USERS LOGIN DETAILS </span>
+                    <span id="userslog">APP USER DETAILS </span>
                 </a>
             </div>
         </div>
