@@ -15,14 +15,14 @@
 <body>
 <div style="margin-left:70px">
     <header id = "headlogin">
-        <h1> RGU Oil Services </h1>
+        <h1> RGU Oil Services 1</h1>
         <h2> Inventory Management Made Easy </h2>
     </header>
     <section id = "content">
         <div id = "log">
             <h2> RGU Oil Services IMS Login</h2>
             <h4> ADMIN CREATE USER </h4>
-            <form method="POST" action="usercreation.php" onsubmit="return myFunction()">
+            <form method="POST" action="usercreation.php">
                 <?php
                 $useridquery = "SELECT max(userid) FROM login";
                 $r = mysqli_query($db, $useridquery);
@@ -90,7 +90,8 @@
                         <td><input type="password" id="password2" name="password2" value="" class = "formfiel" rows = 1 cols = 40 required></td>
                     </tr>
                 </table>
-                <p id = "signup"><input type = "submit" name = "submit" value = "REGISTER USER"></p>
+                <p id="signup"><input type="submit" onclick="return myFunction()" name="submit" value="REGISTER USER">
+                </p>
             </form>
         </div>
     </section>
