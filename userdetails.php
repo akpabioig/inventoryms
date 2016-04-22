@@ -29,8 +29,9 @@ $result = mysqli_query($db, $sql);
         <button id="logout"><a href="logout.php">LOG-OUT</a></button>
     </header>
     <section id="admincontent">
-        <h3> ADMIN HOMEPAGE </h3>
+        <h2> USER DETAILS </h2>
         <img src="images/usersdetails.jpg" style{height="250" width="200" }/>
+        <h3></h3>
         <div id="form3">
             <table id="t2">
                 <tr>
