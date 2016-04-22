@@ -25,11 +25,11 @@ try {
     echo $e->getMessage();
 }
 try {
-    $sql = "UPDATE login
+    $sql1 = "UPDATE login
                 SET username = '{$username}',
                     password = '{$password}',
                     WHERE userid = {$uid}";
-    $sth = $db->query($sql);
+    $sth1 = $db->query($sql1);
 } catch (PDOException $e) {
     echo $e->getMessage();
 }
