@@ -38,7 +38,6 @@ include('connection.php');
     <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
 </head>
 <body>
-<input type="hidden" id="userid" name="userid" value="<?php echo $userId; ?>"/>
 <div style="margin-left:70px">
     <header id="headlogin">
         <h1> RGU Oil Services </h1>
@@ -135,6 +134,7 @@ include('connection.php');
                                    cols=40 required></td>
                     </tr>
                 </table>
+                <input type="hidden" id="userid" name="userid" value="<?php echo $userId; ?>"/>
                 <p id="signup"><input type="submit" onclick="return myFunction()" name="submit"
                                       value="UPDATE USER DETAILS"></p>
             </form>
