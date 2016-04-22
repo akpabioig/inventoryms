@@ -9,7 +9,7 @@ if (isset($_GET['userid'])) {
     $userId = $_GET['userid'];
     $sqlselect = "SELECT *
                   FROM user, login
-                  WHERE user.userid = $userId";
+                  WHERE login.userid = $userId";
     $getResult = mysqli_query($db, $sqlselect);
 
     while ($selectRow = $getResult->fetch_array()) {
