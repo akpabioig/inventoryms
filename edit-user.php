@@ -7,7 +7,7 @@ include('connection.php');
 
 if (isset($_GET['userid'])) {
     $userId = $_GET['userid'];
-    $sqlselect = "SELECT user.userid, user.title, user.firstname, user.middlename, user.lastname, user.staffposition, login.username, login.password
+    $sqlselect = "SELECT *
                   FROM user, login
                   WHERE user.userid = $userId";
     $getResult = mysqli_query($db, $sqlselect);
@@ -47,7 +47,7 @@ include('connection.php');
     <section id="content">
         <div id="log">
             <h2> RGU Oil Services IMS Login</h2>
-            <h4> EDIT USER DETAILS </h4>
+            <h4> EDIT 78 USER DETAILS </h4>
             <form method="post" action="updateuser.php">
                 <table>
                     <tr>
