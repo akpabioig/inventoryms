@@ -36,7 +36,6 @@ include('connection.php');
     <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
     <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
     <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
-
 </head>
 <body>
 <div style="margin-left:70px">
@@ -47,17 +46,8 @@ include('connection.php');
     <section id="content">
         <div id="log">
             <h2> RGU Oil Services IMS Login</h2>
-            <h4> ADMIN CREATE USER </h4>
-            <form method="POST" action="usercreation.php">
-                <?php
-                $useridquery = "SELECT max(userid) FROM login";
-                $r = mysqli_query($db, $useridquery);
-                while ($row = $r->fetch_array()) {
-                    $uid = $row['0'];
-                }
-                $uid += 10;
-                ?>
-                <input type="hidden" value="<?php echo $uid; ?>" name="uid" id="uid"/>
+            <h4> EDIT USER DETAILS </h4>
+            <form method="GET" action="updateuser.php">
                 <table>
                     <tr>
                         <td label for="title"><a id="hash">*</a> TITLE :</td>
@@ -147,7 +137,8 @@ include('connection.php');
                                    cols=40 required></td>
                     </tr>
                 </table>
-                <p id="signup"><input type="submit" onclick="return myFunction()" name="submit" value="REGISTER USER">
+                <p id="signup"><input type="submit" onclick="return myFunction()" name="submit"
+                                      value="UPDATE USER DETAILS">
                 </p>
             </form>
         </div>
