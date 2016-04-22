@@ -86,49 +86,46 @@ include('connection.php');
                         <td label for=firstname><a id="hash">*</a> FIRST NAME :</td>
                     </tr>
                     <tr>
-                        <td><input type="text" id="firstname" name="firstname"
-                                   value="<?php echo $getfirstname; ?> class = " formfiel" required>
+                        <td><input type="text" id="firstname" name="firstname" value="<?php echo $getfirstname; ?>"
+                                   class=" formfiel" required>
                         </td>
                     </tr>
                     <tr>
                         <td label for=middlename><a id="hash">*</a> MIDDLE NAME :</td>
                     </tr>
                     <tr>
-                        <td><input type="text" id="middlename" name="middlename"
-                                   value="<?php echo $getmiddlename; ?> class = " formfiel" rows = 1 cols = 40 required>
+                        <td><input type="text" id="middlename" name="middlename" value="<?php echo $getmiddlename; ?>"
+                                   class=" formfiel" rows=1 cols=40 required>
                         </td>
                     </tr>
                     <tr>
                         <td label for=lastname><a id="hash">*</a> LAST NAME :</td>
                     </tr>
                     <tr>
-                        <td><input type="text" id="lastname" name="lastname"
-                                   value="<?php echo $getlastname; ?> class = " formfiel" rows = 1 cols = 40 required>
+                        <td><input type="text" id="lastname" name="lastname" value="<?php echo $getlastname; ?>"
+                                   class=" formfiel" rows=1 cols=40 required>
                         </td>
                     </tr>
                     <tr>
                         <td label for=position><a id="hash">*</a> COMPANY POSITION :</td>
                     </tr>
                     <tr>
-                        <td><input type="text" id="position" name="position"
-                                   value="<?php echo $getstaffposition; ?> class = " formfiel" rows = 1 cols = 40
-                            required>
-                        </td>
+                        <td><input type="text" id="position" name="position" value="<?php echo $getstaffposition; ?>"
+                                   class=" formfiel" rows=1 cols=40required></td>
                     </tr>
                     <tr>
                         <td label for="username"><a id="hash">*</a> USER NAME :</td>
                     </tr>
                     <tr>
-                        <td><input type="text" id="username" name="username" value="" class="formfiel" rows=1 cols=40
-                                   required></td>
+                        <td><input type="text" id="username" name="username" value="<?php echo $getusername; ?>"
+                                   class="formfiel" rows=1 cols=40 required></td>
                     </tr>
                     <tr>
                         <td label for="password"><a id="hash">*</a> PASSWORD :</td>
                     </tr>
                     <tr>
-                        <td><input type="password" id="password" name="password"
-                                   value="<?php echo $getpassword; ?> class = " formfiel" rows = 1 cols = 40 required>
-                        </td>
+                        <td><input type="password" id="password" name="password" value="<?php echo $getpassword; ?>"
+                                   class=" formfiel" rows=1 cols=40 required></td>
                     </tr>
                     <tr>
                         <td label for="password"><a id="hash">*</a> CONFIRM PASSWORD :</td>
@@ -139,8 +136,7 @@ include('connection.php');
                     </tr>
                 </table>
                 <p id="signup"><input type="submit" onclick="return myFunction()" name="submit"
-                                      value="UPDATE USER DETAILS">
-                </p>
+                                      value="UPDATE USER DETAILS"></p>
             </form>
         </div>
     </section>
