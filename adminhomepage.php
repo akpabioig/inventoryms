@@ -39,9 +39,9 @@ include('connection.php');
                     <img src="images/application.png" style{height="270" width="250" }/>
                     <span id="application">ENTER APPLICATION </span>
                 </a>
-                <a id="app" href="userdetails.php">
+                <a id="users" href="userdetails.php">
                     <img src="images/usersdetails.jpg" style{height="270" width="250" }/>
-                    <span id="application">USERS LOGIN DETAILS </span>
+                    <span id="userslog">USERS LOGIN DETAILS </span>
                 </a>
             </div>
         </div>

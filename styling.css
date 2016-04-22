@@ -289,6 +289,22 @@ section{
     margin-right: -190px;
 }
 
+#userslog {
+    position: relative;
+    left: -280px;
+    bottom: -40px;
+    display: none;
+    text-decoration: none;
+    font-style: oblique;
+    font-weight: bold;
+    font-size: 150%;
+}
+
+#users:hover #userslog {
+    display: inline;
+    margin-right: -190px;
+}
+
 footer{
     margin-left: 20px;
     clear: both;
