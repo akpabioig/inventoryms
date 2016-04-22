@@ -103,13 +103,11 @@
         var ok = true;
         if (pass1 != pass2) {
             alert("Passwords Do not match");
-            document.getElementById("pass1").style.borderColor = "#E34234";
-            document.getElementById("pass2").style.borderColor = "#E34234";
-            ok = false;
-            alert("YOU HAVE SUCCESSFULLY CREATED A NEW USER !!!");
+            return false;
         }
         else {
             alert("PASSWORD MATCH !!!");
+            alert("YOU HAVE SUCCESSFULLY CREATED A NEW USER !!!");
         }
         return ok;
     }
