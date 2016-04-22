@@ -528,3 +528,8 @@ hr{
 #suppliertable, #producttable, #customertable, #locationtable, #purchasetable, #salestable {
     margin-top: 1.5%;
 }
+
+#highlight {
+    font-weight: bolder;
+    font-size: larger;
+}

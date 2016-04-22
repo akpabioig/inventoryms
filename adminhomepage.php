@@ -27,8 +27,9 @@ include('connection.php');
     <section id="admincontent">
         <h3> ADMIN HOMEPAGE </h3>
         <img src="images/adminuser.png" style{height="250" width="200" }/>
-        <h3>CLICK ON CREATE USER TO CREATE NEW USER</h3>
-        <h3>CLICK ON <a font-weight="bold">APP HOMEPAGE</a>TO GO TO THE APPLICATION HOMEPAGE</h3>
+        <h3>CLICK ON <a id="highlight">CREATE USER</a> TO CREATE NEW USER</h3>
+        <h3>CLICK ON <a id="highlight">APP HOMEPAGE</a> TO GO TO THE APPLICATION HOMEPAGE</h3>
+        <h3>CLICK ON <a id="highlight">APP USER DETAILS</a> TO VIEW ALL REGISTERED USER DETAILS </h3>
         <div id="form1">
             <div class="buttons3">
                 <a id="newuser" href="createuser.php">
