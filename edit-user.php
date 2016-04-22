@@ -152,7 +152,7 @@ include('connection.php');
         }
         else {
             alert("PASSWORD MATCH !!!");
-            alert("YOU HAVE SUCCESSFULLY CREATED A NEW USER !!!");
+            alert("YOU HAVE SUCCESSFULLY EDITED USER DETAILS !!!");
         }
         return ok;
     }
