@@ -7,7 +7,7 @@ include('connection.php');
 $sql = "SELECT user.userid, user.title, user.firstname, user.middlename, user.lastname, user.staffposition, login.username, login.password
 FROM user, login
 WHERE user.userid = login.userid
-ORDER BY user.username";
+ORDER BY user.lastname";
 $result = mysqli_query($db, $sql);
 ?>
 
@@ -30,7 +30,7 @@ $result = mysqli_query($db, $sql);
     </header>
     <section id="admincontent">
         <h3> ADMIN HOMEPAGE </h3>
-        <img src="images/userdetails.jpg" style{height="250" width="200" }/>
+        <img src="images/usersdetails.jpg" style{height="250" width="200" }/>
         <div id="form1">
             <div id="purchasetable">
             <table id="t2">
