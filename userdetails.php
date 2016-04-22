@@ -35,7 +35,7 @@ $result = mysqli_query($db, $sql);
         <div id="form3">
             <table id="t2">
                 <tr>
-                    <th> USER ID 1</th>
+                    <th> USER ID</th>
                     <th> TITLE</th>
                     <th> FIRST NAME</th>
                     <th> MIDDLE NAME</th>
