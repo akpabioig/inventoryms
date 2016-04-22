@@ -7,9 +7,9 @@ include('connection.php');
 
 if (isset($_GET['userid'])) {
     $userId = $_GET['userid'];
-    $sqlselect = "SELECT *
-                  FROM login, user
-                  WHERE userid = $userId";
+    $sqlselect = "SELECT user.userid, user.title, user.firstname, user.middlename, user.lastname, user.staffposition, login.username, login.password
+                  FROM user, login
+                  WHERE user.userid = $userId";
     $getResult = mysqli_query($db, $sqlselect);
 
     while ($selectRow = $getResult->fetch_array()) {
@@ -38,6 +38,7 @@ include('connection.php');
     <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
 </head>
 <body>
+<input type="hidden" id="userid" name="userid" value="<?php echo $userId; ?>"/>
 <div style="margin-left:70px">
     <header id="headlogin">
         <h1> RGU Oil Services </h1>
@@ -47,7 +48,7 @@ include('connection.php');
         <div id="log">
             <h2> RGU Oil Services IMS Login</h2>
             <h4> EDIT USER DETAILS </h4>
-            <form method="GET" action="updateuser.php">
+            <form method="post" action="updateuser.php">
                 <table>
                     <tr>
                         <td label for="title"><a id="hash">*</a> TITLE :</td>
