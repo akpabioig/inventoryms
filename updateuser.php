@@ -18,7 +18,7 @@ try {
                     firstname = '{$firstname}',
                     middlename = '{$middlename}',
                     lastname = '{$lastname}',
-                    staffposition = '{$staffposition}',
+                    staffposition = '{$staffposition}'
                     WHERE userid = {$uid}";
     $sth = $db->query($sql);
 } catch (PDOException $e) {
@@ -27,7 +27,7 @@ try {
 try {
     $sql1 = "UPDATE login
                 SET username = '{$username}',
-                    password = '{$password}',
+                    password = '{$password}'
                     WHERE userid = {$uid}";
     $sth1 = $db->query($sql1);
 } catch (PDOException $e) {
