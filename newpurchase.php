@@ -3,9 +3,30 @@ session_start();
 if (!isset($_SESSION['user'])) {
     header("Location: login.php");
 }
+echo '<script type="application/javascript">';
+echo  'var myList = [];';
+echo '</script>';
 
 include('connection.php');
+$sql= "SELECT productname, productid FROM addproduct";
+$result = mysqli_query($db, $sql);
+if(mysqli_num_rows($result) == 1 || mysqli_num_rows($result) >1){
+
+    while($row = $result -> fetch_array()){
+        //echo '<option value="'.$row['productid'].'" >';
+        //echo $row['productname'];
+        echo '<script type="application/javascript">';
+        echo 'myList.push("'.$row["productname"].'")';
+        echo '</script>';
+        //echo '</option>';
+    }
+}else{
+    echo '<option> No Result Found </option>';
+}
+
+
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -20,13 +41,49 @@ include('connection.php');
     <script type = "text/javascript" src="scripting.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
 
-    <script type="text/javascript">
+    <!--<script type="text/javascript">
         $(document).ready(function() {
             $("#addp").click(function() {
                 $('#form5 tbody>tr:last').clone(true).insertAfter('#form5 tbody>tr:last');
                 return false;
             });
         });
+    </script>-->
+    <script>
+                var names = ["productlocation[]", "productname[]", "quantity[]", "itemcost[]", "tax[]", "itemtotal[]"];
+                function add(tableID){
+                    var table = document.getElementById(tableID);
+                    var rowCount = table.rows.length;
+                    var row = table.insertRow(rowCount);
+                    var colCount = table.rows[0].cells.length;
+
+                    for (var i=0; i<colCount; i++) {
+
+                        //Creating select for the second column
+                        if(i === 1){
+
+                            var newcell = row.insertCell(i);
+                            var newentry = document.createElement('select');
+                            //var options = new Option(myList., 'value', false, false);
+                            for(var j = 0; j < myList.length; j++) {
+                                var opt = myList[j];
+                                var el = new Option(opt, opt, false, false);
+                                newentry.appendChild(el);
+                                newentry.name = names[j];
+                                newentry.type = "text";
+                                newcell.appendChild(newentry);
+
+                            }
+                            continue;
+                        }
+
+                        var newcell = row.insertCell(i);
+                        var newentry = document.createElement('input');
+                        newentry.name = names[i];
+                        newentry.type = "text";
+                        newcell.appendChild(newentry);
+                    }
+                }
     </script>
 </head>
 <body>
@@ -57,12 +114,12 @@ include('connection.php');
             <table>
                 <tr>
                     <td label for="date"> <a id = "hash">*</a> Date : </td>
-                    <td><input type="date" id="date" name="purchasedate" required class="formfield"></td>
+                    <td><input type="date" id="date" name="purchasedate[]" required class="formfield"></td>
                 </tr>
                 <tr>
                     <td label for="supplier"> <a id = "hash">*</a> Select Supplier : </td>
                     <td>
-                        <select name="supplier" required>
+                        <select name="supplier[]" required>
                             <option selected disabled>SELECT</option>
                             <?php
 
@@ -82,7 +139,7 @@ include('connection.php');
                         </select>
                     </td>
                     <td label for="ref"> <a id = "hash">*</a> Reference : </td>
-                    <td><input type="ref" id = "ref1" name= "ref"  value = "" class = "formfield"></td>
+                    <td><input type="ref" id = "ref1" name= "ref[]"  value = "" class = "formfield"></td>
                 </tr>
             </table>
             <br>
@@ -133,7 +190,7 @@ include('connection.php');
                 </tr>
 
             </table>
-            <p align="center" ><a href = ""  id="addp"> + Add another item </a></p>
+            <p align="center" ><a href = "#" onclick="add('form5'); return false;"> + Add another item </a></p>
             <hr>
             <h6>Message to Supplier : </h6>
             <textarea id = "messsupplier" name="messsupplier" value="" class = "formfield" rows = 5 cols = 40></textarea>
