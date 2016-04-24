@@ -80,7 +80,7 @@ if(mysqli_num_rows($result) == 1 || mysqli_num_rows($result) >1){
                         }
                         var newcell = row.insertCell(i);
                         var newentry = document.createElement('input');
-                        newentry.name = names[i];
+                        newentry.name = names[i]; //add
                         newentry.type = "text";
                         newcell.appendChild(newentry);
 
