@@ -5,6 +5,7 @@ if (!isset($_SESSION['user'])) {
 }
 echo '<script type="application/javascript">';
 echo  'var myList = [];';
+echo  'var myValues = [];';
 echo '</script>';
 
 include('connection.php');
@@ -16,7 +17,8 @@ if(mysqli_num_rows($result) == 1 || mysqli_num_rows($result) >1){
         //echo '<option value="'.$row['productid'].'" >';
         //echo $row['productname'];
         echo '<script type="application/javascript">';
-        echo 'myList.push("'.$row["productname"].'")';
+        echo 'myList.push("'.$row["productname"].'");';
+        echo 'myValues.push('.$row["productid"].');';
         echo '</script>';
         //echo '</option>';
     }
@@ -67,21 +69,21 @@ if(mysqli_num_rows($result) == 1 || mysqli_num_rows($result) >1){
                             //var options = new Option(myList., 'value', false, false);
                             for(var j = 0; j < myList.length; j++) {
                                 var opt = myList[j];
-                                var el = new Option(opt, opt, false, false);
+                                var opt_val = myValues[j];
+                                var el = new Option(opt, opt_val, false, false);
                                 newentry.appendChild(el);
                                 newentry.name = names[j];
                                 newentry.type = "text";
                                 newcell.appendChild(newentry);
-
                             }
                             continue;
                         }
-
                         var newcell = row.insertCell(i);
                         var newentry = document.createElement('input');
                         newentry.name = names[i];
                         newentry.type = "text";
                         newcell.appendChild(newentry);
+
                     }
                 }
     </script>
@@ -114,12 +116,12 @@ if(mysqli_num_rows($result) == 1 || mysqli_num_rows($result) >1){
             <table>
                 <tr>
                     <td label for="date"> <a id = "hash">*</a> Date : </td>
-                    <td><input type="date" id="date" name="purchasedate[]" required class="formfield"></td>
+                    <td><input type="date" id="date" name="purchasedate" required class="formfield"></td>
                 </tr>
                 <tr>
                     <td label for="supplier"> <a id = "hash">*</a> Select Supplier : </td>
                     <td>
-                        <select name="supplier[]" required>
+                        <select name="supplier" required>
                             <option selected disabled>SELECT</option>
                             <?php
 
@@ -153,9 +155,9 @@ if(mysqli_num_rows($result) == 1 || mysqli_num_rows($result) >1){
                     <th>Total</th>
                 </tr>
                 <tr>
-                    <td><input type="text" id = "productlocation" name= "productlocation"  value = "" class = "tablefield"></td>
+                    <td><input type="text" id = "productlocation" name = "productlocation[]"  value = "" class = "tablefield"></td>
                     <td>
-                        <select name = "productname">
+                        <select name="productname[]" id="productname">
                             <option disabled>Select Product</option>
                             <?php
 
@@ -182,10 +184,10 @@ if(mysqli_num_rows($result) == 1 || mysqli_num_rows($result) >1){
                         }
                         $pid += 10;
                     ?>
-                    <td><input type="number" id="quantity" name="quantity" required class="tablefield1"></td>
-                    <td><input type="number" id = "cost" name= "itemcost"  value = "" class = "tablefield1"></td>
-                    <td><input type="number" id = "tax" name= "tax"  value = "" class = "tablefield1"></td>
-                    <td><input type="number" id="itemtotal" name="itemtotal" required class="tablefield1"></td>
+                    <td><input type="number" id="quantity" name="quantity[]" required class="tablefield1"></td>
+                    <td><input type="number" id = "cost" name= "itemcost[]"  value = "" class = "tablefield1"></td>
+                    <td><input type="number" id = "tax" name= "tax[]"  value = "" class = "tablefield1"></td>
+                    <td><input type="number" id="itemtotal" name="itemtotal[]" required class="tablefield1"></td>
                     <input type="hidden" value="<?php echo $pid; ?>" name="pid" id="pid" />
                 </tr>
 
