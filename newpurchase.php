@@ -159,7 +159,7 @@ if(mysqli_num_rows($result) == 1 || mysqli_num_rows($result) >1){
                             <option selected disabled>SELECT</option>
                             <?php
 
-                            $sql= "SELECT productname, productid FROM addproduct";
+                            $sql = "SELECT productname, productid FROM addproduct WHERE supplierid = 'supplier[]'";
                             $result = mysqli_query($db, $sql);
                             if(mysqli_num_rows($result) == 1 || mysqli_num_rows($result) >1){
 
