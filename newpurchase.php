@@ -156,7 +156,7 @@ if(mysqli_num_rows($result) == 1 || mysqli_num_rows($result) >1){
                     <td><input type="text" id = "productlocation" name= "productlocation"  value = "" class = "tablefield"></td>
                     <td>
                         <select name = "productname">
-                            <option disabled>Select Product</option>
+                            <option selected disabled>SELECT</option>
                             <?php
 
                             $sql= "SELECT productname, productid FROM addproduct";
