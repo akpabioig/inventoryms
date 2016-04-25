@@ -65,14 +65,5 @@ try {
 } catch (PDOException $h) {
     echo $h->getMessage();
 }
-
-try {
-    $sql5 = "UPDATE stocklevel
-            SET stocklevel.level = 'STOCK LEVEL LOW ... RESTOCK !!!'
-            WHERE stocklevel.stockbalance < 50";
-    $sth5 = $db->query($sql5);
-} catch (PDOException $h) {
-    echo $h->getMessage();
-}
 header("Location: pendingorders.php");
 ?>
