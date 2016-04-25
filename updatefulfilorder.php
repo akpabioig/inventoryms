@@ -59,15 +59,16 @@ if (isset($_GET['salesid'])) {
 
 try {
     $sql4 = "UPDATE stocklevel
-                SET stocklevel.level = 'Stock Level ... OK !!!'
-                    WHERE stocklevel.stockbalance => 50";
+                SET stocklevel.level = 'STOCK LEVEL ... OK !!!'
+                    WHERE stocklevel.stockbalance > 49";
     $sth4 = $db->query($sql4);
 } catch (PDOException $h) {
     echo $h->getMessage();
 }
+
 try {
     $sql5 = "UPDATE stocklevel
-            SET stocklevel.level = 'Stock Level Low ... RESTOCK !!!'
+            SET stocklevel.level = 'STOCK LEVEL LOW ... RESTOCK !!!'
             WHERE stocklevel.stockbalance < 50";
     $sth5 = $db->query($sql5);
 } catch (PDOException $h) {
