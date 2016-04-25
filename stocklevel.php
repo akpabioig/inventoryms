@@ -12,8 +12,8 @@ $sql = "SELECT stocklevel.stocklevelid, addproduct.productname, stocklevel.stock
 $result = mysqli_query($db, $sql);
 
 $sql1 = "UPDATE stocklevel
-                SET level = 'No Restock !!!',
-                    WHERE stockbalance => 50";
+                SET stocklevel.level = 'No Restock !!!',
+                    WHERE stockbalance > 40";
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -52,7 +52,7 @@ $sql1 = "UPDATE stocklevel
         <img src="images/product.png" style{height="250" width="200" }/>
         <h2> NUMBER OF ITEMS IN STOCK </h2>
         <p>FIND BELOW THE CURRENT NUMBER OF PRODUCTS IN STOCK</p>
-        <form method="get">
+        <form method="get" action="stocklevel.php">
             <div id="form3">
                 <button id="export"> Export To Excel Sheet</button>
                 <div id="producttable">
