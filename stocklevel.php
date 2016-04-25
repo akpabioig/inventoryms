@@ -11,7 +11,7 @@ $sql = "SELECT stocklevel.stocklevelid, addproduct.productname, stocklevel.stock
                           ORDER BY productname";
 "UPDATE stocklevel
                 SET stocklevel.level = 'No Restock !!!'
-                    WHERE stocklevel.stockbalance > 20";
+                    WHERE stocklevel.stockbalance > 19";
 $result = mysqli_query($db, $sql);
 ?>
 <!DOCTYPE html>
