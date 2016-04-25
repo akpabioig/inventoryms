@@ -9,11 +9,7 @@ $sql = "SELECT stocklevel.stocklevelid, addproduct.productname, stocklevel.stock
                           FROM stocklevel, addproduct
                           WHERE stocklevel.productid = addproduct.productid
                           ORDER BY productname";
-$sql1 = "UPDATE stocklevel
-                SET stocklevel.level = 'No Restock !!!'
-                    WHERE stocklevel.stockbalance > 19";
 $result = mysqli_query($db, $sql);
-$result = mysqli_query($db, $sql1);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -61,7 +57,7 @@ $result = mysqli_query($db, $sql1);
                             <th> STOCKLEVEL ID</th>
                             <th> PRODUCT NAME</th>
                             <th> PRODUCT IN STOCK</th>
-                            <th> STOCK LEVEL INFORMATION 1</th>
+                            <th> STOCK LEVEL INFORMATION</th>
                         </tr>
                         <tbody id="t2">
                         <?php
