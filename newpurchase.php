@@ -58,12 +58,9 @@ if(mysqli_num_rows($result) == 1 || mysqli_num_rows($result) >1){
                     var rowCount = table.rows.length;
                     var row = table.insertRow(rowCount);
                     var colCount = table.rows[0].cells.length;
-
                     for (var i=0; i<colCount; i++) {
-
                         //Creating select for the second column
                         if(i === 1){
-
                             var newcell = row.insertCell(i);
                             var newentry = document.createElement('select');
                             //var options = new Option(myList., 'value', false, false);

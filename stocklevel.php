@@ -5,11 +5,15 @@ if (!isset($_SESSION['user'])) {
 }
 
 include('connection.php');
-$sql = "SELECT stocklevel.stocklevelid, addproduct.productname, stocklevel.stockbalance
+$sql = "SELECT stocklevel.stocklevelid, addproduct.productname, stocklevel.stockbalance, stocklevel.level
                           FROM stocklevel, addproduct
                           WHERE stocklevel.productid = addproduct.productid
                           ORDER BY productname";
 $result = mysqli_query($db, $sql);
+
+$sql1 = "UPDATE stocklevel
+                SET level = 'No Restock',
+                    WHERE stockbalance > 50";
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -55,8 +59,9 @@ $result = mysqli_query($db, $sql);
                     <table>
                         <tr>
                             <th> STOCKLEVEL ID</th>
-                            <th>PRODUCT NAME</th>
-                            <th>PRODUCT IN STOCK</th>
+                            <th> PRODUCT NAME</th>
+                            <th> PRODUCT IN STOCK</th>
+                            <th> STOCK LEVEL INFORMATION</th>
                         </tr>
                         <tbody id="t2">
                         <?php
@@ -67,6 +72,7 @@ $result = mysqli_query($db, $sql);
                         <td id = \"stocklevelid\" name= \"stocklevelid\" class = \"tablefield\" disabled>{$row['stocklevelid']}</td>
                         <td id = \"productname\" name= \"productname\" class = \"tablefield\" disabled>{$row['productname']}</td>
                         <td id = \"stockbalance\" name= \"stockbalance\" class = \"tablefield\" disabled>{$row['stockbalance']}</td>
+                        <td id = \"level\" name= \"level\" class = \"tablefield\" disabled>{$row['level']}</td>
                     </tr>
                                 ";
                             }
