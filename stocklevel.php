@@ -13,8 +13,6 @@ try {
     $sql = "UPDATE stocklevel
                 SET stocklevel.level = 'No Restock !!!',
                     WHERE stocklevel.stockbalance > 40";
-$result = mysqli_query($db, $sql);
-    $sth = $db->query($sql);
 } catch (PDOException $e) {
     echo $e->getMessage();
 }
@@ -52,7 +50,7 @@ $result = mysqli_query($db, $sql);
         <button id="logout"><a href="logout.php">LOG-OUT</a></button>
     </header>
     <section>
-        <h3>PRODUCTS STOCK LEVEL 1</h3>
+        <h3>PRODUCTS STOCK LEVEL</h3>
         <img src="images/product.png" style{height="250" width="200" }/>
         <h2> NUMBER OF ITEMS IN STOCK </h2>
         <p>FIND BELOW THE CURRENT NUMBER OF PRODUCTS IN STOCK</p>
