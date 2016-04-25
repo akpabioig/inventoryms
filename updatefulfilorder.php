@@ -56,5 +56,14 @@ if (isset($_GET['salesid'])) {
             echo $h->getMessage();
         }
     }
+
+try {
+    $sql4 = "UPDATE stocklevel
+                SET stocklevel.level = 'No Restock !!!',
+                    WHERE stocklevel.stockbalance > 40";
+    $sth4 = $db->query($sql4);
+} catch (PDOException $e) {
+    echo $e->getMessage();
+}
 header("Location: pendingorders.php");
 ?>
