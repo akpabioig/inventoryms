@@ -9,10 +9,15 @@ $sql = "SELECT stocklevel.stocklevelid, addproduct.productname, stocklevel.stock
                           FROM stocklevel, addproduct
                           WHERE stocklevel.productid = addproduct.productid
                           ORDER BY productname";
+try {
 "UPDATE stocklevel
                 SET stocklevel.level = 'No Restock !!!',
                     WHERE stocklevel.stockbalance > 40";
 $result = mysqli_query($db, $sql);
+    $sth = $db->query($sql);
+} catch (PDOException $e) {
+    echo $e->getMessage();
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
