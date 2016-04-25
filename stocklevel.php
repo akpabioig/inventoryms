@@ -57,7 +57,7 @@ $result = mysqli_query($db, $sql);
                             <th> STOCKLEVEL ID</th>
                             <th> PRODUCT NAME</th>
                             <th> PRODUCT IN STOCK</th>
-                            <th> STOCK LEVEL INFORMATION 1</th>
+                            <th> STOCK LEVEL INFORMATION</th>
                         </tr>
                         <tbody id="t2">
                         <?php
