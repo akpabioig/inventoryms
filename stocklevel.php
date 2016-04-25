@@ -9,6 +9,13 @@ $sql = "SELECT stocklevel.stocklevelid, addproduct.productname, stocklevel.stock
                           FROM stocklevel, addproduct
                           WHERE stocklevel.productid = addproduct.productid
                           ORDER BY productname";
+try {
+    $sql = "UPDATE stocklevel
+                SET stocklevel.level = 'No Restock !!!'
+                    WHERE stocklevel.stockbalance > 40";
+} catch (PDOException $e) {
+    echo $e->getMessage();
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -56,7 +63,7 @@ $sql = "SELECT stocklevel.stocklevelid, addproduct.productname, stocklevel.stock
                             <th> STOCKLEVEL ID</th>
                             <th> PRODUCT NAME</th>
                             <th> PRODUCT IN STOCK</th>
-                            <th> STOCK LEVEL INFORMATION</th>
+                            <th> STOCK LEVEL INFORMATION 1</th>
                         </tr>
                         <tbody id="t2">
                         <?php
