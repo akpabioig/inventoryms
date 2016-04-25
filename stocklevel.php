@@ -12,7 +12,7 @@ $sql = "SELECT stocklevel.stocklevelid, addproduct.productname, stocklevel.stock
 $result = mysqli_query($db, $sql);
 
 $sql1 = "UPDATE stocklevel
-                SET level = 'No Restock',
+                SET level = 'No Restock !!!',
                     WHERE stockbalance > 50";
 ?>
 <!DOCTYPE html>
