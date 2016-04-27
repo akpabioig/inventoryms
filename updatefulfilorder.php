@@ -20,8 +20,9 @@ if (isset($_GET['salesid'])) {
     $stock2 = mysqli_query($db, $quantity);
 
     if ($stock2 > $stock1) {
-
-        echo "Hubutuoiigkgdyfduyd uydkdgd dgkdd igl";
+        echo "<script type='application/javascript'>";
+        echo "window.alert('Who you epp!')";
+        echo "</script>";
 
         return;
     } elseif ($stock2 < $stock1) {
