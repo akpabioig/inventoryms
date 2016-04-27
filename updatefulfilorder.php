@@ -20,7 +20,9 @@ if (isset($_GET['salesid'])) {
     $stock2 = mysqli_query($db, $quantity);
 
     if ($stock2 > $stock1) {
-        echo "<script type='text/javascript'>alert('Cannot Fulfill Order Because Stock Quantity Too Low\');</script>";
+        echo "<script type='text/javascript'>
+              alert('Cannot Fulfill Order Because Stock Quantity Too Low');
+              </script>";
         return;
     } elseif ($stock2 < $stock1) {
         try {
