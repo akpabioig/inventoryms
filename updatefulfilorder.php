@@ -10,7 +10,7 @@ $stock1 = $db->query("SELECT stocklevel.stockbalance 
                     AND salesitem.sid = salesorder.sid 
                     AND salesorder.sid = 461");
 $stock1->setFetchMode(PDO::FETCH_ASSOC);
-$stock1->fetchAll()[0]['stockbalance'];
+print_r($stock1->fetchAll()[0]['stockbalance']);
 
 
 $stock2 = $sql->query("SELECT quantity
