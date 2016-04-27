@@ -1,4 +1,8 @@
 <?php
+function do_alert($msg)
+{
+    echo '<script type="text/javascript">alert("' . $msg . '"); </script>';
+}
 include('connection.php');
 $db = new PDO('mysql:host=us-cdbr-azure-southcentral-e.cloudapp.net;dbname=inventoryms;charset=utf8mb4', 'bee886bc8793e7', '362289e3', array(PDO::ATTR_EMULATE_PREPARES => false,
     PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
@@ -20,9 +24,7 @@ if (isset($_GET['salesid'])) {
     $stock2 = mysqli_query($db, $quantity);
 
     if ($stock2 > $stock1) {
-        echo "<script type='text/javascript'>
-              alert('Cannot Fulfill Order Because Stock Quantity Too Low');
-              </script>";
+        do_alert("Cannot fulfill Order because Quantity in Stock is less that Quantity Ordered");
         return;
     } elseif ($stock2 < $stock1) {
         try {
