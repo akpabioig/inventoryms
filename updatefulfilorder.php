@@ -12,79 +12,78 @@ if (isset($_GET['salesid'])) {
                 WHERE stocklevel.productid = salesitem.productid
                 AND salesitem.sid = salesorder.sid
                 AND salesorder.sid = {$soId}";
-    echo $stock1 = mysqli_query($db, $balance);
-    echo "<br>";
+    $stock1 = mysqli_query($db, $balance);
+    $row = $stock1->fetch_array();
+    echo $row['stockbalance'];
 
-    $quantity = "SELECT quantity
-               FROM salesitem
-               WHERE sid = {$soId}";
-    echo $stock2 = mysqli_query($db, $quantity);
-    echo "<br>";
+    /*    $quantity = "SELECT quantity
+                   FROM salesitem
+                   WHERE sid = {$soId}";
+        $stock2 = mysqli_query($db, $quantity);
 
-    /*
-        if ($stock2 > $stock1) {
-            echo "<script type='application/javascript'>";
-            echo "document.write('Who you epp!')";
-            echo "</script>";
+            if ($stock2 > $stock1) {
+                echo "<script type='application/javascript'>";
+                echo "document.write('Who you epp!')";
+                echo "</script>";
 
-            return;
-        } elseif ($stock2 < $stock1) {
-            try {
-                $sql = "UPDATE salesorder
-                    SET status = 'fulfilled'
-                        WHERE sid = {$soId}";
-                $sth = $db->query($sql);
-            } catch (PDOException $e) {
-                echo $e->getMessage();
-            }
-            try {
-                $sql1 = "UPDATE stocklevel, salesorder, salesitem
-                    SET stocklevel.stockbalance = stocklevel.stockbalance - salesitem.quantity
-                    WHERE stocklevel.productid = salesitem.productid
-                    AND salesitem.sid = salesorder.sid
-                    AND salesorder.status = 'fulfilled'
-                    AND salesorder.sid = {$soId}";
-                $sth1 = $db->query($sql1);
-            } catch (PDOException $f) {
-                echo $f->getMessage();
-            }
-        }
-    }
-
-        if (isset($_GET['purid'])) {
-            $poId = $_GET['purid'];
-            $sqlselect1 = "SELECT * FROM purchaseorder WHERE purchaseid = $poId";
-            $getResult1 = mysqli_query($db, $sqlselect1);
-
-            try {
-                $sql2 = "UPDATE purchaseorder
-                    SET status = 'fulfilled'
-                        WHERE purchaseid = {$poId}";
-                $sth2 = $db->query($sql2);
-            } catch (PDOException $g) {
-                echo $g->getMessage();
-            }
-
-            try {
-                $sql3 = "UPDATE stocklevel, purchaseorder, purchaseitem
-                    SET stocklevel.stockbalance = stocklevel.stockbalance + purchaseitem.quantity
-                    WHERE stocklevel.productid = purchaseitem.productid
-                    AND purchaseitem.purchaseid = purchaseorder.purchaseid
-                    AND purchaseorder.status = 'fulfilled'
-                    AND purchaseorder.purchaseid = {$poId}";
-                $sth3 = $db->query($sql3);
-            } catch (PDOException $h) {
-                echo $h->getMessage();
+                return;
+            } elseif ($stock2 < $stock1) {
+                try {
+                    $sql = "UPDATE salesorder
+                        SET status = 'fulfilled'
+                            WHERE sid = {$soId}";
+                    $sth = $db->query($sql);
+                } catch (PDOException $e) {
+                    echo $e->getMessage();
+                }
+                try {
+                    $sql1 = "UPDATE stocklevel, salesorder, salesitem
+                        SET stocklevel.stockbalance = stocklevel.stockbalance - salesitem.quantity
+                        WHERE stocklevel.productid = salesitem.productid
+                        AND salesitem.sid = salesorder.sid
+                        AND salesorder.status = 'fulfilled'
+                        AND salesorder.sid = {$soId}";
+                    $sth1 = $db->query($sql1);
+                } catch (PDOException $f) {
+                    echo $f->getMessage();
+                }
             }
         }
 
-    try {
-        $sql4 = "UPDATE stocklevel
-                    SET stocklevel.level = 'STOCK LEVEL ... OK !!!'
-                        WHERE stocklevel.stockbalance > 49";
-        $sth4 = $db->query($sql4);
-    } catch (PDOException $h) {
-        echo $h->getMessage();*/
+            if (isset($_GET['purid'])) {
+                $poId = $_GET['purid'];
+                $sqlselect1 = "SELECT * FROM purchaseorder WHERE purchaseid = $poId";
+                $getResult1 = mysqli_query($db, $sqlselect1);
+
+                try {
+                    $sql2 = "UPDATE purchaseorder
+                        SET status = 'fulfilled'
+                            WHERE purchaseid = {$poId}";
+                    $sth2 = $db->query($sql2);
+                } catch (PDOException $g) {
+                    echo $g->getMessage();
+                }
+
+                try {
+                    $sql3 = "UPDATE stocklevel, purchaseorder, purchaseitem
+                        SET stocklevel.stockbalance = stocklevel.stockbalance + purchaseitem.quantity
+                        WHERE stocklevel.productid = purchaseitem.productid
+                        AND purchaseitem.purchaseid = purchaseorder.purchaseid
+                        AND purchaseorder.status = 'fulfilled'
+                        AND purchaseorder.purchaseid = {$poId}";
+                    $sth3 = $db->query($sql3);
+                } catch (PDOException $h) {
+                    echo $h->getMessage();
+                }
+            }
+
+        try {
+            $sql4 = "UPDATE stocklevel
+                        SET stocklevel.level = 'STOCK LEVEL ... OK !!!'
+                            WHERE stocklevel.stockbalance > 49";
+            $sth4 = $db->query($sql4);
+        } catch (PDOException $h) {
+            echo $h->getMessage();*/
 }
 //header("Location: pendingorders.php");
 ?>
