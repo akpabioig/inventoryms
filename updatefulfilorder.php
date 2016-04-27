@@ -28,7 +28,6 @@ if ($stock2 > $stock1) {
         alert('CANNOT FULFIL ORDER BECAUSE STOCK LEVEL TOO LOW !!!');
           </script>";
     return false;
-    header("Location: pendingorders.php");
 } elseif ($stock2 < $stock1) {
     try {
         $sql = "UPDATE salesorder
@@ -54,7 +53,7 @@ if ($stock2 > $stock1) {
     }
 }
 }
-/*
+
 if (isset($_GET['purid'])) {
 $poId = $_GET['purid'];
 $sqlselect1 = "SELECT * FROM purchaseorder WHERE purchaseid = $poId";
@@ -89,6 +88,6 @@ $sql4 = "UPDATE stocklevel
 $sth4 = $db->query($sql4);
 } catch (PDOException $h) {
 echo $h->getMessage();
-}*/
-//header("Location: pendingorders.php");
+}
+header("Location: pendingorders.php");
 ?>
