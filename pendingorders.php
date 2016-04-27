@@ -13,7 +13,8 @@ $sql = "SELECT salesorder.datesales, salesorder.sid, addcustomer.customername,
                           AND status = 'pending'";
 $result = mysqli_query($db, $sql);
 
-$sql1 = "SELECT purchaseorder.datepurchase, purchaseorder.purchaseid, addsupplier.suppliername, purchaseorder.totalunits, purchaseorder.total, purchaseorder.status
+$sql1 = "SELECT purchaseorder.datepurchase, purchaseorder.purchaseid, addsupplier.suppliername,
+          purchaseorder.totalunits, purchaseorder.total, purchaseorder.status
          FROM purchaseorder, addsupplier
          WHERE addsupplier.supplierid = purchaseorder.supplierid
          AND STATUS = 'pending'";
@@ -59,7 +60,7 @@ $result1 = mysqli_query($db, $sql1);
         <form method="get" action="pendingorders.php"
         ">
         <div id="form3">
-            <h2> SALES ORDERS 456 </h2>
+            <h2> SALES ORDERS </h2>
             <table id="t2">
                 <tr>
                     <th> DATE</th>
