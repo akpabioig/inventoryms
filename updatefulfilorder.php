@@ -15,7 +15,7 @@ $db = mysqli_connect("us-cdbr-azure-southcentral-e.cloudapp.net", "inventoryms;c
 
 if ($result = mysqli_query($db, $balance)) {
     while ($row = $result->fetch_array()) {
-        echo $row[0];
+        echo $row['stockbalance'];
     }
 } else {
     echo 'Error:' . mysqli_error($db);
