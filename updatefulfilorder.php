@@ -6,15 +6,19 @@ if (isset($_GET['salesid'])) {
     $soId = $_GET['salesid'];
     //$sqlselect = "SELECT * FROM salesorder WHERE sid = $soId";
     //$getResult = mysqli_query($db, $sqlselect);
-
-    $balance = "SELECT stocklevel.stockbalance
+    try {
+        $balance = "SELECT stocklevel.stockbalance
                 FROM stocklevel, salesitem, salesorder
                 WHERE stocklevel.productid = salesitem.productid
                 AND salesitem.sid = salesorder.sid
                 AND salesorder.sid = {$soId}";
-    $stock1 = mysqli_query($db, $balance);
-    while ($row = $stock1->fetch_array()) {
-        echo $row[0];
+        $stock1 = $db->query($balance);
+        echo $stock1;
+        /*while ($row = $stock1->fetch_array()) {
+            echo $row[0];
+        }*/
+    } catch (PDOException $e) {
+        echo $e->getMessage();
     }
 }
 
