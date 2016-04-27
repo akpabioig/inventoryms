@@ -13,7 +13,7 @@ define('DBPASSWORD', '362289e3');
 define('DBNAME', 'inventoryms');
 
 $db = mysqli_connect(DBSERVER, DBUSER, DBPASSWORD, DBNAME);
-
+$db = mysqli_connect("us-cdbr-azure-southcentral-e.cloudapp.net", "bee886bc8793e7", "362289e3", "inventoryms");
 
 
 ?>

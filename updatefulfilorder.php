@@ -1,6 +1,6 @@
 <?php
 //include('connection.php');
-$db = mysqli_connect("us-cdbr-azure-southcentral-e.cloudapp.net", "inventoryms;charset=utf8mb4", "bee886bc8793e7", "362289e3");
+$db = mysqli_connect("us-cdbr-azure-southcentral-e.cloudapp.net", "bee886bc8793e7", "362289e3", "inventoryms");
 
 //if (isset($_GET['salesid'])) {
 //    $soId = $_GET['salesid'];
