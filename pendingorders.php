@@ -32,7 +32,6 @@ $result1 = mysqli_query($db, $sql1);
     <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
     <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
     <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-
     <script src="scripting.js"></script>
 </head>
 <body>
@@ -60,7 +59,7 @@ $result1 = mysqli_query($db, $sql1);
         <form method="get" action="pendingorders.php"
         ">
         <div id="form3">
-            <h2> SALES ORDERS 111 </h2>
+            <h2> SALES ORDERS </h2>
             <table id="t2">
                 <tr>
                     <th> DATE</th>

@@ -1,32 +1,32 @@
 <?php
-include('connection.php');
+//include('connection.php');
 $db = new PDO('mysql:host=us-cdbr-azure-southcentral-e.cloudapp.net;dbname=inventoryms;charset=utf8mb4', 'bee886bc8793e7', '362289e3', array(PDO::ATTR_EMULATE_PREPARES => false,
     PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
 
+//pdo codes
+$stock1 = $db->query("SELECT stocklevel.stockbalance 
+                    FROM stocklevel, salesitem, salesorder 
+                    WHERE stocklevel.productid = salesitem.productid 
+                    AND salesitem.sid = salesorder.sid 
+                    AND salesorder.sid = 461");
+$stock1->setFetchMode(PDO::FETCH_ASSOC);
+$stock1->fetchAll()[0]['stockbalance'];
+
+
+$stock2 = $sql->query("SELECT quantity
+               FROM salesitem
+               WHERE sid = 461");
+$stock2->setFetchMode(PDO::FETCH_ASSOC);
+print_r($stock2->fetchAll()[0]['quantity']);
+
+//end of pdo codes
+
+/*
 if (isset($_GET['salesid'])) {
     $soId = $_GET['salesid'];
     $sqlselect = "SELECT * FROM salesorder WHERE sid = $soId";
     $getResult = mysqli_query($db, $sqlselect);
 
-    //pdo codes
-    $stock1 = $sql->query("SELECT stocklevel.stockbalance 
-                    FROM stocklevel, salesitem, salesorder 
-                    WHERE stocklevel.productid = salesitem.productid 
-                    AND salesitem.sid = salesorder.sid 
-                    AND salesorder.sid = 461");
-    $stock1->setFetchMode(PDO::FETCH_ASSOC);
-    print_r($stock1->fetchAll()[0]['stockbalance']);
-
-
-    $stock2 = $sql->query("SELECT quantity
-               FROM salesitem
-               WHERE sid = 461");
-    $stock2->setFetchMode(PDO::FETCH_ASSOC);
-    print_r($stock2->fetchAll()[0]['quantity']);
-
-//end of pdo codes
-
-    /*
     if ($stock2 > $stock1) {
         echo "<script type='text/javascript'>
             alert('Cannot Fulfill Order Because Stock Quantity Too Low');
@@ -88,7 +88,7 @@ try {
                     WHERE stocklevel.stockbalance > 49";
     $sth4 = $db->query($sql4);
 } catch (PDOException $h) {
-    echo $h->getMessage();*/
-}
+    echo $h->getMessage();
+}*/
 //header("Location: pendingorders.php");
 ?>
