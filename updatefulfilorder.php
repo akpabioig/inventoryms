@@ -12,8 +12,10 @@ $db = new PDO('mysql:host=us-cdbr-azure-southcentral-e.cloudapp.net;dbname=inven
                 WHERE stocklevel.productid = salesitem.productid
                 AND salesitem.sid = salesorder.sid
                 AND salesorder.sid = 461";
-        $stock1 = $db->query($balance);
-        echo $stock1;
+
+        while ($data = $balance->fetch(PDO::FETCH_ASSOC)) {
+            print $data[0] . '<br>';
+        }
         /*while ($row = $stock1->fetch_array()) {
             echo $row[0];
         }*/
