@@ -14,16 +14,15 @@ if (isset($_GET['salesid'])) {
                 AND salesitem.sid = salesorder.sid
                 AND salesorder.sid = {$soId}");
     $stock1->setFetchMode(PDO::FETCH_ASSOC);
-    print_r($stock1->fetchAll()[0]['stockbalance']);
+    $stock1->fetchAll()[0]['stockbalance'];
 
 
     $stock2 = $db->query("SELECT quantity
                 FROM salesitem
                 WHERE sid = {$soId}");
     $stock2->setFetchMode(PDO::FETCH_ASSOC);
-    print_r($stock2->fetchAll()[0]['quantity']);
-}
-/*
+    $stock2->fetchAll()[0]['quantity'];
+
 if ($stock2 > $stock1) {
     echo "<script type='text/javascript'>
         alert('Cannot Fulfill Order Because Stock Quantity Too Low');
