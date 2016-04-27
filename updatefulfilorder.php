@@ -29,7 +29,6 @@ if ($stock2 > $stock1) {
         header(\"Location: pendingorders.php\");
           </script>";
     return false;
-    header("Location: pendingorders.php");
 } elseif ($stock2 < $stock1) {
     try {
         $sql = "UPDATE salesorder
@@ -39,10 +38,8 @@ if ($stock2 > $stock1) {
         echo "<script type='text/javascript'>
         alert(' SALES ORDER FULFILLED !!!');
           </script>";
-        header("Location: pendingorders.php");
     } catch (PDOException $e) {
         echo $e->getMessage();
-        header("Location: pendingorders.php");
     }
     try {
         $sql1 = "UPDATE stocklevel, salesorder, salesitem
@@ -55,11 +52,9 @@ if ($stock2 > $stock1) {
     } catch (PDOException $f) {
         echo $f->getMessage();
     }
-    header("Location: pendingorders.php");
 }
-    header("Location: pendingorders.php");
 }
-header("Location: pendingorders.php");
+
 if (isset($_GET['purid'])) {
 $poId = $_GET['purid'];
 $sqlselect1 = "SELECT * FROM purchaseorder WHERE purchaseid = $poId";
@@ -85,7 +80,6 @@ try {
 } catch (PDOException $h) {
     echo $h->getMessage();
 }
-    header("Location: pendingorders.php");
 }
 
 try {
@@ -96,7 +90,5 @@ $sth4 = $db->query($sql4);
 } catch (PDOException $h) {
 echo $h->getMessage();
 }
-
-
 header("Location: pendingorders.php");
 ?>
