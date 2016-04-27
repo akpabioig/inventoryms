@@ -11,7 +11,7 @@ if (isset($_GET['salesid'])) {
                 FROM stocklevel, salesitem, salesorder
                 WHERE stocklevel.productid = salesitem.productid
                 AND salesitem.sid = salesorder.sid
-                AND salesorder.sid = 451";
+                AND salesorder.sid = 461";
         $stock1 = $db->query($balance);
         echo $stock1;
         /*while ($row = $stock1->fetch_array()) {
