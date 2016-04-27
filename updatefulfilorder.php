@@ -26,6 +26,7 @@ if (isset($_GET['salesid'])) {
 if ($stock2 > $stock1) {
     echo "<script type='text/javascript'>
         alert('CANNOT FULFIL ORDER BECAUSE STOCK LEVEL TOO LOW !!!');
+        header(\"Location: pendingorders.php\");
           </script>";
     return false;
 } elseif ($stock2 < $stock1) {
@@ -89,5 +90,7 @@ $sth4 = $db->query($sql4);
 } catch (PDOException $h) {
 echo $h->getMessage();
 }
+
+
 header("Location: pendingorders.php");
 ?>
