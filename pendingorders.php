@@ -68,7 +68,7 @@ $result1 = mysqli_query($db, $sql1);
                     <th> DELIVERY ADDRESS</th>
                     <th> TOTAL UNITS</th>
                     <th> TOTAL COST</th>
-                    <th> STATUS 1</th>
+                    <th> STATUS</th>
                 </tr>
                 <?php
                 if (mysqli_num_rows($result) == 1 || mysqli_num_rows($result) > 1) {
