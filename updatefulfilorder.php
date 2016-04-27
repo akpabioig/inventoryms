@@ -1,12 +1,12 @@
 <?php
 //include('connection.php');
-$db = mysqli_connect("us-cdbr-azure-southcentral-e.cloudapp.net", "bee886bc8793e7", "362289e3", "inventoryms");
+//$db = mysqli_connect("us-cdbr-azure-southcentral-e.cloudapp.net", "bee886bc8793e7", "362289e3", "inventoryms");
 
 //if (isset($_GET['salesid'])) {
 //    $soId = $_GET['salesid'];
     //$sqlselect = "SELECT * FROM salesorder WHERE sid = $soId";
     //$getResult = mysqli_query($db, $sqlselect);
-
+/*
         $balance = "SELECT stocklevel.stockbalance
                 FROM stocklevel, salesitem, salesorder
                 WHERE stocklevel.productid = salesitem.productid
@@ -23,7 +23,27 @@ if ($result = mysqli_query($db, $balance)) {
 
 
 //}
+*/
 
+
+try {
+    $db = new PDO('mysql:host=us-cdbr-azure-southcentral-e.cloudapp.net;dbname=inventoryms;charset=utf8mb4', 'bee886bc8793e7', '362289e3', array(PDO::ATTR_EMULATE_PREPARES => false,
+        PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
+
+    $stmt->prepare("SELECT stocklevel.stockbalance
+                FROM stocklevel, salesitem, salesorder
+                WHERE stocklevel.productid = salesitem.productid
+    AND salesitem.sid = salesorder.sid
+    AND salesorder.sid = 461");
+
+    $sth->execute();
+    $result = $sth->fetch();
+
+    echo $result[0];
+
+} catch (PDOException $e) {
+    echo $e->getMessage();
+}
 
 
 
