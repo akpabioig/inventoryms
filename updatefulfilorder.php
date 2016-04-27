@@ -1,27 +1,27 @@
 <?php
-include('connection.php');
-$db = new PDO('mysql:host=us-cdbr-azure-southcentral-e.cloudapp.net;dbname=inventoryms;charset=utf8mb4', 'bee886bc8793e7', '362289e3', array(PDO::ATTR_EMULATE_PREPARES => false,
-    PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
+//include('connection.php');
+$db = mysqli_connect("us-cdbr-azure-southcentral-e.cloudapp.net", "inventoryms;charset=utf8mb4", "bee886bc8793e7", "362289e3");
+
 //if (isset($_GET['salesid'])) {
 //    $soId = $_GET['salesid'];
     //$sqlselect = "SELECT * FROM salesorder WHERE sid = $soId";
     //$getResult = mysqli_query($db, $sqlselect);
-    try {
+
         $balance = "SELECT stocklevel.stockbalance
                 FROM stocklevel, salesitem, salesorder
                 WHERE stocklevel.productid = salesitem.productid
                 AND salesitem.sid = salesorder.sid
                 AND salesorder.sid = 461";
 
-        while ($data = $balance->fetch(PDO::FETCH_ASSOC)) {
-            print $data[0] . '<br>';
-        }
-        /*while ($row = $stock1->fetch_array()) {
-            echo $row[0];
-        }*/
-    } catch (PDOException $e) {
-        echo $e->getMessage();
+if ($result = mysqli_query($db, $balance)) {
+    while ($row = $result->fetch_array()) {
+        echo $row[0];
     }
+} else {
+    echo 'Error:' . mysqli_error($db);
+        }
+
+
 //}
 
 
