@@ -3,14 +3,20 @@ include('connection.php');
 $db = new PDO('mysql:host=us-cdbr-azure-southcentral-e.cloudapp.net;dbname=inventoryms;charset=utf8mb4', 'bee886bc8793e7', '362289e3', array(PDO::ATTR_EMULATE_PREPARES => false,
     PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
 
-$f = $db->query("SELECT stocklevel.stockbalance
+$stock1 = $db->query("SELECT stocklevel.stockbalance
                 FROM stocklevel, salesitem, salesorder
                 WHERE stocklevel.productid = salesitem.productid
                 AND salesitem.sid = salesorder.sid
                 AND salesorder.sid = 461");
-$f->setFetchMode(PDO::FETCH_ASSOC);
-print_r($f->fetchAll()[0]['stockbalance']);
+$stock1->setFetchMode(PDO::FETCH_ASSOC);
+print_r($stock1->fetchAll()[0]['stockbalance']);
 
+
+$stock2 = $db->query("SELECT quantity
+                FROM salesitem
+                WHERE salesorder.sid = 461");
+$stock2->setFetchMode(PDO::FETCH_ASSOC);
+print_r($stock2->fetchAll()[0]['quantity']);
 
 //pdo codes
 /*
