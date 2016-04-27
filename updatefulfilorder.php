@@ -9,19 +9,19 @@ if (isset($_GET['salesid'])) {
     $getResult = mysqli_query($db, $sqlselect);
 
     //pdo codes
-    $stock1 = $sql6->query("SELECT stocklevel.stockbalance 
+    $stock1 = $sql->query("SELECT stocklevel.stockbalance 
                     FROM stocklevel, salesitem, salesorder 
                     WHERE stocklevel.productid = salesitem.productid 
                     AND salesitem.sid = salesorder.sid 
-                    AND salesorder.sid = {$soId}");
+                    AND salesorder.sid = 461");
     $stock1->setFetchMode(PDO::FETCH_ASSOC);
     echo $stock1->fetchAll()[0]['stockbalance'];
     echo "<br>";
 
 
-    $stock2 = $sql7->query("SELECT quantity
+    $stock2 = $sql->query("SELECT quantity
                FROM salesitem
-               WHERE sid = {$soId}");
+               WHERE sid = 461");
     $stock2->setFetchMode(PDO::FETCH_ASSOC);
     echo $stock2->fetchAll()[0]['quantity'];
     echo "<br>";
