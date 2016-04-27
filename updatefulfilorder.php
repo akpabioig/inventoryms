@@ -7,15 +7,17 @@ if (isset($_GET['salesid'])) {
     $sqlselect = "SELECT * FROM salesorder WHERE sid = $soId";
     $getResult = mysqli_query($db, $sqlselect);
 
-    $stock1 = "SELECT stocklevel.stockbalance
+    $balance = "SELECT stocklevel.stockbalance
                 FROM stocklevel, salesitem, salesorder
                 WHERE stocklevel.productid = salesitem.productid
                 AND salesitem.sid = salesorder.sid
                 AND salesorder.sid = {$soId}";
+    $stock1 = mysqli_query($db, $balance);
 
-    $stock2 = "SELECT quantity
+    $quantity = "SELECT quantity
                FROM salesitem
                WHERE sid = {$soId}";
+    $stock2 = mysqli_query($db, $quantity);
 
     if ($stock2 > $stock1) {
         echo "<script type='text/javascript'>alert('Cannot Fulfill Order Because Stock Quantity Too Low\');</script>";
