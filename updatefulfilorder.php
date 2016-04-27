@@ -25,15 +25,19 @@ if (isset($_GET['salesid'])) {
 
 if ($stock2 > $stock1) {
     echo "<script type='text/javascript'>
-        alert('Cannot Fulfill Order Because Stock Quantity Too Low');
+        alert('CANNOT FULFIL ORDER BECAUSE STOCK LEVEL TOO LOW !!!');
           </script>";
     return false;
+    header("Location: pendingorders.php");
 } elseif ($stock2 < $stock1) {
     try {
         $sql = "UPDATE salesorder
             SET status = 'fulfilled'
                 WHERE sid = {$soId}";
         $sth = $db->query($sql);
+        echo "<script type='text/javascript'>
+        alert(' SALES ORDER FULFILLED !!!');
+          </script>";
     } catch (PDOException $e) {
         echo $e->getMessage();
     }

@@ -59,7 +59,7 @@ $result1 = mysqli_query($db, $sql1);
         <form method="get" action="pendingorders.php"
         ">
         <div id="form3">
-            <h2> SALES ORDERS </h2>
+            <h2> SALES ORDERS GSG </h2>
             <table id="t2">
                 <tr>
                     <th> DATE</th>
@@ -130,9 +130,7 @@ $result1 = mysqli_query($db, $sql1);
 <script>
     function editconfig() {
         var edit = confirm("ARE YOU SURE YOU WANT TO FULFILL THIS  SALES ORDER ?");
-        if (edit == true) {
-            alert(" SALES ORDER FULFILLED !!!")
-        }
+        if (edit == true)
         return edit;
     }
 
