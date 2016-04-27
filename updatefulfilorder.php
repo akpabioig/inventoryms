@@ -13,11 +13,12 @@ if (isset($_GET['salesid'])) {
                 AND salesitem.sid = salesorder.sid
                 AND salesorder.sid = {$soId}";
     $stock1 = mysqli_query($db, $balance);
-    if ($row = $stock1->fetch_array()) {
+    while ($row = $stock1->fetch_array()) {
         echo $row[0];
-    } else {
-        echo 'mysql error:' . mysqli_errno($db);
-    };
+    }
+}
+
+
 
 
     /*    $quantity = "SELECT quantity
@@ -87,7 +88,8 @@ if (isset($_GET['salesid'])) {
                             WHERE stocklevel.stockbalance > 49";
             $sth4 = $db->query($sql4);
         } catch (PDOException $h) {
-            echo $h->getMessage();*/
-}
+            echo $h->getMessage();
+    }*/
+
 //header("Location: pendingorders.php");
 ?>
