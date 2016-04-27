@@ -18,8 +18,8 @@ if (isset($_GET['salesid'])) {
                WHERE sid = {$soId}";
 
     if ($stock2 > $stock1) {
-        echo "Cannot Fulfill Order Because Stock Quantity Too Low";
-        return false;
+        echo "<script type='text/javascript'>alert('Cannot Fulfill Order Because Stock Quantity Too Low\');</script>";
+        return;
     } elseif ($stock2 < $stock1) {
         try {
             $sql = "UPDATE salesorder
