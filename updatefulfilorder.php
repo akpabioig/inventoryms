@@ -52,6 +52,7 @@ if ($stock2 > $stock1) {
         echo $f->getMessage();
     }
 }
+    header("Location: pendingorders.php");
 }
 
 if (isset($_GET['purid'])) {
