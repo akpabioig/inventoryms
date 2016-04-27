@@ -13,8 +13,12 @@ if (isset($_GET['salesid'])) {
                 AND salesitem.sid = salesorder.sid
                 AND salesorder.sid = {$soId}";
     $stock1 = mysqli_query($db, $balance);
-    $row = $stock1->fetch_array();
-    echo $row[0];
+    if ($row = $stock1->fetch_array()) {
+        echo $row[0];
+    } else {
+        echo 'mysql error:' . mysqli_errno($db);
+    };
+
 
     /*    $quantity = "SELECT quantity
                    FROM salesitem
