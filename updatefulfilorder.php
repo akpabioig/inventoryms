@@ -80,6 +80,7 @@ try {
 } catch (PDOException $h) {
     echo $h->getMessage();
 }
+    header("Location: pendingorders.php");
 }
 
 try {
