@@ -8,11 +8,11 @@ $stock1 = $sql->query("SELECT stocklevel.stockbalance 
                     FROM stocklevel, salesitem, salesorder 
                     WHERE stocklevel.productid = salesitem.productid 
                     AND salesitem.sid = salesorder.sid 
-                    AND salesorder.sid = 461");
+                    AND salesorder.sid = 451");
 $stock1->setFetchMode(PDO::FETCH_ASSOC);
 print_r($stock1->fetchAll()[0]['stockbalance']);
 
-
+/*
 $stock2 = $sql->query("SELECT quantity
                FROM salesitem
                WHERE sid = 461");
@@ -21,7 +21,7 @@ print_r($stock2->fetchAll()[0]['quantity']);
 
 //end of pdo codes
 
-/*
+
 if (isset($_GET['salesid'])) {
     $soId = $_GET['salesid'];
     $sqlselect = "SELECT * FROM salesorder WHERE sid = $soId";
