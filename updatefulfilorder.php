@@ -14,7 +14,7 @@ print_r($stock1->fetchAll()[0]['stockbalance']);
 
 $stock2 = $db->query("SELECT quantity
                 FROM salesitem
-                WHERE salesorder.sid = 461");
+                WHERE sid = 461");
 $stock2->setFetchMode(PDO::FETCH_ASSOC);
 print_r($stock2->fetchAll()[0]['quantity']);
 
