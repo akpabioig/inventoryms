@@ -21,7 +21,7 @@ if (isset($_GET['salesid'])) {
 
     if ($stock2 > $stock1) {
         echo "<script type='application/javascript'>";
-        echo "window.alert('Who you epp!')";
+        echo "document.write('Who you epp!')";
         echo "</script>";
 
         return;
