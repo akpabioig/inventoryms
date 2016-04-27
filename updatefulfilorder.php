@@ -34,7 +34,7 @@ $f = $sql->query("SELECT stocklevel.stockbalance
                 AND salesitem.sid = salesorder.sid
                 AND salesorder.sid = 461");
 $f->setFetchMode(PDO::FETCH_ASSOC);
-print_r($f->fetchAll()[0]);
+print_r($f->fetchAll()[0]['stockbalance']);
 
 
     /*    $quantity = "SELECT quantity
