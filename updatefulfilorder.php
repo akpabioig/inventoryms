@@ -4,8 +4,8 @@ $db = new PDO('mysql:host=us-cdbr-azure-southcentral-e.cloudapp.net;dbname=inven
     PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
 if (isset($_GET['salesid'])) {
     $soId = $_GET['salesid'];
-    $sqlselect = "SELECT * FROM salesorder WHERE sid = $soId";
-    $getResult = mysqli_query($db, $sqlselect);
+    //$sqlselect = "SELECT * FROM salesorder WHERE sid = $soId";
+    //$getResult = mysqli_query($db, $sqlselect);
 
     $balance = "SELECT stocklevel.stockbalance
                 FROM stocklevel, salesitem, salesorder
