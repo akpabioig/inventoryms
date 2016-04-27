@@ -7,19 +7,6 @@
     //$sqlselect = "SELECT * FROM salesorder WHERE sid = $soId";
     //$getResult = mysqli_query($db, $sqlselect);
 /*
-        $balance = "SELECT stocklevel.stockbalance
-                FROM stocklevel, salesitem, salesorder
-                WHERE stocklevel.productid = salesitem.productid
-                AND salesitem.sid = salesorder.sid
-                AND salesorder.sid = 461";
-
-if ($result = mysqli_query($db, $balance)) {
-    while ($row = $result->fetch_array()) {
-        echo $row['stockbalance'];
-    }
-} else {
-    echo 'Error:' . mysqli_error($db);
-        }
 
 
 //}
