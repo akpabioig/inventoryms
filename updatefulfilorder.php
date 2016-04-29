@@ -7,7 +7,7 @@ if (isset($_GET['salesid'])) {
     $soId = $_GET['salesid'];
     $sqlselect = "SELECT * FROM salesorder WHERE sid = $soId";
     $getResult = mysqli_query($db, $sqlselect);
-
+//To select the Order
     $stock1 = $db->query("SELECT stocklevel.stockbalance
                 FROM stocklevel, salesitem, salesorder
                 WHERE stocklevel.productid = salesitem.productid
@@ -22,7 +22,9 @@ if (isset($_GET['salesid'])) {
                 WHERE sid = {$soId}");
     $stock2->setFetchMode(PDO::FETCH_ASSOC);
     $stock2->fetchAll()[0]['quantity'];
+    //End
 
+//To check if Order is pending Delivery
     $purchasepend = $db->query("SELECT purchaseitem.productid
                     FROM purchaseitem, purchaseorder
                     WHERE purchaseorder.purchaseid = purchaseitem.purchaseid
@@ -37,20 +39,21 @@ if (isset($_GET['salesid'])) {
                             AND salesorder.sid = {$soId}");
     $salespend->setFetchMode(PDO::FETCH_ASSOC);
     $salespend->fetchAll()[0]['productid'];
-
+// End
 if ($stock2 > $stock1) {
     echo "<script type='text/javascript'>
         alert('CANNOT FULFIL ORDER BECAUSE STOCK LEVEL TOO LOW !!!');
-       window.location.replace('pendingorders.php');
+       //window.location.replace('pendingorders.php');
           </script>";
-    while ($purchasepend == $salespend) {
+    return false;
+    if ($purchasepend == $salespend) {
         echo "<script type='text/javascript'>
         alert('PRODUCT ORDERED IS PENDING FULFILLMENT FROM SUPPLIER !!!');
-       window.location.replace('pendingorders.php');
+       //window.location.replace('pendingorders.php');
           </script>";
         return false;
-    }
-} else {
+    } else return false;
+} else if ($stock2 <= $stock1) {
     try {
         $sql = "UPDATE salesorder
             SET status = 'fulfilled'
@@ -58,7 +61,7 @@ if ($stock2 > $stock1) {
         $sth = $db->query($sql);
         echo "<script type='text/javascript'>
         alert(' SALES ORDER FULFILLED !!!');
-        window.location.replace('pendingorders.php');
+        //window.location.replace('pendingorders.php');
           </script>";
     } catch (PDOException $e) {
         echo $e->getMessage();
