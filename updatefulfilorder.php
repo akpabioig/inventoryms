@@ -7,52 +7,6 @@ if (isset($_GET['salesid'])) {
     $soId = $_GET['salesid'];
     $sqlselect = "SELECT * FROM salesorder WHERE sid = $soId";
     $getResult = mysqli_query($db, $sqlselect);
-//To select the Order
-    $stockbalance = $db->query("SELECT stocklevel.stockbalance
-                FROM stocklevel, salesitem, salesorder
-                WHERE stocklevel.productid = salesitem.productid
-                AND salesitem.sid = salesorder.sid
-                AND salesorder.sid = {$soId}");
-    $stockbalance->setFetchMode(PDO::FETCH_ASSOC);
-    $stockbalance->fetchAll()[0]['stockbalance'];
-
-    $stockordered = $db->query("SELECT quantity
-                FROM salesitem
-                WHERE sid = {$soId}");
-    $stockordered->setFetchMode(PDO::FETCH_ASSOC);
-    $stockordered->fetchAll()[0]['quantity'];
-    //End
-
-//To check if Order is pending Delivery
-    $purchasepend = $db->query("SELECT purchaseitem.productid
-                    FROM purchaseitem, purchaseorder
-                    WHERE purchaseorder.purchaseid = purchaseitem.purchaseid
-                    AND purchaseorder.status = 'pending'");
-    $purchasepend->setFetchMode(PDO::FETCH_ASSOC);
-    $purchasepend->fetchAll()[0]['productid'];
-
-    $salespend = $db->query("SELECT salesitem.productid
-                            FROM salesitem, salesorder
-                            WHERE salesorder.sid = salesitem.sid
-                            AND salesorder.status = 'pending'
-                            AND salesorder.sid = {$soId}");
-    $salespend->setFetchMode(PDO::FETCH_ASSOC);
-    $salespend->fetchAll()[0]['productid'];
-// End
-    if ($stockordered > $stockbalance) {
-    echo "<script type='text/javascript'>
-        alert('CANNOT FULFIL ORDER BECAUSE STOCK LEVEL TOO LOW !!!');
-       window.location.replace('pendingorders.php');
-          </script>";
-    return false;
-        if ($purchasepend == $salespend) {
-            echo "<script type='text/javascript'>
-        alert('PRODUCT ORDERED IS PENDING FULFILLMENT FROM SUPPLIER !!!');
-       window.location.replace('pendingorders.php');
-          </script>";
-            return false;
-        } else return false;
-    } else if ($stockordered <= $stockbalance) {
     try {
         $sql = "UPDATE salesorder
             SET status = 'fulfilled'
@@ -63,10 +17,7 @@ if (isset($_GET['salesid'])) {
         window.location.replace('pendingorders.php');
           </script>";
         return true;
-    } catch (PDOException $e) {
-        echo $e->getMessage();
-    }
-    try {
+
         $sql1 = "UPDATE stocklevel, salesorder, salesitem
             SET stocklevel.stockbalance = stocklevel.stockbalance - salesitem.quantity
             WHERE stocklevel.productid = salesitem.productid
@@ -74,10 +25,9 @@ if (isset($_GET['salesid'])) {
             AND salesorder.status = 'fulfilled'
             AND salesorder.sid = {$soId}";
         $sth1 = $db->query($sql1);
-    } catch (PDOException $f) {
-        echo $f->getMessage();
+    } catch (PDOException $e) {
+        echo $e->getMessage();
     }
-}
 }
 
 if (isset($_GET['purid'])) {
@@ -115,5 +65,5 @@ $sth4 = $db->query($sql4);
 } catch (PDOException $h) {
 echo $h->getMessage();
 }
-header("Location: pendingorders.php");
+//header("Location: pendingorders.php");
 ?>
