@@ -18,8 +18,9 @@ if (isset($_GET['salesid'])) {
     }
     echo "<script type='text/javascript'>
         alert('ORDERED FULFILLED !!!');
+        window.location.('pendingorders.php');
           </script>";
-    return false;
+    return true;
 
 
     try {
