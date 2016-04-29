@@ -12,9 +12,9 @@ if (isset($_GET['salesid'])) {
             SET status = 'fulfilled'
                 WHERE sid = {$soId}";
         $sth = $db->query($sql);
-        echo "<script type='text/javascript'>
-        alert(' ORDER FULFILLED !!!');
-        </script>";
+        echo '<script language="javascript">';
+        echo 'alery(message successfully sent)';
+        echo '</script>';
     } catch (PDOException $e) {
         echo $e->getMessage();
     }
