@@ -14,7 +14,7 @@ if (isset($_GET['salesid'])) {
         $sth = $db->query($sql);
         echo "<script type='text/javascript'>
         alert(' SALES ORDER FULFILLED !!!');
-        window.location.replace('pendingorders.php');
+        //window.location.replace('pendingorders.php');
           </script>";
         return true;
     } catch (PDOException $e) {
@@ -31,14 +31,16 @@ if (isset($_GET['salesid'])) {
     } catch (PDOException $f) {
         echo $f->getMessage();
     }
-}
 
-try {
-    $sql4 = "UPDATE stocklevel
+    try {
+        $sql4 = "UPDATE stocklevel
             SET stocklevel.level = 'STOCK LEVEL ... OK !!!'
                 WHERE stocklevel.stockbalance > 49";
-    $sth4 = $db->query($sql4);
-} catch (PDOException $h) {
-    echo $h->getMessage();
+        $sth4 = $db->query($sql4);
+    } catch (PDOException $h) {
+        echo $h->getMessage();
+    }
 }
+
+header("Location: pendingorders.php");
 ?>
