@@ -23,12 +23,34 @@ if (isset($_GET['salesid'])) {
     $stock2->setFetchMode(PDO::FETCH_ASSOC);
     $stock2->fetchAll()[0]['quantity'];
 
+    $purchasepend = $db->query("SELECT purchaseitem.productid
+                    FROM purchaseitem, purchaseorder
+                    WHERE purchaseorder.purchaseid = purchaseitem.purchaseid
+                    AND purchaseorder.status = 'pending'");
+    $purchasepend->setFetchMode(PDO::FETCH_ASSOC);
+    $purchasepend->fetchAll()[0]['productid'];
+
+    $salespend = $db->query("SELECT salesitem.productid
+                            FROM salesitem, salesorder
+                            WHERE salesorder.sid = salesitem.sid
+                            AND salesorder.status = 'pending'
+                            AND salesorder.sid = {$soId}");
+    $salespend->setFetchMode(PDO::FETCH_ASSOC);
+    $salespend->fetchAll()[0]['productid'];
+
 if ($stock2 > $stock1) {
     echo "<script type='text/javascript'>
         alert('CANNOT FULFIL ORDER BECAUSE STOCK LEVEL TOO LOW !!!');
        window.location.replace('pendingorders.php');
           </script>";
     return false;
+    while ($purchasepend == $salespend) {
+        echo "<script type='text/javascript'>
+        alert('PRODUCT IS PENDING FULFILLMENT FROM SUPPLIER !!!');
+       window.location.replace('pendingorders.php');
+          </script>";
+        return false;
+    }
 } elseif ($stock2 < $stock1) {
     try {
         $sql = "UPDATE salesorder

@@ -7,16 +7,20 @@ if (!isset($_SESSION['user'])) {
 include('connection.php');
 //
 $sql = "SELECT salesorder.datesales, salesorder.sid, addcustomer.customername,
-        salesorder.deladdress, salesorder.totalunits, salesorder.totalcost, salesorder.status
-                          FROM addcustomer, salesorder
+        salesorder.deladdress, addproduct.productname, salesitem.quantity, salesorder.totalcost, salesorder.status
+                          FROM addcustomer, salesorder, salesitem, addproduct
                           WHERE addcustomer.customerid = salesorder.customerid
+                          AND salesitem.productid = addproduct.productid
+                          AND salesitem.sid = salesorder.sid
                           AND status = 'pending'";
 $result = mysqli_query($db, $sql);
 
 $sql1 = "SELECT purchaseorder.datepurchase, purchaseorder.purchaseid, addsupplier.suppliername,
-          purchaseorder.totalunits, purchaseorder.total, purchaseorder.status
-         FROM purchaseorder, addsupplier
+          addproduct.productname, purchaseitem.quantity, purchaseorder.total, purchaseorder.status
+         FROM purchaseorder, addsupplier, purchaseitem, addproduct
          WHERE addsupplier.supplierid = purchaseorder.supplierid
+         AND addproduct.productid = purchaseitem.productid
+         AND purchaseorder.purchaseid = purchaseitem.purchaseid
          AND STATUS = 'pending'";
 $result1 = mysqli_query($db, $sql1);
 ?>
@@ -66,7 +70,8 @@ $result1 = mysqli_query($db, $sql1);
                     <th> SALES ID</th>
                     <th> CUSTOMER NAME</th>
                     <th> DELIVERY ADDRESS</th>
-                    <th> TOTAL UNITS</th>
+                    <th> PRODUCT NAME</th>
+                    <th> QUANTITY ORDERED</th>
                     <th> TOTAL COST</th>
                     <th> STATUS</th>
                 </tr>
@@ -79,7 +84,8 @@ $result1 = mysqli_query($db, $sql1);
                         <td id = \"sid\" name= \"sid\" class = \"tablefield\" disabled>{$row['sid']}</td>
                         <td id = \"customername\" name= \"customername\" class = \"tablefield\" disabled>{$row['customername']}</td>
                         <td id = \"deladdress\" name= \"deladdress\" class = \"tablefield\" disabled>{$row['deladdress']}</td>
-                        <td id = \"totalunits\" name= \"totalunits\" class = \"tablefield\" disabled>{$row['totalunits']}</td>
+                        <td id = \"productname\" name= \"productname\" class = \"tablefield\" disabled>{$row['productname']}</td>
+                        <td id = \"quantity\" name= \"quantity\" class = \"tablefield\" disabled>{$row['quantity']}</td>
                         <td id = \"totalcost\" name= \"totalcost\" class = \"tablefield\" disabled>{$row['totalcost']}</td>
                         <td id = \"status\" name= \"status\"  class = \"tablefield\" disabled>{$row['status']}</td>
                         <td><a href='updatefulfilorder.php?salesid={$row['sid']}' onclick='return editconfig()'><img src = 'images/tick.png' style{height=\"25\" width=\"25\"}></a></td>
@@ -98,7 +104,8 @@ $result1 = mysqli_query($db, $sql1);
                     <th> DATE</th>
                     <th> PURCHASE ID</th>
                     <th> SUPPLIER NAME</th>
-                    <th> TOTAL UNITS</th>
+                    <th> PRODUCT NAME</th>
+                    <th> QUANTITY ORDERED</th>
                     <th> TOTAL COST</th>
                     <th> STATUS</th>
                 </tr>
@@ -110,8 +117,9 @@ $result1 = mysqli_query($db, $sql1);
                         <td id = \"datepurchase\" name= \"datepurchase\" class = \"tablefield\" disabled>{$row1['datepurchase']}</td>
                         <td id = \"purchaseid\" name= \"purchaseid\" class = \"tablefield\" disabled>{$row1['purchaseid']}</td>
                         <td id = \"suppliername\" name= \"suppliername\" class = \"tablefield\" disabled>{$row1['suppliername']}</td>
-                        <td id = \"totalunits\" name= \"totalunits\" class = \"tablefield\" disabled>{$row1['totalunits']}</td>
+                        <td id = \"productname\" name= \"productname\" class = \"tablefield\" disabled>{$row1['productname']}</td>
                         <td id = \"total\" name= \"total\" class = \"tablefield\" disabled>{$row1['total']}</td>
+                        <td id = \"quantity\" name= \"quantity\"  class = \"tablefield\" disabled>{$row1['quantity']}</td>
                         <td id = \"status\" name= \"status\"  class = \"tablefield\" disabled>{$row1['status']}</td>
                         <td><a href='updatefulfilorder.php?purid={$row1['purchaseid']}' onclick='return editconfig1()'><img src = 'images/tick.png' style{height=\"25\" width=\"25\"}></a></td>
                         <td><a href='deletepurchaseorder.php?purid={$row1['purchaseid']}' onclick='return deleteconfig1()'> <img src = 'images/delete.png' style{height=\"25\" width=\"25\"}></a> </td>
