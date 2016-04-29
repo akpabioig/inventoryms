@@ -7,29 +7,51 @@ if (isset($_GET['salesid'])) {
     $soId = $_GET['salesid'];
     $sqlselect = "SELECT * FROM salesorder WHERE sid = $soId";
     $getResult = mysqli_query($db, $sqlselect);
-    try {
-        $sql = "UPDATE salesorder
+
+    $stockbalance = $db->query("SELECT stocklevel.stockbalance
+                FROM stocklevel, salesitem, salesorder
+                WHERE stocklevel.productid = salesitem.productid
+                AND salesitem.sid = salesorder.sid
+                AND salesorder.sid = {$soId}");
+    $stockbalance->setFetchMode(PDO::FETCH_ASSOC);
+    $stockbalance->fetchAll()[0]['stockbalance'];
+
+    $stockordered = $db->query("SELECT quantity
+                FROM salesitem
+                WHERE sid = {$soId}");
+    $stockordered->setFetchMode(PDO::FETCH_ASSOC);
+    $stockordered->fetchAll()[0]['quantity'];
+
+    if ($stockbalance < $stockordered) {
+        echo "<script type='text/javascript'>;
+        alert('CANNOT FULFIL ORDER BECAUSE STOCK LEVEL TOO LOW !!!');
+          </script>";
+    } else {
+        try {
+            $sql = "UPDATE salesorder
             SET status = 'fulfilled'
                 WHERE sid = {$soId}";
-        $sth = $db->query($sql);
-        echo '<script language="javascript">';
-        echo 'alert("message successfully sent")';
-        echo '</script>';
-    } catch (PDOException $e) {
-        echo $e->getMessage();
-    }
+            $sth = $db->query($sql);
+        } catch (PDOException $e) {
+            echo $e->getMessage();
+        }
 
-    try {
-        $sql1 = "UPDATE stocklevel, salesorder, salesitem
+        try {
+            $sql1 = "UPDATE stocklevel, salesorder, salesitem
             SET stocklevel.stockbalance = stocklevel.stockbalance - salesitem.quantity
             WHERE stocklevel.productid = salesitem.productid
             AND salesitem.sid = salesorder.sid
             AND salesorder.status = 'fulfilled'
             AND salesorder.sid = {$soId}";
-        $sth1 = $db->query($sql1);
-    } catch (PDOException $f) {
-        echo $f->getMessage();
+            $sth1 = $db->query($sql1);
+        } catch (PDOException $f) {
+            echo $f->getMessage();
+        }
+        echo "<script type='text/javascript'>;
+        alert('ORDER FULFILLED!!!');
+          </script>";
     }
+
 
     try {
         $sql4 = "UPDATE stocklevel
