@@ -1,5 +1,10 @@
 <?php
 
+function phpAlert($msg)
+{
+    echo '<script type="text/javascript">alert("' . $msg . '")</script>';
+}
+
 include('connection.php');
 $db = new PDO('mysql:host=us-cdbr-azure-southcentral-e.cloudapp.net;dbname=inventoryms;charset=utf8mb4', 'bee886bc8793e7', '362289e3', array(PDO::ATTR_EMULATE_PREPARES => false,
     PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
@@ -13,15 +18,10 @@ if (isset($_GET['salesid'])) {
             SET status = 'fulfilled'
                 WHERE sid = {$soId}";
         $sth = $db->query($sql);
+        phpAlert(" ORDER FULFILLED !!! ");
     } catch (PDOException $e) {
         echo $e->getMessage();
     }
-    echo "<script type='text/javascript'>
-        alert('ORDERED FULFILLED !!!');
-        window.location.('pendingorders.php');
-          </script>";
-    return true;
-
 
     try {
         $sql1 = "UPDATE stocklevel, salesorder, salesitem
