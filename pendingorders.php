@@ -101,7 +101,7 @@ $result1 = mysqli_query($db, $sql1);
             <h2>PURCHASE ORDERS</h2>
             <table>
                 <tr>
-                    <th> DATE</th>
+                    <th> DATE 54</th>
                     <th> PURCHASE ID</th>
                     <th> SUPPLIER NAME</th>
                     <th> PRODUCT ORDERED</th>

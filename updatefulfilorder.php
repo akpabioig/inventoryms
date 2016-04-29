@@ -17,6 +17,7 @@ if (isset($_GET['salesid'])) {
         echo 'alert("message successfully sent")';
         echo '</script>';
         exit;
+        this . location . replace('updatefulfilorder.php');
     } catch (PDOException $e) {
         echo $e->getMessage();
     }
