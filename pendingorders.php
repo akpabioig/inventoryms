@@ -70,7 +70,7 @@ $result1 = mysqli_query($db, $sql1);
                     <th> SALES ID</th>
                     <th> CUSTOMER NAME</th>
                     <th> DELIVERY ADDRESS</th>
-                    <th> PRODUCT NAME</th>
+                    <th> PRODUCT ORDERED</th>
                     <th> QUANTITY ORDERED</th>
                     <th> TOTAL COST</th>
                     <th> STATUS</th>
@@ -104,7 +104,7 @@ $result1 = mysqli_query($db, $sql1);
                     <th> DATE</th>
                     <th> PURCHASE ID</th>
                     <th> SUPPLIER NAME</th>
-                    <th> PRODUCT NAME</th>
+                    <th> PRODUCT ORDERED</th>
                     <th> QUANTITY ORDERED</th>
                     <th> TOTAL COST</th>
                     <th> STATUS</th>
