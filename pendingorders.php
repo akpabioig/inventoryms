@@ -105,8 +105,8 @@ $result1 = mysqli_query($db, $sql1);
                     <th> PURCHASE ID</th>
                     <th> SUPPLIER NAME</th>
                     <th> PRODUCT ORDERED</th>
-                    <th> TOTAL COST</th>
                     <th> QUANTITY ORDERED</th>
+                    <th> TOTAL COST</th>
                     <th> STATUS</th>
                 </tr>
                 <?php
@@ -118,8 +118,8 @@ $result1 = mysqli_query($db, $sql1);
                         <td id = \"purchaseid\" name= \"purchaseid\" class = \"tablefield\" disabled>{$row1['purchaseid']}</td>
                         <td id = \"suppliername\" name= \"suppliername\" class = \"tablefield\" disabled>{$row1['suppliername']}</td>
                         <td id = \"productname\" name= \"productname\" class = \"tablefield\" disabled>{$row1['productname']}</td>
+                         <td id = \"quantity\" name= \"quantity\"  class = \"tablefield\" disabled>{$row1['quantity']}</td>
                         <td id = \"total\" name= \"total\" class = \"tablefield\" disabled>{$row1['total']}</td>
-                        <td id = \"quantity\" name= \"quantity\"  class = \"tablefield\" disabled>{$row1['quantity']}</td>
                         <td id = \"status\" name= \"status\"  class = \"tablefield\" disabled>{$row1['status']}</td>
                         <td><a href='updatefulfillpurchase.php?purid={$row1['purchaseid']}' onclick='return editconfig1()'><img src = 'images/tick.png' style{height=\"25\" width=\"25\"}></a></td>
                         <td><a href='deletepurchaseorder.php?purid={$row1['purchaseid']}' onclick='return deleteconfig1()'> <img src = 'images/delete.png' style{height=\"25\" width=\"25\"}></a> </td>
