@@ -26,6 +26,7 @@ if (isset($_GET['salesid'])) {
         echo "<script type='text/javascript'>;
         alert('CANNOT FULFIL ORDER BECAUSE STOCK LEVEL TOO LOW !!!');
           </script>";
+        return false;
     } else {
         try {
             $sql = "UPDATE salesorder
