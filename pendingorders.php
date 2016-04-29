@@ -63,7 +63,7 @@ $result1 = mysqli_query($db, $sql1);
         <form method="get" action="pendingorders.php"
         ">
         <div id="form3">
-            <h2> SALES ORDERS kfyughkh</h2>
+            <h2> SALES ORDERS </h2>
             <table id="t2">
                 <tr>
                     <th> DATE</th>
@@ -88,7 +88,7 @@ $result1 = mysqli_query($db, $sql1);
                         <td id = \"quantity\" name= \"quantity\" class = \"tablefield\" disabled>{$row['quantity']}</td>
                         <td id = \"totalcost\" name= \"totalcost\" class = \"tablefield\" disabled>{$row['totalcost']}</td>
                         <td id = \"status\" name= \"status\"  class = \"tablefield\" disabled>{$row['status']}</td>
-                        <td><a href='updatefulfilorder.php?salesid={$row['sid']}' onclick='return editconfig()'><img src = 'images/tick.png' style{height=\"25\" width=\"25\"}></a></td>
+                        <td><a href='pendingorders.php?salesid={$row['sid']}' onclick='return editconfig()'><img src = 'images/tick.png' style{height=\"25\" width=\"25\"}></a></td>
                         <td><a href='deletesalesorder.php?salesid={$row['sid']}' onclick='return deleteconfig()'> <img src = 'images/delete.png' style{height=\"25\" width=\"25\"}></a> </td>
                     </tr>
                                 ";
@@ -121,7 +121,7 @@ $result1 = mysqli_query($db, $sql1);
                          <td id = \"quantity\" name= \"quantity\"  class = \"tablefield\" disabled>{$row1['quantity']}</td>
                         <td id = \"total\" name= \"total\" class = \"tablefield\" disabled>{$row1['total']}</td>
                         <td id = \"status\" name= \"status\"  class = \"tablefield\" disabled>{$row1['status']}</td>
-                        <td><a href='pendingorders.php?purid={$row1['purchaseid']}' onclick='return editconfig1()'><img src = 'images/tick.png' style{height=\"25\" width=\"25\"}></a></td>
+                        <td><a href='updatefulfillpurchase.php?purid={$row1['purchaseid']}' onclick='return editconfig1()'><img src = 'images/tick.png' style{height=\"25\" width=\"25\"}></a></td>
                         <td><a href='deletepurchaseorder.php?purid={$row1['purchaseid']}' onclick='return deleteconfig1()'> <img src = 'images/delete.png' style{height=\"25\" width=\"25\"}></a> </td>
                     </tr>
                                 ";
@@ -176,6 +176,7 @@ $result1 = mysqli_query($db, $sql1);
 </html>
 
 <?php
+include('connection.php');
 $db = new PDO('mysql:host=us-cdbr-azure-southcentral-e.cloudapp.net;dbname=inventoryms;charset=utf8mb4', 'bee886bc8793e7', '362289e3', array(PDO::ATTR_EMULATE_PREPARES => false,
     PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
 
