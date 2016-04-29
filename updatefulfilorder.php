@@ -12,11 +12,13 @@ if (isset($_GET['salesid'])) {
         $sql = "UPDATE salesorder
             SET status = 'fulfilled'
                 WHERE sid = {$soId}";
+        echo "<script type=\"text/javascript\">
+        window.alert('You must enter your full name.');
+        </script>";
         $sth = $db->query($sql);
     } catch (PDOException $e) {
         echo $e->getMessage();
     }
-    echo '<script type="text/javascript">alert("hello!");</script>';
 
     try {
         $sql1 = "UPDATE stocklevel, salesorder, salesitem
