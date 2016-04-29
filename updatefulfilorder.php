@@ -13,10 +13,7 @@ if (isset($_GET['salesid'])) {
             SET status = 'fulfilled'
                 WHERE sid = {$soId}";
         $sth = $db->query($sql);
-        echo '<script language="javascript">';
-        echo 'alert("message successfully sent")';
-        echo '</script>';
-        this . location . replace('pendingorders.php');
+        echo "message successfully sent";
     } catch (PDOException $e) {
         echo $e->getMessage();
     }
