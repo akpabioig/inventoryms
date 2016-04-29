@@ -8,20 +8,20 @@ if (isset($_GET['salesid'])) {
     $sqlselect = "SELECT * FROM salesorder WHERE sid = $soId";
     $getResult = mysqli_query($db, $sqlselect);
 //To select the Order
-    $stock1 = $db->query("SELECT stocklevel.stockbalance
+    $stockbalance = $db->query("SELECT stocklevel.stockbalance
                 FROM stocklevel, salesitem, salesorder
                 WHERE stocklevel.productid = salesitem.productid
                 AND salesitem.sid = salesorder.sid
                 AND salesorder.sid = {$soId}");
-    $stock1->setFetchMode(PDO::FETCH_ASSOC);
-    $stock1->fetchAll()[0]['stockbalance'];
+    $stockbalance->setFetchMode(PDO::FETCH_ASSOC);
+    $stockbalance->fetchAll()[0]['stockbalance'];
 
 
-    $stock2 = $db->query("SELECT quantity
+    $stockordered = $db->query("SELECT quantity
                 FROM salesitem
                 WHERE sid = {$soId}");
-    $stock2->setFetchMode(PDO::FETCH_ASSOC);
-    $stock2->fetchAll()[0]['quantity'];
+    $stockordered->setFetchMode(PDO::FETCH_ASSOC);
+    $stockordered->fetchAll()[0]['quantity'];
     //End
 
 //To check if Order is pending Delivery
@@ -40,20 +40,13 @@ if (isset($_GET['salesid'])) {
     $salespend->setFetchMode(PDO::FETCH_ASSOC);
     $salespend->fetchAll()[0]['productid'];
 // End
-if ($stock2 > $stock1) {
+    if ($stockordered > $stockbalance) {
     echo "<script type='text/javascript'>
         alert('CANNOT FULFIL ORDER BECAUSE STOCK LEVEL TOO LOW !!!');
-       //window.location.replace('pendingorders.php');
+       window.location.replace('pendingorders.php');
           </script>";
     return false;
-    if ($purchasepend == $salespend) {
-        echo "<script type='text/javascript'>
-        alert('PRODUCT ORDERED IS PENDING FULFILLMENT FROM SUPPLIER !!!');
-       //window.location.replace('pendingorders.php');
-          </script>";
-        return false;
-    } else return false;
-} else if ($stock2 <= $stock1) {
+    } else if ($stockordered <= $stockbalance) {
     try {
         $sql = "UPDATE salesorder
             SET status = 'fulfilled'
@@ -61,8 +54,9 @@ if ($stock2 > $stock1) {
         $sth = $db->query($sql);
         echo "<script type='text/javascript'>
         alert(' SALES ORDER FULFILLED !!!');
-        //window.location.replace('pendingorders.php');
+        window.location.replace('pendingorders.php');
           </script>";
+        return true;
     } catch (PDOException $e) {
         echo $e->getMessage();
     }
