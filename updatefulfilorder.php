@@ -19,7 +19,8 @@ if (isset($_GET['salesid'])) {
     echo "<script type='text/javascript'>
         alert('ORDERED FULFILLED !!!');
           </script>";
-    return true;
+    return false;
+
 
     try {
         $sql1 = "UPDATE stocklevel, salesorder, salesitem
