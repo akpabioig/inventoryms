@@ -20,7 +20,9 @@ if (isset($_GET['salesid'])) {
     echo '<script language="javascript">';
     echo alert("message successfully sent");
     echo '</script>';
+    window . location . replace('pendingorders.php');
     ?>
+
     <?php
     include('connection.php');
     $db = new PDO('mysql:host=us-cdbr-azure-southcentral-e.cloudapp.net;dbname=inventoryms;charset=utf8mb4', 'bee886bc8793e7', '362289e3', array(PDO::ATTR_EMULATE_PREPARES => false,
