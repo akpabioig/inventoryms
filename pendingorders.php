@@ -105,8 +105,8 @@ $result1 = mysqli_query($db, $sql1);
                     <th> PURCHASE ID</th>
                     <th> SUPPLIER NAME</th>
                     <th> PRODUCT ORDERED</th>
-                    <th> QUANTITY ORDERED</th>
                     <th> TOTAL COST</th>
+                    <th> QUANTITY ORDERED</th>
                     <th> STATUS</th>
                 </tr>
                 <?php

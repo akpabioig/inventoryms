@@ -40,5 +40,5 @@ if (isset($_GET['purid'])) {
 
 }
 
-header("Location: pendingorders.php");
+//header("Location: pendingorders.php");
 ?>
