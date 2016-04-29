@@ -19,9 +19,9 @@ if (isset($_GET['salesid'])) {
     } catch (PDOException $e) {
         echo $e->getMessage();
     }
-    ?>
 
-    <?php
+
+    /*
     try {
         $sql1 = "UPDATE stocklevel, salesorder, salesitem
             SET stocklevel.stockbalance = stocklevel.stockbalance - salesitem.quantity
@@ -41,7 +41,7 @@ if (isset($_GET['salesid'])) {
         $sth4 = $db->query($sql4);
     } catch (PDOException $h) {
         echo $h->getMessage();
-    }
+    }*/
 }
 header("Location: pendingorders.php");
 ?>
