@@ -63,7 +63,7 @@ $result1 = mysqli_query($db, $sql1);
         <form method="get" action="pendingorders.php"
         ">
         <div id="form3">
-            <h2> SALES ORDERS jkh</h2>
+            <h2> SALES ORDERS kfyughkh</h2>
             <table id="t2">
                 <tr>
                     <th> DATE</th>
@@ -121,7 +121,7 @@ $result1 = mysqli_query($db, $sql1);
                          <td id = \"quantity\" name= \"quantity\"  class = \"tablefield\" disabled>{$row1['quantity']}</td>
                         <td id = \"total\" name= \"total\" class = \"tablefield\" disabled>{$row1['total']}</td>
                         <td id = \"status\" name= \"status\"  class = \"tablefield\" disabled>{$row1['status']}</td>
-                        <td><a href='updatefulfillpurchase.php?purid={$row1['purchaseid']}' onclick='return editconfig1()'><img src = 'images/tick.png' style{height=\"25\" width=\"25\"}></a></td>
+                        <td><a href='pendingorders.php?purid={$row1['purchaseid']}' onclick='return editconfig1()'><img src = 'images/tick.png' style{height=\"25\" width=\"25\"}></a></td>
                         <td><a href='deletepurchaseorder.php?purid={$row1['purchaseid']}' onclick='return deleteconfig1()'> <img src = 'images/delete.png' style{height=\"25\" width=\"25\"}></a> </td>
                     </tr>
                                 ";
@@ -174,3 +174,72 @@ $result1 = mysqli_query($db, $sql1);
 </footer>
 </body>
 </html>
+
+<?php
+$db = new PDO('mysql:host=us-cdbr-azure-southcentral-e.cloudapp.net;dbname=inventoryms;charset=utf8mb4', 'bee886bc8793e7', '362289e3', array(PDO::ATTR_EMULATE_PREPARES => false,
+    PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
+
+if (isset($_GET['salesid'])) {
+    $soId = $_GET['salesid'];
+    $sqlselect = "SELECT * FROM salesorder WHERE sid = $soId";
+    $getResult = mysqli_query($db, $sqlselect);
+
+    $stockbalance = $db->query("SELECT stocklevel.stockbalance
+                FROM stocklevel, salesitem, salesorder
+                WHERE stocklevel.productid = salesitem.productid
+                AND salesitem.sid = salesorder.sid
+                AND salesorder.sid = {$soId}");
+    $stockbalance->setFetchMode(PDO::FETCH_ASSOC);
+    $stockbalance->fetchAll()[0]['stockbalance'];
+
+    $stockordered = $db->query("SELECT quantity
+                FROM salesitem
+                WHERE sid = {$soId}");
+    $stockordered->setFetchMode(PDO::FETCH_ASSOC);
+    $stockordered->fetchAll()[0]['quantity'];
+
+    if ($stockbalance < $stockordered) {
+        echo '<script language="javascript">';
+        echo 'alert("Cant SOmhsjbhskb")';
+        echo '</script>';
+        return false;
+    }
+
+    if ($stockbalance > $stockordered) {
+        try {
+            $sql = "UPDATE salesorder
+            SET status = 'fulfilled'
+                WHERE sid = {$soId}";
+            $sth = $db->query($sql);
+        } catch (PDOException $e) {
+            echo $e->getMessage();
+        }
+
+        try {
+            $sql1 = "UPDATE stocklevel, salesorder, salesitem
+            SET stocklevel.stockbalance = stocklevel.stockbalance - salesitem.quantity
+            WHERE stocklevel.productid = salesitem.productid
+            AND salesitem.sid = salesorder.sid
+            AND salesorder.status = 'fulfilled'
+            AND salesorder.sid = {$soId}";
+            $sth1 = $db->query($sql1);
+        } catch (PDOException $f) {
+            echo $f->getMessage();
+        }
+        echo '<script language="javascript">';
+        echo 'alert("dfhdhhfdf SOmhsjbhskb")';
+        echo '</script>';
+    }
+
+
+    try {
+        $sql4 = "UPDATE stocklevel
+            SET stocklevel.level = 'STOCK LEVEL ... OK !!!'
+                WHERE stocklevel.stockbalance > 49";
+        $sth4 = $db->query($sql4);
+    } catch (PDOException $h) {
+        echo $h->getMessage();
+    }
+}
+header("Location: pendingorders.php");
+?>
