@@ -23,9 +23,9 @@ if (isset($_GET['salesid'])) {
     $stockordered->fetchAll()[0]['quantity'];
 
     if ($stockbalance < $stockordered) {
-        echo "<script type='text/javascript'>;
-        alert('CANNOT FULFIL ORDER BECAUSE STOCK LEVEL TOO LOW !!!');
-          </script>";
+        echo '<script language="javascript">';
+        echo 'alert("Cant SOmhsjbhskb")';
+        echo '</script>';
         return true;
     }
 
@@ -50,9 +50,10 @@ if (isset($_GET['salesid'])) {
         } catch (PDOException $f) {
             echo $f->getMessage();
         }
-        echo "<script type='text/javascript'>;
-        alert('ORDER FULFILLED!!!');
-          </script>";
+        echo '<script language="javascript">';
+        echo 'alert("dfhdhhfdf SOmhsjbhskb")';
+        echo '</script>';
+
     }
 
 
