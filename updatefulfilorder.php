@@ -17,7 +17,10 @@ if (isset($_GET['salesid'])) {
         window.location.replace('pendingorders.php');
           </script>";
         return true;
-
+    } catch (PDOException $e) {
+        echo $e->getMessage();
+    }
+    try {
         $sql1 = "UPDATE stocklevel, salesorder, salesitem
             SET stocklevel.stockbalance = stocklevel.stockbalance - salesitem.quantity
             WHERE stocklevel.productid = salesitem.productid
@@ -25,8 +28,8 @@ if (isset($_GET['salesid'])) {
             AND salesorder.status = 'fulfilled'
             AND salesorder.sid = {$soId}";
         $sth1 = $db->query($sql1);
-    } catch (PDOException $e) {
-        echo $e->getMessage();
+    } catch (PDOException $f) {
+        echo $f->getMessage();
     }
 }
 
