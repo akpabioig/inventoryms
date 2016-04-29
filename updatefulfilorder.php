@@ -15,10 +15,12 @@ if (isset($_GET['salesid'])) {
     } catch (PDOException $e) {
         echo $e->getMessage();
     }
+    echo "<script type='text/javascript'>
+        alert(' ORDER FULFILLED !!!');
+       window.location.replace('pendingorders.php');
+          </script>";
     ?>
-    <script type="text/javascript">
-        alert("message successfully sent");
-    </script>
+
 
     <?php
     try {
