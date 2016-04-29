@@ -16,7 +16,6 @@ if (isset($_GET['salesid'])) {
     $stockbalance->setFetchMode(PDO::FETCH_ASSOC);
     $stockbalance->fetchAll()[0]['stockbalance'];
 
-
     $stockordered = $db->query("SELECT quantity
                 FROM salesitem
                 WHERE sid = {$soId}");
