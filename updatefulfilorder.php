@@ -2,7 +2,9 @@
 
 function phpAlert($msg)
 {
-    echo '<script type="text/javascript">alert("' . $msg . '")</script>';
+    echo '<script type="text/javascript">
+            alert("' . $msg . '")
+          </script>';
 }
 
 include('connection.php');
@@ -18,10 +20,10 @@ if (isset($_GET['salesid'])) {
             SET status = 'fulfilled'
                 WHERE sid = {$soId}";
         $sth = $db->query($sql);
-        phpAlert(" ORDER FULFILLED !!! ");
     } catch (PDOException $e) {
         echo $e->getMessage();
     }
+    phpAlert(" ORDER FULFILLED !!! ");
 
     try {
         $sql1 = "UPDATE stocklevel, salesorder, salesitem
