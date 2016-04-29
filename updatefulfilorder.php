@@ -43,7 +43,6 @@ if ($stock2 > $stock1) {
         alert('CANNOT FULFIL ORDER BECAUSE STOCK LEVEL TOO LOW !!!');
        window.location.replace('pendingorders.php');
           </script>";
-    return false;
     while ($purchasepend == $salespend) {
         echo "<script type='text/javascript'>
         alert('PRODUCT ORDERED IS PENDING FULFILLMENT FROM SUPPLIER !!!');
