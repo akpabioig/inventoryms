@@ -1,4 +1,9 @@
 <?php
+function do_alert($msg)
+{
+    echo '<script type="text/javascript">alert("' . $msg . '"); </script>';
+}
+
 include('connection.php');
 $db = new PDO('mysql:host=us-cdbr-azure-southcentral-e.cloudapp.net;dbname=inventoryms;charset=utf8mb4', 'bee886bc8793e7', '362289e3', array(PDO::ATTR_EMULATE_PREPARES => false,
     PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
@@ -12,6 +17,7 @@ if (isset($_GET['salesid'])) {
             SET status = 'fulfilled'
                 WHERE sid = {$soId}";
         $sth = $db->query($sql);
+        do_alert(" SALES ORDER FULFILLED !!!");
     } catch (PDOException $e) {
         echo $e->getMessage();
     }
@@ -22,10 +28,6 @@ if (isset($_GET['salesid'])) {
             AND salesitem.sid = salesorder.sid
             AND salesorder.status = 'fulfilled'
             AND salesorder.sid = {$soId}";
-        echo "<script type='text/javascript'>
-        alert(' SALES ORDER FULFILLED !!!');
-        window.location.replace('pendingorders.php');
-          </script>";
         $sth1 = $db->query($sql1);
     } catch (PDOException $f) {
         echo $f->getMessage();
