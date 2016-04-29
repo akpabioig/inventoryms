@@ -8,29 +8,6 @@ if (isset($_GET['salesid'])) {
     $sqlselect = "SELECT * FROM salesorder WHERE sid = $soId";
     $getResult = mysqli_query($db, $sqlselect);
 
-    $stockbalance = $db->query("SELECT stocklevel.stockbalance
-                FROM stocklevel, salesitem, salesorder
-                WHERE stocklevel.productid = salesitem.productid
-                AND salesitem.sid = salesorder.sid
-                AND salesorder.sid = {$soId}");
-    $stockbalance->setFetchMode(PDO::FETCH_ASSOC);
-    $stockbalance->fetchAll()[0]['stockbalance'];
-
-    $stockordered = $db->query("SELECT quantity
-                FROM salesitem
-                WHERE sid = {$soId}");
-    $stockordered->setFetchMode(PDO::FETCH_ASSOC);
-    $stockordered->fetchAll()[0]['quantity'];
-
-    if ($stockbalance < $stockordered) {
-        echo '<script language="javascript">';
-        echo 'alert("Cant SOmhsjbhskb")';
-        window . location . replace('pendingorders.php');
-        echo '</script>';
-        return false;
-    }
-
-    if ($stockbalance > $stockordered) {
         try {
             $sql = "UPDATE salesorder
             SET status = 'fulfilled'
@@ -65,6 +42,6 @@ if (isset($_GET['salesid'])) {
     } catch (PDOException $h) {
         echo $h->getMessage();
     }
-}
+
 header("Location: pendingorders.php");
 ?>
