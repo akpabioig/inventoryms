@@ -26,7 +26,8 @@ if (isset($_GET['salesid'])) {
         echo '<script language="javascript">';
         echo 'alert("Cant SOmhsjbhskb")';
         echo '</script>';
-        return true;
+        window . location . replace('pendingorders.php');
+        return false;
     }
 
     if ($stockbalance > $stockordered) {
@@ -53,7 +54,6 @@ if (isset($_GET['salesid'])) {
         echo '<script language="javascript">';
         echo 'alert("dfhdhhfdf SOmhsjbhskb")';
         echo '</script>';
-
     }
 
 
