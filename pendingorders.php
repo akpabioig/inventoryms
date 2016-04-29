@@ -1,4 +1,10 @@
 <?php
+
+function do_alert($msg)
+{
+    echo '<script type="text/javascript">alert("' . $msg . '"); </script>';
+}
+
 session_start();
 if (!isset($_SESSION['user'])) {
     header("Location: login.php");
@@ -63,7 +69,7 @@ $result1 = mysqli_query($db, $sql1);
         <form method="get" action="pendingorders.php"
         ">
         <div id="form3">
-            <h2> SALES ORDERS </h2>
+            <h2> SALES ORDERS kjbhkv</h2>
             <table id="t2">
                 <tr>
                     <th> DATE</th>
@@ -200,9 +206,7 @@ if (isset($_GET['salesid'])) {
     $stockordered->fetchAll()[0]['quantity'];
 
     if ($stockbalance < $stockordered) {
-        echo '<script language="javascript">';
-        echo 'alert("Cant SOmhsjbhskb")';
-        echo '</script>';
+        do_alert("Cant ..... ");
         return false;
     }
 
