@@ -14,10 +14,6 @@ if (isset($_GET['salesid'])) {
         $sth = $db->query($sql);
     } catch (PDOException $e) {
         echo $e->getMessage();
-        echo "<script type='text/javascript'>
-        alert(' SALES ORDER FULFILLED !!!');
-        window.location.replace('pendingorders.php');
-          </script>";
     }
     try {
         $sql1 = "UPDATE stocklevel, salesorder, salesitem
@@ -26,6 +22,10 @@ if (isset($_GET['salesid'])) {
             AND salesitem.sid = salesorder.sid
             AND salesorder.status = 'fulfilled'
             AND salesorder.sid = {$soId}";
+        echo "<script type='text/javascript'>
+        alert(' SALES ORDER FULFILLED !!!');
+        window.location.replace('pendingorders.php');
+          </script>";
         $sth1 = $db->query($sql1);
     } catch (PDOException $f) {
         echo $f->getMessage();
