@@ -12,8 +12,8 @@ if (isset($_GET['salesid'])) {
             SET status = 'fulfilled'
                 WHERE sid = {$soId}";
         $sth = $db->query($sql);
-        echo '<script language="text/javascript">';
-        echo 'alert(message successfully sent)';
+        echo '<script language="javascript">';
+        echo 'alert("message successfully sent")';
         echo '</script>';
     } catch (PDOException $e) {
         echo $e->getMessage();
