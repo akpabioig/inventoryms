@@ -66,7 +66,7 @@ $result1 = mysqli_query($db, $sql1);
             <h2> SALES ORDERS </h2>
             <table id="t2">
                 <tr>
-                    <th> DATE</th>
+                    <th> DATE 335</th>
                     <th> SALES ID</th>
                     <th> CUSTOMER NAME</th>
                     <th> DELIVERY ADDRESS</th>
