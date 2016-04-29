@@ -46,12 +46,12 @@ if ($stock2 > $stock1) {
     return false;
     while ($purchasepend == $salespend) {
         echo "<script type='text/javascript'>
-        alert('PRODUCT IS PENDING FULFILLMENT FROM SUPPLIER !!!');
+        alert('PRODUCT ORDERED IS PENDING FULFILLMENT FROM SUPPLIER !!!');
        window.location.replace('pendingorders.php');
           </script>";
         return false;
     }
-} elseif ($stock2 < $stock1) {
+} else {
     try {
         $sql = "UPDATE salesorder
             SET status = 'fulfilled'
