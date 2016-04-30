@@ -8,15 +8,24 @@ if (isset($_GET['salesid'])) {
     $sqlselect = "SELECT * FROM salesorder WHERE sid = $soId";
     $getResult = mysqli_query($db, $sqlselect);
 
-        try {
-            $sql = "UPDATE salesorder
+    try {
+        $sql = "UPDATE salesorder
             SET status = 'fulfilled'
                 WHERE sid = {$soId}";
-            $sth = $db->query($sql);
-        } catch (PDOException $e) {
-            echo $e->getMessage();
-        }
+        $sth = $db->query($sql);
+    } catch (PDOException $e) {
+        echo $e->getMessage();
+    }
+    ?>
+    <script>
+        alert('ORDER FULFILLED !!!');
+    </script>
+    <?php
+    header("Location: pendingorders.php");
+}
 
+
+/*
         try {
             $sql1 = "UPDATE stocklevel, salesorder, salesitem
             SET stocklevel.stockbalance = stocklevel.stockbalance - salesitem.quantity
@@ -44,5 +53,5 @@ if (isset($_GET['salesid'])) {
         echo $h->getMessage();
     }
 
-header("Location: pendingorders.php");
+header("Location: pendingorders.php");*/
 ?>
