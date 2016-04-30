@@ -16,9 +16,7 @@ if (isset($_GET['salesid'])) {
         } catch (PDOException $e) {
             echo $e->getMessage();
         }
-    echo "<script type='text/javascript'>
-                alert('ORDER FULFILLED !!!');
-              </script>";
+
         try {
             $sql1 = "UPDATE stocklevel, salesorder, salesitem
             SET stocklevel.stockbalance = stocklevel.stockbalance - salesitem.quantity
@@ -30,9 +28,9 @@ if (isset($_GET['salesid'])) {
         } catch (PDOException $f) {
             echo $f->getMessage();
         }
-        echo '<script language="javascript">';
-        echo 'alert("dfhdhhfdf SOmhsjbhskb")';
-        echo '</script>';
+    echo "<script type='text/javascript'>;
+                alert('ORDER FULFILLED !!!');
+              </script>";
     }
 
     try {
