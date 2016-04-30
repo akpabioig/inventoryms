@@ -16,16 +16,7 @@ if (isset($_GET['salesid'])) {
     } catch (PDOException $e) {
         echo $e->getMessage();
     }
-    ?>
-    <script>
-        alert('ORDER FULFILLED !!!');
-    </script>
-    <?php
-    header("Location: pendingorders.php");
-}
 
-
-/*
         try {
             $sql1 = "UPDATE stocklevel, salesorder, salesitem
             SET stocklevel.stockbalance = stocklevel.stockbalance - salesitem.quantity
@@ -38,11 +29,7 @@ if (isset($_GET['salesid'])) {
             echo $f->getMessage();
         }
 
-    echo '<script language="javascript">';
-    echo 'alert("message successfully sent")';
-    echo '</script>';
-
-    }
+}
 
     try {
         $sql4 = "UPDATE stocklevel
@@ -53,5 +40,13 @@ if (isset($_GET['salesid'])) {
         echo $h->getMessage();
     }
 
-header("Location: pendingorders.php");*/
+try {
+    $sql5 = "UPDATE stocklevel
+                SET stocklevel.level = 'STOCK LEVEL LOW... RESTOCK !!!'
+                    WHERE stocklevel.stockbalance < 50";
+    $sth5 = $db->query($sql5);
+} catch (PDOException $h) {
+    echo $h->getMessage();
+}
+header("Location: pendingorders.php");
 ?>
