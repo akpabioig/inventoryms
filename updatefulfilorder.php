@@ -1,6 +1,6 @@
 <?php
 if ($errorMsg) {
-    echo ' <script type="text/javascript">
+    echo ' <script type="text/javascript">;
              alert("' . $errorMsg . '");
         </script> ';
 }
