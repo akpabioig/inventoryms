@@ -1,5 +1,12 @@
 <?php
+if ($errorMsg) {
+    echo ' <script type="text/javascript">
+             alert("' . $errorMsg . '");
+        </script> ';
+}
+
 include('connection.php');
+
 $db = new PDO('mysql:host=us-cdbr-azure-southcentral-e.cloudapp.net;dbname=inventoryms;charset=utf8mb4', 'bee886bc8793e7', '362289e3', array(PDO::ATTR_EMULATE_PREPARES => false,
     PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
 
@@ -8,15 +15,34 @@ if (isset($_GET['salesid'])) {
     $sqlselect = "SELECT * FROM salesorder WHERE sid = $soId";
     $getResult = mysqli_query($db, $sqlselect);
 
-    try {
-        $sql = "UPDATE salesorder
+    $stockbalance = $db->query("SELECT stocklevel.stockbalance
+                FROM stocklevel, salesitem, salesorder
+                WHERE stocklevel.productid = salesitem.productid
+                AND salesitem.sid = salesorder.sid
+                AND salesorder.sid = {$soId}");
+    $stockbalance->setFetchMode(PDO::FETCH_ASSOC);
+    $stockbalance->fetchAll()[0]['stockbalance'];
+
+    $stockordered = $db->query("SELECT quantity
+                FROM salesitem
+                WHERE sid = {$soId}");
+    $stockordered->setFetchMode(PDO::FETCH_ASSOC);
+    $stockordered->fetchAll()[0]['quantity'];
+
+    if ($stockordered > $stockbalance) {
+        $errorMsg = "Cannot fulfil Order";
+
+    } else {
+        try {
+            $sql = "UPDATE salesorder
             SET status = 'fulfilled'
                 WHERE sid = {$soId}";
-        $sth = $db->query($sql);
-    } catch (PDOException $e) {
-        echo $e->getMessage();
+            $sth = $db->query($sql);
+        } catch (PDOException $e) {
+            echo $e->getMessage();
+        }
+        $errorMsg = "Order Fulfilled";
     }
-
 
     try {
             $sql1 = "UPDATE stocklevel, salesorder, salesitem
