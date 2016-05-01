@@ -105,7 +105,7 @@ if ($stockordered > $stockbalance) {
         <form method="get" action="pendingorders.php"
         ">
         <div id="form3">
-            <h2> SALES ORDERS dfd</h2>
+            <h2> SALES ORDERS dfdkj</h2>
             <table id="t2">
                 <tr>
                     <th> DATE</th>
@@ -130,7 +130,7 @@ if ($stockordered > $stockbalance) {
                         <td id = \"quantity\" name= \"quantity\" class = \"tablefield\" disabled>{$row['quantity']}</td>
                         <td id = \"totalcost\" name= \"totalcost\" class = \"tablefield\" disabled>{$row['totalcost']}</td>
                         <td id = \"status\" name= \"status\"  class = \"tablefield\" disabled>{$row['status']}</td>
-                        <td><a href='updatefulfilorder.php?salesid={$row['sid']}' onclick='return editconfig()'><img src = 'images/tick.png' style{height=\"25\" width=\"25\"}></a></td>
+                        <td><a href='pendingorders.php?salesid={$row['sid']}' onclick='return editconfig()'><img src = 'images/tick.png' style{height=\"25\" width=\"25\"}></a></td>
                         <td><a href='deletesalesorder.php?salesid={$row['sid']}' onclick='return deleteconfig()'> <img src = 'images/delete.png' style{height=\"25\" width=\"25\"}></a> </td>
                     </tr>
                                 ";
