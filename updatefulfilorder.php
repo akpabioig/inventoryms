@@ -16,7 +16,7 @@ if (isset($_GET['salesid'])) {
     $sqlselect = "SELECT * FROM salesorder WHERE sid = $soId";
     $getResult = mysqli_query($db, $sqlselect);
 
-    $stockbalance = $db->query("SELECT CONVERT (INT, stocklevel.stockbalance)
+    $stockbalance = $db->query("SELECT stocklevel.stockbalance
                 FROM stocklevel, salesitem, salesorder
                 WHERE stocklevel.productid = salesitem.productid
                 AND salesitem.sid = salesorder.sid
@@ -25,18 +25,18 @@ if (isset($_GET['salesid'])) {
     echo $stockbalance->fetchAll()[0]['stockbalance'];
     echo "<br>";
 
-    $stockordered = $db->query("SELECT CONVERT (INT, quantity)
+    $stockordered = $db->query("SELECT quantity
                 FROM salesitem
                 WHERE sid = {$soId}");
     $stockordered->setFetchMode(PDO::FETCH_ASSOC);
     echo $stockordered->fetchAll()[0]['quantity'];
     echo "<br>";
 
-    if ($stockordered > $stockbalance) {
+    if (($stockordered) > ($stockbalance)) {
         echo
         "a bigger than b";
     } else if ($stockordered < $stockbalance) {
-        echo "bigger than a ";
+        echo "b bigger than a ";
 }
 }
 /*
