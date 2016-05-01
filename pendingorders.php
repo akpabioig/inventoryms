@@ -5,7 +5,6 @@ if (!isset($_SESSION['user'])) {
     header("Location: login.php");
 }
 include('connection.php');
-//
 
 $sql = "SELECT salesorder.datesales, salesorder.sid, addcustomer.customername,
         salesorder.deladdress, addproduct.productname, salesitem.quantity, salesorder.totalcost, salesorder.status
