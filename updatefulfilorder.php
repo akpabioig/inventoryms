@@ -16,7 +16,6 @@ if (isset($_GET['salesid'])) {
     } catch (PDOException $e) {
         echo $e->getMessage();
     }
-    echo '<b>Hello world.</b>';
 
 
     try {
