@@ -38,18 +38,23 @@ if (isset($_GET['salesid'])) {
     $result4->setFetchMode(PDO::FETCH_ASSOC);
     $salespend = $result4->fetchAll()[0]['productid'];
 
-    if ($stockordered > $stockbalance) {
+    ECHO $salespend;
+    echo "<br>";
+    ECHO $salespend;
+    echo "<br>";
+
+    /*if ($stockordered > $stockbalance) {
         echo "<script type='text/javascript'>
         alert('CANNOT FULFIL ORDER BECAUSE STOCK LEVEL TOO LOW !!!');
         window.location.replace('pendingorders.php');
         </script>";
         return false;
 
-        if ($purchasepend == $salespend) {
+        if ($purchasepend = $salespend) {
             echo "<script type='text/javascript'>
-            alert('PRODUCT ORDERED IS PENDING FULFILLMENT FROM SUPPLIER !!!');
+            alert('PRODUCT BEING ORDER IS AWAITING FULFILLMENT FROM SUPPLIER !!! '<BR>' DO NOT STOCK !!!');
             window.location.replace('pendingorders.php');
-          </script>";
+        </script>";
             return;
         } else return false;
         } else if ($stockordered <= $stockbalance) {
@@ -96,7 +101,7 @@ $sql5 = "UPDATE stocklevel
             WHERE stocklevel.stockbalance < 50";
 $sth5 = $db->query($sql5);
 } catch (PDOException $h) {
-echo $h->getMessage();
+echo $h->getMessage();*/
 }
 header("Location: pendingorders.php");
 ?>
