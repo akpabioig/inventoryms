@@ -49,6 +49,10 @@ if (isset($_GET['salesid'])) {
         } catch (PDOException $f) {
             echo $f->getMessage();
         }
+        echo "<script type='text/javascript'>
+        alert('ORDER FULFILLED !!!');
+        window.location.replace('pendingorders.php');
+        </script>";
     }
 
 }
