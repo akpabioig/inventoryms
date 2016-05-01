@@ -13,7 +13,6 @@ if (isset($_GET['salesid'])) {
     $sqlselect = "SELECT * FROM salesorder WHERE sid = $soId";
     $getResult = mysqli_query($db, $sqlselect);
 
-//
 
     $sql = "SELECT salesorder.datesales, salesorder.sid, addcustomer.customername,
         salesorder.deladdress, addproduct.productname, salesitem.quantity, salesorder.totalcost, salesorder.status
@@ -32,12 +31,6 @@ if (isset($_GET['salesid'])) {
          AND purchaseorder.purchaseid = purchaseitem.purchaseid
          AND STATUS = 'pending'";
     $result1 = mysqli_query($db, $sql1);
-}
-?>
-
-
-if ($stockordered > $stockbalance)
-
 }
 ?>
 
