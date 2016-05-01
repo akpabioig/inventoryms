@@ -16,20 +16,19 @@ if (isset($_GET['salesid'])) {
                 AND salesorder.sid = {$soId}");
     $result1->setFetchMode(PDO::FETCH_ASSOC);
     $stockbalance = $result1->fetchAll()[0]['stockbalance'];
-    echo $stockbalance;
-    echo "<br>";
 
     $result2 = $db->query("SELECT quantity
                 FROM salesitem
                 WHERE sid = {$soId}");
     $result2->setFetchMode(PDO::FETCH_ASSOC);
     $stockordered = $result2->fetchAll()[0]['quantity'];
-    echo $stockordered;
-    echo "<br>";
 
     if ($stockordered > $stockbalance) {
-        echo "a bigger than b";
-    } else if ($stockordered < $stockbalance) {
+        echo "<script type='text/javascript'>
+        alert('CANNOT FULFIL ORDER BECAUSE STOCK LEVEL TOO LOW !!!');
+        window.location.replace('pendingorders.php');
+        </script>";
+    } else if ($stockordered <= $stockbalance) {
         echo "b bigger than a ";
     }
 }
