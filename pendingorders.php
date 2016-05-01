@@ -1,36 +1,35 @@
 <?php
-include('connection.php');
+
 session_start();
 if (!isset($_SESSION['user'])) {
     header("Location: login.php");
 }
+include('connection.php');
+//
 
-$db = new PDO('mysql:host=us-cdbr-azure-southcentral-e.cloudapp.net;dbname=inventoryms;charset=utf8mb4', 'bee886bc8793e7', '362289e3', array(PDO::ATTR_EMULATE_PREPARES => false,
-    PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
-
-if (isset($_GET['salesid'])) {
-    $soId = $_GET['salesid'];
-    $sqlselect = "SELECT * FROM salesorder WHERE sid = $soId";
-    $getResult = mysqli_query($db, $sqlselect);
-}
-
-    $sql = "SELECT salesorder.datesales, salesorder.sid, addcustomer.customername,
+$sql = "SELECT salesorder.datesales, salesorder.sid, addcustomer.customername,
         salesorder.deladdress, addproduct.productname, salesitem.quantity, salesorder.totalcost, salesorder.status
                           FROM addcustomer, salesorder, salesitem, addproduct
                           WHERE addcustomer.customerid = salesorder.customerid
                           AND salesitem.productid = addproduct.productid
                           AND salesitem.sid = salesorder.sid
                           AND status = 'pending'";
-    $result = mysqli_query($db, $sql);
+$result = mysqli_query($db, $sql);
 
-    $sql1 = "SELECT purchaseorder.datepurchase, purchaseorder.purchaseid, addsupplier.suppliername,
+$sql1 = "SELECT purchaseorder.datepurchase, purchaseorder.purchaseid, addsupplier.suppliername,
           addproduct.productname, purchaseitem.quantity, purchaseorder.total, purchaseorder.status
          FROM purchaseorder, addsupplier, purchaseitem, addproduct
          WHERE addsupplier.supplierid = purchaseorder.supplierid
          AND addproduct.productid = purchaseitem.productid
          AND purchaseorder.purchaseid = purchaseitem.purchaseid
          AND STATUS = 'pending'";
-    $result1 = mysqli_query($db, $sql1);
+$result1 = mysqli_query($db, $sql1);
+?>
+
+
+if ($stockordered > $stockbalance)
+
+}
 ?>
 
 <!DOCTYPE html>
