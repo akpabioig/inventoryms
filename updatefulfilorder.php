@@ -16,18 +16,18 @@ if (isset($_GET['salesid'])) {
     $sqlselect = "SELECT * FROM salesorder WHERE sid = $soId";
     $getResult = mysqli_query($db, $sqlselect);
 
-    $stockbalance = $db->query("SELECT CAST (stocklevel.stockbalance
+    $stockbalance = $db->query("SELECT CAST (stocklevel.stockbalance AS INT)
                 FROM stocklevel, salesitem, salesorder
                 WHERE stocklevel.productid = salesitem.productid
                 AND salesitem.sid = salesorder.sid
-                AND salesorder.sid = {$soId} AS INT)");
+                AND salesorder.sid = {$soId}");
     $stockbalance->setFetchMode(PDO::FETCH_ASSOC);
     echo $stockbalance->fetchAll()[0]['stockbalance'];
     echo "<br>";
 
-    $stockordered = $db->query("SELECT CAST (quantity
+    $stockordered = $db->query("SELECT CAST (quantity AS INT)
                 FROM salesitem
-                WHERE sid = {$soId} AS INT)");
+                WHERE sid = {$soId}");
     $stockordered->setFetchMode(PDO::FETCH_ASSOC);
     echo $stockordered->fetchAll()[0]['quantity'];
     echo "<br>";
