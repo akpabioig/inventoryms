@@ -45,13 +45,13 @@ if (isset($_GET['salesid'])) {
         </script>";
         return false;
 
-        if ($purchasepend == $salespend) {
+        while ($purchasepend = $salespend) {
             echo "<script type='text/javascript'>
             alert('PRODUCT ORDERED IS PENDING FULFILLMENT FROM SUPPLIER !!! '<br>' NO NEED TO REORDER AGAIN !!! ');
             window.location.replace('pendingorders.php');
           </script>";
             return false;
-        } else return false;
+        }
     } else if ($stockordered <= $stockbalance) {
         try {
             $sql = "UPDATE salesorder
