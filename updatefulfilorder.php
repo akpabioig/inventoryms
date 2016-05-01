@@ -16,8 +16,10 @@ if (isset($_GET['salesid'])) {
     } catch (PDOException $e) {
         echo $e->getMessage();
     }
+    echo '<b>Hello world.</b>';
 
-        try {
+
+    try {
             $sql1 = "UPDATE stocklevel, salesorder, salesitem
             SET stocklevel.stockbalance = stocklevel.stockbalance - salesitem.quantity
             WHERE stocklevel.productid = salesitem.productid
