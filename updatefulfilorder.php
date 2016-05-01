@@ -15,8 +15,7 @@ if (isset($_GET['salesid'])) {
                 AND salesitem.sid = salesorder.sid
                 AND salesorder.sid = {$soId}");
     $stockbalance->setFetchMode(PDO::FETCH_ASSOC);
-    echo $stockbalance->fetchAll()[0]['stockbalance'];
-    echo "<br>";
+    $stockbalance->fetchAll()[0]['stockbalance'];
     echo $stockbalance;
     echo "<br>";
 
@@ -24,14 +23,12 @@ if (isset($_GET['salesid'])) {
                 FROM salesitem
                 WHERE sid = {$soId}");
     $stockordered->setFetchMode(PDO::FETCH_ASSOC);
-    echo $stockordered->fetchAll()[0]['quantity'];
-    echo "<br>";
+    $stockordered->fetchAll()[0]['quantity'];
     echo $stockordered;
     echo "<br>";
 
     if ($stockordered > $stockbalance) {
-        echo
-        "a bigger than b";
+        echo "a bigger than b";
     } else if ($stockordered < $stockbalance) {
         echo "b bigger than a ";
     }
