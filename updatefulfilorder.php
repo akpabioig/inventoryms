@@ -14,18 +14,18 @@ if (isset($_GET['salesid'])) {
                 WHERE stocklevel.productid = salesitem.productid
                 AND salesitem.sid = salesorder.sid
                 AND salesorder.sid = {$soId}");
-    $stockbalance->setFetchMode(PDO::FETCH_ASSOC);
+    $result1 = $stockbalance->setFetchMode(PDO::FETCH_ASSOC);
     echo $stockbalance->fetchAll()[0]['stockbalance'];
     echo "<br>";
 
     $stockordered = $db->query("SELECT quantity
                 FROM salesitem
                 WHERE sid = {$soId}");
-    $stockordered->setFetchMode(PDO::FETCH_ASSOC);
+    $result2 = $stockordered->setFetchMode(PDO::FETCH_ASSOC);
     echo $stockordered->fetchAll()[0]['quantity'];
     echo "<br>";
 
-    if ($stockordered > $stockbalance) {
+    if ($result2 > $result1) {
         echo "a bigger than b";
     } else {
         echo "b bigger than a ";
