@@ -32,8 +32,7 @@ if (isset($_GET['salesid'])) {
 
     if ($stockordered > $stockbalance) {
         debugAlert("Cant");
-        return false;
-
+        return;
     } else {
         try {
             $sql = "UPDATE salesorder
