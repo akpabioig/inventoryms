@@ -35,10 +35,8 @@ if (isset($_GET['salesid'])) {
     if ($stockordered[0] > $stockbalance[0]) {
         echo
         "a bigger than b";
-        return false;
     } else if ($stockordered[0] < $stockbalance[0]) {
         echo "b bigger than a ";
-        return;
 }
 }
 /*
