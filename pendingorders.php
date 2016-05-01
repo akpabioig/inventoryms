@@ -26,11 +26,6 @@ $result1 = mysqli_query($db, $sql1);
 ?>
 
 
-if ($stockordered > $stockbalance)
-
-}
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
