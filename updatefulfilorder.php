@@ -45,12 +45,11 @@ if (isset($_GET['salesid'])) {
         window.location.replace('pendingorders.php');
         </script>";
 
-        if ($purchasepend = $salespend) {
+        if ($purchasepend == $salespend) {
             echo "<script type='text/javascript'>
-            alert('PRODUCT BEING ORDER IS AWAITING FULFILLMENT FROM SUPPLIER !!! '<BR>' ***** DO NOT STOCK **** ');
+            alert('PRODUCT BEING ORDER IS AWAITING FULFILLMENT FROM SUPPLIER !!! '<BR>' ***** DO NOT REORDER **** ');
             window.location.replace('pendingorders.php');
         </script>";
-            return;
         } else return;
         return false;
         } else if ($stockordered <= $stockbalance) {
