@@ -40,7 +40,7 @@ if (isset($_GET['salesid'])) {
 
     ECHO $salespend;
     echo "<br>";
-    ECHO $salespend;
+    ECHO $purchasepend;
     echo "<br>";
 
     /*if ($stockordered > $stockbalance) {
