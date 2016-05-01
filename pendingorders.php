@@ -1,11 +1,35 @@
 <?php
+include('connection.php');
 session_start();
 if (!isset($_SESSION['user'])) {
     header("Location: login.php");
 }
 
-include('connection.php');
+$db = new PDO('mysql:host=us-cdbr-azure-southcentral-e.cloudapp.net;dbname=inventoryms;charset=utf8mb4', 'bee886bc8793e7', '362289e3', array(PDO::ATTR_EMULATE_PREPARES => false,
+    PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
+
+if (isset($_GET['salesid'])) {
+    $soId = $_GET['salesid'];
+    $sqlselect = "SELECT * FROM salesorder WHERE sid = $soId";
+    $getResult = mysqli_query($db, $sqlselect);
+}
+
 //
+$stockbalance = $db->query("SELECT stocklevel.stockbalance
+                FROM stocklevel, salesitem, salesorder
+                WHERE stocklevel.productid = salesitem.productid
+                AND salesitem.sid = salesorder.sid
+                AND salesorder.sid = {$soId}");
+$stockbalance->setFetchMode(PDO::FETCH_ASSOC);
+$stockbalance->fetchAll()[0]['stockbalance'];
+
+$stockordered = $db->query("SELECT quantity
+                FROM salesitem
+                WHERE sid = {$soId}");
+$stockordered->setFetchMode(PDO::FETCH_ASSOC);
+$stockordered->fetchAll()[0]['quantity'];
+//
+
 $sql = "SELECT salesorder.datesales, salesorder.sid, addcustomer.customername,
         salesorder.deladdress, addproduct.productname, salesitem.quantity, salesorder.totalcost, salesorder.status
                           FROM addcustomer, salesorder, salesitem, addproduct
@@ -24,6 +48,24 @@ $sql1 = "SELECT purchaseorder.datepurchase, purchaseorder.purchaseid, addsupplie
          AND STATUS = 'pending'";
 $result1 = mysqli_query($db, $sql1);
 ?>
+
+<?php
+if ($stockordered > $stockbalance) {
+    echo "<script type = application/javascript>
+            alert('Cant fulfil Order');
+          </script>}";
+    return false;
+} else try {
+    $sql = "UPDATE salesorder
+            SET status = 'fulfilled'
+                WHERE sid = {$soId}";
+    $sth = $db->query($sql);
+} catch (PDOException $e) {
+    echo $e->getMessage();
+}
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -63,7 +105,7 @@ $result1 = mysqli_query($db, $sql1);
         <form method="get" action="pendingorders.php"
         ">
         <div id="form3">
-            <h2> SALES ORDERS </h2>
+            <h2> SALES ORDERS dfd</h2>
             <table id="t2">
                 <tr>
                     <th> DATE</th>
