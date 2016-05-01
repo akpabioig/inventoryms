@@ -33,10 +33,11 @@ if (isset($_GET['salesid'])) {
     echo "<br>";
 
     if (($stockordered->fetchAll()[0]['quantity']) > ($stockbalance->fetchAll()[0]['stockbalance'])) {
-        echo
-        "NOT OK";
+        echo "NOT OK";
+        return;
     } else if (($stockordered->fetchAll()[0]['quantity']) < ($stockbalance->fetchAll()[0]['stockbalance'])) {
         echo "OK ";
+        return;
     }
 }
 /*
