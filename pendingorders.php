@@ -104,7 +104,7 @@ if ($stockordered > $stockbalance) {
         <h3>SCROLL TO THE END OF EITHER OF THE RECORDS TO FULFIL/DELETE ORDERS</h3>
         <form method="get" action="pendingorders.php">
         <div id="form3">
-            <h2> SALES ORDERS dfdkj</h2>
+            <h2> SALES ORDERS </h2>
             <table id="t2">
                 <tr>
                     <th> DATE</th>
