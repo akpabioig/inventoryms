@@ -31,7 +31,7 @@ if (isset($_GET['salesid'])) {
 
     if ($stockordered > $stockbalance) {
         $errorMsg = "Cannot fulfil Order";
-        return;
+        return false;
 
     } else {
         try {
@@ -42,7 +42,6 @@ if (isset($_GET['salesid'])) {
         } catch (PDOException $e) {
             echo $e->getMessage();
         }
-        $errorMsg = "Order Fulfilled";
 
         try {
             $sql1 = "UPDATE stocklevel, salesorder, salesitem
@@ -55,6 +54,8 @@ if (isset($_GET['salesid'])) {
         } catch (PDOException $f) {
             echo $f->getMessage();
         }
+        $errorMsg = "Order Fulfilled";
+        return;
     }
 
 }
