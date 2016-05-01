@@ -103,5 +103,5 @@ $sth5 = $db->query($sql5);
 } catch (PDOException $h) {
 echo $h->getMessage();*/
 }
-header("Location: pendingorders.php");
+//header("Location: pendingorders.php");
 ?>
