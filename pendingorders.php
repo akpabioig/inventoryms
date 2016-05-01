@@ -12,59 +12,34 @@ if (isset($_GET['salesid'])) {
     $soId = $_GET['salesid'];
     $sqlselect = "SELECT * FROM salesorder WHERE sid = $soId";
     $getResult = mysqli_query($db, $sqlselect);
-}
 
 //
-$stockbalance = $db->query("SELECT stocklevel.stockbalance
-                FROM stocklevel, salesitem, salesorder
-                WHERE stocklevel.productid = salesitem.productid
-                AND salesitem.sid = salesorder.sid
-                AND salesorder.sid = {$soId}");
-$stockbalance->setFetchMode(PDO::FETCH_ASSOC);
-$stockbalance->fetchAll()[0]['stockbalance'];
 
-$stockordered = $db->query("SELECT quantity
-                FROM salesitem
-                WHERE sid = {$soId}");
-$stockordered->setFetchMode(PDO::FETCH_ASSOC);
-$stockordered->fetchAll()[0]['quantity'];
-//
-
-$sql = "SELECT salesorder.datesales, salesorder.sid, addcustomer.customername,
+    $sql = "SELECT salesorder.datesales, salesorder.sid, addcustomer.customername,
         salesorder.deladdress, addproduct.productname, salesitem.quantity, salesorder.totalcost, salesorder.status
                           FROM addcustomer, salesorder, salesitem, addproduct
                           WHERE addcustomer.customerid = salesorder.customerid
                           AND salesitem.productid = addproduct.productid
                           AND salesitem.sid = salesorder.sid
                           AND status = 'pending'";
-$result = mysqli_query($db, $sql);
+    $result = mysqli_query($db, $sql);
 
-$sql1 = "SELECT purchaseorder.datepurchase, purchaseorder.purchaseid, addsupplier.suppliername,
+    $sql1 = "SELECT purchaseorder.datepurchase, purchaseorder.purchaseid, addsupplier.suppliername,
           addproduct.productname, purchaseitem.quantity, purchaseorder.total, purchaseorder.status
          FROM purchaseorder, addsupplier, purchaseitem, addproduct
          WHERE addsupplier.supplierid = purchaseorder.supplierid
          AND addproduct.productid = purchaseitem.productid
          AND purchaseorder.purchaseid = purchaseitem.purchaseid
          AND STATUS = 'pending'";
-$result1 = mysqli_query($db, $sql1);
-?>
-
-<?php
-if ($stockordered > $stockbalance) {
-    echo "<script type = application/javascript>
-            alert('Cant fulfil Order');
-          </script>}";
-    return false;
-} else try {
-    $sql = "UPDATE salesorder
-            SET status = 'fulfilled'
-                WHERE sid = {$soId}";
-    $sth = $db->query($sql);
-} catch (PDOException $e) {
-    echo $e->getMessage();
+    $result1 = mysqli_query($db, $sql1);
 }
 ?>
 
+
+if ($stockordered > $stockbalance)
+
+}
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -102,7 +77,8 @@ if ($stockordered > $stockbalance) {
         <img src="images/pending.png" style{height="250" width="200" }/>
         <h2>FULFILL/ DELETE ORDERS</h2>
         <h3>SCROLL TO THE END OF EITHER OF THE RECORDS TO FULFIL/DELETE ORDERS</h3>
-        <form method="get" action="pendingorders.php">
+        <form method="get" action="pendingorders.php"
+        ">
         <div id="form3">
             <h2> SALES ORDERS </h2>
             <table id="t2">
@@ -129,7 +105,7 @@ if ($stockordered > $stockbalance) {
                         <td id = \"quantity\" name= \"quantity\" class = \"tablefield\" disabled>{$row['quantity']}</td>
                         <td id = \"totalcost\" name= \"totalcost\" class = \"tablefield\" disabled>{$row['totalcost']}</td>
                         <td id = \"status\" name= \"status\"  class = \"tablefield\" disabled>{$row['status']}</td>
-                        <td><a href='pendingorders.php?salesid={$row['sid']}' onclick='return editconfig()'><img src = 'images/tick.png' style{height=\"25\" width=\"25\"}></a></td>
+                        <td><a href='updatefulfilorder.php?salesid={$row['sid']}' onclick='return editconfig()'><img src = 'images/tick.png' style{height=\"25\" width=\"25\"}></a></td>
                         <td><a href='deletesalesorder.php?salesid={$row['sid']}' onclick='return deleteconfig()'> <img src = 'images/delete.png' style{height=\"25\" width=\"25\"}></a> </td>
                     </tr>
                                 ";
