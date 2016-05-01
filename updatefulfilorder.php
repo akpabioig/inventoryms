@@ -25,9 +25,9 @@ if (isset($_GET['salesid'])) {
     echo $stockordered->fetchAll()[0]['quantity'];
     echo "<br>";
 
-    if ($stockordered > $stockbalance) {
+    if (($stockordered->fetchAll()[0]['quantity']) > ($stockbalance->fetchAll()[0]['stockbalance'])) {
         echo "a bigger than b";
-    } else if ($stockordered < $stockbalance) {
+    } else if (($stockordered->fetchAll()[0]['quantity']) < ($stockbalance->fetchAll()[0]['stockbalance'])) {
         echo "b bigger than a ";
     }
 }
