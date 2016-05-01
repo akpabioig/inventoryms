@@ -22,60 +22,62 @@ if (isset($_GET['salesid'])) {
                 AND salesitem.sid = salesorder.sid
                 AND salesorder.sid = {$soId}");
     $stockbalance->setFetchMode(PDO::FETCH_ASSOC);
-    $stockbalance->fetchAll()[0]['stockbalance'];
+    echo $stockbalance->fetchAll()[0]['stockbalance'];
+    echo "<br>";
 
     $stockordered = $db->query("SELECT quantity
                 FROM salesitem
                 WHERE sid = {$soId}");
     $stockordered->setFetchMode(PDO::FETCH_ASSOC);
-    $stockordered->fetchAll()[0]['quantity'];
-
-    if ($stockordered > $stockbalance) {
-        debugAlert("Cant");
-        return;
-    } else {
-        try {
-            $sql = "UPDATE salesorder
-            SET status = 'fulfilled'
-                WHERE sid = {$soId}";
-            $sth = $db->query($sql);
-        } catch (PDOException $e) {
-            echo $e->getMessage();
-        }
-
-        try {
-            $sql1 = "UPDATE stocklevel, salesorder, salesitem
-            SET stocklevel.stockbalance = stocklevel.stockbalance - salesitem.quantity
-            WHERE stocklevel.productid = salesitem.productid
-            AND salesitem.sid = salesorder.sid
-            AND salesorder.status = 'fulfilled'
-            AND salesorder.sid = {$soId}";
-            $sth1 = $db->query($sql1);
-        } catch (PDOException $f) {
-            echo $f->getMessage();
-        }
-        debugAlert("Order Fulfilled");
-        return;
+    echo $stockordered->fetchAll()[0]['quantity'];
+    echo "<br>";
+}
+/*if ($stockordered > $stockbalance) {
+    debugAlert("Cant");
+    return;
+} else {
+    try {
+        $sql = "UPDATE salesorder
+        SET status = 'fulfilled'
+            WHERE sid = {$soId}";
+        $sth = $db->query($sql);
+    } catch (PDOException $e) {
+        echo $e->getMessage();
     }
+
+    try {
+        $sql1 = "UPDATE stocklevel, salesorder, salesitem
+        SET stocklevel.stockbalance = stocklevel.stockbalance - salesitem.quantity
+        WHERE stocklevel.productid = salesitem.productid
+        AND salesitem.sid = salesorder.sid
+        AND salesorder.status = 'fulfilled'
+        AND salesorder.sid = {$soId}";
+        $sth1 = $db->query($sql1);
+    } catch (PDOException $f) {
+        echo $f->getMessage();
+    }
+    debugAlert("Order Fulfilled");
+    return;
+}
 
 }
 
-    try {
-        $sql4 = "UPDATE stocklevel
-            SET stocklevel.level = 'STOCK LEVEL ... OK !!!'
-                WHERE stocklevel.stockbalance > 49";
-        $sth4 = $db->query($sql4);
-    } catch (PDOException $h) {
-        echo $h->getMessage();
-    }
-
 try {
-    $sql5 = "UPDATE stocklevel
-                SET stocklevel.level = 'STOCK LEVEL LOW... RESTOCK !!!'
-                    WHERE stocklevel.stockbalance < 50";
-    $sth5 = $db->query($sql5);
+    $sql4 = "UPDATE stocklevel
+        SET stocklevel.level = 'STOCK LEVEL ... OK !!!'
+            WHERE stocklevel.stockbalance > 49";
+    $sth4 = $db->query($sql4);
 } catch (PDOException $h) {
     echo $h->getMessage();
 }
-header("Location: pendingorders.php");
+
+try {
+$sql5 = "UPDATE stocklevel
+            SET stocklevel.level = 'STOCK LEVEL LOW... RESTOCK !!!'
+                WHERE stocklevel.stockbalance < 50";
+$sth5 = $db->query($sql5);
+} catch (PDOException $h) {
+echo $h->getMessage();
+}
+header("Location: pendingorders.php");*/
 ?>
