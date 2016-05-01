@@ -44,22 +44,6 @@ if (isset($_GET['salesid'])) {
         alert('CANNOT FULFIL ORDER BECAUSE STOCK LEVEL TOO LOW !!!');
         window.location.replace('pendingorders.php');
         </script>";
-        {
-            if ($purchasepend == $salespend) {
-                echo "<script type='text/javascript'>
-                alert('PRODUCT BEING ORDER IS AWAITING FULFILLMENT FROM SUPPLIER !!! '<BR>' ***** DO NOT REORDER **** ');
-                window.location.replace('pendingorders.php');
-                </script>";
-                return false;
-            } else if ($purchasepend !== $salespend) {
-                echo "<script type='text/javascript'>
-                alert(' REORDER STOCK !!! ');
-                window.location.replace('pendingorders.php');
-            </script>";
-                return false;
-            }
-        }
-
         } else if ($stockordered <= $stockbalance) {
         try {
             $sql = "UPDATE salesorder
@@ -69,14 +53,26 @@ if (isset($_GET['salesid'])) {
         } catch (PDOException $e) {
             echo $e->getMessage();
         }
-
+        if ($purchasepend == $salespend) {
+            echo "<script type='text/javascript'>
+                alert('PRODUCT BEING ORDER IS AWAITING FULFILLMENT FROM SUPPLIER !!! '<BR>' ***** DO NOT REORDER **** ');
+                window.location.replace('pendingorders.php');
+                </script>";
+            return false;
+        } else if ($purchasepend !== $salespend) {
+            echo "<script type='text/javascript'>
+                alert(' REORDER STOCK !!! ');
+                window.location.replace('pendingorders.php');
+            </script>";
+            return false;
+        }
         try {
             $sql1 = "UPDATE stocklevel, salesorder, salesitem
-    SET stocklevel.stockbalance = stocklevel.stockbalance - salesitem.quantity
-    WHERE stocklevel.productid = salesitem.productid
-    AND salesitem.sid = salesorder.sid
-    AND salesorder.status = 'fulfilled'
-    AND salesorder.sid = {$soId}";
+        SET stocklevel.stockbalance = stocklevel.stockbalance - salesitem.quantity
+        WHERE stocklevel.productid = salesitem.productid
+        AND salesitem.sid = salesorder.sid
+        AND salesorder.status = 'fulfilled'
+        AND salesorder.sid = {$soId}";
             $sth1 = $db->query($sql1);
         } catch (PDOException $f) {
             echo $f->getMessage();
@@ -90,12 +86,12 @@ if (isset($_GET['salesid'])) {
 }
 
 try {
-$sql4 = "UPDATE stocklevel
-    SET stocklevel.level = 'STOCK LEVEL ... OK !!!'
-        WHERE stocklevel.stockbalance > 49";
-$sth4 = $db->query($sql4);
+    $sql4 = "UPDATE stocklevel
+            SET stocklevel.level = 'STOCK LEVEL ... OK !!!'
+                WHERE stocklevel.stockbalance > 49";
+    $sth4 = $db->query($sql4);
 } catch (PDOException $h) {
-echo $h->getMessage();
+    echo $h->getMessage();
 }
 
 try {
