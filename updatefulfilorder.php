@@ -29,33 +29,27 @@ if (isset($_GET['salesid'])) {
         window.location.replace('pendingorders.php');
         </script>";
     } else if ($stockordered <= $stockbalance) {
-        echo "b bigger than a ";
-    }
-}
-/*
-try {
-    $sql = "UPDATE salesorder
-    SET status = 'fulfilled'
-        WHERE sid = {$soId}";
-    $sth = $db->query($sql);
-} catch (PDOException $e) {
-    echo $e->getMessage();
-}
+        try {
+            $sql = "UPDATE salesorder
+            SET status = 'fulfilled'
+            WHERE sid = {$soId}";
+            $sth = $db->query($sql);
+        } catch (PDOException $e) {
+            echo $e->getMessage();
+        }
 
-try {
-    $sql1 = "UPDATE stocklevel, salesorder, salesitem
+        try {
+            $sql1 = "UPDATE stocklevel, salesorder, salesitem
     SET stocklevel.stockbalance = stocklevel.stockbalance - salesitem.quantity
     WHERE stocklevel.productid = salesitem.productid
     AND salesitem.sid = salesorder.sid
     AND salesorder.status = 'fulfilled'
     AND salesorder.sid = {$soId}";
-    $sth1 = $db->query($sql1);
-} catch (PDOException $f) {
-    echo $f->getMessage();
-}
-debugAlert("Order Fulfilled");
-return;
-}
+            $sth1 = $db->query($sql1);
+        } catch (PDOException $f) {
+            echo $f->getMessage();
+        }
+    }
 
 }
 
@@ -76,5 +70,5 @@ $sth5 = $db->query($sql5);
 } catch (PDOException $h) {
 echo $h->getMessage();
 }
-header("Location: pendingorders.php");*/
+header("Location: pendingorders.php");
 ?>
