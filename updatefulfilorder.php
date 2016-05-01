@@ -16,7 +16,7 @@ if (isset($_GET['salesid'])) {
                 AND salesorder.sid = {$soId}");
     $result1->setFetchMode(PDO::FETCH_ASSOC);
     $stockbalance = $result1->fetchAll()[0]['stockbalance'];
-    echo $result1;
+    echo $stockbalance;
     echo "<br>";
 
     $result2 = $db->query("SELECT quantity
@@ -24,7 +24,7 @@ if (isset($_GET['salesid'])) {
                 WHERE sid = {$soId}");
     $result2->setFetchMode(PDO::FETCH_ASSOC);
     $stockordered = $result2->fetchAll()[0]['quantity'];
-    echo $result2;
+    echo $stockordered;
     echo "<br>";
 
     if ($stockordered > $stockbalance) {
