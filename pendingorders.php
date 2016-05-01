@@ -102,8 +102,7 @@ if ($stockordered > $stockbalance) {
         <img src="images/pending.png" style{height="250" width="200" }/>
         <h2>FULFILL/ DELETE ORDERS</h2>
         <h3>SCROLL TO THE END OF EITHER OF THE RECORDS TO FULFIL/DELETE ORDERS</h3>
-        <form method="get" action="pendingorders.php"
-        ">
+        <form method="get" action="pendingorders.php">
         <div id="form3">
             <h2> SALES ORDERS dfdkj</h2>
             <table id="t2">
