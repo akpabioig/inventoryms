@@ -1,8 +1,9 @@
 <?php
-if ($errorMsg) {
-    echo ' <script type="text/javascript">;
-             alert("' . $errorMsg . '");
-        </script> ';
+function debugAlert($var)
+{
+    echo '<script type="text/javascript">';
+    echo 'alert("' . $var . '")';
+    echo '</script>';
 }
 
 include('connection.php');
@@ -30,7 +31,7 @@ if (isset($_GET['salesid'])) {
     $stockordered->fetchAll()[0]['quantity'];
 
     if ($stockordered > $stockbalance) {
-        $errorMsg = "Cannot fulfil Order";
+        debugAlert("Cant");
         return false;
 
     } else {
@@ -54,7 +55,7 @@ if (isset($_GET['salesid'])) {
         } catch (PDOException $f) {
             echo $f->getMessage();
         }
-        $errorMsg = "Order Fulfilled";
+        debugAlert("Order Fulfilled");
         return;
     }
 
