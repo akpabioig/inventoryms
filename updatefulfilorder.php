@@ -44,6 +44,7 @@ if (isset($_GET['salesid'])) {
         alert('CANNOT FULFIL ORDER BECAUSE STOCK LEVEL TOO LOW !!!');
         window.location.replace('pendingorders.php');
         </script>";
+        return;
         } else if ($stockordered <= $stockbalance) {
         try {
             $sql = "UPDATE salesorder
@@ -89,6 +90,7 @@ $sth5 = $db->query($sql5);
 } catch (PDOException $h) {
     echo $h->getMessage();
 }
+
 try {
     $sql6 = "UPDATE stocklevel, purchaseorder, purchaseitem
              SET stocklevel.level = 'PRODUCT ORDERED AND PENDING FULFILLMENT !!!'
