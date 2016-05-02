@@ -89,5 +89,15 @@ $sth5 = $db->query($sql5);
 } catch (PDOException $h) {
     echo $h->getMessage();
 }
-//header("Location: pendingorders.php");
+try {
+    $sql6 = "UPDATE stocklevel, purchaseorder, purchaseitem
+             SET stocklevel.level = 'PRODUCT ORDERED AND PENDING FULFILLMENT !!!'
+             WHERE stocklevel.productid = purchaseitem.productid
+             AND purchaseitem.purchaseid = purchaseorder.purchaseid
+             AND purchaseorder.status = 'pending'";
+    $sth6 = $db->query($sql6);
+} catch (PDOException $h) {
+    echo $h->getMessage();
+}
+header("Location: pendingorders.php");
 ?>
