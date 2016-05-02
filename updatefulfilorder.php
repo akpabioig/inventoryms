@@ -42,23 +42,18 @@ if (isset($_GET['salesid'])) {
     if ($stockordered > $stockbalance) {
         if ($purchasepend == $salespend) {
             echo "<script type='text/javascript'>
-            alert('PRODUCT BEING ORDERED IS AWAITING FULFILLMENT FROM SUPPLIER !!! \\n ***** DO NOT REORDER **** ');
+            alert('CANNOT FULFIL ORDER BECAUSE STOCK LEVEL TOO LOW !!! \\n PRODUCT BEING ORDERED BY CUSTOMER IS AWAITING FULFILLMENT FROM SUPPLIER \\n ********** DO NOT REORDER AGAIN ********!!!');
             window.location.replace('pendingorders.php');
             </script>";
             return;
         } else if ($purchasepend !== $salespend) {
             echo "
         <script type='text/javascript'>
-            alert(' REORDER STOCK !!! ');
+            alert('CANNOT FULFIL ORDER BECAUSE STOCK LEVEL TOO LOW !!! \\n ******** REORDER STOCK ********!!! ');
             window.location.replace('pendingorders.php');
         </script>";
             return;
         }
-        echo "<script type='text/javascript'>
-        alert('CANNOT FULFIL ORDER BECAUSE STOCK LEVEL TOO LOW !!!');
-        window.location.replace('pendingorders.php');
-        </script>";
-        return;
         } else if ($stockordered <= $stockbalance) {
         try {
             $sql = "UPDATE salesorder
