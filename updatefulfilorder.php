@@ -43,7 +43,7 @@ if (isset($_GET['salesid'])) {
         if ($purchasepend == $salespend) {
             echo "<script type='text/javascript'>
 
-            alert('     CANNOT FULFIL ORDER BECAUSE STOCK LEVEL TOO LOW !!! \\n \\nPRODUCT BEING ORDERED BY CUSTOMER IS AWAITING FULFILLMENT FROM SUPPLIER \\n \\n                ********** DO NOT REORDER AGAIN !!! *********');
+            alert('     CANNOT FULFIL ORDER BECAUSE STOCK LEVEL TOO LOW !!! \\n \\n     PRODUCT BEING ORDERED BY CUSTOMER IS AWAITING FULFILLMENT FROM SUPPLIER \\n \\n                ********** DO NOT REORDER AGAIN !!! *********');
             window.location.replace('pendingorders.php');
             </script>";
             return;
