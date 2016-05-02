@@ -42,7 +42,7 @@ if (isset($_GET['salesid'])) {
     if ($stockordered > $stockbalance) {
         if ($purchasepend == $salespend) {
             echo "<script type='text/javascript'>
-            alert('PRODUCT BEING ORDERED IS AWAITING FULFILLMENT FROM SUPPLIER !!!  ***** DO NOT REORDER **** ');
+            alert('PRODUCT BEING ORDERED IS AWAITING FULFILLMENT FROM SUPPLIER !!! \\n ***** DO NOT REORDER **** ');
             window.location.replace('pendingorders.php');
             </script>";
             return;
