@@ -6,7 +6,7 @@ $title = htmlspecialchars($_POST['title']);
 $firstname = htmlspecialchars($_POST['firstname']);
 $middlename = htmlspecialchars($_POST['middlename']);
 $lastname = htmlspecialchars($_POST['lastname']);
-$position = htmlspecialchars($_POST['position']);
+$position = htmlspecialchars($_POST['staffposition']);
 $uid = htmlspecialchars($_POST['uid']);
 
 $username = htmlspecialchars($_POST['username']);

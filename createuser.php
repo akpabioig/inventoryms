@@ -69,7 +69,8 @@
                         <td label for = position> <a id = "hash">*</a> COMPANY POSITION : </td>
                     </tr>
                     <tr>
-                        <td> <input type="text" id="position" name="position" value="" class = "formfiel" rows = 1 cols = 40 required></td>
+                        <td><input type="text" id="staffposition" name="staffposition" value="" class="formfiel" rows=1
+                                   cols=40 required></td>
                     </tr>
                     <tr>
                         <td label for="username"> <a id = "hash">*</a> USER NAME : </td>

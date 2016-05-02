@@ -109,7 +109,8 @@ include('connection.php');
                         <td label for=position><a id="hash">*</a> COMPANY POSITION :</td>
                     </tr>
                     <tr>
-                        <td><input type="text" id="position" name="position" value="<?php echo $getstaffposition; ?>"
+                        <td><input type="text" id="staffposition" name="staffposition"
+                                   value="<?php echo $getstaffposition; ?>"
                                    class=" formfiel" rows=1 cols=40required></td>
                     </tr>
                     <tr>
