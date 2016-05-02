@@ -25,7 +25,7 @@
                         echo "Wrong Username or Password !!!";
                     } ?>
                 </p></span>
-            <h2> RGU Oil Services IMS Login</h2>
+            <h2> RGU Oil Services IMS Admin Login</h2>
             <h3> Login with Admin Username and Password </h3>
             <form method="POST" action="adminloginphp.php">
                 <table>
