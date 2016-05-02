@@ -76,7 +76,7 @@ if (isset($_GET['salesid'])) {
             echo $f->getMessage();
         }
         echo "<script type='text/javascript'>
-        alert('ORDER FULFILLED !!!');
+        alert('           ********** ORDER FULFILLED !!! ********** ');
         window.location.replace('pendingorders.php');
         </script>";
         return;
