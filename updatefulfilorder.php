@@ -50,7 +50,7 @@ if (isset($_GET['salesid'])) {
         } else if ($purchasepend !== $salespend) {
             echo "
         <script type='text/javascript'>
-            alert('CANNOT FULFIL ORDER BECAUSE STOCK LEVEL TOO LOW !!! \\n \\n           ********** REORDER STOCK !!! ********** ');
+            alert('     CANNOT FULFIL ORDER BECAUSE STOCK LEVEL TOO LOW !!! \\n \\n           ********** REORDER STOCK !!! ********** ');
             window.location.replace('pendingorders.php');
         </script>";
             return;
