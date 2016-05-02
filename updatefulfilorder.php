@@ -53,19 +53,6 @@ if (isset($_GET['salesid'])) {
         } catch (PDOException $e) {
             echo $e->getMessage();
         }
-        if ($purchasepend == $salespend) {
-            echo "<script type='text/javascript'>
-                alert('PRODUCT BEING ORDER IS AWAITING FULFILLMENT FROM SUPPLIER !!! '<BR>' ***** DO NOT REORDER **** ');
-                window.location.replace('pendingorders.php');
-                </script>";
-            return false;
-        } else if ($purchasepend !== $salespend) {
-            echo "<script type='text/javascript'>
-                alert(' REORDER STOCK !!! ');
-                window.location.replace('pendingorders.php');
-            </script>";
-            return false;
-        }
         try {
             $sql1 = "UPDATE stocklevel, salesorder, salesitem
         SET stocklevel.stockbalance = stocklevel.stockbalance - salesitem.quantity
@@ -82,6 +69,19 @@ if (isset($_GET['salesid'])) {
         window.location.replace('pendingorders.php');
         </script>";
         return;
+    }
+    if ($purchasepend == $salespend) {
+        echo "<script type='text/javascript'>
+                alert('PRODUCT BEING ORDER IS AWAITING FULFILLMENT FROM SUPPLIER !!! '<BR>' ***** DO NOT REORDER **** ');
+                window.location.replace('pendingorders.php');
+                </script>";
+        return false;
+    } else if ($purchasepend !== $salespend) {
+        echo "<script type='text/javascript'>
+                alert(' REORDER STOCK !!! ');
+                window.location.replace('pendingorders.php');
+            </script>";
+        return false;
     }
 }
 
