@@ -36,7 +36,7 @@ include('connection.php');
     </header>
     <section>
         <img src="images/help.png" id="helpicon" style{height="250" width="200" }/>
-        <iframe width="420" height="345"
+        <iframe id=intro width="420" height="345"
                 src="https://www.youtube.com/embed/hmQQ9PGXzW8?autoplay=1">
         </iframe>
         <h2>WELCOME TO THE HELP PAGE OF THE RGU IMS dvvd</h2>
