@@ -52,13 +52,13 @@ include('connection.php');
                 </tr>
                 <tr>
                     <td>
-                        <iframe id=intro width="400" height="300" allowfullscreen="allowfullscreen"
+                        <iframe id=intro width="350" height="300" allowfullscreen="allowfullscreen"
                                 src="https://www.youtube.com/embed/oUbrjlYF1Vw?">
                         </iframe>
                     <td>
                     <td>
-                        <iframe id=intro width="400" height="300" allowfullscreen="allowfullscreen"
-                                src="https://www.youtube.com/embed/oUbrjlYF1Vw?">
+                        <iframe id=intro width="350" height="300" allowfullscreen="allowfullscreen"
+                                src="https://www.youtube.com/embed/?">
                         </iframe>
                     <td>
                 </tr>
