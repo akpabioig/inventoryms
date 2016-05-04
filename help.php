@@ -41,6 +41,7 @@ include('connection.php');
         <div id="form1">
             <video width="320" height="240" autoplay controls>
                 <source src="video/introduction.mp4" type="video/mp4">
+                <source src="video/introduction.ogg" type="video/ogg">
             </video>
         </div>
     </section>
