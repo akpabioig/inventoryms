@@ -91,25 +91,27 @@ if(isset($_GET['custid'])){
             <img src= "images/cust.png" style{height="250" width="200"}/>
             <h2>Customer Details</h2>
             <p> Edit Record of Customers already added to the Inventory list </p>
-            <p>Be careful to fill out compulsory fields indicated by the "*" key</p>
+            <p>Be careful to fill out compulsory fields indicated by the "<a id="hash">*</a>" key</p>
             <form method="post" action="updatecustomer.php" onsubmit="return validateeditcustomerForm()">
                 <div id = "form1">
                     <table>
                         <tr>
                             <td label for="custtype"> <a id = "hash">*</a> Customer Type : </td>
                             <td>
-                                <select class = "formfield" name = "type" value="<?php echo $getcustomertype; ?>">
+                                <select class="formfield" name="type" value="<?php echo $getcustomertype; ?>" required>
                                     <option selected disabled>SELECT</option>
                                     <option <?php if($getcustomertype == 'Company'){echo 'selected';} ?> value = "Company">COMPANY</option>
                                     <option <?php if($getcustomertype == 'Individual'){echo 'selected';} ?>value = "Individual">INDIVIDUAL</option>
                                 </select>
                             </td>
                             <td label for="custn"> <a id = "hash">*</a> Customer Name : </td>
-                            <td><input type="text" id="custn" name="custn" class = "formfield" rows = 1 required value="<?php echo $getcustomername; ?>"></td>
+                            <td><input type="text" id="custn" name="custn" class="formfield" rows=1 required
+                                       value="<?php echo $getcustomername; ?>"></td>
                         </tr>
                         <tr>
                             <td label for ="custtel"> <a id = "hash">*</a> Tel Number : </td>
-                            <td><input type="text" id = "custtel" name= "custtel" class = "formfield" rows = 1 required value="<?php echo $telnumber; ?>"></td>
+                            <td><input type="text" id="custtel" name="custtel" class="formfield" rows=1 required
+                                       value="<?php echo $telnumber; ?>"></td>
                             <td label for ="custfax"> Fax: </td>
                             <td><input type="text" id = "custfax" name= "custfax" class = "formfield" rows = 1 value="<?php echo $fax; ?>"></td>
                         </tr>
@@ -142,21 +144,24 @@ if(isset($_GET['custid'])){
                         </tr>
                         <tr>
                             <td label for="custadd1"> <a id = "hash">*</a> Address Line 1 : </td>
-                            <td><input type="text" id="custadd1" name="custadd1" class = "formfield" rows = 1 value="<?php echo $addressline1; ?>"></td>
+                            <td><input type="text" id="custadd1" name="custadd1" class="formfield" rows=1
+                                       value="<?php echo $addressline1; ?>" required></td>
                             <td label for ="custadd2"> Address Line 2 : </td>
                             <td><input type="text" id="custadd2" name="custadd2" class = "formfield" rows = 1 value="<?php echo $addressline2; ?>"></td>
                         </tr>
                         <tr>
                             <td label for="ctown"> <a id = "hash">*</a> Town/City : </td>
-                            <td><input type="text" id="ctown" name="ctown" class = "formfield" rows = 1 value="<?php echo $town; ?>"></td>
+                            <td><input type="text" id="ctown" name="ctown" class="formfield" rows=1
+                                       value="<?php echo $town; ?>" required></td>
                             <td label for ="ccounty"> County : </td>
                             <td><input type="text" id="ccounty" name="ccounty" class = "formfield" rows = 1 value="<?php echo $county; ?>"></td>
                         </tr>
                         <tr>
-                            <td label for="cpostc"> <a id = "hash">*</a> Postcode : </td>
+                            <td label for="cpostc"> Postcode/Zipcode :</td>
                             <td><input type="text" id="cpostc" name="cpostc" class = "formfield" rows = 1 cols = 5 value="<?php echo $postcode; ?>"></td>
                             <td label for ="ccountry"> <a id = "hash">*</a> Country : </td>
-                            <td><input type="text" id="ccountry" name="ccountry" class = "formfield" rows = 1 value="<?php echo $country; ?>"></td>
+                            <td><input type="text" id="ccountry" name="ccountry" class="formfield" rows=1
+                                       value="<?php echo $country; ?>" required></td>
                         </tr>
                     </table>
                     <input type = "hidden" id="custid" name="custid" value = "<?php echo $customerId; ?>"/>

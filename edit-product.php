@@ -58,7 +58,7 @@ if (!isset($_SESSION['user'])) {
         <img src= "images/product.png" style{height="250" width="200"}/>
         <h2>Product Details</h2>
         <p>Edit Record of Supplier already added to the Inventory list</p>
-        <p>Be careful to fill out compulsory fields indicated by the "*" key</p>
+        <p>Be careful to fill out compulsory fields indicated by the "<a id="hash">*</a>" key</p>
         <form method="post" action="updateproduct.php" onsubmit="return validateeditproductForm()Form()">
             <div id = "form1">
                 <table>
@@ -67,8 +67,8 @@ if (!isset($_SESSION['user'])) {
                         <td><input type="text" id="pnum" name="pnum" class = "formfield" required value="<?php echo $getProdSerial; ?>"></td>
                         <td label for ="supplier"> Supplier : </td>
                         <td>
-                            <select name="supplier">
-                                <option selected disabled>SELECT</option>
+                            <select name="supplier" required>
+                                <option selected disabled><a id="hash">*</a> SELECT</option>
                                 <?php
 
                                 $sql= "SELECT supplierid, suppliername FROM addsupplier";
