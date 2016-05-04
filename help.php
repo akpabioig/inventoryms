@@ -39,7 +39,7 @@ include('connection.php');
         <h2>WELCOME TO TnHE HELP PAGE OF THE RGU IMS</h2>
         <h3>PLAY ANY OF VIDEOS TO VIEW THE HELP WITH VOICE OVER</h3>
         <div id="form1">
-            <video width="320" height="240" autoplay>
+            <video width="320" height="240" autoplay controls>
                 <source src="video/introduction.mp4" type="video/mp4">
             </video>
         </div>
