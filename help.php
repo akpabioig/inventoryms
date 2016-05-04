@@ -56,7 +56,7 @@ include('connection.php');
                         <iframe id=intro width="350" height="300" allowfullscreen="allowfullscreen"
                                 src="https://www.youtube.com/embed/oUbrjlYF1Vw?">
                         </iframe>
-                    <td>
+                    </td>
                     <td>
                         <iframe id=intro width="350" height="300" allowfullscreen="allowfullscreen"
                                 src="https://www.youtube.com/embed/?">
