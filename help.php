@@ -35,7 +35,6 @@ include('connection.php');
         <button id="logout"><a href="logout.php">LOG-OUT</a></button>
     </header>
     <section>
-        <h3>HELP</h3>
         <img src="images/help.png" id="helpicon" style{height="250" width="200" }/>
             <video width="320" height="240" autoplay>
                 <source src="Videos/introduction.mov" type="video/mp4">
