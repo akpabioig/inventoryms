@@ -36,11 +36,11 @@ include('connection.php');
     </header>
     <section>
         <img src="images/help.png" id="helpicon" style{height="250" width="200" }/>
-        <iframe id=intro width="500" height="320"
-                src="https://www.youtube.com/embed/hmQQ9PGXzW8?autoplay=1fullscreen=1">
+        <iframe id=intro width="500" height="320" allowfullscreen="allowfullscreen"
+                src="https://www.youtube.com/embed/hmQQ9PGXzW8?autoplay=1">
         </iframe>
         <nav id="direct">
-        <h2>WELCOME TO THE HELP PAGE OF THE RGU IMS dvvd</h2>
+            <h2>WELCOME TO THE HELP PAGE OF THE RGU IMS</h2>
         <h3>PLAY ANY OF VIDEOS TO VIEW THE HELP WITH VOICE OVER</h3>
         </nav>
         <div id="form1">
