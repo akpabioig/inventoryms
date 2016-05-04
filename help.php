@@ -37,7 +37,7 @@ include('connection.php');
     <section>
         <img src="images/help.png" id="helpicon" style{height="250" width="200" }/>
         <video width="320" height="240" controls>
-            <source src="video/introduction.mp4" type="video/mp4">
+            <source src="introduction.mp4" type="video/mp4">
         </video>
         <h2>WELCOME TO THE HELP PAGE OF THE RGU IMS grg</h2>
         <h3>PLAY ANY OF VIDEOS TO VIEW THE HELP WITH VOICE OVER</h3>
