@@ -36,12 +36,11 @@ include('connection.php');
     </header>
     <section>
         <img src="images/help.png" id="helpicon" style{height="250" width="200" }/>
-        <h2>WELCOME TO THE HELP PAGE OF THE RGU IMS</h2>
+        <h2>WELCOME TO TnHE HELP PAGE OF THE RGU IMS</h2>
         <h3>PLAY ANY OF VIDEOS TO VIEW THE HELP WITH VOICE OVER</h3>
         <div id="form1">
             <video width="320" height="240" controls autoplay>
                 <source src="video/introduction.mp4" type="video/mp4">
-                Your browser does not support the video tag.
             </video>
         </div>
     </section>
