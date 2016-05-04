@@ -71,9 +71,35 @@ include('connection.php');
             </table>
         </div>
     </section>
+
 </div>
 <footer>
     <p>&copy; Akpabio Ignatius, 2016</p>
 </footer>
+<script>
+    var modal17 = document.getElementById('myModal17');
+
+    // Get the button that opens the modal
+    var btn17 = document.getElementById("y2");
+
+    // Get the <span> element that closes the modal
+    var span17 = document.getElementsByClassName("close17")[0];
+
+    // When the user clicks on the button, open the modal
+    btn17.onclick = function () {
+        modal17.style.display = "block";
+    }
+
+    // When the user clicks on <span> (x), close the modal
+    span17.onclick = function () {
+        modal17.style.display = "none";
+    }
+    // When the user clicks anywhere outside of the modal, close it
+    modal17.onclick = function (event17) {
+        if (event17.target == modal17) {
+            modal17.style.display = "none";
+        }
+    }
+</script>
 </body>
 </html>
