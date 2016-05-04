@@ -66,7 +66,7 @@ include('connection.php'); ?>
         <img src= "images/cust.png" style{height="250" width="200"}/>
         <h2>Customer Details</h2>
         <p>Insert the details of the new customer to be added to the inventory list</p>
-        <p>Be careful to fill out compulsory fields indicated by the "*" key</p>
+        <p>Be careful to fill out compulsory fields indicated by the "<a id="hash">*</a>" key</p>
         <form method="post" action="customer.php" onsubmit="return validatecustomerForm()">
             <div id = "form1">
                 <table>
@@ -128,7 +128,7 @@ include('connection.php'); ?>
                         <td><input type="text" id="ccounty" name="ccounty" placeholder="E.g. Aberdeenshire" class = "formfield" rows = 1></td>
                     </tr>
                     <tr>
-                        <td label for="cpostc"> <a id = "hash">*</a> Postcode : </td>
+                        <td label for="cpostc"> Postcode/ Zipcode :</td>
                         <td><input type="text" id="cpostc" name="cpostc" placeholder="E.g. AB207FR" class = "formfield" rows = 1 cols = 5></td>
                         <td label for ="ccountry"> <a id = "hash">*</a> Country : </td>
                         <td><input type="text" id="ccountry" name="ccountry" placeholder="E.g. United Kingdom" class = "formfield" rows = 1></td>

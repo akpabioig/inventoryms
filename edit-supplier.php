@@ -64,7 +64,7 @@ include('connection.php');
         <h2>Supplier Details</h2>
         <p>Edit Record of Supplier already added to system </p>
         <p>Be careful to fill out compulsory fields indicated by the <a id = "hash">*</a> key</p>
-        <form method="post" action="updatesupplier.php">
+        <form method="post" action="updatesupplier.php" onsubmit="return validateeditsupplierForm()">
             <div id = "form1">
                 <table>
                     <tr>

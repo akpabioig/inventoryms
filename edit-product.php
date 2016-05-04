@@ -59,7 +59,7 @@ if (!isset($_SESSION['user'])) {
         <h2>Product Details</h2>
         <p>Edit Record of Supplier already added to the Inventory list</p>
         <p>Be careful to fill out compulsory fields indicated by the "*" key</p>
-        <form method="post" action="updateproduct.php">
+        <form method="post" action="updateproduct.php" onsubmit="return validateeditproductForm()Form()">
             <div id = "form1">
                 <table>
                     <tr>

@@ -41,7 +41,7 @@ include('connection.php');
         </iframe>
         <nav id="direct">
             <h2>WELCOME TO THE HELP PAGE OF THE RGU IMS</h2>
-            <h3>PLAY ANY OF VIDEOS TO VIEW THE HELP WITH VOICE OVER</h3>
+            <h3>PLAY ANY OF VIDEOS TO WATCH THE HELP WITH VOICE OVER</h3>
             <h3> IF THE VIDEOS BECOME TOO BORING YOU MAY CLICK ON THE HEADER OF THE VIDEO TO SEE FAQ's</h3>
         </nav>
         <div id="form4">

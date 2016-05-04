@@ -92,7 +92,7 @@ if(isset($_GET['custid'])){
             <h2>Customer Details</h2>
             <p> Edit Record of Customers already added to the Inventory list </p>
             <p>Be careful to fill out compulsory fields indicated by the "*" key</p>
-            <form method="post" action="updatecustomer.php">
+            <form method="post" action="updatecustomer.php" onsubmit="return validateeditcustomerForm()">
                 <div id = "form1">
                     <table>
                         <tr>
