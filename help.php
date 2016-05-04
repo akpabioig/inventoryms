@@ -47,14 +47,19 @@ include('connection.php');
         <div id="form4">
             <table>
                 <tr>
-                    <td id=videohead> PRODUCT</td>
-                    <td id=videohead> CUSTOMER</td>
-                    <td>
+                    <td> PRODUCT</td>
+                    <td> CUSTOMER</td>
+                    <td> SUPPLIER</td>
                 </tr>
                 <tr>
                     <td>
                         <iframe id=intro width="350" height="300" allowfullscreen="allowfullscreen"
                                 src="https://www.youtube.com/embed/oUbrjlYF1Vw?">
+                        </iframe>
+                    </td>
+                    <td>
+                        <iframe id=intro width="350" height="300" allowfullscreen="allowfullscreen"
+                                src="https://www.youtube.com/embed/?">
                         </iframe>
                     </td>
                     <td>
