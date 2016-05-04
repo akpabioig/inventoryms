@@ -39,7 +39,7 @@ include('connection.php');
         <iframe width="420" height="345"
                 src="https://www.youtube.com/embed/hmQQ9PGXzW8?autoplay=1">
         </iframe>
-        <h2>WELCOME TO THE HELP PAGE OF THE RGU IMS</h2>
+        <h2>WELCOME TO THE HELP PAGE OF THE RGU IMS dvvd</h2>
         <h3>PLAY ANY OF VIDEOS TO VIEW THE HELP WITH VOICE OVER</h3>
         <div id="form1">
 
