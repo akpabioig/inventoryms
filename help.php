@@ -48,7 +48,7 @@ include('connection.php');
             <table>
                 <tr>
                     <td> PRODUCT HELP</td>
-                    <td> CUSTOMER HELP /td>
+                    <td> CUSTOMER HELP</td>
                     <td> SUPPLIER HELP</td>
                 </tr>
                 <tr>
