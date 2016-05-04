@@ -47,8 +47,9 @@ include('connection.php');
         <div id="form4">
             <table>
                 <tr>
-                    <td> PRODUCT</td>
-                    <td> CUSTOMER</td>
+                    <td id=videohead> PRODUCT</td>
+                    <td id=videohead> CUSTOMER</td>
+                    <td>
                 </tr>
                 <tr>
                     <td>
