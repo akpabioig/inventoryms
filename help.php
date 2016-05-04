@@ -36,7 +36,7 @@ include('connection.php');
     </header>
     <section>
         <img src="images/help.png" id="helpicon" style{height="250" width="200" }/>
-        <iframe id=intro width="420" height="345"
+        <iframe id=intro width="450" height="305"
                 src="https://www.youtube.com/embed/hmQQ9PGXzW8?autoplay=1">
         </iframe>
         <nav id="direct">
