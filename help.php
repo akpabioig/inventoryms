@@ -38,7 +38,7 @@ include('connection.php');
         <h3>HELP</h3>
         <img src="images/help.png" id="helpicon" style{height="250" width="200" }/>
             <video width="320" height="240" autoplay>
-                <source src="Videos/introduction.mov" type="video/mov">
+                <source src="Videos/introduction.mov" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
         <h2>WELCOME TO THE HELP PAGE OF THE RGU IMS</h2>
