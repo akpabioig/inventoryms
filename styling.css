@@ -542,3 +542,18 @@ hr{
 #direct {
     clear: both;
 }
+
+#form4 {
+    margin-left: 50px;
+    margin-right: 10%;
+    font-family: Verdana, sans-serif;
+    font-size: large;
+    font-style: inherit;
+    border-radius: 5px;
+    border: solid black;
+    padding: 15px;
+}
+
+#form4 table tr td {
+    text-align: center;
+}

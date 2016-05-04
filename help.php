@@ -44,7 +44,7 @@ include('connection.php');
             <h3>PLAY ANY OF VIDEOS TO VIEW THE HELP WITH VOICE OVER</h3>
             <h3> IF THE VIDEOS BECOME TOO BORING YOU MAY CLICK ON THE HEADER OF THE VIDEO TO SEE FAQ's</h3>
         </nav>
-        <div id="form1">
+        <div id="form4">
             <table>
                 <tr>
                     <td> PRODUCT</td>
