@@ -45,7 +45,7 @@ include('connection.php');
                     <a href="reports.php"><img src="images/reports.jpg" style{height="50" width="50"}/>    Reports</a>
                 </li>
                 <li>
-                    <a href=""><img src="images/help.png" style{height="50" width="50"}/>    Help</a>
+                    <a href="help.php"><img src="images/help.png" style{height="50" width="50" }/> Help</a>
                 </li>
             </ul>
         </nav>
