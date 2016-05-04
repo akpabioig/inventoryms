@@ -60,15 +60,7 @@ include('connection.php');
                         <iframe id=intro width="350" height="300" allowfullscreen="allowfullscreen"
                                 src="https://www.youtube.com/embed/?">
                         </iframe>
-                    <td>
-                </tr>
-                <br>
-                <tr>
-
-                </tr>
-                <tr>
-                    <td>
-                    <td>
+                    </td>
                 </tr>
             </table>
         </div>
