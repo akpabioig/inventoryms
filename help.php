@@ -39,8 +39,8 @@ include('connection.php');
         <h2>WELCOME TO THE HELP PAGE OF THE RGU IMS</h2>
         <h3>PLAY ANY OF VIDEOS TO VIEW THE HELP WITH VOICE OVER</h3>
         <div id="form1">
-            <video width="320" height="240" autoplay>
-                <source src="Videos/introduction.mov" type="video/mp4">
+            <video width="320" height="240" controls autoplay>
+                <source src="Videos/introduction.mov" type="video/mov">
                 Your browser does not support the video tag.
             </video>
         </div>
