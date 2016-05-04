@@ -533,3 +533,7 @@ hr{
     font-weight: bolder;
     font-size: 150%;
 }
+
+#helpicon {
+    float: left;
+}
