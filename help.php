@@ -41,10 +41,36 @@ include('connection.php');
         </iframe>
         <nav id="direct">
             <h2>WELCOME TO THE HELP PAGE OF THE RGU IMS</h2>
-        <h3>PLAY ANY OF VIDEOS TO VIEW THE HELP WITH VOICE OVER</h3>
+            <h3>PLAY ANY OF VIDEOS TO VIEW THE HELP WITH VOICE OVER</h3>
+            <h3> IF THE VIDEOS BECOME TOO BORING YOU MAY CLICK ON THE HEADER OF THE VIDEO TO SEE FAQ's</h3>
         </nav>
         <div id="form1">
+            <table>
+                <tr>
+                    <td> PRODUCT</td>
+                    <td> CUSTOMER</td>
+                </tr>
+                <tr>
+                    <td>
+                        <iframe id=intro width="400" height="300" allowfullscreen="allowfullscreen"
+                                src="https://www.youtube.com/embed/oUbrjlYF1Vw?">
+                        </iframe>
+                    <td>
+                    <td>
+                        <iframe id=intro width="400" height="300" allowfullscreen="allowfullscreen"
+                                src="https://www.youtube.com/embed/oUbrjlYF1Vw?">
+                        </iframe>
+                    <td>
+                </tr>
+                <br>
+                <tr>
 
+                </tr>
+                <tr>
+                    <td>
+                    <td>
+                </tr>
+            </table>
         </div>
     </section>
 </div>
