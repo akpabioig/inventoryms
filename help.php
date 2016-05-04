@@ -40,7 +40,7 @@ include('connection.php');
         <h3>PLAY ANY OF VIDEOS TO VIEW THE HELP WITH VOICE OVER</h3>
         <div id="form1">
             <video width="320" height="240" controls autoplay>
-                <source src="Videos/introduction.mov" type="video/mov">
+                <source src="video/introduction.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
         </div>
