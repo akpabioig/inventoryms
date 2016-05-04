@@ -538,3 +538,7 @@ hr{
 #intro {
     float: right;
 }
+
+#direct {
+    clear: both;
+}
