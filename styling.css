@@ -323,6 +323,7 @@ footer{
     border-radius: 5px;
     border:solid black;
     padding: 15px;
+    clear: both;
 }
 
 #form1 ul li {
