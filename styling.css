@@ -323,7 +323,6 @@ footer{
     border-radius: 5px;
     border:solid black;
     padding: 15px;
-    clear: both;
 }
 
 #form1 ul li {
@@ -533,8 +532,4 @@ hr{
 #highlight {
     font-weight: bolder;
     font-size: 150%;
-}
-
-#helpicon {
-    float: left;
 }
