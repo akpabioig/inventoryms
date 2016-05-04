@@ -37,15 +37,12 @@ include('connection.php');
     <section>
         <h3>HELP</h3>
         <img src="images/help.png" id="helpicon" style{height="250" width="200" }/>
-        <a>
             <video width="320" height="240" autoplay>
                 <source src="Videos/introduction.mov" type="video/mov">
                 Your browser does not support the video tag.
             </video>
-        </a>
-        <h2>HELP</h2>
-        <p>WELCOME TO THE HELP PAGE OF THE RGU IMS</p>
-        <p>PLAY ANY OF VIDEOS TO VIEW THE HELP WITH VOICE OVER</p>
+        <h2>WELCOME TO THE HELP PAGE OF THE RGU IMS</h2>
+        <h3>PLAY ANY OF VIDEOS TO VIEW THE HELP WITH VOICE OVER</h3>
         <div id="form1">
 
         </div>
