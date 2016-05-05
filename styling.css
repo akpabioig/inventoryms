@@ -559,3 +559,12 @@ hr{
     font-size: 150%;
     font-weight: bolder;
 }
+
+#producthelp {
+    cursor: pointer;
+    text-shadow: 5px 5px 5px orange;
+}
+
+#producthelp:hover {
+    background-color: coral;
+}
