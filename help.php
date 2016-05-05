@@ -158,7 +158,7 @@ include('connection.php');
     <div class="modal-content">
         <span class="close2">x</span>
         <header>
-            <h1> Location : WareHouse Location A3</h1>
+            <h1> SUPPLIER HELP FAQ's </h1>
         </header>
         <body>
         <ol>
