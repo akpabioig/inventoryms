@@ -114,6 +114,7 @@
         return ok;
     }
 </script>
+//
 <footer id= "footlogin">
     <p>&copy; Akpabio Ignatius, 2016</p>
 </footer>
