@@ -565,14 +565,14 @@ hr{
     text-shadow: 5px 5px 5px orange;
 }
 
-#producthelp :hover {
+#producthelp:hover {
     background-color: coral;
 }
 
-#customerhelp :hover {
+#customerhelp:hover {
     background-color: coral;
 }
 
-#supplierhelp :hover {
+#supplierhelp:hover {
     background-color: coral;
 }

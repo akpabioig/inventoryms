@@ -83,10 +83,10 @@ include('connection.php');
                 src="https://www.youtube.com/embed/hmQQ9PGXzW8?autoplay=1">
         </iframe>
         <nav id="direct">
-            <h2>WELCOME TO THE HELP PAGE OF THE RGU IMS</h2>
-            <h3>PLAY ANY OF VIDEOS TO WATCH THE HELP WITH VOICE OVER</h3>
+            <h1> WELCOME TO THE HELP PAGE OF THE RGU IMS</h1>
+            <h2> PLAY ANY OF THE VIDEOS TO WATCH THE HELP WITH VOICE OVER</h2>
             <h3> IF THE VIDEOS BECOME TOO BORING YOU MAY </h3>
-            <h3> CLICK ON THE HEADER OF THE VIDEO TO SEE FREQUENTLY ASKED QUESTIONS </h3>
+            <h3> CLICK ON THE HEADER OF THE VIDEO TO SEE FREQUENTLY ASKED QUESTIONS (FAQ's)</h3>
         </nav>
         <div id="form4">
             <table>
