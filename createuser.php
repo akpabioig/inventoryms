@@ -54,10 +54,11 @@
                         <td> <input type="text" id="firstname" name="firstname" value="" class = "formfiel" required></td>
                     </tr>
                     <tr>
-                        <td label for = middlename> <a id = "hash">*</a> MIDDLE NAME : </td>
+                        <td label for=middlename> MIDDLE NAME :</td>
                     </tr>
                     <tr>
-                        <td> <input type="text" id="middlename" name="middlename" value="" class = "formfiel" rows = 1 cols = 40 required></td>
+                        <td><input type="text" id="middlename" name="middlename" value="" class="formfiel" rows=1
+                                   cols=40></td>
                     </tr>
                     <tr>
                         <td label for = lastname> <a id = "hash">*</a> LAST NAME : </td>
