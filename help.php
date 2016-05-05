@@ -112,6 +112,28 @@ include('connection.php');
                         </iframe>
                     </td>
                 </tr>
+                <tr>
+                    <td id="producthelp"> PRODUCT HELP</td>
+                    <td id="customerhelp"> CUSTOMER HELP</td>
+                    <td id="supplierhelp"> SUPPLIER HELP</td>
+                </tr>
+                <tr>
+                    <td>
+                        <iframe id=intro width="350" height="300" allowfullscreen="allowfullscreen"
+                                src="https://www.youtube.com/embed/oUbrjlYF1Vw?">
+                        </iframe>
+                    </td>
+                    <td>
+                        <iframe id=intro width="350" height="300" allowfullscreen="allowfullscreen"
+                                src="https://www.youtube.com/embed/q7iig4ygcCM?">
+                        </iframe>
+                    </td>
+                    <td>
+                        <iframe id=intro width="350" height="300" allowfullscreen="allowfullscreen"
+                                src="https://www.youtube.com/embed/bH7vvv1ct84?">
+                        </iframe>
+                    </td>
+                </tr>
             </table>
         </div>
     </section>
