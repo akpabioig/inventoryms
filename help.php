@@ -85,7 +85,8 @@ include('connection.php');
         <nav id="direct">
             <h2>WELCOME TO THE HELP PAGE OF THE RGU IMS</h2>
             <h3>PLAY ANY OF VIDEOS TO WATCH THE HELP WITH VOICE OVER</h3>
-            <h3> IF THE VIDEOS BECOME TOO BORING YOU MAY CLICK ON THE HEADER OF THE VIDEO TO SEE FAQ's</h3>
+            <h3> IF THE VIDEOS BECOME TOO BORING YOU MAY CLICK ON THE HEADER OF THE VIDEO TO SEE Frequently Asked
+                Questions </h3>
         </nav>
         <div id="form4">
             <table>
@@ -137,6 +138,22 @@ include('connection.php');
         </body>
     </div>
 </div>
+<div id="myModal1" class="modal">
+    <div class="modal-content">
+        <span class="close1">x</span>
+        <header>
+            <h1> CUSTOMER HELP FAQ's </h1>
+        </header>
+        <body>
+        <ol>
+            <li> Must Customer be added before sales can be made ?</li>
+            <p> - Yes, Customer must be added before sales can be made. </p>
+            <li></li>
+            <p></p>
+        </ol>
+        </body>
+    </div>
+</div>
 <script>
     // PRODUCT HELP
     var modal = document.getElementById('myModal');
@@ -154,6 +171,20 @@ include('connection.php');
         }
         }
 
+    var modal1 = document.getElementById('myModal1');
+    var btn1 = document.getElementById("customerhelp");
+    var span1 = document.getElementsByClassName("close1")[0];
+    btn1.onclick = function () {
+        modal1.style.display = "block";
+    }
+    span1.onclick = function () {
+        modal1.style.display = "none";
+    }
+    modal1.onclick = function (event1) {
+        if (event1.target == modal1) {
+            modal1.style.display = "none";
+        }
+    }
 </script>
 </body>
 </html>
