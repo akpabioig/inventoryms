@@ -85,8 +85,8 @@ include('connection.php');
         <nav id="direct">
             <h2>WELCOME TO THE HELP PAGE OF THE RGU IMS</h2>
             <h3>PLAY ANY OF VIDEOS TO WATCH THE HELP WITH VOICE OVER</h3>
-            <h3> IF THE VIDEOS BECOME TOO BORING YOU MAY CLICK ON THE HEADER OF THE VIDEO TO SEE Frequently Asked
-                Questions </h3>
+            <h3> IF THE VIDEOS BECOME TOO BORING YOU MAY </h3>
+            <h3> CLICK ON THE HEADER OF THE VIDEO TO SEE FREQUENTLY ASKED QUESTIONS </h3>
         </nav>
         <div id="form4">
             <table>
