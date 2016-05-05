@@ -198,7 +198,7 @@ if(mysqli_num_rows($result) == 1 || mysqli_num_rows($result) >1){
                     <td><input type="number" name = "totalunit" value = "" class = "formfield"></td>
                 </tr>
                 <tr>
-                    <td>Subtotal (Total - Tax):</td>
+                    <td>Subtotal(Total - Tax):</td>
                     <td><input type="number" name = "subtotal" value = "" class = "formfield"></td>
                 </tr>
                 <tr>

@@ -164,7 +164,7 @@ include('connection.php');
                     <td><input type="number" id = "totunitcust" name ="totunitcust" value = "" class = "formfield"></td>
                 </tr>
                 <tr>
-                    <td>Subtotal (Total - Tax):</td>
+                    <td>Subtotal(Total - Tax):</td>
                     <td><input type="number" id = "subt" name = "subtotalcust" value = "" class = "formfield"></td>
                 </tr>
                 <tr>
