@@ -91,8 +91,8 @@ include('connection.php');
             <table>
                 <tr>
                     <td id="producthelp"> PRODUCT HELP</td>
-                    <td> CUSTOMER HELP</td>
-                    <td> SUPPLIER HELP</td>
+                    <td id="customerhelp"> CUSTOMER HELP</td>
+                    <td id="supplierhelp"> SUPPLIER HELP</td>
                 </tr>
                 <tr>
                     <td>
@@ -130,8 +130,9 @@ include('connection.php');
             <li> What is Initial Stock Price ?</li>
             <p> - Initial Stock Price is the price at which the product is to be bought from the supplier</p>
             <li> How to get the product Report ?</li>
-            <p> - The Product report can be found in the reports section of the system.
+            <p> - The Product report can be found in the reports section of the application.
                 The report icon is on the shortcut pane located at the top right of the application's homepage</p>
+            <li>
         </ol>
         </body>
     </div>

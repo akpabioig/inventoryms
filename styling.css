@@ -560,11 +560,11 @@ hr{
     font-weight: bolder;
 }
 
-#producthelp {
+#producthelp, #customerhelp, #supplierhelp {
     cursor: pointer;
     text-shadow: 5px 5px 5px orange;
 }
 
-#producthelp:hover {
+#producthelp, #customerhelp, #supplierhelp :hover {
     background-color: coral;
 }
