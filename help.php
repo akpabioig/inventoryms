@@ -154,6 +154,22 @@ include('connection.php');
         </body>
     </div>
 </div>
+<div id="myModal2" class="modal">
+    <div class="modal-content">
+        <span class="close2">x</span>
+        <header>
+            <h1> Location : WareHouse Location A3</h1>
+        </header>
+        <body>
+        <ol>
+            <li> Must Supplier be added before purchase can be made ?</li>
+            <p> - Yes, Supplier must be added before purchases can be made. </p>
+            <li></li>
+            <p></p>
+        </ol>
+        </body>
+    </div>
+</div>
 <script>
     // PRODUCT HELP
     var modal = document.getElementById('myModal');
@@ -183,6 +199,20 @@ include('connection.php');
     modal1.onclick = function (event1) {
         if (event1.target == modal1) {
             modal1.style.display = "none";
+        }
+    }
+    var modal2 = document.getElementById('myModal2');
+    var btn2 = document.getElementById("supplierhelp");
+    var span2 = document.getElementsByClassName("close2")[0];
+    btn2.onclick = function () {
+        modal2.style.display = "block";
+    }
+    span2.onclick = function () {
+        modal2.style.display = "none";
+    }
+    modal2.onclick = function (event2) {
+        if (event2.target == modal2) {
+            modal2.style.display = "none";
         }
     }
 </script>
