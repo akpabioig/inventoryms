@@ -38,7 +38,7 @@ include('connection.php');
     <img src= "images/product.png" style{height="250" width="200"}/>
     <h2>Product Details</h2>
     <p>Insert the details of the new product to be added to the inventory list</p>
-    <p>Be careful to fill out compulsory fields indicated by the "*" key</p>
+    <p>Be careful to fill out compulsory fields indicated by the "<a id="hash">*</a>" key</p>
     <form method="post" action="process.php" onsubmit="return validateproductForm()">
         <div id = "form1">
         <table>
