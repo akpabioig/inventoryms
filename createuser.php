@@ -15,12 +15,12 @@
 <body>
 <div style="margin-left:70px">
     <header id = "headlogin">
-        <h1> RGU Oil Services </h1>
-        <h2> Inventory Management Made Easy </h2>
+        <a href="adminhomepage.php"><h1> RGU Oil Services </h1></a>
+        <a href="adminhomepage.php"><h2> Inventory Management Made Easy </h2></a>
     </header>
     <section id = "content">
         <div id = "log">
-            <a href="adminhomepage.php"><h2> RGU Oil Services IMS Login</h2></a>
+            <h2> RGU Oil Services </h2>
             <h4> ADMIN CREATE USER </h4>
             <form method="POST" action="usercreation.php">
                 <?php
