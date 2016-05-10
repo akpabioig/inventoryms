@@ -20,7 +20,7 @@
     </header>
     <section id = "content">
         <div id = "log">
-            <h2> RGU Oil Services IMS Login</h2>
+            <a href="adminhomepage.php"><h2> RGU Oil Services IMS Login</h2></a>
             <h4> ADMIN CREATE USER </h4>
             <form method="POST" action="usercreation.php">
                 <?php

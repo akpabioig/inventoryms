@@ -40,7 +40,7 @@ include('connection.php');
 <body>
 <div style="margin-left:70px">
     <header id="headlogin">
-        <h1> RGU Oil Services </h1>
+        <a href="adminhomepage.php"><h1> RGU Oil Services </h1></a>
         <h2> Inventory Management Made Easy </h2>
     </header>
     <section id="content">
