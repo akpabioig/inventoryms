@@ -87,9 +87,11 @@ include('connection.php');
                     </tr>
                     <tr>
                         <td label for ="suppurl"> Website URL : </td>
-                        <td><input type="url" id = "suppurl" name= "suppurl"  class = "formfield" rows = 1 value="<?php echo $url; ?>"></td>
+                        <td><input type="url" id="url" name="url" class="formfield" rows=1 value="<?php echo $url; ?>">
+                        </td>
                         <td label for ="suppemail"> <a id = "hash">*</a> Supplier Email Address : </td>
-                        <td><input type="email" id = "suppemail" name= "suppemail"  class = "formfield" rows = 1 required value="<?php echo $email; ?>"></td>
+                        <td><input type="email" id="email" name="email" class="formfield" rows=1 required
+                                   value="<?php echo $email; ?>"></td>
                     </tr>
                     <tr>
                         <td label for ="desc"> Description : </td>
