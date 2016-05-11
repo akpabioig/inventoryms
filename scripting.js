@@ -26,11 +26,11 @@ function validateeditcustomerForm(form) {
 }
 
 function validatesalesForm(form) {
-    alert("YOU HAVE SUCCESSFULLY CREATED A NEW SALES ORDER !!!");
+    alert("YOU HAVE SUCCESSFULLY CREATED A NEW SALES ORDER !!! \n SALES AWAITING FULFILLMENT IN ORDER FULFILMENT PAGE !!!");
 }
 
 function validatepurchaseForm(form) {
-    alert("YOU HAVE SUCCESSFULLY CREATED A NEW PURCHASE ORDER !!!");
+    alert("YOU HAVE SUCCESSFULLY CREATED A NEW PURCHASE ORDER !!! \n PURCHASE AWAITING FULFILLMENT IN ORDER FULFILMENT PAGE !!!");
 }
 
 
