@@ -25,7 +25,7 @@ try {
                     contactpersontel = '{$contppn}',
                     telnumber = '{$supptel}',
                     fax = '{$suppfax}',
-                    email = '{$url}',
+                    email = '{$email}',
                     url = '{$url}',
                     description = '{$desc}',
                     addressline1 = '{$add1}',
