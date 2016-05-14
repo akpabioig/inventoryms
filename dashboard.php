@@ -18,9 +18,9 @@
 <div id="wrapper">
 
     <!--  page-wrapper -->
+    <div id="page-wrapper">
 
-
-    <div class="row">
+        <div class="row">
             <!-- Page Header -->
             <div class="col-lg-12">
                 <h1 class="page-header">Dashboard</h1>
@@ -334,6 +334,7 @@
         </div>
 
 
+    </div>
     <!-- end page-wrapper -->
 
 </div>
