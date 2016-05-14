@@ -134,172 +134,128 @@
                         <div id="morris-area-chart"></div>
                     </div>
 
-                </div>
-                <!--End area chart example -->
-                <!--Simple table example -->
-                <div class="panel panel-primary">
-                    <div class="panel-heading">
-                        <i class="fa fa-bar-chart-o fa-fw"></i>Simple Table Example
-                        <div class="pull-right">
-                            <div class="btn-group">
-                                <button type="button" class="btn btn-default btn-xs dropdown-toggle"
-                                        data-toggle="dropdown">
-                                    Actions
-                                    <span class="caret"></span>
-                                </button>
-                                <ul class="dropdown-menu pull-right" role="menu">
-                                    <li><a href="#">Action</a>
-                                    </li>
-                                    <li><a href="#">Another action</a>
-                                    </li>
-                                    <li><a href="#">Something else here</a>
-                                    </li>
-                                    <li class="divider"></li>
-                                    <li><a href="#">Separated link</a>
-                                    </li>
-                                </ul>
+
+                    <div class="col-lg-4">
+                    </div>
+                    <!--End area chart example -->
+                    <!--Simple table example -->
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <i class="fa fa-bar-chart-o fa-fw"></i>Simple Table Example
+                            <div class="pull-right">
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-default btn-xs dropdown-toggle"
+                                            data-toggle="dropdown">
+                                        Actions
+                                        <span class="caret"></span>
+                                    </button>
+                                    <ul class="dropdown-menu pull-right" role="menu">
+                                        <li><a href="#">Action</a>
+                                        </li>
+                                        <li><a href="#">Another action</a>
+                                        </li>
+                                        <li><a href="#">Something else here</a>
+                                        </li>
+                                        <li class="divider"></li>
+                                        <li><a href="#">Separated link</a>
+                                        </li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
-                    </div>
 
-                    <div class="panel-body">
-                        <div class="row">
-                            <div class="col-lg-12">
-                                <ul class="chat">
-                                    <li class="left clearfix">
+                        <div class="panel-body">
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <ul class="chat">
+                                        <li class="left clearfix">
                                     <span class="chat-img pull-left">
                                         <img src="http://placehold.it/50/55C1E7/fff" alt="User Avatar"
                                              class="img-circle"/>
                                     </span>
-                                        <div class="chat-body clearfix">
-                                            <div class="header">
-                                                <strong class="primary-font">Jack Sparrow</strong>
-                                                <small class="pull-right text-muted">
-                                                    <i class="fa fa-clock-o fa-fw"></i>12 mins ago
-                                                </small>
+                                            <div class="chat-body clearfix">
+                                                <div class="header">
+                                                    <strong class="primary-font">Jack Sparrow</strong>
+                                                    <small class="pull-right text-muted">
+                                                        <i class="fa fa-clock-o fa-fw"></i>12 mins ago
+                                                    </small>
+                                                </div>
+                                                <p>
+                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur
+                                                    bibendum
+                                                    ornare dolor, quis ullamcorper ligula sodales.
+                                                </p>
                                             </div>
-                                            <p>
-                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur
-                                                bibendum
-                                                ornare dolor, quis ullamcorper ligula sodales.
-                                            </p>
-                                        </div>
-                                    </li>
-                                    <li class="right clearfix">
+                                        </li>
+                                        <li class="right clearfix">
                                     <span class="chat-img pull-right">
                                         <img src="http://placehold.it/50/FA6F57/fff" alt="User Avatar"
                                              class="img-circle"/>
                                     </span>
-                                        <div class="chat-body clearfix">
-                                            <div class="header">
-                                                <small class=" text-muted">
-                                                    <i class="fa fa-clock-o fa-fw"></i>13 mins ago
-                                                </small>
-                                                <strong class="pull-right primary-font">Bhaumik Patel</strong>
+                                            <div class="chat-body clearfix">
+                                                <div class="header">
+                                                    <small class=" text-muted">
+                                                        <i class="fa fa-clock-o fa-fw"></i>13 mins ago
+                                                    </small>
+                                                    <strong class="pull-right primary-font">Bhaumik Patel</strong>
+                                                </div>
+                                                <p>
+                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur
+                                                    bibendum
+                                                    ornare dolor, quis ullamcorper ligula sodales.
+                                                </p>
                                             </div>
-                                            <p>
-                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur
-                                                bibendum
-                                                ornare dolor, quis ullamcorper ligula sodales.
-                                            </p>
-                                        </div>
-                                    </li>
-                                    <li class="left clearfix">
+                                        </li>
+                                        <li class="left clearfix">
                                     <span class="chat-img pull-left">
                                         <img src="http://placehold.it/50/55C1E7/fff" alt="User Avatar"
                                              class="img-circle"/>
                                     </span>
-                                        <div class="chat-body clearfix">
-                                            <div class="header">
-                                                <strong class="primary-font">Jack Sparrow</strong>
-                                                <small class="pull-right text-muted">
-                                                    <i class="fa fa-clock-o fa-fw"></i>14 mins ago
-                                                </small>
+                                            <div class="chat-body clearfix">
+                                                <div class="header">
+                                                    <strong class="primary-font">Jack Sparrow</strong>
+                                                    <small class="pull-right text-muted">
+                                                        <i class="fa fa-clock-o fa-fw"></i>14 mins ago
+                                                    </small>
+                                                </div>
+                                                <p>
+                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur
+                                                    bibendum
+                                                    ornare dolor, quis ullamcorper ligula sodales.
+                                                </p>
                                             </div>
-                                            <p>
-                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur
-                                                bibendum
-                                                ornare dolor, quis ullamcorper ligula sodales.
-                                            </p>
-                                        </div>
-                                    </li>
-                                    <li class="right clearfix">
+                                        </li>
+                                        <li class="right clearfix">
                                     <span class="chat-img pull-right">
                                         <img src="http://placehold.it/50/FA6F57/fff" alt="User Avatar"
                                              class="img-circle"/>
                                     </span>
-                                        <div class="chat-body clearfix">
-                                            <div class="header">
-                                                <small class=" text-muted">
-                                                    <i class="fa fa-clock-o fa-fw"></i>15 mins ago
-                                                </small>
-                                                <strong class="pull-right primary-font">Bhaumik Patel</strong>
+                                            <div class="chat-body clearfix">
+                                                <div class="header">
+                                                    <small class=" text-muted">
+                                                        <i class="fa fa-clock-o fa-fw"></i>15 mins ago
+                                                    </small>
+                                                    <strong class="pull-right primary-font">Bhaumik Patel</strong>
+                                                </div>
+                                                <p>
+                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur
+                                                    bibendum
+                                                    ornare dolor, quis ullamcorper ligula sodales.
+                                                </p>
                                             </div>
-                                            <p>
-                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur
-                                                bibendum
-                                                ornare dolor, quis ullamcorper ligula sodales.
-                                            </p>
-                                        </div>
-                                    </li>
-                                </ul>
+                                        </li>
+                                    </ul>
+
+                                </div>
 
                             </div>
-
+                            <!-- /.row -->
                         </div>
-                        <!-- /.row -->
+                        <!-- /.panel-body -->
                     </div>
-                    <!-- /.panel-body -->
-                </div>
-                <!--End simple table example -->
+                    <!--End simple table example -->
 
-            </div>
-
-            <div class="col-lg-4">
-                <div class="panel panel-primary text-center no-boder">
-                    <div class="panel-body yellow">
-                        <i class="fa fa-bar-chart-o fa-3x"></i>
-                        <h3>20,741 </h3>
-                    </div>
-                    <div class="panel-footer">
-                            <span class="panel-eyecandy-title">Daily User Visits
-                            </span>
-                    </div>
                 </div>
-                <div class="panel panel-primary text-center no-boder">
-                    <div class="panel-body blue">
-                        <i class="fa fa-pencil-square-o fa-3x"></i>
-                        <h3>2,060 </h3>
-                    </div>
-                    <div class="panel-footer">
-                            <span class="panel-eyecandy-title">Pending Orders Found
-                            </span>
-                    </div>
-                </div>
-                <div class="panel panel-primary text-center no-boder">
-                    <div class="panel-body green">
-                        <i class="fa fa fa-floppy-o fa-3x"></i>
-                        <h3>20 GB</h3>
-                    </div>
-                    <div class="panel-footer">
-                            <span class="panel-eyecandy-title">New Data Uploaded
-                            </span>
-                    </div>
-                </div>
-                <div class="panel panel-primary text-center no-boder">
-                    <div class="panel-body red">
-                        <i class="fa fa-thumbs-up fa-3x"></i>
-                        <h3>2,700 </h3>
-                    </div>
-                    <div class="panel-footer">
-                            <span class="panel-eyecandy-title">New User Registered
-                            </span>
-                    </div>
-                </div>
-
-
-            </div>
-
         </div>
 
         <div class="row">
