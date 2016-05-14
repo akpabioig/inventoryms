@@ -7,7 +7,6 @@
     <!-- Core CSS - Include with every page -->
     <link href="assets/plugins/bootstrap/bootstrap.css" rel="stylesheet"/>
     <link href="assets/font-awesome/css/font-awesome.css" rel="stylesheet"/>
-    <link href="assets/plugins/pace/pace-theme-big-counter.css" rel="stylesheet"/>
     <link href="assets/css/style.css" rel="stylesheet"/>
     <link href="assets/css/main-style.css" rel="stylesheet"/>
     <!-- Page-Level CSS -->
@@ -27,18 +26,6 @@
             </div>
             <!--End Page Header -->
         </div>
-
-        <div class="row">
-            <!-- Welcome -->
-            <div class="col-lg-12">
-                <div class="alert alert-info">
-                    <i class="fa fa-folder-open"></i><b>&nbsp;Hello ! </b>Welcome Back <b>Jonny Deen </b>
-                    <i class="fa  fa-pencil"></i><b>&nbsp;2,000 </b>Support Tickets Pending to Answere. nbsp;
-                </div>
-            </div>
-            <!--end  Welcome -->
-        </div>
-
 
         <div class="row">
             <!--quick info section -->
@@ -356,7 +343,6 @@
 <script src="assets/plugins/jquery-1.10.2.js"></script>
 <script src="assets/plugins/bootstrap/bootstrap.min.js"></script>
 <script src="assets/plugins/metisMenu/jquery.metisMenu.js"></script>
-<script src="assets/plugins/pace/pace.js"></script>
 <script src="assets/scripts/siminta.js"></script>
 <!-- Page-Level Plugin Scripts-->
 <script src="assets/plugins/morris/raphael-2.1.0.min.js"></script>
