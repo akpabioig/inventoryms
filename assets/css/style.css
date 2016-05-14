@@ -36,8 +36,7 @@ body {
     padding: 0 15px;
     min-height: 568px;
     background-color: rgb(209, 212, 216);
-    margin-right: auto;
-    margin-left: auto;
+    margin: auto;
 }
 
 .navbar-static-side ul li {
