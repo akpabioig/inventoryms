@@ -135,16 +135,9 @@
                 <!--End area chart example -->
                 <!--Simple table example -->
 
-                <div class="col-lg-6">
-                    <!--  Bar Chart -->
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            Bar Chart Example
-                        </div>
-                        <div class="panel-body">
-                            <div id="morris-bar-chart"></div>
-                        </div>
-                    </div>
+                <div class="panel-body">
+                    <div id="morris-bar-chart"></div>
+                </div>
 
             <div class="col-lg-4">
                 <div class="panel panel-primary">
