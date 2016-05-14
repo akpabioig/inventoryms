@@ -26,13 +26,13 @@
     <a class="w3-padding-16" href="newpurchase.php"><i class="fa fa-shopping-cart w3-xlarge"></i>PURCHASE ORDER</a>
     <a class="w3-padding-16" href="location.php"><i class="fa fa-map-marker w3-xlarge"></i><br>LOCATION</a>
 </nav>
-<header>
-    <h1> RGU Oil Services </h1>
-    <h2> Inventory Management Made Easy </h2>
-    <button id="logout"><a href="logout.php">LOG-OUT</a></button>
-</header>
 <section>
     <div style="margin-left:70px">
+        <header>
+            <h1> RGU Oil Services </h1>
+            <h2> Inventory Management Made Easy </h2>
+            <button id="logout"><a href="logout.php">LOG-OUT</a></button>
+        </header>
 <!--  wrapper -->
 <div id="wrapper">
 
@@ -350,14 +350,10 @@
             </div>
 
         </div>
-
-
-    <!-- end page-wrapper -->
-
 </div>
-<!-- end wrapper -->
 
-<!-- Core Scripts - Include with every page -->
+
+        <!-- Core Scripts - Include with every page -->
 <script src="assets/plugins/jquery-1.10.2.js"></script>
 <script src="assets/plugins/bootstrap/bootstrap.min.js"></script>
 <script src="assets/plugins/metisMenu/jquery.metisMenu.js"></script>
