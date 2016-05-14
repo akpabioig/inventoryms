@@ -18,14 +18,8 @@
     <![endif]-->
 
 </head>
-
 <body>
-<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-
-</nav>
-
-
-<div class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2 main">
+<div>
     <div class="row">
         <ol class="breadcrumb">
             <li><a href="#">
