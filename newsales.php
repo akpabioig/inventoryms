@@ -48,7 +48,7 @@ include('connection.php');
         <button id="logout"><a href="logout.php">LOG-OUT</a></button>
     </header>
     <section>
-        <h3>NEW SALES ORDER 12</h3>
+        <h3>NEW SALES ORDER Test</h3>
         <img src= "images/sales.jpg" style{height="250" width="200"}/>
         <h2>New Sales Order Details</h2>
         <p>Insert the details of the sale to be made to a registered customer </p>
@@ -188,7 +188,7 @@ include('connection.php');
         $("#product").change(function () {
 
             //alert(this.value);
-            document.getElementById('costcust').innerHTML = this.value;
+            document.getElementById('costcust').innerHTML = 'me';
             //$("#costcust").val(price);
             //$("#itemcustl").val(locid);
 
