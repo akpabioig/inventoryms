@@ -187,19 +187,10 @@ include('connection.php');
     $(document).ready(function(){
         $("#product").change(function () {
 
+            alert(this.value);
             //$("#costcust").val(price);
             //$("#itemcustl").val(locid);
-            $.ajax({
-                type: 'post',
-                url: 'get.php',
-                data: {
-                    get_option: val
-                },
-                success: function (response) {
-                    document.getElementById("costcust").innerHTML = response;
-                    //get data
-                }
-            });
+
         });
     });
 </script>
