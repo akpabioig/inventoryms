@@ -133,8 +133,6 @@
                     </div>
                 </div>
 
-                <div class="col-lg-6">
-                    <!--  Bar Chart -->
                     <div class="panel panel-primary">
                         <div class="panel-heading">
                             Bar Chart Example
@@ -144,8 +142,7 @@
                         </div>
                     </div>
                     <!-- End Bar Chart -->
-                </div>
-
+            </div>
             </div>
 
 
