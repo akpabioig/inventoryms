@@ -136,7 +136,7 @@
 
                 <div class="col-lg-6">
                     <!--  Bar Chart -->
-                    <div class="panel panel-default">
+                    <div class="panel panel-primary">
                         <div class="panel-heading">
                             Bar Chart Example
                         </div>
