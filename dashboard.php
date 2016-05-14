@@ -131,9 +131,7 @@
                     <div class="panel-body">
                         <div id="morris-area-chart"></div>
                     </div>
-
                 </div>
-            </div>
 
                 <div class="col-lg-6">
                     <!--  Bar Chart -->
@@ -147,6 +145,9 @@
                     </div>
                     <!-- End Bar Chart -->
                 </div>
+
+            </div>
+
 
                 <div class="col-lg-4">
                 <div class="panel panel-primary">
