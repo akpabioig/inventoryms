@@ -189,7 +189,7 @@ include('connection.php');
 
             $("#costcust").val(price);
             $("#itemcustl").val(locid);
-            return false;
+            return true;
         });
     });
 </script>
