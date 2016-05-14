@@ -185,17 +185,21 @@ include('connection.php');
 
 <script>
     $(document).ready(function(){
-        /*$("#product").change(function () {
+        $("#product").change(function () {
 
-            $("#costcust").val(price);
-            $("#itemcustl").val(locid);
-        });
-         */
-        $('#product').find('option').click(function () {
-            var optionSelected = $(this);
-            var valueSelected = optionSelected.val();
-            var textSelected = optionSelected.text();
-            alert("selected");
+            //$("#costcust").val(price);
+            //$("#itemcustl").val(locid);
+            $.ajax({
+                type: 'post',
+                url: 'get.php',
+                data: {
+                    get_option: val
+                },
+                success: function (response) {
+                    document.getElementById("costcust").innerHTML = response;
+                    //get data
+                }
+            });
         });
     });
 </script>
