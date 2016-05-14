@@ -30,7 +30,7 @@ include('connection.php');
         <h3> ADMIN HOMEPAGE </h3>
         <img src="images/adminuser.png" style{height="250" width="200" }/>
         <h3>CLICK ON <a id="highlight" href="createuser.php">CREATE USER</a> ICON TO CREATE NEW USER</h3>
-        <h3>CLICK ON <a id="highlight" href="homepage.php">APP HOMEPAGE</a> ICON TO GO TO THE APPLICATION HOMEPAGE</h3>
+        <h3>CLICK ON <a id="highlight" href="index.php">APP HOMEPAGE</a> ICON TO GO TO THE APPLICATION HOMEPAGE</h3>
         <h3>CLICK ON <a id="highlight" href="userdetails.php">APP USER DETAILS</a> ICON TO VIEW ALL REGISTERED USER
             DETAILS </h3>
         <div id="form1">
@@ -39,7 +39,7 @@ include('connection.php');
                     <img src="images/createuser.png" style{height="270" width="250" }/>
                     <span id="createuser">CREATE USER </span>
                 </a>
-                <a id="app" href="homepage.php">
+                <a id="app" href="index.php">
                     <img src="images/application.png" style{height="270" width="250" }/>
                     <span id="application">APP HOMEPAGE</span>
                 </a>

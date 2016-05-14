@@ -1,6 +1,6 @@
 <script>
     if(confirm("Login Successful")){
-        window.location = 'homepage.php';
+        window.location = 'index.php';
     }
     else {
         window.location = 'login.php';
