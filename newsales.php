@@ -49,7 +49,7 @@ include('connection.php');
         <button id="logout"><a href="logout.php">LOG-OUT</a></button>
     </header>
     <section>
-        <h3>NEW SALES ORDER Test11</h3>
+        <h3>NEW SALES ORDER Test101</h3>
         <img src= "images/sales.jpg" style{height="250" width="200"}/>
         <h2>New Sales Order Details</h2>
         <p>Insert the details of the sale to be made to a registered customer </p>
@@ -189,7 +189,7 @@ include('connection.php');
         $("#product").change(function () {
 
             //alert(this.value);
-            $("#costcust").val(this.value);
+            $("#costcust").val(this.price);
             //$("#costcust").val(price);
             //$("#itemcustl").val(locid);
 
