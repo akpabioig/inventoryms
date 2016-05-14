@@ -136,26 +136,14 @@
                 <!--End area chart example -->
                 <!--Simple table example -->
                 <div class="panel panel-primary">
-                    <div class="panel-heading">
-                        <i class="fa fa-bar-chart-o fa-fw"></i>Simple Table Example
-                        <div class="pull-right">
-                            <div class="btn-group">
-                                <button type="button" class="btn btn-default btn-xs dropdown-toggle"
-                                        data-toggle="dropdown">
-                                    Actions
-                                    <span class="caret"></span>
-                                </button>
-                                <ul class="dropdown-menu pull-right" role="menu">
-                                    <li><a href="#">Action</a>
-                                    </li>
-                                    <li><a href="#">Another action</a>
-                                    </li>
-                                    <li><a href="#">Something else here</a>
-                                    </li>
-                                    <li class="divider"></li>
-                                    <li><a href="#">Separated link</a>
-                                    </li>
-                                </ul>
+                    <div class="col-lg-6">
+                        <!--  Bar Chart -->
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                Bar Chart Example
+                            </div>
+                            <div class="panel-body">
+                                <div id="morris-bar-chart"></div>
                             </div>
                         </div>
                     </div>
