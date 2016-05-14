@@ -191,7 +191,7 @@ include('connection.php');
             //$("#costcust").val(price);
             //$("#itemcustl").val(locid);
             console.log(this.value);
-            alert(this.value);
+            alert(this.value[3]);
 
 
         });
