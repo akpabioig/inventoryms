@@ -133,6 +133,7 @@
                     </div>
 
                 </div>
+            </div>
 
                 <div class="col-lg-6">
                     <!--  Bar Chart -->
@@ -146,9 +147,8 @@
                     </div>
                     <!-- End Bar Chart -->
                 </div>
-            </div>
 
-            <div class="col-lg-4">
+                <div class="col-lg-4">
                 <div class="panel panel-primary">
                     <div class="panel-heading">
                         <i class="fa fa-bell fa-fw"></i>Notifications Panel
