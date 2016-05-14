@@ -15,10 +15,9 @@
 </head>
 <body>
 <!--  wrapper -->
+<div id="wrapper">
 
-
-<!--  page-wrapper -->
-    <div id="page-wrapper">
+    <!--  page-wrapper -->
 
         <div class="row">
             <!-- Page Header -->
@@ -334,10 +333,9 @@
         </div>
 
 
-    </div>
     <!-- end page-wrapper -->
 
-
+</div>
 <!-- end wrapper -->
 
 <!-- Core Scripts - Include with every page -->
