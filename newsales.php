@@ -185,11 +185,17 @@ include('connection.php');
 
 <script>
     $(document).ready(function(){
-        $("#product").change(function () {
+        /*$("#product").change(function () {
 
             $("#costcust").val(price);
             $("#itemcustl").val(locid);
-            return true;
+        });
+         */
+        $('select').find('option').click(function () {
+            var optionSelected = $(this);
+            var valueSelected = optionSelected.val();
+            var textSelected = optionSelected.text();
+            alert("selected");
         });
     });
 </script>
