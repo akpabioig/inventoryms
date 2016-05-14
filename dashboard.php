@@ -160,7 +160,6 @@
                         </div>
                     </div>
 
-                    <div class="panel-body">
                         <div class="col-lg-6">
                             <!--  Bar Chart -->
                             <div class="panel panel-default">
@@ -173,7 +172,6 @@
                             </div>
                         </div>
                 <!--End simple table example -->
-            </div>
 
             <div class="col-lg-4">
                 <div class="panel panel-primary">
