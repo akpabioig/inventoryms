@@ -48,7 +48,7 @@ include('connection.php');
         <button id="logout"><a href="logout.php">LOG-OUT</a></button>
     </header>
     <section>
-        <h3>NEW SALES ORDER Test1</h3>
+        <h3>NEW SALES ORDER Test2</h3>
         <img src= "images/sales.jpg" style{height="250" width="200"}/>
         <h2>New Sales Order Details</h2>
         <p>Insert the details of the sale to be made to a registered customer </p>
@@ -122,8 +122,8 @@ include('connection.php');
                                 if(mysqli_num_rows($result) == 1 || mysqli_num_rows($result) >1){
 
                                     while($row = $result -> fetch_array()) {
-                                        echo '<option value="' . $row['productid'] . '">';
-                                        echo $row['productname'];
+                                        echo '<option value=" . $row[] . ">';
+                                        echo $row[1];
                                         echo '</option>';
 
                                         echo '<script type="application/javascript">';
