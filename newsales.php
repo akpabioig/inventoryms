@@ -49,7 +49,7 @@ include('connection.php');
         <button id="logout"><a href="logout.php">LOG-OUT</a></button>
     </header>
     <section>
-        <h3>NEW SALES ORDER ffff</h3>
+        <h3>NEW SALES ORDER dlkdkllwlwe</h3>
         <img src= "images/sales.jpg" style{height="250" width="200"}/>
         <h2>New Sales Order Details</h2>
         <p>Insert the details of the sale to be made to a registered customer </p>
@@ -123,10 +123,10 @@ include('connection.php');
                                 if(mysqli_num_rows($result) == 1 || mysqli_num_rows($result) >1){
 
                                     while($row = $result -> fetch_array()) {
-                                        echo '<option value="' . $row['productid'] . '">';
-                                        echo $row['productname'];
-                                        $price = $row['retailprice'];
-                                        $locid = $row['locationid'];
+                                        echo '<option value="' . $row . '">';
+                                        echo $row[1];
+                                        //$price = $row['retailprice'];
+                                        //$locid = $row['locationid'];
                                         echo '</option>';
 
                                     }
@@ -187,16 +187,10 @@ include('connection.php');
         $("#product").change(function () {
 
             //alert(this.value);
+            $("#costcust").val(this.value[1]);
             //$("#costcust").val(price);
             //$("#itemcustl").val(locid);
-            <?php
-            echo '<script type="application/javascript">';
-            echo 'price = ' . json_encode($row['retailprice']) . ';';
-            echo 'locid = ' . json_encode($row['locationid']) . ';';
-            echo '</script>';
-            ?>
 
-            $("#costcust").val(price);
 
         });
     });
