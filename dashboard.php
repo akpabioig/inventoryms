@@ -17,7 +17,6 @@
     <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
 </head>
 <body>
-<div style="margin-left:70px">
 <nav class="w3-sidenav w3-black" style="width:102px"> <!-- -->
     <a class="w3-padding-16" href="index.php"><i class="fa fa-home w3-xxlarge"></i> <br>HOME </a>
     <a class="w3-padding-16" href="addproduct.php"><i class="fa fa-plus-square w3-xlarge"></i> <br>ADD PRODUCT</a>
@@ -33,6 +32,7 @@
     <button id="logout"><a href="logout.php">LOG-OUT</a></button>
 </header>
 <section>
+    <div style="margin-left:70px">
 <!--  wrapper -->
 <div id="wrapper">
 
@@ -367,8 +367,8 @@
 <script src="assets/plugins/morris/raphael-2.1.0.min.js"></script>
 <script src="assets/plugins/morris/morris.js"></script>
 <script src="assets/scripts/dashboard-demo.js"></script>
+    </div>
 </section>
-</div>
 </body>
 
 </html>
