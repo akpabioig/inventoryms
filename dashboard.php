@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
 </head>
 <body>
+<div style="margin-left:70px">
 <nav class="w3-sidenav w3-black" style="width:102px"> <!-- -->
     <a class="w3-padding-16" href="index.php"><i class="fa fa-home w3-xxlarge"></i> <br>HOME </a>
     <a class="w3-padding-16" href="addproduct.php"><i class="fa fa-plus-square w3-xlarge"></i> <br>ADD PRODUCT</a>
@@ -367,6 +368,7 @@
 <script src="assets/plugins/morris/morris.js"></script>
 <script src="assets/scripts/dashboard-demo.js"></script>
 </section>
+</div>
 </body>
 
 </html>
