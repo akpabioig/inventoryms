@@ -192,28 +192,6 @@
         </div>
     </div><!--/.row-->
 
-    <div class="row">
-        <div class="col-md-6">
-            <div class="panel panel-default">
-                <div class="panel-heading">Pie Chart</div>
-                <div class="panel-body">
-                    <div class="canvas-wrapper">
-                        <canvas class="chart" id="pie-chart"></canvas>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-6">
-            <div class="panel panel-default">
-                <div class="panel-heading">Doughnut Chart</div>
-                <div class="panel-body">
-                    <div class="canvas-wrapper">
-                        <canvas class="chart" id="doughnut-chart"></canvas>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div><!--/.row-->
 
     <div class="row">
         <div class="col-xs-6 col-md-3">
