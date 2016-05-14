@@ -27,12 +27,12 @@
     <a class="w3-padding-16" href="location.php"><i class="fa fa-map-marker w3-xlarge"></i><br>LOCATION</a>
 </nav>
 <section>
-    <div style="margin-left:60px">
-        <header>
-            <h1> RGU Oil Services </h1>
-            <h2> Inventory Management Made Easy </h2>
-            <button id="logout"><a href="logout.php">LOG-OUT</a></button>
-        </header>
+    <header>
+        <h1> RGU Oil Services </h1>
+        <h2> Inventory Management Made Easy </h2>
+        <button id="logout"><a href="logout.php">LOG-OUT</a></button>
+    </header>
+    <div style="margin-left:57px">
 <!--  wrapper -->
 <div id="wrapper">
 
