@@ -173,7 +173,6 @@
                             </div>
                         </div>
                 <!--End simple table example -->
-
             </div>
 
             <div class="col-lg-4">
