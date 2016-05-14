@@ -133,13 +133,19 @@
                     </div>
 
                 </div>
-                <!--End area chart example -->
-                <!--Simple table example -->
-                <div class="panel-body">
-                    <div id="morris-bar-chart"></div>
-                </div>
-                <!--End simple table example -->
 
+                <div class="col-lg-6">
+                    <!--  Bar Chart -->
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            Bar Chart Example
+                        </div>
+                        <div class="panel-body">
+                            <div id="morris-bar-chart"></div>
+                        </div>
+                    </div>
+                    <!-- End Bar Chart -->
+                </div>
             </div>
 
             <div class="col-lg-4">
