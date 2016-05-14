@@ -129,7 +129,7 @@
                     </div>
 
                     <div class="panel-body">
-                        <div id="morris-area-chart"></div>
+                        <div id="morris-line-chart"></div>
                     </div>
 
                 </div>
