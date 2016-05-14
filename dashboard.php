@@ -15,6 +15,20 @@
     <link rel="stylesheet" href="styling.css"/>
 </head>
 <body>
+<nav class="w3-sidenav w3-black" style="width:102px"> <!-- -->
+    <a class="w3-padding-16" href="index.php"><i class="fa fa-home w3-xxlarge"></i> <br>HOME </a>
+    <a class="w3-padding-16" href="addproduct.php"><i class="fa fa-plus-square w3-xlarge"></i> <br>ADD PRODUCT</a>
+    <a class="w3-padding-16" href="addcustomer.php"><i class="fa fa-users w3-xlarge"></i> <br>ADD CUSTOMER</a>
+    <a class="w3-padding-16" href="addsupplier.php"><i class="fa fa-truck w3-xlarge"></i><br>ADD SUPPLIER</a>
+    <a class="w3-padding-16" href="newsales.php"><i class="fa fa-dollar w3-xlarge"></i><br>SALES ORDER</a>
+    <a class="w3-padding-16" href="newpurchase.php"><i class="fa fa-shopping-cart w3-xlarge"></i>PURCHASE ORDER</a>
+    <a class="w3-padding-16" href="location.php"><i class="fa fa-map-marker w3-xlarge"></i><br>LOCATION</a>
+</nav>
+<header>
+    <h1> RGU Oil Services </h1>
+    <h2> Inventory Management Made Easy </h2>
+    <button id="logout"><a href="logout.php">LOG-OUT</a></button>
+</header>
 <section>
 <!--  wrapper -->
 <div id="wrapper">
