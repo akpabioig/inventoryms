@@ -190,7 +190,8 @@ include('connection.php');
             //$("#costcust").val(this.value);
             //$("#costcust").val(price);
             //$("#itemcustl").val(locid);
-            alert(this.value);
+            var myArray = this.value;
+            alert(myArray[1]);
 
 
         });
