@@ -123,7 +123,7 @@ include('connection.php');
                                 if(mysqli_num_rows($result) == 1 || mysqli_num_rows($result) >1){
 
                                     while($row = $result -> fetch_array()) {
-                                        echo '<option value[]="' . $row . '">';
+                                        echo '<option value="' . $row . '">';
                                         echo $row[1];
                                         //$price = $row['retailprice'];
                                         //$locid = $row['locationid'];
@@ -191,7 +191,7 @@ include('connection.php');
             //$("#costcust").val(price);
             //$("#itemcustl").val(locid);
             console.log(this.value);
-            alert(this.value[3]);
+            alert(this.value);
 
 
         });
