@@ -136,12 +136,8 @@
                 <!--End area chart example -->
                 <!--Simple table example -->
                 <div class="panel-body">
-                            <div class="panel-body">
                                 <div id="morris-bar-chart"></div>
-                    </div>
-                    <!-- /.panel-body -->
                 </div>
-                <!--End simple table example -->
 
             </div>
 
