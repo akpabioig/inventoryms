@@ -136,7 +136,6 @@
 
                 <!--End area chart example -->
                 <!--Simple table example -->
-                <div class="row">
                     <div class="col-lg-8">
                         <!--Area chart example -->
                         <div class="panel panel-primary">
