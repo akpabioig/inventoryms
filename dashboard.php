@@ -13,6 +13,8 @@
     <!-- Page-Level CSS -->
     <link href="assets/plugins/morris/morris-0.4.3.min.css" rel="stylesheet"/>
     <link rel="stylesheet" href="styling.css"/>
+    <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
 </head>
 <body>
 <nav class="w3-sidenav w3-black" style="width:102px"> <!-- -->
