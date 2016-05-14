@@ -131,13 +131,16 @@
                     <div class="panel-body">
                         <div id="morris-area-chart"></div>
                     </div>
+
                 </div>
                 <!--End area chart example -->
                 <!--Simple table example -->
-
                 <div class="panel-body">
                     <div id="morris-bar-chart"></div>
                 </div>
+                <!--End simple table example -->
+
+            </div>
 
             <div class="col-lg-4">
                 <div class="panel panel-primary">
