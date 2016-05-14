@@ -123,7 +123,7 @@ include('connection.php');
                                 if(mysqli_num_rows($result) == 1 || mysqli_num_rows($result) >1){
 
                                     while($row = $result -> fetch_array()) {
-                                        echo '<option value="' . $row . '">';
+                                        echo '<option value[]="' . $row . '">';
                                         echo $row[1];
                                         //$price = $row['retailprice'];
                                         //$locid = $row['locationid'];
