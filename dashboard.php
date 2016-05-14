@@ -27,7 +27,7 @@
     <a class="w3-padding-16" href="location.php"><i class="fa fa-map-marker w3-xlarge"></i><br>LOCATION</a>
 </nav>
 <section>
-    <header style="margin-left: 20px">
+    <header style="margin-left: 50px">
         <h1> RGU Oil Services </h1>
         <h2> Inventory Management Made Easy </h2>
         <button id="logout"><a href="logout.php">LOG-OUT</a></button>
