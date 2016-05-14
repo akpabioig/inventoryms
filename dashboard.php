@@ -32,27 +32,6 @@
     </div><!--/.row-->
 
     <div class="row">
-        <div class="col-lg-12">
-            <h1 class="page-header">Charts</h1>
-
-        </div>
-    </div><!--/.row-->
-
-    <div class="row">
-        <div class="col-lg-12">
-            <div class="panel panel-default">
-                <div class="panel-heading">Line Chart</div>
-                <div class="panel-body">
-                    <div class="canvas-wrapper">
-                        <canvas class="main-chart" id="line-chart" height="200" width="600"></canvas>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div><!--/.row-->
-
-
-    <div class="row">
         <div class="col-xs-6 col-md-3">
             <div class="panel panel-default">
                 <div class="panel-body easypiechart-panel">
@@ -86,6 +65,26 @@
                 <div class="panel-body easypiechart-panel">
                     <h4>Label:</h4>
                     <div class="easypiechart" id="easypiechart-red" data-percent="27"><span class="percent">27%</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><!--/.row-->
+
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="page-header">Charts</h1>
+
+        </div>
+    </div><!--/.row-->
+
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">Line Chart</div>
+                <div class="panel-body">
+                    <div class="canvas-wrapper">
+                        <canvas class="main-chart" id="line-chart" height="200" width="600"></canvas>
                     </div>
                 </div>
             </div>
