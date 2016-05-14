@@ -8,7 +8,7 @@
 
 include('connection.php');
 
-$sql = "SELECT locationid, retailprice FROM addproduct WHERE productname = 'fdsgdfgs'";
+$sql = "SELECT max(sid) FROM salesorder";
 $record = mysqli_query($db, $sql);
 
 while ($row = $record->fetch_array()) {
