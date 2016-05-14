@@ -124,7 +124,7 @@ include('connection.php');
 
                                     while($row = $result -> fetch_array()) {
                                         echo '<option value="' . $row . '">';
-                                        echo $row[1];
+                                        echo $row[0];
                                         //$price = $row['retailprice'];
                                         //$locid = $row['locationid'];
                                         echo '</option>';
