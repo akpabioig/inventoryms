@@ -33,7 +33,7 @@ include('connection.php');
 
 </head>
 <body>
-<nav class="w3-sidenav w3-black" style="width:102px"> <!-- nav -->
+<nav class="w3-sidenav w3-black" style="width:102px"> <!-- -->
     <a class="w3-padding-16" href="homepage.php"><i class="fa fa-home w3-xxlarge"></i> <br>HOME </a>
     <a class="w3-padding-16" href="addproduct.php"><i class="fa fa-plus-square w3-xlarge"></i> <br>ADD PRODUCT</a>
     <a class="w3-padding-16" href="addcustomer.php"><i class="fa fa-users w3-xlarge"></i> <br>ADD CUSTOMER</a>
@@ -49,7 +49,7 @@ include('connection.php');
         <button id="logout"><a href="logout.php">LOG-OUT</a></button>
     </header>
     <section>
-        <h3>NEW SALES ORDER pppp</h3>
+        <h3>NEW SALES ORDER ffff</h3>
         <img src= "images/sales.jpg" style{height="250" width="200"}/>
         <h2>New Sales Order Details</h2>
         <p>Insert the details of the sale to be made to a registered customer </p>
@@ -125,12 +125,9 @@ include('connection.php');
                                     while($row = $result -> fetch_array()) {
                                         echo '<option value="' . $row['productid'] . '">';
                                         echo $row['productname'];
-                                        echo '<script type="application/javascript">';
-                                        echo 'price = ' . json_encode($row['retailprice']) . ';';
-                                        echo 'locid = ' . json_encode($row['locationid']) . ';';
-                                        echo '</script>';
+                                        $price = $row['retailprice'];
+                                        $locid = $row['locationid'];
                                         echo '</option>';
-
 
                                     }
                                 }else{
@@ -190,9 +187,16 @@ include('connection.php');
         $("#product").change(function () {
 
             //alert(this.value);
-            $("#costcust").val(price);
             //$("#costcust").val(price);
             //$("#itemcustl").val(locid);
+            <?php
+            echo '<script type="application/javascript">';
+            echo 'price = ' . json_encode($row['retailprice']) . ';';
+            echo 'locid = ' . json_encode($row['locationid']) . ';';
+            echo '</script>';
+            ?>
+
+            $("#costcust").val(price);
 
         });
     });
