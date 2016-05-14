@@ -131,22 +131,13 @@
                     <div class="panel-body">
                         <div id="morris-area-chart"></div>
                     </div>
+
                 </div>
 
-
-                    <div class="panel panel-primary">
-                        <div class="panel-heading">
-                            Bar Chart Example
-                        </div>
-                        <div class="panel-body">
-                            <div id="morris-bar-chart"></div>
-                        </div>
-                    </div>
-                    <!-- End Bar Chart -->
+                <div class="panel-body">
+                    <div id="morris-bar-chart"></div>
+                </div>
             </div>
-            </div>
-            </div>
-
 
                 <div class="col-lg-4">
                 <div class="panel panel-primary">
