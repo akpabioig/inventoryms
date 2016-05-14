@@ -124,7 +124,7 @@ include('connection.php');
 
                                     while($row = $result -> fetch_array()) {
                                         echo '<option value="' . $row . '">';
-                                        echo $row[0];
+                                        echo $row[1];
                                         //$price = $row['retailprice'];
                                         //$locid = $row['locationid'];
                                         echo '</option>';
@@ -187,9 +187,10 @@ include('connection.php');
         $("#product").change(function () {
 
             //alert(this.value);
-            $("#costcust").val(this.value[1]);
+            //$("#costcust").val(this.value);
             //$("#costcust").val(price);
             //$("#itemcustl").val(locid);
+            alert(this.valueOf(1));
 
 
         });
