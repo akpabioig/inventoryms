@@ -22,6 +22,7 @@ include('connection.php');
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
 
     <script type="text/javascript">
+        var price, locid;
         $(document).ready(function() {
             $("#addp").click(function() {
                 $('#form5 tbody>tr:last').clone(true).insertAfter('#form5 tbody>tr:last');
@@ -48,7 +49,7 @@ include('connection.php');
         <button id="logout"><a href="logout.php">LOG-OUT</a></button>
     </header>
     <section>
-        <h3>NEW SALES ORDER Test4</h3>
+        <h3>NEW SALES ORDER Test11</h3>
         <img src= "images/sales.jpg" style{height="250" width="200"}/>
         <h2>New Sales Order Details</h2>
         <p>Insert the details of the sale to be made to a registered customer </p>
@@ -122,13 +123,13 @@ include('connection.php');
                                 if(mysqli_num_rows($result) == 1 || mysqli_num_rows($result) >1){
 
                                     while($row = $result -> fetch_array()) {
-                                        echo '<option value=" . $row[] . ">';
-                                        echo $row[1];
+                                        echo '<option value="' . $row['productid'] . '">';
+                                        echo $row['productname'];
                                         echo '</option>';
 
                                         echo '<script type="application/javascript">';
-                                        echo 'var price = ' . json_encode($row['retailprice']) . ';';
-                                        echo 'var locid = ' . json_encode($row['locationid']) . ';';
+                                        echo 'price = ' . json_encode($row['retailprice']) . ';';
+                                        echo 'locid = ' . json_encode($row['locationid']) . ';';
                                         echo '</script>';
                                     }
                                 }else{
@@ -188,7 +189,7 @@ include('connection.php');
         $("#product").change(function () {
 
             //alert(this.value);
-            $("#costcust").val(this.value[2]);
+            $("#costcust").val(this.value);
             //$("#costcust").val(price);
             //$("#itemcustl").val(locid);
 
