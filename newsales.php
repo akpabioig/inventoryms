@@ -191,7 +191,7 @@ include('connection.php');
             $("#itemcustl").val(locid);
         });
          */
-        $('select').find('option').click(function () {
+        $('#product').find('option').click(function () {
             var optionSelected = $(this);
             var valueSelected = optionSelected.val();
             var textSelected = optionSelected.text();
