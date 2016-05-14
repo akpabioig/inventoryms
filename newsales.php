@@ -188,7 +188,7 @@ include('connection.php');
         $("#product").change(function () {
 
             //alert(this.value);
-            document.getElementById('costcust').innerHTML = 'me';
+            $("costcust").val(this.value);
             //$("#costcust").val(price);
             //$("#itemcustl").val(locid);
 
