@@ -29,7 +29,7 @@ body {
 #wrapper {
     width: 100%;
     margin-top: 55px !important;
-    background-color: #b12077;
+    background-color: rgba(177, 32, 119, 0.38);
 }
 
 #page-wrapper {
