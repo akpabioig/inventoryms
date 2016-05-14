@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Lumino - Charts</title>
+    <title>Dashboard</title>
 
     <link href="./dashboard/css/bootstrap.min.css" rel="stylesheet">
     <link href="./dashboard/css/datepicker3.css" rel="stylesheet">
@@ -45,19 +45,6 @@
                 <div class="panel-body">
                     <div class="canvas-wrapper">
                         <canvas class="main-chart" id="line-chart" height="200" width="600"></canvas>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div><!--/.row-->
-
-    <div class="row">
-        <div class="col-lg-12">
-            <div class="panel panel-default">
-                <div class="panel-heading">Bar Chart</div>
-                <div class="panel-body">
-                    <div class="canvas-wrapper">
-                        <canvas class="main-chart" id="bar-chart" height="200" width="600"></canvas>
                     </div>
                 </div>
             </div>
