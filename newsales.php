@@ -194,7 +194,7 @@ include('connection.php');
                 // do stuff
                 alert(data);
                 var matches = data.match(/\d+$/);
-                console.log(matches[0]);
+                console.log(matches[1]);
                 $("#itemcustl").val(data);
                 $("#costcust").val(matches);
 
