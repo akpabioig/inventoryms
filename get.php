@@ -14,8 +14,8 @@ $sql = "SELECT locationid, retailprice FROM addproduct
 $record = mysqli_query($db, $sql);
 
 while ($row = $record->fetch_array()) {
-    echo $row['locationid'];
     echo $row['retailprice'];
+    echo $row['locationid'];
 }
 
 
