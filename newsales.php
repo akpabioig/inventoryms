@@ -190,10 +190,9 @@ include('connection.php');
                 url: 'get.php',
                 type: 'POST',
                 data: {search: this.value}
-            }).done(function (data, data1) {
+            }).done(function (data) {
                 // do stuff
                 alert(data);
-                alert(data1);
 
             })
             //$("#costcust").val(this.value);
