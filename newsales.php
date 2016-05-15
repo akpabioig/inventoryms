@@ -186,7 +186,7 @@ include('connection.php');
     $(document).ready(function(){
         $("#product").change(function () {
 
-            //alert(this.value);
+            alert(this.value);
             //$("#costcust").val(this.value);
             //$("#costcust").val(price);
             //$("#itemcustl").val(locid);
