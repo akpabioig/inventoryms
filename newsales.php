@@ -193,7 +193,10 @@ include('connection.php');
             }).done(function (data) {
                 // do stuff
                 alert(data);
+                var matches = data.match(/\d+$/);
+                console.log(matches[0]);
                 $("#itemcustl").val(data);
+
 
             })
             //$("#costcust").val(this.value);
