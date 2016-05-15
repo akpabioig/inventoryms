@@ -223,6 +223,7 @@ include('connection.php');
 
         $("#discountcust").change(function(){
             $("#minitotal").val(parseInt(document.getElementById('minitotal').value) - parseInt(this.value));
+            //changes
         })
     });
 </script>
