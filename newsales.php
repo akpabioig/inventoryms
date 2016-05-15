@@ -193,7 +193,7 @@ include('connection.php');
             }).done(function (data) {
                 // do stuff
                 alert(data);
-                $("#costcust").val(data);
+                $("#itemcustl").val(data);
 
             })
             //$("#costcust").val(this.value);
