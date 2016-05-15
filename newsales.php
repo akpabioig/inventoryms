@@ -195,7 +195,7 @@ include('connection.php');
                 alert(data);
                 var amount = data.match(/\d+$/);
                 var digit = (''+amount)[0];
-                var realFigure = (''+amount)[1:];
+                var realFigure = amount.slice(1, -1);
                 console.log(realFigure);
                 console.log(digit);
                 var answer = data;
