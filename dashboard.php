@@ -101,7 +101,8 @@
             </div>
 
             <div class="row">
-                <div class="col-lg-6">
+                <div class="col-lg-8">
+                    <!--Area chart example -->
                     <!--  Line Chart -->
                     <div class="panel panel-default">
                         <div class="panel-heading">
@@ -113,6 +114,21 @@
                     </div>
                     <!--  End Line Chart -->
                 </div>
+
+                <div class="panel-body">
+                    <div id="morris-area-chart"></div>
+                </div>
+
+
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        Bar Chart Example
+                    </div>
+                    <div class="panel-body">
+                        <div id="morris-bar-chart"></div>
+                    </div>
+                </div>
+            </div>
 
                 <div class="col-lg-4">
                 <div class="panel panel-primary">
