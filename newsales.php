@@ -197,13 +197,10 @@ include('connection.php');
                 var digit = (''+amount)[0];
                 var realFigure = '' + amount;
                 realFigure = realFigure.slice(1, realFigure.length);
-                console.log(realFigure);
-                console.log(digit);
                 var answer = data;
                 answer = answer.replace(/\d/g, '');
-                console.log(amount[0]);
                 $("#itemcustl").val(answer+digit);
-                $("#costcust").val(amount);
+                $("#costcust").val(realFigure);
 
 
             })
