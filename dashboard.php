@@ -50,24 +50,23 @@
             <!--quick info section -->
             <div class="col-lg-3">
                 <div class="alert alert-danger text-center">
-                    <i class="fa fa-calendar fa-3x"></i>&nbsp;<b>20 </b>Meetings Sheduled This Month
+                    <i class="fa fa-calendar fa-3x"></i>&nbsp;<b>20 </b> Total Number Of Sales
 
                 </div>
             </div>
             <div class="col-lg-3">
                 <div class="alert alert-success text-center">
-                    <i class="fa  fa-beer fa-3x"></i>&nbsp;<b>27 % </b>Profit Recorded in This Month
-                </div>
-            </div>
-            <div class="col-lg-3">
-                <div class="alert alert-info text-center">
-                    <i class="fa fa-rss fa-3x"></i>&nbsp;<b>1,900</b> New Subscribers This Year
-
+                    <i class="fa  fa-beer fa-3x"></i>&nbsp;<b>27 % </b>Total Number Of Purchases
                 </div>
             </div>
             <div class="col-lg-3">
                 <div class="alert alert-warning text-center">
-                    <i class="fa  fa-pencil fa-3x"></i>&nbsp;<b>2,000 $ </b>Payment Dues For Rejected Items
+                    <i class="fa  fa-pencil fa-3x"></i>&nbsp;<b>2,000 $ </b>Total Number Of Customers
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <div class="alert alert-warning text-center">
+                    <i class="fa  fa-pencil fa-3x"></i>&nbsp;<b>2,000 $ </b>Total Number of Suppliers
                 </div>
             </div>
             <!--end quick info section -->
@@ -76,25 +75,26 @@
             <div class="row">
                 <!--quick info section -->
                 <div class="col-lg-3">
+                    <div class="alert alert-info text-center">
+                        <i class="fa fa-rss fa-3x"></i>&nbsp;<b>1,900</b> Total Goods In Stock
+
+                    </div>
+                </div>
+                <div class="col-lg-3">
                     <div class="alert alert-danger text-center">
-                        <i class="fa fa-calendar fa-3x"></i>&nbsp;<b>20 </b>Meetings Sheduled This Month
+                        <i class="fa fa-calendar fa-3x"></i>&nbsp;<b>20 </b>Total Earnings
 
                     </div>
                 </div>
                 <div class="col-lg-3">
                     <div class="alert alert-success text-center">
-                        <i class="fa  fa-beer fa-3x"></i>&nbsp;<b>27 % </b>Profit Recorded in This Month
+                        <i class="fa  fa-beer fa-3x"></i>&nbsp;<b>27 % </b>Total Expenses
                     </div>
                 </div>
                 <div class="col-lg-3">
                     <div class="alert alert-info text-center">
-                        <i class="fa fa-rss fa-3x"></i>&nbsp;<b>1,900</b> New Subscribers This Year
+                        <i class="fa fa-rss fa-3x"></i>&nbsp;<b>1,900</b> Profit & Loss
 
-                    </div>
-                </div>
-                <div class="col-lg-3">
-                    <div class="alert alert-warning text-center">
-                        <i class="fa  fa-pencil fa-3x"></i>&nbsp;<b>2,000 $ </b>Payment Dues For Rejected Items
                     </div>
                 </div>
                 <!--end quick info section -->
@@ -102,30 +102,9 @@
 
             <div class="row">
                 <div class="col-lg-8">
-                    <!--Area chart example -->
                     <div class="panel panel-primary">
                         <div class="panel-heading">
-                            <i class="fa fa-bar-chart-o fa-fw"></i>Area Chart Example
-                            <div class="pull-right">
-                                <div class="btn-group">
-                                    <button type="button" class="btn btn-default btn-xs dropdown-toggle"
-                                            data-toggle="dropdown">
-                                        Actions
-                                        <span class="caret"></span>
-                                    </button>
-                                    <ul class="dropdown-menu pull-right" role="menu">
-                                        <li><a href="#">Action</a>
-                                        </li>
-                                        <li><a href="#">Another action</a>
-                                        </li>
-                                        <li><a href="#">Something else here</a>
-                                        </li>
-                                        <li class="divider"></li>
-                                        <li><a href="#">Separated link</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                        </div>
+                            <i class="fa fa-bar-chart-o fa-fw"></i>Line Chart of Sales Over Time
                     </div>
 
                         <div class="panel-body">
