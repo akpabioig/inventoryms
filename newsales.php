@@ -192,7 +192,7 @@ include('connection.php');
                 data: {search: this.value}
             }).done(function (data, data) {
                 // do stuff
-                console.log(data + '<br>' + data);
+                console.log(data, data);
 
 
             })
