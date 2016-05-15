@@ -208,7 +208,7 @@ include('connection.php');
 
         $("#quancust").change(function(){
             $("#minitotal").val(parseInt(parseInt(this.value)* parseInt(adjustedFigure)));
-            $("#totunitcust").val(document.getElementById('quancust').value);
+            $("#totunitcust").val(this.value);
         })
 
         $("#taxcust").change(function(){
