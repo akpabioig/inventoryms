@@ -194,8 +194,8 @@ include('connection.php');
                 // do stuff
                 alert(data);
                 var amount = data.match(/\d+$/);
-                amountStriped = amount[1];
-                console.log(amountStriped);
+                var digit = (''+amount)[1];
+                console.log(digit);
                 var answer = data;
                 answer = answer.replace(/\d/g, '');
                 console.log(amount[0]);
