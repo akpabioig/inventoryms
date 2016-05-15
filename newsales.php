@@ -187,6 +187,14 @@ include('connection.php');
         $("#product").change(function () {
 
             alert(this.value);
+            $.ajax({
+                url:'get.php',
+                dataType:'json',
+                type: 'get',
+                cache: 'false',
+                success: function(data){
+                    alert(data);
+                }
             //$("#costcust").val(this.value);
             //$("#costcust").val(price);
             //$("#itemcustl").val(locid);
