@@ -194,9 +194,10 @@ include('connection.php');
                 // do stuff
                 alert(data);
                 var amount = data.match(/\d+$/);
-                var location = data.match(/\$+d/);
+                var answer = data;
+                answer = answer.replace(/\d/g, '');
                 console.log(amount[0]);
-                $("#itemcustl").val(location);
+                $("#itemcustl").val(answer);
                 $("#costcust").val(amount);
 
 
