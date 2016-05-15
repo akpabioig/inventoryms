@@ -15,6 +15,7 @@ $record = mysqli_query($db, $sql);
 
 while ($row = $record->fetch_array()) {
     echo $row['retailprice'];
+    echo $row['locationid'];
 }
 
 
