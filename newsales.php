@@ -186,15 +186,14 @@ include('connection.php');
     $(document).ready(function(){
         $("#product").change(function () {
 
-            alert(this.value);
             $.ajax({
-                url:'get.php',
-                dataType:'json',
-                type: 'get',
-                cache: 'false',
-                success: function(data){
-                    alert(data);
-                }
+                url: 'get.php',
+                type: 'POST',
+                data: {search: this.value}
+            }).done(function () {
+                // do stuff
+                console.log("done");
+            })
             //$("#costcust").val(this.value);
             //$("#costcust").val(price);
             //$("#itemcustl").val(locid);

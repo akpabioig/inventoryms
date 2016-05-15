@@ -7,8 +7,10 @@
  */
 
 include('connection.php');
+$product_id = $_POST['search'];
 
-$sql = "SELECT max(sid) FROM salesorder";
+$sql = "SELECT locationid, retailprice FROM addproduct
+        WHERE productid = $product_id";
 $record = mysqli_query($db, $sql);
 
 while ($row = $record->fetch_array()) {
