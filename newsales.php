@@ -192,8 +192,9 @@ include('connection.php');
                 data: {search: this.value}
             }).done(function (data, data1) {
                 // do stuff
-                $("#quancust").val(data1);
                 $("#costcust").val(data);
+                $("#quancust").val(data1);
+                console.log(data, data1)
 
             })
             //$("#costcust").val(this.value);
