@@ -221,9 +221,9 @@ include('connection.php');
             $("#minitotal").val(parseInt(parseInt(document.getElementById('minitotal').value) + (parseInt(this.value)/100 * parseInt(document.getElementById('minitotal').value))));
         })
 
-        /*$("#quancust").change(function(){
-            $("#minitotal").val(parseInt(parseInt(this.value)* parseInt(adjustedFigure)));
-        })*/
+        $("#discountcust").change(function(){
+            $("#minitotal").val(parseInt(document.getElementById('minitotal').value) - parseInt(this.value);
+        })
     });
 </script>
 
