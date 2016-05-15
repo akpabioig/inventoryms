@@ -214,7 +214,7 @@ include('connection.php');
         });
 
         $("#quancust").change(function(){
-            $("#minitotal").val(2+10);
+            $("#minitotal").val(this.value);
         })
     });
 </script>
