@@ -66,10 +66,10 @@ $(function () {
     Morris.Donut({
         element: 'morris-donut-chart',
         data: [{
-            label: "Download Sales",
+            label: "Pending Orders",
             value: 12
         }, {
-            label: "In-Store Sales",
+            label: "Fulfilled Orders",
             value: 30
         }, {
             label: "Mail-Order Sales",
