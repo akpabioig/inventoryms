@@ -193,7 +193,7 @@ include('connection.php');
             }).done(function (data) {
                 // do stuff
                 alert(data);
-                var amount = data.match(/\$/);
+                var amount = data.match(/\d+$/);
                 var location = data.match(/\$+d/);
                 console.log(amount[0]);
                 $("#itemcustl").val(location);
