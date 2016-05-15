@@ -12,6 +12,9 @@ $result1 = $db->query("SELECT COUNT(salesorder.sid)
 $result1->setFetchMode(PDO::FETCH_ASSOC);
 $salesnum = $result1->fetchAll()[0]['sid'];
 
+echo "<script type='application/javascript'>";
+echo "document.getElementById('sum').innerHTML = {$salesnum}";
+echo "</script>";
 ?>
 
 <!DOCTYPE html>
@@ -66,7 +69,7 @@ $salesnum = $result1->fetchAll()[0]['sid'];
             <!--quick info section -->
             <div class="col-lg-3">
                 <div class="alert alert-danger text-center">
-                    <i class="fa fa-calendar fa-3x"></i>&nbsp;<b> <?php $salesnum ?></b> Total Number Of Sales
+                    <i class="fa fa-calendar fa-3x"></i>&nbsp;<b id="sum"> </b> Total Number Of Sales
 
                 </div>
             </div>
