@@ -204,13 +204,6 @@ include('connection.php');
 
 
             })
-            //$("#costcust").val(this.value);
-            //$("#costcust").val(price);
-            //$("#itemcustl").val(locid);
-            //console.log(this.value);
-            //alert(this.value);
-
-
         });
 
         $("#quancust").change(function(){
@@ -225,6 +218,7 @@ include('connection.php');
             $("#minitotal").val(parseInt(document.getElementById('minitotal').value) - parseInt(this.value));
             //changes
         })
+
     });
 </script>
 
