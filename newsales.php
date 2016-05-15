@@ -194,12 +194,12 @@ include('connection.php');
                 // do stuff
                 alert(data);
                 var amount = data.match(/\d+$/);
-                var digit = (''+amount)[1];
+                var digit = (''+amount)[0];
                 console.log(digit);
                 var answer = data;
                 answer = answer.replace(/\d/g, '');
                 console.log(amount[0]);
-                $("#itemcustl").val(answer);
+                $("#itemcustl").val(answer+digit);
                 $("#costcust").val(amount);
 
 
