@@ -1,3 +1,19 @@
+<?php
+session_start();
+if (!isset($_SESSION['user'])) {
+    header("Location: login.php");
+}
+include('connection.php');
+$db = new PDO('mysql:host=us-cdbr-azure-southcentral-e.cloudapp.net;dbname=inventoryms;charset=utf8mb4', 'bee886bc8793e7', '362289e3', array(PDO::ATTR_EMULATE_PREPARES => false,
+    PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
+
+$result1 = $db->query("SELECT COUNT(salesorder.sid)
+                        FROM salesorder");
+$result1->setFetchMode(PDO::FETCH_ASSOC);
+$salesnum = $result1->fetchAll()[0]['sid'];
+
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -50,7 +66,7 @@
             <!--quick info section -->
             <div class="col-lg-3">
                 <div class="alert alert-danger text-center">
-                    <i class="fa fa-calendar fa-3x"></i>&nbsp;<b>20 </b> Total Number Of Sales
+                    <i class="fa fa-calendar fa-3x"></i>&nbsp;<b> <?php $salesnum ?></b> Total Number Of Sales
 
                 </div>
             </div>
