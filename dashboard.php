@@ -15,7 +15,6 @@
     <link rel="stylesheet" href="styling.css"/>
     <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
     <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
-    <link href="assets/plugins/morris/morris-0.4.3.min.css" rel="stylesheet"/>
 </head>
 <body>
 <nav class="w3-sidenav w3-black" style="width:102px"> <!-- -->
@@ -130,19 +129,19 @@
                     </div>
 
                         <div class="panel-body">
-                            <div id="morris-line-chart"></div>
-                        </div>
+                            <div id="morris-area-chart"></div>
+                    </div>
 
                     </div>
 
-                <div class="panel panel-default">
+                    <div class="panel panel-default">
                     <div class="panel-heading">
                         Bar Chart Example
                     </div>
-                    <div class="panel-body">
-                        <div id="morris-bar-chart"></div>
+                        <div class="panel-body">
+                            <div id="morris-bar-chart"></div>
                 </div>
-                </div>
+                    </div>
             </div>
 
                 <div class="col-lg-4">
