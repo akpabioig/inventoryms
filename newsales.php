@@ -183,7 +183,7 @@ include('connection.php');
 </body>
 
 <script>
-    var realFigure;
+    var realFigure, adjustedFigure;
     $(document).ready(function(){
         $("#product").change(function () {
 
@@ -196,11 +196,11 @@ include('connection.php');
                 var amount = data.match(/\d+$/);
                 var digit = (''+amount)[0];
                 realFigure = '' + amount;
-                realFigure = realFigure.slice(1, realFigure.length);
+                adjustedFigure = realFigure.slice(1, realFigure.length);
                 var answer = data;
                 answer = answer.replace(/\d/g, '');
                 $("#itemcustl").val(answer+digit);
-                $("#costcust").val(realFigure);
+                $("#costcust").val(adjustedFigure);
 
 
             })
@@ -214,7 +214,7 @@ include('connection.php');
         });
 
         $("#quancust").change(function(){
-            $("#minitotal").val(this.value+realFigure);
+            $("#minitotal").val(this.value+adjustedFigure);
         })
     });
 </script>
