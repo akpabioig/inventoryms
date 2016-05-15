@@ -195,7 +195,7 @@ include('connection.php');
                 alert(data);
                 var amount = data.match(/\$/);
                 var location = data.match(/\$+d/);
-                console.log(matches[0]);
+                console.log(amount[0]);
                 $("#itemcustl").val(location);
                 $("#costcust").val(amount);
 
