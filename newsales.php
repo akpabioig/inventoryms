@@ -183,6 +183,7 @@ include('connection.php');
 </body>
 
 <script>
+    var realFigure;
     $(document).ready(function(){
         $("#product").change(function () {
 
@@ -194,7 +195,7 @@ include('connection.php');
                 // do stuff
                 var amount = data.match(/\d+$/);
                 var digit = (''+amount)[0];
-                var realFigure = '' + amount;
+                realFigure = '' + amount;
                 realFigure = realFigure.slice(1, realFigure.length);
                 var answer = data;
                 answer = answer.replace(/\d/g, '');
