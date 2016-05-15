@@ -69,7 +69,7 @@ echo "</script>";
             <!--quick info section -->
             <div class="col-lg-3">
                 <div class="alert alert-danger text-center">
-                    <i class="fa fa-calendar fa-3x"></i>&nbsp;<b id="sum"> </b> Total Number Of Sales
+                    <i class="fa fa-calendar fa-3x"></i>&nbsp; <b id="sum"> </b> Total Number Of Sales
 
                 </div>
             </div>
