@@ -193,7 +193,9 @@ include('connection.php');
             }).done(function () {
                 // do stuff
                 console.log("done");
-            })
+            })success: function(data) {
+                console.log(data);
+            }
             //$("#costcust").val(this.value);
             //$("#costcust").val(price);
             //$("#itemcustl").val(locid);
