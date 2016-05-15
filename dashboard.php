@@ -56,17 +56,18 @@
             </div>
             <div class="col-lg-3">
                 <div class="alert alert-success text-center">
-                    <i class="fa  fa-beer fa-3x"></i>&nbsp;<b>27 % </b>Total Number Of Purchases
+                    <i class="fa  fa-beer fa-3x"></i>&nbsp;<b>27 % </b> Total Number Of Purchases
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <div class="alert alert-info text-center">
+                    <i class="fa fa-rss fa-3x"></i>&nbsp;<b>1,900</b> Total Number Of Suppliers
+
                 </div>
             </div>
             <div class="col-lg-3">
                 <div class="alert alert-warning text-center">
-                    <i class="fa  fa-pencil fa-3x"></i>&nbsp;<b>2,000 $ </b>Total Number Of Customers
-                </div>
-            </div>
-            <div class="col-lg-3">
-                <div class="alert alert-warning text-center">
-                    <i class="fa  fa-pencil fa-3x"></i>&nbsp;<b>2,000 $ </b>Total Number of Suppliers
+                    <i class="fa  fa-pencil fa-3x"></i>&nbsp;<b>2,000 $ </b> Total Number Of Customers
                 </div>
             </div>
             <!--end quick info section -->
@@ -75,26 +76,25 @@
             <div class="row">
                 <!--quick info section -->
                 <div class="col-lg-3">
-                    <div class="alert alert-info text-center">
-                        <i class="fa fa-rss fa-3x"></i>&nbsp;<b>1,900</b> Total Goods In Stock
-
-                    </div>
-                </div>
-                <div class="col-lg-3">
                     <div class="alert alert-danger text-center">
-                        <i class="fa fa-calendar fa-3x"></i>&nbsp;<b>20 </b>Total Earnings
+                        <i class="fa fa-calendar fa-3x"></i>&nbsp;<b>20 </b> Total Number Of Goods In Stock
 
                     </div>
                 </div>
                 <div class="col-lg-3">
                     <div class="alert alert-success text-center">
-                        <i class="fa  fa-beer fa-3x"></i>&nbsp;<b>27 % </b>Total Expenses
+                        <i class="fa  fa-beer fa-3x"></i>&nbsp;<b>27 % </b> Total Sales Earnings
                     </div>
                 </div>
                 <div class="col-lg-3">
                     <div class="alert alert-info text-center">
-                        <i class="fa fa-rss fa-3x"></i>&nbsp;<b>1,900</b> Profit & Loss
+                        <i class="fa fa-rss fa-3x"></i>&nbsp;<b>1,900</b> Total Purchase Expenses
 
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="alert alert-warning text-center">
+                        <i class="fa  fa-pencil fa-3x"></i>&nbsp;<b>2,000 $ </b>Profit/ Loss
                     </div>
                 </div>
                 <!--end quick info section -->
@@ -102,6 +102,7 @@
 
             <div class="row">
                 <div class="col-lg-8">
+                    <!--Area chart example -->
                     <div class="panel panel-primary">
                         <div class="panel-heading">
                             <i class="fa fa-bar-chart-o fa-fw"></i>Line Chart of Sales Over Time
