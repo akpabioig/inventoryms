@@ -64,13 +64,10 @@ $(function () {
     Morris.Donut({
         element: 'morris-donut-chart',
         data: [{
-            label: "Fulfilled Orders",
-            value: 12
-        }, {
             label: "Pending Orders",
             value: 30
         }, {
-            label: "Mail-Order Sales",
+            label: "Fulfilled Orders",
             value: 20
         }],
         resize: true
