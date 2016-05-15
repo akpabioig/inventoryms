@@ -212,6 +212,7 @@ include('connection.php');
 
         $("#taxcust").change(function(){
             $("#minitotal").val(parseInt(parseInt(document.getElementById('minitotal').value) + (parseInt(this.value)/100 * parseInt(document.getElementById('minitotal').value))));
+            $("#tot").val(document.getElementById('minitotal').value);
         })
 
         $("#discountcust").change(function(){
