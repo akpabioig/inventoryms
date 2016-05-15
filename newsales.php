@@ -217,6 +217,7 @@ include('connection.php');
 
         $("#discountcust").change(function(){
             $("#minitotal").val(parseInt(document.getElementById('minitotal').value) - parseInt(this.value));
+            $("#tot").val(document.getElementById('minitotal').value);
             //changes
         })
 
