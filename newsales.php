@@ -214,7 +214,7 @@ include('connection.php');
         });
 
         $("#quancust").change(function(){
-            $("#minitotal").val(this.value+(Number(adjustedFigure)));
+            $("#minitotal").val(2+10);
         })
     });
 </script>
