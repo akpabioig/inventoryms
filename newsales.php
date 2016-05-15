@@ -192,7 +192,7 @@ include('connection.php');
                 data: {search: this.value}
             }).done(function (data) {
                 // do stuff
-                console.log(data);
+                console.log(data[0]);
 
             })
             //$("#costcust").val(this.value);
