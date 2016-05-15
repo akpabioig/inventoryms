@@ -218,7 +218,7 @@ include('connection.php');
         })
 
         $("#taxcust").change(function(){
-            $("#minitotal").val(parseInt(parseInt(this.value)/100 * parseInt(document.getElementById('minitotal').value)));
+            $("#minitotal").val(parseInt(parseInt(document.getElementById('minitotal').value) - (parseInt(this.value)/100 * parseInt(document.getElementById('minitotal').value))));
         })
 
         /*$("#quancust").change(function(){
