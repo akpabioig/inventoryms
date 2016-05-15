@@ -192,7 +192,6 @@ include('connection.php');
                 data: {search: this.value}
             }).done(function (data) {
                 // do stuff
-                alert(data);
                 var amount = data.match(/\d+$/);
                 var digit = (''+amount)[0];
                 var realFigure = '' + amount;
@@ -212,6 +211,10 @@ include('connection.php');
 
 
         });
+
+        $("#quancust").change(function(){
+            $("#minitotal").val(this.value+realFigure);
+        })
     });
 </script>
 
