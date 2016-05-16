@@ -213,8 +213,7 @@ include('connection.php');
         $("#discountcust").change(function(){
             $("#minitotal").val(parseInt(document.getElementById('minitotal').value) - parseInt(this.value));
             $("#tot").val(document.getElementById('minitotal').value);
-            $("#subtotal").val(parseInt(parseInt(document.getElementById('minitotal').value) * (parseInt(document.getElementById('quancust').value))) - parseInt('taxcust'.value));
-            //changes
+            $("#subtotal").val(parseInt(parseInt(document.getElementById('itemcost').value) * parseInt(document.getElementById('quantity').value)) - parseInt(document.getElementById(this.value)));
         })
     });
 </script>
