@@ -10,13 +10,11 @@ if (!isset($_SESSION['user'])) {
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> DASHBOARD </title>
-    <!-- Core CSS - Include with every page -->
     <link href="assets/plugins/bootstrap/bootstrap.css" rel="stylesheet"/>
     <link href="assets/font-awesome/css/font-awesome.css" rel="stylesheet"/>
     <link href="assets/plugins/pace/pace-theme-big-counter.css" rel="stylesheet"/>
     <link href="assets/css/style.css" rel="stylesheet"/>
     <link href="assets/css/main-style.css" rel="stylesheet"/>
-    <!-- Page-Level CSS -->
     <link href="assets/plugins/morris/morris-0.4.3.min.css" rel="stylesheet"/>
     <link rel="stylesheet" href="styling.css"/>
     <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
@@ -36,7 +34,7 @@ $query2 = "SELECT COUNT(purchaseorder.purchaseid)
                         FROM purchaseorder";
 $result2 = mysqli_query($db, $query2);
 while ($count2 = $result2->fetch_array()) {
-    echo "<body onload=\"purchaseNumber($count2[0]);\">";
+    echo "<body onload=\"purchaseNumber($count2[1]);\">";
 }
 
 ?>
@@ -76,7 +74,6 @@ while ($count2 = $result2->fetch_array()) {
                 <div class="alert alert-danger text-center">
                     Total Number Of Sales:
                     <b id="salesnum"> </b>
-
                 </div>
             </div>
             <div class="col-lg-3">
