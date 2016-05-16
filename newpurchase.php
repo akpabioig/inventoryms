@@ -101,7 +101,6 @@ include('connection.php');
                         <select name="productname" id="productname">
                             <option selected disabled>SELECT PRODUCT</option>
                             <?php
-
                             $sql = "SELECT productid, productname, locationid, initialstockprice FROM addproduct";
                             $result = mysqli_query($db, $sql);
                             if(mysqli_num_rows($result) == 1 || mysqli_num_rows($result) >1){
@@ -110,12 +109,10 @@ include('connection.php');
                                     echo '<option value="' . $row[0] . '">';
                                     echo $row[1];
                                     echo '</option>';
-
                                 }
                             }else{
                                 echo '<option> No Result Found </option>';
                             }
-
                             ?>
                         </select>
                     </td>
