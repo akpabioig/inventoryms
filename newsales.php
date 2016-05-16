@@ -224,24 +224,4 @@ include('connection.php');
 
     });
 </script>
-
-<!--
-<script type="text/javascript">
-
-    function fetch_select(val)
-    {
-        $.ajax({
-            type: 'post',
-            url: 'get.php',
-            data: {
-                get_option:val
-            },
-            success: function (response) {
-                document.getElementById("costcust").innerHTML=response;
-                //get data
-            }
-        });
-    }
-
-</script>-->
 </html>
