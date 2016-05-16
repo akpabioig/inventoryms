@@ -92,7 +92,7 @@ include('connection.php');
                     <th>Product Name</th>
                     <th>Quantity</th>
                     <th>Item Cost</th>
-                    <th>Tax</th>
+                    <th>Tax (%)</th>
                     <th>Total</th>
                 </tr>
                 <tr>

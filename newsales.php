@@ -107,8 +107,8 @@ include('connection.php');
                     <th> Item Name</th>
                     <th>Quantity</th>
                     <th>Item Cost</th>
-                    <th>Tax</th>
-                    <th>Discount</th>
+                    <th>Tax (%)</th>
+                    <th>Discount (Amount)</th>
                     <th>Total</th>
                 </tr>
                 <tr>
