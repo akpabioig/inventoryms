@@ -41,7 +41,7 @@ include('connection.php');
             <ul>
                 <li><h3>SHORTCUTS</h3></li>
                 <li>
-                    <a href=""><img src="images/dash.gif" style{height="50" width="50"}/>    Dashboard</a>
+                    <a href="dashboard.php"><img src="images/dash.gif" style{height="50" width="50" }/> Dashboard</a>
                 </li>
                 <li>
                     <a href="reports.php"><img src="images/reports.jpg" style{height="50" width="50"}/>    Reports</a>
