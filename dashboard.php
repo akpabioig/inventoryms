@@ -240,11 +240,11 @@ while ($count2 = $result2->fetch_array()) {
 </html>
 
 <script type="application/javascript">
-    function salesNumber(num){
-        document.getElementById('salesnum').innerHTML = num;
+    function salesNumber(num1) {
+        document.getElementById('salesnum').innerHTML = num1;
     }
-    function purchaseNumber(num1) {
-        document.getElementById('purchasenum').innerHTML = num1;
+    function purchaseNumber(num) {
+        document.getElementById('purchasenum').innerHTML = num;
     }
 
 </script>
