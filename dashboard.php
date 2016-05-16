@@ -10,10 +10,7 @@ if (!isset($_SESSION['user'])) {
                         FROM salesorder");
     $result1->setFetchMode(PDO::FETCH_ASSOC);
     $salesnum = $result1->fetchAll()[0]['sid'];
-
-    echo "<script type='application/javascript'>";
-    echo "console.log('920');";
-    echo "</script>";
+    echo $salesnum;
 }
 
 ?>
@@ -70,7 +67,7 @@ if (!isset($_SESSION['user'])) {
             <!--quick info section -->
             <div class="col-lg-3">
                 <div class="alert alert-danger text-center">
-                    <i class="fa fa-calendar fa-3x"></i>&nbsp; Total Number Of Sales<span id="sum"> </span>
+                    <i class="fa fa-calendar fa-3x"></i>&nbsp; Total Number Of Sales<b id="sum"> </b>
 
                 </div>
             </div>
