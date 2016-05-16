@@ -162,7 +162,7 @@ include('connection.php');
                 </tr>
                 <tr>
                     <td>Subtotal(Total - Tax):</td>
-                    <td><input type="number" id="subt" name="subtotalcust" class="formfield"></td>
+                    <td><input type="number" id="subtotal" name="subtotalcust" class="formfield"></td>
                 </tr>
                 <tr>
                     <td> Total Cost : </td>
@@ -209,11 +209,13 @@ include('connection.php');
         $("#taxcust").change(function(){
             $("#minitotal").val(parseInt(parseInt(document.getElementById('minitotal').value) + (parseInt(this.value)/100 * parseInt(document.getElementById('minitotal').value))));
             $("#tot").val(document.getElementById('minitotal').value);
+            $("#subtotal").val(parseInt(parseInt(document.getElementById('minitotal').value) * parseInt(document.getElementById('quancust').value)));
         })
 
         $("#discountcust").change(function(){
             $("#minitotal").val(parseInt(document.getElementById('minitotal').value) - parseInt(this.value));
             $("#tot").val(document.getElementById('minitotal').value);
+            $("#subtotal").val(parseInt(parseInt(document.getElementById('minitotal').value) * parseInt(document.getElementById('quancust').value) - parseInt(this.value)));
             //changes
         })
 

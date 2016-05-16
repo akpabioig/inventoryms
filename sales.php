@@ -39,5 +39,5 @@ VALUES ($salesid, '$itemcustl', $selproduct, $quancust, $costcust, $taxcust, $di
 } catch (PDOException $f) {
     echo $f->getMessage();
 }
-//header("Location: newsales.php");
+header("Location: newsales.php");
 ?>
