@@ -9,11 +9,10 @@ include('connection.php');
 
 $query1 = "select * from dashboard_totals";
 $result1 = mysqli_query($db, $query1);
-$count1 = $result1->fetch_array();
-    for($i=0; $i<7; $i++){
+while($count1 = $result1->fetch_array()){
+    echo $count1[0] + '<br>';
+}
 
-        echo $count[i] + '<br>';
-    }
 
 
 ?>
