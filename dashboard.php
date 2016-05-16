@@ -9,10 +9,10 @@ include('connection.php');
 
 $query1 = "select * from dashboard_totals";
 $result1 = mysqli_query($db, $query1);
-while($count1 = $result1->fetch_array()){
+$count1 = $result1->fetch_array();
     foreach($count1 as $count){
         echo $count + '<br>';
-    }
+
 }
 
 
