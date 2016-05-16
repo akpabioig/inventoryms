@@ -8,7 +8,7 @@ if (!isset($_SESSION['user'])) {
 
     $query = "SELECT COUNT(salesorder.sid)
                         FROM salesorder";
-    $result1 = mysqli_query($db, $result1);
+    $result1 = mysqli_query($db, $query);
 
     echo $result1;
 }
