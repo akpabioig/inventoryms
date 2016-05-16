@@ -155,22 +155,24 @@ if(mysqli_num_rows($result) == 1 || mysqli_num_rows($result) >1){
                 <tr>
                     <td><input type="text" id = "productlocation" name = "productlocation[]"  value = "" class = "tablefield"></td>
                     <td>
-                        <select name="productname[]" id="productname">
+                        <select name="productname" id="productname">
                             <option disabled>Select Product</option>
                             <?php
 
-                            $sql= "SELECT productname, productid FROM addproduct";
+                            $sql = "SELECT productid, productname, locationid, initialstockprice FROM addproduct";
                             $result = mysqli_query($db, $sql);
                             if(mysqli_num_rows($result) == 1 || mysqli_num_rows($result) >1){
 
-                                while($row = $result -> fetch_array()){
-                                    echo '<option value="'.$row['productid'].'" >';
-                                    echo $row['productname'];
+                                while ($row = $result->fetch_array()) {
+                                    echo '<option value="' . $row[0] . '">';
+                                    echo $row[1];
                                     echo '</option>';
+
                                 }
                             }else{
                                 echo '<option> No Result Found </option>';
                             }
+
                             ?>
                         </select>
                     </td>
