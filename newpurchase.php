@@ -153,7 +153,7 @@ if(mysqli_num_rows($result) == 1 || mysqli_num_rows($result) >1){
                     <th>Total</th>
                 </tr>
                 <tr>
-                    <td><input type="text" id = "productlocation" name = "productlocation[]"  value = "" class = "tablefield"></td>
+                    <td><input type="text" id="productlocation" name="productlocation" value="" class="tablefield"></td>
                     <td>
                         <select name="productname" id="productname">
                             <option selected disabled>SELECT PRODUCT</option>
@@ -184,10 +184,10 @@ if(mysqli_num_rows($result) == 1 || mysqli_num_rows($result) >1){
                         }
                         $pid += 10;
                     ?>
-                    <td><input type="number" id="quantity" name="quantity[]" required class="tablefield1"></td>
-                    <td><input type="number" id = "cost" name= "itemcost[]"  value = "" class = "tablefield1"></td>
-                    <td><input type="number" id = "tax" name= "tax[]"  value = "" class = "tablefield1"></td>
-                    <td><input type="number" id="itemtotal" name="itemtotal[]" required class="tablefield1"></td>
+                    <td><input type="number" id="quantity" name="quantity" required class="tablefield1"></td>
+                    <td><input type="number" id="itemcost" name="itemcost" value="" class="tablefield1"></td>
+                    <td><input type="number" id="tax" name="tax" value="" class="tablefield1"></td>
+                    <td><input type="number" id="itemtotal" name="itemtotal" required class="tablefield1"></td>
                     <input type="hidden" value="<?php echo $pid; ?>" name="pid" id="pid" />
                 </tr>
 
@@ -219,4 +219,26 @@ if(mysqli_num_rows($result) == 1 || mysqli_num_rows($result) >1){
         <p>&copy; Akpabio Ignatius, 2016</p>
     </footer>
 </body>
+<script>
+    var realFigure, adjustedFigure;
+    $(document).ready(function () {
+        $("#productname").change(function () {
+
+            $.ajax({
+                url: 'getpurchase.php',
+                type: 'POST',
+                data: {search: this.value}
+            }).done(function (data) {
+                // do stuff
+                var amount = data.match(/\d+$/);
+                var digit = ('' + amount)[0];
+                realFigure = '' + amount;
+                adjustedFigure = realFigure.slice(1, realFigure.length);
+                var answer = data;
+                answer = answer.replace(/\d/g, '');
+                $("#productlocation").val(answer + digit);
+                $("#itemcost").val(adjustedFigure);
+            })
+        });
+</script>
 </html>
