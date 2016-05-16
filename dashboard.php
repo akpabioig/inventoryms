@@ -4,11 +4,6 @@ if (!isset($_SESSION['user'])) {
     header("Location: login.php");
 }
 ?>
-<script type="application/javascript">
-    function salesNumber(num){
-        alert(num);
-    }
-</script>
 <!DOCTYPE html>
 <html>
 <head>
@@ -73,10 +68,10 @@ while($count = $result1->fetch_array()){
             <!--quick info section -->
             <div class="col-lg-3">
                 <div class="alert alert-danger text-center">
-                    <i class="fa fa-calendar fa-3x"></i>&nbsp; Total Number Of Sales
+                    <i class="fa fa-calendar fa-3x"></i>&nbsp; Total Number Of Sales:
+                    <b id="sum"> </b>
 
                 </div>
-                <span id="sum"> </span>
             </div>
             <div class="col-lg-3">
                 <div class="alert alert-success text-center">
@@ -236,5 +231,10 @@ while($count = $result1->fetch_array()){
     </div>
 </section>
 </body>
-
 </html>
+
+<script type="application/javascript">
+    function salesNumber(num){
+        document.getElementById('sum').innerHTML = num;
+    }
+</script>
