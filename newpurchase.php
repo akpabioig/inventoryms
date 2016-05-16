@@ -127,7 +127,7 @@ include('connection.php');
                     ?>
                     <td><input type="number" id="quantity" name="quantity" required class="tablefield1"></td>
                     <td><input type="number" id="itemcost" name="itemcost" value="" disabled class="tablefield1"></td>
-                    <td><input type="number" id="tax" name="tax" value="" class="tablefield1"></td>
+                    <td><input type="number" id="tax" name="tax" required value="" class="tablefield1"></td>
                     <td><input type="number" id="itemtotal" disabled name="itemtotal" required class="tablefield1"></td>
                     <input type="hidden" value="<?php echo $pid; ?>" name="pid" id="pid" />
                 </tr>

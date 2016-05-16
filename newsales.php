@@ -141,10 +141,11 @@ include('connection.php');
                     }
                     $salesid += 10;
                     ?>
-                    <td><input type="number" id = "quancust" name= "quancust"  value = "" class = "tablefield1"></td>
+                    <td><input type="number" id="quancust" name="quancust" required value="" class="tablefield1"></td>
                     <td><input type="number" disabled id="costcust" name="costcust" value="" class="tablefield1"></td>
-                    <td><input type="number" id = "taxcust" name= "taxcust"  value = "" class = "tablefield1"></td>
-                    <td><input type="number" id = "discountcust" name= "discountcust"  value = "" class = "tablefield1"></td>
+                    <td><input type="number" id="taxcust" name="taxcust" required value="" class="tablefield1"></td>
+                    <td><input type="number" id="discountcust" required name="discountcust" value=""
+                               class="tablefield1"></td>
                     <td><input type="number" disabled id="minitotal" name="minitotal" value="" class="tablefield1"></td>
                     <input type="hidden" value="<?php echo $salesid; ?>" name="salesid" id="salesid" />
                 </tr>
