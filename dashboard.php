@@ -34,8 +34,8 @@ while($count = $result1->fetch_array()){
 $query2 = "SELECT COUNT(purchaseorder.purchaseid)
                         FROM purchaseorder";
 $result2 = mysqli_query($db, $query2);
-while ($count = $result2->fetch_array()) {
-    echo "<body onload=\"purchaseNumber($count[0]);\">";
+while ($count1 = $result2->fetch_array()) {
+    echo "<body onload=\"purchaseNumber($count1[0]);\">";
 }
 ?>
 
