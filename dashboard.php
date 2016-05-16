@@ -25,13 +25,17 @@ if (!isset($_SESSION['user'])) {
 <?php
 include('connection.php');
 
-$query = "SELECT COUNT(salesorder.sid)
+$query1 = "SELECT COUNT(salesorder.sid)
                         FROM salesorder";
-$result1 = mysqli_query($db, $query);
-
+$result1 = mysqli_query($db, $query1);
 while($count = $result1->fetch_array()){
-
     echo "<body onload=\"salesNumber($count[0]);\">";
+}
+$query2 = "SELECT COUNT(purchaseorder.purchaseid)
+                        FROM purchaseorder";
+$result2 = mysqli_query($db, $query2);
+while ($count = $result2->fetch_array()) {
+    echo "<body onload=\"purchaseNumber($count[0]);\">";
 }
 ?>
 
@@ -69,14 +73,14 @@ while($count = $result1->fetch_array()){
             <div class="col-lg-3">
                 <div class="alert alert-danger text-center">
                     Total Number Of Sales:
-                    <b id="sum"> </b>
+                    <b id="salesnum"> </b>
 
                 </div>
             </div>
             <div class="col-lg-3">
-                <div class="alert alert-success text-center">
-                    <i class="fa  fa-beer fa-3x"></i>&nbsp;<b>27 % </b> Total Number Of Purchases
-                </div>
+                <div class="alert alert-danger text-center">
+                    Total Number Of Purchase:
+                    <b id="purchasenum"> </b>
             </div>
             <div class="col-lg-3">
                 <div class="alert alert-info text-center">
@@ -235,6 +239,9 @@ while($count = $result1->fetch_array()){
 
 <script type="application/javascript">
     function salesNumber(num){
-        document.getElementById('sum').innerHTML = num;
+        document.getElementById('salesnum').innerHTML = num;
+    }
+    function purchaseNumber(num) {
+        document.getElementById('purchasenum').innerHTML = num;
     }
 </script>
