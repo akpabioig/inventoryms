@@ -6,7 +6,7 @@ if (!isset($_SESSION['user'])) {
 ?>
 <script type="application/javascript">
     function salesNumber(num){
-        alert(num>);
+        alert(num);
     }
 </script>
 <!DOCTYPE html>
