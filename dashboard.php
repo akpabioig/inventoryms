@@ -242,7 +242,7 @@ while ($count1 = $result2->fetch_array()) {
     function salesNumber(num){
         document.getElementById('salesnum').innerHTML = num;
     }
-    function purchaseNumber(num1) {
-        document.getElementById('purchasenum').innerHTML = num1;
+    function purchaseNumber(num) {
+        document.getElementById('purchasenum').innerHTML = num;
     }
 </script>
