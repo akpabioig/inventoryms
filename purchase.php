@@ -36,5 +36,5 @@ VALUES ($productname, '$productlocation',$pid, $itemcost, $quantity, $tax, $item
     echo $e->getMessage();
 }
 
-header("Location: newpurchase.php");
+//header("Location: newpurchase.php");
 ?>
