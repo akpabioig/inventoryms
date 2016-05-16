@@ -38,6 +38,7 @@ $result2 = mysqli_query($db, $query2);
 while ($count2 = $result2->fetch_array()) {
     echo "<body onload=\"purchaseNumber($count2[0]);\">";
 }
+
 ?>
 
 <nav class="w3-sidenav w3-black" style="width:102px"> <!-- -->
@@ -243,6 +244,7 @@ while ($count2 = $result2->fetch_array()) {
     function salesNumber(num) {
         document.getElementById('salesnum').innerHTML = num;
     }
+
     function purchaseNumber(num) {
         document.getElementById('purchasenum').innerHTML = num;
     }
