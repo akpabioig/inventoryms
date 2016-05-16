@@ -68,7 +68,7 @@ while($count = $result1->fetch_array()){
             <!--quick info section -->
             <div class="col-lg-3">
                 <div class="alert alert-danger text-center">
-                    <i class="fa fa-sort-amount-asc fa-3x"></i>&nbsp; Total Number Of Sales:
+                    <i class="fa fa-shopping-cart fa-3x"></i>&nbsp; Total Number Of Sales:
                     <b id="sum"> </b>
 
                 </div>
