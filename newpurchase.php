@@ -181,6 +181,12 @@ include('connection.php');
                 $("#itemcost").val(adjustedFigure);
             })
         });
+
+        $("#quantity").change(function () {
+            $("#itemtotal").val(parseInt(parseInt(this.value) * parseInt(adjustedFigure)));
+            $("#totalunit").val(this.value);
+        })
+
     });
 </script>
 </html>
