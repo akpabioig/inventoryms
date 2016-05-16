@@ -82,7 +82,7 @@ include('connection.php');
                         </select>
                     </td>
                     <td label for="ref"> <a id = "hash">*</a> Reference : </td>
-                    <td><input type="ref" id = "ref1" name= "ref[]"  value = "" class = "formfield"></td>
+                    <td><input type="ref" id="ref" name="ref" value="" class="formfield"></td>
                 </tr>
             </table>
             <br>
@@ -107,8 +107,8 @@ include('connection.php');
                             if(mysqli_num_rows($result) == 1 || mysqli_num_rows($result) >1){
 
                                 while ($row = $result->fetch_array()) {
-                                    echo '<option value="' . $row[0] . '">';
-                                    echo $row[1];
+                                    echo '<option value="' . $row['productid'] . '">';
+                                    echo $row['productname'];
                                     echo '</option>';
                                 }
                             }else{
