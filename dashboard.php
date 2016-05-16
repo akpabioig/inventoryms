@@ -12,15 +12,15 @@ if (!isset($_SESSION['user'])) {
     $result1 = mysqli_query($db, $query);
 
     while($count = $result1->fetch_array()){
-       $count = $count[0];
+       $count[0];
     }
-
+    $num = $count[0];
 
 }
 ?>
 <script type="application/javascript">
     function salesNumber(){
-        alert(<?php $count; ?>);
+        alert(<?php $num; ?>);
     }
 </script>
 <!DOCTYPE html>
