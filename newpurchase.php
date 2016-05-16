@@ -139,11 +139,11 @@ include('connection.php');
             <table id = purtotal>
                 <tr>
                     <td>Total Units : </td>
-                    <td><input type="number" name = "totalunit" value = "" class = "formfield"></td>
+                    <td><input type="number" id="totalunit" name="totalunit" value="" class="formfield"></td>
                 </tr>
                 <tr>
                     <td>Subtotal(Total - Tax):</td>
-                    <td><input type="number" name = "subtotal" value = "" class = "formfield"></td>
+                    <td><input type="number" id="subtotal" name="subtotal" value="" class="formfield"></td>
                 </tr>
                 <tr>
                     <td> Total Cost : </td>
@@ -187,6 +187,10 @@ include('connection.php');
             $("#totalunit").val(this.value);
         })
 
+        $("#tax").change(function () {
+            $("#itemtotal").val(parseInt(parseInt(document.getElementById('itemtotal').value) + (parseInt(this.value) / 100 * parseInt(document.getElementById('itemtotal').value))));
+            $("#totalcost").val(document.getElementById('itemtotal').value);
+        })
     });
 </script>
 </html>
