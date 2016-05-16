@@ -10,7 +10,7 @@ if (!isset($_SESSION['user'])) {
                         FROM salesorder");
     $result1->setFetchMode(PDO::FETCH_ASSOC);
     $salesnum = $result1->fetchAll()[0]['sid'];
-    echo $salesnum;
+    echo 'hi';
 }
 
 ?>
