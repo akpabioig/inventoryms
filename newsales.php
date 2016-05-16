@@ -213,7 +213,7 @@ include('connection.php');
         $("#discountcust").change(function(){
             $("#minitotal").val(parseInt(document.getElementById('minitotal').value) - parseInt(this.value));
             $("#tot").val(document.getElementById('minitotal').value);
-            $("#subtotal").val(parseInt(parseInt(document.getElementById('minitotal').value) * (parseInt(document.getElementById('quancust').value))) - (parseInt(document.getElementById(this.value))));
+            $("#subtotal").val(parseInt(parseInt(parseInt(document.getElementById('minitotal').value)) * (parseInt(document.getElementById('quancust').value))) - (parseInt(document.getElementById(this.value))));
         })
     });
 </script>
