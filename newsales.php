@@ -112,7 +112,7 @@ include('connection.php');
                     <th>Total</th>
                 </tr>
                 <tr>
-                    <td><input type="text" id="itemcustl" disabled name="itemcustl" class="tablefield"></td>
+                    <td><input type="text" id="itemcustl" readonly name="itemcustl" class="tablefield"></td>
                     <td>
                         <select id="product" name="selproduct">
                         <option selected disabled>SELECT PRODUCT</option>
@@ -141,12 +141,11 @@ include('connection.php');
                     }
                     $salesid += 10;
                     ?>
-                    <td><input type="number" id="quancust" name="quancust" required value="" class="tablefield1"></td>
-                    <td><input type="number" disabled id="costcust" name="costcust" value="" class="tablefield1"></td>
-                    <td><input type="number" id="taxcust" name="taxcust" required value="" class="tablefield1"></td>
-                    <td><input type="number" id="discountcust" required name="discountcust" value=""
-                               class="tablefield1"></td>
-                    <td><input type="number" disabled id="minitotal" name="minitotal" value="" class="tablefield1"></td>
+                    <td><input type="number" id="quancust" name="quancust" required class="tablefield1"></td>
+                    <td><input type="number" readonly id="costcust" name="costcust" class="tablefield1"></td>
+                    <td><input type="number" id="taxcust" name="taxcust" required class="tablefield1"></td>
+                    <td><input type="number" id="discountcust" required name="discountcust" class="tablefield1"></td>
+                    <td><input type="number" readonly id="minitotal" name="minitotal" value="" class="tablefield1"></td>
                     <input type="hidden" value="<?php echo $salesid; ?>" name="salesid" id="salesid" />
                 </tr>
 
@@ -154,20 +153,20 @@ include('connection.php');
             <p align="center" ><a href = ""  id="addp"> + Add another item </a></p>
             <hr>
             <h6>Message to Customer : </h6>
-            <textarea id = "messcust" name="messcust" value="" class = "formfield" rows = 5 cols = 40></textarea>
+            <textarea id="messcust" name="messcust" class="formfield" rows=5 cols=40></textarea>
             <table id = purtotal>
                 <tr>
                     <td>Total Units : </td>
-                    <td><input type="number" id="totunitcust" disabled name="totunitcust" value="" class="formfield">
+                    <td><input type="number" id="totunitcust" readonly name="totunitcust" class="formfield">
                     </td>
                 </tr>
                 <tr>
                     <td>Subtotal(Total - Tax):</td>
-                    <td><input type="number" id="subt" disabled name="subtotalcust" value="" class="formfield"></td>
+                    <td><input type="number" id="subt" readonly name="subtotalcust" class="formfield"></td>
                 </tr>
                 <tr>
                     <td> Total Cost : </td>
-                    <td><input type="number" id="tot" disabled name="totalcost" value="" class="formfield"></td>
+                    <td><input type="number" id="tot" readonly name="totalcost" value="" class="formfield"></td>
                 </tr>
             </table>
             <p id = "purtotal"><input type = "reset" value = "CLEAR">
