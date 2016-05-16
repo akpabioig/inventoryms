@@ -28,8 +28,8 @@ include('connection.php');
 $query1 = "SELECT COUNT(salesorder.sid)
                         FROM salesorder";
 $result1 = mysqli_query($db, $query1);
-while ($count1 = $result1->fetch_array()) {
-    echo "<body onload=\"salesNumber($count1[0]);\">";
+while ($count = $result1->fetch_array()) {
+    echo "<body onload=\"salesNumber($count[0]);\">";
 }
 
 $query2 = "SELECT COUNT(purchaseorder.purchaseid)
