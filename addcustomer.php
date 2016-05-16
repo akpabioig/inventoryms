@@ -18,8 +18,6 @@ include('connection.php'); ?>
         <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
         <script type = "text/javascript" src="scripting.js"></script>
     </head>
-
-
     <script type="application/javascript">
         function ps(){
             $(document).ready(function() {
@@ -45,7 +43,6 @@ include('connection.php'); ?>
                 });
             });
         }
-
     </script>
 <body>
 <nav class="w3-sidenav w3-black" style="width:102px">
