@@ -125,15 +125,11 @@ include('connection.php');
                                     while($row = $result -> fetch_array()) {
                                         echo '<option value="' . $row[0] . '">';
                                         echo $row[1];
-                                        //$price = $row['retailprice'];
-                                        //$locid = $row['locationid'];
                                         echo '</option>';
-
                                     }
                                 }else{
                                     echo '<option> No Result Found </option>';
                                 }
-
                             ?>
                         </select>
                     </td>
@@ -201,8 +197,6 @@ include('connection.php');
                 answer = answer.replace(/\d/g, '');
                 $("#itemcustl").val(answer+digit);
                 $("#costcust").val(adjustedFigure);
-
-
             })
         });
 
