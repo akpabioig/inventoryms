@@ -12,7 +12,7 @@ if (!isset($_SESSION['user'])) {
     $salesnum = $result1->fetchAll()[0]['sid'];
 
     echo "<script type='application/javascript'>";
-    echo "document.getElementById('sum').innerHTML = 920";
+    echo "console.log('920');";
     echo "</script>";
 }
 
