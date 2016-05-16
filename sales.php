@@ -5,43 +5,27 @@ $db = new PDO('mysql:host=us-cdbr-azure-southcentral-e.cloudapp.net;dbname=inven
 
 $date = new DateTime($datesales);
 $date = $date->format('Y-m-d');
-echo $datesales = htmlspecialchars($_POST['datesales']);
-echo "<br>";
-echo $customer = htmlspecialchars($_POST['customer']);
-echo "<br>";
-echo $refcust = htmlspecialchars($_POST['refcust']);
-echo "<br>";
-echo $deladdcust = htmlspecialchars($_POST['deladdcust']);
-echo "<br>";
-echo $paytcust = htmlspecialchars($_POST['paytcust']);
-echo "<br>";
-echo $messcust = htmlspecialchars($_POST['messcust']);
-echo "<br>";
-echo $totunitcust = htmlspecialchars($_POST['totunitcust']);
-echo "<br>";
-echo $subtotalcust = htmlspecialchars($_POST['subtotalcust']);
-echo "<br>";
-echo $totalcost = htmlspecialchars($_POST['totalcost']);
-echo "<br>";
+$datesales = htmlspecialchars($_POST['datesales']);
+$customer = htmlspecialchars($_POST['customer']);
+$refcust = htmlspecialchars($_POST['refcust']);
+$deladdcust = htmlspecialchars($_POST['deladdcust']);
+$paytcust = htmlspecialchars($_POST['paytcust']);
+$messcust = htmlspecialchars($_POST['messcust']);
+$totunitcust = htmlspecialchars($_POST['totunitcust']);
+$subtotalcust = htmlspecialchars($_POST['subtotalcust']);
+$totalcost = htmlspecialchars($_POST['totalcost']);
 
-echo $salesid = htmlspecialchars($_POST['salesid']);
-echo "<br>";
-echo $itemcustl = htmlspecialchars($_POST['itemcustl']);
-echo "<br>";
-echo $selproduct = htmlspecialchars($_POST['selproduct']);
-echo "<br>";
-echo $quancust = htmlspecialchars($_POST['quancust']);
-echo "<br>";
-echo $costcust = htmlspecialchars($_POST['costcust']);
-echo "<br>";
-echo $taxcust = htmlspecialchars($_POST['taxcust']);
-echo "<br>";
-echo $discountcust = htmlspecialchars($_POST['discountcust']);
-echo "<br>";
-echo $minitotal = htmlspecialchars($_POST['minitotal']);
-echo "<br>";
+$salesid = htmlspecialchars($_POST['salesid']);
+$itemcustl = htmlspecialchars($_POST['itemcustl']);
+$selproduct = htmlspecialchars($_POST['selproduct']);
+$quancust = htmlspecialchars($_POST['quancust']);
+$costcust = htmlspecialchars($_POST['costcust']);
+$taxcust = htmlspecialchars($_POST['taxcust']);
+$discountcust = htmlspecialchars($_POST['discountcust']);
+$minitotal = htmlspecialchars($_POST['minitotal']);
 
-/*try {
+
+try {
     $sql = "INSERT INTO salesorder (datesales, customerid, reference, message, deladdress, paymenttype, totalunits, subtotal, totalcost)
 VALUES ('$datesales', $customer,'$refcust', '$messcust', '$deladdcust', '$paytcust', $totunitcust, $subtotalcust, $totalcost)";
     $sth = $db->query($sql);
@@ -56,5 +40,5 @@ $sth = $db->query($sql);
 } catch(PDOException $e) {
 echo $e->getMessage();
 }
-//header("Location: newsales.php");*/
+//header("Location: newsales.php");
 ?>
