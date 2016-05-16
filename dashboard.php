@@ -12,15 +12,17 @@ if (!isset($_SESSION['user'])) {
     $result1 = mysqli_query($db, $query);
 
     while($count = $result1->fetch_array()){
-        echo "<script type='application/javascript'>";
-        echo "document.getElementById('sum').innerHTML = {$count[0]}";
-        echo "</script>";
+       $count = $count[0];
     }
 
 
 }
 ?>
-
+<script type="application/javascript">
+    function salesNumber(){
+        alert(<?php $count; ?>);
+    }
+</script>
 <!DOCTYPE html>
 <html>
 <head>
