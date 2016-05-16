@@ -29,11 +29,11 @@ VALUES ($supplier, '$purchasedate','$ref','$messsupplier', $totalunit, $subtotal
 }
 
 try {
-    $sql = "INSERT INTO purchaseitem (productid, productlocation, purchaseid, itemcost, quantity, tax, total)
+    $sql1 = "INSERT INTO purchaseitem (productid, productlocation, purchaseid, itemcost, quantity, tax, total)
 VALUES ($productname, '$productlocation',$pid, $itemcost, $quantity, $tax, $itemtotal)";
-    $sth = $db->query($sql);
-} catch(PDOException $e) {
-    echo $e->getMessage();
+    $sth1 = $db->query($sql1);
+} catch (PDOException $f) {
+    echo $f->getMessage();
 }
 
 header("Location: newpurchase.php");
