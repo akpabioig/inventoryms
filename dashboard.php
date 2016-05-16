@@ -23,19 +23,10 @@ if (!isset($_SESSION['user'])) {
 <?php
 include('connection.php');
 
-$query1 = "SELECT COUNT(salesorder.sid)
-                        FROM salesorder";
+$query1 = "select * from dashboard_totals";
 $result1 = mysqli_query($db, $query1);
 while ($count1 = $result1->fetch_array()) {
-    echo "<body onload=\"salesNumber($count1[0]);\">";
-    echo "</body>";
-}
-
-$query2 = "SELECT COUNT(purchaseorder.purchaseid)
-                        FROM purchaseorder";
-$result2 = mysqli_query($db, $query2);
-while ($count2 = $result2->fetch_array()) {
-    echo "<body onload=\"purchaseNumber($count2[0]);\">";
+    echo "<body onload=\"totals($count1[0], $count1[1], $count1[2], $count1[3], $count1[4], $count1[5], $count1[6]);\">";
     echo "</body>";
 }
 
@@ -75,24 +66,26 @@ while ($count2 = $result2->fetch_array()) {
             <div class="col-lg-3">
                 <div class="alert alert-danger text-center">
                     Total Number Of Sales:
-                    <b id="salesnum"> </b>
+                    <b id="totalSales"> </b>
                 </div>
             </div>
             <div class="col-lg-3">
                 <div class="alert alert-success text-center">
                     Total Number Of Purchases:
-                    <b id="purchasenum"> </b>
+                    <b id="totalPurchases"> </b>
                 </div>
             </div>
             <div class="col-lg-3">
                 <div class="alert alert-info text-center">
-                    <i class="fa fa-rss fa-3x"></i>&nbsp;<b>1,900</b> Total Number Of Suppliers
+                    Total Number Of Suppliers:
+                    <b id="totalSuppliers"></b>
 
                 </div>
             </div>
             <div class="col-lg-3">
                 <div class="alert alert-warning text-center">
-                    <i class="fa  fa-pencil fa-3x"></i>&nbsp;<b>2,000 $ </b> Total Number Of Customers
+                    Total Number Of Customers:
+                    <b id="totalCustomers"></b>
                 </div>
             </div>
             <!--end quick info section -->
@@ -102,24 +95,27 @@ while ($count2 = $result2->fetch_array()) {
                 <!--quick info section -->
                 <div class="col-lg-3">
                     <div class="alert alert-danger text-center">
-                        <i class="fa fa-calendar fa-3x"></i>&nbsp;<b>20 </b> Total Number Of Goods In Stock
+                        Total Number Of Goods In Stock:
+                        <b id="totalGoodsInStock"></b>
 
                     </div>
                 </div>
                 <div class="col-lg-3">
                     <div class="alert alert-success text-center">
-                        <i class="fa  fa-beer fa-3x"></i>&nbsp;<b>27 % </b> Total Sales Earnings
+                        Total Sales Earnings:
+                        <b id="totalSalesInEarnings"></b>
                     </div>
                 </div>
                 <div class="col-lg-3">
                     <div class="alert alert-info text-center">
-                        <i class="fa fa-rss fa-3x"></i>&nbsp;<b>1,900</b> Total Purchase Expenses
+                        Total Purchase Expenses:
+                        <b id="totalPurchaseExpenses"></b>
 
                     </div>
                 </div>
                 <div class="col-lg-3">
                     <div class="alert alert-warning text-center">
-                        <i class="fa  fa-pencil fa-3x"></i>&nbsp;<b>2,000 $ </b>Profit/ Loss
+                        <b></b>Profit/ Loss
                     </div>
                 </div>
                 <!--end quick info section -->
@@ -240,12 +236,14 @@ while ($count2 = $result2->fetch_array()) {
 </html>
 
 <script type="application/javascript">
-    function salesNumber(num) {
-        document.getElementById('salesnum').innerHTML = num;
-    }
-
-    function purchaseNumber(num) {
-        document.getElementById('purchasenum').innerHTML = num;
+    function totals(num, num1, num2, num3, num4, num5, num6) {
+        document.getElementById('totalSales').innerHTML = num;
+        document.getElementById('totalPurchases').innerHTML = num1;
+        document.getElementById('totalSuppliers').innerHTML = num2;
+        document.getElementById('totalCustomers').innerHTML = num3;
+        document.getElementById('totalGoodsInStock').innerHTML = num4;
+        document.getElementById('totalSalesInEarnings').innerHTML = num5;
+        document.getElementById('totalPurchaseExpenses').innerHTML = num6;
     }
 
 </script>
