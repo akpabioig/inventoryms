@@ -28,6 +28,7 @@ $query1 = "SELECT COUNT(salesorder.sid)
 $result1 = mysqli_query($db, $query1);
 while ($count1 = $result1->fetch_array()) {
     echo "<body onload=\"salesNumber($count1[0]);\">";
+    echo "</body>";
 }
 
 $query2 = "SELECT COUNT(purchaseorder.purchaseid)
@@ -35,6 +36,7 @@ $query2 = "SELECT COUNT(purchaseorder.purchaseid)
 $result2 = mysqli_query($db, $query2);
 while ($count2 = $result2->fetch_array()) {
     echo "<body onload=\"purchaseNumber($count2[0]);\">";
+    echo "</body>";
 }
 
 ?>
