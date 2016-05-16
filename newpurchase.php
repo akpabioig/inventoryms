@@ -5,8 +5,6 @@ if (!isset($_SESSION['user'])) {
 }
 include('connection.php');
 ?>
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -164,6 +162,7 @@ include('connection.php');
         <p>&copy; Akpabio Ignatius, 2016</p>
     </footer>
 </body>
+
 <script>
     var realFigure, adjustedFigure;
     $(document).ready(function () {

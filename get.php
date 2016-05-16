@@ -17,6 +17,4 @@ while ($row = $record->fetch_array()) {
     echo $row['locationid'];
     echo $row['retailprice'];
 }
-
-
 ?>
