@@ -36,7 +36,7 @@ $result1 = mysqli_query($db, $query);
 
 while($count = $result1->fetch_array()){
 
-    echo "<body onload=\"salesNumber($count[0];);\">";
+    echo "<body onload=\"salesNumber($count[0]);\">";
 }
 ?>
 
