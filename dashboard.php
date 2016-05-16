@@ -11,8 +11,8 @@ if (!isset($_SESSION['user'])) {
     $result1 = $db->query("SELECT COUNT(salesorder.sid)
                         FROM salesorder");
     $result1->setFetchMode(PDO::FETCH_ASSOC);
-    $salesnum = $result1->fetchAll()[0]['sid'];
+    $salesnum = $result1->fetchAll()['sid'];
 
-    echo 'hi';
+    echo $salesnum;
 }
 ?>
