@@ -107,7 +107,7 @@ include('connection.php');
 
                                 while ($row = $result->fetch_array()) {
                                     echo '<option value="' . $row['productid'] . '">';
-                                    echo $row['productnamer'];
+                                    echo $row['productname'];
                                     echo '</option>';
                                 }
                             }else{
