@@ -13,9 +13,7 @@ if (!isset($_SESSION['user'])) {
     $result1->setFetchMode(PDO::FETCH_ASSOC);
     $salesnum = $result1->fetchAll()[0]['sid'];
 
-    echo "<script type='application/javascript'>";
-    echo "document.getElementById('summ').innerHTML = {$salesnum}";
-    echo "</script>";
+    echo $salesnum;
 }
 ?>
 
