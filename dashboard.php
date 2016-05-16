@@ -2,25 +2,11 @@
 session_start();
 if (!isset($_SESSION['user'])) {
     header("Location: login.php");
-}else{
-
-
-    include('connection.php');
-
-    $query = "SELECT COUNT(salesorder.sid)
-                        FROM salesorder";
-    $result1 = mysqli_query($db, $query);
-
-    while($count = $result1->fetch_array()){
-       $count[0];
-    }
-    $num = 12;
-
 }
 ?>
 <script type="application/javascript">
-    function salesNumber(){
-        alert(<?php $num; ?>);
+    function salesNumber(num){
+        alert(num>);
     }
 </script>
 <!DOCTYPE html>
@@ -41,7 +27,19 @@ if (!isset($_SESSION['user'])) {
     <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
     <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
 </head>
-<body onload="salesNumber();">
+<?php
+include('connection.php');
+
+$query = "SELECT COUNT(salesorder.sid)
+                        FROM salesorder";
+$result1 = mysqli_query($db, $query);
+
+while($count = $result1->fetch_array()){
+
+    echo "<body onload=\"salesNumber($count[0];);\">";
+}
+?>
+
 <nav class="w3-sidenav w3-black" style="width:102px"> <!-- -->
     <a class="w3-padding-16" href="index.php"><i class="fa fa-home w3-xxlarge"></i> <br>HOME </a>
     <a class="w3-padding-16" href="addproduct.php"><i class="fa fa-plus-square w3-xlarge"></i> <br>ADD PRODUCT</a>
