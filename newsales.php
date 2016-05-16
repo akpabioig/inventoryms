@@ -112,7 +112,7 @@ include('connection.php');
                     <th>Total</th>
                 </tr>
                 <tr>
-                    <td><input type="text" id="itemcustl" name="itemcustl" class="tablefield"></td>
+                    <td><input type="text" id="itemcustl" disabled name="itemcustl" class="tablefield"></td>
                     <td>
                         <select id="product" name="selproduct">
                         <option selected disabled>SELECT PRODUCT</option>
@@ -142,10 +142,10 @@ include('connection.php');
                     $salesid += 10;
                     ?>
                     <td><input type="number" id = "quancust" name= "quancust"  value = "" class = "tablefield1"></td>
-                    <td><input type="number" id = "costcust" name= "costcust"  value = "" class = "tablefield1"></td>
+                    <td><input type="number" disabled id="costcust" name="costcust" value="" class="tablefield1"></td>
                     <td><input type="number" id = "taxcust" name= "taxcust"  value = "" class = "tablefield1"></td>
                     <td><input type="number" id = "discountcust" name= "discountcust"  value = "" class = "tablefield1"></td>
-                    <td><input type="number" id = "minitotal" name= "minitotal"  value = "" class = "tablefield1"></td>
+                    <td><input type="number" disabled id="minitotal" name="minitotal" value="" class="tablefield1"></td>
                     <input type="hidden" value="<?php echo $salesid; ?>" name="salesid" id="salesid" />
                 </tr>
 
@@ -157,15 +157,16 @@ include('connection.php');
             <table id = purtotal>
                 <tr>
                     <td>Total Units : </td>
-                    <td><input type="number" id = "totunitcust" name ="totunitcust" value = "" class = "formfield"></td>
+                    <td><input type="number" id="totunitcust" disabled name="totunitcust" value="" class="formfield">
+                    </td>
                 </tr>
                 <tr>
                     <td>Subtotal(Total - Tax):</td>
-                    <td><input type="number" id = "subt" name = "subtotalcust" value = "" class = "formfield"></td>
+                    <td><input type="number" id="subt" disabled name="subtotalcust" value="" class="formfield"></td>
                 </tr>
                 <tr>
                     <td> Total Cost : </td>
-                    <td><input type="number" id = "tot" name = "totalcost" value = "" class = "formfield"></td>
+                    <td><input type="number" id="tot" disabled name="totalcost" value="" class="formfield"></td>
                 </tr>
             </table>
             <p id = "purtotal"><input type = "reset" value = "CLEAR">
