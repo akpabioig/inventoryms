@@ -30,7 +30,7 @@ while($count1 = $result1->fetch_array()) {
     $list[] = $count1[0];
 }
 
-echo "<body onload='totals($list[0], $list[1], $list[2], $list[3], $list[4], $list[5], $list[6];'>";
+echo "<body onload='totals($list[0], $list[1], $list[2], $list[3], $list[4], $list[5], $list[6]);'>";
 ?>
 
 <nav class="w3-sidenav w3-black" style="width:102px"> <!-- -->
