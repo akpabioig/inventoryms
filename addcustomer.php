@@ -18,8 +18,6 @@ include('connection.php'); ?>
         <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
         <script type = "text/javascript" src="scripting.js"></script>
     </head>
-
-
     <script type="application/javascript">
         function ps(){
             $(document).ready(function() {
@@ -45,7 +43,6 @@ include('connection.php'); ?>
                 });
             });
         }
-
     </script>
 <body>
 <nav class="w3-sidenav w3-black" style="width:102px">
@@ -105,18 +102,6 @@ include('connection.php'); ?>
             <p> Insert details of the address of the Customer </p>
             <div  id = "form2">
                 <table>
-                    <tr>
-                        <td label for="custadd1"></td>
-                        <td><input type="text" id="addApi" name="addApi" value="" class = "formfield" rows = 1  placeholder="Type your Postcode"></td>
-                        <td><input type="submit" id="cu" name="cu" value="Find address" class = "formfield" rows = 1 onclick="ps();"></td>
-                        <td label for ="custadd2"> <select class = "formfield"><?php
-                                foreach($json2 as $data){
-                                    echo '<option>'.$data.'</option>';
-                                }
-
-                                ?>
-                            </select></td>
-                    </tr>
                     <tr>
                         <td label for="custadd1"> <a id = "hash">*</a> Address Line 1 : </td>
                         <td><input type="text" id="custadd1" name="custadd1" placeholder="E.g. 10 Pittodrie Place" class = "formfield" rows = 1></td>
