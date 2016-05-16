@@ -190,7 +190,7 @@ include('connection.php');
         $("#tax").change(function () {
             $("#itemtotal").val(parseInt(parseInt(document.getElementById('itemtotal').value) + (parseInt(this.value) / 100 * parseInt(document.getElementById('itemtotal').value))));
             $("#totalcost").val(document.getElementById('itemtotal').value);
-            $("#subtotal").val(document.getElementById('itemtotal').value) - (parseInt(this.value) / 100 * parseInt(document.getElementById('itemtotal').value))
+            $("#subtotal").val(parseInt(parseInt(document.getElementById('itemtotal').value) - (parseInt(this.value) / 100 * parseInt(document.getElementById('itemtotal').value))));
         })
 
     });
