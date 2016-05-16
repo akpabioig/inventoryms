@@ -78,9 +78,10 @@ while ($count = $result2->fetch_array()) {
                 </div>
             </div>
             <div class="col-lg-3">
-                <div class="alert alert-danger text-center">
-                    Total Number Of Purchase:
+                <div class="alert alert-success text-center">
+                    Total Number Of Purchases:
                     <b id="purchasenum"> </b>
+                </div>
             </div>
             <div class="col-lg-3">
                 <div class="alert alert-info text-center">
