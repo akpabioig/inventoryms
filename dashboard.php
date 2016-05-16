@@ -7,6 +7,6 @@ $result1 = mysqli_query($db, $query1);
 while($count1 = $result1->fetch_array()) {
     $list[] = $count1[0];
 }
-echo $list[1] . '<br>';
-//echo $list[1];
+echo $list[0] . '<br>';
+echo $list[1];
 ?>
