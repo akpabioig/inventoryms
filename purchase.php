@@ -1,28 +1,4 @@
 <?php
-
-$productLocation = $_POST['productlocation'];
-$productname = $_POST['productname'];
-$quantity = $_POST['quantity'];
-$itemcost = $_POST['itemcost'];
-$tax = $_POST['tax'];
-$itemtotal = $_POST['itemtotal'];
-$pid = $_POST['pid'];
-
-echo var_dump($productLocation).'<br>';
-echo var_dump($productname). '<br>';
-echo var_dump($quantity). '<br>';
-echo var_dump($itemcost). '<br>';
-echo var_dump($tax). '<br>';
-echo var_dump($itemtotal). '<br>';
-echo $pid. '<br>';
-
-
-
-
-
-//extract($productLocation);
-//echo $productLocation[0]['productionlocation'];
-/*
 $db = new PDO('mysql:host=us-cdbr-azure-southcentral-e.cloudapp.net;dbname=inventoryms;charset=utf8mb4', 'bee886bc8793e7', '362289e3',array(PDO::ATTR_EMULATE_PREPARES => false,
     PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
 
@@ -60,6 +36,5 @@ VALUES ($productname, '$productlocation',$pid, $itemcost, $quantity, $tax, $item
     echo $e->getMessage();
 }
 
-//header("Location: newpurchase.php");
-*/
+header("Location: newpurchase.php");
 ?>
