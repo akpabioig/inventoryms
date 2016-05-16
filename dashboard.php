@@ -246,5 +246,4 @@ echo "<body onload='totals($list[0], $list[1], $list[2], $list[3], $list[4], $li
         document.getElementById('totalSalesInEarnings').innerHTML = num5;
         document.getElementById('totalPurchaseExpenses').innerHTML = num6;
     }
-Morris.add(x=20, y=100);
 </script>
