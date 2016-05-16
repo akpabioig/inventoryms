@@ -25,8 +25,8 @@ if (!isset($_SESSION['user'])) {
 <?php
 include('connection.php');
 
-$query1 = "SELECT COUNT(purchaseorder.purchaseid)
-                        FROM purchaseorder";
+$query1 = "SELECT COUNT(salesorder.sid)
+                        FROM salesorder";
 $result1 = mysqli_query($db, $query1);
 while ($count = $result1->fetch_array()) {
     echo "<body onload=\"salesNumber($count[0]);\">";
@@ -246,4 +246,5 @@ while ($count1 = $result2->fetch_array()) {
     function purchaseNumber(num) {
         document.getElementById('purchasenum').innerHTML = num;
     }
+
 </script>
