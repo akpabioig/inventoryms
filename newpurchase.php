@@ -181,5 +181,6 @@ include('connection.php');
                 $("#itemcost").val(adjustedFigure);
             })
         });
+    });
 </script>
 </html>
