@@ -162,7 +162,7 @@ include('connection.php');
                 </tr>
                 <tr>
                     <td>Subtotal(Total - Tax):</td>
-                    <td><input type="number" id="subt" readonly name="subtotalcust" class="formfield"></td>
+                    <td><input type="number" id="subt" name="subtotalcust" class="formfield"></td>
                 </tr>
                 <tr>
                     <td> Total Cost : </td>
