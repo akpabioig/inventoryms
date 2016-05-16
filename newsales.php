@@ -108,7 +108,7 @@ include('connection.php');
                     <th>Quantity</th>
                     <th>Item Cost</th>
                     <th>Tax (%)</th>
-                    <th>Discount (Amount)</th>
+                    <th>Discount (Amout)</th>
                     <th>Total</th>
                 </tr>
                 <tr>
@@ -213,7 +213,7 @@ include('connection.php');
         $("#discountcust").change(function(){
             $("#minitotal").val(parseInt(document.getElementById('minitotal').value) - parseInt(this.value));
             $("#tot").val(document.getElementById('minitotal').value);
-            $("#subtotal").val(parseInt(parseInt(document.getElementById('itemcost').value) * parseInt(document.getElementById('quantity').value) - parseInt(document.getElementById(this.value))));
+            $("#subtotal").val(parseInt(parseInt(document.getElementById('itemcost').value) * (parseInt(document.getElementById('quantity').value))) - (parseInt(document.getElementById(this.value))));
         })
     });
 </script>
