@@ -86,7 +86,7 @@ include('connection.php');
                     <td><input type="text" id = "ref1" name= "refcust"  value = "" class = "formfield"></td>
                 </tr>
                 <tr>
-                    <td label for="date"> <a id = "hash">*</a> Delivery Address : </td>
+                    <td label for="deliveryaddress"><a id="hash">*</a> Delivery Address :</td>
                     <td><textarea id="deladdcust" name="deladdcust" required class="formfield" rows=5
                                   cols=28></textarea></td>
                     <td label for="paytype"> <a id = "hash">*</a> Payment Type : </td>
@@ -123,8 +123,8 @@ include('connection.php');
                                 if(mysqli_num_rows($result) == 1 || mysqli_num_rows($result) >1){
 
                                     while($row = $result -> fetch_array()) {
-                                        echo '<option value="' . $row[0] . '">';
-                                        echo $row[1];
+                                        echo '<option value="' . $row['productid'] . '">';
+                                        echo $row['productname'];
                                         echo '</option>';
                                     }
                                 }else{
