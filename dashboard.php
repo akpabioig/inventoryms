@@ -70,7 +70,7 @@ if (!isset($_SESSION['user'])) {
             <!--quick info section -->
             <div class="col-lg-3">
                 <div class="alert alert-danger text-center">
-                    <i class="fa fa-calendar fa-3x"></i>&nbsp; Total Number Of Sales<b id="sum"> </b>
+                    <i class="fa fa-calendar fa-3x"></i>&nbsp; Total Number Of Sales<span id="sum"> </span>
 
                 </div>
             </div>
