@@ -14,7 +14,7 @@ if (!isset($_SESSION['user'])) {
     while($count = $result1->fetch_array()){
        $count[0];
     }
-    $num = $count[0];
+    $num = 12;
 
 }
 ?>
