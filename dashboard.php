@@ -10,6 +10,8 @@ if (!isset($_SESSION['user'])) {
                         FROM salesorder";
     $result1 = mysqli_query($db, $query);
 
-    echo $count = $result1->fetch_array();
+    while($count = $result1->fetch_array()){
+        echo $count[0];
+    }
 }
 ?>
