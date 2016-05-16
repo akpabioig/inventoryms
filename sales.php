@@ -33,11 +33,11 @@ VALUES ('$datesales', $customer,'$refcust', '$messcust', '$deladdcust', '$paytcu
 }
 
 try {
-$sql = "INSERT INTO salesitem (sid, itemlocation, productid, quantity, itemcost, tax, discount, total)
+    $sql1 = "INSERT INTO salesitem (sid, itemlocation, productid, quantity, itemcost, tax, discount, total)
 VALUES ($salesid, '$itemcustl', $selproduct, $quancust, $costcust, $taxcust, $discountcust, $minitotal)";
-$sth = $db->query($sql);
-} catch(PDOException $e) {
-echo $e->getMessage();
+    $sth1 = $db->query($sql1);
+} catch (PDOException $f) {
+    echo $f->getMessage();
 }
 //header("Location: newsales.php");
 ?>
