@@ -34,7 +34,7 @@ $query2 = "SELECT COUNT(purchaseorder.purchaseid)
                         FROM purchaseorder";
 $result2 = mysqli_query($db, $query2);
 while ($count2 = $result2->fetch_array()) {
-    echo "<body onload=\"purchaseNumber($count2[1]);\">";
+    echo "<body onload=\"purchaseNumber($count2[0]);\">";
 }
 
 ?>
