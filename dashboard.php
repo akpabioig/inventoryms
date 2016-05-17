@@ -259,7 +259,7 @@ echo "<body onload='totals($list[0], $list[1], $list[2], $list[3], $list[4], $li
         }).done(function (data) {
             // do stuff
             for(var i=0; i<data.length; i++){
-                console.log(data + '<br>');
+                console.log(data + '\n');
             }
         })
 
