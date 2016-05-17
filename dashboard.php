@@ -2,6 +2,18 @@
 session_start();
 if (!isset($_SESSION['user'])) {
     header("Location: login.php");
+}   else{
+    include('connection.php');
+    $list = array();
+    $query1 = "select * from dashboard_totals";
+    $result1 = mysqli_query($db, $query1);
+    while($count1 = $result1->fetch_array()) {
+    $list[] = $count1[0];
+}
+
+
+echo "<body onload='totals($list[0], $list[1], $list[2], $list[3], $list[4], $list[5], $list[6]);'>";
+
 }
 ?>
 <!DOCTYPE html>
@@ -21,19 +33,7 @@ if (!isset($_SESSION['user'])) {
     <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
 </head>
 
-<?php
-include('connection.php');
-$list = array();
-$query1 = "select * from dashboard_totals";
-$result1 = mysqli_query($db, $query1);
-while($count1 = $result1->fetch_array()) {
-    $list[] = $count1[0];
-}
 
-
-echo "<body onload='totals($list[0], $list[1], $list[2], $list[3], $list[4], $list[5], $list[6]);'>";
-
-?>
 
 <nav class="w3-sidenav w3-black" style="width:102px"> <!-- -->
     <a class="w3-padding-16" href="index.php"><i class="fa fa-home w3-xxlarge"></i> <br>HOME </a>
