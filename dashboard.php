@@ -300,7 +300,8 @@ echo "<body onload='totals($list[0], $list[1], $list[2], $list[3], $list[4], $li
             console.log(salesT[0]);
             var d = new Date();
             var n = d.getFullYear();
-            linechart.setData([{"period": n+'-0'+periodT[0], "sales": salesT[0]}, {"period": n+'-0'+periodT[1], "sales": salesT[1]}]);
+            linechart.setData([{"period": n+'-0'+periodT[0], "sales": salesT[0]}, {"period": n+'-0'+periodT[1], "sales": salesT[1]}
+            , {"period": n+'-0'+periodT[2], "sales": salesT[2]}]);
 
 
         })
