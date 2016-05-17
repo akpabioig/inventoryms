@@ -261,8 +261,8 @@ echo "<body onload='totals($list[0], $list[1], $list[2], $list[3], $list[4], $li
             // do stuff
             dataSet = data.match(/^.*((\r\n|\n|\r)|$)/gm);
             for(i=0; i<dataSet.length; i++){
-                xValues.push(dataSet[0].slice([1]));
-                yValues.push(dataSet[0].slice([2,dataSet[0].length]));
+                xValues.push(dataSet[i].slice([1]));
+                yValues.push(dataSet[i].slice([2,dataSet[0].length]));
             }
 
             for(i=0; i<xValues.length;i++){
