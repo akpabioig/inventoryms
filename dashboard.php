@@ -274,9 +274,9 @@ echo "<body onload='totals($list[0], $list[1], $list[2], $list[3], $list[4], $li
             //size = dataSet[0].slice([2,dataSet[0].length]);
 
             //barchart.setData([{"y": location, "a": size}]);
-            var d = new Date();
-            var n = d.getFullYear();
-            linechart.setData([{"period": n+'-01', "iphone": 20666}, {"period": n+'-02', "iphone": 1560}]);
+            //var d = new Date();
+            //var n = d.getFullYear();
+            //linechart.setData([{"period": n+'-01', "iphone": 20666}, {"period": n+'-02', "iphone": 1560}]);
         })
 
     });
