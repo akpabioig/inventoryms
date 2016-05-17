@@ -6,15 +6,19 @@ if (!isset($_SESSION['user'])) {
 
 include('connection.php');
 //
-$sql = "SELECT salesorder.datesales, salesorder.sid, addcustomer.customername, salesorder.deladdress, salesorder.totalunits, salesorder.totalcost, salesorder.status
-                          FROM addcustomer, salesorder
+$sql = "SELECT salesorder.datesales, salesorder.sid, addcustomer.customername, salesorder.deladdress, addproduct.productname AS salesproduct, salesorder.totalunits, salesorder.totalcost, salesorder.status
+                          FROM addcustomer, salesorder, addproduct, salesitem
                           WHERE addcustomer.customerid = salesorder.customerid
+                          AND addproduct.productid = salesitem.productid
+                          AND salesorder.sid = salesitem.sid
                           AND status = 'fulfilled'";
 $result = mysqli_query($db, $sql);
 
-$sql1 = "SELECT purchaseorder.datepurchase, purchaseorder.purchaseid, addsupplier.suppliername, purchaseorder.totalunits, purchaseorder.total, purchaseorder.status
-         FROM purchaseorder, addsupplier
+$sql1 = "SELECT purchaseorder.datepurchase, purchaseorder.purchaseid, addsupplier.suppliername, addproduct.productname AS purchaseproduct, purchaseorder.totalunits, purchaseorder.total, purchaseorder.status
+         FROM purchaseorder, addsupplier, addproduct, purchaseitem
          WHERE addsupplier.supplierid = purchaseorder.supplierid
+         AND addproduct.productid = purchaseitem.productid
+         AND purchaseitem.purchaseid = purchaseorder.purchaseid
          AND STATUS = 'fulfilled'";
 $result1 = mysqli_query($db, $sql1);
 ?>
@@ -66,6 +70,7 @@ $result1 = mysqli_query($db, $sql1);
                     <th> SALES ID</th>
                     <th> CUSTOMER NAME</th>
                     <th> DELIVERY ADDRESS</th>
+                    <th> PRODUCT NAME</th>
                     <th> TOTAL UNITS</th>
                     <th> TOTAL COST</th>
                     <th> STATUS</th>
@@ -74,15 +79,15 @@ $result1 = mysqli_query($db, $sql1);
                 if (mysqli_num_rows($result) == 1 || mysqli_num_rows($result) > 1) {
                     while ($row = $result->fetch_array()) {
                         echo "
-                                <tr>
+                    <tr>
                         <td id = \"datesales\" name= \"datesales\" class = \"tablefield\" disabled>{$row['datesales']}</td>
                         <td id = \"sid\" name= \"sid\" class = \"tablefield\" disabled>{$row['sid']}</td>
                         <td id = \"customername\" name= \"customername\" class = \"tablefield\" disabled>{$row['customername']}</td>
                         <td id = \"deladdress\" name= \"deladdress\" class = \"tablefield\" disabled>{$row['deladdress']}</td>
+                        <td id = \"salesproduct\" name= \"salesproduct\" class = \"tablefield\" disabled>{$row['salesproduct']}</td>
                         <td id = \"totalunits\" name= \"totalunits\" class = \"tablefield\" disabled>{$row['totalunits']}</td>
                         <td id = \"totalcost\" name= \"totalcost\" class = \"tablefield\" disabled>{$row['totalcost']}</td>
                         <td id = \"status\" name= \"status\"  class = \"tablefield\" disabled>{$row['status']}</td>
-
                     </tr>
 
                                 ";
@@ -98,6 +103,7 @@ $result1 = mysqli_query($db, $sql1);
                     <th> DATE</th>
                     <th> PURCHASE ID</th>
                     <th> SUPPLIER NAME</th>
+                    <th> PRODUCT NAME</th>
                     <th> TOTAL UNITS</th>
                     <th> TOTAL COST</th>
                     <th> STATUS</th>
@@ -110,6 +116,7 @@ $result1 = mysqli_query($db, $sql1);
                         <td id = \"datesales\" name= \"datesales\" class = \"tablefield\" disabled>{$row1['datepurchase']}</td>
                         <td id = \"purchaseid\" name= \"purchaseid\" class = \"tablefield\" disabled>{$row1['purchaseid']}</td>
                         <td id = \"suppliername\" name= \"suppliername\" class = \"tablefield\" disabled>{$row1['suppliername']}</td>
+                        <td id = \"purchaseproduct\" name= \"purchaseproduct\"   class = \"tablefield\" disabled>{$row1['purchaseproduct']}</td>
                         <td id = \"totalunits\" name= \"totalunits\"   class = \"tablefield\" disabled>{$row1['totalunits']}</td>
                         <td id = \"total\" name= \"total\"  class = \"tablefield\" disabled>{$row1['total']}</td>
                         <td id = \"status\" name= \"status\" class = \"tablefield\" disabled>{$row1['status']}</td>
