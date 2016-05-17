@@ -258,12 +258,8 @@ echo "<body onload='totals($list[0], $list[1], $list[2], $list[3], $list[4], $li
             //data: {search: this.value}
         }).done(function (data) {
             // do stuff
-            var size = data.match(/\d+$/);
-            var digit = (''+size)[0];
-
-            for(var i=0; i<data.length; i++){
-                console.log(data + i +'times');
-            }
+            var dataSet = data.match(/^.*((\r\n|\n|\r)|$)/gm);
+            console.log(dataSet);
         })
 
     });
