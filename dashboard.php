@@ -262,10 +262,10 @@ echo "<body onload='totals($list[0], $list[1], $list[2], $list[3], $list[4], $li
             // do stuff
             var dataSet = data.match(/^.*((\r\n|\n|\r)|$)/gm);
             for(var i=0; i<dataSet.length; i++){
-                //arrayForX.push(dataSet[i].slice([1]));
-                console.log(dataSet[i].slice([2,dataSet[i].length]));
-                console.log(dataSet[i].slice([1]));
+                arrayForX.push(dataSet[i].slice([1]));
+                arrayForY.push(dataSet[i].slice([2,dataSet[i].length]));
             }
+            barchart.setData([{ "y": arrayForY[0], "a": arrayForX[0] },{ "y": arrayForY[1], "a": arrayForX[1]}]);
         })
 
     });
