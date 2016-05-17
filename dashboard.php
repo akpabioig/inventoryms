@@ -260,12 +260,12 @@ echo "<body onload='totals($list[0], $list[1], $list[2], $list[3], $list[4], $li
         }).done(function (data) {
             // do stuff
             dataSet = data.match(/^.*((\r\n|\n|\r)|$)/gm);
-            for(i=0; i<dataSet.length; i++){
+            for(i=0; i<dataSet.length-1; i++){
                 xValues.push(dataSet[i].slice([1]));
                 yValues.push(dataSet[i].slice([2,dataSet[i].length]));
             }
 
-            for(i=0; i<xValues.length-1;i++){
+            for(i=0; i<xValues.length;i++){
                 console.log(xValues[i]);
                 console.log(yValues[i]);
             }
