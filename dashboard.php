@@ -129,7 +129,7 @@ echo "<body onload='totals($list[0], $list[1], $list[2], $list[3], $list[4], $li
                     <!--Area chart example -->
                     <div class="panel panel-primary">
                         <div class="panel-heading">
-                            <i class="fa fa-bar-chart-o fa-fw"></i>Line Chart of Sales Over Time
+                            <i class="fa fa-bar-chart-o fa-fw"></i>Sales Over Time
                         </div>
 
                         <div class="panel-body">
