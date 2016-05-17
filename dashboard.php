@@ -265,7 +265,7 @@ echo "<body onload='totals($list[0], $list[1], $list[2], $list[3], $list[4], $li
                 arrayForX.push(dataSet[i].slice([1]));
                 arrayForY.push(dataSet[i].slice([2,dataSet[i].length]));
             }
-            barchart.setData([{ "y": arrayForY[0], "a": arrayForX[0] },{ "y": arrayForY[1], "a": arrayForX[1]}]);
+            barchart.setData([{ "y": "2011", "a": arrayForX[0] },{ "y": "2012", "a": arrayForX[1]}]);
         })
 
     });
