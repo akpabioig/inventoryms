@@ -33,6 +33,9 @@ $(function () {
         }, {
             period: '2012 Q2',
             iphone: 8432,
+        }, {
+            period: '2012 Q3',
+            iphone: 12332,
         }],
         xkey: 'period',
         ykeys: ['iphone'],
