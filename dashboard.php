@@ -296,8 +296,8 @@ echo "<body onload='totals($list[0], $list[1], $list[2], $list[3], $list[4], $li
                 periodT.push(height);
                 salesT.push(dataSet[i].slice([2]));
             }
-            console.log(periodT[0]);
-            console.log(salesT[0]);
+            //console.log(periodT[0]);
+            //console.log(salesT[0]);
             var d = new Date();
             var n = d.getFullYear();
             if(dataSet.length<2){
