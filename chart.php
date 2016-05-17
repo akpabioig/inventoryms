@@ -7,7 +7,6 @@
  */
 
 include('connection.php');
-$product_id = $_POST['search'];
 
 $sql = "SELECT COUNT(locationid), locationid
         from addproduct

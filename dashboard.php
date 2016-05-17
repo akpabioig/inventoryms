@@ -278,6 +278,22 @@ echo "<body onload='totals($list[0], $list[1], $list[2], $list[3], $list[4], $li
         })
 
     });
+
+
+    //linechart
+    $(document).ready(function(){
+        $.ajax({
+            url: 'linechart.php',
+            type: 'POST',
+        }).done(function (dataChart) {
+            console.log(dataChart);
+        })
+
+    });
+
+
+
+
     $(function () {
         Morris.Donut({
         element: 'morris-donut-chart',
