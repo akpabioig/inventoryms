@@ -252,6 +252,14 @@ echo "<body onload='totals($list[0], $list[1], $list[2], $list[3], $list[4], $li
 
     $(document).ready(function(){
         alert('baddo');
+        $.ajax({
+            url: 'chart.php',
+            type: 'POST',
+            //data: {search: this.value}
+        }).done(function (data) {
+            // do stuff
+            console.log(data);
+        })
 
     });
 </script>
