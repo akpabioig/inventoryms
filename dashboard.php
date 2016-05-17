@@ -239,6 +239,8 @@ echo "<body onload='totals($list[0], $list[1], $list[2], $list[3], $list[4], $li
 </html>
 
 <script type="application/javascript">
+    var dataSet, location, size, i;
+    var xValues = [], yValues = [];
     function totals(num, num1, num2, num3, num4, num5, num6) {
         document.getElementById('totalSales').innerHTML = num;
         document.getElementById('totalPurchases').innerHTML = num1;
@@ -252,18 +254,25 @@ echo "<body onload='totals($list[0], $list[1], $list[2], $list[3], $list[4], $li
     }
 
     $(document).ready(function(){
-        //alert('baddo');
         $.ajax({
             url: 'chart.php',
             type: 'POST',
-            //data: {search: this.value}
         }).done(function (data) {
             // do stuff
-            var dataSet = data.match(/^.*((\r\n|\n|\r)|$)/gm);
-                var location = dataSet[0].slice([1]);
-                var size = dataSet[0].slice([2,dataSet[0].length]);
+            dataSet = data.match(/^.*((\r\n|\n|\r)|$)/gm);
+            for(i=0; i<dataSet.length; i++){
+                xValues.push(dataSet[0].slice([1]));
+                yValues.push(dataSet[0].slice([2,dataSet[0].length]));
+            }
 
-            barchart.setData([{"y": location, "a": size}]);
+            for(i=0; i<xValues.length;i++){
+                console.log(xValues[i]);
+                console.log(yValues[i]);
+            }
+            //location = dataSet[0].slice([1]);
+            //size = dataSet[0].slice([2,dataSet[0].length]);
+
+            //barchart.setData([{"y": location, "a": size}]);
         })
 
     });
