@@ -251,6 +251,7 @@ echo "<body onload='totals($list[0], $list[1], $list[2], $list[3], $list[4], $li
         //barchart.setData([{ "y": "2014", "a": 100 },{ "y": "2015", "a": 24}]);
         for(var k=0; k<3;k++){
             barchart.setData([{ "y": "2014", "a": k }]);
+            barchart.setData([{ "y": "2015", "a": 5 }]);
         }
 
     }
