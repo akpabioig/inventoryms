@@ -140,7 +140,7 @@ echo "<body onload='totals($list[0], $list[1], $list[2], $list[3], $list[4], $li
 
                     <div class="panel panel-default">
                         <div class="panel-heading">
-                            Bar Chart Example
+                            Total number of Products Vs Location
                         </div>
                         <div class="panel-body">
                             <div id="morris-bar-chart"></div>
