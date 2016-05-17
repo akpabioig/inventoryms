@@ -266,10 +266,11 @@ echo "<body onload='totals($list[0], $list[1], $list[2], $list[3], $list[4], $li
                 var height = (''+amount)[0];
                 yValues.push(height);
             }
+            barchart.setData([{"y": xValues[0], "a": yValues[0]}, {"y": xValues[1], "a": yValues[1]}]);
 
             //for(i=0; i<xValues.length;i++){
-                console.log('Location: '+ xValues[0]);
-                console.log('Size: ' + yValues[0]);
+                //console.log('Location: '+ xValues[0]);
+                //console.log('Size: ' + yValues[0]);
             //}
 
             //location = dataSet[0].slice([1]);
