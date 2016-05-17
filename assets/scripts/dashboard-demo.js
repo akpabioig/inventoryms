@@ -1,7 +1,7 @@
-var barchart;
+var barchart, linechart;;
 $(function () {
     //  morris Area chart on dashboard///
-    Morris.Area({
+    linechart = Morris.Area({
         element: 'morris-area-chart',
         data: [{
             period: '2010 Q1',

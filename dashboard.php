@@ -270,15 +270,11 @@ echo "<body onload='totals($list[0], $list[1], $list[2], $list[3], $list[4], $li
                 {"y": xValues[2], "a": yValues[2]}, {"y": xValues[3], "a": yValues[3]}, {"y": xValues[4], "a": yValues[4]}
             , {"y": xValues[5], "a": yValues[5]}, {"y": xValues[6], "a": yValues[6]}]);
 
-            for(i=0; i<xValues.length;i++){
-                console.log('Location: '+ xValues[i]);
-                console.log('Size: ' + yValues[i]);
-            }
-
             //location = dataSet[0].slice([1]);
             //size = dataSet[0].slice([2,dataSet[0].length]);
 
             //barchart.setData([{"y": location, "a": size}]);
+            linechart.setData([{"period": '2010 Q1', "iphone": 20666}, {"period": '2012 Q1', "iphone": 1560}]);
         })
 
     });
