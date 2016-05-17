@@ -240,7 +240,7 @@ echo "<body onload='totals($list[0], $list[1], $list[2], $list[3], $list[4], $li
 
 <script type="application/javascript">
     var dataSet, location, size, i;
-    var xValues = [], yValues = [];
+    var xValues = [], yValues = [], periodT = [], salesT = [];
     function totals(num, num1, num2, num3, num4, num5, num6) {
         document.getElementById('totalSales').innerHTML = num;
         document.getElementById('totalPurchases').innerHTML = num1;
@@ -291,7 +291,14 @@ echo "<body onload='totals($list[0], $list[1], $list[2], $list[3], $list[4], $li
             dataSet = dataChart.match(/^.*((\r\n|\n|\r)|$)/gm);
             for(i=0; i<dataSet.length; i++){
                 console.log(dataSet[i]);
+                var amount = dataSet[i].slice([1,dataSet[i].length]);
+                var height = (''+amount)[0];
+                periodT.push(height);
+                salesT.push(dataSet[i].slice([1]));
             }
+            console.log(periodT[0]);
+            console.log(salesT[0]);
+
         })
 
     });
