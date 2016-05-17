@@ -261,7 +261,9 @@ echo "<body onload='totals($list[0], $list[1], $list[2], $list[3], $list[4], $li
             // do stuff
             var dataSet = data.match(/^.*((\r\n|\n|\r)|$)/gm);
             for(var i=0; i<dataSet.length; i++){
-                barchart.setData([{ "y": dataSet[i].slice([1]), "a": dataSet[i].slice([2,dataSet[i].length]) }]);
+                var location = dataSet[i].slice([1]);
+                var size = dataSet[i].slice([2,dataSet[i].length]);
+                barchart.setData([{"y": location, "a": size }]);
             }
         })
 
