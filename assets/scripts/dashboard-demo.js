@@ -42,23 +42,7 @@ $(function () {
         resize: true
     });
     //  morris donut chart on dashboard///
-    Morris.Donut({
-        element: 'morris-donut-chart',
-        data: [{
-            label: "Sales Pending Orders",
-            value: 30
-        }, {
-            label: "Sales Fulfilled Orders",
-            value: 20
-        }, {
-            label: "Purchase Pendig Orders",
-            value: 20
-        }, {
-            label: "Purchase Fulfilled Orders",
-            value: 20
-        }],
-        resize: true
-    });
+
 
     barchart = Morris.Bar({
         element: 'morris-bar-chart',
