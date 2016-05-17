@@ -288,7 +288,10 @@ echo "<body onload='totals($list[0], $list[1], $list[2], $list[3], $list[4], $li
             url: 'linechart.php',
             type: 'POST',
         }).done(function (dataChart) {
-            console.log(dataChart);
+            dataSet = data.match(/^.*((\r\n|\n|\r)|$)/gm);
+            for(i=0; i<dataSet.length; i++){
+                console.log(dataSet[i]);
+            }
         })
 
     });
