@@ -15,6 +15,6 @@ $sql = "SELECT MONTH(datesales), sum(totalcost)
 $record = mysqli_query($db, $sql);
 
 while ($row = $record->fetch_array()) {
-    echo "{$row[0]} $row[1]} \n";
+    echo "{$row[0]} {$row[1]} \n";
 }
 ?>
