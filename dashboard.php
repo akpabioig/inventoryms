@@ -31,6 +31,9 @@ while($count1 = $result1->fetch_array()) {
 }
 
 echo "<body onload='totals($list[0], $list[1], $list[2], $list[3], $list[4], $list[5], $list[6]);'>";
+echo "<script type='application/javascript'>";
+echo "Morris.bar.push({y:'2014', a: 91});";
+echo "</script>";
 ?>
 
 <nav class="w3-sidenav w3-black" style="width:102px"> <!-- -->
