@@ -260,9 +260,7 @@ echo "<body onload='totals($list[0], $list[1], $list[2], $list[3], $list[4], $li
             // do stuff
             var dataSet = data.match(/^.*((\r\n|\n|\r)|$)/gm);
             for(var i=0; i<dataSet.length; i++){
-                var firstDigit = dataSet[i].match(/\d+$/);
-                var digit = (''+firstDigit)[0];
-                console.log(digit);
+                console.log(dataSet.slice([1]));
             }
         })
 
