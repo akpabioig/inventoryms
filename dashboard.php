@@ -294,7 +294,7 @@ echo "<body onload='totals($list[0], $list[1], $list[2], $list[3], $list[4], $li
                 var amount = dataSet[i].slice([1,dataSet[i].length]);
                 var height = (''+amount)[0];
                 periodT.push(height);
-                salesT.push(dataSet[i].slice([1]));
+                salesT.push(dataSet[i].slice([2]));
             }
             console.log(periodT[0]);
             console.log(salesT[0]);
