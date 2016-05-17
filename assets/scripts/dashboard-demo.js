@@ -73,7 +73,7 @@ $(function () {
         }],
         xkey: 'y',
         ykeys: ['a'],
-        labels: ['Series A'],
+        labels: ['Total Products'],
         hideHover: 'auto',
         resize: true
     });
