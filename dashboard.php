@@ -289,7 +289,7 @@ echo "<body onload='totals($list[0], $list[1], $list[2], $list[3], $list[4], $li
             type: 'POST',
         }).done(function (dataChart) {
             dataSet = dataChart.match(/^.*((\r\n|\n|\r)|$)/gm);
-            for(i=0; i<dataSet.length; i++){
+            for(i=0; i<dataSet.length-1; i++){
                 console.log(dataSet[i]);
                 var amount = dataSet[i].slice([1,dataSet[i].length]);
                 var height = (''+amount)[0];
