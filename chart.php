@@ -15,7 +15,6 @@ $sql = "SELECT COUNT(locationid), locationid
 $record = mysqli_query($db, $sql);
 
 while ($row = $record->fetch_array()) {
-    echo $row[0];
-    echo $row[1];
+    echo "{$row[0]} {$row[1]}";
 }
 ?>
