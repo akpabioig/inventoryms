@@ -249,7 +249,7 @@ echo "<body onload='totals($list[0], $list[1], $list[2], $list[3], $list[4], $li
         document.getElementById('totalSalesInEarnings').innerHTML = num5;
         document.getElementById('totalPurchaseExpenses').innerHTML = num6;
         //barchart.setData([{ "y": "2014", "a": 100 },{ "y": "2015", "a": 24}]);
-        barchart.push({xkey:55, ykeys: "2010"});
+        barchart.push({"a":55, "y": "2010"});
 
     }
 
