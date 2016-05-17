@@ -296,100 +296,12 @@ echo "<body onload='totals($list[0], $list[1], $list[2], $list[3], $list[4], $li
                 periodT.push(height);
                 salesT.push(dataSet[i].slice([2]));
             }
-            //console.log(periodT[0]);
-            //console.log(salesT[0]);
+            console.log(periodT[0]);
+            console.log(salesT[0]);
             var d = new Date();
             var n = d.getFullYear();
-            if(dataSet.length<2){
-                linechart.setData([{"period": n+'-0'+periodT[0], "sales": salesT[0]}]);
-            }else if(dataSet.length<3){
-                linechart.setData([{"period": n+'-0'+periodT[0], "sales": salesT[0]}, {"period": n+'-0'+periodT[1], "sales": salesT[1]}]);
-            }else if(dataSet.length<4){
-                linechart.setData([{"period": n+'-0'+periodT[0], "sales": salesT[0]},
-                    {"period": n+'-0'+periodT[1], "sales": salesT[1]}
-                ,{"period": n+'-0'+periodT[2], "sales": salesT[2]}]);
-            }else if(dataSet.length<5){
-                linechart.setData([{"period": n+'-0'+periodT[0], "sales": salesT[0]},
-                    {"period": n+'-0'+periodT[1], "sales": salesT[1]}
-                    ,{"period": n+'-0'+periodT[2], "sales": salesT[2]},
-                    {"period": n+'-0'+periodT[3], "sales": salesT[3]}]);
-            }else if(dataSet.length<6){
-                linechart.setData([{"period": n+'-0'+periodT[0], "sales": salesT[0]},
-                    {"period": n+'-0'+periodT[1], "sales": salesT[1]}
-                    ,{"period": n+'-0'+periodT[2], "sales": salesT[2]},
-                    {"period": n+'-0'+periodT[3], "sales": salesT[3]},
-                    {"period": n+'-0'+periodT[4], "sales": salesT[4]}]);
-            }else if(dataSet.length<7){
-                linechart.setData([{"period": n+'-0'+periodT[0], "sales": salesT[0]},
-                    {"period": n+'-0'+periodT[1], "sales": salesT[1]}
-                    ,{"period": n+'-0'+periodT[2], "sales": salesT[2]},
-                    {"period": n+'-0'+periodT[3], "sales": salesT[3]},
-                    {"period": n+'-0'+periodT[4], "sales": salesT[4]},
-                    {"period": n+'-0'+periodT[5], "sales": salesT[5]}]);
-            }else if(dataSet.length<8){
-                linechart.setData([{"period": n+'-0'+periodT[0], "sales": salesT[0]},
-                    {"period": n+'-0'+periodT[1], "sales": salesT[1]}
-                    ,{"period": n+'-0'+periodT[2], "sales": salesT[2]},
-                    {"period": n+'-0'+periodT[3], "sales": salesT[3]},
-                    {"period": n+'-0'+periodT[4], "sales": salesT[4]},
-                    {"period": n+'-0'+periodT[5], "sales": salesT[5]},
-                    {"period": n+'-0'+periodT[6], "sales": salesT[6]}]);
-            }else if(dataSet.length<9){
-                linechart.setData([{"period": n+'-0'+periodT[0], "sales": salesT[0]},
-                    {"period": n+'-0'+periodT[1], "sales": salesT[1]}
-                    ,{"period": n+'-0'+periodT[2], "sales": salesT[2]},
-                    {"period": n+'-0'+periodT[3], "sales": salesT[3]},
-                    {"period": n+'-0'+periodT[4], "sales": salesT[4]},
-                    {"period": n+'-0'+periodT[5], "sales": salesT[5]},
-                    {"period": n+'-0'+periodT[6], "sales": salesT[6]},
-                    {"period": n+'-0'+periodT[7], "sales": salesT[7]}]);
-            }else if(dataSet.length<10){
-                linechart.setData([{"period": n+'-0'+periodT[0], "sales": salesT[0]},
-                    {"period": n+'-0'+periodT[1], "sales": salesT[1]}
-                    ,{"period": n+'-0'+periodT[2], "sales": salesT[2]},
-                    {"period": n+'-0'+periodT[3], "sales": salesT[3]},
-                    {"period": n+'-0'+periodT[4], "sales": salesT[4]},
-                    {"period": n+'-0'+periodT[5], "sales": salesT[5]},
-                    {"period": n+'-0'+periodT[6], "sales": salesT[6]},
-                    {"period": n+'-0'+periodT[7], "sales": salesT[7]},
-                    {"period": n+'-0'+periodT[8], "sales": salesT[8]}]);
-            }else if(dataSet.length<11){
-                linechart.setData([{"period": n+'-0'+periodT[0], "sales": salesT[0]},
-                    {"period": n+'-0'+periodT[1], "sales": salesT[1]}
-                    ,{"period": n+'-0'+periodT[2], "sales": salesT[2]},
-                    {"period": n+'-0'+periodT[3], "sales": salesT[3]},
-                    {"period": n+'-0'+periodT[4], "sales": salesT[4]},
-                    {"period": n+'-0'+periodT[5], "sales": salesT[5]},
-                    {"period": n+'-0'+periodT[6], "sales": salesT[6]},
-                    {"period": n+'-0'+periodT[7], "sales": salesT[7]},
-                    {"period": n+'-0'+periodT[8], "sales": salesT[8]},
-                    {"period": n+'-0'+periodT[9], "sales": salesT[9]}]);
-            }else if(dataSet.length<12){
-                linechart.setData([{"period": n+'-0'+periodT[0], "sales": salesT[0]},
-                    {"period": n+'-0'+periodT[1], "sales": salesT[1]}
-                    ,{"period": n+'-0'+periodT[2], "sales": salesT[2]},
-                    {"period": n+'-0'+periodT[3], "sales": salesT[3]},
-                    {"period": n+'-0'+periodT[4], "sales": salesT[4]},
-                    {"period": n+'-0'+periodT[5], "sales": salesT[5]},
-                    {"period": n+'-0'+periodT[6], "sales": salesT[6]},
-                    {"period": n+'-0'+periodT[7], "sales": salesT[7]},
-                    {"period": n+'-0'+periodT[8], "sales": salesT[8]},
-                    {"period": n+'-0'+periodT[9], "sales": salesT[9]},
-                    {"period": n+'-0'+periodT[10], "sales": salesT[10]}]);
-            }else if(dataSet.length<13){
-                linechart.setData([{"period": n+'-0'+periodT[0], "sales": salesT[0]},
-                    {"period": n+'-0'+periodT[1], "sales": salesT[1]}
-                    ,{"period": n+'-0'+periodT[2], "sales": salesT[2]},
-                    {"period": n+'-0'+periodT[3], "sales": salesT[3]},
-                    {"period": n+'-0'+periodT[4], "sales": salesT[4]},
-                    {"period": n+'-0'+periodT[5], "sales": salesT[5]},
-                    {"period": n+'-0'+periodT[6], "sales": salesT[6]},
-                    {"period": n+'-0'+periodT[7], "sales": salesT[7]},
-                    {"period": n+'-0'+periodT[8], "sales": salesT[8]},
-                    {"period": n+'-0'+periodT[9], "sales": salesT[9]},
-                    {"period": n+'-0'+periodT[10], "sales": salesT[10]},
-                    {"period": n+'-0'+periodT[11], "sales": salesT[11]}]);
-            }
+            linechart.setData([{"period": n+'-0'+periodT[0], "sales": salesT[0]}, {"period": n+'-0'+periodT[1], "sales": salesT[1]}]);
+
 
         })
 
