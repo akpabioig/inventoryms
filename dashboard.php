@@ -239,6 +239,7 @@ echo "<body onload='totals($list[0], $list[1], $list[2], $list[3], $list[4], $li
 </html>
 
 <script type="application/javascript">
+    var arrayForX = [], arrayForY = [];
     function totals(num, num1, num2, num3, num4, num5, num6) {
         document.getElementById('totalSales').innerHTML = num;
         document.getElementById('totalPurchases').innerHTML = num1;
@@ -248,6 +249,10 @@ echo "<body onload='totals($list[0], $list[1], $list[2], $list[3], $list[4], $li
         document.getElementById('totalSalesInEarnings').innerHTML = num5;
         document.getElementById('totalPurchaseExpenses').innerHTML = num6;
         //barchart.setData([{ "y": "2014", "a": 100 },{ "y": "2015", "a": 24}]);
+        barchart.push({
+            "y":"2014",
+            "a":89
+        });
     }
 
     $(document).ready(function(){
@@ -260,6 +265,7 @@ echo "<body onload='totals($list[0], $list[1], $list[2], $list[3], $list[4], $li
             // do stuff
             var dataSet = data.match(/^.*((\r\n|\n|\r)|$)/gm);
             for(var i=0; i<dataSet.length; i++){
+
                 console.log(dataSet[i].slice([1]));
             }
         })
