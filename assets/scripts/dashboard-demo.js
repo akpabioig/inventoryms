@@ -39,7 +39,7 @@ $(function () {
         }],
         xkey: 'period',
         ykeys: ['sales'],
-        labels: ['iPhone'],
+        labels: ['Sales'],
         pointSize: 2,
         hideHover: 'auto',
         resize: true
