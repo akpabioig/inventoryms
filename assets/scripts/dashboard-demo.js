@@ -5,40 +5,40 @@ $(function () {
         element: 'morris-area-chart',
         data: [{
             period: '2010 Q1',
-            iphone: 2666,
+            sales: 2666,
         }, {
             period: '2010 Q2',
-            iphone: 2778,
+            sales: 2778,
         }, {
             period: '2010 Q3',
-            iphone: 4912,
+            sales: 4912,
         }, {
             period: '2010 Q4',
-            iphone: 3767,
+            sales: 3767,
         }, {
             period: '2011 Q1',
-            iphone: 6810,
+            sales: 6810,
         }, {
             period: '2011 Q2',
-            iphone: 5670,
+            sales: 5670,
         }, {
             period: '2011 Q3',
-            iphone: 4820,
+            sales: 4820,
         }, {
             period: '2011 Q4',
-            iphone: 15073,
+            sales: 15073,
         }, {
             period: '2012 Q1',
-            iphone: 10687,
+            sales: 10687,
         }, {
             period: '2012 Q2',
-            iphone: 8432,
+            sales: 8432,
         }, {
             period: '2012 Q3',
-            iphone: 12332,
+            sales: 12332,
         }],
         xkey: 'period',
-        ykeys: ['iphone'],
+        ykeys: ['sales'],
         labels: ['iPhone'],
         pointSize: 2,
         hideHover: 'auto',
