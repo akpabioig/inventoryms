@@ -8,13 +8,13 @@
 
 include('connection.php');
 
-$sql = "SELECT MONTH(datesales), datesales, sum(totalcost)
+$sql = "SELECT MONTH(datesales), sum(totalcost)
         FROM salesorder
         WHERE status = 'fulfilled'
         GROUP BY MONTH(datesales)";
 $record = mysqli_query($db, $sql);
 
 while ($row = $record->fetch_array()) {
-    echo "{$row[0]} \n";
+    echo "{$row[1]} \n";
 }
 ?>
