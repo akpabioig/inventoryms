@@ -265,7 +265,7 @@ echo "<body onload='totals($list[0], $list[1], $list[2], $list[3], $list[4], $li
                 var size = dataSet[i].slice([2,dataSet[i].length]);
             }
 
-            barchart.setData([{"y": "233", "a": size }]);
+            barchart.setData([{"y": "233", "a": 10 }]);
         })
 
     });
