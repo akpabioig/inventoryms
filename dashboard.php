@@ -274,7 +274,7 @@ echo "<body onload='totals($list[0], $list[1], $list[2], $list[3], $list[4], $li
             //size = dataSet[0].slice([2,dataSet[0].length]);
 
             //barchart.setData([{"y": location, "a": size}]);
-            linechart.setData([{"period": '2010-01', "iphone": 20666}, {"period": '2010-02', "iphone": 1560}]);
+            linechart.setData([{"period": '01', "iphone": 20666}, {"period": '02', "iphone": 1560}]);
         })
 
     });
