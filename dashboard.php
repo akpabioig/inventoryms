@@ -266,7 +266,7 @@ echo "<body onload='totals($list[0], $list[1], $list[2], $list[3], $list[4], $li
                 yValues.push(height);
                 xValues.push(dataSet[i].slice([1]));
             }
-            barchart.setData([{"y": xValues[0], "a": yValues[0]}, {"y": xValues[1], "a": yValues[1]}, {"y": xValues[2], "a": yValues[2]}]);
+            barchart.setData([{"y": xValues[0], "a": yValues[0]}, {"y": xValues[1], "a": yValues[1]}, {"y": xValues[2], "a": yValues[2]}, {"y": xValues[3], "a": yValues[3]}]);
 
             for(i=0; i<xValues.length;i++){
                 console.log('Location: '+ xValues[i]);
