@@ -277,9 +277,8 @@ echo "<body onload='totals($list[0], $list[1], $list[2], $list[3], $list[4], $li
         })
 
     });
-
-    function Morris
-    .Donut({
+    $(function () {
+        Morris.Donut({
         element: 'morris-donut-chart',
         data: [{
             label: "Sales Pending Orders",
@@ -295,5 +294,6 @@ echo "<body onload='totals($list[0], $list[1], $list[2], $list[3], $list[4], $li
             value: 20
         }],
         resize: true
+    });
     });
 </script>
