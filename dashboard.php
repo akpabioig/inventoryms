@@ -239,7 +239,6 @@ echo "<body onload='totals($list[0], $list[1], $list[2], $list[3], $list[4], $li
 </html>
 
 <script type="application/javascript">
-    var arrayForX = [], arrayForY = [];
     function totals(num, num1, num2, num3, num4, num5, num6) {
         document.getElementById('totalSales').innerHTML = num;
         document.getElementById('totalPurchases').innerHTML = num1;
@@ -262,10 +261,8 @@ echo "<body onload='totals($list[0], $list[1], $list[2], $list[3], $list[4], $li
             // do stuff
             var dataSet = data.match(/^.*((\r\n|\n|\r)|$)/gm);
             for(var i=0; i<dataSet.length; i++){
-                arrayForX.push(dataSet[i].slice([1]));
-                arrayForY.push(dataSet[i].slice([2,dataSet[i].length]));
+                barchart.setData([{ "y": dataSet[i].slice([1]), "a": dataSet[i].slice([2,dataSet[i].length]) }]);
             }
-            barchart.setData([{ "y": "2011", "a": arrayForX[0] },{ "y": "2012", "a": arrayForX[1]}]);
         })
 
     });
