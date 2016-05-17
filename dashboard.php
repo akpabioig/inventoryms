@@ -263,7 +263,7 @@ echo "<body onload='totals($list[0], $list[1], $list[2], $list[3], $list[4], $li
             var dataSet = data.match(/^.*((\r\n|\n|\r)|$)/gm);
             for(var i=0; i<dataSet.length; i++){
                 //arrayForX.push(dataSet[i].slice([1]));
-                console.log(dataSet[i].slice([2,dataset[i].length]));
+                console.log(dataSet[i].slice([2,dataSet[i].length]));
                 console.log(dataSet[i].slice([1]));
             }
         })
