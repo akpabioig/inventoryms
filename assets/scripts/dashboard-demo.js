@@ -1,3 +1,4 @@
+var barchart;
 $(function () {
     //  morris Area chart on dashboard///
     Morris.Area({
@@ -59,7 +60,7 @@ $(function () {
         resize: true
     });
 
-    Morris.Bar({
+    barchart = Morris.Bar({
         element: 'morris-bar-chart',
         data: [{
             y: '2006',

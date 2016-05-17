@@ -246,6 +246,6 @@ echo "<body onload='totals($list[0], $list[1], $list[2], $list[3], $list[4], $li
         document.getElementById('totalGoodsInStock').innerHTML = num4;
         document.getElementById('totalSalesInEarnings').innerHTML = num5;
         document.getElementById('totalPurchaseExpenses').innerHTML = num6;
-        morris-bar-chart.push({y:'2014', a: 91});
+        barchart.setData([{ "y": "2014", "a": 100 }]);
     }
 </script>
