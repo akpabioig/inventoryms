@@ -247,7 +247,11 @@ echo "<body onload='totals($list[0], $list[1], $list[2], $list[3], $list[4], $li
         document.getElementById('totalGoodsInStock').innerHTML = num4;
         document.getElementById('totalSalesInEarnings').innerHTML = num5;
         document.getElementById('totalPurchaseExpenses').innerHTML = num6;
-        <?php echo 'kai'; ?>
         //barchart.setData([{ "y": "2014", "a": 100 },{ "y": "2015", "a": 24}]);
     }
+
+    $(document).ready(function(){
+        alert('baddo');
+
+    });
 </script>
