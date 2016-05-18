@@ -136,6 +136,16 @@ include('connection.php');
             <p> - The Product report can be found in the reports section of the application.
                 The report icon is on the shortcut pane located at the top right of the application's homepage</p>
             <li>
+            <li> How to change Storage location?</li>
+            <p> - Access the edit records page using the edit records icon on the homepage,
+                Go to Edit product Records, Scroll to the end of the record to be edit and click the edit icon
+                Change the location using the drop down menu and click update
+            <p>
+            <li> How to access product location</li>
+            <p> - Click on the Reports icons on the homepage. Go to the Product Location Report and View the
+                location</p>
+            <li> How to check products in a particular location</li>
+            <p> - Click on the product location icon on the homepage, Click on teh particular location to explore. </p>
         </ol>
         </body>
     </div>
@@ -150,8 +160,10 @@ include('connection.php');
         <ol>
             <li> Must Customer be added before sales can be made ?</li>
             <p> - Yes, Customer must be added before sales can be made. </p>
-            <li></li>
-            <p></p>
+            <li> How to edit customer record</li>
+            <p> - Go to the edit records page using the edit records icon on the homepage
+                Click on the edit customer record. Scroll to the end of the record to be edit and click the edit
+                icon</p>
         </ol>
         </body>
     </div>
@@ -166,8 +178,10 @@ include('connection.php');
         <ol>
             <li> Must Supplier be added before purchase can be made ?</li>
             <p> - Yes, Supplier must be added before purchases can be made. </p>
-            <li></li>
-            <p></p>
+            <li> How to edit supplier record</li>
+            <p> - Go to the edit records page using the edit records icon on the homepage
+                Click on the edit supplier record. Scroll to the end of the record to be edit and click the edit
+                icon</p>
         </ol>
         </body>
     </div>
