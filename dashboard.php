@@ -10,26 +10,27 @@ if (!isset($_SESSION['user'])) {
     while($count1 = $result1->fetch_array()) {
     $list[] = $count1[0];
     }
-}
-?>
+echo "
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
     <title> Dashboard </title>
-    <link href="assets/plugins/bootstrap/bootstrap.css" rel="stylesheet"/>
-    <link href="assets/font-awesome/css/font-awesome.css" rel="stylesheet"/>
-    <link href="assets/plugins/pace/pace-theme-big-counter.css" rel="stylesheet"/>
-    <link href="assets/css/style.css" rel="stylesheet"/>
-    <link href="assets/css/main-style.css" rel="stylesheet"/>
-    <link href="assets/plugins/morris/morris-0.4.3.min.css" rel="stylesheet"/>
-    <link rel="stylesheet" href="styling.css"/>
-    <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
-    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link href='assets/plugins/bootstrap/bootstrap.css' rel='stylesheet'/>
+    <link href='assets/font-awesome/css/font-awesome.css' rel='stylesheet'/>
+    <link href='assets/plugins/pace/pace-theme-big-counter.css' rel='stylesheet'/>
+    <link href='assets/css/style.css' rel='stylesheet'/>
+    <link href='assets/css/main-style.css' rel='stylesheet'/>
+    <link href='assets/plugins/morris/morris-0.4.3.min.css' rel='stylesheet'/>
+    <link rel='stylesheet' href='styling.css'/>
+    <link rel='stylesheet' href='http://www.w3schools.com/lib/w3.css'>
+    <link rel='stylesheet' href='http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css'>
 </head>
 
-<?php echo "<body onload='totals($list[0], $list[1], $list[2], $list[3], $list[4], $list[5], $list[6], $list[7]);'>"; ?>
+<body onload='totals($list[0], $list[1], $list[2], $list[3], $list[4], $list[5], $list[6], $list[7]);'>";
+}
+?>
 <nav class="w3-sidenav w3-black" style="width:102px"> <!-- -->
     <a class="w3-padding-16" href="index.php"><i class="fa fa-home w3-xxlarge"></i> <br>HOME </a>
     <a class="w3-padding-16" href="addproduct.php"><i class="fa fa-plus-square w3-xlarge"></i> <br>ADD PRODUCT</a>
