@@ -146,7 +146,7 @@ if (!isset($_SESSION['user'])) {
                                 include ('connection.php');
                                 $queryNotifications = "select notification from notifications order by id desc LIMIT 10";
                                 $resultNotifications = mysqli_query($db, $queryNotifications);
-                                if($resultNotifications !=0){
+                                if($resultNotifications >0){
                                     while($countNotifications = $resultNotifications->fetch_array()) {
                                         echo "
                                     <a href=\"#\" class=\"list-group-item\">
