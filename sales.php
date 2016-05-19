@@ -28,6 +28,11 @@ try {
     $sql = "INSERT INTO salesorder (datesales, customerid, reference, message, deladdress, paymenttype, totalunits, subtotal, totalcost)
 VALUES ('$datesales', $customer,'$refcust', '$messcust', '$deladdcust', '$paytcust', $totunitcust, $subtotalcust, $totalcost)";
     $sth = $db->query($sql);
+
+    $sql3 = "INSERT INTO notifications (notification)
+                VALUES ('Sales Order {$salesid} was Created')";
+    $sth3 = $db->query($sql3);
+
 } catch(PDOException $e) {
     echo $e->getMessage();
 }

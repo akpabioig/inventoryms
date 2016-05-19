@@ -25,6 +25,10 @@ try {
 VALUES ($supplier, '$purchasedate','$ref','$messsupplier', $totalunit, $subtotal, $totalcost)";
     $sth = $db->query($sql);
 
+    $sql3 = "INSERT INTO notifications (notification)
+                VALUES ('Purchase Order {$pid} was Created')";
+    $sth3 = $db->query($sql3);
+
 } catch(PDOException $e) {
     echo $e->getMessage();
 }
