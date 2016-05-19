@@ -153,7 +153,7 @@ if (!isset($_SESSION['user'])) {
                         <div class="panel-body">
                             <div class="list-group">
                                 <?php
-                                $queryNotifications = "select notification from notifications order by id desc";
+                                $queryNotifications = "select notification from notifications order by id desc LIMIT 10";
                                 $resultNotifications = mysqli_query($db, $queryNotifications);
                                 while($countNotifications = $resultNotifications->fetch_array()) {
                                     echo "

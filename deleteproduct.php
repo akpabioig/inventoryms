@@ -9,6 +9,9 @@ if (isset($_GET['prodid'])) {
         $sql = "DELETE FROM addproduct
                     WHERE productid = {$prodId}";
         $sth = $db->query($sql);
+        $sql3 = "INSERT INTO notifications (notification)
+                    VALUES ('Product {$pname} was added')";
+        $sth3 = $db->query($sql3);
 
     } catch (PDOException $e) {
         echo $e->getMessage();
