@@ -148,7 +148,6 @@ include('connection.php');
             <li> How to get the product Report ?</li>
             <p> - The Product report can be found in the reports section of the application.
                 The report icon is on the shortcut pane located at the top right of the application's homepage</p>
-            <li>
             <li> How to change Storage location?</li>
             <p> - Access the edit records page using the edit records icon on the homepage,
                 Go to Edit product Records, Scroll to the end of the record to be edit and click the edit icon
@@ -177,6 +176,8 @@ include('connection.php');
             <p> - Go to the edit records page using the edit records icon on the homepage
                 Click on the edit customer record. Scroll to the end of the record to be edit and click the edit
                 icon</p>
+            <li> Where can customer record be seen/ used in the application after creating</li>
+            <p> - During sales operations and in customer report</p>
         </ol>
         </body>
     </div>
@@ -195,6 +196,8 @@ include('connection.php');
             <p> - Go to the edit records page using the edit records icon on the homepage
                 Click on the edit supplier record. Scroll to the end of the record to be edit and click the edit
                 icon</p>
+            <li> Where can supplier record be seen/ used in the application after creating</li>
+            <p> - During purchase operations and in supplier report</p>
         </ol>
         </body>
     </div>
