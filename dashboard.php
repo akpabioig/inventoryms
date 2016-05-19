@@ -278,7 +278,7 @@ if (!isset($_SESSION['user'])) {
 
     });
 
-
+/*
     //linechart
     $(document).ready(function(){
         $.ajax({
@@ -304,7 +304,7 @@ if (!isset($_SESSION['user'])) {
 
     });
 
-
+*/
 
 
     $(function () {
