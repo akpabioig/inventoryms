@@ -288,16 +288,14 @@ if (!isset($_SESSION['user'])) {
             lineDataSet = dataChart.match(/^.*((\r\n|\n|\r)|$)/gm);
             for(i=0; i<lineDataSet.length; i++){
                 //console.log(lineDataSet[i]);
-                var ld = lineDataSet[i].slice([2,lineDataSet[i].length]);
-                console.log('number 2:' + lineDataSet[i].slice([2, lineDataSet[i].length]));
-                //var ht = (''+ld)[0];
-                periodT.push(ld);
+                var ld = lineDataSet[i].slice([1,lineDataSet[i].length]);
+                var ht = (''+ld)[0];
+                periodT.push(ht);
                 salesT.push(lineDataSet[i].slice([2]));
             }
             console.log(periodT[0]);
             console.log(salesT[0]);
             console.log(lineDataSet.length-1);
-            console.log(periodT[2]);
             var d = new Date();
             var n = d.getFullYear();
             if(lineDataSet.length-1 == 1){
@@ -305,7 +303,7 @@ if (!isset($_SESSION['user'])) {
             }else if(lineDataSet.length-1 == 2){
                 linechart.setData([{"period": n+'-0'+periodT[0], "sales": salesT[0]}, {"period": n+'-0'+periodT[1], "sales": salesT[1]}]);
             }else if(lineDataSet.length-1 == 3){
-                linechart.setData([{"period": n+'-'+periodT[0], "sales": salesT[0]}, {"period": n+'-'+periodT[1], "sales": salesT[1]},
+                linechart.setData([{"period": n+'-0'+periodT[0], "sales": salesT[0]}, {"period": n+'-0'+periodT[1], "sales": salesT[1]},
                     {"period": n+'-'+periodT[2], "sales": salesT[2]}]);
             }else if(lineDataSet.length-1 == 4){
                 linechart.setData([{"period": n+'-0'+periodT[0], "sales": salesT[0]}, {"period": n+'-0'+periodT[1], "sales": salesT[1]},
