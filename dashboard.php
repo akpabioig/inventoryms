@@ -385,7 +385,7 @@ if (!isset($_SESSION['user'])) {
             label: "Sales Fulfilled Orders",
             value: 20
         }, {
-            label: "Purchase Pendig Orders",
+            label: "Purchase Pending Orders",
             value: 20
         }, {
             label: "Purchase Fulfilled Orders",
