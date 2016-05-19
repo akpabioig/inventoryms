@@ -6,12 +6,11 @@
  * Time: 12:30 PM
  *
  */
-
-
 $db = new PDO('mysql:host=us-cdbr-azure-southcentral-e.cloudapp.net;dbname=inventoryms;charset=utf8mb4', 'bee886bc8793e7', '362289e3', array(PDO::ATTR_EMULATE_PREPARES => false,
     PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
 
 if (isset($_GET['prodid'])) {
+    $prodId = $_GET['prodid'];
 
     try {
         $sql = "DELETE FROM addproduct
@@ -19,7 +18,7 @@ if (isset($_GET['prodid'])) {
         $sth = $db->query($sql);
 
         $sql3 = "INSERT INTO notifications (notification)
-                            VALUES ('Product with ID: {$prodId} was deleted')";
+                            VALUES ('Product: {$qResult} was deleted')";
         $sth3 = $db1->query($sql3);
 
     } catch (PDOException $e) {
