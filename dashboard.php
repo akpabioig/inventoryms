@@ -290,7 +290,7 @@ if (!isset($_SESSION['user'])) {
                 //console.log(lineDataSet[i]);
                 var ld = lineDataSet[i].slice([1,lineDataSet[i].length]);
                 var ht = (''+ld)[0];
-                periodT.push(height);
+                periodT.push(ht);
                 salesT.push(lineDataSet[i].slice([2]));
             }
             console.log(periodT[0]);
