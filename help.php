@@ -91,7 +91,7 @@ include('connection.php');
             <h3> CLICK ON THE HEADER OF THE VIDEO TO SEE FREQUENTLY ASKED QUESTIONS (FAQ's)</h3>
         </nav>
         <div id="form4">
-            <table>
+            <table cellpadding="10" cellspacing="10">
                 <tr>
                     <td id="producthelp"> PRODUCT HELP</td>
                     <td id="customerhelp"> CUSTOMER HELP</td>
@@ -126,7 +126,7 @@ include('connection.php');
                     </td>
                     <td>
                         <iframe id=intro width="350" height="300" allowfullscreen="allowfullscreen"
-                                src="https://www.youtube.com/embed/?">
+                                src="https://www.youtube.com/embed/tePJ77mhnCI?">
                         </iframe>
                     </td>
                 </tr>
@@ -202,6 +202,51 @@ include('connection.php');
         </body>
     </div>
 </div>
+<div id="myModal3" class="modal">
+    <div class="modal-content">
+        <span class="close3">x</span>
+        <header>
+            <h1> PURCHASE ORDER FAQ's </h1>
+        </header>
+        <body>
+        <ol>
+            <li> What are the compulsory fields to complete a purchase ?</li>
+            <p> - Select date, Select product and set tax.</p>
+            <li> How are purchases fulfilled ?</li>
+            <p> - Go to the order fulfillment tab on the homepage and select the order to be fulfilled from the table,
+                Scroll to the end and click on the fulfill button</p>
+            <li> Is there a limit to quantity that can be purchased at a given time ?</li>
+            <p> - No.</p>
+            <li> How to delete an order if an error occurs ?</li>
+            <p> - Click on delete at the end of the row.</p>
+        </ol>
+        </body>
+    </div>
+</div>
+<div id="myModal4" class="modal">
+    <div class="modal-content">
+        <span class="close4">x</span>
+        <header>
+            <h1> SALES ORDER FAQ's </h1>
+        </header>
+        <body>
+        <ol>
+            <li> What are the compulsory fields to complete a sales ?</li>
+            <p> - Select date, Select product, discount and set tax.</p>
+            <li> How are sales fulfilled ?</li>
+            <p> - Go to the order fulfillment tab on the homepage and select the order to be fulfilled from the table,
+                Scroll to the end and click on the fulfill button</p>
+            <li> If the order is more than what is in stock, Does the order still go through ?</li>
+            <p> - No. It tells you to purchase stock because stock level too low. </p>
+            <li> How to delete an order if an error occurs ?</li>
+            <p> - Click on delete at the end of the row.</p>
+            <li> Can a product that is low in stock but pending fulfillment in purchase order be ordered again ?</li>
+            <p> Yes. It can but on fulfillment of the order, If the order is low the system prompt user that it is low
+                but is being ordered from supplier. Therefore user shouldnt restock. </p>
+        </ol>
+        </body>
+    </div>
+</div>
 <script>
     // PRODUCT HELP
     var modal = document.getElementById('myModal');
@@ -245,6 +290,35 @@ include('connection.php');
     modal2.onclick = function (event2) {
         if (event2.target == modal2) {
             modal2.style.display = "none";
+        }
+    }
+
+    var modal3 = document.getElementById('myModal3');
+    var btn3 = document.getElementById("purchaseorderhelp");
+    var span3 = document.getElementsByClassName("close3")[0];
+    btn3.onclick = function () {
+        modal3.style.display = "block";
+    }
+    span3.onclick = function () {
+        modal3.style.display = "none";
+    }
+    modal3.onclick = function (event3) {
+        if (event3.target == modal3) {
+            modal3.style.display = "none";
+        }
+    }
+    var modal4 = document.getElementById('myModal4');
+    var btn4 = document.getElementById("salesorderhelp");
+    var span4 = document.getElementsByClassName("close4")[0];
+    btn4.onclick = function () {
+        modal4.style.display = "block";
+    }
+    span4.onclick = function () {
+        modal4.style.display = "none";
+    }
+    modal4.onclick = function (event4) {
+        if (event4.target == modal4) {
+            modal4.style.display = "none";
         }
     }
 </script>
