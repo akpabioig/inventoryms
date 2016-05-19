@@ -43,7 +43,7 @@ include('connection.php');
         <div id = "form1">
             <div class="locbutt">
                 <a href="allcustomers.php">
-                    <img src="report/c_report.jpg" style{height="100" width="200" } class="reporticons"/>
+                    <img src="report/c_report.jpg" style{height="130" width="250" } class="reporticons"/>
                 </a>
                 <a href="allsuppliers.php">
                     <img src="report/s_report.jpg" style{height="80" width="100" } class="reporticons"/>
