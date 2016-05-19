@@ -41,7 +41,7 @@ include('connection.php');
         <h2>REPORTS</h2>
         <p>Click on Any of The Reports To Explore</p>
         <div id = "form1">
-            <div class="">
+            <div>
                 <a href="allcustomers.php">
                     <img src="report/c_report.jpg" style{height="130" width="250" } class="reporticons"/>
                 </a>
@@ -55,7 +55,7 @@ include('connection.php');
                     <img src="report/pl_report.jpg" style{height="80" width="100" } class="reporticons"/>
                 </a>
             </div>
-            <div class="locbutt2">
+            <div>
                 <a href="allpurchase.php">
                     <img src="report/po_report.jpg" style{height="80" width="100" } class="reporticons"/>
                 </a>
