@@ -288,8 +288,8 @@ if (!isset($_SESSION['user'])) {
             lineDataSet = dataChart.match(/^.*((\r\n|\n|\r)|$)/gm);
             for(i=0; i<lineDataSet.length; i++){
                 //console.log(lineDataSet[i]);
-                var ld = lineDataSet[i].slice([1,lineDataSet[i].length]);
-                var ht = (''+ld)[0];
+                var ld = lineDataSet[i].slice([2,lineDataSet[i].length]);
+                var ht = (''+ld)[1];
                 periodT.push(ht);
                 salesT.push(lineDataSet[i].slice([2]));
             }
