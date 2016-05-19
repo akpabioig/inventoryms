@@ -14,9 +14,9 @@ if (isset($_GET['prodid'])) {
         $query1 = "select * from dashboard_totals";
         $result1 = mysqli_query($db, $query1);
 
-        $sql4 = "SELECT productname from addproduct where productid= {$prodId}";
+        $sql4 = "SELECT productname from addproduct where productid = {$prodId}";
         $sth4 = mysqli_query($db, $query1);
-
+        echo "$sth4";
         $sql3 = "INSERT INTO notifications (notification)
                     VALUES ('Product: {$sth4} was deleted')";
         $sth3 = $db->query($sql3);
