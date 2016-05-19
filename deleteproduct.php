@@ -19,7 +19,7 @@ if (isset($_GET['prodid'])) {
 
         $sql3 = "INSERT INTO notifications (notification)
                             VALUES ('Product: {$prodId} was deleted')";
-        $sth3 = $db1->query($sql3);
+        $sth3 = $db->query($sql3);
 
     } catch (PDOException $e) {
         echo $e->getMessage();
