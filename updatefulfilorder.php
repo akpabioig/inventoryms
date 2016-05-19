@@ -64,6 +64,11 @@ if (isset($_GET['salesid'])) {
             SET status = 'fulfilled'
             WHERE sid = {$soId}";
             $sth = $db->query($sql);
+
+            $sql5 = "INSERT INTO notifications (notification)
+                VALUES ('Sales Order {$soId} was Fulfilled')";
+            $sth5 = $db->query($sql5);
+
         } catch (PDOException $e) {
             echo $e->getMessage();
         }

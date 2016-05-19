@@ -13,6 +13,11 @@ if (isset($_GET['purid'])) {
             SET status = 'fulfilled'
                 WHERE purchaseid = {$poId}";
         $sth2 = $db->query($sql2);
+
+        $sql5 = "INSERT INTO notifications (notification)
+                VALUES ('Purchase Order {$poId} was Fulfilled')";
+        $sth5 = $db->query($sql5);
+
     } catch (PDOException $g) {
         echo $g->getMessage();
     }
