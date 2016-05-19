@@ -157,7 +157,13 @@ if (!isset($_SESSION['user'])) {
                                     ";
                                     }
                                 }else {
-                                    echo "No notification yet!";
+                                    echo "
+                                    <a href=\"#\" class=\"list-group-item\">
+                                    <i class=\"fa fa-info-circle\"></i> No notification yet
+                                    <span class=\"pull-right text-muted small\">
+                                    </span>
+                                    </a>
+                                    ";
                                 }
 
                                 ?>
