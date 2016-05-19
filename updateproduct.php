@@ -34,7 +34,7 @@ $prodid = htmlspecialchars($_POST['prodid']);
                     WHERE productid = {$prodid}";
         $sth = $db->query($sql);
         $sql3 = "INSERT INTO notifications (notification)
-                    VALUES ('Product {$pname} was added')";
+                    VALUES ('Product {$pname} was updated')";
         $sth3 = $db->query($sql3);
     } catch(PDOException $e) {
         echo $e->getMessage();
