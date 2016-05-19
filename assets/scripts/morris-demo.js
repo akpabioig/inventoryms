@@ -2,7 +2,7 @@
 
 $(function () {
 
-    Morris.Area({
+    linechart = Morris.Area({
         element: 'morris-area-chart',
         data: [{
             period: '2010 Q1',
@@ -78,7 +78,7 @@ $(function () {
         resize: true
     });
     //morris bar chart
-    Morris.Bar({
+    barchart = Morris.Bar({
         element: 'morris-bar-chart',
         data: [{
             y: '2006',
