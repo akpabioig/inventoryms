@@ -40,7 +40,7 @@ $(function () {
         xkey: 'period',
         ykeys: ['sales'],
         labels: ['Sales'],
-        pointSize: 4,
+        pointSize: 5,
         hideHover: 'auto',
         resize: true
     });
