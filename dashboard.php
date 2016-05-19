@@ -425,10 +425,7 @@ if (!isset($_SESSION['user'])) {
             type: 'POST',
         }).done(function (pendingDashboard) {
             pending = pendingDashboard.match(/^.*((\r\n|\n|\r)|$)/gm);
-            for(var i=0; i<pending.length; i++){
-                console.log( i + ' ' +pending[i]);
-            }
-
+                console.log( i + ' ' +pending[0]);
         })
 
 
