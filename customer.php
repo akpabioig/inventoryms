@@ -29,6 +29,11 @@ $ccountry = htmlspecialchars($_POST['ccountry']);
         $sql = "INSERT INTO addcustomer (customertype, customername, telnumber, fax, url, email, description, addressline1, addressline2, town, county, postcode, country)
                 VALUES ('$type', '$custn','$custtel', '$custfax', '$custurl', '$custemail','$desc', '$custadd1', '$custadd2', '$ctown', '$ccounty', '$cpostc', '$ccountry')";
         $sth = $db->query($sql);
+
+        $sql3 = "INSERT INTO notifications (notification)
+                VALUES ('Customer {$custn} was added')";
+        $sth3 = $db->query($sql3);
+
     } catch(PDOException $e) {
         echo $e->getMessage();
     }
