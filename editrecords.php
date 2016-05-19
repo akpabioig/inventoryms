@@ -42,7 +42,6 @@ include('connection.php');
         <h2> EDIT RECORDS </h2>
         <p> SELECT FROM THE LIST BELOW TO EDIT RECORDS </p>
         <div id = "form1">
-            <div id="form1">
                 <div>
                     <a href="productseditor.php">
                         <img src="./report/editcustomer.png" style{height="150" width="230" } class="reporticons"/>
