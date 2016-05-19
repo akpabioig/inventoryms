@@ -42,6 +42,11 @@ try {
                     country = '{$ccountry}'
                     WHERE customerid = {$custid}";
     $sth = $db->query($sql);
+
+    $sql3 = "INSERT INTO notifications (notification)
+                VALUES ('Customer {$custn} was Updated')";
+    $sth3 = $db->query($sql3);
+
 } catch(PDOException $e) {
     echo $e->getMessage();
 }

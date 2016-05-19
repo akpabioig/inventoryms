@@ -34,6 +34,11 @@ $prodid = htmlspecialchars($_POST['prodid']);
                     retailprice = {$rp}
                     WHERE productid = {$prodid}";
         $sth = $db->query($sql);
+
+        $sql5 = "INSERT INTO notifications (notification)
+                VALUES ('Product {$pname} was Updated')";
+        $sth5 = $db->query($sql5);
+
     } catch(PDOException $e) {
         echo $e->getMessage();
     }
