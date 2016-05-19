@@ -207,6 +207,7 @@ if (!isset($_SESSION['user'])) {
 <script type="application/javascript">
     var dataSet, location, size, i, lineDataSet;
     var xValues = [], yValues = [], periodT = [], salesT = [];
+    console.log('test');
     function totals(num, num1, num2, num3, num4, num5, num6, num7) {
         document.getElementById('totalSales').innerHTML = num;
         document.getElementById('totalPurchases').innerHTML = num1;
