@@ -424,10 +424,10 @@ if (!isset($_SESSION['user'])) {
         element: 'morris-donut-chart',
         data: [{
             label: "Sales Pending Orders",
-            value: 30
+            value: 3
         }, {
             label: "Purchase Pending Orders",
-            value: 20
+            value: 2
         }],
         resize: true
     });
