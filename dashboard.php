@@ -225,6 +225,15 @@ echo "</script>";
         document.getElementById('totalSalesInEarnings').innerHTML = num5;
         document.getElementById('totalPurchaseExpenses').innerHTML = num6;
         document.getElementById('pl').innerHTML = num7;
+
+        console.log(num);
+        console.log(num1);
+        console.log(num2);
+        console.log(num3);
+        console.log(num4);
+        console.log(num5);
+        console.log(num6);
+        console.log(num7);
         //barchart.setData([{ "y": "2014", "a": 100 },{ "y": "2015", "a": 24}]);
     }
 
