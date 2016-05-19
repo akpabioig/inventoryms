@@ -152,11 +152,19 @@ if (!isset($_SESSION['user'])) {
 
                         <div class="panel-body">
                             <div class="list-group">
-                                <a href="#" class="list-group-item">
-                                    <i class="fa fa-comment fa-fw"></i>New Comment
-                                    <span class="pull-right text-muted small"><em>4 minutes ago</em>
+                                <?php
+                                $queryNotifications = "select notification from notifications order by id desc";
+                                $resultNotifications = mysqli_query($db, $queryNotifications);
+                                while($countNotifications = $resultNotifications->fetch_array()) {
+                                    echo "
+                                    <a href=\"#\" class=\"list-group-item\">
+                                    <i class=\"fa fa-comment fa-fw\"></i>{$countNotifications['notification']}
+                                    <span class=\"pull-right text-muted small\">
                                     </span>
-                                </a>
+                                    </a>
+                                    ";
+                                }
+                                ?>
                             </div>
                             <!-- /.list-group -->
                             <a href="#" class="btn btn-default btn-block">View All Alerts</a>
