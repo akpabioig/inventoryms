@@ -41,7 +41,7 @@ if (!isset($_SESSION['user'])) {
         <!--  wrapper -->
         <div id="wrapper">
 
-            <!--  page-wrapper -->
+            <!--  page-wrapper uiio-->
 
             <div class="row">
                 <!-- Page Header -->
@@ -142,19 +142,47 @@ if (!isset($_SESSION['user'])) {
 
                         <div class="panel-body">
                             <div class="list-group">
-                                <?php
-                                $queryNotifications = "select notification from notifications order by id desc LIMIT 10";
-                                $resultNotifications = mysqli_query($db, $queryNotifications);
-                                while($countNotifications = $resultNotifications->fetch_array()) {
-                                    echo "
-                                    <a href=\"#\" class=\"list-group-item\">
-                                    <i class=\"fa fa-info-circle\"></i> {$countNotifications['notification']}
-                                    <span class=\"pull-right text-muted small\">
+                                <a href="#" class="list-group-item">
+                                    <i class="fa fa-comment fa-fw"></i>New Comment
+                                    <span class="pull-right text-muted small"><em>4 minutes ago</em>
                                     </span>
-                                    </a>
-                                    ";
-                                }
-                                ?>
+                                </a>
+                                <a href="#" class="list-group-item">
+                                    <i class="fa fa-twitter fa-fw"></i>3 New Followers
+                                    <span class="pull-right text-muted small"><em>12 minutes ago</em>
+                                    </span>
+                                </a>
+                                <a href="#" class="list-group-item">
+                                    <i class="fa fa-envelope fa-fw"></i>Message Sent
+                                    <span class="pull-right text-muted small"><em>27 minutes ago</em>
+                                    </span>
+                                </a>
+                                <a href="#" class="list-group-item">
+                                    <i class="fa fa-tasks fa-fw"></i>New Task
+                                    <span class="pull-right text-muted small"><em>43 minutes ago</em>
+                                    </span>
+                                </a>
+                                <a href="#" class="list-group-item">
+                                    <i class="fa fa-upload fa-fw"></i>Server Rebooted
+                                    <span class="pull-right text-muted small"><em>11:32 AM</em>
+                                    </span>
+                                </a>
+                                <a href="#" class="list-group-item">
+                                    <i class="fa fa-bolt fa-fw"></i>Server Crashed!
+                                    <span class="pull-right text-muted small"><em>11:13 AM</em>
+                                    </span>
+                                </a>
+                                <a href="#" class="list-group-item">
+                                    <i class="fa fa-warning fa-fw"></i>Server Not Responding
+                                    <span class="pull-right text-muted small"><em>10:57 AM</em>
+                                    </span>
+                                </a>
+                                <a href="#" class="list-group-item">
+                                    <i class="fa fa-shopping-cart fa-fw"></i>New Order Placed
+                                    <span class="pull-right text-muted small"><em>9:49 AM</em>
+                                    </span>
+                                </a>
+
                             </div>
                             <!-- /.list-group -->
                             <a href="#" class="btn btn-default btn-block">View All Alerts</a>
@@ -197,10 +225,8 @@ if (!isset($_SESSION['user'])) {
 </html>
 
 <script type="application/javascript">
-
     var dataSet, location, size, i, lineDataSet;
     var xValues = [], yValues = [], periodT = [], salesT = [];
-
     function totals(num, num1, num2, num3, num4, num5, num6, num7) {
         document.getElementById('totalSales').innerHTML = num;
         document.getElementById('totalPurchases').innerHTML = num1;
@@ -210,6 +236,7 @@ if (!isset($_SESSION['user'])) {
         document.getElementById('totalSalesInEarnings').innerHTML = num5;
         document.getElementById('totalPurchaseExpenses').innerHTML = num6;
         document.getElementById('pl').innerHTML = num7;
+        //barchart.setData([{ "y": "2014", "a": 100 },{ "y": "2015", "a": 24}]);
     }
 
 
@@ -228,6 +255,7 @@ if (!isset($_SESSION['user'])) {
         })
     });
 
+
     $(document).ready(function(){
         $.ajax({
             url: 'chart.php',
@@ -241,29 +269,28 @@ if (!isset($_SESSION['user'])) {
                 yValues.push(height);
                 xValues.push(dataSet[i].slice([1]));
             }
-            console.log('dataSet size: ' + dataSet.length);
             if(dataSet.length-1 == 1){
-                barchart.setData([{"y": xValues[0], "a": yValues[0]}]);
-            }else if(dataSet.length-1 == 2){
-                barchart.setData([{"y": xValues[0], "a": yValues[0]}, {"y": xValues[1], "a": yValues[1]}]);
-            }else if(dataSet.length-1 == 3){
-                barchart.setData([{"y": xValues[0], "a": yValues[0]}, {"y": xValues[1], "a": yValues[1]},
-                    {"y": xValues[2], "a": yValues[2]}]);
-            }else if(dataSet.length-1 == 4){
-                barchart.setData([{"y": xValues[0], "a": yValues[0]}, {"y": xValues[1], "a": yValues[1]},
-                    {"y": xValues[2], "a": yValues[2]}, {"y": xValues[3], "a": yValues[3]}]);
-            }else if(dataSet.length-1 == 5){
-                barchart.setData([{"y": xValues[0], "a": yValues[0]}, {"y": xValues[1], "a": yValues[1]},
-                    {"y": xValues[2], "a": yValues[2]}, {"y": xValues[3], "a": yValues[3]}, {"y": xValues[4], "a": yValues[4]}]);
-            }else if(dataSet.length-1 == 6){
-                barchart.setData([{"y": xValues[0], "a": yValues[0]}, {"y": xValues[1], "a": yValues[1]},
-                    {"y": xValues[2], "a": yValues[2]}, {"y": xValues[3], "a": yValues[3]}, {"y": xValues[4], "a": yValues[4]}
-                    , {"y": xValues[5], "a": yValues[5]}]);
-            }else if(dataSet.length-1 == 7){
-                barchart.setData([{"y": xValues[0], "a": yValues[0]}, {"y": xValues[1], "a": yValues[1]},
-                    {"y": xValues[2], "a": yValues[2]}, {"y": xValues[3], "a": yValues[3]}, {"y": xValues[4], "a": yValues[4]}
-                    , {"y": xValues[5], "a": yValues[5]}, {"y": xValues[6], "a": yValues[6]}]);
-            }
+     barchart.setData([{"y": xValues[0], "a": yValues[0]}]);
+     }else if(dataSet.length-1 == 2){
+     barchart.setData([{"y": xValues[0], "a": yValues[0]}, {"y": xValues[1], "a": yValues[1]}]);
+     }else if(dataSet.length-1 == 3){
+     barchart.setData([{"y": xValues[0], "a": yValues[0]}, {"y": xValues[1], "a": yValues[1]},
+     {"y": xValues[2], "a": yValues[2]}]);
+     }else if(dataSet.length-1 == 4){
+     barchart.setData([{"y": xValues[0], "a": yValues[0]}, {"y": xValues[1], "a": yValues[1]},
+     {"y": xValues[2], "a": yValues[2]}, {"y": xValues[3], "a": yValues[3]}]);
+     }else if(dataSet.length-1 == 5){
+     barchart.setData([{"y": xValues[0], "a": yValues[0]}, {"y": xValues[1], "a": yValues[1]},
+     {"y": xValues[2], "a": yValues[2]}, {"y": xValues[3], "a": yValues[3]}, {"y": xValues[4], "a": yValues[4]}]);
+     }else if(dataSet.length-1 == 6){
+     barchart.setData([{"y": xValues[0], "a": yValues[0]}, {"y": xValues[1], "a": yValues[1]},
+     {"y": xValues[2], "a": yValues[2]}, {"y": xValues[3], "a": yValues[3]}, {"y": xValues[4], "a": yValues[4]}
+     , {"y": xValues[5], "a": yValues[5]}]);
+     }else if(dataSet.length-1 == 7){
+     barchart.setData([{"y": xValues[0], "a": yValues[0]}, {"y": xValues[1], "a": yValues[1]},
+     {"y": xValues[2], "a": yValues[2]}, {"y": xValues[3], "a": yValues[3]}, {"y": xValues[4], "a": yValues[4]}
+     , {"y": xValues[5], "a": yValues[5]}, {"y": xValues[6], "a": yValues[6]}]);
+     }
         })
     });
 
@@ -282,13 +309,10 @@ if (!isset($_SESSION['user'])) {
                 periodT.push(ht);
                 salesT.push(lineDataSet[i].slice([2]));
             }
-            console.log(periodT[0]);
-            console.log(salesT[0]);
-            console.log(lineDataSet.length-1);
             var d = new Date();
             var n = d.getFullYear();
             if(lineDataSet.length-1 == 1){
-
+                linechart.setData([{"period": n+'-0'+periodT[0], "sales": salesT[0]}]);
             }else if(lineDataSet.length-1 == 2){
                 linechart.setData([{"period": n+'-0'+periodT[0], "sales": salesT[0]}, {"period": n+'-0'+periodT[1], "sales": salesT[1]}]);
             }else if(lineDataSet.length-1 == 3){
@@ -348,6 +372,7 @@ if (!isset($_SESSION['user'])) {
                     {"period": n+'-0'+periodT[8], "sales": salesT[8]}, {"period": n+'-0'+periodT[9], "sales": salesT[9]},
                     {"period": n+'-0'+periodT[10], "sales": salesT[10]}, {"period": n+'-0'+periodT[11], "sales": salesT[11]}]);
             }
+
 
         })
 
