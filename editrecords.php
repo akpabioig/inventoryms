@@ -44,13 +44,13 @@ include('connection.php');
         <div id = "form1">
                 <div>
                     <a href="productseditor.php">
-                        <img src="./report/editcustomer.png" style{height="150" width="230" } class="reporticons"/>
+                        <img src="./report/editcustomer.png" style{height="170" width="250" } class="reporticons"/>
                     </a>
                     <a href="supplierseditor.php">
-                        <img src="report/editsupplier.png" style{height="150" width="230" } class="reporticons"/>
+                        <img src="report/editsupplier.png" style{height="170" width="250" } class="reporticons"/>
                     </a>
                     <a href="customerseditor.php">
-                        <img src="report/editcustomer.png" style{height="150" width="230" } class="reporticons"/>
+                        <img src="report/editcustomer.png" style{height="170" width="250" } class="reporticons"/>
                     </a>
                 </div>
         </div>
