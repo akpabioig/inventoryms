@@ -218,8 +218,8 @@ if (!isset($_SESSION['user'])) {
         $.ajax({
             url: 'dashboardChart.php',
             type: 'POST',
-        }).done(function (data) {
-            chartDataSet = data.match(/^.*((\r\n|\n|\r)|$)/gm);
+        }).done(function (dataDashboard) {
+            chartDataSet = dataDashboard.match(/^.*((\r\n|\n|\r)|$)/gm);
             totals(chartDataSet[0], chartDataSet[1], chartDataSet[2], chartDataSet[3], chartDataSet[4], chartDataSet[5],
                 chartDataSet[6], chartDataSet[7]);
             for(var i=0; i<chartDataSet.length; i++){
