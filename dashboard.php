@@ -248,7 +248,6 @@ if (!isset($_SESSION['user'])) {
         document.getElementById('pl').innerHTML = num7;
         //barchart.setData([{ "y": "2014", "a": 100 },{ "y": "2015", "a": 24}]);
     }
-    /*
     $(document).ready(function(){
         $.ajax({
             url: 'chart.php',
@@ -274,7 +273,7 @@ if (!isset($_SESSION['user'])) {
             //var n = d.getFullYear();
             //linechart.setData([{"period": n+'-01', "iphone": 20666}, {"period": n+'-02', "iphone": 1560}]);
         })
-    });*/
+    });
 
 
     //linechart
@@ -291,10 +290,13 @@ if (!isset($_SESSION['user'])) {
                 periodT.push(ht);
                 salesT.push(lineDataSet[i].slice([2]));
             }
+            console.log(periodT[0]);
+            console.log(salesT[0]);
+            console.log(lineDataSet.length-1);
             var d = new Date();
             var n = d.getFullYear();
             if(lineDataSet.length-1 == 1){
-                linechart.setData([{"period": n+'-0'+periodT[0], "sales": salesT[0]}]);
+
             }else if(lineDataSet.length-1 == 2){
                 linechart.setData([{"period": n+'-0'+periodT[0], "sales": salesT[0]}, {"period": n+'-0'+periodT[1], "sales": salesT[1]}]);
             }else if(lineDataSet.length-1 == 3){
@@ -354,6 +356,19 @@ if (!isset($_SESSION['user'])) {
                     {"period": n+'-0'+periodT[8], "sales": salesT[8]}, {"period": n+'-0'+periodT[9], "sales": salesT[9]},
                     {"period": n+'-0'+periodT[10], "sales": salesT[10]}, {"period": n+'-0'+periodT[11], "sales": salesT[11]}]);
             }
+            //linechart.setData([{"period": n+'-0'+periodT[0], "sales": salesT[0]}, {"period": n+'-0'+periodT[1], "sales": salesT[1]}]);
+            /*if(lineDataSet.length <2){
+                linechart.setData([{"period": n+'-0'+periodT[0], "sales": salesT[0]}]);
+            }else if(lineDataSet.length <3){
+                linechart.setData([{"period": n+'-0'+periodT[0], "sales": salesT[0]}, {"period": n+'-0'+periodT[1], "sales": salesT[1]}]);
+            }else if(lineDataSet.length <4){
+                linechart.setData([{"period": n+'-0'+periodT[0], "sales": salesT[0]}, {"period": n+'-0'+periodT[1], "sales": salesT[1]},
+                    {"period": n+'-0'+periodT[2], "sales": salesT[2]}]);
+            }else if(lineDataSet.length <4){
+                linechart.setData([{"period": n+'-0'+periodT[0], "sales": salesT[0]}, {"period": n+'-0'+periodT[1], "sales": salesT[1]},
+                    {"period": n+'-0'+periodT[2], "sales": salesT[2]}, {"period": n+'-0'+periodT[3], "sales": salesT[3]}]);
+            }*/
+
 
 
         })
