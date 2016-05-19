@@ -145,7 +145,7 @@ if (!isset($_SESSION['user'])) {
                                 <?php
                                 $queryNotifications = "select notification from notifications order by id desc LIMIT 10";
                                 $resultNotifications = mysqli_query($db, $queryNotifications);
-                                $countNotifications = $resultNotifications->fetch_array()
+                                $countNotifications = $resultNotifications->fetch_array();
                                 if($countNotifications >0){
                                     while($countNotifications = $resultNotifications->fetch_array()) {
                                         echo "
