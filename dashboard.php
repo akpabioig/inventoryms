@@ -2,7 +2,7 @@
 session_start();
 if (!isset($_SESSION['user'])) {
     header("Location: login.php");
-}   else{
+} else{
     include('connection.php');
     $list = array();
     $query1 = "select * from dashboard_totals";
@@ -10,8 +10,6 @@ if (!isset($_SESSION['user'])) {
     while($count1 = $result1->fetch_array()) {
     $list[] = $count1[0];
     }
-
-
 }
 ?>
 <!DOCTYPE html>
@@ -219,7 +217,7 @@ if (!isset($_SESSION['user'])) {
         document.getElementById('totalPurchaseExpenses').innerHTML = num6;
         document.getElementById('pl').innerHTML = num7;
 
-        console.log(num);
+        console.log('test');
         console.log(num1);
         console.log(num2);
         console.log(num3);
