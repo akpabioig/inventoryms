@@ -295,7 +295,7 @@ if (!isset($_SESSION['user'])) {
             }
             console.log(periodT[0]);
             console.log(salesT[0]);
-            console.log(lineDataSet.length);
+            console.log(lineDataSet.length-1);
             var d = new Date();
             var n = d.getFullYear();
             linechart.setData([{"period": n+'-0'+periodT[0], "sales": salesT[0]}, {"period": n+'-0'+periodT[1], "sales": salesT[1]}]);
