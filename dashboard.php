@@ -236,7 +236,7 @@ if (!isset($_SESSION['user'])) {
 </html>
 
 <script type="application/javascript">
-    var dataSet, location, size, i;
+    var dataSet, location, size, i, lineDataSet;
     var xValues = [], yValues = [], periodT = [], salesT = [];
     function totals(num, num1, num2, num3, num4, num5, num6) {
         document.getElementById('totalSales').innerHTML = num;
@@ -278,33 +278,43 @@ if (!isset($_SESSION['user'])) {
 
     });
 
-/*
+
     //linechart
     $(document).ready(function(){
         $.ajax({
             url: 'linechart.php',
             type: 'POST',
         }).done(function (dataChart) {
-            dataSet = dataChart.match(/^.*((\r\n|\n|\r)|$)/gm);
-            for(i=0; i<dataSet.length; i++){
-                console.log(dataSet[i]);
-                var amount = dataSet[i].slice([1,dataSet[i].length]);
-                var height = (''+amount)[0];
+            lineDataSet = dataChart.match(/^.*((\r\n|\n|\r)|$)/gm);
+            for(i=0; i<lineDataSet.length; i++){
+                //console.log(lineDataSet[i]);
+                var ld = lineDataSet[i].slice([1,lineDataSet[i].length]);
+                var ht = (''+ld)[0];
                 periodT.push(height);
-                salesT.push(dataSet[i].slice([2]));
+                salesT.push(lineDataSet[i].slice([2]));
             }
-            console.log(periodT[0]);
-            console.log(salesT[0]);
+            //console.log(periodT[0]);
+            //console.log(salesT[0]);
             var d = new Date();
             var n = d.getFullYear();
-            linechart.setData([{"period": n+'-0'+periodT[0], "sales": salesT[0]}, {"period": n+'-0'+periodT[1], "sales": salesT[1]}]);
+            if(lineDataSet.length <2){
+                linechart.setData([{"period": n+'-0'+periodT[0], "sales": salesT[0]}]);
+            }else if(lineDataSet.length <3){
+                linechart.setData([{"period": n+'-0'+periodT[0], "sales": salesT[0]}, {"period": n+'-0'+periodT[1], "sales": salesT[1]}]);
+            }else if(lineDataSet.length <4){
+                linechart.setData([{"period": n+'-0'+periodT[0], "sales": salesT[0]}, {"period": n+'-0'+periodT[1], "sales": salesT[1]},
+                    {"period": n+'-0'+periodT[2], "sales": salesT[2]}]);
+            }else if(lineDataSet.length <4){
+                linechart.setData([{"period": n+'-0'+periodT[0], "sales": salesT[0]}, {"period": n+'-0'+periodT[1], "sales": salesT[1]},
+                    {"period": n+'-0'+periodT[2], "sales": salesT[2]}, {"period": n+'-0'+periodT[3], "sales": salesT[3]}]);
+            }
+
 
 
         })
 
     });
 
-*/
 
 
     $(function () {
