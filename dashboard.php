@@ -428,7 +428,7 @@ if (!isset($_SESSION['user'])) {
                 console.log( i + ' ' +pending[0]);
         })
 
-
+/*
         $(function () {
             Morris.Donut({
                 element: 'morris-donut-chart',
@@ -441,7 +441,7 @@ if (!isset($_SESSION['user'])) {
                 }],
                 resize: true
             });
-        });
+        }); */
     });
 
 
