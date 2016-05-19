@@ -219,6 +219,8 @@ if (!isset($_SESSION['user'])) {
         document.getElementById('pl').innerHTML = num7;
         //barchart.setData([{ "y": "2014", "a": 100 },{ "y": "2015", "a": 24}]);
     }
+
+    /*
     $(document).ready(function(){
         $.ajax({
             url: 'chart.php',
@@ -245,6 +247,7 @@ if (!isset($_SESSION['user'])) {
             //linechart.setData([{"period": n+'-01', "iphone": 20666}, {"period": n+'-02', "iphone": 1560}]);
         })
     });
+    */
 
 
     //linechart
