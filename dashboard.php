@@ -268,7 +268,68 @@ if (!isset($_SESSION['user'])) {
                 barchart.setData([{"y": xValues[0], "a": yValues[0]}, {"y": xValues[1], "a": yValues[1]},
                     {"y": xValues[2], "a": yValues[2]}, {"y": xValues[3], "a": yValues[3]}, {"y": xValues[4], "a": yValues[4]}
                     , {"y": xValues[5], "a": yValues[5]}, {"y": xValues[6], "a": yValues[6]}, {"y": xValues[7], "a": yValues[7]}]);
+     }
+      else if(dataSet.length-1 == 8){
+         barchart.setData([{"y": xValues[0], "a": yValues[0]}, {"y": xValues[1], "a": yValues[1]},
+         {"y": xValues[2], "a": yValues[2]}, {"y": xValues[3], "a": yValues[3]}, {"y": xValues[4], "a": yValues[4]}
+          ,{"y": xValues[5], "a": yValues[5]}, {"y": xValues[6], "a": yValues[6]}, {"y": xValues[7], "a": yValues[7]}]);
             }
+            else if(dataSet.length-1 == 9){
+                barchart.setData([{"y": xValues[0], "a": yValues[0]}, {"y": xValues[1], "a": yValues[1]},
+                    {"y": xValues[2], "a": yValues[2]}, {"y": xValues[3], "a": yValues[3]}, {"y": xValues[4], "a": yValues[4]}
+                    ,{"y": xValues[5], "a": yValues[5]}, {"y": xValues[6], "a": yValues[6]}, {"y": xValues[7], "a": yValues[7]}
+                    , {"y": xValues[8], "a": yValues[8]}]);
+            }
+            else if(dataSet.length-1 == 10){
+                barchart.setData([{"y": xValues[0], "a": yValues[0]}, {"y": xValues[1], "a": yValues[1]},
+                    {"y": xValues[2], "a": yValues[2]}, {"y": xValues[3], "a": yValues[3]}, {"y": xValues[4], "a": yValues[4]}
+                    ,{"y": xValues[5], "a": yValues[5]}, {"y": xValues[6], "a": yValues[6]}, {"y": xValues[7], "a": yValues[7]}
+                    , {"y": xValues[8], "a": yValues[8]}, {"y": xValues[9], "a": yValues[9]}]);
+            }
+            else if(dataSet.length-1 == 11){
+                barchart.setData([{"y": xValues[0], "a": yValues[0]}, {"y": xValues[1], "a": yValues[1]},
+                    {"y": xValues[2], "a": yValues[2]}, {"y": xValues[3], "a": yValues[3]}, {"y": xValues[4], "a": yValues[4]}
+                    ,{"y": xValues[5], "a": yValues[5]}, {"y": xValues[6], "a": yValues[6]}, {"y": xValues[7], "a": yValues[7]}
+                    , {"y": xValues[8], "a": yValues[8]}, {"y": xValues[9], "a": yValues[9]}, {"y": xValues[10], "a": yValues[10]}]);
+            }
+            else if(dataSet.length-1 == 12){
+                barchart.setData([{"y": xValues[0], "a": yValues[0]}, {"y": xValues[1], "a": yValues[1]},
+                    {"y": xValues[2], "a": yValues[2]}, {"y": xValues[3], "a": yValues[3]}, {"y": xValues[4], "a": yValues[4]}
+                    ,{"y": xValues[5], "a": yValues[5]}, {"y": xValues[6], "a": yValues[6]}, {"y": xValues[7], "a": yValues[7]}
+                    , {"y": xValues[8], "a": yValues[8]}, {"y": xValues[9], "a": yValues[9]}, {"y": xValues[10], "a": yValues[10]}
+                    , {"y": xValues[11], "a": yValues[11]}]);
+            }
+            else if(dataSet.length-1 == 13){
+                barchart.setData([{"y": xValues[0], "a": yValues[0]}, {"y": xValues[1], "a": yValues[1]},
+                    {"y": xValues[2], "a": yValues[2]}, {"y": xValues[3], "a": yValues[3]}, {"y": xValues[4], "a": yValues[4]}
+                    ,{"y": xValues[5], "a": yValues[5]}, {"y": xValues[6], "a": yValues[6]}, {"y": xValues[7], "a": yValues[7]}
+                    , {"y": xValues[8], "a": yValues[8]}, {"y": xValues[9], "a": yValues[9]}, {"y": xValues[10], "a": yValues[10]}
+                    , {"y": xValues[11], "a": yValues[11]}, {"y": xValues[12], "a": yValues[12]}]);
+            }
+            else if(dataSet.length-1 == 14){
+                barchart.setData([{"y": xValues[0], "a": yValues[0]}, {"y": xValues[1], "a": yValues[1]},
+                    {"y": xValues[2], "a": yValues[2]}, {"y": xValues[3], "a": yValues[3]}, {"y": xValues[4], "a": yValues[4]}
+                    ,{"y": xValues[5], "a": yValues[5]}, {"y": xValues[6], "a": yValues[6]}, {"y": xValues[7], "a": yValues[7]}
+                    , {"y": xValues[8], "a": yValues[8]}, {"y": xValues[9], "a": yValues[9]}, {"y": xValues[10], "a": yValues[10]}
+                    , {"y": xValues[11], "a": yValues[11]}, {"y": xValues[12], "a": yValues[12]}, {"y": xValues[13], "a": yValues[13]}]);
+            }
+            else if(dataSet.length-1 == 15){
+                barchart.setData([{"y": xValues[0], "a": yValues[0]}, {"y": xValues[1], "a": yValues[1]},
+                    {"y": xValues[2], "a": yValues[2]}, {"y": xValues[3], "a": yValues[3]}, {"y": xValues[4], "a": yValues[4]}
+                    ,{"y": xValues[5], "a": yValues[5]}, {"y": xValues[6], "a": yValues[6]}, {"y": xValues[7], "a": yValues[7]}
+                    , {"y": xValues[8], "a": yValues[8]}, {"y": xValues[9], "a": yValues[9]}, {"y": xValues[10], "a": yValues[10]}
+                    , {"y": xValues[11], "a": yValues[11]}, {"y": xValues[12], "a": yValues[12]}, {"y": xValues[13], "a": yValues[13]}
+                    , {"y": xValues[14], "a": yValues[14]}]);
+            }
+            else if(dataSet.length-1 == 16){
+                barchart.setData([{"y": xValues[0], "a": yValues[0]}, {"y": xValues[1], "a": yValues[1]},
+                    {"y": xValues[2], "a": yValues[2]}, {"y": xValues[3], "a": yValues[3]}, {"y": xValues[4], "a": yValues[4]}
+                    ,{"y": xValues[5], "a": yValues[5]}, {"y": xValues[6], "a": yValues[6]}, {"y": xValues[7], "a": yValues[7]}
+                    , {"y": xValues[8], "a": yValues[8]}, {"y": xValues[9], "a": yValues[9]}, {"y": xValues[10], "a": yValues[10]}
+                    , {"y": xValues[11], "a": yValues[11]}, {"y": xValues[12], "a": yValues[12]}, {"y": xValues[13], "a": yValues[13]}
+                    , {"y": xValues[14], "a": yValues[14]}, {"y": xValues[15], "a": yValues[15]}]);
+            }
+
         })
     });
 
