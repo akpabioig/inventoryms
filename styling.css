@@ -592,7 +592,7 @@ hr{
     font-weight: bolder;
 }
 
-#producthelp, #customerhelp, #supplierhelp {
+#producthelp, #customerhelp, #supplierhelp, #purchaseorderhelp, #salesorderhelp {
     cursor: pointer;
     text-shadow: 5px 5px 5px orange;
 }
@@ -606,5 +606,13 @@ hr{
 }
 
 #supplierhelp:hover {
+    background-color: coral;
+}
+
+#purchaseorderhelp:hover {
+    background-color: coral;
+}
+
+#salesorderhelp:hover {
     background-color: coral;
 }
