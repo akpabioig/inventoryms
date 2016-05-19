@@ -245,8 +245,9 @@ if (!isset($_SESSION['user'])) {
             url: 'dashboardChart.php',
             type: 'POST',
         }).done(function (data) {
-            for(var i=0; i<data.length; i++){
-                console.log(data[i]);
+            chartDataSet = data.match(/^.*((\r\n|\n|\r)|$)/gm);
+            for(var i=0; i<chartDataSet.length; i++){
+                console.log(chartDataSet[i]);
             }
 
         })
