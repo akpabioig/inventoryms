@@ -264,7 +264,11 @@ if (!isset($_SESSION['user'])) {
      barchart.setData([{"y": xValues[0], "a": yValues[0]}, {"y": xValues[1], "a": yValues[1]},
      {"y": xValues[2], "a": yValues[2]}, {"y": xValues[3], "a": yValues[3]}, {"y": xValues[4], "a": yValues[4]}
      , {"y": xValues[5], "a": yValues[5]}, {"y": xValues[6], "a": yValues[6]}]);
-     }
+     }else if(dataSet.length-1 == 8){
+                barchart.setData([{"y": xValues[0], "a": yValues[0]}, {"y": xValues[1], "a": yValues[1]},
+                    {"y": xValues[2], "a": yValues[2]}, {"y": xValues[3], "a": yValues[3]}, {"y": xValues[4], "a": yValues[4]}
+                    , {"y": xValues[5], "a": yValues[5]}, {"y": xValues[6], "a": yValues[6]}, {"y": xValues[7], "a": yValues[7]}]);
+            }
         })
     });
 
