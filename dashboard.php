@@ -84,8 +84,8 @@ if (!isset($_SESSION['user'])) {
                 </div>
                 <div class="col-lg-3">
                     <div class="alert alert-warning text-center">
-                        Total Number Of Customers:
-                        <b id="totalCustomers"></b>
+                        Total Number Of Goods In Stock:
+                        <b id="totalGoodsInStock"></b>
                     </div>
                 </div>
                 <!--end quick info section -->
@@ -95,22 +95,20 @@ if (!isset($_SESSION['user'])) {
                 <!--quick info section -->
                 <div class="col-lg-3">
                     <div class="alert alert-danger text-center">
-                        Total Number Of Goods In Stock:
-                        <b id="totalGoodsInStock"></b>
-
-                    </div>
-                </div>
-                <div class="col-lg-3">
-                    <div class="alert alert-success text-center">
                         Total Sales Earnings:
                         <b id="totalSalesInEarnings"></b>
                     </div>
                 </div>
                 <div class="col-lg-3">
-                    <div class="alert alert-info text-center">
+                    <div class="alert alert-success text-center">
                         Total Purchase Expenses:
                         <b id="totalPurchaseExpenses"></b>
-
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="alert alert-info text-center">
+                        Total Number Of Customers:
+                        <b id="totalCustomers"></b>
                     </div>
                 </div>
                 <div class="col-lg-3">
@@ -247,9 +245,7 @@ if (!isset($_SESSION['user'])) {
         document.getElementById('totalSalesInEarnings').innerHTML = num5;
         document.getElementById('totalPurchaseExpenses').innerHTML = num6;
         //barchart.setData([{ "y": "2014", "a": 100 },{ "y": "2015", "a": 24}]);
-
     }
-
     $(document).ready(function(){
         $.ajax({
             url: 'chart.php',
@@ -275,7 +271,6 @@ if (!isset($_SESSION['user'])) {
             //var n = d.getFullYear();
             //linechart.setData([{"period": n+'-01', "iphone": 20666}, {"period": n+'-02', "iphone": 1560}]);
         })
-
     });
 
 
