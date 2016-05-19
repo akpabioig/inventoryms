@@ -289,7 +289,7 @@ if (!isset($_SESSION['user'])) {
             for(i=0; i<lineDataSet.length; i++){
                 //console.log(lineDataSet[i]);
                 var ld = lineDataSet[i].slice([1,lineDataSet[i].length]);
-                console.log('number 2:' + lineDataSet[i][2]);
+                console.log('number 2:' + lineDataSet[i].slice([2, lineDataSet[i].length]));
                 var ht = (''+ld)[0];
                 periodT.push(ht);
                 salesT.push(lineDataSet[i].slice([2]));
