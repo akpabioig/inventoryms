@@ -41,19 +41,19 @@ if (isset($_GET['salesid'])) {
 
     if ($stockordered > $stockbalance) {
         if ($purchasepend == $salespend) {
-            echo "<script id='alert' type='text/javascript'>
+            echo "<script type='text/javascript'>
 
-            alert('CANNOT FULFIL ORDER BECAUSE STOCK LEVEL TOO LOW !!! \\n ' +
+            alert('      CANNOT FULFIL ORDER BECAUSE STOCK LEVEL TOO LOW !!! \\n ' +
              '\\nPRODUCT BEING ORDERED BY CUSTOMER IS AWAITING FULFILLMENT FROM SUPPLIER \\n ' +
-              '\\n                ********** DO NOT REORDER AGAIN !!! *********');
+              '\\n       ********** DO NOT REORDER AGAIN !!! *********');
             window.location.replace('pendingorders.php');
             </script>";
             return;
         } else if ($purchasepend !== $salespend) {
             echo "
-        <script id='alert' type='text/javascript'>
-            alert('     CANNOT FULFIL ORDER BECAUSE STOCK LEVEL TOO LOW !!! \\n ' +
-             '\\n           ********** REORDER STOCK !!! ********** ');
+        <script type='text/javascript'>
+            alert('CANNOT FULFIL ORDER BECAUSE STOCK LEVEL TOO LOW !!! \\n ' +
+             '\\n     ********** REORDER STOCK !!! ********** ');
             window.location.replace('pendingorders.php');
         </script>";
             return;
@@ -78,7 +78,7 @@ if (isset($_GET['salesid'])) {
         } catch (PDOException $f) {
             echo $f->getMessage();
         }
-        echo "<script id='alert' type='text/javascript'>
+        echo "<script type='text/javascript'>
         alert('           ********** ORDER FULFILLED !!! ********** ');
         window.location.replace('pendingorders.php');
         </script>";
