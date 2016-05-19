@@ -417,8 +417,21 @@ if (!isset($_SESSION['user'])) {
 
     });
 
+    var pendingSales, pendingPurchase, pending;
 
     $(document).ready(function(){
+        $.ajax({
+            url: 'pendingChart.php',
+            type: 'POST',
+        }).done(function (pendingDashboard) {
+            pending = pendingDashboard.match(/^.*((\r\n|\n|\r)|$)/gm);
+            for(var i=0; i<pending.length; i++){
+                console.log( i + ' ' +pending[i]);
+            }
+
+        })
+
+
         $(function () {
             Morris.Donut({
                 element: 'morris-donut-chart',
