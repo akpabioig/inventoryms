@@ -296,6 +296,7 @@ if (!isset($_SESSION['user'])) {
             console.log(periodT[0]);
             console.log(salesT[0]);
             console.log(lineDataSet.length-1);
+            console.log(periodT[2]);
             var d = new Date();
             var n = d.getFullYear();
             if(lineDataSet.length-1 == 1){
