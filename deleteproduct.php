@@ -9,8 +9,16 @@ if (isset($_GET['prodid'])) {
         $sql = "DELETE FROM addproduct
                     WHERE productid = {$prodId}";
         $sth = $db->query($sql);
+
+
+        $query1 = "select * from dashboard_totals";
+        $result1 = mysqli_query($db, $query1);
+
+        $sql4 = "SELECT productname from addproduct where productid= {$prodId}";
+        $sth4 = mysqli_query($db, $query1);
+
         $sql3 = "INSERT INTO notifications (notification)
-                    VALUES ('Product ID: {$prodId} was deleted')";
+                    VALUES ('Product: {$sth4} was deleted')";
         $sth3 = $db->query($sql3);
 
     } catch (PDOException $e) {
