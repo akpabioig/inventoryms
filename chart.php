@@ -10,7 +10,7 @@ include('connection.php');
 
 $sql = "SELECT COUNT(locationid), locationid
         from addproduct
-        GROUP BY locationid;";
+        GROUP BY locationid";
 $record = mysqli_query($db, $sql);
 
 while ($row = $record->fetch_array()) {
