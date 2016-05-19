@@ -418,18 +418,22 @@ if (!isset($_SESSION['user'])) {
     });
 
 
+    $(document).ready(function(){
+        $(function () {
+            Morris.Donut({
+                element: 'morris-donut-chart',
+                data: [{
+                    label: "Sales Pending Orders",
+                    value: 3
+                }, {
+                    label: "Purchase Pending Orders",
+                    value: 2
+                }],
+                resize: true
+            });
+        });
+    });
 
-    $(function () {
-        Morris.Donut({
-        element: 'morris-donut-chart',
-        data: [{
-            label: "Sales Pending Orders",
-            value: 3
-        }, {
-            label: "Purchase Pending Orders",
-            value: 2
-        }],
-        resize: true
-    });
-    });
+
+
 </script>
