@@ -22,11 +22,6 @@ $country = htmlspecialchars($_POST['country']);
         $sql = "INSERT INTO addsupplier (suppliername, contactperson, contactpersontel, telnumber, fax, url, email, description, addressline1, addressline2, town, county, postcode, country)
                 VALUES ('$suppn','$contp','$contppn', '$supptel', '$suppfax', '$suppurl','$suppemail', '$desc','$add1', '$add2', '$town', '$county', '$postcode', '$country')";
         $sth = $db->query($sql);
-
-        $sql3 = "INSERT INTO notifications (notification)
-                    VALUES ('Supplier {$suppn} was added')";
-        $sth3 = $db->query($sql3);
-
     } catch(PDOException $e) {
         echo $e->getMessage();
     }
