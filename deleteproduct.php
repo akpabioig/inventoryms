@@ -7,8 +7,10 @@ if (isset($_GET['prodid'])) {
     $prodId = $_GET['prodid'];
 
     $q = "SELECT productname from addproduct where productid = {$prodId} LIMIT 1";
-    $qResult = mysqli_query($db1, $q);
+    $qReturn = mysqli_query($db1, $q);
+    while($qReturn = $qReturn ->fetch_array()){
 
+    }
     try {
         $sql = "DELETE FROM addproduct
                     WHERE productid = {$prodId}";
