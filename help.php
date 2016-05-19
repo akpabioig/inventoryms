@@ -114,6 +114,22 @@ include('connection.php');
                         </iframe>
                     </td>
                 </tr>
+                <tr>
+                    <td id="purchaseorderhelp"> PURCHASE ORDER HELP</td>
+                    <td id="salesorderhelp"> SALES ORDER HELP</td>
+                </tr>
+                <tr>
+                    <td>
+                        <iframe id=intro width="350" height="300" allowfullscreen="allowfullscreen"
+                                src="https://www.youtube.com/embed/MFxpnuNSedQ?">
+                        </iframe>
+                    </td>
+                    <td>
+                        <iframe id=intro width="350" height="300" allowfullscreen="allowfullscreen"
+                                src="https://www.youtube.com/embed/?">
+                        </iframe>
+                    </td>
+                </tr>
             </table>
         </div>
     </section>
