@@ -158,7 +158,7 @@ if (!isset($_SESSION['user'])) {
                                 while($countNotifications = $resultNotifications->fetch_array()) {
                                     echo "
                                     <a href=\"#\" class=\"list-group-item\">
-                                    <i class=\"fa fa-inbox\"></i> {$countNotifications['notification']}
+                                    <i class=\"fa fa-info-circle\"></i> {$countNotifications['notification']}
                                     <span class=\"pull-right text-muted small\">
                                     </span>
                                     </a>
