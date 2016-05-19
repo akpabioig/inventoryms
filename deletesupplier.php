@@ -17,6 +17,10 @@ if (isset($_GET['suppid'])) {
         WHERE supplierid = {$supplierId}";
         $sth2 = $db->query($sql2);
 
+        $sql3 = "INSERT INTO notifications (notification)
+                            VALUES ('Supplier: {$supplierId} was deleted')";
+        $sth3 = $db->query($sql3);
+
     } catch (PDOException $e) {
         echo $e->getMessage();
     }

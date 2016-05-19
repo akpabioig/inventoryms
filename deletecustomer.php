@@ -17,6 +17,10 @@ if (isset($_GET['custid'])) {
                         WHERE customerid = {$customerId}";
         $sth1 = $db->query($sql1);
 
+        $sql3 = "INSERT INTO notifications (notification)
+                            VALUES ('Customer: {$customerId} was Deleted')";
+        $sth3 = $db->query($sql3);
+
     } catch (PDOException $e) {
         echo $e->getMessage();
     }

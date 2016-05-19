@@ -10,6 +10,10 @@ if (isset($_GET['salesid'])) {
                     WHERE sid = {$salesId}";
         $sth = $db->query($sql);
 
+        $sql3 = "INSERT INTO notifications (notification)
+                            VALUES ('Sales Order {$salesId} was deleted')";
+        $sth3 = $db->query($sql3);
+
     } catch (PDOException $e) {
         echo $e->getMessage();
     }

@@ -9,6 +9,10 @@ if (isset($_GET['purid'])) {
                     WHERE purchaseid = {$purchaseId}";
         $sth = $db->query($sql);
 
+        $sql3 = "INSERT INTO notifications (notification)
+                            VALUES ('Purchase Order {$purchaseId} was deleted')";
+        $sth3 = $db->query($sql3);
+
     } catch (PDOException $e) {
         echo $e->getMessage();
     }
