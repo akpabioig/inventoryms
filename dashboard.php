@@ -293,7 +293,7 @@ if (!isset($_SESSION['user'])) {
             var d = new Date();
             var n = d.getFullYear();
             if(lineDataSet.length-1 == 1){
-
+                linechart.setData([{"period": n+'-0'+periodT[0], "sales": salesT[0]}]);
             }else if(lineDataSet.length-1 == 2){
                 linechart.setData([{"period": n+'-0'+periodT[0], "sales": salesT[0]}, {"period": n+'-0'+periodT[1], "sales": salesT[1]}]);
             }else if(lineDataSet.length-1 == 3){
