@@ -143,6 +143,7 @@ if (!isset($_SESSION['user'])) {
                         <div class="panel-body">
                             <div class="list-group">
                                 <?php
+                                include ('connection.php');
                                 $queryNotifications = "select notification from notifications order by id desc LIMIT 10";
                                 $resultNotifications = mysqli_query($db, $queryNotifications);
 
