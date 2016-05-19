@@ -24,6 +24,7 @@ try {
     $sql = "INSERT INTO purchaseorder (supplierid, datepurchase, reference, messagesupplier, totalunits, subtotal, total)
 VALUES ($supplier, '$purchasedate','$ref','$messsupplier', $totalunit, $subtotal, $totalcost)";
     $sth = $db->query($sql);
+
 } catch(PDOException $e) {
     echo $e->getMessage();
 }
