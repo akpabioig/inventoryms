@@ -49,7 +49,7 @@ include('connection.php');
                     <img src="report/s_report.jpg" style{height="130" width="200" } class="reporticons"/>
                 </a>
                 <a href="allproducts.php">
-                    <img src="report/p_report.jpg" style{height="130" width="200" } class="reporticons"/>
+                    <img src="report/p_report.png" style{height="130" width="200" } class="reporticons"/>
                 </a>
                 <a href="alllocation.php">
                     <img src="report/pl_report.jpg" style{height="200" width="200" } class="reporticons"/>
