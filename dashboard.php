@@ -305,7 +305,7 @@ if (!isset($_SESSION['user'])) {
             }else if(lineDataSet.length-1 == 2){
                 linechart.setData([{"period": n+'-0'+periodT[0], "sales": salesT[0]}, {"period": n+'-0'+periodT[1], "sales": salesT[1]}]);
             }else if(lineDataSet.length-1 == 3){
-                linechart.setData([{"period": n+'4'+periodT[0], "sales": salesT[0]}, {"period": n+'5'+periodT[1], "sales": salesT[1]},
+                linechart.setData([{"period": n+'4', "sales": salesT[0]}, {"period": n+'5', "sales": salesT[1]},
                     {"period": n+'11', "sales": salesT[2]}]);
             }else if(lineDataSet.length-1 == 4){
                 linechart.setData([{"period": n+'-0'+periodT[0], "sales": salesT[0]}, {"period": n+'-0'+periodT[1], "sales": salesT[1]},
