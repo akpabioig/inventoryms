@@ -152,47 +152,19 @@ if (!isset($_SESSION['user'])) {
 
                         <div class="panel-body">
                             <div class="list-group">
-                                <a href="#" class="list-group-item">
-                                    <i class="fa fa-comment fa-fw"></i>New Comment
-                                    <span class="pull-right text-muted small"><em>4 minutes ago</em>
+                                <?php
+                                $queryNotifications = "select notification from notifications order by id desc LIMIT 10";
+                                $resultNotifications = mysqli_query($db, $queryNotifications);
+                                while($countNotifications = $resultNotifications->fetch_array()) {
+                                    echo "
+                                    <a href=\"#\" class=\"list-group-item\">
+                                    <i class=\"fa fa-info-circle\"></i> {$countNotifications['notification']}
+                                    <span class=\"pull-right text-muted small\">
                                     </span>
-                                </a>
-                                <a href="#" class="list-group-item">
-                                    <i class="fa fa-twitter fa-fw"></i>3 New Followers
-                                    <span class="pull-right text-muted small"><em>12 minutes ago</em>
-                                    </span>
-                                </a>
-                                <a href="#" class="list-group-item">
-                                    <i class="fa fa-envelope fa-fw"></i>Message Sent
-                                    <span class="pull-right text-muted small"><em>27 minutes ago</em>
-                                    </span>
-                                </a>
-                                <a href="#" class="list-group-item">
-                                    <i class="fa fa-tasks fa-fw"></i>New Task
-                                    <span class="pull-right text-muted small"><em>43 minutes ago</em>
-                                    </span>
-                                </a>
-                                <a href="#" class="list-group-item">
-                                    <i class="fa fa-upload fa-fw"></i>Server Rebooted
-                                    <span class="pull-right text-muted small"><em>11:32 AM</em>
-                                    </span>
-                                </a>
-                                <a href="#" class="list-group-item">
-                                    <i class="fa fa-bolt fa-fw"></i>Server Crashed!
-                                    <span class="pull-right text-muted small"><em>11:13 AM</em>
-                                    </span>
-                                </a>
-                                <a href="#" class="list-group-item">
-                                    <i class="fa fa-warning fa-fw"></i>Server Not Responding
-                                    <span class="pull-right text-muted small"><em>10:57 AM</em>
-                                    </span>
-                                </a>
-                                <a href="#" class="list-group-item">
-                                    <i class="fa fa-shopping-cart fa-fw"></i>New Order Placed
-                                    <span class="pull-right text-muted small"><em>9:49 AM</em>
-                                    </span>
-                                </a>
-
+                                    </a>
+                                    ";
+                                }
+                                ?>
                             </div>
                             <!-- /.list-group -->
                             <a href="#" class="btn btn-default btn-block">View All Alerts</a>
@@ -263,17 +235,28 @@ if (!isset($_SESSION['user'])) {
                 xValues.push(dataSet[i].slice([1]));
             }
             console.log('dataSet size: ' + dataSet.length);
-            barchart.setData([{"y": xValues[0], "a": yValues[0]}, {"y": xValues[1], "a": yValues[1]},
-                {"y": xValues[2], "a": yValues[2]}, {"y": xValues[3], "a": yValues[3]}, {"y": xValues[4], "a": yValues[4]}
-            , {"y": xValues[5], "a": yValues[5]}, {"y": xValues[6], "a": yValues[6]}]);
-
-            //location = dataSet[0].slice([1]);
-            //size = dataSet[0].slice([2,dataSet[0].length]);
-
-            //barchart.setData([{"y": location, "a": size}]);
-            //var d = new Date();
-            //var n = d.getFullYear();
-            //linechart.setData([{"period": n+'-01', "iphone": 20666}, {"period": n+'-02', "iphone": 1560}]);
+            if(dataSet.length-1 == 1){
+                barchart.setData([{"y": xValues[0], "a": yValues[0]}]);
+            }else if(dataSet.length-1 == 2){
+                barchart.setData([{"y": xValues[0], "a": yValues[0]}, {"y": xValues[1], "a": yValues[1]}]);
+            }else if(dataSet.length-1 == 3){
+                barchart.setData([{"y": xValues[0], "a": yValues[0]}, {"y": xValues[1], "a": yValues[1]},
+                    {"y": xValues[2], "a": yValues[2]}]);
+            }else if(dataSet.length-1 == 4){
+                barchart.setData([{"y": xValues[0], "a": yValues[0]}, {"y": xValues[1], "a": yValues[1]},
+                    {"y": xValues[2], "a": yValues[2]}, {"y": xValues[3], "a": yValues[3]}]);
+            }else if(dataSet.length-1 == 5){
+                barchart.setData([{"y": xValues[0], "a": yValues[0]}, {"y": xValues[1], "a": yValues[1]},
+                    {"y": xValues[2], "a": yValues[2]}, {"y": xValues[3], "a": yValues[3]}, {"y": xValues[4], "a": yValues[4]}]);
+            }else if(dataSet.length-1 == 6){
+                barchart.setData([{"y": xValues[0], "a": yValues[0]}, {"y": xValues[1], "a": yValues[1]},
+                    {"y": xValues[2], "a": yValues[2]}, {"y": xValues[3], "a": yValues[3]}, {"y": xValues[4], "a": yValues[4]}
+                    , {"y": xValues[5], "a": yValues[5]}]);
+            }else if(dataSet.length-1 == 7){
+                barchart.setData([{"y": xValues[0], "a": yValues[0]}, {"y": xValues[1], "a": yValues[1]},
+                    {"y": xValues[2], "a": yValues[2]}, {"y": xValues[3], "a": yValues[3]}, {"y": xValues[4], "a": yValues[4]}
+                    , {"y": xValues[5], "a": yValues[5]}, {"y": xValues[6], "a": yValues[6]}]);
+            }
         })
     });
 
