@@ -6,17 +6,13 @@ $db1 = new PDO('mysql:host=us-cdbr-azure-southcentral-e.cloudapp.net;dbname=inve
     if (isset($_GET['prodid'])) {
         $prodId = $_GET['prodid'];
 
-            $q = "SELECT productname from addproduct where productid = {$prodId} LIMIT 1";
-            $qReturn = mysqli_query($db1, $q);
-            $r = $qReturn->fetch_row();
-
             try {
                 $sql = "DELETE FROM addproduct
                             WHERE productid = {$prodId}";
                 $sth = $db1->query($sql);
 
                 $sql3 = "INSERT INTO notifications (notification)
-                            VALUES ('Product: {$r} was deleted')";
+                            VALUES ('Product ID: {$prodId} was deleted')";
                 $sth3 = $db1->query($sql3);
 
             } catch (PDOException $e) {
