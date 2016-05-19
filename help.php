@@ -45,18 +45,15 @@ include('connection.php');
         }
 
         /* The Close Button */
-        .close, .close1, .close2, .close3, .close4,
-        .close5, .close6, .close7, .close8 {
+        .close, .close1, .close2, .close3, .close4 {
             float: right;
             font-size: 30px;
             font-weight: bold;
             color: red;
         }
 
-        .close, .close1, .close2, .close3, .close4,
-        .close5, .close6, .close7, .close8 :hover,
-        .close, .close1, .close2, .close3, .close4,
-        .close5, .close6, .close7, .close8 :focus {
+        .close, .close1, .close2, .close3, .close4:hover,
+        .close, .close1, .close2, .close3, .close4:focus {
             color: #000;
             text-decoration: none;
             cursor: pointer;
