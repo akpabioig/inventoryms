@@ -11,7 +11,8 @@ include('connection.php');
 $sql = "SELECT MONTH(datesales), sum(totalcost)
         FROM salesorder
         WHERE status = 'fulfilled'
-        GROUP BY MONTH(datesales)";
+        GROUP BY MONTH(datesales)
+        ORDER BY MONTH(datesales) ASC";
 $record = mysqli_query($db, $sql);
 
 while ($row = $record->fetch_array()) {
