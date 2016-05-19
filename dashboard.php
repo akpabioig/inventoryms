@@ -74,7 +74,7 @@ if (!isset($_SESSION['user'])) {
                 </div>
                 <div class="col-lg-3">
                     <div class="alert alert-warning text-center">
-                        Total Number Of Goods In Stock:
+                        Total Number Of Products In Stock:
                         <b id="totalGoodsInStock"></b>
                     </div>
                 </div>
