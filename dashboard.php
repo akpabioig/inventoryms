@@ -145,21 +145,16 @@ if (!isset($_SESSION['user'])) {
                                 <?php
                                 $queryNotifications = "select notification from notifications order by id desc LIMIT 10";
                                 $resultNotifications = mysqli_query($db, $queryNotifications);
-                                $c = $resultNotifications->fetch_row();
-                                if($c > 0 ){
-                                    while($countNotifications = $resultNotifications->fetch_array()) {
-                                        echo "
+
+                                while($countNotifications = $resultNotifications->fetch_array()) {
+                                    echo "
                                     <a href=\"#\" class=\"list-group-item\">
                                     <i class=\"fa fa-info-circle\"></i> {$countNotifications['notification']}
                                     <span class=\"pull-right text-muted small\">
                                     </span>
                                     </a>
                                     ";
-                                    }
-                                }else {
-                                    echo "No notification yet";
                                 }
-
                                 ?>
                             </div>
                             <!-- /.list-group -->
