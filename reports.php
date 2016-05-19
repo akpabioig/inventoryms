@@ -52,7 +52,7 @@ include('connection.php');
                     <img src="report/p_report.jpg" style{height="130" width="200" } class="reporticons"/>
                 </a>
                 <a href="alllocation.php">
-                    <img src="report/pl_report.jpg" style{height="130" width="200" } class="reporticons"/>
+                    <img src="report/pl_report.jpg" style{height="150" width="200" } class="reporticons"/>
                 </a>
             </div>
             <div>
