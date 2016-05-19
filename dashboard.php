@@ -159,7 +159,6 @@ if (!isset($_SESSION['user'])) {
                                 ?>
                             </div>
                             <!-- /.list-group -->
-                            <a href="#" class="btn btn-default btn-block">View All Alerts</a>
                         </div>
 
                     </div>
