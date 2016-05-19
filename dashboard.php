@@ -152,22 +152,50 @@ if (!isset($_SESSION['user'])) {
 
                         <div class="panel-body">
                             <div class="list-group">
-                                <?php
-                                /*
-                                $queryNotifications = "select notification from notifications order by id desc LIMIT 10";
-                                $resultNotifications = mysqli_query($db, $queryNotifications);
-                                while($countNotifications = $resultNotifications->fetch_array()) {
-                                    echo "
-                                    <a href=\"#\" class=\"list-group-item\">
-                                    <i class=\"fa fa-info-circle\"></i> {$countNotifications['notification']}
-                                    <span class=\"pull-right text-muted small\">
+                                <a href="#" class="list-group-item">
+                                    <i class="fa fa-comment fa-fw"></i>New Comment
+                                    <span class="pull-right text-muted small"><em>4 minutes ago</em>
                                     </span>
-                                    </a>
-                                    ";
-                                }*/
-                                ?>
+                                </a>
+                                <a href="#" class="list-group-item">
+                                    <i class="fa fa-twitter fa-fw"></i>3 New Followers
+                                    <span class="pull-right text-muted small"><em>12 minutes ago</em>
+                                    </span>
+                                </a>
+                                <a href="#" class="list-group-item">
+                                    <i class="fa fa-envelope fa-fw"></i>Message Sent
+                                    <span class="pull-right text-muted small"><em>27 minutes ago</em>
+                                    </span>
+                                </a>
+                                <a href="#" class="list-group-item">
+                                    <i class="fa fa-tasks fa-fw"></i>New Task
+                                    <span class="pull-right text-muted small"><em>43 minutes ago</em>
+                                    </span>
+                                </a>
+                                <a href="#" class="list-group-item">
+                                    <i class="fa fa-upload fa-fw"></i>Server Rebooted
+                                    <span class="pull-right text-muted small"><em>11:32 AM</em>
+                                    </span>
+                                </a>
+                                <a href="#" class="list-group-item">
+                                    <i class="fa fa-bolt fa-fw"></i>Server Crashed!
+                                    <span class="pull-right text-muted small"><em>11:13 AM</em>
+                                    </span>
+                                </a>
+                                <a href="#" class="list-group-item">
+                                    <i class="fa fa-warning fa-fw"></i>Server Not Responding
+                                    <span class="pull-right text-muted small"><em>10:57 AM</em>
+                                    </span>
+                                </a>
+                                <a href="#" class="list-group-item">
+                                    <i class="fa fa-shopping-cart fa-fw"></i>New Order Placed
+                                    <span class="pull-right text-muted small"><em>9:49 AM</em>
+                                    </span>
+                                </a>
+
                             </div>
                             <!-- /.list-group -->
+                            <a href="#" class="btn btn-default btn-block">View All Alerts</a>
                         </div>
 
                     </div>
@@ -220,8 +248,6 @@ if (!isset($_SESSION['user'])) {
         document.getElementById('pl').innerHTML = num7;
         //barchart.setData([{ "y": "2014", "a": 100 },{ "y": "2015", "a": 24}]);
     }
-
-    /*
     $(document).ready(function(){
         $.ajax({
             url: 'chart.php',
@@ -248,7 +274,6 @@ if (!isset($_SESSION['user'])) {
             //linechart.setData([{"period": n+'-01', "iphone": 20666}, {"period": n+'-02', "iphone": 1560}]);
         })
     });
-    */
 
 
     //linechart
