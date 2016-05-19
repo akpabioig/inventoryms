@@ -23,7 +23,7 @@ if (!isset($_SESSION['user'])) {
 
 <?php
 
-        include('connection.php');
+        include('./connection.php');
         $list = array();
         $query1 = "select * from dashboard_totals";
         $result1 = mysqli_query($db, $query1);
