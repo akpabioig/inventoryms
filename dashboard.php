@@ -151,7 +151,8 @@ echo "
 
                         <div class="panel-body">
                             <div class="list-group">
-                                <?php
+
+                                <?php /*
                                 $queryNotifications = "select notification from notifications order by id desc LIMIT 10";
                                 $resultNotifications = mysqli_query($db, $queryNotifications);
                                 while($countNotifications = $resultNotifications->fetch_array()) {
@@ -162,7 +163,7 @@ echo "
                                     </span>
                                     </a>
                                     ";
-                                }
+                                }*/
                                 ?>
                             </div>
                             <!-- /.list-group -->
@@ -349,20 +350,6 @@ echo "
                     {"period": n+'-0'+periodT[8], "sales": salesT[8]}, {"period": n+'-0'+periodT[9], "sales": salesT[9]},
                     {"period": n+'-0'+periodT[10], "sales": salesT[10]}, {"period": n+'-0'+periodT[11], "sales": salesT[11]}]);
             }
-            //linechart.setData([{"period": n+'-0'+periodT[0], "sales": salesT[0]}, {"period": n+'-0'+periodT[1], "sales": salesT[1]}]);
-            /*if(lineDataSet.length <2){
-             linechart.setData([{"period": n+'-0'+periodT[0], "sales": salesT[0]}]);
-             }else if(lineDataSet.length <3){
-             linechart.setData([{"period": n+'-0'+periodT[0], "sales": salesT[0]}, {"period": n+'-0'+periodT[1], "sales": salesT[1]}]);
-             }else if(lineDataSet.length <4){
-             linechart.setData([{"period": n+'-0'+periodT[0], "sales": salesT[0]}, {"period": n+'-0'+periodT[1], "sales": salesT[1]},
-             {"period": n+'-0'+periodT[2], "sales": salesT[2]}]);
-             }else if(lineDataSet.length <4){
-             linechart.setData([{"period": n+'-0'+periodT[0], "sales": salesT[0]}, {"period": n+'-0'+periodT[1], "sales": salesT[1]},
-             {"period": n+'-0'+periodT[2], "sales": salesT[2]}, {"period": n+'-0'+periodT[3], "sales": salesT[3]}]);
-             }*/
-
-
 
         })
 
