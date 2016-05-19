@@ -249,7 +249,7 @@ if (!isset($_SESSION['user'])) {
         //barchart.setData([{ "y": "2014", "a": 100 },{ "y": "2015", "a": 24}]);
     }
 
-    /*
+
     $(document).ready(function(){
         $.ajax({
             url: 'chart.php',
@@ -263,19 +263,30 @@ if (!isset($_SESSION['user'])) {
                 yValues.push(height);
                 xValues.push(dataSet[i].slice([1]));
             }
-            barchart.setData([{"y": xValues[0], "a": yValues[0]}, {"y": xValues[1], "a": yValues[1]},
-                {"y": xValues[2], "a": yValues[2]}, {"y": xValues[3], "a": yValues[3]}, {"y": xValues[4], "a": yValues[4]}
-            , {"y": xValues[5], "a": yValues[5]}, {"y": xValues[6], "a": yValues[6]}]);
-
-            //location = dataSet[0].slice([1]);
-            //size = dataSet[0].slice([2,dataSet[0].length]);
-
-            //barchart.setData([{"y": location, "a": size}]);
-            //var d = new Date();
-            //var n = d.getFullYear();
-            //linechart.setData([{"period": n+'-01', "iphone": 20666}, {"period": n+'-02', "iphone": 1560}]);
+            if(dataSet.length-1 == 1){
+     barchart.setData([{"y": xValues[0], "a": yValues[0]}]);
+     }else if(dataSet.length-1 == 2){
+     barchart.setData([{"y": xValues[0], "a": yValues[0]}, {"y": xValues[1], "a": yValues[1]}]);
+     }else if(dataSet.length-1 == 3){
+     barchart.setData([{"y": xValues[0], "a": yValues[0]}, {"y": xValues[1], "a": yValues[1]},
+     {"y": xValues[2], "a": yValues[2]}]);
+     }else if(dataSet.length-1 == 4){
+     barchart.setData([{"y": xValues[0], "a": yValues[0]}, {"y": xValues[1], "a": yValues[1]},
+     {"y": xValues[2], "a": yValues[2]}, {"y": xValues[3], "a": yValues[3]}]);
+     }else if(dataSet.length-1 == 5){
+     barchart.setData([{"y": xValues[0], "a": yValues[0]}, {"y": xValues[1], "a": yValues[1]},
+     {"y": xValues[2], "a": yValues[2]}, {"y": xValues[3], "a": yValues[3]}, {"y": xValues[4], "a": yValues[4]}]);
+     }else if(dataSet.length-1 == 6){
+     barchart.setData([{"y": xValues[0], "a": yValues[0]}, {"y": xValues[1], "a": yValues[1]},
+     {"y": xValues[2], "a": yValues[2]}, {"y": xValues[3], "a": yValues[3]}, {"y": xValues[4], "a": yValues[4]}
+     , {"y": xValues[5], "a": yValues[5]}]);
+     }else if(dataSet.length-1 == 7){
+     barchart.setData([{"y": xValues[0], "a": yValues[0]}, {"y": xValues[1], "a": yValues[1]},
+     {"y": xValues[2], "a": yValues[2]}, {"y": xValues[3], "a": yValues[3]}, {"y": xValues[4], "a": yValues[4]}
+     , {"y": xValues[5], "a": yValues[5]}, {"y": xValues[6], "a": yValues[6]}]);
+     }
         })
-    });*/
+    });
 
 
     //linechart
