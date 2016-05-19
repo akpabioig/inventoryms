@@ -10,7 +10,7 @@ if (isset($_GET['prodid'])) {
                     WHERE productid = {$prodId}";
         $sth = $db->query($sql);
         $sql3 = "INSERT INTO notifications (notification)
-                    VALUES ('Product {$pname} was added')";
+                    VALUES ('Product ID: {$prodId} was deleted')";
         $sth3 = $db->query($sql3);
 
     } catch (PDOException $e) {
