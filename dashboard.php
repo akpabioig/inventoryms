@@ -297,7 +297,8 @@ if (!isset($_SESSION['user'])) {
             console.log(salesT[0]);
             var d = new Date();
             var n = d.getFullYear();
-            if(lineDataSet.length <2){
+            linechart.setData([{"period": n+'-0'+periodT[0], "sales": salesT[0]}, {"period": n+'-0'+periodT[1], "sales": salesT[1]}]);
+            /*if(lineDataSet.length <2){
                 linechart.setData([{"period": n+'-0'+periodT[0], "sales": salesT[0]}]);
             }else if(lineDataSet.length <3){
                 linechart.setData([{"period": n+'-0'+periodT[0], "sales": salesT[0]}, {"period": n+'-0'+periodT[1], "sales": salesT[1]}]);
@@ -307,7 +308,7 @@ if (!isset($_SESSION['user'])) {
             }else if(lineDataSet.length <4){
                 linechart.setData([{"period": n+'-0'+periodT[0], "sales": salesT[0]}, {"period": n+'-0'+periodT[1], "sales": salesT[1]},
                     {"period": n+'-0'+periodT[2], "sales": salesT[2]}, {"period": n+'-0'+periodT[3], "sales": salesT[3]}]);
-            }
+            }*/
 
 
 
