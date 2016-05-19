@@ -29,7 +29,7 @@ if (!isset($_SESSION['user'])) {
     <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
 </head>
 
-<?php echo "<body onload='totals($list[0], $list[1], $list[2], $list[3], $list[4], $list[5], $list[6], $list[7]); return false;'>"; ?>
+<?php echo "<body onload='totals(12, 2000, 45,  320, 300, 44500, 32000, 4590); return false;'>"; ?>
 <nav class="w3-sidenav w3-black" style="width:102px"> <!-- -->
     <a class="w3-padding-16" href="index.php"><i class="fa fa-home w3-xxlarge"></i> <br>HOME </a>
     <a class="w3-padding-16" href="addproduct.php"><i class="fa fa-plus-square w3-xlarge"></i> <br>ADD PRODUCT</a>
