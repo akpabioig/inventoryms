@@ -11,6 +11,10 @@ if (!isset($_SESSION['user'])) {
     $list[] = $count1[0];
     }
 
+echo "<script type='application/javascript'>";
+echo "totals({$list[0]}, {$list[1]}, {$list[2]}, {$list[3]}, {$list[4]}, {$list[5]}, {$list[6]}, {$list[7]});";
+echo "</script>";
+
 
 }
 ?>
@@ -206,13 +210,6 @@ if (!isset($_SESSION['user'])) {
 </body>
 </html>
 
-<?php
-
-echo "<script type='application/javascript'>";
-echo "totals({$list[0]}, {$list[1]}, {$list[2]}, {$list[3]}, {$list[4]}, {$list[5]}, {$list[6]}, {$list[7]});";
-echo "</script>";
-
-?>
 <script type="application/javascript">
     var dataSet, location, size, i, lineDataSet;
     var xValues = [], yValues = [], periodT = [], salesT = [];
