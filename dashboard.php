@@ -136,7 +136,7 @@ if (!isset($_SESSION['user'])) {
 
                     <div class="panel panel-default">
                         <div class="panel-heading">
-                            <i class="fa fa-bar-chart-o fa-fw">Total number of Products Vs Location
+                            Total number of Products Vs Location
                         </div>
                         <div class="panel-body">
                             <div id="morris-bar-chart"></div>
