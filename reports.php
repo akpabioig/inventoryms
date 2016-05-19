@@ -43,27 +43,27 @@ include('connection.php');
         <div id = "form1">
             <div>
                 <a href="allcustomers.php">
-                    <img src="report/c_report.jpg" style{height="130" width="220" } class="reporticons"/>
+                    <img src="report/c_report.jpg" style{height="130" width="200" } class="reporticons"/>
                 </a>
                 <a href="allsuppliers.php">
-                    <img src="report/s_report.jpg" style{height="130" width="220" } class="reporticons"/>
+                    <img src="report/s_report.jpg" style{height="130" width="200" } class="reporticons"/>
                 </a>
                 <a href="allproducts.php">
-                    <img src="report/p_report.jpg" style{height="130" width="220" } class="reporticons"/>
+                    <img src="report/p_report.jpg" style{height="130" width="200" } class="reporticons"/>
                 </a>
                 <a href="alllocation.php">
-                    <img src="report/pl_report.jpg" style{height="130" width="220" } class="reporticons"/>
+                    <img src="report/pl_report.jpg" style{height="130" width="200" } class="reporticons"/>
                 </a>
             </div>
             <div>
                 <a href="allpurchase.php">
-                    <img src="report/po_report.jpg" style{height="130" width="220" } class="reporticons"/>
+                    <img src="report/po_report.jpg" style{height="130" width="200" } class="reporticons"/>
                 </a>
                 <a href="allsales.php">
-                    <img src="report/so_report.jpg" style{height="130" width="220" } class="reporticons"/>
+                    <img src="report/so_report.jpg" style{height="130" width="200" } class="reporticons"/>
                 </a>
                 <a href="stocklevel.php">
-                    <img src="report/sl_report.jpg" style{height="130" width="220" } class="reporticons"/>
+                    <img src="report/sl_report.jpg" style{height="130" width="200" } class="reporticons"/>
                 </a>
             </div>
         </div>
