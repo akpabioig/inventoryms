@@ -2,14 +2,6 @@
 session_start();
 if (!isset($_SESSION['user'])) {
     header("Location: login.php");
-} else{
-    include('connection.php');
-    $list = array();
-    $query1 = "select * from dashboard_totals";
-    $result1 = mysqli_query($db, $query1);
-    while($count1 = $result1->fetch_array()) {
-    $list[] = $count1[0];
-    }
 }
 ?>
 <!DOCTYPE html>
@@ -29,7 +21,7 @@ if (!isset($_SESSION['user'])) {
     <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
 </head>
 
-<?php echo "<body onload='totals($list[0], $list[1], $list[2], $list[3], $list[4], $list[5], $list[6], $list[7]); return false;'>"; ?>
+<body>
 <nav class="w3-sidenav w3-black" style="width:102px"> <!-- -->
     <a class="w3-padding-16" href="index.php"><i class="fa fa-home w3-xxlarge"></i> <br>HOME </a>
     <a class="w3-padding-16" href="addproduct.php"><i class="fa fa-plus-square w3-xlarge"></i> <br>ADD PRODUCT</a>
@@ -205,8 +197,10 @@ if (!isset($_SESSION['user'])) {
 </html>
 
 <script type="application/javascript">
+
     var dataSet, location, size, i, lineDataSet;
     var xValues = [], yValues = [], periodT = [], salesT = [];
+
     function totals(num, num1, num2, num3, num4, num5, num6, num7) {
         document.getElementById('totalSales').innerHTML = num;
         document.getElementById('totalPurchases').innerHTML = num1;
@@ -216,17 +210,23 @@ if (!isset($_SESSION['user'])) {
         document.getElementById('totalSalesInEarnings').innerHTML = num5;
         document.getElementById('totalPurchaseExpenses').innerHTML = num6;
         document.getElementById('pl').innerHTML = num7;
-
-        console.log('test');
-        console.log(num1);
-        console.log(num2);
-        console.log(num3);
-        console.log(num4);
-        console.log(num5);
-        console.log(num6);
-        console.log(num7);
-        //barchart.setData([{ "y": "2014", "a": 100 },{ "y": "2015", "a": 24}]);
     }
+
+
+    $(document).ready(function(){
+        $.ajax({
+            url: 'dashboardChart.php',
+            type: 'POST',
+        }).done(function (data) {
+            chartDataSet = data.match(/^.*((\r\n|\n|\r)|$)/gm);
+            totals(chartDataSet[0], chartDataSet[1], chartDataSet[2], chartDataSet[3], chartDataSet[4], chartDataSet[5],
+                chartDataSet[6], chartDataSet[7]);
+            for(var i=0; i<chartDataSet.length; i++){
+                console.log( i + ' ' +chartDataSet[i]);
+            }
+
+        })
+    });
 
     $(document).ready(function(){
         $.ajax({
@@ -348,20 +348,6 @@ if (!isset($_SESSION['user'])) {
                     {"period": n+'-0'+periodT[8], "sales": salesT[8]}, {"period": n+'-0'+periodT[9], "sales": salesT[9]},
                     {"period": n+'-0'+periodT[10], "sales": salesT[10]}, {"period": n+'-0'+periodT[11], "sales": salesT[11]}]);
             }
-            //linechart.setData([{"period": n+'-0'+periodT[0], "sales": salesT[0]}, {"period": n+'-0'+periodT[1], "sales": salesT[1]}]);
-            /*if(lineDataSet.length <2){
-                linechart.setData([{"period": n+'-0'+periodT[0], "sales": salesT[0]}]);
-            }else if(lineDataSet.length <3){
-                linechart.setData([{"period": n+'-0'+periodT[0], "sales": salesT[0]}, {"period": n+'-0'+periodT[1], "sales": salesT[1]}]);
-            }else if(lineDataSet.length <4){
-                linechart.setData([{"period": n+'-0'+periodT[0], "sales": salesT[0]}, {"period": n+'-0'+periodT[1], "sales": salesT[1]},
-                    {"period": n+'-0'+periodT[2], "sales": salesT[2]}]);
-            }else if(lineDataSet.length <4){
-                linechart.setData([{"period": n+'-0'+periodT[0], "sales": salesT[0]}, {"period": n+'-0'+periodT[1], "sales": salesT[1]},
-                    {"period": n+'-0'+periodT[2], "sales": salesT[2]}, {"period": n+'-0'+periodT[3], "sales": salesT[3]}]);
-            }*/
-
-
 
         })
 
