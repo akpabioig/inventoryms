@@ -42,7 +42,7 @@ $(function () {
         labels: ['Sales'],
         pointSize: 5,
         hideHover: 'auto',
-        resize: true
+        resize: false
     });
     //  morris donut chart on dashboard///
 
