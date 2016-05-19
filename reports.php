@@ -41,15 +41,31 @@ include('connection.php');
         <h2>REPORTS</h2>
         <p>Click on Any of The Reports To Explore</p>
         <div id = "form1">
-            <ul>
-                <li><a href="allcustomers.php"> CUSTOMERS REPORT </a></li>
-                <li><a href="allsuppliers.php"> SUPPLIERS REPORT </a></li>
-                <li><a href="allproducts.php"> PRODUCTS REPORT </a></li>
-                <li><a href="alllocation.php"> PRODUCT LOCATION REPORT </a></li>
-                <li><a href="stocklevel.php"> STOCK LEVEL REPORT </a></li>
-                <li><a href="allpurchase.php"> PURCHASE ORDER REPORT </a></li>
-                <li><a href="allsales.php"> SALES ORDER REPORT </a></li>
-            </ul>
+            <div>
+                <a href="allcustomers.php">
+                    <img src="report/c_report.jpg" style{height="130" width="200" } class="reporticons"/>
+                </a>
+                <a href="allsuppliers.php">
+                    <img src="report/s_report.jpg" style{height="130" width="200" } class="reporticons"/>
+                </a>
+                <a href="allproducts.php">
+                    <img src="report/p_report.png" style{height="130" width="200" } class="reporticons"/>
+                </a>
+                <a href="alllocation.php">
+                    <img src="report/pl_report.jpg" style{height="200" width="200" } class="reporticons"/>
+                </a>
+            </div>
+            <div>
+                <a href="allpurchase.php">
+                    <img src="report/po_report.jpg" style{height="130" width="200" } class="reporticons"/>
+                </a>
+                <a href="allsales.php">
+                    <img src="report/so_report.jpg" style{height="130" width="200" } class="reporticons"/>
+                </a>
+                <a href="stocklevel.php">
+                    <img src="report/sl_report.jpg" style{height="130" width="200" } class="reporticons"/>
+                </a>
+            </div>
         </div>
     </section>
 </div>
