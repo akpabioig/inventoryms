@@ -622,8 +622,7 @@ hr{
 }
 
 .reporticons {
-    border: 2px solid black;
-    border-radius: 10px;
+    border-radius: 20px;
     margin-bottom: 20px;
     margin-right: 5%;
 }
