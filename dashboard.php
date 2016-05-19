@@ -293,8 +293,8 @@ if (!isset($_SESSION['user'])) {
                 periodT.push(height);
                 salesT.push(lineDataSet[i].slice([2]));
             }
-            //console.log(periodT[0]);
-            //console.log(salesT[0]);
+            console.log(periodT[0]);
+            console.log(salesT[0]);
             var d = new Date();
             var n = d.getFullYear();
             if(lineDataSet.length <2){
