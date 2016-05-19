@@ -150,9 +150,10 @@ if (!isset($_SESSION['user'])) {
                             <i class="fa fa-bell fa-fw"></i>Notifications Panel
                         </div>
 
-                        <div class="panel-body">
+                        <!--<div class="panel-body">
                             <div class="list-group">
                                 <?php
+                        /*
                                 $queryNotifications = "select notification from notifications order by id desc LIMIT 10";
                                 $resultNotifications = mysqli_query($db, $queryNotifications);
                                 while($countNotifications = $resultNotifications->fetch_array()) {
@@ -164,10 +165,11 @@ if (!isset($_SESSION['user'])) {
                                     </a>
                                     ";
                                 }
+                        */
                                 ?>
                             </div>
                             <!-- /.list-group -->
-                        </div>
+                        <!--</div>-->
 
                     </div>
 
