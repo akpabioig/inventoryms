@@ -45,7 +45,7 @@ try {
     $sth = $db->query($sql);
 
     $sql5 = "INSERT INTO notifications (notification)
-                VALUES ('Suppler {$suppn} was Updated')";
+                VALUES ('Supplier {$suppn} was Updated')";
     $sth5 = $db->query($sql5);
 
 } catch(PDOException $e) {
