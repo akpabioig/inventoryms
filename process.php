@@ -25,6 +25,11 @@ $prodid = htmlspecialchars($_POST['prodid']);
         $sql = "INSERT INTO addproduct (productserialnumber, productname, productdescription, locationid, supplierid, initialstockprice, wholesaleprice, retailprice)
                 VALUES ('$pnum', '$pname','$desc','$loccode', '$supplier', $isp,$wp, $rp)";
         $sth = $db->query($sql);
+        if($sth){
+            $sql3 = "INSERT INTO notifications (notification)
+                VALUES ('Product {$pname} was added')";
+            $sth3 = $db->query($sql3);
+        }
     } catch(PDOException $e) {
         echo $e->getMessage();
     }
