@@ -41,7 +41,7 @@ include('connection.php');
         <h2>REPORTS</h2>
         <p>Click on Any of The Reports To Explore</p>
         <div id = "form1">
-            <div class="locbutt">
+            <div class="">
                 <a href="allcustomers.php">
                     <img src="report/c_report.jpg" style{height="130" width="250" } class="reporticons"/>
                 </a>
