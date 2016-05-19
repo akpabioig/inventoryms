@@ -42,11 +42,18 @@ include('connection.php');
         <h2> EDIT RECORDS </h2>
         <p> SELECT FROM THE LIST BELOW TO EDIT RECORDS </p>
         <div id = "form1">
-        <ul>
-            <li> <a href="productseditor.php"> EDIT PRODUCT RECORDS </a></li>
-            <li> <a href="supplierseditor.php"> EDIT SUPPLIER RECORDS </a></li>
-            <li> <a href="customerseditor.php"> EDIT CUSTOMER RECORDS </a></li>
-        </ul>
+            <div id="form1">
+                <div>
+                    <a href="productseditor.php">
+                        <img src="./report/editcustomer.png" style{height="150" width="230" } class="reporticons"/>
+                    </a>
+                    <a href="supplierseditor.php">
+                        <img src="report/editsupplier.png" style{height="150" width="230" } class="reporticons"/>
+                    </a>
+                    <a href="customerseditor.php">
+                        <img src="report/editcustomer.png" style{height="150" width="230" } class="reporticons"/>
+                    </a>
+                </div>
         </div>
     </section>
 </div>
