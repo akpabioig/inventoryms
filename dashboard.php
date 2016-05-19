@@ -2,7 +2,7 @@
 session_start();
 if (!isset($_SESSION['user'])) {
     header("Location: login.php");
-} else{
+}   else{
     include('connection.php');
     $list = array();
     $query1 = "select * from dashboard_totals";
@@ -10,27 +10,28 @@ if (!isset($_SESSION['user'])) {
     while($count1 = $result1->fetch_array()) {
     $list[] = $count1[0];
     }
-echo "
+
+
+}
+?>
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset='utf-8'>
-    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Dashboard </title>
-    <link href='assets/plugins/bootstrap/bootstrap.css' rel='stylesheet'/>
-    <link href='assets/font-awesome/css/font-awesome.css' rel='stylesheet'/>
-    <link href='assets/plugins/pace/pace-theme-big-counter.css' rel='stylesheet'/>
-    <link href='assets/css/style.css' rel='stylesheet'/>
-    <link href='assets/css/main-style.css' rel='stylesheet'/>
-    <link href='assets/plugins/morris/morris-0.4.3.min.css' rel='stylesheet'/>
-    <link rel='stylesheet' href='styling.css'/>
-    <link rel='stylesheet' href='http://www.w3schools.com/lib/w3.css'>
-    <link rel='stylesheet' href='http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css'>
+    <link href="assets/plugins/bootstrap/bootstrap.css" rel="stylesheet"/>
+    <link href="assets/font-awesome/css/font-awesome.css" rel="stylesheet"/>
+    <link href="assets/plugins/pace/pace-theme-big-counter.css" rel="stylesheet"/>
+    <link href="assets/css/style.css" rel="stylesheet"/>
+    <link href="assets/css/main-style.css" rel="stylesheet"/>
+    <link href="assets/plugins/morris/morris-0.4.3.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="styling.css"/>
+    <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
 </head>
 
-<body onload='totals($list[0], $list[1], $list[2], $list[3], $list[4], $list[5], $list[6], $list[7]);'>";
-}
-?>
+<?php echo "<body onload='totals($list[0], $list[1], $list[2], $list[3], $list[4], $list[5], $list[6], $list[7]);'>"; ?>
 <nav class="w3-sidenav w3-black" style="width:102px"> <!-- -->
     <a class="w3-padding-16" href="index.php"><i class="fa fa-home w3-xxlarge"></i> <br>HOME </a>
     <a class="w3-padding-16" href="addproduct.php"><i class="fa fa-plus-square w3-xlarge"></i> <br>ADD PRODUCT</a>
@@ -151,20 +152,47 @@ echo "
 
                         <div class="panel-body">
                             <div class="list-group">
-
-                                <?php /*
-                                $queryNotifications = "select notification from notifications order by id desc LIMIT 10";
-                                $resultNotifications = mysqli_query($db, $queryNotifications);
-                                while($countNotifications = $resultNotifications->fetch_array()) {
-                                    echo "
-                                    <a href=\"#\" class=\"list-group-item\">
-                                    <i class=\"fa fa-info-circle\"></i> {$countNotifications['notification']}
-                                    <span class=\"pull-right text-muted small\">
+                                <a href="#" class="list-group-item">
+                                    <i class="fa fa-comment fa-fw"></i>New Comment
+                                    <span class="pull-right text-muted small"><em>4 minutes ago</em>
                                     </span>
-                                    </a>
-                                    ";
-                                }*/
-                                ?>
+                                </a>
+                                <a href="#" class="list-group-item">
+                                    <i class="fa fa-twitter fa-fw"></i>3 New Followers
+                                    <span class="pull-right text-muted small"><em>12 minutes ago</em>
+                                    </span>
+                                </a>
+                                <a href="#" class="list-group-item">
+                                    <i class="fa fa-envelope fa-fw"></i>Message Sent
+                                    <span class="pull-right text-muted small"><em>27 minutes ago</em>
+                                    </span>
+                                </a>
+                                <a href="#" class="list-group-item">
+                                    <i class="fa fa-tasks fa-fw"></i>New Task
+                                    <span class="pull-right text-muted small"><em>43 minutes ago</em>
+                                    </span>
+                                </a>
+                                <a href="#" class="list-group-item">
+                                    <i class="fa fa-upload fa-fw"></i>Server Rebooted
+                                    <span class="pull-right text-muted small"><em>11:32 AM</em>
+                                    </span>
+                                </a>
+                                <a href="#" class="list-group-item">
+                                    <i class="fa fa-bolt fa-fw"></i>Server Crashed!
+                                    <span class="pull-right text-muted small"><em>11:13 AM</em>
+                                    </span>
+                                </a>
+                                <a href="#" class="list-group-item">
+                                    <i class="fa fa-warning fa-fw"></i>Server Not Responding
+                                    <span class="pull-right text-muted small"><em>10:57 AM</em>
+                                    </span>
+                                </a>
+                                <a href="#" class="list-group-item">
+                                    <i class="fa fa-shopping-cart fa-fw"></i>New Order Placed
+                                    <span class="pull-right text-muted small"><em>9:49 AM</em>
+                                    </span>
+                                </a>
+
                             </div>
                             <!-- /.list-group -->
                             <a href="#" class="btn btn-default btn-block">View All Alerts</a>
@@ -218,18 +246,10 @@ echo "
         document.getElementById('totalSalesInEarnings').innerHTML = num5;
         document.getElementById('totalPurchaseExpenses').innerHTML = num6;
         document.getElementById('pl').innerHTML = num7;
-
-        console.log('test');
-        console.log(num1);
-        console.log(num2);
-        console.log(num3);
-        console.log(num4);
-        console.log(num5);
-        console.log(num6);
-        console.log(num7);
         //barchart.setData([{ "y": "2014", "a": 100 },{ "y": "2015", "a": 24}]);
     }
 
+    /*
     $(document).ready(function(){
         $.ajax({
             url: 'chart.php',
@@ -243,31 +263,19 @@ echo "
                 yValues.push(height);
                 xValues.push(dataSet[i].slice([1]));
             }
-            console.log('dataSet size: ' + dataSet.length);
-            if(dataSet.length-1 == 1){
-                barchart.setData([{"y": xValues[0], "a": yValues[0]}]);
-            }else if(dataSet.length-1 == 2){
-                barchart.setData([{"y": xValues[0], "a": yValues[0]}, {"y": xValues[1], "a": yValues[1]}]);
-            }else if(dataSet.length-1 == 3){
-                barchart.setData([{"y": xValues[0], "a": yValues[0]}, {"y": xValues[1], "a": yValues[1]},
-                    {"y": xValues[2], "a": yValues[2]}]);
-            }else if(dataSet.length-1 == 4){
-                barchart.setData([{"y": xValues[0], "a": yValues[0]}, {"y": xValues[1], "a": yValues[1]},
-                    {"y": xValues[2], "a": yValues[2]}, {"y": xValues[3], "a": yValues[3]}]);
-            }else if(dataSet.length-1 == 5){
-                barchart.setData([{"y": xValues[0], "a": yValues[0]}, {"y": xValues[1], "a": yValues[1]},
-                    {"y": xValues[2], "a": yValues[2]}, {"y": xValues[3], "a": yValues[3]}, {"y": xValues[4], "a": yValues[4]}]);
-            }else if(dataSet.length-1 == 6){
-                barchart.setData([{"y": xValues[0], "a": yValues[0]}, {"y": xValues[1], "a": yValues[1]},
-                    {"y": xValues[2], "a": yValues[2]}, {"y": xValues[3], "a": yValues[3]}, {"y": xValues[4], "a": yValues[4]}
-                    , {"y": xValues[5], "a": yValues[5]}]);
-            }else if(dataSet.length-1 == 7){
-                barchart.setData([{"y": xValues[0], "a": yValues[0]}, {"y": xValues[1], "a": yValues[1]},
-                    {"y": xValues[2], "a": yValues[2]}, {"y": xValues[3], "a": yValues[3]}, {"y": xValues[4], "a": yValues[4]}
-                    , {"y": xValues[5], "a": yValues[5]}, {"y": xValues[6], "a": yValues[6]}]);
-            }
+            barchart.setData([{"y": xValues[0], "a": yValues[0]}, {"y": xValues[1], "a": yValues[1]},
+                {"y": xValues[2], "a": yValues[2]}, {"y": xValues[3], "a": yValues[3]}, {"y": xValues[4], "a": yValues[4]}
+            , {"y": xValues[5], "a": yValues[5]}, {"y": xValues[6], "a": yValues[6]}]);
+
+            //location = dataSet[0].slice([1]);
+            //size = dataSet[0].slice([2,dataSet[0].length]);
+
+            //barchart.setData([{"y": location, "a": size}]);
+            //var d = new Date();
+            //var n = d.getFullYear();
+            //linechart.setData([{"period": n+'-01', "iphone": 20666}, {"period": n+'-02', "iphone": 1560}]);
         })
-    });
+    });*/
 
 
     //linechart
@@ -284,13 +292,10 @@ echo "
                 periodT.push(ht);
                 salesT.push(lineDataSet[i].slice([2]));
             }
-            console.log(periodT[0]);
-            console.log(salesT[0]);
-            console.log(lineDataSet.length-1);
             var d = new Date();
             var n = d.getFullYear();
             if(lineDataSet.length-1 == 1){
-
+                linechart.setData([{"period": n+'-0'+periodT[0], "sales": salesT[0]}]);
             }else if(lineDataSet.length-1 == 2){
                 linechart.setData([{"period": n+'-0'+periodT[0], "sales": salesT[0]}, {"period": n+'-0'+periodT[1], "sales": salesT[1]}]);
             }else if(lineDataSet.length-1 == 3){
@@ -351,6 +356,7 @@ echo "
                     {"period": n+'-0'+periodT[10], "sales": salesT[10]}, {"period": n+'-0'+periodT[11], "sales": salesT[11]}]);
             }
 
+
         })
 
     });
@@ -359,22 +365,21 @@ echo "
 
     $(function () {
         Morris.Donut({
-            element: 'morris-donut-chart',
-            data: [{
-                label: "Sales Pending Orders",
-                value: 30
-            }, {
-                label: "Sales Fulfilled Orders",
-                value: 20
-            }, {
-                label: "Purchase Pending Orders",
-                value: 20
-            }, {
-                label: "Purchase Fulfilled Orders",
-                value: 20
-            }],
-            resize: true
-        });
+        element: 'morris-donut-chart',
+        data: [{
+            label: "Sales Pending Orders",
+            value: 30
+        }, {
+            label: "Sales Fulfilled Orders",
+            value: 20
+        }, {
+            label: "Purchase Pending Orders",
+            value: 20
+        }, {
+            label: "Purchase Fulfilled Orders",
+            value: 20
+        }],
+        resize: true
+    });
     });
 </script>
-
