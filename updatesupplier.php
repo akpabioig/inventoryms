@@ -36,11 +36,6 @@ try {
                     country = '{$country}'
                     WHERE supplierid = {$suppid}";
     $sth = $db->query($sql);
-
-    $sql3 = "INSERT INTO notifications (notification)
-                    VALUES ('Supplier {$suppn} was updated')";
-    $sth3 = $db->query($sql3);
-
 } catch(PDOException $e) {
     echo $e->getMessage();
 }
