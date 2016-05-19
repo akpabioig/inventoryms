@@ -426,13 +426,7 @@ if (!isset($_SESSION['user'])) {
             label: "Sales Pending Orders",
             value: 30
         }, {
-            label: "Sales Fulfilled Orders",
-            value: 20
-        }, {
             label: "Purchase Pending Orders",
-            value: 20
-        }, {
-            label: "Purchase Fulfilled Orders",
             value: 20
         }],
         resize: true
