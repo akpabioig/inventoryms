@@ -31,7 +31,7 @@ if (!isset($_SESSION['user'])) {
     <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
 </head>
 
-<?php echo "<body onload='totals($list[0], $list[1], $list[2], $list[3], $list[4], $list[5], $list[6]);'>"; ?>
+<?php echo "<body onload='totals($list[0], $list[1], $list[2], $list[3], $list[4], $list[5], $list[6]), $list[6]-$list[5];'>"; ?>
 <nav class="w3-sidenav w3-black" style="width:102px"> <!-- -->
     <a class="w3-padding-16" href="index.php"><i class="fa fa-home w3-xxlarge"></i> <br>HOME </a>
     <a class="w3-padding-16" href="addproduct.php"><i class="fa fa-plus-square w3-xlarge"></i> <br>ADD PRODUCT</a>
@@ -113,7 +113,8 @@ if (!isset($_SESSION['user'])) {
                 </div>
                 <div class="col-lg-3">
                     <div class="alert alert-warning text-center">
-                        <b></b>Profit/ Loss
+                        Profit/ Loss:
+                        <b id="pl"></b>
                     </div>
                 </div>
                 <!--end quick info section -->
@@ -236,7 +237,7 @@ if (!isset($_SESSION['user'])) {
 <script type="application/javascript">
     var dataSet, location, size, i, lineDataSet;
     var xValues = [], yValues = [], periodT = [], salesT = [];
-    function totals(num, num1, num2, num3, num4, num5, num6) {
+    function totals(num, num1, num2, num3, num4, num5, num6, num7) {
         document.getElementById('totalSales').innerHTML = num;
         document.getElementById('totalPurchases').innerHTML = num1;
         document.getElementById('totalSuppliers').innerHTML = num2;
@@ -244,6 +245,7 @@ if (!isset($_SESSION['user'])) {
         document.getElementById('totalGoodsInStock').innerHTML = num4;
         document.getElementById('totalSalesInEarnings').innerHTML = num5;
         document.getElementById('totalPurchaseExpenses').innerHTML = num6;
+        document.getElementById('pl').innerHTML = num7;
         //barchart.setData([{ "y": "2014", "a": 100 },{ "y": "2015", "a": 24}]);
     }
     $(document).ready(function(){
