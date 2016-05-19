@@ -9,7 +9,7 @@ if (isset($_GET['prodid'])) {
     $q = "SELECT productname from addproduct where productid = {$prodId} LIMIT 1";
     $qReturn = mysqli_query($db1, $q);
     while($qReturn = $qReturn ->fetch_array()){
-
+            $r = $qReturn['productname'];
     }
     try {
         $sql = "DELETE FROM addproduct
@@ -17,7 +17,7 @@ if (isset($_GET['prodid'])) {
         $sth = $db1->query($sql);
 
         $sql3 = "INSERT INTO notifications (notification)
-                    VALUES ('Product: {$qResult} was deleted')";
+                    VALUES ('Product: {$r} was deleted')";
         $sth3 = $db1->query($sql3);
 
     } catch (PDOException $e) {
