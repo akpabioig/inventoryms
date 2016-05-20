@@ -422,23 +422,22 @@ if (!isset($_SESSION['user'])) {
                 type: 'POST',
             }).done(function (dataDashboard) {
                 chartDataSet = dataDashboard.match(/^.*((\r\n|\n|\r)|$)/gm);
-                console.log(chartDataSet[0]);
-                console.log(chartDataSet[1]);
+                Morris.Donut({
+                    element: 'morris-donut-chart',
+                    data: [{
+                        label: "Sales Pending Orders",
+                        value: chartDataSet[0]
+                    }, {
+                        label: "Purchase Pending Orders",
+                        value: chartDataSet[1]
+                    }],
+                    resize: true
+                });
 
             })
         });
 
 
-        Morris.Donut({
-        element: 'morris-donut-chart',
-        data: [{
-            label: "Sales Pending Orders",
-            value: 3
-        }, {
-            label: "Purchase Pending Orders",
-            value: 2
-        }],
-        resize: true
-    });
+
     });
 </script>
