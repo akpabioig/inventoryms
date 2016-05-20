@@ -428,11 +428,11 @@ if (!isset($_SESSION['user'])) {
                     data: [{
                         label: "Sales Pending Orders",
                         value: chartDataSet[0]
-                        href: "pendingorders.php"
+                        href: 'pendingorders.php'
                     }, {
                         label: "Purchase Pending Orders",
                         value: chartDataSet[1]
-                        href: "pendingorders.php"
+                        href: 'pendingorders.php'
                     }],
                     resize: true
                 });
