@@ -40,7 +40,7 @@ include('connection.php');
         <h3> Edit Inventory Management Records </h3>
         <img src= "images/records.jpeg" style{height="250" width="200"}/>
         <h2> EDIT RECORDS </h2>
-        <p> SELECT FROM THE LIST BELOW TO EDIT RECORDS </p>
+        <p> CLICK ON ANY OF ICONS BELOW TO EDIT RECORDS </p>
         <div id = "form1">
                 <div>
                     <a href="productseditor.php">
