@@ -74,7 +74,7 @@ if (!isset($_SESSION['user'])) {
                 </div>
                 <div class="col-lg-3">
                     <div class="alert alert-warning text-center">
-                        Total Number Of Products In Stock:
+                        Total Number Of Product In Stock:
                         <b id="totalGoodsInStock"></b>
                     </div>
                 </div>
@@ -417,33 +417,19 @@ if (!isset($_SESSION['user'])) {
 
     });
 
-    var pendingSales, pendingPurchase, pending;
 
-    $(document).ready(function(){
-        $.ajax({
-            url: 'pendingChart.php',
-            type: 'POST',
-        }).done(function (pendingDashboard) {
-            pending = pendingDashboard.match(/^.*((\r\n|\n|\r)|$)/gm);
-                console.log(pending);
-        })
 
-/*
-        $(function () {
-            Morris.Donut({
-                element: 'morris-donut-chart',
-                data: [{
-                    label: "Sales Pending Orders",
-                    value: 3
-                }, {
-                    label: "Purchase Pending Orders",
-                    value: 2
-                }],
-                resize: true
-            });
-        }); */
+    $(function () {
+        Morris.Donut({
+        element: 'morris-donut-chart',
+        data: [{
+            label: "Sales Pending Orders",
+            value: 3
+        }, {
+            label: "Purchase Pending Orders",
+            value: 2
+        }],
+        resize: true
     });
-
-
-
+    });
 </script>
