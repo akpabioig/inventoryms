@@ -418,7 +418,7 @@ if (!isset($_SESSION['user'])) {
     $(function () {
         $(document).ready(function(){
             $.ajax({
-                url: 'dashboardChart.php',
+                url: 'pendingChart.php',
                 type: 'POST',
             }).done(function (dataDashboard) {
                 chartDataSet = dataDashboard.match(/^.*((\r\n|\n|\r)|$)/gm);
