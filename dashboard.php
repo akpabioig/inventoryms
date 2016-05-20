@@ -169,7 +169,7 @@ if (!isset($_SESSION['user'])) {
                     <!-- Donut Example-->
                     <div class="panel panel-primary">
                         <div class="panel-heading">
-                            <i class="fa fa-bar-chart-o fa-fw"></i>Donut Chart Of Order Status
+                            <i class="fa fa-bar-chart-o fa-fw"></i>Number Of Pending Orders
                         </div>
                         <div class="panel-body">
                             <div id="morris-donut-chart"></div>
