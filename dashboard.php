@@ -423,6 +423,7 @@ if (!isset($_SESSION['user'])) {
             }).done(function (dataDashboard) {
                 chartDataSet = dataDashboard.match(/^.*((\r\n|\n|\r)|$)/gm);
                 console.log(chartDataSet[0]);
+                console.log(chartDataSet[1]);
 
             })
         });
