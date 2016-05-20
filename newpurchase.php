@@ -134,7 +134,7 @@ include('connection.php');
             </table>
             <p align="center" ><a href = "#" onclick="add('form5'); return false;"> + Add another item </a></p>
             <hr>
-            <h6>Message to Supplier : </h6>
+            <h6>Additional Information On Purchase : </h6>
             <textarea id = "messsupplier" name="messsupplier" value="" class = "formfield" rows = 5 cols = 40></textarea>
             <table id = purtotal>
                 <tr>
