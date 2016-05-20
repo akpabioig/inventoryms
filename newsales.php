@@ -152,7 +152,7 @@ include('connection.php');
             </table>
             <p align="center" ><a href = ""  id="addp"> + Add another item </a></p>
             <hr>
-            <h6>Message to Customer : </h6>
+            <h6> Additional Information on Sales : </h6>
             <textarea id="messcust" name="messcust" class="formfield" rows=5 cols=40></textarea>
             <table id = purtotal>
                 <tr>
