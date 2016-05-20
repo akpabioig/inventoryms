@@ -415,6 +415,7 @@ if (!isset($_SESSION['user'])) {
 
 
 
+    //Donut chart
     $(function () {
         $(document).ready(function(){
             $.ajax({
@@ -436,8 +437,5 @@ if (!isset($_SESSION['user'])) {
 
             })
         });
-
-
-
     });
 </script>
