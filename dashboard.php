@@ -416,6 +416,18 @@ if (!isset($_SESSION['user'])) {
 
 
     $(function () {
+        $(document).ready(function(){
+            $.ajax({
+                url: 'dashboardChart.php',
+                type: 'POST',
+            }).done(function (dataDashboard) {
+                chartDataSet = dataDashboard.match(/^.*((\r\n|\n|\r)|$)/gm);
+                console.log(chartDataSet[0]);
+
+            })
+        });
+
+
         Morris.Donut({
         element: 'morris-donut-chart',
         data: [{
