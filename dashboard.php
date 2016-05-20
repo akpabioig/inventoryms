@@ -144,7 +144,7 @@ if (!isset($_SESSION['user'])) {
                             <div class="list-group">
                                 <?php
                                 include ('connection.php');
-                                $queryNotifications = "select notification from notifications order by id desc LIMIT 15";
+                                $queryNotifications = "select notification from notifications order by id desc LIMIT 10";
                                 $resultNotifications = mysqli_query($db, $queryNotifications);
                                     while($countNotifications = $resultNotifications->fetch_array()) {
                                         echo "
