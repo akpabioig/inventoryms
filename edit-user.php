@@ -92,7 +92,7 @@ include('connection.php');
                         </td>
                     </tr>
                     <tr>
-                        <td label for=middlename><a id="hash">*</a> MIDDLE NAME :</td>
+                        <td label for=middlename> MIDDLE NAME :</td>
                     </tr>
                     <tr>
                         <td><input type="text" id="middlename" name="middlename" value="<?php echo $getmiddlename; ?>"
