@@ -96,7 +96,7 @@ include('connection.php');
                     </tr>
                     <tr>
                         <td><input type="text" id="middlename" name="middlename" value="<?php echo $getmiddlename; ?>"
-                                   class=" formfiel" rows=1 cols=40 required>
+                                   class=" formfiel" rows=1 cols=40>
                         </td>
                     </tr>
                     <tr>
