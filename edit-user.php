@@ -21,7 +21,7 @@ if (isset($_GET['userid'])) {
         $getstaffposition = $selectRow['staffposition'];
         $getusername = $selectRow['username'];
         $getpassword = $selectRow['password'];
-    }
+    }/**/
 } else {
     header("Location: userdetails.php?f=1");
 }
